@@ -1,0 +1,13 @@
+﻿# ---- 中间产物 / 临时脚本（不入库）----
+_pdfbuild/
+_chapters/
+_clean/
+_chk*.py
+_fix*.py
+_peek.py
+_qc.py
+_rg.py
+_show.py
+_extracted.txt
+*.log
+Thumbs.db
