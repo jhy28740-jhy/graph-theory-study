@@ -11,3 +11,4 @@ _show.py
 _extracted.txt
 *.log
 Thumbs.db
+_*.ps1
