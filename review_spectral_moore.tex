@@ -1,0 +1,87 @@
+\documentclass[UTF8,11pt]{ctexart}
+\usepackage{amsmath,amssymb,booktabs,longtable,geometry,hyperref,array}
+\geometry{a4paper,margin=2.2cm}
+\title{审稿报告：The Order of Regular Graphs with Small Second Eigenvalue:\\ Exact Values and Explicit Bounds}
+\author{专业数学审稿（谱图理论 / 代数图论）}
+\date{2026-10-12}
+\begin{document}
+\maketitle
+
+\noindent\textbf{审稿对象：}\texttt{spectral\_moore\_revised.pdf}（31 页，pdfTeX，标注日期 2026-10-10）\\
+\textbf{研究领域：}谱图理论 / 代数图论（spectral Moore problem，MSC 05C50）\\
+\textbf{核验方式：}全文通读；所有定理/引理/命题/附录逐步重推；sympy 在 $\mathbb{Q}(\sqrt2)$ 上精确符号验证；Schur 补与直接块消元做 ground-truth 比对；对 (6.5) 做约 190 万组参数扫描；显式构造 Kneser 图与 Schl\"afli 补塔并数值验谱；可获取的参考文献（[1][2][3][13][14]）经 arXiv/全文核对。
+
+\section{材料与审查范围}
+\begin{itemize}
+\item 实际读取：\texttt{spectral\_moore\_revised.pdf}，31 页。未提供 LaTeX 源码，以 PDF 文本与关键页渲染图为准；对 (5.3)、(6.6) 等易混公式逐页放大核对，确认排版无误（(6.6) 为 floor $\lfloor\cdot\rfloor$，(5.3) 分式正确）。
+\item 主要贡献：$v(6,2)=42$，$v(8,2)=45$，$v(12,2)=60$；$v(9,2)\le48$，$v(11,2)\le56$（不主张等式）；$v(k,\sqrt2)\le3k-3$（$k\ge7$）且 $v(k,\sqrt2)=3k-3$（$6\le k\le10$）；进而 $v(k,\theta)=3k-3$（$6\le k\le10$，$1\le\theta\le\sqrt2$）。
+\item 证明依赖：诱导圈界 [1, Lemma 4.4]；LP 界 [1, Thm 2.3]；[2, Lemma 7.5 / Problem 9.4]；triangle-free 分类 [4]（计算机辅助）；经典强正则图 Hoffman--Singleton、Gewirtz、M22 [8][9][12]；$v(k,1)$ 已知值 [5]。
+\item 新旧区分：作者新证的是各\textbf{边界阶的排除}（$n=46$；$n=61,62$；$n=52,50$；$n=58$；$3k-1$；$3k-2$；$17,16$）。诱导圈界、triangle 商矩阵法、Schur 补工具、下界构造均明确声明非新。摘要/引言未夸大正文范围。
+\end{itemize}
+
+\section{逐项结论与证明审查}
+{\small
+\begin{longtable}{@{}p{2.2cm}p{3.4cm}p{2.6cm}p{6.6cm}@{}}
+\toprule
+位置 & 结论 & 审查状态 & 核验依据\\
+\midrule
+\endfirsthead
+\toprule
+位置 & 结论 & 审查状态 & 核验依据\\
+\midrule
+\endhead
+Lemma 2.1--2.3 & Rayleigh 等式、平均商矩阵交错、Schur/PSD 工具 & 已逐步核查，无缺口 & 标准且表述准确；(2.2) Cauchy 形式正确\\
+Lemma 3.1 & 诱导圈界 $n\le2(k-1)g$ & 已逐步核查，无缺口 & 逐行重推：$\rho(G[U])\le2$、$e(S,T)=(k-2)g$、计数链均成立\\
+\S3.2 & $v(6,2)\le42$ & 已逐步核查，无缺口 & 商矩阵与 (3.2) 精确验证：主子式 $2,-2,-4-\tfrac b{15},16+\tfrac{4b}{15}-\tfrac{4b}r$；两分支均矛盾\\
+\S3.3--3.5 & $v(8,2)\le45$ & 已逐步核查，无缺口 & $\det L=4(51-n)/n$；$n=51$ 核向量；(3.4) Schur 补与 ground-truth 误差 0；(3.6) 整性论证通过\\
+Thm 4.1 / \S4 & $v(12,2)=60$ & 已逐步核查，无缺口 & 三次迹恒等式 (4.1)(4.2)；(4.4) Schur 补误差 0；$q_{61},q_{62}$ 表值；M22 第二子构成 60 点 12-正则 $\lambda_2\le2$\\
+\S5.1--5.3 & $v(9,2)\le48$，$v(11,2)\le56$ & 已逐步核查，无缺口 & (5.1) 迹界、星块逆、(5.2) Schur 补对 7 组 $(k,n)$ 与直接 Schur 补逐元素一致\\
+\S6.1--6.3 & triangle-free 归约；$n\le\lfloor3k-6/k\rfloor$；排除 $3k-1$ & 内部已核查；外部依赖 [4] & (6.4) 符号验证为 0；(6.5) 在 1{,}943{,}742 组参数上无违反；Lemma 6.1 与 Cauchy 论证通过\\
+\S7.1--7.5 & $v(6,\sqrt2)=15$ & 内部已核查；外部依赖 [4] & Lemma 7.2 等式条件；Lemma 7.3 的 $Q$ 谱 $\{6,\pm\sqrt2\}$、$c_{ij}=2$ 与行和 $14\ne16$；(7.5)/(B.1)、(7.9) 精确验证\\
+\S8.1--8.3 & 排除 $3k-2$（$k\ge8$ 偶） & 已逐步核查，无缺口 & (8.1)；$\tau=0,1$ 展开精确匹配；(8.2)(8.6) Schur 补误差 0；$k=8$ 色平衡 $e(X,F)=17\ne18$\\
+\S9.1--9.4 & 下界构造 & Kneser/Schl\"afli 显式构造已验证；HS/Gewirtz/M22 依赖引文 & 显式构造 KG(6,2) 与 Schl\"afli 补塔 $t=0..3$（$\lambda_2=1$，连通）；Prop 9.1 逻辑复核\\
+附录 A、B & (3.4)、(7.5) 块计算 & 已逐步核查，无缺口 & $z^TL^{-1}z'$ 与 (B.1) 符号验证为 0\\
+\bottomrule
+\end{longtable}}
+
+\noindent 未发现循环论证、遗漏分支或未经证明的归约；所有极值等式均同时给出上界与达到例子；唯一性均未主张（与正文声明一致）。
+
+\section{文献与原创性比较}
+\begin{itemize}
+\item 已读全文核对：[1]（Thm 2.3 的 $M(k,t,c)$、Lemma 4.4 允许 $d(H)=\lambda$、Thm 3.2(1)--(10)、Table 2 中 $(7,2)\to50$、$(10,2)\to56$、Problem 5.2）；[2]（Lemma 7.5、Problem 9.4）；[3]（(5.2) LP 界、Prop 5.2）；[13][14]。基线表 45/50/52/58/62 与 $M(k,3,(k-4)/3)$ 加奇偶/等式修正逐一吻合。
+\item 未能取得原文（本环境网络受限）：[4][5][6][7][12]。其中 \textbf{[4] 是 $\sqrt2$ 阈值上界的承重外部结果}（triangle-free 分类 $\Rightarrow n\le2k+2$）；[12] 承重 M22 存在性；[5][6][7] 仅作背景或已知值。
+\item 原创性：结论新（各边界阶排除为新增）；方法为既有工具（Schur 补、整性、商矩阵）的组合，作者已如实声明不主张方法新颖。不存在旧定理直接推论冒充新结果的情形。
+\end{itemize}
+
+\section{问题清单}
+\begin{itemize}
+\item \textbf{致命：}无。
+\item \textbf{重大：}
+\begin{enumerate}
+\item $\sqrt2$ 阈值全部上界依赖 [4] 的计算机辅助分类（含 printed pp. 240--241 的枚举）。本文未重跑、本审稿亦未能取回 [4] 核对 Lemma 1/Theorem 3/Table 1 与页码。建议复核 pinpoint 引用并归档枚举代码/数据。
+\item 阈值 2 的三个下界经 Prop 9.1 归约为 HS/Gewirtz/M22 的存在性与参数+谱；参数为标准值，但 [8][9][12] 未在本审稿中重验。建议补核验指引或显式邻接规则。
+\end{enumerate}
+\item \textbf{一般：}
+\begin{enumerate}
+\setcounter{enumi}{2}
+\item \S1.1 基线表：$k=8$ 的 50 来自等式情形论证（$M=51$ 但 $c=4/3$ 非整），其余为 floor/奇偶修正；建议表注逐列标明所用修正。
+\item \S3.3 ``在 $X$ 上和零常向量正交的子空间上所有特征值为 2'' 宜补一行理由（$X$ 独立 $\Rightarrow v^TAv=0$ 且 $v^TJv=0$）。
+\end{enumerate}
+\item \textbf{编辑：}无实质排版错误；(5.3)、(6.6) 经放大核对均正确。
+\end{itemize}
+
+\section{最小必要修改方案}
+\begin{enumerate}
+\item 为 [4] 依赖补可复现说明（枚举代码/数据归档或 pinpoint 复核结论）；无需改动证明。
+\item 按问题 3、4 增补两处一行说明/表注。
+\item （可选）为 HS/Gewirtz/M22 增补显式邻接或核验指引。
+\end{enumerate}
+\noindent 无需缩小任何结论；所有主定理在当前依赖下成立。
+
+\section{审稿建议与边界}
+\begin{itemize}
+\item \textbf{建议：小修（minor revision）。}内部数学在可核验范围内全部正确且论证完整；唯一不确定性来自外部计算机辅助分类 [4] 与经典强正则图引文，二者均为已发表/标准结果且作者已披露，属文档与可复现性问题而非正确性问题。补齐第 1、2 项依赖说明与两处澄清后即可接收。
+\item 边界：本审稿未重跑 [4] 枚举、未重构 HS/Gewirtz/M22、未取得 [4][5][6][7][12] 原文；若 [4] 分类或其枚举有误，$\sqrt2$ 阈值诸结论需重新评估（阈值 2 结论不受影响）。``暂未发现错误'' 不等同于形式化验证或正式同行评审。
+\end{itemize}
+
+\end{document}
