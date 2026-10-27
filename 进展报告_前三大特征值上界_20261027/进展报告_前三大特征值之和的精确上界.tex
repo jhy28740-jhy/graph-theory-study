@@ -452,6 +452,71 @@ $C_5$ 是奇圈，$\pm1$ 标注无法使所有边为负，切换结构失效。
 而 Case B 的特征是 $t$ 接近 $1$，即 $\one$ 几乎落在前三特征子空间内。
 \end{remark}
 
+\subsection{负行挤压恒等式组：掩码刚性的定量发动机}\label{sec:squeeze}
+
+方向庚（第~7.7 节）需要一个能把「负图 $\Gamma^-$ 的组合形状」翻译成「定量不等式」的工具。
+本子节给出这样一组恒等式与不等式。它们对形式 9（定理~\ref{thm:form9}）的\emph{任何}可行标架都成立，
+证明各只有一行，但在冠军处逐条精确饱和或给出显式正 slack，
+因此是后续掩码刚性论证的定量发动机。
+
+记 $G=A^\top A$（秩 $3$ 正交投影，$p_k=G_{kk}$，$\sum_kp_k=3$），
+$y>0$ 为 $(G)_+$ 的 Perron 向量，$\rho=\lambda_{\max}((G)_+)$，$Y_2=\|y\|^2$。
+对每个原子 $k$ 定义其\emph{负行三量}：
+\[
+N_k=-\!\!\sum_{l:\,G_{kl}<0}\!\!G_{kl}\,y_l\ \ge0,\qquad
+E_k=\!\!\sum_{l:\,G_{kl}<0}\!\!G_{kl}^2,\qquad
+S_k=\!\!\sum_{l:\,G_{kl}<0}\!\!y_l^2 ,
+\]
+即 $N_k,E_k,S_k$ 分别是负行的质量、能量与权平方和，三者都只在 $\Gamma^-$ 的边集上求和。
+
+\begin{theorem}[负行挤压与钉扎，已证]\label{thm:squeeze}
+对一切可行 $(G,y)$ 与每个 $k$：
+\begin{enumerate}[label=(\roman*),leftmargin=2em,itemsep=1pt]
+\item \textbf{正行恒等式}：$\sum_{l\ne k,\,G_{kl}>0}G_{kl}y_l=(\rho-p_k)y_k$；
+\item \textbf{负行挤压}：$(\rho-p_k)^2y_k^2\le(p_k-p_k^2-E_k)\,(Y_2-y_k^2-S_k)$；
+\item \textbf{负行 Cauchy--Schwarz}：$N_k^2\le E_kS_k$；
+\item \textbf{全局钉扎}：$\rho\,Y_2-\sum_ky_kN_k=y^\top Gy$。
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(i) 把 $(G_+y)_k=\rho y_k$ 按对角、正、负三块拆开，负块移到右端即得（注意负块在两边各出现一次，相消）。
+(ii) 对正行用 Cauchy--Schwarz：左端是正行的平方；第一个因子 $\sum_{l:+}G_{kl}^2=(G^2)_{kk}-p_k^2-E_k=p_k-p_k^2-E_k$
+用到 $G^2=G$；第二个因子 $\sum_{l:+}y_l^2=Y_2-y_k^2-S_k$。
+(iii) 对负行直接用 Cauchy--Schwarz。
+(iv) $y^\top Gy=\sum_ky_k(Gy)_k$，而 $(Gy)_k=(G_+y)_k+(G_-y)_k=\rho y_k-N_k$。
+\end{proof}
+
+\begin{remark}[冠军处的精确饱和表，已证且精确]\label{rmk:squeezechamp}
+把定理~\ref{thm:champ} 的闭式代入（$y$ 归一化为 $y_{\rm hub}=1$、
+$y_{\rm cyc}=(\rho_0-p_{\rm hub})/(5h)$），四条全部精确成立，且 slack 有闭式：
+\[
+Y_2=\frac{91+25\sqrt7}{31}=5.069154283116605,
+\]
+\begin{align*}
+y^\top Gy&=\frac{251\sqrt5+133\sqrt{35}}{558}+\frac{25\sqrt7+91}{62}\\
+&=4.950512040312239,
+\end{align*}
+\[
+\sum_ky_kN_k=\frac{95\sqrt5+37\sqrt{35}}{279}=1.5459548739683362
+=\rho_0Y_2-y^\top Gy,
+\]
+\begin{align*}
+\text{cycle 行 (ii) 的 slack}&=\frac{46-16\sqrt7}{405}=0.009056738328312,\\
+\text{hub 行 (ii) 的 slack}&=0,\qquad \text{(iii) 在 cycle 行取等}.
+\end{align*}
+\end{remark}
+
+remark~\ref{rmk:squeezechamp} 中有两个信号值得单独记录。
+第一，\textbf{hub 行的挤压恰好饱和}：Cauchy--Schwarz 取等意味着 hub 的正行满足
+$G_{{\rm hub},l}\propto y_l$，这是一条\emph{等式}型结构信息，可以直接用于刚性论证
+（任何与冠军竞争的对象，其「hub 型」原子必须保持这个比例关系）。
+第二，\textbf{(iii) 在 cycle 行取等}：意味着每个 cycle 原子的两条负边
+满足 $|G_{kl}|/y_l$ 为常数，即负边在归一化意义下等权——这与等权刚性是同一现象的另一种表述。
+这两条取等条件合起来，正是方向庚所需要的「掩码被钉死」的起点：
+子步 1b 的任务是证明，任何 $\Gamma^-\ne C_5$ 吹起的构型都至少破坏其中一条取等，
+从而由 (ii)(iii) 的显式 slack 把 $\rho$ 压到 $\rho_0$ 之下。
+
 \section{本轮新结果：通道型主函数方案的精确天花板}\label{sec:nogo}
 
 \subsection{动机}
