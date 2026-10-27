@@ -1005,6 +1005,52 @@ $\Lam_3(M)$ 关于 $M$ 是凸的，而 $M=D_w(A_H+I)D_w$ 关于 $w$ 是\emph{二
 可以直接作为毕业论文的一个独立章节交付，不需要等待上界。
 \end{enumerate}
 
+\subsection{本轮新增的候选方向（庚、戊、己）}
+
+在方向甲至丁之外，本轮又考虑了三条新方向。它们与甲—丁的区别在于：
+不再试图构造更好的主函数（定理~\ref{thm:zonal} 已经封死这条路），
+而是直接处理定理~\ref{thm:zonal} 指出的那两类缺失信息。
+
+\textbf{方向庚：攻掩码，而不是攻支撑（建议取代 (2a) 成为主线缺口）。}
+方向甲的缺口 (2a) 是「极值测度的原子数 $\le6$」。但重新审视定理~\ref{thm:selfcons} 会发现，
+真正决定问题的是\emph{掩码} $A_H=1\{Q>0\}-I$ 的组合类型，而不是原子个数：
+冠军的负图 $\Gamma^-=C_5$，而我们已经知道 $\Gamma^-$ 无三角形、且满足等权刚性。
+于是提出一个比 (2a) 更弱、因而更有希望的新猜想：
+\emph{任何达到值 $\ge\rho_0$ 的自洽构型，其负图必为 $C_5$ 的吹起（允许孤立顶点与零权原子）。}
+若此猜想成立，掩码就被完全钉死为 $K_1\vee C_5$ 的符号模式，
+问题立即退化为「固定符号模式下的有限维极值」，而后者已由定理~\ref{thm:champ} 解出。
+攻它的可行路径是按 $\Gamma^-$ 的极小禁子结构分情形：每一情形是一个低维多项式极值问题，
+可用 SOS 证书加区间算术逐块认证上界 $<\rho_0$。
+与 (2a) 相比，这条路的分情形对象是\emph{图}而不是\emph{测度}，
+可用的结构信息多一个量级（三角形自由、奇圈长度、度序列都能用），这是它更有希望的原因。
+
+\textbf{方向戊：$\varepsilon$-稳定性定理 + 计算机辅助有限覆盖。}
+不直接证 $c_3^{\Sigma}\le\rho_0$，改证稳定性：存在显式 $\varepsilon_0,C>0$，
+使任何值 $\ge\rho_0-\varepsilon$（$\varepsilon<\varepsilon_0$）的自洽构型距离冠军吹起族不超过 $C\sqrt\varepsilon$。
+证明分两段。「近段」是冠军处的二阶展开：常数全部在 $\Q(\sqrt5,\sqrt7)$ 中，
+Hessian 在对称轨道（$D_5$ 与 $O(2)$ 的商）横向上的负定性可用区间算术认证；
+符号模式稳健性 $\min|\Pi_3|=0.1900$ 保证展开邻域内掩码不变。
+「远段」需要把「距冠军 $\ge\eta$」的构型空间分成有限块并逐块给出显式上界 $<\rho_0$，
+这是真正的难点：块数可能很大，但每块是一次凸可行性检查，可并行、可认证。
+这种「解析主部 + 计算机辅助有限核验」的证明形态在本领域有被接受的先例：
+第五大投影常数的确定 [DFFL22] 与八维、二十四维球堆积 [Via17, CKM$^+$17] 都是这一结构。
+风险在于远段块数爆炸，以及 Hessian 商掉对称后是否仍有零方向（目前未验证）。
+
+\textbf{方向己：交替动力系统的全局吸引性。}
+引理~\ref{lem:kyfan} 的「模式 $\leftrightarrow$ 权」交替映射使目标单调不减。
+若能证明 (i) 任何极限点都是自洽不动点；(ii) 不动点集模对称后有限；
+(iii) 除冠军外每个不动点的值都 $<\rho_0$ 且局部为鞍或排斥，
+则从任意初值出发的迭代都收敛到冠军，冠军从而是全局最大。
+(ii) 可由不动点方程组的多项式性质经半代数几何得到有限性；
+(iii) 的缺口是不动点个数未知。即使不能完成，(i)+(ii) 本身是一个干净的结构定理，
+可以单独作为论文的一节。
+
+\textbf{优先级（更新）。} 庚的掩码刚性猜想取代 (2a) 成为主线第一缺口；
+戊作为主线证明形态的蓝图；等权子问题 $m_{\rm eq}$ 的正确重算（第~7.3 节，
+产出改进 \STW\ 约 $0.77\%$ 的无条件上界）保持为保底发表件；己作为结构副产品。
+四者共享同一套基础设施：定理~\ref{thm:form9} 的形式 9、区间算术认证管线、
+以及命题~\ref{prop:nec} 的 (A)/(B) 筛选器。
+
 \section{诚实声明与结论状态}\label{sec:honest}
 
 本节把全文的结论按证明强度重新排一遍，使读者不必回到正文逐条核对，
@@ -1157,6 +1203,11 @@ $V(\text{cyc},\text{cyc})$ 的闭式直接代入得到，\texttt{sympy} 化简�
 \begin{thebibliography}{99}
 \small
 
+\bibitem[CKM$^+$17]{ckm17}
+H.~Cohn, A.~Kumar, S.~Miller, D.~Radchenko, and M.~Viazovska,
+\newblock The sphere packing problem in dimension 24,
+\newblock \textit{Annals of Mathematics} \textbf{185} (2017), no.~3, 1017--1033.
+
 \bibitem[CL09]{cl09}
 B.~L.~Chalmers and G.~Lewicki,
 \newblock Three-dimensional subspace of $\ell_\infty^5$ with maximal projection constant,
@@ -1226,6 +1277,11 @@ V.~Sivashankar, Q.~Tang, and T.~Wakhare,
 Q.~Tang,
 \newblock A sharp upper bound on the third adjacency eigenvalue of a graph,
 \newblock arXiv preprint arXiv:2603.21181 (2026).
+
+\bibitem[Via17]{via17}
+M.~Viazovska,
+\newblock The sphere packing problem in dimension 8,
+\newblock \textit{Annals of Mathematics} \textbf{185} (2017), 991--1015.
 
 \end{thebibliography}
 
