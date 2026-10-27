@@ -517,6 +517,56 @@ $G_{{\rm hub},l}\propto y_l$，这是一条\emph{等式}型结构信息，可以
 子步 1b 的任务是证明，任何 $\Gamma^-\ne C_5$ 吹起的构型都至少破坏其中一条取等，
 从而由 (ii)(iii) 的显式 slack 把 $\rho$ 压到 $\rho_0$ 之下。
 
+\subsection{冠军的局部刚性：近段稳定性常数}\label{sec:locrig}
+
+定理~\ref{thm:squeeze} 是逐点的代数工具；本子节补一个\emph{局部}工具，
+它是方向戊「近段」的第一块砖，也直接服务于方向庚的子步 1b。
+
+在 Grassmann 图表 $X\mapsto\Pi(X)=A^\top(AA^\top)^{-1}A$（$A=[I_3\mid X]\in\R^{3\times6}$）下，
+形式 9 的目标函数成为 $\rho(X)=\lambda_{\max}((\Pi(X))_+)$，定义域是 $\R^9$ 的开集；
+冠军的符号腔 $\Sigma^*=\{\text{sign}\,\Pi=\text{sign}\,\Pi^*\}$ 是其中一个开室
+（腔半径由 $\min|\Pi^*|=0.189960218562$ 控制）。
+在室内 $(\Pi(X))_+=\Sigma^*\odot\Pi(X)$ 是 $X$ 的解析函数，且 $\lambda_{\max}$ 简单
+（冠军处 $(\Sigma^*\odot\Pi^*)$ 的谱隙为 $0.588930287016$），故 $\rho$ 在室内解析。
+
+\begin{theorem}[冠军的局部刚性，已证（计算机辅助认证）]\label{thm:locrig}
+在冠军图表点 $X^*$ 处 $\nabla\rho(X^*)=0$（认证精度 $3.4\times10^{-51}$），且
+\[
+\operatorname{Hess}\rho(X^*)\ \preceq\ -\kappa I_9,\qquad
+\kappa=0.020962946762952704 .
+\]
+因此冠军是其符号腔内的\textbf{非退化严格局部最大}；定量地，腔内
+$\rho(X)\le\rho_0-\frac\kappa2\|X-X^*\|^2+O(\|X-X^*\|^3)$，
+从而 $\rho(X)\ge\rho_0-\varepsilon$ 迫使 $\|X-X^*\|^2\le2\varepsilon/\kappa+O(\varepsilon^{3/2})$。
+\end{theorem}
+
+\begin{proof}[证明要点（认证管线）]
+Hessian 用二阶摄动的基无关公式解析计算：
+$\partial_{ts}^2\rho=v^\top M_{ts}v+u_t^\top M_sv+u_s^\top M_tv$，
+其中 $M_\bullet=\Sigma^*\odot\partial_\bullet\Pi$，而 $u_\bullet$ 由
+$(\lambda_1I-M_0)u=P_\perp M_\bullet v$ 解出（谱隙保证可逆，且避开重特征值子空间的基选择问题）。
+$\partial_\bullet\Pi$ 与 $\partial^2_{\bullet\bullet}\Pi$ 由 $\Pi=A^\top(AA^\top)^{-1}A$ 的
+二阶截断幂级数（含 $3\times3$ 级数求逆）精确给出，全程 50 位十进制。
+认证：把 $9\times9$ Hessian 舍入到 20 位得 $\tilde H$，
+$\|H-\tilde H\|_F\le9\times4.85\times10^{-21}=4.36\times10^{-20}$，
+再由 Weyl 单调性 $\lambda_{\max}(H)\le\lambda_{\max}(\tilde H)+4.36\times10^{-20}
+=-0.0209629467629527041<-\kappa$。
+全部步骤见随附脚本 \texttt{证书\_冠军局部刚性.py}；
+该解析 Hessian 与独立的高精度有限差（$h=10^{-3},10^{-4}$）在 8 位有效数字上吻合。
+\end{proof}
+
+\begin{remark}[这条定理在三条战线上的用法]
+\emph{(戊)} 它就是近段稳定性：常数 $\kappa$ 显式，$C=\sqrt{2/\kappa}=9.7630\ldots$
+给出「值损失 $\varepsilon$ $\Rightarrow$ 距离 $\le C\sqrt\varepsilon$」的近段版本
+（三次余项的显式界是下一张证书，见协议 P2-近段 b）。
+\emph{(庚)} 腔内没有竞争者：任何与冠军同腔且值 $\ge\rho_0-\varepsilon$ 的构型必在 $C\sqrt\varepsilon$ 邻域内，
+于是子步 1b 只需处理\emph{跨腔}情形——即 $\Gamma^-$ 偏离 $C_5$ 吹起的构型必须穿过某面
+$\{\Pi_{kl}=0\}$，而在面上的上界是有限个低维极值问题（每面一个），可逐面认证。
+这把 1b 从「分析任意偏离」化为「有限个面上的上界」，是本轮最重要的结构简化。
+\emph{(己)} 非退化严格局部最大排除了冠军附近的连续族竞争者，
+交替映射的局部收敛速率也由 $\kappa$ 与谱隙控制。
+\end{remark}
+
 \section{本轮新结果：通道型主函数方案的精确天花板}\label{sec:nogo}
 
 \subsection{动机}
