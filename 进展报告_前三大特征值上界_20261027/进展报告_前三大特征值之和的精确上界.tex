@@ -1,0 +1,1232 @@
+\documentclass[UTF8,11pt]{ctexart}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array,geometry,enumitem}
+\usepackage{xcolor}
+\definecolor{linkblue}{rgb}{0.10,0.20,0.45}
+\usepackage[colorlinks=true,linkcolor=linkblue,citecolor=linkblue,urlcolor=linkblue]{hyperref}
+\geometry{a4paper,margin=2.4cm}
+\setlength{\parskip}{2pt}
+
+\newtheorem{theorem}{定理}[section]
+\newtheorem{proposition}[theorem]{命题}
+\newtheorem{lemma}[theorem]{引理}
+\newtheorem{corollary}[theorem]{推论}
+\newtheorem{conjecture}[theorem]{猜想}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{定义}
+\newtheorem{remark}[theorem]{注}
+\newtheorem{example}[theorem]{例}
+
+\newcommand{\Lam}{\Lambda}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\dd}{\,\mathrm{d}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\one}{\mathbf{1}}
+\newcommand{\STW}{\textup{[STW26]}}
+
+\title{\bfseries 图的前三大特征值之和的精确上界\\[4pt]
+\large 阶段性进展报告与障碍分析}
+\author{}
+\date{2026 年 10 月 27 日}
+
+\begin{document}
+\maketitle
+\vspace{-2.2em}
+
+\begin{abstract}
+\noindent 设 $G$ 为 $n$ 阶图，$\lambda_1(G)\ge\cdots\ge\lambda_n(G)$ 为其邻接矩阵的特征值，
+$\Lam_k(G)=\lambda_1(G)+\cdots+\lambda_k(G)$，$M_k(n)=\max\{\Lam_k(G):|V(G)|=n\}$。
+本报告讨论 $k=3$ 的情形。目前已知的最好无条件上界是 Sivashankar--Tang--Wakhare
+\STW\ 的 Proposition 6.1 在 $k=3$ 处的推论
+$\Lam_3(G)\le\Phi n-3$，$\Phi=(3+\sqrt5)/4=1.309016994374947$。
+另一方面，我们在前期工作中构造出一个六原子的加权核心（$K_1\vee C_5$ 的团吹起），
+证明了 $\liminf_{n}M_3(n)/n\ge\rho_0$，其中
+$\rho_0=(9+\sqrt5+2\sqrt{35})/18=1.281568196872168$。
+因此真值落在 $[\rho_0,\Phi]$ 这个宽度为 $2.0969\%$（相对 $\Phi$）的区间内，
+本课题的目标是证明上端也可以取到 $\rho_0$。
+
+本报告做三件事。第一，完整拆解 \STW\ 的证明，说明它为什么\emph{必然}停在 $\Phi$，
+以及它的证明架构中哪一部分是深刻的、哪一部分是形式化的。
+第二，汇报到目前为止已经严格建立的结果：一条把「对一切 $n$、一切图」压缩为
+「一个有限维极值问题」的归约链，$\rho_0$ 的精确下界证书，
+极值核心的完整闭式刻画，以及若干条被定量否证的路线。
+第三，给出本轮的新结果（定理~\ref{thm:zonal}）：
+\emph{整个}「逐点主函数 + 逐通道线性计费」的方案族——它包含 \STW\ 的证法、
+包含把 $|t|$ 换成正部 $(t)_+$ 的自然推广、也包含任意高阶 Gegenbauer 修正项与
+一类非球对称的耦合通道——其可达到的最好常数\emph{恰好}是 $\Phi$。
+证明只有三行，见证测度支撑在正二十面体等角线系的内收集
+$\{-1,-1/\sqrt5,1/\sqrt5,1\}$ 上。
+这条否定性结果的意义在于：它在动手之前排除了我们原先排在首位的一条技术路线，
+并且精确指出，要突破 $\Phi$ 就必须使用 \STW\ 的框架\emph{丢掉}的那部分信息，
+即投影的自洽性（掩码约束）$A=1\{Q>0\}$。
+
+\medskip
+\noindent\textbf{关键词：} 图特征值；Ky Fan 范数；投影常数；Gegenbauer 多项式；图极限；极值谱图论
+
+\medskip
+\noindent\textbf{阅读说明：} 全文对每一条结论标注其证明状态。
+「已证」指本报告或所引文献中含有完整证明；「精确」指该结论的数值部分已由
+\texttt{sympy} 在相应代数数域上判定为恒等式（差化简后恰为 $0$）；
+「数值」指只有浮点证据、\emph{不}构成证明；「否证」指该命题已被反例推翻。
+所有标注「数值」的条目都不应被当作成果引用。
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{问题、记号与已知结果}
+
+\subsection{问题}
+
+对 $n$ 阶图 $G$，记邻接矩阵特征值为 $\lambda_1(G)\ge\lambda_2(G)\ge\cdots\ge\lambda_n(G)$，并记
+\[
+\Lam_k(G)=\sum_{i=1}^k\lambda_i(G),\qquad
+M_k(n)=\max\{\Lam_k(G):\ |V(G)|=n\},\qquad
+c_k^{\Sigma}=\lim_{n\to\infty}\frac{M_k(n)}{n}.
+\]
+极限 $c_k^{\Sigma}$ 存在（$M_k(n)$ 关于 $n$ 几乎可加，且 $M_k(n)\le \frac{1+\sqrt k}{2}n$ 给出线性上界）。
+$k=1$ 时 $c_1^{\Sigma}=1$（完全图取到）；$k=2$ 时 $c_2^{\Sigma}=8/7$，
+这是 Ebrahimi--Mohar--Nikiforov--Ahmady 的猜想，
+由 Kumar--Liu--Monterde--Pragada--Tait 用图极限与凸分析方法证明。
+本报告讨论 $k=3$。
+
+\begin{conjecture}[主猜想，记作 A1$'$]\label{conj:A1}
+$c_3^{\Sigma}=\rho_0$，其中
+\[
+\rho_0=\frac{9+\sqrt5+2\sqrt{35}}{18}=1.2815681968721679\ldots
+\]
+等价地，对每个 $n$ 与每个 $n$ 阶图 $G$，$\Lam_3(G)\le\rho_0 n-3$。
+\end{conjecture}
+
+下界 $\ge$ 的一半已经严格证明（见定理~\ref{thm:lower}）；上界 $\le$ 的一半是本课题的全部内容，目前未证。
+
+\subsection{三条已发表的上界}
+
+\begin{enumerate}[leftmargin=1.6em,itemsep=2pt]
+\item \textbf{Mohar (2009)}\ \ $\Lam_k(G)\le\frac{1+\sqrt k}{2}n$。$k=3$ 给
+$\frac{1+\sqrt3}{2}n=1.366025403784439\,n$，且不带 $-k$ 修正项。
+Mohar 在同一篇文章中明确提问：这个界离真值有多远。
+\item \textbf{Das--Mojallal--Sun (2019)}\ \ 含负惯性指数 $\theta$ 的界
+$\Lam_k(G)\le\frac{n}{2(\theta+1)}\bigl(\theta+\sqrt{\theta(k\theta+k-1)}\,\bigr)$。
+$k=3$ 时，该界优于 $\Phi n$ 当且仅当 $\theta\le\theta^*=9+4\sqrt5=17.944$；
+当 $\theta=\Theta(n)$ 时精确退化回 Mohar 的 $\frac{1+\sqrt3}{2}n$。
+而我们构造的极值图（$K_1\vee C_5$ 的团吹起）恰好有 $\theta=\Theta(n)$，
+所以这一条对稠密渐近情形完全无用。
+\item \textbf{Sivashankar--Tang--Wakhare (2026)，即 \STW}\ \ Proposition 6.1：
+对一切 $n$ 阶图与一切 $1\le k\le n$，
+\[
+\Lam_k(G)\ \le\ \frac{1+\gamma(k)}{2}\,n-k
+\ \le\ \frac12\Bigl(1+\frac{k+\sqrt{k+2}}{1+\sqrt{k+2}}\Bigr)n-k ,
+\]
+其中 $\gamma(k)$ 是 $k$ 维绝对投影常数。$k=3$ 时 $\gamma(3)=\varphi=\frac{1+\sqrt5}{2}$，故
+\[
+\Lam_3(G)\ \le\ \Phi n-3,\qquad \Phi=\frac{1+\varphi}{2}=\frac{3+\sqrt5}{4}=1.309016994374947 .
+\]
+这是目前的无条件纪录。该文同时解决了 Nikiforov (2015) 的 Conjecture 4.2。
+\end{enumerate}
+
+于是
+\[
+\rho_0=1.281568196872168\ \le\ c_3^{\Sigma}\ \le\ \Phi=1.309016994374947,
+\qquad \Phi-\rho_0=0.027448797502779 ,
+\]
+可改进空间的精确上限是 $\frac{\Phi-\rho_0}{\Phi}=2.0969\%$。
+
+\subsection{一个值得注意的定量平行现象}
+
+\STW\ 在 $k=2$ 处给出的界是 $\frac76 n-2=1.166667\,n-2$，而真值是 $\frac87 n=1.142857\,n$；
+两者之比恰为 $\frac{49}{48}=1.020833$，即 \STW\ 的一般方法在 $k=2$ 处高出真值 $2.083\%$。
+在 $k=3$ 处，$\Phi/\rho_0=1.021418$，即高出 $2.142\%$。
+两个相对偏差几乎相同，这不是巧合的证据，但它与「$\rho_0$ 就是 $k=3$ 的真值」这一猜想高度相容：
+\STW\ 的架构在 $k=2$ 处损失了 $2.08\%$，在 $k=3$ 处损失同量级是自然的。
+\STW\ 自己在其 \S6.2 中承认，对 $k=2$「专门的工作给出了远为尖锐的答案」，
+而他们的一般估计「只给出 $\frac76n-2$」。
+
+\subsection{记号约定（必须钉死，否则会与 \STW\ 冲突）}
+
+\STW\ 用 $c_k$ 表示\emph{单个}特征值的常数（$\lambda_k(G)\le c_k n-1$）。
+本报告用 $c_k^{\Sigma}$ 表示\emph{前 $k$ 个之和}的常数。两者完全不同：
+\STW\ 的 Table 1 列出的是 $c_5,\dots,c_{17}$（单个特征值），
+其中并\emph{没有} $k=3$ 求和的任何下界。
+\STW\ 还定义了混合投影常数
+\[
+\eta_{\mathrm{mix}}(k)=\sup_{N\ge k}\frac1N\max_{Q\in P_k(N)}\bigl(\|Q\|_1+\one^\top Q\one\bigr),
+\]
+并指出 $\Lam_k(G)\le\frac{\eta_{\mathrm{mix}}(k)}2n-k$ 而 $\eta_{\mathrm{mix}}(k)\le 1+\gamma(k)$。
+\textbf{他们从未计算 $\eta_{\mathrm{mix}}(3)$ 的真值。}
+由定理~\ref{thm:reduce} 可知 $c_3^{\Sigma}=\eta_{\mathrm{mix}}(3)/2$，
+所以猜想~\ref{conj:A1} 恰好等价于 $\eta_{\mathrm{mix}}(3)=2\rho_0=2.563136393744$，
+而 \STW\ 只给出 $\eta_{\mathrm{mix}}(3)\le 1+\varphi=2.618034$。
+这是一个明确写在已发表文献中、且未被任何人占据的缺口。
+
+其余记号：$P_k(n)=\{Q\in\R^{n\times n}:Q^\top=Q,\ Q^2=Q,\ \tr Q=k\}$ 为秩 $k$ 正交投影全体；
+$\|Q\|_1=\sum_{ij}|Q_{ij}|$ 是\emph{逐元素}的 $\ell_1$ 范数（不是核范数；对投影而言核范数等于 $\tr Q=k$）；
+$(x)_+=\max(x,0)$；$P_\ell$ 为 Legendre 多项式（$P_\ell(1)=1$）；
+$s=\|Q\|_1/n$，$t=\one^\top Q\one/n$。
+
+\section{\STW\ 证明的解剖}\label{sec:stwanat}
+
+这一节的目的有两个：说清楚 \STW\ 到底做了什么（它并没有对任何具体的图跑算法），
+以及精确定位它的证明在哪一步失去信息。后一件事决定了我们能不能改进它。
+
+\subsection{第一步：Ky Fan 对偶与掩码（完全形式化，无损失）}
+
+设 $A$ 为 $G$ 的邻接矩阵。由 Ky Fan 极大原理，
+$\Lam_k(G)=\max_{Q\in P_k(n)}\tr(AQ)$。固定 $Q$，
+因为 $a_{ii}=0$ 而 $0\le a_{ij}\le1$（$i\ne j$），有
+\[
+\tr(AQ)=\sum_{i\ne j}a_{ij}q_{ij}\ \le\ \sum_{i\ne j}(q_{ij})_+ ,
+\]
+且等号在 $A=1\{Q_{ij}>0\}$（$i\ne j$）时取到。两个 $\max$ 可以交换，于是
+\begin{equation}\label{eq:mask}
+M_k(n)=\max_{Q\in P_k(n)}\sum_{i\ne j}(Q)_{ij}^{+}.
+\end{equation}
+这一步的实质是：\emph{最优图由投影的符号模式决定}。它把「对一切图」换成了「对一切秩 $k$ 投影」，
+$n$ 依然存在，但图已经消失了。这是 \STW\ 的 \S2，也是整个课题的出发点。
+
+\subsection{第二步：拆成两项，分别封顶（信息损失发生在这里）}
+
+用 $(x)_+=\frac12(x+|x|)$，并注意 $\sum_i q_{ii}=\tr Q=k$（投影的对角元非负），得
+\begin{equation}\label{eq:st}
+\sum_{i\ne j}(Q)_{ij}^{+}=\frac12\Bigl(\|Q\|_1+\one^\top Q\one\Bigr)-k .
+\end{equation}
+\STW\ 随后对两项\emph{分别}使用各自的上确界：
+$\one^\top Q\one=\|Q\one\|_2^2\le\|\one\|_2^2=n$（因为 $Q\preceq I$），
+以及 $\|Q\|_1\le\gamma(k)n$（绝对投影常数的定义）。代入即得 Proposition 6.1。
+
+\begin{remark}\label{rmk:loss}
+记 $s=\|Q\|_1/n$、$t=\one^\top Q\one/n$，则 \eqref{eq:st} 给出 $\Lam_k(G)=(s+t)n/2-k$。
+$k=3$ 时 $s\le\gamma(3)=\varphi=1.618034$，$t\le1$，于是 $s+t\le 1+\varphi=2.618034$，
+即 $\Lam_3\le\Phi n-3$。\textbf{但两个上确界不能同时取到：}
+$s=\varphi$ 的唯一取到者是正二十面体的 $6$ 条等角线构成的 ETF，
+而它的 $t=(3+\sqrt5)/6=0.872678\ne1$。
+我们的极值构造（见定理~\ref{thm:champ}）给出 $(s,t)=(1.586541134689,\ 0.976595259055)$，
+两项都严格低于各自的上确界，但和更大。精确的赤字分解是
+\[
+(\varphi-s)+(1-t)=0.031492854061+0.023404740945=0.054897595006=(1+\varphi)-2\rho_0 .
+\]
+\end{remark}
+
+注~\ref{rmk:loss} 是本报告最重要的一句结构性观察：
+\textbf{任何逐项放缩的路线都不可能改进 \STW}。要往下走，必须证明一条\emph{权衡}不等式
+\begin{equation}\label{eq:tradeoff}
+s+t\ \le\ 2\rho_0=2.563136393744336 ,
+\end{equation}
+而不是分别改进 $s$ 与 $t$。第~\ref{sec:nogo} 节将给出这条观察的一个远为严格的版本。
+
+\subsection{第三步：$\|Q\|_1\le\gamma(3)n$ 是怎么证的（这才是 \STW\ 的数学内容）}
+
+这一部分与图完全无关，是一条关于秩 $r$ 正交投影的、维数无关的解析不等式。
+设 $Q=VV^\top$，$V\in\R^{n\times r}$ 列正交，行为 $x_i=c_iu_i$，其中 $c_i=\|x_i\|_2\ge0$，
+$u_i\in S^{r-1}$。列正交性 $V^\top V=I_r$ 写成行的形式就是\emph{各向同性条件}
+\begin{equation}\label{eq:iso}
+\sum_{i=1}^n c_i^2u_iu_i^\top=I_r,\qquad q_{ij}=c_ic_j\langle u_i,u_j\rangle .
+\end{equation}
+于是 $\|Q\|_1=\sum_{ij}c_ic_j|\langle u_i,u_j\rangle|$。令
+\[
+f_2^{r}(t)=t^2-\frac1r,\qquad f_4^{r}(t)=t^4-\frac{3}{r(r+2)},\qquad
+\phi(u)=uu^\top-\frac1rI_r,
+\]
+\[
+C=\sum_ic_i,\qquad X^2=\Bigl\|\sum_ic_i\phi(u_i)\Bigr\|_F^2 .
+\]
+
+\STW\ 的论证由四块拼成。
+
+\begin{enumerate}[leftmargin=1.6em,itemsep=3pt]
+\item \textbf{两个正定核}（Lemma 3.2、3.3）。
+$\langle\phi(u),\phi(v)\rangle_F=f_2^{r}(\langle u,v\rangle)$，所以 $f_2^r$ 是 Gram 矩阵、故在 $S^{r-1}$ 上正定；
+$f_4^r$ 的正定性由附录 A 用一个四阶张量的显式 Gram 表示证明。
+按 Schoenberg 定理，$S^{r-1}$ 上的正定函数恰是 $\sum_{\ell\ge0}a_\ell G_\ell^{r/2-1}$（$a_\ell\ge0$），
+而 $f_2^r=\frac{r-1}{r}\widetilde G_2^{r/2-1}$，
+$f_4^r=\frac{(r-1)(r+1)}{(r+2)(r+4)}\widetilde G_4^{r/2-1}+\frac{6}{r+4}f_2^r$。
+\item \textbf{一条关键的二次型不等式}（Lemma 4.2）：
+\begin{equation}\label{eq:l42}
+C^2+rX^2\ \le\ rn .
+\end{equation}
+证明是把 $C^2+rX^2$ 展开、用 $2c_ic_j\le c_i^2+c_j^2$、再用各向同性 \eqref{eq:iso} 收尾，共五行。
+这是整个论证中唯一真正用到「$\sum c_i^2u_iu_i^\top=I_r$」的地方。
+\item \textbf{标量主函数}（Lemma 4.3）。若存在 $a\ge0$、$\rho\ge0$、$b\le ra$ 使
+\begin{equation}\label{eq:maj}
+|t|\ \le\ a+b\,f_2^{r}(t)-\rho\,f_4^{r}(t)\qquad\forall t\in[-1,1],
+\end{equation}
+则 $\|Q\|_1\le arn$。证明：把 \eqref{eq:maj} 代入 $t=\langle u_i,u_j\rangle$、乘以 $c_ic_j\ge0$、对 $i,j$ 求和；
+常数项给 $C^2$，$f_2^r$ 项给 $X^2$，$f_4^r$ 项由正定性非负而系数为 $-\rho\le0$，故可丢弃；
+再用 $b\le ra$ 与 \eqref{eq:l42}。
+\item \textbf{系数的确定}（Lemma 4.4 与 Remark 4.5）。令 $s=\sqrt{r+2}$，取
+\[
+a_r=\frac{s^2+s-2}{r(s+1)},\qquad b_r=\frac{s(s^2+2s+3)}{2(s+1)^2},\qquad \rho_r=\frac{s^3}{2(s+1)^2}.
+\]
+则 \eqref{eq:maj} 成立，且余项有\emph{显式因式分解}
+\begin{equation}\label{eq:fac}
+a_r+b_rf_2^r(t)-\rho_rf_4^r(t)-|t|=\frac{(1-t)(st-1)^2(st+s+2)}{2(s+1)^2}\ \ge\ 0 .
+\end{equation}
+系数不是猜的：Remark 4.5 说明，极值等角线系的公角是 $\alpha=1/\sqrt{r+2}=1/s$，
+故要求在 $t=1$ 与 $t=1/s$ 两点接触、且在 $t=1/s$ 处导数也为零，
+即 $H(1)=H(1/s)=H'(1/s)=0$（$H$ 为 \eqref{eq:fac} 的左端），三个条件唯一确定三个系数。
+\end{enumerate}
+
+$r=3$ 时 $s=\sqrt5$，$3a_3=\frac{3+\sqrt5}{1+\sqrt5}=\varphi$，于是 $\|Q\|_1\le\varphi n$，即 $\gamma(3)\le\varphi$。
+下界由正二十面体的 $6$ 条等角线给出：取 $12$ 个顶点中每对对映点的一个代表 $x_1,\dots,x_6$，
+令 $X=[x_1/\sqrt2\ \cdots\ x_6/\sqrt2]\in\R^{3\times6}$，则 $XX^\top=I_3$，$Q=X^\top X$ 是秩 $3$ 投影，
+$Q_{ii}=\frac12$，$|Q_{ij}|=\frac1{2\sqrt5}$，故
+\[
+\|Q\|_1=6\cdot\tfrac12+30\cdot\tfrac1{2\sqrt5}=3+3\sqrt5,\qquad
+\gamma(3)\ge\frac{3+3\sqrt5}{6}=\frac{1+\sqrt5}{2}=\varphi .
+\]
+\begin{theorem}[$\gamma(3)=\varphi$，精确]\label{thm:gam3}
+$\gamma(3)=\frac{1+\sqrt5}{2}$。上述六个恒等式（$XX^\top-I_3=0$、$Q^2-Q=0$、$\tr Q=3$、
+$\|Q\|_1=3+3\sqrt5$、$\frac{3+3\sqrt5}{6}-\varphi=0$、$\frac{3+\sqrt5}{1+\sqrt5}-\varphi=0$）
+已由 \texttt{sympy} 独立复核，化简后的差全部恰为 $0$。
+\end{theorem}
+
+\subsection{\STW\ 自己留下的两个缺口}
+
+第一，\STW\ 的 Theorem 4.6 利用 \eqref{eq:fac} 的松弛给出了 $\gamma(r)$ 的严格改进，
+但其假设是「$r\ge4$ 为偶数且 $r+2$ 不是完全平方」。\textbf{$r=3$ 是奇数，不在其中}；
+而且 \STW\ 在第 515--517 行明确写出：Theorem 4.1 的界在 $r\in\{1,2,3,7,23\}$ 处是\emph{尖锐}的，
+因为这些维数存在极值实等角紧框架。结合定理~\ref{thm:gam3}，
+投影常数这条通道在 $k=3$ 处已经被榨干，天花板恰为 $\frac{1+\gamma(3)}2=\Phi$，不可能更低。
+
+第二，\STW\ 定义了 $\eta_{\mathrm{mix}}(k)$ 并只给出 $\eta_{\mathrm{mix}}(k)\le1+\gamma(k)$，
+在 \S6.1 中把它列为开放问题（他们的 Table 1 中若干 $r$ 处两侧下界不一致，
+「suggesting that this inequality may be strict」，但明确声明这不构成分离的证明）。
+$k=3$ 时 $\eta_{\mathrm{mix}}(3)$ 的真值无人计算。这正是猜想~\ref{conj:A1} 的位置。
+
+\subsection{方法论上的一个澄清}
+
+\STW\ 从头到尾没有对任何一阶的图做枚举或数值搜索。它的三步中，
+第一步是恒等变形，第二步是一行放缩，第三步是一条关于球面上点系的解析不等式，
+其证明依赖「正定核 + 标量主函数 + 一条二次型不等式」，
+与 Cohn--Elkies--Viazovska 型的球面堆积线性规划界是同一类技术。
+它的下界部分（\S5）确实用了确定性局部搜索来找候选核心，
+但作者明确声明「we make no claim of global optimality」，
+且每一个列出的构造都被直接验证。这个分工值得借鉴：
+\textbf{上界必须是解析的，下界才允许是构造加数值搜索的}。
+
+\section{已经严格建立的结果}
+
+\subsection{归约链：把「对一切 $n$、一切图」变成一个有限维问题}
+
+对有限图 $H$（$|V(H)|=N$）与权 $w\in\Delta^{N-1}$，记 $D_w=\mathrm{diag}(\sqrt w)$，定义\emph{核心}
+\[
+M(H,w)=D_w(A_H+I)D_w,\qquad
+\psi_k(H)=\max_{w\in\Delta}\Lam_k\bigl(M(H,w)\bigr),\qquad
+\psi_k=\sup_H\psi_k(H).
+\]
+$G=H[w;n]$ 表示团吹起：把 $H$ 的每个顶点换成 $n_v\approx w_vn$ 个顶点的团，每条边换成完全二部图。
+
+\begin{theorem}[归约，已证]\label{thm:reduce}
+以下三条成立。
+\begin{enumerate}[label=(\roman*),leftmargin=2em]
+\item 对每个 $n$ 与每个 $n$ 阶图 $G$，$\Lam_3(G)\le\psi_3\cdot n-3$；
+\item $c_3^{\Sigma}=\psi_3=\eta_{\mathrm{mix}}(3)/2$；
+\item 若 $(H,w)$ 满足 $\lambda_3(M(H,w))>0$ 且 $w$ 的分量全为有理数，则团吹起 $G_n=H[w;n]$ 满足
+$\Lam_3(G_n)=\Lam_3(M(H,w))\cdot n-3$（对使 $n\cdot w$ 为整数的 $n$ 精确成立）。
+\end{enumerate}
+\end{theorem}
+
+证明思路（(i)）。设 $Q\in P_3(n)$ 为 $G$ 的前三特征子空间投影，$Q=YY^\top$，$Y^\top Y=I_3$，行为 $y_i$。
+令 $x_i=\sqrt n\,y_i$，$\mu=\frac1n\sum_i\delta_{x_i}$，则 $\int uu^\top\dd\mu=Q$。
+把取值相同的 $x_i$ 归并为原子 $v_I$、权 $w_I$，并令 $P_{IJ}=1\{\langle v_I,v_J\rangle>0\}$。
+$P$ 是对称 $0$--$1$ 矩阵且对角为 $1$，故 $P=I+A_H$，$H$ 为某个有限图。设 $U$ 的行为 $\sqrt{w_I}v_I$，则 $U^\top U=I_3$，且
+\[
+\frac1n\sum_{ij}(Q)_{ij}^{+}=\sum_{IJ}w_Iw_J\langle v_I,v_J\rangle^{+}
+=\tr\bigl(U^\top D_wPD_wU\bigr)\le\Lam_3(D_wPD_w)\le\psi_3 ,
+\]
+倒数第二步用 Ky Fan（$U^\top U=I_3$）。$\square$
+
+\begin{remark}
+定理~\ref{thm:reduce} 的意义是：主定理 $\Lam_3(G)\le\rho_0n-3$ \textbf{完全等价于} $\psi_3\le\rho_0$，
+其中 $n$ 与图都已消失。而且由 (iii)，一旦上界证出，$\rho_0$ 自动是\emph{最优}常数，
+不需要另外证明尖锐性。这与 \STW\ 的第一步是同一件事，但多走了两步：
+\STW\ 停在「对一切秩 $3$ 投影」，我们进一步停在「对一切有限核心 $(H,w)$」。
+\end{remark}
+
+\begin{theorem}[三维几何形式，已证]\label{thm:P3}
+A1$'$ 等价于：对一切 $m$、一切 $p\in\Delta^{m-1}$、一切 $z_1,\dots,z_m\in\sqrt3\,S^2$ 满足
+$\sum_ip_iz_iz_i^\top=I_3$，有
+\begin{equation}\label{eq:P3}
+\tag{P$_3$}\sum_{i,j}p_ip_j\bigl(\langle z_i,z_j\rangle\bigr)_+\ \le\ \rho_0 .
+\end{equation}
+\end{theorem}
+
+\begin{remark}
+（记号勘误）前期稿件中把 \eqref{eq:P3} 的约束写成 $z_i\in S^2$，这是错的：
+取迹得 $\sum_ip_i|z_i|^2=1$，而 $\tr I_3=3$。正确的写法是 $z_i\in\sqrt3\,S^2$，
+与测度形式 $C_3=\{\nu:\int uu^\top\dd\nu=I_3\}$（自动 $\int|u|^2\dd\nu=3$）一致。
+本报告的定理~\ref{thm:zonal} 使用 $S^2$ 上的单位向量与 \STW\ 的 $c_i$ 分离写法，不受此影响。
+\end{remark}
+
+\begin{theorem}[自洽刻画与支撑界，已证]\label{thm:selfcons}
+\begin{multline*}
+c_3^{\Sigma}=\sup\Bigl\{\Lam_3\bigl(D_p^{1/2}AD_p^{1/2}\bigr):
+N\in\N,\ A\in\{0,1\}^{N\times N}\ \text{对称},\\
+A_{ii}=1,\ p\in\Delta^{N-1},\
+A=1\bigl\{\Pi_3(D_p^{1/2}AD_p^{1/2})\ge0\bigr\}\Bigr\},
+\end{multline*}
+其中 $\Pi_3(M)$ 是 $M$ 的前三特征投影；且上确界可在 $N\le24$ 上取到，
+Fenchel--Bunt 型精化给 $N\le20$。
+\end{theorem}
+
+\textbf{自洽条件 $A=1\{\Pi_3(M)\ge0\}$ 是本课题与 \STW\ 的分水岭。}
+\STW\ 的框架里，$Q$ 可以是\emph{任意}秩 $3$ 投影；而在我们的问题里，
+$Q$ 必须同时是掩码矩阵 $M$ 的前三特征投影。这是一条组合性质的约束，
+\STW\ 的解析机器完全用不到它。第~\ref{sec:methods} 节将说明，这正是唯一的出路。
+
+\subsection{精确下界与极值核心}
+
+\begin{theorem}[下界，已证且精确]\label{thm:lower}
+$c_3^{\Sigma}\ge\rho_0=\frac{9+\sqrt5+2\sqrt{35}}{18}$，且等号由核心 $H=K_1\vee C_5$（六原子轮图）
+与权 $w^*=(a^*,b^*,b^*,b^*,b^*,b^*)$ 取到，其中
+\[
+a^*=\frac{91-25\sqrt7}{126}=0.197271565264962,\qquad
+b^*=\frac{7+5\sqrt7}{126}=0.160545686946568,
+\]
+\[
+\frac{a^*}{b^*}=5\sqrt7-12=1.228756555322 .
+\]
+对应的团吹起图列给出 $\Lam_3(G_n)=\rho_0n-3$（精确，非渐近）。
+\end{theorem}
+
+\begin{theorem}[冠军的完整刻画，已证且精确]\label{thm:champ}
+对冠军核心，以下全部成立。
+\begin{enumerate}[label=(\alph*),leftmargin=2em,itemsep=1pt]
+\item $M^*=M(H,w^*)$ 的特征值为
+$\rho_0,\ 0.76203144\ldots$ 等，其中 $\Lam_3(M^*)=\rho_0$，第四大特征值 $\mu_4=-0.083123<0$；
+\item 一阶条件可化为一条初等二次方程 $a^2+24ab-31b^2=0$，其正根给出 $a^*/b^*=5\sqrt7-12$；
+\item 负图 $\Gamma^-=C_5$ 是奇圈，且权在 $C_5$ 的五个顶点上等值（等权刚性）；
+\item 在 $O(2)$ 归约下，核 $V_{IJ}=A_IA_J+R_IR_J\cos(\theta_I-\theta_J)$ 只取五个不同值：
+\[
+\begin{array}{lcl}
+V(\text{hub},\text{hub})=\dfrac{14}{-7\sqrt5-7+5\sqrt7+3\sqrt{35}}=+1.681778636549,\\[4pt]
+V(\text{hub},\text{cyc})=\sqrt{7/5}=+1.183215956620,\\[2pt]
+V(\text{cyc},\text{cyc})\ \text{自身}=-\frac72-\frac{7\sqrt5}{10}+\frac{3\sqrt{35}}{10}+\frac{5\sqrt7}{2}=+3.323954628342,\\[2pt]
+V(\text{cyc},\text{cyc})\ C_5\text{边}=(4-\sqrt7)\sqrt{7/5}=+1.602368657980,\\[2pt]
+V(\text{cyc},\text{cyc})\ C_5\text{距}2=-\sqrt{7/5}=-1.183215956620 ;
+\end{array}
+\]
+\item 刚性签名：$V(\text{hub},\text{cyc})=-V(\text{cyc},\text{cyc};\text{距}2)=\sqrt{7/5}$（等值反号），
+$V(C_5\text{边})/V(\text{hub},\text{cyc})=4-\sqrt7$。
+由此，在 $s=\sum w_Iw_J|V_{IJ}|$ 中「hub--cycle 对」（权重 $10ab$）与「距 2 的 cycle 对」（权重 $10b^2$）
+单位贡献完全相同，故冠军处存在能级简并，\textbf{对偶乘子不唯一}，最优对偶解构成一整面；
+\item 精确饱和：$\|M^*_{-}\|_1=0.083122814311+2\times0.099222691280=0.281568196871=\rho_0-1$（$10^{-12}$ 内），
+$(s,t)=(1.586541134689,0.976595259055)$，$s+t=2\rho_0$（偏差 $0.0$）。
+\end{enumerate}
+\end{theorem}
+
+\begin{remark}[$k=3$ 为什么比 $k=2$ 难，已证]
+$k=2$ 的极值核心是 $P_3=K_1\vee2K_1$，三原子，负图 $\Gamma^-=K_2$ 是\emph{二部}的，
+$e^\perp$ 是一维的（角度只有 $0$ 与 $\pi$，离散），常数域是 $\Q$，
+判别式 $\Delta=a^2+6ab+b^2=1$ 是\emph{完全平方}，一阶条件是 $a=3b/2$（有理）。
+$k=3$ 的极值核心是 $K_1\vee C_5$，六原子，负图 $\Gamma^-=C_5$ 是\emph{奇圈}，
+$e^\perp$ 是二维的（角度 $\theta\in S^1$ 连续），对称群是 $O(2)$ 加冠军的 $D_5$，
+常数域是 $\Q(\sqrt5,\sqrt7)$（四次），$\Delta=a^2+14ab+9b^2=35/49$，
+$\sqrt\Delta=\sqrt{35}/7$ 无理，一阶条件是 $a/b=5\sqrt7-12$（无理）。
+
+$k=2$ 的两套已发表证明（Huang--Wei 的补图关联秩一法、KLMPT 的图极限凸分析法）
+都依赖「$\Gamma^-$ 二部 $\Rightarrow$ 符号模式退化为切换（switching）
+$\Rightarrow$ 目标函数成为完全平方 $\|\sum\varepsilon_Iw_Iv_I\|^2$」这一结构。
+$C_5$ 是奇圈，$\pm1$ 标注无法使所有边为负，切换结构失效。
+此外 $\Delta=35/49$ 不是完全平方，意味着\textbf{任何「配方成完全平方」的初等证法在 $k=3$ 原则上不可用}。
+这既是难度来源，也说明 $k=3$ 的不等式不是一个平方和。
+\end{remark}
+
+\subsection{Case A / Case B 二分}
+
+\begin{theorem}[已证且精确]\label{thm:caseab}
+记 $s=\|Q\|_1/n$、$t=\one^\top Q\one/n$、$\alpha_0=2\rho_0-\varphi=\frac{9-7\sqrt5+4\sqrt{35}}{18}=0.945102404994441$。
+\begin{itemize}[leftmargin=1.2em,itemsep=1pt]
+\item \textbf{Case A}（$t\le\alpha_0$）：$s+t\le\varphi+\alpha_0=2\rho_0$，
+即\textbf{\STW\ 的 $\gamma(3)=\varphi$ 单独就足够}，不需要任何新想法。
+\item \textbf{Case B}（$t>\alpha_0$）：全部难度集中在此，且 $t$ 被压缩到窄带 $t\in(0.9451,0.995]$。
+\end{itemize}
+\end{theorem}
+
+\begin{remark}
+这条二分的含义是：\textbf{让 \STW\ 饱和的那个几何对象（正二十面体 ETF）根本不是障碍}。
+它的 $t=0.872678<\alpha_0$，落在 Case A 内，已被自动关闭。障碍只可能在 Case B，
+而 Case B 的特征是 $t$ 接近 $1$，即 $\one$ 几乎落在前三特征子空间内。
+\end{remark}
+
+\section{本轮新结果：通道型主函数方案的精确天花板}\label{sec:nogo}
+
+\subsection{动机}
+
+第~\ref{sec:stwanat} 节的注~\ref{rmk:loss} 指出逐项放缩注定失败。一个自然的反应是：
+那就不要逐项放缩，而是把 $\Lam_3$ 直接写成 $\sum_{ij}c_ic_j(\langle u_i,u_j\rangle)_+$，
+对\emph{正部} $(t)_+$ 本身找一个主函数，并把 $\|Q\|_1$ 与 $\one^\top Q\one$ 的信息\emph{联合}使用。
+这一节证明：这条路也是死的，而且死得比想象的彻底。
+
+\subsection{方案族}
+
+沿用 \STW\ Theorem 4.1 的坐标：$Q=VV^\top\in P_3(n)$，行 $x_i=c_iu_i$，$c_i\ge0$，$u_i\in S^2$，
+各向同性条件 $\sum_ic_i^2u_iu_i^\top=I_3$ 成立，故 $\sum_ic_i^2=3$，$q_{ij}=c_ic_j\langle u_i,u_j\rangle$。
+由 $\Lam_3(G)=\sum_{i\ne j}(q_{ij})_+=\sum_{ij}(q_{ij})_+-3$ 与 $(q_{ij})_+=c_ic_j(\langle u_i,u_j\rangle)_+$，目标是给
+\[
+\Sigma(Q):=\sum_{i,j}c_ic_j\bigl(\langle u_i,u_j\rangle\bigr)_+
+\]
+一个 $\le Mn$ 型的界。
+
+我们称下列六个量为\emph{通道}，并给出各自的最优线性界（每个界都对一切满足各向同性的配置成立）：
+\begin{center}
+{\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+通道核 $K(u,v)$ & $\sum_{ij}c_ic_jK(u_i,u_j)$ 的值 & 上界 \\
+\midrule
+$1$ & $C^2$，$C=\sum_ic_i$ & $\le 3n$ \\
+$f_2(t)=t^2-\frac13$ & $X^2=\bigl\|\sum_ic_i\phi(u_i)\bigr\|_F^2$ & 与 $C^2$ 联合：$C^2+3X^2\le 3n$ \\
+$t=\langle u,v\rangle$ & $\|y\|^2$，$y=\sum_ic_iu_i=\one^\top Q$ & $\le n$ \\
+$u_1v_1$ & $y_1^2\le\|y\|^2$ & $\le n$ \\
+$t\,u_1v_1$ & $\|z\|^2$，$z=\sum_ic_i(u_i)_1u_i$ & $\le C^2\le 3n$ \\
+$P_\ell(t)$，$\ell\ge3$ & 由 Schoenberg 定理非负 & $\ge0$（故只有负系数可用） \\
+\bottomrule
+\end{tabular}}
+\end{center}
+
+第一行的 $C^2\le n\sum c_i^2=3n$ 是 Cauchy--Schwarz；第二行是 \STW\ Lemma 4.2（$r=3$）；
+第三行是 $Q\preceq I$；第四行显然；第五行由 $\|z\|\le\sum_ic_i|(u_i)_1|\le C$。
+
+\begin{definition}[通道型方案]\label{def:scheme}
+称六元组 $(a,\beta,b,\gamma,\delta,\{\rho_\ell\}_{\ell\ge3})$（全部非负，只有有限个 $\rho_\ell$ 非零）
+为一个\emph{可行方案}，若对一切 $u,v\in S^2$ 有逐点不等式
+\begin{equation}\label{eq:scheme}
+\bigl(\langle u,v\rangle\bigr)_+\ \le\
+a+\beta\langle u,v\rangle+b\Bigl(\langle u,v\rangle^2-\tfrac13\Bigr)
++\gamma\,u_1v_1+\delta\,\langle u,v\rangle u_1v_1-\sum_{\ell\ge3}\rho_\ell P_\ell(\langle u,v\rangle).
+\end{equation}
+其\emph{代价}定义为
+\[
+\mathcal M(a,\beta,b,\gamma,\delta,\rho)=\max(3a,b)+(\beta+\gamma)+3\delta .
+\]
+\end{definition}
+
+\begin{proposition}[已证]\label{prop:schemevalid}
+若 $(a,\beta,b,\gamma,\delta,\rho)$ 可行，则对一切 $n$ 与一切 $n$ 阶图 $G$，
+$\Lam_3(G)\le\mathcal M\cdot n-3$。
+\end{proposition}
+
+\begin{proof}
+把 \eqref{eq:scheme} 代入 $u=u_i$、$v=u_j$，乘以 $c_ic_j\ge0$，对 $i,j$ 求和。逐通道使用上表：
+\[
+\Sigma(Q)\ \le\ aC^2+bX^2+\beta\|y\|^2+\gamma y_1^2+\delta\|z\|^2-\sum_{\ell\ge3}\rho_\ell(\ge0)
+\ \le\ \max(3a,b)\,n+(\beta+\gamma)n+3\delta n .
+\]
+其中 $aC^2+bX^2\le\max(3a,b)\cdot n$ 来自在 $\{(u,v):u+3v\le3n,\ u,v\ge0\}$ 上最大化 $au+bv$；
+$\beta\|y\|^2+\gamma y_1^2\le(\beta+\gamma)\|y\|^2\le(\beta+\gamma)n$。最后 $\Lam_3=\Sigma(Q)-3$。
+\end{proof}
+
+\begin{remark}
+定义~\ref{def:scheme} 确实包含了 \STW\ 的证法。取
+$a=\frac{a_3}2=\frac{\varphi}6$，$\beta=\frac12$，$b=\frac{b_3}2$，$\rho_4=\frac{\rho_3}2$，其余为零；
+由 $(t)_+=\frac12(|t|+t)$ 与 \eqref{eq:maj}、\eqref{eq:fac} 知 \eqref{eq:scheme} 成立，
+且 $\mathcal M=\max(3\cdot\frac\varphi6,\frac{b_3}2)+\frac12=\frac\varphi2+\frac12=\frac{1+\varphi}2=\Phi$，
+精确复现 Proposition 6.1。
+\end{remark}
+
+\subsection{见证测度}
+
+定义 $[-1,1]$ 上的一个三点非负测度
+\begin{equation}\label{eq:lam}
+\lambda=\frac{5-\sqrt5}{4}\,\delta_{-1/\sqrt5}\ +\ \frac{5+\sqrt5}{4}\,\delta_{1/\sqrt5}\ +\ \frac12\,\delta_{1}.
+\end{equation}
+三个权重都是正数（$\frac{5-\sqrt5}{4}=0.690983$，$\frac{5+\sqrt5}{4}=1.809017$，$\frac12$）。
+
+\begin{lemma}[见证测度的四个矩，已证且精确]\label{lem:moments}
+\[
+\int\dd\lambda=3,\qquad \int t\,\dd\lambda(t)=1,\qquad \int t^2\,\dd\lambda(t)=1,\qquad
+\int (t)_+\,\dd\lambda(t)=\frac{3+\sqrt5}{4}=\Phi .
+\]
+此外，对一切 $\ell\ge3$ 有 $\int P_\ell(t)\dd\lambda(t)\ge0$，且 $\ell\in\{3,4,8,14\}$ 时恰为 $0$。
+\end{lemma}
+
+\begin{proof}
+记 $x_0=1/\sqrt5$。前三条是直接计算：
+\[
+\frac{5-\sqrt5}{4}+\frac{5+\sqrt5}{4}+\frac12=\frac52+\frac12=3,
+\]
+\[
+\frac{5+\sqrt5}{4}\cdot\frac1{\sqrt5}-\frac{5-\sqrt5}{4}\cdot\frac1{\sqrt5}+\frac12
+=\frac{2\sqrt5}{4\sqrt5}+\frac12=\frac12+\frac12=1,
+\]
+\[
+\Bigl(\frac{5-\sqrt5}{4}+\frac{5+\sqrt5}{4}\Bigr)\cdot\frac15+\frac12=\frac{5/2}{5}+\frac12=1 .
+\]
+第四条：
+\[
+\int(t)_+\dd\lambda=\frac{5+\sqrt5}{4}\cdot\frac1{\sqrt5}+\frac12
+=\frac{5+\sqrt5}{4\sqrt5}+\frac12=\frac{\sqrt5+1}{4}+\frac12=\frac{3+\sqrt5}{4}=\Phi .
+\]
+
+关于 Legendre 项。用 $P_\ell(-x)=(-1)^\ell P_\ell(x)$ 分奇偶：
+\[
+\int P_\ell\dd\lambda=\begin{cases}
+\dfrac52P_\ell(x_0)+\dfrac12, & \ell\ \text{偶},\\[6pt]
+\dfrac{\sqrt5}{2}P_\ell(x_0)+\dfrac12, & \ell\ \text{奇}.
+\end{cases}
+\]
+\emph{奇数 $\ell\ge3$}：需要 $P_\ell(x_0)\ge-\frac{2}{\sqrt5}=-0.894427$。
+由经典的 Laplace 型估计 $|P_\ell(x)|\le\sqrt{\frac{2}{\pi\ell}}\,(1-x^2)^{-1/4}$（$\ell\ge1$，$|x|<1$），
+在 $x_0=1/\sqrt5$ 处 $(1-x_0^2)^{-1/4}=(4/5)^{-1/4}=1.057371$，故
+$\ell\ge3$ 时 $|P_\ell(x_0)|\le\sqrt{2/(3\pi)}\times1.057371=0.487145<0.894427$，成立。
+
+\emph{偶数 $\ell\ge4$}：需要 $P_\ell(x_0)\ge-\frac15$。
+$\ell\ge18$ 时同一估计给 $|P_\ell(x_0)|\le\sqrt{2/(18\pi)}\times1.057371=0.198853<0.2$，成立。
+剩下 $\ell\in\{4,6,8,10,12,14,16\}$ 用精确有理算术逐个核验：
+\[
+\begin{array}{c|ccccccc}
+\ell & 4 & 6 & 8 & 10 & 12 & 14 & 16\\
+\hline
+P_\ell(x_0) & -\frac15 & \frac{41}{125} & -\frac15 & -\frac{131}{3125} & \frac{3301}{15625} & -\frac15 & \frac{3223}{78125}\\[3pt]
+\int P_\ell\dd\lambda & 0 & \frac{33}{25} & 0 & \frac{247}{625} & \frac{3213}{3125} & 0 & \frac{9424}{15625}
+\end{array}
+\]
+全部非负。奇数情形的前几项同样精确为零或正：
+$\int P_3\dd\lambda=0$，$\int P_5\dd\lambda=\frac{18}{25}$，$\int P_7\dd\lambda=\frac{77}{125}$，
+$\int P_9\dd\lambda=\frac{26}{125}$。
+（以上全部由 \texttt{sympy} 以 $\Q(\sqrt5)$ 上的精确有理运算复核，见随附脚本
+\texttt{证书\_zonal天花板定理.py}；另用浮点对 $\ell=3,\dots,4000$ 做了独立扫描，最小值为 $0$。）
+\end{proof}
+
+\subsection{主定理}
+
+\begin{theorem}[通道型方案的天花板恰为 $\Phi$，已证]\label{thm:zonal}
+设 $(a,\beta,b,\gamma,\delta,\rho)$ 是定义~\ref{def:scheme} 意义下的可行方案。则
+\[
+3a+\beta\ \ge\ \Phi=\frac{3+\sqrt5}{4}=1.309016994374947,
+\]
+从而 $\mathcal M(a,\beta,b,\gamma,\delta,\rho)\ge\Phi$。
+因此，由命题~\ref{prop:schemevalid} 得到的任何形如 $\Lam_3(G)\le Mn-3$ 的界必有 $M\ge\Phi$，
+\textbf{不可能改进 \STW\ 的 Proposition 6.1}。特别地，$M$ 不可能等于 $\rho_0=1.281568196872168$，
+即通道型方案\textbf{不可能证明猜想~\ref{conj:A1}}。
+\end{theorem}
+
+\begin{proof}
+在 \eqref{eq:scheme} 中依次取下列三对单位向量（都在 $e_2e_3$ 平面内，故第一个坐标为零）：
+\[
+(u,v)=\Bigl(e_3,\ -\tfrac1{\sqrt5}e_3+\tfrac2{\sqrt5}e_2\Bigr),\quad
+\Bigl(e_3,\ \tfrac1{\sqrt5}e_3+\tfrac2{\sqrt5}e_2\Bigr),\quad (e_3,e_3),
+\]
+对应的 $\langle u,v\rangle$ 分别是 $-1/\sqrt5$、$1/\sqrt5$、$1$，即测度 $\lambda$ 的三个支撑点；
+且因为 $u_1=v_1=0$，第四、第五通道在这三对上的值都恒为 $0$。
+把三处不等式分别乘以 $\lambda$ 的对应权重并相加，得
+\[
+\int(t)_+\dd\lambda\ \le\ a\!\int\!\dd\lambda+\beta\!\int\! t\,\dd\lambda
++b\!\int\!\Bigl(t^2-\tfrac13\Bigr)\dd\lambda+0+0-\sum_{\ell\ge3}\rho_\ell\!\int\! P_\ell\dd\lambda .
+\]
+由引理~\ref{lem:moments}，$\int\dd\lambda=3$，$\int t\dd\lambda=1$，
+$\int(t^2-\frac13)\dd\lambda=1-\frac13\cdot3=0$，且每个 $\int P_\ell\dd\lambda\ge0$ 而 $\rho_\ell\ge0$。故
+\[
+\Phi\ \le\ 3a+\beta+0-0\ =\ 3a+\beta .
+\]
+最后 $\mathcal M=\max(3a,b)+(\beta+\gamma)+3\delta\ge 3a+\beta\ge\Phi$，因为 $b,\gamma,\delta\ge0$。
+\end{proof}
+
+\begin{remark}[这条定理说了什么，没说什么]\label{rmk:scope}
+\emph{说了什么}：只要证明的形状是「先对 $(\langle u,v\rangle)_+$（乃至对含 $u_1v_1$ 耦合的更一般核）
+找一个逐点上界，再对若干全局通道各自使用一个 $\le\kappa n$ 型的线性界」，
+那么无论把 Gegenbauer 展开做到多高阶、无论是否引入非球对称的耦合通道，
+得到的常数都不可能低于 $\Phi$。这条结论的强度远超「$\gamma(3)=\varphi$ 所以逐项放缩饱和」：
+它把\emph{联合}计费也一并封死了，而且证明只有三行、见证是显式的。
+
+\emph{没说}什么：定理~\ref{thm:zonal} 完全没有用到自洽约束 $A=1\{\Pi_3(M)\ge0\}$
+（定理~\ref{thm:selfcons}），也没有用到通道之间的\emph{联合}可行域
+（它把 $(C^2,X^2,\|y\|^2,y_1^2,\|z\|^2)$ 当作各自独立地取到自己的上界）。
+因此，逃逸定理~\ref{thm:zonal} 只有两种可能：
+\textbf{(甲)} 使用自洽性／掩码组合结构；
+\textbf{(乙)} 建立通道值与内积分布之间的非平凡\emph{联合}约束。
+第~\ref{sec:methods} 节按这两条组织候选方法。
+\end{remark}
+
+\begin{remark}[见证的几何意义]\label{rmk:geo}
+$\lambda$ 的支撑 $\{-1/\sqrt5,\,1/\sqrt5,\,1\}$ 恰是\textbf{正二十面体六条等角线系}的内收集
+（公角 $\arccos\frac1{\sqrt5}=63.43^\circ$）。也就是说，
+\emph{把 \STW\ 钉死在 $\Phi$ 的障碍是正二十面体，而不是我们的极值构造 $K_1\vee C_5$}。
+冠军核心在通道型框架里是「不可见」的：它的 $(s,t)=(1.5865,0.9766)$ 两项都不接触各自的上确界。
+这解释了为什么第~\ref{sec:nogo} 节的方案族无论怎么精化都够不到 $\rho_0$：
+它在为另一个几何对象（正二十面体）优化。
+
+同一现象在笔记的早期工作中已经以另一种形式出现过：
+只用 $(\tr|G|,\tr|G|^2)=(3,3)$ 两个不变量的 Cauchy--Schwarz 包络，
+也恰好被正二十面体 ETF 精确取到，从而任何只用这两个不变量的论证不可能低于 $\Phi$。
+两条完全不同的通道死于同一个几何对象，是很强的结构性证据。
+\end{remark}
+
+\subsection{独立的数值确认}
+
+在得到定理~\ref{thm:zonal} 之前，我们先把定义~\ref{def:scheme}（只含前三个通道与 $\ell\le8$ 的修正项）
+离散化为一个线性规划：在 $[-1,1]$ 上取 $12001$ 个格点强制 \eqref{eq:scheme}，
+目标是最小化 $\max(3a,b)+\beta$。求解结果如下。
+
+\begin{center}
+{\small
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+修正项集合 & 最优值 & 与 $\Phi$ 之差 & $a$ & $\beta$ & 接触点集合 \\
+\midrule
+$\{\ell=3,4\}$ & $1.309016840$ & $-1.5\times10^{-7}$ & $0.2696723$ & $0.5000000$ & $\{-1,\pm\frac1{\sqrt5},1\}$ \\
+$\{\ell=3,\dots,6\}$ & $1.309016911$ & $-8.4\times10^{-8}$ & $0.2696723$ & $0.5000000$ & 同上 \\
+$\{\ell=3,\dots,8\}$ & $1.309016911$ & $-8.4\times10^{-8}$ & $0.2696723$ & $0.5000000$ & 同上 \\
+$\{\ell=3,\dots,12\}$ & $1.309016911$ & $-8.4\times10^{-8}$ & $0.2696723$ & $0.5000000$ & 同上 \\
+\bottomrule
+\end{tabular}}
+\end{center}
+
+三点说明。第一，负偏差 $10^{-7}$ 量级完全是格点离散化造成的（格点约束是可行域的松弛），
+真值在 $[\Phi-1.5\times10^{-7},\ \Phi]$ 内，而定理~\ref{thm:zonal} 把它精确钉在 $\Phi$。
+第二，线性规划\emph{独立地重新发现了 \STW\ 的解}：最优处 $a=\varphi/6=a_3/2=0.269672331$，$\beta=1/2$，
+$b$ 与 $\rho_4$ 取值与 \STW\ 不同但代价相同，说明最优解构成一整面。
+第三，接触点集合稳定地是 $\{-1,-1/\sqrt5,1/\sqrt5,1\}$，
+与引理~\ref{lem:moments} 的见证支撑一致——这正是我们随后能猜出闭式 $\lambda$ 的原因。
+
+\section{已经被排除的路线}\label{sec:dead}
+
+这一节列出所有已经被\emph{定量}否证（而不是「试了没成功」）的路线。
+列出来是必要的：一方面避免重复劳动，另一方面这些否定性结果本身刻画了问题的难度结构。
+「天花板」一栏指该路线所能达到的最好常数；只要它 $\ge\Phi$，该路线就无法改进已发表纪录。
+
+{\small
+\begin{longtable}{@{}p{0.5cm}p{5.2cm}p{5.6cm}p{2.6cm}@{}}
+\toprule
+\# & 路线 & 定量结论 & 状态 \\
+\midrule
+\endfirsthead
+\toprule
+\# & 路线 & 定量结论 & 状态 \\
+\midrule
+\endhead
+1 & 对称化 / 逐点多主函数 & 饱和于 $1.309017$，零改进 & 已否证 \\
+2 & DL23 松弛量转移 & 链式界 $1.2904545$，但可用松弛只占所需的 $43.6\%$（差 $2.3$ 倍） & 已否证 \\
+3 & 绝对值路线 & $\lambda_{\max}(|R|)=1.602534>2\rho_0-1=1.563136$（差 $+0.0234$） & 已否证 \\
+4 & 纯投影常数 & $\gamma(3)=\varphi$ 精确（定理~\ref{thm:gam3}），天花板恰为 $\Phi$ & 已否证 \\
+5 & trace / Frobenius 型 & 饱和于 $\varphi$；需 $\tr M^2\le2.233$ 而冠军为 $2.639$（差 $2.19$ 倍） & 已否证 \\
+6 & 支撑--$6$ 归约 & 为假：$K_1\vee C_6$ 给 $\Phi_7-\max_{|S|=6}\Phi_6=+0.014281$ & 已否证 \\
+7 & 双线性不等式 (P1) & 为假，含两个显式反例 & 已否证 \\
+8 & 逐对放缩系列 (P2) & 天花板 $1.3452$（合法版）与 $\frac{1+\sqrt3}2=1.3660$（纯二阶矩版），均严格劣于 $\Phi$ & 已否证 \\
+9 & 卦限覆盖 + 线性核删除 & 极限就是 $N\le24$（球面等径不等式迫使至少 $8$ 个卦限，$8\cdot\frac\pi2=4\pi$ 恰铺满） & 已否证 \\
+10 & 球面覆盖 + $p$-variation & 支撑界形如 $N\le7m$、$m\ge4$，不可能优于 $N\le28$ & 已否证 \\
+11 & 带隙条件单独使用 & 满足带隙的球冠图有无穷多，冠军只是其中之一 & 已否证 \\
+12 & 配对松弛（形式 8） & 天花板 $\frac12(1+\sqrt3)=1.3660254$ \emph{恰为 Mohar 的 $k=3$ 界}；
+实际最大值 $=4/3$（$K=3$，精确）与 $3/\sqrt5=1.3416408$（$K\ge4$），均 $>\Phi$ & 已否证 \\
+13 & \textbf{通道型主函数方案（本报告定理~\ref{thm:zonal}）} &
+\textbf{天花板恰为 $\Phi$}，见证为显式三点测度 \eqref{eq:lam} &
+\textbf{本轮已否证} \\
+\bottomrule
+\end{longtable}}
+
+第 12 条需要单独说明，因为它是本轮之前的主攻方向，投入最大。
+考虑双线性松弛 $B(\nu_1,\nu_2)=\iint(\langle x,y\rangle)_+\dd\nu_1(x)\dd\nu_2(y)$，
+其中 $\nu_i\in C_3=\{\nu:\int uu^\top\dd\nu=I_3\}$。由 $C_3$ 弱$*$紧凸、Dubins 极点定理（六个矩条件
+$\Rightarrow$ 极点支撑 $\le7$）与两次线性极值原理，可得夹逼
+\[
+\rho_0=J(\nu^*)\ \le\ c_3^{\Sigma}\ \le\ \max\{B(e_1,e_2):e_1,e_2\in\operatorname{ext}C_3\}
+\ \le\ \max\{B(\nu_1,\nu_2):\nu_1,\nu_2\in C_3\}.
+\]
+若能证明最右端 $=\rho_0$，则 A1$'$ 成立。但：
+
+\begin{theorem}[配对松弛的天花板，已证]\label{thm:43A}
+对一切 $\nu_1,\nu_2\in C_3$（不限原子数），
+$B(\nu_1,\nu_2)=\frac12\iint|\langle u,w\rangle|+\frac12\langle\!\int u\dd\nu_1,\int w\dd\nu_2\rangle
+\le\frac12(\sqrt3+1)=1.366025403784439$。
+\end{theorem}
+
+\begin{proof}
+$\iint\langle u,w\rangle^2\dd\nu_1\dd\nu_2=\tr(M_1M_2)=\tr I_3=3$，Cauchy--Schwarz 给
+$\iint|\langle u,w\rangle|\le\sqrt3$；对单位向量 $v$，$\langle\int u\dd\nu_1,v\rangle\le\sqrt{v^\top M_1v}=1$，
+故 $\|\int u\dd\nu_1\|^2\le1$，从而第二个内积 $\le1$。
+\end{proof}
+
+这个天花板\emph{恰好}是 Mohar 的 $k=3$ 界，比 $\Phi$ 还高 $0.057008$。
+原因是配对松弛只保留了 $(L,\alpha_1,\alpha_2)$ 三个二阶矩量，
+而二阶矩方法的最优结果就是 Mohar 界。更进一步，上端确实被超过：
+
+\begin{proposition}[显式反例，已证且精确]\label{prop:43B}
+令 $R=\frac23J_3-I_3\in SO(3)$（$R^2=I$，$\det R=1$），
+$e_1=\frac13\sum_{i=1}^3\delta_{\sqrt3e_i}$，$e_2=\frac13\sum_{i=1}^3\delta_{\sqrt3Re_i}$。
+则 $e_1,e_2\in\operatorname{ext}C_3$，$\langle u_i,w_j\rangle\in\{-1,+2\}$（对角为 $-1$，非对角为 $+2$），
+$\alpha_1=\alpha_2=1$，$L=\frac53$，且 $B(e_1,e_2)=\frac12(\frac53+1)=\frac43$。
+\end{proposition}
+
+\begin{theorem}[$K_1=K_2=3$ 时的精确最大值，已证]\label{thm:43C}
+$\max\{B(\nu_1,\nu_2):\nu_1,\nu_2\in C_3,\ \text{各}\ 3\ \text{原子}\}=\frac43$。
+归约为 $\max_{O\in O(3)}\sigma_1((O)_+)$；再用
+$\max_{\|O\|\le1}\sigma_1((O)_+)=\max_{P\in\{0,1\}^{3\times3}}\max_{c,d\ge0}\|D_cPD_d\|_*$
+把 $512$ 个符号模式归为 $36$ 个置换类做有限核验，全局最大 $=1.333333333333334$（与 $\frac43$ 差 $8.9\times10^{-16}$），
+唯一取等模式是 $A(C_3)=J_3-I_3$，$c=d=\frac1{\sqrt3}(1,1,1)$，第二名 $\frac97$，间隔 $0.048$。
+\end{theorem}
+
+\begin{conjecture}[数值，非证明]
+$K\ge4$ 时 $\max B=3/\sqrt5=1.3416407864998738$。
+五组独立运行 $(K_1,K_2)=(4,4),(5,5),(6,6),(6,7),(7,7)$ 一致到 $8\times10^{-15}$，
+$K=4$ 的见证为 $q=(4,3,4,4)/15$、$\alpha_2=121/125$、$\langle Eu,Ew\rangle=11/(5\sqrt5)$、$L=19/(5\sqrt5)$。
+\end{conjecture}
+
+于是完整的常数阶梯是
+\[
+\rho_0=1.2815682\ <\ \Phi=1.3090170\ <\ \tfrac43=1.3333333\ <\ \tfrac3{\sqrt5}=1.3416408\ <\ \tfrac{1+\sqrt3}2=1.3660254 .
+\]
+
+\begin{remark}[一个必须记录的数值教训]
+早期一轮工作曾报告配对松弛的最大值为 $1.366758746$，看似「几乎取到天花板」。
+该值是\emph{伪影}：它对应 $\alpha_2=1.0107>1$，违反定理~\ref{thm:43A} 中已证的 $\alpha\le1$，
+且超出天花板 $7.3\times10^{-4}$。根因是白化步骤 $M^{-1/2}$ 的条件数爆炸。
+修正办法是在搜索代码中加入可行性拒绝与审计门（每次输出 $\alpha_1,\alpha_2$ 与各向同性残差），
+所有超出 $1$ 的解一律丢弃。这条经验值得写进论文的复现说明：
+\textbf{任何违反已证不等式的数值「改进」都是伪影，不是发现。}
+\end{remark}
+
+\section{当前的障碍}\label{sec:obstacles}
+
+\subsection{主要障碍}
+
+\begin{enumerate}[leftmargin=1.8em,itemsep=4pt]
+\item \textbf{A1$'$ 未证，且没有产生新的无条件纪录。} 现役上界仍是 $\Phi n-3$。
+缺口 $\Phi-\rho_0=0.0274488$ 一寸未动。
+\item \textbf{定理~\ref{thm:zonal} 关闭了我们原先排在首位的技术路线。}
+原计划的「路线 B：$O(2)$-不变正定核主函数」正是定义~\ref{def:scheme} 的一个实例
+（它比 \eqref{eq:scheme} 更一般，但仍属通道型），故同样被封顶在 $\Phi$。
+这是本轮最有价值的负面结果：它在我们投入数月之前排除了一个方向。
+\item \textbf{自洽性还没有被真正用起来。} 定理~\ref{thm:selfcons} 告诉我们，
+极值对象必须满足 $A=1\{\Pi_3(M)\ge0\}$，这是一条组合约束。
+我们目前所有关于它的结论都是\emph{结构描述性}的（负图 $\Gamma^-=C_5$、无三角形、等权刚性），
+还没有一条把它转化为\emph{定量}不等式的通道。这是全部难度的所在。
+\item \textbf{支撑界缺口 (2a)：「极值测度的原子数 $\le6$」未证。}
+无条件结果是 $N\le24$（Fenchel--Bunt 精化到 $N\le20$），
+而定理~\ref{thm:selfcons} 要压到有限张表需要 $N\le8$（第 27 节定理 27.1：$SB(8)\Leftrightarrow c_3^{\Sigma}=\rho_0$）。
+目前只有局部版本的定理 4.3--1。
+必须强调：$20$（或 $24$）\emph{不等于} $8$，把「支撑 $\le20$」写成「已证 A1$'$」是严格禁止的。
+\item \textbf{第 6 条已否证路线（支撑--$6$ 归约为假）与 (2a) 之间的张力。}
+$K_1\vee C_6$ 的反例说明「任意支撑 $7$ 的核心可以压到支撑 $6$」是假的；
+(2a) 是更弱的陈述（只针对\emph{极值}测度），但两者的区别需要仔细论证，目前没有。
+\end{enumerate}
+
+\subsection{数值证据的边界（必须诚实交代）}
+
+我们把形式 9（见下）中的
+$\mathrm{SR}_K=\max\{\lambda_{\max}((A^\top A)_+):A\in\R^{3\times K},\ AA^\top=I_3\}$
+用随机起点加交替迭代加 Powell 精修做了数值封顶，结果为
+$\mathrm{SR}_6=\rho_0+2.2\times10^{-15}$，
+$\mathrm{SR}_7=\rho_0+2.9\times10^{-7}$，$\mathrm{SR}_8=\rho_0+2.5\times10^{-6}$，
+$\mathrm{SR}_9=\rho_0+2.9\times10^{-6}$，
+$\mathrm{SR}_{10}\dots\mathrm{SR}_{14}=\rho_0+(1.8\sim6.2)\times10^{-8}$。
+超出量与「附加原子总权 $\sum_{k>6}c_k^2$」逐位同阶（$K\le9$ 为 $2.2\times10^{-7}$ 至 $2.3\times10^{-6}$，
+$K=10\dots14$ 为 $1.4\times10^{-8}$ 至 $4.8\times10^{-8}$），
+前六个坐标与冠军一致到 $10^{-6}$，故判定为「权趋于零的冗余原子」造成的病态摄动，真值应为 $\rho_0$。
+
+\textbf{但这一整段只是数值证据，不是证明，而且它的价值有限。}理由有三：
+第一，$\mathrm{SR}_K$ 是丢掉自洽约束后的松弛，即使对一切 $K\le20$ 证出 $\mathrm{SR}_K=\rho_0$，
+也只在一个\emph{更强}的命题上得到结论，与 A1$'$ 之间还隔着自洽性；
+第二，$K=10,\dots,14$ 的搜索强度（$142$ 个起点、交替迭代 $250$ 步、每档时限 $900$ 秒，
+实际 $6\sim34$ 秒即在「冠军加零权列」处收敛）明显弱于 $K=6,\dots,9$
+（$260$ 起点、\texttt{Powell} 精修至 \texttt{ftol}$=10^{-14}$、每档 $28\sim426$ 秒），
+故 $K\ge10$ 各行只能算较弱的阴性证据；第三，$K=15,\dots,20$ 尚未计算，也没有任何区间算术证书。
+
+这条线的正确定位是\emph{否证工具}：它的作用是排除错误方向（第 12 条路线正是被这类计算加精确反例一起否证的），
+而不是推进上界。把它当作主线是方法论上的错误。
+
+\section{候选方法与其评估}\label{sec:methods}
+
+\subsection{从定理~\ref{thm:zonal} 反推出的必要条件}
+
+注~\ref{rmk:scope} 给出了逃逸通道型框架的\emph{仅有}两种可能。把它写成一个判据：
+
+\begin{proposition}[必要条件，已证]\label{prop:nec}
+任何证明 $c_3^{\Sigma}\le\rho_0$ 的论证，必须至少使用下列信息之一：
+\begin{enumerate}[label=(\Alph*),leftmargin=2em]
+\item \textbf{自洽性}：$Q$ 不只是秩 $3$ 投影，而且是掩码矩阵 $D_w(A_H+I)D_w$
+（其中 $A_H=1\{Q>0\}-I$）的前三特征投影；
+\item \textbf{通道—分布的联合约束}：内积的经验分布 $\frac1n\#\{(i,j):\langle u_i,u_j\rangle\in\cdot\}$
+与通道值 $(C^2,X^2,\|y\|^2,\dots)$ 之间存在非平凡的\emph{联合}限制，
+而不能像通道型方案那样让它们各自独立地达到上界。
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+若论证只用各向同性 \eqref{eq:iso} 与通道的独立线性界，则它必然可以改写成定义~\ref{def:scheme}
+意义下的一个可行方案（主函数取为论证中实际使用的那一个），从而由定理~\ref{thm:zonal} 只能给出 $\ge\Phi$。
+\end{proof}
+
+这条判据的价值在于它是一个\emph{筛选器}：以后每提出一个新想法，先问它用的是 (A) 还是 (B)。
+如果两者都不用，那它一定失败，不必尝试。第 12 条（配对松弛）与第 13 条（通道型方案）
+都是没有通过这个筛选器的例子——配对松弛只用了二阶矩量（属于通道型），
+所以它的天花板必然是 Mohar 界；这事后看来是显然的，但事前花了很大代价才发现。
+
+\subsection{方向甲：自洽性 + 逐核精确 KKT}
+
+这是唯一一条在同类问题上\emph{已经被验证能达到锐利}的架构：$k=2$ 时的
+Kumar--Liu--Monterde--\allowbreak Pragada--Tait 定理 $\lambda_1+\lambda_2\le\frac87n$ 正是用图极限加凸分析做的，
+而 \STW\ 的一般方法在 $k=2$ 处只能给 $\frac76n$。
+
+我们已有的工具如下。
+
+\begin{theorem}[形式 9：标架--Perron 形式，已证]\label{thm:form9}
+\[
+c_3^{\Sigma}=\max\Bigl\{\lambda_{\max}\bigl((A^\top A)_+\bigr):\
+A\in\R^{3\times K},\ AA^\top=I_3,\ 3\le K\le20\Bigr\},
+\]
+其中 $(\cdot)_+$ 是逐元素正部，$A^\top A$ 是秩 $3$ 正交投影。
+权是\emph{自由}的：双射 $a_k=\sqrt{p_k}\,u_k$、$c_k=\sqrt{p_k}$，且最优权自动等于 $(A^\top A)_+$ 的 Perron 向量。
+参数个数是 $3K-6=54$（$K=20$）。
+\end{theorem}
+
+\begin{lemma}[Ky Fan 对偶，已证]\label{lem:kyfan}
+$\max_{AA^\top=I_3}\tr(AMA^\top)=\mathrm{KyFan}_3(D_cMD_c)$ 型对偶成立，最优 $A$ 是前三特征向量。
+取 $M=P=I+A_H$ 时，\textbf{逐核封顶（方向甲的主体）恰是形式 9 的精确对偶}，不是启发式近似。
+由此得到一个「模式 $\leftrightarrow$ 权」的交替算法，其目标值单调不减、收敛到自洽不动点。
+\end{lemma}
+
+\begin{proposition}[冠军的 Perron 特征方程，已证且精确]\label{prop:perron}
+冠军满足 $(G^*)_+\sqrt{p^*}=\rho_0\sqrt{p^*}$，其中 $G^*=(A^*)^\top A^*$。
+数值上 $\|(G^*)_+\sqrt{p^*}-\rho_0\sqrt{p^*}\|_\infty=1.1\times10^{-16}$，$\langle\sqrt{p^*},\text{Perron}\rangle=1.0$，
+且
+\begin{multline*}
+\mathrm{eig}\bigl(D_{\sqrt{p^*}}(I+A_{K_1\vee C_5})D_{\sqrt{p^*}}\bigr)\\
+=\bigl[0.76203144,\ 0.25976838,\ 0.25976838,\\
+-0.08312281,\ -0.09922269,\ -0.09922269\bigr],
+\end{multline*}
+前三大之和的 $\mathrm{KyFan}_3$ 与 $\rho_0$ 的 \texttt{sympy} 差为 $0$。
+\end{proposition}
+
+\textbf{方向甲的具体内容}：对每张支撑 $\le6$ 的无标号核心 $H$（共 $156$ 张，已由 hub 拆分命题从 $1044$ 张压缩而来），
+在 $\|x\|=1$ 上求精确极大值 $\max_x\Lam_3(D_x(I+A_H)D_x)$，
+办法是「对称对角化 + 一阶条件解析求解 + 区间算术认证符号模式」。
+可行性支撑有三条：$k=2$ 的同一套流水线已端到端跑通并复现已发表定理；
+符号模式的稳健性 $\min|\Pi_3|=0.1900$ 足够大，区间算术不会因舍入而翻转；
+命题~\ref{prop:perron} 说明可以\emph{先解 Perron 方程再验自洽}，把搜索维度从「权 + 标架」降到「只有标架」，且每步有闭式。
+
+\textbf{它的唯一实质缺口是 (2a)：「极值测度的原子数 $\le6$」}。没有它，$K\le20$ 无法压缩成有限的核心表。
+这是一个明确的、有希望的研究问题：已有件包括负图 $\Gamma^-$ 的结构定理与等权刚性、
+$\Gamma^-$ 无三角形、以及「第七原子最优权恰为零」的原子阶梯命题，但把它们拼成 (2a) 的论证目前没有。
+
+\subsection{方向乙：通道—分布的联合约束（本轮新提出）}
+
+定理~\ref{thm:zonal} 的见证 $\lambda$ 之所以能钉住 $\Phi$，是因为它让三个通道\emph{同时}达到各自的上界：
+$\int\dd\lambda=3$ 对应 $C^2=3n$，$\int t\dd\lambda=1$ 对应 $\|y\|^2=n$，$\int t^2\dd\lambda=1$ 对应 $X^2$ 的余量。
+但 $C^2=3n$ 当且仅当所有 $c_i$ 相等。于是自然的想法是\textbf{按 $C^2/n$ 分情形}。
+
+\emph{等权子问题。}当所有 $c_i$ 相等时，$\sum_ic_i^2u_iu_i^\top=I_3$ 变成
+$\sum_iu_iu_i^\top=\frac n3I_3$，即 $\{u_i\}$ 是 $\R^3$ 中的\emph{单位范数紧框架}（UNTF）；
+同时 $\Sigma(Q)/n=\frac3{n^2}\sum_{ij}(\langle u_i,u_j\rangle)_+$。记
+\[
+m_{\rm eq}=\sup_{n\ge3}\ \max_{\{u_i\}\ \mathrm{UNTF}}\ \frac3{n^2}\sum_{i,j}\bigl(\langle u_i,u_j\rangle\bigr)_+ .
+\]
+这是 $(P_3)$ 在等权限制下的版本，故 $m_{\rm eq}\le c_3^{\Sigma}\le\Phi$。
+两条平凡的观察：
+(i) \textbf{复制单调性}——把 UNTF 复制一份得到 $2n$ 个向量的 UNTF，目标值不变，故 $m_{\rm eq}(2n)\ge m_{\rm eq}(n)$；
+(ii) 正二十面体（$n=6$）给 $m_{\rm eq}\ge\frac3{36}(6+15/\sqrt5)=1.0590$，
+而我们的一次初步搜索在 $n=6$ 处找到 $1.245304$，故 $m_{\rm eq}\ge1.245304$。
+
+\emph{定量收益估计。}冠军核心在团吹起下的 $c_i$ 只取两个值
+$\sqrt{q_{\rm hub}}=\sqrt{a^*V(\text{hub},\text{hub})}=0.575973$ 与
+$\sqrt{q_{\rm cyc}}=\sqrt{b^*V(\text{cyc},\text{cyc})}=0.730511$，于是尺度无关的比值
+\[
+\frac{C^2}{3n}=\frac{(\mathbb E c)^2}{\mathbb E[c^2]}
+=\frac{\bigl(a^*\sqrt{q_{\rm hub}}+5b^*\sqrt{q_{\rm cyc}}\bigr)^2}{(a^*)^2V(\text{hub},\text{hub})+5(b^*)^2V(\text{cyc},\text{cyc})}
+=0.992343569348608
+\]
+（\texttt{sympy} 精确计算），即 $3-C^2/n=0.0229692919542$。
+若能在 $C^2/n\le3-\epsilon$ 的子类上把天花板按 $\Phi(3-\epsilon)/3$ 的比例压缩，
+则在 $\epsilon=0.02297$ 处得到 $1.29899459654$，比 \STW\ 改进 $0.7657\%$，
+但仍比 $\rho_0$ 高 $0.01743$。
+
+\textbf{评估}：方向乙\emph{有可能}产出一个新的无条件纪录（约 $1.299$），但\emph{不可能}证到 $\rho_0$；
+而且「按 $C^2/n$ 分情形」要成为证明，需要对\emph{两个}子情形都有界，
+其中 $C^2/n$ 接近 $3$ 的那一支恰恰是最难的（它逼近等权子问题 $m_{\rm eq}$）。
+所以方向乙的正确定位是：\textbf{一个可以独立发表的部分结果（改进 STW 约 $0.77\%$），
+以及一个把主问题分解为「等权」与「非等权」两支的手段}，而不是主线的替代。
+
+\emph{一条必须记录的负面数值经验。}我们对 $m_{\rm eq}$ 做的第一轮梯度搜索（$n=6,8,9,12,16,18,24$，
+各 $160$ 个随机起点）给出 $1.2453,0.9073,0.9197,0.8846,0.8344,0.8857,0.8119$。
+\textbf{这组数不可信}：$n\ge8$ 的结果与复制单调性 (i) 直接矛盾（$m_{\rm eq}(12)$ 不可能小于 $m_{\rm eq}(6)$），
+根因是搜索陷入了「近均匀框架」的局部极小（$n\to\infty$ 时目标趋于
+$3\iint(\langle u,v\rangle)_+\dd\sigma\dd\sigma=3/4=0.75$，与 $0.81\sim0.89$ 一致），
+而 $(t)_+$ 在大圆 $\langle u,v\rangle=0$ 上不可微，朴素梯度在此失效。
+本报告不采信任何 $m_{\rm eq}$ 的数值上界；要重做，必须用光滑化（如 $(t)_+\to\sqrt{t^2+\eta^2}$ 再令 $\eta\to0$）
+或以复制构造为起点的分层搜索。
+
+\subsection{方向丙：三角 SOS / Fejér--Riesz}
+
+定理~\ref{thm:champ}(d) 的 $O(2)$ 归约把问题化为：固定标量轮廓 $a=(a_I)$ 后，
+角度 $\theta\in S^1$ 是唯一的连续自由度，而冠军是 $5$ 重对称（$\theta$ 间距 $2\pi/5$）。
+于是待证不等式可以写成 $5$ 次单位根上的非负三角多项式，Fejér--Riesz 定理保证它有 SOS 表示，
+并且由常数域 $\Q(\sqrt5,\sqrt7)$ 的分析，系数有望在该域上\emph{精确}求出并用 \texttt{sympy} 判等。
+
+\textbf{必须注意它与定理~\ref{thm:zonal} 的关系。}如果 SOS 证书最终被组织成
+「$(t)_+$ 的逐点上界 + 若干全局通道的线性界」，那它就落在通道型方案内，天花板仍是 $\Phi$，白做。
+只有当证书是\emph{直接}针对 $\sum p_ip_j(\langle z_i,z_j\rangle)_+\le\rho_0$
+在约束 $\sum p_iz_iz_i^\top=I_3$ 下的一个约束多项式非负性证书
+（即形如「目标 $-\rho_0+$ 约束的 SOS 组合 $\ge0$」的 Putinar/Schmüdgen 型证书）时，
+它才使用了 (B) 类信息而不受定理~\ref{thm:zonal} 限制。这个区别必须在动手前想清楚。
+
+一条硬约束（已实测）：把 $a_Ia_J$ 用均值 $1/n$ 代替的「常数移位代理」在 $\|Q\|_1$ 上有 $-3.97\%$
+的相对误差，\emph{比整个 $2.0969\%$ 的缺口还大}。所以标量轮廓 $a$ 必须精确保留，
+「先做球面平均化再处理角度」这条最自然的简化路线被直接否掉。
+
+\subsection{方向丁：图极限—凸分析（KLMPT 架构的移植）}
+
+$k=2$ 的锐利结果 $\lambda_1+\lambda_2\le\frac87n$ 是 KLMPT 用图极限与凸分析证的，
+而它的极值核心 $P_3=K_1\vee2K_1$ 只有三个原子、负图 $K_2$ 是二部的。
+移植到 $k=3$ 的障碍已在第~3.3 节说明：$\Gamma^-=C_5$ 是奇圈，切换结构失效，目标函数不再是完全平方。
+可行的切入点是绕过切换、直接对 $\Lam_3$ 的 Ky Fan 表示做凸性分析：
+$\Lam_3(M)$ 关于 $M$ 是凸的，而 $M=D_w(A_H+I)D_w$ 关于 $w$ 是\emph{二次}的，
+故 $\psi_3(H)=\max_{w\in\Delta}\Lam_3(M(H,w))$ 是一个凸函数在单纯形上的最大化，极值在边界或临界点。
+定理~\ref{thm:champ}(b) 的一阶条件 $a^2+24ab-31b^2=0$ 正是这条路线的产物。
+尚缺的是把「每张核心的临界点都已算出」升级为「全局上确界在有限张核心上取到」——又回到 (2a)。
+
+\subsection{其他考虑过但不推荐的想法}
+
+\begin{itemize}[leftmargin=1.4em,itemsep=2pt]
+\item \textbf{矩阵值（而非标量值）主函数}：把 \eqref{eq:maj} 的右端换成一个矩阵值核。
+这属于通道型方案的推广，若其计费仍是「逐通道 $\le\kappa n$」，则定理~\ref{thm:zonal} 的见证
+（取 $u_1=v_1=0$ 使所有含 $u_1,v_1$ 的通道归零）仍然适用，故无收益。
+\item \textbf{二阶 lift / 矩量矩阵 SOS}：把 $(c_i,u_i)$ 的经验测度提升到二阶矩量矩阵再做 SDP。
+理论上这属于 (B) 类，但维度随原子数平方增长，在 $K\le20$ 时不可行；
+且若不引入自洽性，SDP 的极限仍会收敛到通道型松弛的值。
+\item \textbf{稀疏图侧}：\STW\ 在 \S6.4 中承认其方法只对稠密图有效，稀疏侧用迹恒等式另做。
+但 $c_3^{\Sigma}$ 是稠密渐近常数，稀疏侧与本课题无关。
+\item \textbf{把 $k=3$ 化成 $k=2$ 的已有结果}：$\Lam_3=\Lam_2+\lambda_3$，
+但 $\lambda_3$ 的最好界（Tang 的 $\lambda_3\le n/3-1$，已被 \STW\ 合并取代）太弱，相加后远劣于 $\Phi$。
+\end{itemize}
+
+\subsection{优先级建议}
+
+\begin{enumerate}[leftmargin=1.8em,itemsep=2pt]
+\item \textbf{(2a) 支撑 $\le6$}（方向甲的唯一缺口）。这是把无限问题变有限的唯一开关，
+一旦证出，方向甲就是一套机械的、可用区间算术完整认证的流程，主定理随之得证。
+\item \textbf{方向乙的等权子问题 $m_{\rm eq}$}。即使主线受阻，它也能产出一个可发表的独立结果
+（改进 \STW\ 约 $0.77\%$ 的无条件上界），适合作为毕业论文的保底章节。需要先修正数值方法。
+\item \textbf{方向丙的约束 SOS 证书}。产物形态最适合答辩（一个可现场复核的代数证书），
+但必须先确认它不落入定理~\ref{thm:zonal}。
+\item \textbf{下界一侧的整理}。定理~\ref{thm:lower} 与~\ref{thm:champ} 已是完整的、精确的、不依赖 A1$'$ 的成果，
+可以直接作为毕业论文的一个独立章节交付，不需要等待上界。
+\end{enumerate}
+
+\section{诚实声明与结论状态}\label{sec:honest}
+
+本节把全文的结论按证明强度重新排一遍，使读者不必回到正文逐条核对，
+就能准确知道课题现在站在什么位置、哪些东西可以引用、哪些不可以。
+
+\subsection{可以引用的结果}
+
+第一类是下界一侧的完整结果，也是目前成熟度最高的部分。
+定理~\ref{thm:lower} 给出 $\liminf_{n}M_3(n)/n\ge\rho_0$，
+其中 $\rho_0=(9+\sqrt5+2\sqrt{35})/18$，小数展开为 $1.281568196872$，
+见证是 $K_1\vee C_5$ 的一个六原子团吹起。
+定理~\ref{thm:champ} 进一步给出该极值核心的完整闭式刻画：
+最优权为 $s=1.586541134689$、$t=0.976595259055$，
+由一阶条件 $a^2+24ab-31b^2=0$ 与归一化条件解出；
+对应的系数是 $a^*=(91-25\sqrt7)/126$ 与 $b^*=(7+5\sqrt7)/126$，
+其比值 $a^*/b^*=5\sqrt7-12$，五个核函数值全部落在 $\Q(\sqrt5,\sqrt7)$ 中。
+这两条不依赖任何未证猜想，其中的数值等式已由 \texttt{sympy} 在相应数域上判定为恒等式。
+
+第二类是归约链与结构定理。定理~\ref{thm:reduce} 把「对一切 $n$、一切图」的陈述
+压缩成一个有限维极值问题；定理~\ref{thm:gam3} 给出 $\gamma(3)=\varphi$ 的精确值；
+定理~\ref{thm:selfcons} 给出极值对象必须满足的自洽条件 $A=1\{\Pi_3(M)\ge0\}$；
+定理~\ref{thm:caseab} 给出 Case A / Case B 二分，并把全部难度定位到 $t\in(0.9451,0.995]$ 这条窄带上。
+链条本身是严格的，不严格的只是它末端的猜想~\ref{conj:A1}。
+
+第三类是本轮的主要新贡献，即定理~\ref{thm:zonal}：
+定义~\ref{def:scheme} 意义下的整个通道型主函数方案族，其可达到的最好常数恰好是 $\Phi$。
+这条定理的证明是初等的，见证测度 \eqref{eq:lam} 是显式的三点测度，
+因此它的可靠性不依赖任何数值计算；随附脚本的作用只是对引理~\ref{lem:moments} 中
+「对一切 $\ell\ge3$ 有 $\int P_\ell\dd\lambda\ge0$」这一唯一需要分档讨论的部分做机器复核。
+命题~\ref{prop:nec} 把它转化为一条可操作的筛选判据。
+
+第四类是对旧路线（配对松弛）的完整否证：定理~\ref{thm:43A} 的天花板 $\frac12(1+\sqrt3)$、
+命题~\ref{prop:43B} 的显式反例、定理~\ref{thm:43C} 的三原子精确最大值 $\frac43$，
+共同说明该松弛的值严格大于 $\Phi$，从而这条投入最大的路线不可能证明猜想~\ref{conj:A1}。
+
+\subsection{本报告没有主张的内容}
+
+把边界划清楚与说明成果同样重要。
+
+我们\textbf{没有}改进 $\Lam_3(G)\le\Phi n-3$ 这条无条件纪录，缺口 $\Phi-\rho_0=0.0274488$ 一寸未动；
+现役的最好上界仍然属于 \STW。猜想~\ref{conj:A1}（即 $c_3^{\Sigma}=\rho_0$）\textbf{未证}。
+支撑界 (2a)（极值测度的原子数 $\le6$）\textbf{未证}，目前无条件的只有 $N\le20$
+（由 $N\le24$ 经 Fenchel--Bunt 精化），而定理~\ref{thm:selfcons} 要压成有限的核心表需要 $N\le8$；
+必须强调 $20\ne8$，把「支撑 $\le20$」表述为「已证 A1$'$」是严格禁止的。
+关于等权子问题 $m_{\rm eq}$ 的\textbf{一切数值上界都不被采信}，理由见第~7.3 节：
+$n\ge8$ 的搜索结果与已证的复制单调性直接矛盾，属于优化伪影；
+目前可用的只有下界 $m_{\rm eq}\ge1.0590$（正二十面体，精确）与初步的 $1.245304$（数值，未认证）。
+第~6.2 节的 $\mathrm{SR}_K$ 计算只是\textbf{阴性证据}，不构成任何命题的证明，不应被引用为成果，
+其中 $K=15,\dots,20$ 各档尚未计算。
+第~5 节表格中标注「数值」或出现在猜想环境中的条目（例如 $K\ge4$ 时 $\max B=3/\sqrt5$）一律不是定理。
+
+\subsection{数值证据的使用纪律}
+
+全文使用四个标签：「已证」「精确」「数值」「否证」。它们不是修辞，而有明确的操作含义——
+「已证」要求本报告或所引文献中含有完整论证；
+「精确」要求相关数值等式已由符号计算判定为恒等（差化简后恰为 $0$）；
+「数值」表示只有浮点证据；「否证」表示已有反例。
+所有标注「数值」的条目都不得作为成果引用。
+
+这条纪律来自一次具体的教训。早期一轮工作曾报告配对松弛的最大值为 $1.366758746$，
+几乎取到定理~\ref{thm:43A} 的天花板 $\frac12(1+\sqrt3)=1.366025404$，
+当时被当作「主线接近完成」的证据。复核后发现它是伪影：
+对应的解满足 $\alpha_2=1.0107>1$，而定理~\ref{thm:43A} 的证明中已经严格建立了 $\alpha\le1$；
+根因是白化步骤 $M^{-1/2}$ 的条件数爆炸。
+修正办法是在所有搜索代码中加入可行性拒绝门与审计输出（每次打印 $\alpha_1,\alpha_2$ 与各向同性残差），
+超出 $1$ 的解一律丢弃。由此得到本报告反复使用的一条原则：
+\textbf{任何违反已证不等式的数值「改进」都是伪影，不是发现。}
+
+\subsection{一句话总结}
+
+下界一侧已经完整：$\rho_0$ 是精确的，极值核心已闭式刻画，这部分可以立即写成毕业论文的独立章节。
+上界一侧我们证明了自己原先排在首位的技术路线\emph{不可能}成功，
+并把「可能成功」的必要条件精确缩小到两条——自洽性 (A) 与通道—分布联合约束 (B)。
+要产出新的无条件上界纪录，目前最有希望的是方向乙的等权子问题，
+估计能把常数压到 $1.299$ 左右（相对 \STW\ 改进约 $0.77\%$），但它到不了 $\rho_0$；
+要证到 $\rho_0$，必须先补上支撑界 (2a)。
+
+\appendix
+\section{复现说明与产物清单}\label{app:repro}
+
+\subsection{运行环境}
+
+全部计算在 Windows 上完成，解释器为 \texttt{C:\textbackslash Python314\textbackslash python.exe}，
+依赖 \texttt{numpy}、\texttt{scipy}、\texttt{sympy} 三个库。
+统一的调用方式是把 \texttt{-X utf8} 与 \texttt{-u} 一起打开：前者避免 Windows 控制台默认 GBK
+编码在打印含根号或希腊字母的中间结果时报错，后者保证长任务的输出实时可见。
+
+\begin{center}
+\fbox{\texttt{C:\textbackslash Python314\textbackslash python.exe -X utf8 -u <脚本名>}}
+\end{center}
+
+本报告由 \LaTeX\ 源码编译，编译器为 MiKTeX 的 \texttt{xelatex}，文档类为 \texttt{ctexart}。
+因为含目录与交叉引用，需要连续运行两遍；若日志中仍出现 \texttt{undefined references}，运行第三遍即可。
+
+\subsection{随本报告分发的文件}
+
+{\small
+\begin{longtable}{@{}p{6.9cm}p{6.4cm}p{2.0cm}@{}}
+\toprule
+文件 & 内容 & 状态 \\
+\midrule
+\endfirsthead
+\toprule
+文件 & 内容 & 状态 \\
+\midrule
+\endhead
+\texttt{进展报告\_前三大特征值之和的精确上界.tex} & 本报告源码（保留的 \LaTeX\ 版本） & --- \\
+\texttt{进展报告\_前三大特征值之和的精确上界.pdf} & 本报告编译产物 & --- \\
+\texttt{Sivashankar-Tang-Wakhare\_}\newline
+\texttt{2608.02429\_GraphEigenvalues}\newline
+\texttt{AndProjectionConstants.pdf} &
+\STW\ 原文，arXiv:2608.02429v1，2026 年 8 月 3 日，CC BY 4.0；第~\ref{sec:stwanat} 节的解剖对象 & 他人成果 \\
+\texttt{证书\_zonal天花板定理.py} & 定理~\ref{thm:zonal} 见证测度的四个矩与 Legendre 各档非负性的 \texttt{sympy} 复核 & 本报告 \\
+\bottomrule
+\end{longtable}}
+
+\subsection{证书脚本核对了什么}
+
+\texttt{证书\_zonal天花板定理.py} 做四件事，全部在 $\Q(\sqrt5)$ 上用精确有理运算完成。
+第一步输出见证测度 $\lambda$ 的三个质量 $\frac{5-\sqrt5}4$、$\frac{5+\sqrt5}4$、$\frac12$ 并验证其非负。
+第二步验证三条矩条件 $\sum_i\lambda_i=3$、$\sum_i\lambda_it_i=1$、$\sum_i\lambda_it_i^2=1$；
+后两条正是把方案 \eqref{eq:scheme} 中的 $\beta$ 通道与 $b$ 通道「钉死」所必需的，
+其中 $\int(t^2-\frac13)\dd\lambda=1-\frac13\cdot3=0$ 使 $b$ 的取值完全不影响下界。
+第三步验证目标值 $\sum_i\lambda_i(t_i)_+=\frac{\sqrt5}4+\frac34=\Phi$，
+判据是 \texttt{simplify(差)\,==\,0} 而非浮点比较。
+第四步对 $\ell=3,\dots,300$ 逐档验证 $\sum_i\lambda_iP_\ell(t_i)\ge0$，
+把结果用 \texttt{nsimplify} 化到 $\Q(\sqrt5)$ 后判定符号；
+其中 $\ell\in\{3,4,8,14\}$ 四档恰为 $0$，这与引理~\ref{lem:moments} 的解析论证一致。
+
+需要说明分工：第四步在逻辑上\emph{不是}定理的证明，定理的证明由引理~\ref{lem:moments} 完成——
+奇 $\ell\ge3$ 用 Laplace 型估计 $|P_\ell(x)|\le\sqrt{2/(\pi\ell)}\,(1-x^2)^{-1/4}$
+（在 $x_0=1/\sqrt5$ 处给出 $0.487145<0.894427$），偶 $\ell\ge18$ 用同一估计（$0.198853<0.2$），
+中间有限档 $\ell\in\{4,6,\dots,16\}$ 用精确有理算术逐个核验。
+脚本的作用是把解析估计与手工核验之间的所有档位机器扫完，
+并另以浮点对 $\ell=3,\dots,4000$ 做了独立扫描（最小值为 $0$）。
+该脚本运行数分钟，主要开销在 \texttt{nsimplify}。
+
+\subsection{未随本报告分发的中间产物}
+
+课题目录下另有大量以 \texttt{\_} 开头的临时脚本与文本转储
+（文献抓取、图极限数值搜索、SDP/LP 离散化、区间算术试验等）。
+它们不属于本报告的证明链条，且多数已被后续版本取代，故未纳入版本库的本次提交。
+若需要复核某一具体数值（例如第~7.3 节的 $C^2/(3n)=0.992343569348608$），
+可按本附录「运行环境」一节的命令重算：该值由冠军权 $a^*,b^*$ 与 $V(\text{hub},\text{hub})$、
+$V(\text{cyc},\text{cyc})$ 的闭式直接代入得到，\texttt{sympy} 化简后即为此数，不依赖任何优化过程。
+
+\noindent{\small\textit{说明：正文以方括号缩写键指代下列文献，例如 \STW\ 对应 [STW26]，「DL23」对应 [DL23]，「KLMPT」对应 [KLM$^+$26]。第~\ref{sec:stwanat} 节解剖 \STW\ 的证明时用到投影常数一脉的文献（[Gr\"u60]、[KTJ94]、[CL09]、[DFFL22]、[DL23]），一并列出以便查阅。}}
+\vspace{4pt}
+
+\begin{thebibliography}{99}
+\small
+
+\bibitem[CL09]{cl09}
+B.~L.~Chalmers and G.~Lewicki,
+\newblock Three-dimensional subspace of $\ell_\infty^5$ with maximal projection constant,
+\newblock \textit{Journal of Functional Analysis} \textbf{257} (2009), no.~2, 553--592.
+
+\bibitem[DFFL22]{dffl22}
+B.~Der\k{e}gowska, M.~Fickus, S.~Foucart, and B.~Lewandowska,
+\newblock On the value of the fifth maximal projection constant,
+\newblock \textit{Journal of Functional Analysis} \textbf{283} (2022), no.~10, 109634.
+
+\bibitem[DL23]{dl23}
+B.~Der\k{e}gowska and B.~Lewandowska,
+\newblock A simple proof of the Gr\"unbaum conjecture,
+\newblock \textit{Journal of Functional Analysis} \textbf{285} (2023), no.~2, 109950.
+
+\bibitem[DMS19]{dms19}
+K.~C.~Das, S.~A.~Mojallal, and S.~Sun,
+\newblock On the sum of the $k$ largest eigenvalues of graphs and symmetric matrices,
+\newblock \textit{Linear Algebra and its Applications} \textbf{569} (2019), 175--194.
+
+\bibitem[EMNA08]{emna08}
+J.~B.~Ebrahimi, B.~Mohar, V.~Nikiforov, and A.~S.~Ahmady,
+\newblock On the sum of two largest eigenvalues of a symmetric matrix,
+\newblock \textit{Linear Algebra and its Applications} \textbf{429} (2008), no.~11--12, 2781--2787.
+
+\bibitem[Gr\"u60]{gru60}
+B.~Gr\"unbaum,
+\newblock Projection constants,
+\newblock \textit{Transactions of the American Mathematical Society} \textbf{95} (1960), no.~3, 451--465.
+
+\bibitem[HW26]{hw26}
+J.~Huang and W.~Wei,
+\newblock The exact maximum of the spectral sum of graphs,
+\newblock arXiv preprint arXiv:2607.23081 (2026).
+
+\bibitem[KLM$^+$26]{klmpt26}
+H.~Kumar, L.~Liu, H.~Monterde, S.~Pragada, and M.~Tait,
+\newblock Maximum spectral sum of graphs,
+\newblock arXiv preprint arXiv:2604.00512 (2026).
+
+\bibitem[KTJ94]{ktj94}
+H.~K\"onig and N.~Tomczak-Jaegermann,
+\newblock Norms of minimal projections,
+\newblock \textit{Journal of Functional Analysis} \textbf{119} (1994), no.~2, 253--280.
+
+\bibitem[Moh09]{moh09}
+B.~Mohar,
+\newblock On the sum of $k$ largest eigenvalues of graphs and symmetric matrices,
+\newblock \textit{Journal of Combinatorial Theory, Series B} \textbf{99} (2009), no.~2, 306--313.
+
+\bibitem[Nik15]{nik15}
+V.~Nikiforov,
+\newblock Extrema of graph eigenvalues,
+\newblock \textit{Linear Algebra and its Applications} \textbf{482} (2015), 158--190.
+
+\bibitem[Sch42]{sch42}
+I.~J.~Schoenberg,
+\newblock Positive definite functions on spheres,
+\newblock \textit{Duke Mathematical Journal} \textbf{9} (1942), no.~1, 96--108.
+
+\bibitem[STW26]{stw26}
+V.~Sivashankar, Q.~Tang, and T.~Wakhare,
+\newblock Graph eigenvalues and projection constants,
+\newblock arXiv preprint arXiv:2608.02429 (2026).
+
+\bibitem[Tan26]{tan26}
+Q.~Tang,
+\newblock A sharp upper bound on the third adjacency eigenvalue of a graph,
+\newblock arXiv preprint arXiv:2603.21181 (2026).
+
+\end{thebibliography}
+
+\end{document}

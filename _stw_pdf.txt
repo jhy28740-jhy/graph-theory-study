@@ -1,0 +1,1646 @@
+                                                  GRAPH EIGENVALUES AND PROJECTION CONSTANTS
+
+                                                        VARUN SIVASHANKAR, QUANYU TANG, AND TANAY WAKHARE
+
+
+                                                 Abstract. For an integer k ≥ 2, let λk (G) denote the kth largest adjacency eigenvalue
+                                                 of a graph G. For every graph G on n vertices and every 2 ≤ k ≤ n, we prove
+                                                                                           √
+                                                                                    (k − 2) k + 1 + 2
+                                                                           λk (G) ≤                   n − 1.
+                                                                                        2k(k − 1)
+                                                 Our bound is tight for k ∈ {2, 3, 4, 8, 24}. We obtain it by reducing the graph-eigenvalue
+                                                 problem to an extremal problem for orthogonal projections and then applying the
+                                                 general upper bound on the absolute projection constant γ(r) due to Deręgowska
+                                                 and Lewandowska. We also give an alternative proof of their bound by repairing
+                                                 the Gegenbauer-polynomial argument of König and Tomczak-Jaegermann. The resulting
+                                                 slack identity yields a strict improvement in every even dimension r ≥ 4 for which r + 2
+arXiv:2608.02429v1 [math.CO] 3 Aug 2026
+
+
+
+
+                                                 is not a perfect square.
+
+
+
+
+                                                                                  1. Introduction
+
+                                             For a graph G on n vertices, let
+                                                                           λ1 (G) ≥ λ2 (G) ≥ · · · ≥ λn (G)
+                                          denote the eigenvalues of its adjacency matrix. More generally, if M is a real symmetric
+                                          matrix of order m, we write
+                                                                          λ1 (M ) ≥ λ2 (M ) ≥ · · · ≥ λm (M )
+                                          for its eigenvalues, counted with multiplicity. Following Nikiforov [Nik15], define
+                                                                                                      
+                                                                                   λk (G)
+                                                                      ck := sup           : |V (G)| ≥ k .
+                                                                                  |V (G)|
+
+                                             The maximum-degree bound gives λ1 (G) ≤ n − 1, with equality for the clique Kn .
+                                          Hong [Hon88] proved that λk (G) ≤ n−k2
+                                                                                  for 2 ≤ k ≤ n. In particular, λ2 (G) ≤ n2 − 1, and
+                                          this is sharp when n is even, as shown by Kn/2 ⊔ Kn/2 . Hong then posed the problem of
+                                          bounding λk (G) in terms of the order of the graph [Hon93].
+                                             If n is divisible by k and G = Kn/k ⊔ · · · ⊔ Kn/k is the disjoint union of k cliques each of
+                                          size nk , then λk (G) = nk −1. This motivated a conjecture that λk (G) ≤ ⌊ nk ⌋. Powers [Pow89]
+                                          claimed that this upper bound holds, which would have essentially resolved the problem.
+                                          Nikiforov [Nik15] later found a gap in the proof and gave counterexamples for k ≥ 5.
+                                             Nikiforov used the fact that for any odd prime power q, there exists a strongly regular
+                                          graph on q 3 vertices [Tay77]. The complements of these graphs are also strongly regular,
+                                          and Nikiforov realized that whenever k = q(q − 1) + 1, the existence of this graph implies
+                                                        1
+                                          that ck ≥ 2√k−1+1  . Then using a result on the distribution of primes by Baker, Harman,
+                                                                                                1
+                                          and Pintz [BHP01], Nikiforov proved that ck ≥ 2√k−1+k    1/3 for all sufficiently large k. He
+                                                                   1                         1
+                                          also proved that ck ≥ 4√k−1 for k ≥ 16 and ck ≥ k−1/2 for 5 ≤ k ≤ 15 using certain regular
+                                          graphs. However, he asked whether it is still true that c3 = 1/3 and c4 = 1/4 [Nik15,
+                                                                                             1
+2                VARUN SIVASHANKAR, QUANYU TANG, AND TANAY WAKHARE
+                                                                                     √
+Question 2.11]. In 2023, Linz [Lin23] constructed examples showing that c4 ≥ 1+12 5 > 41
+along with some improved constructions for k ≤ 24. This left only the case k = 3, and
+recent work by Leonida and Li [LL26] and Li [Li25] provided strong evidence that the
+order bound n3 might actually hold for the third eigenvalue problem.
+   Our main contribution is proving that ck can be upper bounded (up to scaling factors)
+by the absolute projection constant studied in Banach space theory. For r ≥ 1, let
+                   Pr (N ) := {Q ∈ RN ×N : Q = Q⊤ = Q2 , rank(Q) = r}.
+Let qij denote the entries of Q. Define the entrywise ℓ1 -norm of Q by
+                                                N
+                                              N X
+                                              X
+                                   ∥Q∥1 =               |qij |.
+                                              i=1 j=1
+
+    For N ≥ r, define the finite-dimensional quantity
+                                              1
+                                γ(N, r) :=       max ∥Q∥1 ,
+                                              N Q∈Pr (N )
+and set
+                                    γ(r) := sup γ(N, r).
+                                              N ≥r
+
+We call γ(r) the absolute projection constant in dimension r. This orthogonal-projection
+formula agrees with the maximal absolute projection constant of Banach space theory.
+See [Bas19, DL23].
+    Our main result is the following.
+
+Theorem 2.1. Let 2 ≤ k ≤ n. For every graph G on n vertices,
+                                                √
+                       γ(k − 1)          (k − 2) k + 1 + 2
+              λk (G) ≤           n−1≤                      n − 1.
+                        2(k − 1)             2k(k − 1)
+                         √
+In particular, ck ≤ (k−2)  k+1+2
+                       2k(k−1)
+                                 . We write
+                                              √
+                                       (k − 2) k + 1 + 2
+                                 αk :=
+                                           2k(k − 1)
+for this coefficient.
+    For k = 2, this is the classical sharp bound λ2 (G) ≤ n/2 − 1 [Hon88, Nik15]. For k = 3,
+it yields the sharp bound λ3 (G) ≤ n/3 − 1. For k ∈ {4, 8, 24}, the coefficient αk matches
+Linz’s lower bounds [Lin23], so the theorem is tight for k ∈ {2, 3, 4, 8, 24}. This tightness
+comes from equiangular lines. See Section 5.1.
+   The first inequality is due to our reduction from the graph eigenvalue problem to the ab-
+solute projection constant γ(k − 1) as described in Section 2. The second inequality follows
+from the absolute projection constant bound of Deręgowska and Lewandowska [DL23].
+
+Theorem 4.1 [DL23]. Let Q ∈ Rn×n be a rank-r orthogonal projection, where r ≥ 1.
+
+                                        n           √
+                                        X         r+ r+2
+                             ∥Q∥1 =      |qij | ≤   √    n.
+                                    i,j=1
+                                                  1+ r+2
+                    GRAPH EIGENVALUES AND PROJECTION CONSTANTS                              3
+
+So in particular,
+                                                √
+                                              r+ r+2
+                                       γ(r) ≤   √    .
+                                              1+ r+2
+    König and Tomczak-Jaegermann [KTJ94] claimed a proof of this estimate, together with
+sharpness and uniqueness statements in the equiangular cases. Their later paper [KTJ03]
+revised part of the equality-case picture, but the argument for the general estimate is
+incorrect. Kobos [Kob25] gives a careful account of this history. The case r = 2, namely
+γ(2) ≤ 4/3, is the classical Grünbaum conjecture [Grü60], first proved by Chalmers and
+Lewicki [CL10] and reproved by Basso [Bas19]. Low-dimensional cases beyond r = 2 were
+first approached by more elaborate methods, for example in Chalmers and Lewicki [CL09]
+and computationally in [Bas19] and [FS17]. Finally, Deręgowska and Lewandowska [DL23],
+inspired by work of Bukh and Cox [BC20], resolved the problem and gave a surprisingly
+short and elementary linear-algebraic proof of the general upper bound in Theorem 4.1.
+   In Section 4, we provide an alternative proof of this result using Gegenbauer polynomials
+by repairing the argument in [KTJ94]. While the key ideas of our proof are similar to
+[DL23], we believe it is of independent interest. In particular, the slack terms in our
+argument are more transparent. This allows us to obtain a strict improvement on γ(r)
+whenever r is even and r + 2 is not a perfect square. Appendix B proves the following
+result.
+
+Theorem 4.6. Let r ≥ 4 be even, and suppose that r + 2 is not a perfect square. Then
+                                    √
+                                r+ r+2            r
+                        γ(r) ≤      √      −           .
+                                1 + r + 2 2(2r)4r+8
+
+                    2. From projections to graph eigenvalues
+
+   In this section, we prove our main theorem:
+Theorem 2.1. Let 2 ≤ k ≤ n. For every graph G on n vertices,
+                                                √
+                        γ(k − 1)         (k − 2) k + 1 + 2
+               λk (G) ≤          n−1≤                      n − 1.
+                        2(k − 1)             2k(k − 1)
+                         √
+In particular, ck ≤ (k−2)  k+1+2
+                       2k(k−1)
+                                 .
+                                                                                √
+                                                                        r+√r+2
+Proof. By the absolute projection constant bound in Theorem 4.1, γ(r) ≤ 1+ r+2
+                                                                               . Substi-
+                                          √
+tuting r = k − 1 gives γ(k−1)
+                       2(k−1)
+                                   k−1+ k+1
+                              ≤ 2(k−1)(1+ √
+                                            k+1)
+                                                 . Therefore, it suffices to prove Theorem 2.2
+below.                                                                                      □
+Theorem 2.2. Let 2 ≤ k ≤ n, and let G be a graph on n vertices. Then
+                                                γ(k − 1)
+                                     λk (G) ≤            n − 1.
+                                                2(k − 1)
+
+    The key step in the proof of Theorem 2.2 is the following matrix estimate for the sum
+of the r smallest eigenvalues. Although we will apply it to adjacency matrices, it holds
+for every symmetric matrix with nonnegative diagonal entries and off-diagonal entries in
+[0, 1].
+4               VARUN SIVASHANKAR, QUANYU TANG, AND TANAY WAKHARE
+
+Theorem 2.3. Let A = (aij ) ∈ Rn×n be symmetric, with eigenvalues
+                                     µ1 ≥ µ2 ≥ · · · ≥ µn .
+Assume that
+                    0 ≤ aij ≤ 1 (i ̸= j),            aii ≥ 0 (1 ≤ i ≤ n).
+Let 1 ≤ r ≤ n be an integer. Then
+                                                            γ(r)
+                                µn−r+1 + · · · + µn ≥ −          n.
+                                                             2
+In particular, µn−r+1 ≥ − γ(r)
+                           2r
+                               n.
+
+Proof. By Ky Fan’s minimum principle [HJ12, Corollary 4.3.39],
+                             µn−r+1 + · · · + µn = min tr(AQ).
+                                                      Q∈Pr (n)
+
+Fix Q = (qij ) ∈ Pr (n). Since Q is positive semidefinite and qii ≥ 0 for all i ∈ {1, . . . , n},
+                                          X
+                               tr(AQ) =       aij qij
+                                             i,j
+                                             X
+                                         ≥         min(0, qij )
+                                             i,j
+                                             1X
+                                         =         (qij − |qij |)
+                                             2 i,j
+                                      1 ⊤               
+                                         1 Q1 − ∥Q∥1
+                                         =
+                                      2
+                                        ∥Q∥1
+                                   ≥−
+                                          2
+                                        γ(r)
+                                   ≥−        n
+                                          2
+Taking the minimum over Q ∈ Pr (n) gives the first claim. The second follows from
+                                r µn−r+1 ≥ µn−r+1 + · · · + µn .                               □
+
+Proof of Theorem 2.2. Let r := k − 1 and let G be the complement of G. Since
+                                    A(G) + A(G) = J − I,
+the eigenvalues of J − I are n − 1, −1, . . . , −1, so in particular
+                                       λ2 (J − I) = −1.
+Apply Weyl’s inequality in the form
+                    λi (X) + λj (Y ) ≤ λi+j−n (X + Y )            (i + j ≥ n + 1)
+with
+                X = A(G),      Y = A(G),               i = k,        j = n − k + 2.
+Since i + j = n + 2, we obtain
+                                  λk (G) + λn−k+2 (G) ≤ −1.
+Now apply Theorem 2.3 with r = k − 1 to A(G):
+                                                     γ(k − 1)
+                                  λn−k+2 (G) ≥ −              n.
+                                                     2(k − 1)
+                      GRAPH EIGENVALUES AND PROJECTION CONSTANTS                            5
+
+Combining the two inequalities gives
+                                                γ(k − 1)
+                                     λk (G) ≤            n − 1.                            □
+                                                2(k − 1)
+
+
+                 3. Positive kernels and Gegenbauer polynomials
+
+   We need two positive-semidefinite kernels for the proof of Theorem 4.1.
+     Fix an integer r ≥ 1. Let S r−1 := {v ∈ Rr : ∥v∥2 = 1} be the unit sphere in Rr , where
+∥ · ∥2 denotes the Euclidean norm. For real vectors u, v, let ⟨u, v⟩ denote the standard inner
+product. For real-valued square matrices A, B ∈ Rm×m , write ⟨A, B⟩F = tr(A⊤ B) for the
+Frobenius inner product. This is equivalent to taking the   pinner product after viewing    A
+and B as m2 -dimensional vectors. For a matrix, ∥A∥F = ⟨A, A⟩F and ∥A∥1 = i,j |Aij |.
+                                                                                     P
+
+Let Ir ∈ Rr×r denote the identity matrix. A matrix M ∈ Rm×m is positive semidefinite if
+x⊤ M x ≥ 0 for all x ∈ Rm .
+Definition 3.1. A function f : R → R is positive semidefinite on S r−1 if, for every m ≥ 1
+and every u1 , . . . , um ∈ S r−1 , the matrix (f (⟨ui , uj ⟩))m
+                                                               i,j=1 is positive semidefinite.
+
+   Define
+                                         1                               3
+                          f2r (t) := t2 − ,        f4r (t) := t4 −            .
+                                         r                           r(r + 2)
+We prove that f2r and f4r are positive semidefinite on S r−1 . In Section 4, these kernels
+provide a scalar majorant for |⟨ui , uj ⟩| in the estimate of ∥Q∥1 .
+
+Lemma 3.2. For r ≥ 1, define
+                                            1
+                               ϕ(u) := uu⊤ − Ir ,             u ∈ S r−1 .
+                                            r
+Then for all u, v ∈ S r−1 ,
+                                    ⟨ϕ(u), ϕ(v)⟩F = f2r (⟨u, v⟩).
+Further, f2r is positive semidefinite on S r−1 .
+
+Proof. A direct computation gives
+                                                          
+                                            ⊤   1       ⊤   1
+                    ⟨ϕ(u), ϕ(v)⟩F = tr uu − Ir        vv − Ir
+                                                r           r
+                                              1           1
+                                  = (u⊤ v)2 − = ⟨u, v⟩2 − = f2r (⟨u, v⟩).
+                                              r           r
+For any u1 , . . . , un ∈ S r−1 , the matrix
+                                                          n
+                                          f2r (⟨ui , uj ⟩) i,j=1
+
+is the Gram matrix of ϕ(u1 ), . . . , ϕ(un ) with respect to the Frobenius inner product, and
+is therefore positive semidefinite.                                                         □
+
+   Appendix A gives the analogous Gram representation for f4r using fourth-order tensors.
+
+Lemma 3.3. For r ≥ 1, f4r (t) is positive semidefinite on S r−1 .
+6                    VARUN SIVASHANKAR, QUANYU TANG, AND TANAY WAKHARE
+
+Remark 3.4. Lemma 3.2 and Lemma 3.3 are just special cases of a theorem by Schoen-
+berg [Sch42]. Let Gλℓ denote the Gegenbauer polynomial of degree ℓ. These polynomials
+have generating function [SW71]:
+                                                         ∞
+                                            1           X
+                                                      =     Gλℓ (t)xℓ .
+                                     (1 − 2tx + x2 )λ   ℓ=0
+
+For r ≥ 3, Schoenberg proved the following strong characterization: f (t) is a real
+continuous function such that the matrix f (⟨ui , uj ⟩)ni,j=1 is positive semidefinite for all
+subsets {u1 , . . . , un } ⊆ S r−1 if and only if f is of the form ∞
+                                                                  P        r/2−1
+                                                                   ℓ=0 aℓ Gℓ     with aℓ ≥ 0.
+      In particular, when r ≥ 3, the normalized Gegenbauer kernels
+                                                          r/2−1
+                                          er/2−1 (t) := Gℓ
+                                          G
+                                                               (t)
+                                           ℓ             r/2−1
+                                                        Gℓ     (1)
+are positive semidefinite on S r−1 . We have
+                    r − 1 e r/2−1                   (r − 1)(r + 1) e r/2−1        6
+        f2r (t) =        G2       (t) and f4r (t) =                G4      (t) +     f2r (t).
+                      r                             (r + 2)(r + 4)               r+4
+Thus f2r and f4r are positive linear combinations of normalized Gegenbauer kernels, and
+hence are positive semidefinite on S r−1 by [Sch42]. For r = 2, the same statement is the
+usual limiting Chebyshev, or Fourier-cosine, case for the circle. This case is also covered
+by Schoenberg’s theorem, but not by the displayed generating function if one substitutes
+λ = 0 literally. In any case, the direct Gram proofs above cover all r ≥ 1, so we do not
+require this strong characterization.
+
+4. A Gegenbauer-polynomial proof of the absolute projection constant
+                                bound
+
+   In this section, we give an alternative proof of the upper bound on the absolute
+projection constant γ(r) due to Deręgowska and Lewandowska [DL23] by repairing an
+incorrect argument of [KTJ94] using Gegenbauer polynomials.
+Theorem 4.1 ([DL23]). Let Q ∈ Rn×n be a rank-r orthogonal projection, where r ≥ 1.
+Then                                           √
+                                  n
+                               X             r+ r+2
+                        ∥Q∥1 =      |qij | ≤   √    n.
+                               i,j=1
+                                             1+ r+2
+In particular,
+                                                     √
+                                                   r+ r+2
+                                            γ(r) ≤   √    .
+                                                   1+ r+2
+
+Proof. Choose V ∈ Rn×r with orthonormal columns such that Q = V V ⊤ . The result is
+trivial for r = 1, so assume r ≥ 2 for the rest of this section. Let x1 , . . . , xn ∈ Rr be the
+rows of V . Write xi = ci ui , where ci = ∥xi ∥2 ≥ 0 and ui ∈ S r−1 whenever ci ̸= 0. If
+ci = 0, choose ui arbitrarily in S r−1 . Since the columns of V are orthonormal, V ⊤ V = Ir .
+Writing this identity in terms of the rows gives
+                            n
+                            X
+(1)                               c2i ui u⊤
+                                          i = Ir   and      qij = ci cj ⟨ui , uj ⟩
+                            i=1
+                       GRAPH EIGENVALUES AND PROJECTION CONSTANTS                                              7
+
+   Set
+                               n
+                               X                           n
+                                                           X
+                       C :=           ci ,         x :=            ci ϕ(ui ),          X := ∥x∥F .
+                               i=1                          i=1
+
+   To prove Theorem 4.1, we establish Lemmas 4.2 to 4.4.
+Lemma 4.2. With the notation above,
+                                                   C 2 + rX 2 ≤ rn.
+
+Proof.
+                         n
+                       n X
+                       X                            n
+                                                  n X
+                                                  X
+          2    2
+         C + rX =                   ci cj + r                ci cj ⟨ϕ(ui ), ϕ(uj )⟩F
+                       i=1 j=1                    i=1 j=1
+                         n
+                       n X                          n
+                                                  n X                                      
+                       X                          X
+                                                                                   2    1
+                   =                ci cj + r                ci cj         ⟨ui , uj ⟩ −         by Lemma 3.2
+                       i=1 j=1                    i=1 j=1
+                                                                                        r
+                          n
+                        n X
+                        X
+                   =r                ci cj ⟨ui , uj ⟩2
+                         i=1 j=1
+                           n     n
+                     r XX 2
+                   ≤          (c + c2j )⟨ui , uj ⟩2                         by 2ci cj ≤ c2i + c2j
+                     2 i=1 j=1 i
+                          n
+                        n X
+                        X
+                   =r                c2j ⟨ui , uj ⟩2          by symmetry
+                         i=1 j=1
+                          n
+                        n X
+                        X
+                   =r                tr(ui u⊤  2     ⊤
+                                            i cj uj uj )
+                         i=1 j=1
+                        n                        n
+                                                                   !
+                        X                        X
+                   =r          tr     ui u⊤
+                                          i            c2j uj u⊤
+                                                               j
+                         i=1                     j=1
+                        n
+                        X
+                               tr ui u⊤
+                                             
+                   =r                 i                 by Equation (1)
+                         i=1
+                   = rn.                                                                                       □
+
+   We bound ∥Q∥1 by finding a scalar majorant for |t| on [−1, 1] and applying it with
+t = ⟨ui , uj ⟩. We consider expressions of the form
+                                                 a + b f2r (t) − ρ f4r (t).
+After substituting t = ⟨ui , uj ⟩ and summing over i, j, the constant term produces C 2 ,
+the f2r -term produces X 2 , and the sum involving f4r is nonnegative by Lemma 3.3. Its
+coefficient is −ρ ≤ 0, so dropping this term only increases the upper bound. The following
+lemma formalizes this reduction.
+Lemma 4.3. Let a, b, ρ ∈ R satisfy
+                        |t| ≤ a + b f2r (t) − ρ f4r (t)                      for all t ∈ [−1, 1],
+with a ≥ 0, ρ ≥ 0, and b ≤ ra. Then every rank-r orthogonal projection Q ∈ Rn×n satisfies
+                                                       ∥Q∥1 ≤ arn.
+8                        VARUN SIVASHANKAR, QUANYU TANG, AND TANAY WAKHARE
+
+Proof. By (1), write Q = V V ⊤ with rows ci ui for i ∈ {1, . . . , n}. Then ∥Q∥1 = i,j |qij | =
+                                                                                                    P
+P
+    i,j ci cj |⟨ui , uj ⟩|. Apply the assumed scalar inequality with t = ⟨ui , uj ⟩, multiply by
+ci cj ≥ 0, and sum over all i, j to obtain
+                         X             X           X                            X
+            ∥Q∥1 =          |qij | ≤ a   ci cj + b   ci cj f2r (⟨ui , uj ⟩) − ρ   ci cj f4r (⟨ui , uj ⟩).
+                          i,j               i,j                i,j                              i,j
+
+By definition,
+          X                                 X                                  X
+              ci cj = C 2 ,                         ci cj f2r (⟨ui , uj ⟩) =         ci cj ⟨ϕ(ui ), ϕ(uj )⟩F = X 2 .
+                 i,j                         i,j                               i,j
+                                                          n
+Also, the positive semidefiniteness of f4r (⟨ui , uj ⟩) i,j=1 implies that
+                                 X
+                                     ci cj f4r (⟨ui , uj ⟩) ≥ 0.
+                                                     i,j
+
+Therefore ∥Q∥1 ≤ aC 2 + bX 2 . Since b ≤ ra, we have aC 2 + bX 2 ≤ a (C 2 + rX 2 ). Now
+apply Lemma 4.2 to get ∥Q∥1 ≤ arn.                                                    □
+
+   The bound in Lemma 4.3 is arn, so we seek coefficients that √       minimize ar. The
+equiangular tight cases suggest imposing equality at t = 1 and t = 1/ r + 2. Lemma 4.4
+gives the resulting coefficients, and the following remark explains their derivation.
+                                        √
+Lemma 4.4. Let r ≥ 2, and set s := r + 2. Define
+                                s2 + s − 2                     s(s2 + 2s + 3)                             s3
+                       ar :=               ,           br :=                  ,             ρr :=               .
+                                 r(s + 1)                        2(s + 1)2                            2(s + 1)2
+Then for every t ∈ [−1, 1],
+                                                  |t| ≤ ar + br f2r (t) − ρr f4r (t).
+Moreover, we have br ≤ rar .
+
+Proof. Recall that
+                                      1                          3
+                        f2r (t) = t2 − ,      f4r (t) = t4 −          .
+                                      r                      r(r + 2)
+Since the left-hand side is even in t, it suffices to consider t ∈ [0, 1]. A direct expansion
+gives
+                                                                     (1 − t)(st − 1)2 (st + s + 2)
+(2)                       ar + br f2r (t) − ρr f4r (t) − t =                                       .
+                                                                              2(s + 1)2
+The right-hand side is nonnegative for t ∈ [0, 1], since
+                                 1 − t ≥ 0,            (st − 1)2 ≥ 0,                st + s + 2 > 0.
+Hence
+                                 |t| ≤ ar + br f2r (t) − ρr f4r (t)            for all t ∈ [−1, 1].
+      Finally,
+                                       s3 + 2s2 − 5s − 4   (s − 2)(s + 1)(s + 3) + 2
+                       rar − br =                   2
+                                                         =                           ≥ 0,
+                                           2(s + 1)                2(s + 1)2
+and therefore br ≤ rar .                                                                                               □
+                   GRAPH EIGENVALUES AND PROJECTION CONSTANTS                             9
+
+Remark 4.5. The factorization in the proof also explains how these coefficients were
+found. For the extremal equiangular constructions with
+                                              
+                                           r+1
+                                    N=           ,
+                                            2
+the common angle is
+                                         1      1
+                                 α= √        = .
+                                        r+2     s
+Since we apply the polynomial majorant to quantities of the form
+                                        |t| = |⟨ui , uj ⟩|,
+it is natural to force contact at the endpoint t = 1 and at the equiangular angle t = 1/s.
+Thus one asks for
+                      H(1) = 0,         H(1/s) = 0,            H ′ (1/s) = 0,
+where
+                           H(t) := ar + br f2r (t) − ρr f4r (t) − t.
+These three conditions determine the coefficients above.
+
+Completing the proof of Theorem 4.1. Apply Lemma 4.3 with
+                             a = ar ,        b = br ,         ρ = ρr .
+Lemma 4.4 verifies the hypotheses of Lemma 4.3. Therefore
+                                                      √
+                                     s2 + s − 2    r+ r+2
+                     ∥Q∥1 ≤ ar rn =             n=    √   n.                             □
+                                        s+1        1+ r+2
+   The absolute projection constant bound in Theorem 4.1 is sharp in dimensions r ∈
+{1, 2, 3, 7, 23} because extremal real equiangular tight frames are known to exist in these
+dimensions. Refer to Section 5.1 for further discussion.
+   The same slack identity gives a strict improvement in the nonsquare dimensions. We
+defer the proof to Appendix B.
+Theorem 4.6. Let r ≥ 4 be even, and suppose that r + 2 is not a perfect square. Then,
+for every rank-r orthogonal projection Q ∈ Rn×n ,
+                                      √                
+                                    r+ r+2        r
+                         ∥Q∥1 ≤        √      −           n.
+                                    1 + r + 2 2(2r)4r+8
+Consequently,                          √
+                                    r+ r+2        r
+                             γ(r) ≤    √     −          .
+                                    1 + r + 2 2(2r)4r+8
+
+             5. Lower bounds from weighted two-graph blowups
+
+5.1. Equiangular tight cases. Suppose there is an extremal equiangular line system in
+Rr , so that                                          
+                                                r+1
+                                      N=
+                                                    2
+lines exist. Choose unit representatives u1 , . . . , uN with
+                               ⟨ui , uj ⟩ ∈ {±α}          (i ̸= j).
+10                VARUN SIVASHANKAR, QUANYU TANG, AND TANAY WAKHARE
+
+It is standard that equality in the relative bound gives an equiangular tight frame. See,
+for example, [DGS77, LS73]. In particular, if U ∈ Rr×N has columns u1 , . . . , uN , then
+                                               N
+                                       U U ⊤ = Ir ,
+                                                r
+and extremality forces
+                                               1
+                                       α= √       .
+                                              r+2
+The corresponding sign matrix is
+                             Bii = 1,       Bij = sign⟨ui , uj ⟩ (i ̸= j).
+The Gram matrix G := U ⊤ U therefore has entries
+                                Gii = 1,        Gij = αBij       (i ̸= j),
+or equivalently
+                         G = IN + α(B − IN ) = αB + (1 − α)IN .
+           ⊤
+Since U U = (N/r)Ir , the nonzero eigenvalues of G = U ⊤ U are N/r with multiplicity r,
+and the remaining eigenvalues are 0. It follows that B has eigenvalue
+                           N
+                                                            √
+                           r
+                             −1+α       N βr             r+ r+2
+                     θ :=            =       ,    βr :=     √      ,
+                               α          r             1+ r+2
+with multiplicity r, while the remaining eigenvalues are −(1 − α)/α.
+   In these cases, no weight optimization is needed. Let Q be the orthogonal projector
+onto the N βr /r-eigenspace of B. Since G = αB + (1 − α)IN has range equal to this
+eigenspace, we have
+                                             r
+                                       Q=      G.
+                                            N
+Thus Q is a rank-r orthogonal projection and, entrywise,
+                               r                 rα
+                        Qii =    > 0,     Qij =     Bij (i ̸= j).
+                              N                  N
+Hence sign(Q) = B. Therefore
+                                                 r
+                          ∥Q∥1    tr(BQ)      1 X
+                                =         =        λj (B) = βr .
+                           N         N       N j=1
+Thus the equiangular sign matrix recovers the sharp absolute projection constant in the
+dimensions where maximal real equiangular tight frames are known to exist, namely
+r ∈ {1, 2, 3, 7, 23}.
+     The lines also describe the associated graph directly. Its vertex set is
+                                        {i+ , i− : 1 ≤ i ≤ N }.
+For i ̸= j, if ⟨ui , uj ⟩ = α, join
+                                           i+ j + ,   i− j − ,
+and if ⟨ui , uj ⟩ = −α, join
+                                    i+ j − ,     i− j + .
+This is the regular two-graph construction used in the equiangular-line examples [Sei76].
+Let G0 denote this base graph on 2N vertices. The spectrum of this graph is well
+understood [Sei76, GH92]. In particular, its adjacency matrix satisfies the exact identity
+                                             βr
+                              λr+1 (G0 ) =      |V (G0 )| − 1.
+                                             2r
+                    GRAPH EIGENVALUES AND PROJECTION CONSTANTS                              11
+
+Moreover, replacing every vertex of G0 by a clique of the same size and every edge by a
+complete bipartite graph preserves the identity:
+                                                βr
+                                  λr+1 (G) =       |V (G)| − 1.
+                                                2r
+Thus these graphs match the upper bound in Theorem 2.1 exactly when k = r + 1. These
+are precisely the tight cases k ∈ {2, 3, 4, 8, 24} coming from equiangular lines, in agreement
+with Linz’s lower-bound constructions [Lin23].
+   The extremal equiangular line systems in dimensions r = 7 and r = 23 are derived
+from the E8 and Leech lattices, respectively [Gil18]. These lattices also give the sharp
+sphere packings in dimensions 8 and 24 [Via17, CKM+ 17].
+
+5.2. Finite weighted cores and blowups. The equal-weight sign matrix in the pre-
+ceding subsection suggests the following generalization. A finite weighted core is a pair
+(B, p), where
+                            B ∈ {±1}m×m ,       B = B⊤,       Bii = 1,
+                                               P
+and p = (p1 , . . . , pm ) satisfies pi ≥ 0 and i pi = 1. The indices are called types: Bij
+prescribes the sign between types i and   P j, and pi is the asymptotic proportion of indices
+of type i. For integers Ni with N = i Ni and Ni /N → pi , replacing Bij by an Ni × Nj
+constant block produces an N × N sign matrix B (N ) , called a weighted blowup of the core.
+The number m remains fixed as N grows.
+   The terminology comes from writing a rank-r projection as Q = XX ⊤ . When qab ̸= 0,
+the directions of the a-th and b-th rows of X determine its sign. Rows with the same
+direction up to sign form a type, and the signs between chosen representatives give the
+matrix B. Replacing one representative by its negative multiplies the corresponding row
+and column of B by −1. Replacing several representatives changes B to ΣBΣ, where Σ is
+diagonal with entries in {±1}. This operation is called switching, and a switching class is
+a two-graph. This framework is essentially due to Basso, who formulated the absolute
+projection constant through eigenvalue problems for weighted finite two-graphs [Bas19].
+   For a finite weighted core, put
+                                 √           √
+                     Dp := diag( p1 , . . . , pm ),     Kp := Dp BDp .
+We may delete coordinates with pi = 0, so we assume below that all weights are positive.
+Define the projection-side objective
+                                            r
+                                            X
+                                  ΦB (p) :=   λj (Kp ).
+                                              j=1
+
+Proposition 5.1. Let (B, p) be a finite weighted core with positive weights, m ≥ r, and
+λr (Kp ) > 0. Then
+                                             γ(r) ≥ ΦB (p).
+If also λ1 (Kp ) < 1, then the same core gives
+                                                   1
+                                           cr+1 ≥ λr (Kp ).
+                                                   2
+Lemma 5.2 (Constant-block blowups). Let C be a symmetric        P        s × s matrix, and let
+n = (n1 , . . . , ns ) be a vector of positive integers with n = i ni . Form C[n] by replacing
+                                                                                √        √
+the entry Cij with an ni × nj constant block. Put qi = ni /n and Dq := diag( q1 , . . . , qs ).
+Then the spectrum of n−1 C[n] consists of the eigenvalues of Dq CDq , together with n − s
+additional zeros.
+12                VARUN SIVASHANKAR, QUANYU TANG, AND TANAY WAKHARE
+
+Proof. Partition the indices of C[n] into blocks V1 , . . . , Vs , where |Vi | = ni , and define Z ∈
+{0, 1}n×s by Zai = 1 if a ∈ Vi and Zai = 0 otherwise. Thus each row of Z indicates the type
+                                                                                      √        √
+of one blown-up index. This is the type-incidence matrix. If Dn := diag( n1 , . . . , ns ),
+then C[n] √= ZCZ ⊤ and Z ⊤ Z = Dn2 . Consequently, U := ZDn−1 has orthonormal columns.
+Since Dn / n = Dq ,
+                                              
+                       1             Dn Dn
+                         C[n] = U √ C √          U ⊤ = U (Dq CDq )U ⊤ .
+                       n               n     n
+Set L := Dq CDq . Since the columns of U are orthonormal, every vector in Rn can be
+written uniquely as U y + x, where y ∈ Rs and x is perpendicular to every column of U .
+The identities U ⊤ U = Is and U ⊤ x = 0 give n−1 C[n](U y + x) = U LU ⊤ (U y + x) = U Ly.
+In particular, if Ly = λy, then U y is an eigenvector of n−1 C[n] with eigenvalue λ, while
+every nonzero vector perpendicular to the columns of U is an eigenvector with eigenvalue
+zero. These two subspaces have dimensions s and n − s, so these are all the eigenvalues
+claimed in the lemma.                                                                   □
+
+Proof Pof Proposition 5.1. Projection bound. Choose positive integers N1 , . . . , Nm with
+N := i Ni → ∞ and Ni /N → pi , and let B (N ) be the corresponding weighted blowup.
+Write q (N ) = (N1 /N, . . . , Nm /N ). By Lemma 5.2, the spectrum of N −1 B (N ) consists of the
+eigenvalues of Dq(N ) BDq(N ) , together with additional zeros. The former matrix converges
+to Kp .
+   Let QN be the orthogonal projector onto a top r-dimensional eigenspace of B (N ) . The
+assumption λr (Kp ) > 0 ensures that, for all sufficiently large N , these r eigenvalues do not
+come from the additional zeros in the lemma. Hence Ky Fan’s principle and continuity of
+the ordered eigenvalues give
+                                       r
+                    1      (N )
+                                      X                       
+                      tr(B QN ) =         λj Dq(N ) BDq(N ) −→ ΦB (p).
+                    N                 j=1
+
+Since every entry of B (N ) is a sign,
+                                       ∥QN ∥1 ≥ tr(B (N ) QN ).
+It follows that γ(r) ≥ ΦB (p). The last comparison is an equality whenever sign(QN ) =
+B (N ) .
+                                         √          √
+    Graph bound. Recall that Dp = diag( p1 , . . . , pm ) and Kp = Dp BDp . Let J be the
+m × m all-ones matrix. Index rows and columns by {i+ , i− : 1 ≤ i ≤ m}, and define
+                                                        
+                                     1 J +B J −B
+                               CB :=                       .
+                                     2 J −B J +B
+Since Bii = 1, we have CB = A + I2m , where A is the adjacency matrix of the simple
+graph that joins equal signs when Bij = 1, joins opposite signs when Bij = −1, and has
+no edge i+ i− .
+    Choose integers ti = ti (T ) > 0 with i ti = T and ti /T → pi . Replace i± by a
+                                                       P
+clique of size ti , joining two replacement cliques completely when their base vertices are
+adjacent. Let GM be the resulting graph, where M = 2T . Adding IM turns each diagonal
+clique block into an all-ones block. Thus every block of A(GM ) + IM is constant, and
+its value is the corresponding entry of CB . Applying Lemma 5.2 to CB with these 2m
+block sizes uses q (T ) = M −1 (t1 , . . . , tm , t1 , . . . , tm ). Each of its two coordinates for type
+i is ti /M = (ti /T )/2 → pi /2. Thus the eigenvalues of M −1 (A(GM ) + IM ) are those of
+                    GRAPH EIGENVALUES AND PROJECTION CONSTANTS                               13
+
+Dq(T ) CB Dq(T ) , together with M − 2m additional zeros, and the smaller matrix converges
+                                                               √       √
+entry by entry to A(p) b    := Hp CB Hp , where Hp := diag(Dp / 2, Dp / 2). For symmetric
+matrices of fixed size, Weyl’s eigenvalue perturbation inequality shows that entry-by-entry
+convergence implies convergence of the ordered eigenvalues [HJ12, Section 4.3].
+   Write a vector in R2m as (u, v), where u, v ∈ Rm . Setting x = (u+v)/2 and z = (u−v)/2
+gives (u, v) = (x, x) + (z, −z). The displayed formula for CB now gives
+                                                                                 
+                     1           1                                    1        1
+    A(p)(x,
+     b       x) =      Dp JDp x, Dp JDp x       and A(p)(z,
+                                                      b       −z) =     Kp z, − Kp z .
+                     2           2                                    2        2
+The matrices Dp JDp /2 and Kp /2 are symmetric, so choose eigenvector bases x1 , . . . , xm
+and z1 , . . . , zm for them. The calculation above shows that (xi , xi ) and (zi , −zi ), for
+1 ≤ i ≤ m, are eigenvectors of A(p)      b with the corresponding eigenvalues. These 2m vectors
+are linearly independent: any relation among them has the form (x, x) + (z, −z) = 0,
+which gives x + z = x − z = 0, hence x = z = 0, and then all coefficients vanish because
+the xi and zi are bases. They therefore form a basis of R2m , so every eigenvalue of A(p)   b
+comes from one of these two m × m matrices.
+                   √              √    ⊤                                                 ⊤
+    Let w     =   (  p 1 , . . . , pm ) . Since J is the all-ones matrix, Dp JDp = ww , and
+w⊤ w = i pi = 1. Thus Dp JDp /2 sends w to w/2 and sends every vector perpendicular
+         P
+to w to zero. Its eigenvalues are therefore 1/2 and m − 1 zeros, while Kp /2 has eigenvalues
+λj (Kp )/2. Because λ1 (Kp ) < 1 and λr (Kp ) > 0, the largest r + 1 eigenvalues of A(p)    b
+are 1/2 and λ1 (Kp )/2, . . . , λr (Kp )/2. Hence λr+1 (A(p))
+                                                           b    = λr (Kp )/2 > 0. The additional
+zeros from Lemma 5.2 lie below the largest r + 1 eigenvalues for all sufficiently large M .
+Consequently,
+                                     λr+1 (A(GM ) + IM )     1
+                                                         −→ λr (Kp ).
+                                               M             2
+Finally, λr+1 (A(GM ) + IM ) = λr+1 (GM ) + 1. Since M = |V (GM )| → ∞, dividing by M
+gives
+                                          λr+1 (GM )     1
+                                                     −→ λr (Kp ),
+                                           |V (GM )|     2
+and hence cr+1 ≥ λr (Kp )/2.                                                                  □
+
+5.3. Improved lower bounds for ck for small k. We use deterministic local searches
+to produce candidate cores for Proposition 5.1, optimizing ΦB (p) and λr (Kp ) separately.
+We check each listed construction directly. The searches are heuristic: we make no claim
+of global optimality, stabilization, minimality, or a uniform bound on the core size.
+   Table 1 summarizes the best cores found. The projection and graph columns may use
+different sign matrices and weights. The quantities mP and mG denote the respective
+numbers of positive weights. The entries for r = 4 and r = 5 come from the explicit
+constructions described in Appendix C. Apart from the tight equiangular entries already
+explained, finite-type extraction produced the remaining numerical weighted-core evidence.
+The ancillary files anc/weighted_cores.json and anc/verify_weighted_cores.py con-
+tain the objective-specific sign cores and weights and a direct verification script for all
+rows. The same directory also contains the search code. The table gives the lower bound
+for γ(r) obtained from the core, the scaled projection value γ(r)/(2r), the resulting lower
+bound for ck , and the gap between these last two quantities.
+   Comparing with Linz’s table of lower bounds [Lin23, Table 1], these weighted-core
+constructions match the values for k = 7, 8, 9, while improving the known lower bounds
+14               VARUN SIVASHANKAR, QUANYU TANG, AND TANAY WAKHARE
+
+                          r k mP mG γ(r) γ(r)/(2r)     ck      gap
+                         4 5 11 11 1.8500 0.2312 0.2312 5.51·10−5
+                         5 6 16 16 2.0691 0.2069 0.2069         0
+                         6 7 21 21 2.2857 0.1904 0.1904         0
+                         7 8 28 28 2.5000 0.1785 0.1785         0
+                         8 9 36 36 2.6666 0.1666 0.1666         0
+                         9 10 46 46 2.8202 0.1566 0.1566 3.69·10−5
+                         10 11 57 57 2.9499 0.1474 0.1473 1.29·10−4
+                         11 12 68 71 3.0537 0.1388 0.1386 1.61·10−4
+                         12 13 83 85 3.1687 0.1320 0.1319 1.28·10−4
+                         13 14 95 105 3.2868 0.1264 0.1262 1.51·10−4
+                         14 15 114 119 3.3981 0.1213 0.1212 1.43·10−4
+                         15 16 130 153 3.5106 0.1170 0.1168 1.59·10−4
+                         16 17 145 152 3.6157 0.1129 0.1128 1.60·10−4
+         Table 1. The indicated independently optimized weighted-core construc-
+         tions supply all displayed lower bounds in the γ(r), γ(r)/(2r), and ck
+         columns, with k = r + 1. Here mP and mG are the numbers of positive
+         weights in the projection and graph cores. We truncate each numerical
+         lower bound downward to four decimal places and compute the gap from
+         the unrounded construction values.
+
+
+for
+                            k ∈ {5, 6, 10, 11, 12, 13, 14, 15, 16, 17}.
+In particular, Linz proved c5 ≥ 2/9 using the Paley graph and c6 ≥ 0.2. The constructions
+in Appendix C improve both of these bounds. For r = 4 and 9 ≤ r ≤ 16, the computed
+scaled projection lower bound is strictly larger than the computed graph lower bound. Since
+we optimized the two objectives independently, this does not imply that the underlying
+extremal constants differ.
+      We outline the first two concrete examples in Appendix C.
+
+                                        6. Discussion
+
+6.1. A possible gap between the constants. Our reduction gives
+                                                γ(r)
+                                          cr+1 ≤     .
+                                                 2r
+For several values of r, the numerical experiments summarized in Table 1 produce slightly
+different best lower bounds for the two sides, suggesting that this inequality may be strict.
+Since the heuristic local searches produced the constructions and the observed gaps are
+small, this does not establish a separation. It would be interesting to determine whether
+cr+1 < γ(r)/(2r) for some r, or whether equality always holds and the gaps in the table
+are numerical artifacts.
+
+6.2. Sums of the largest eigenvalues and graph energy. Nikiforov also discusses a
+closely related problem involving sums of the largest eigenvalues [Nik15, Section 4]. For a
+graph G, write
+                              Λk (G) := λ1 (G) + · · · + λk (G),
+and let
+                            Mk (n) := max{Λk (G) : |V (G)| = n}.
+                    GRAPH EIGENVALUES AND PROJECTION CONSTANTS                             15
+
+This problem is closely related to the study of Ky Fan norms and graph energy, where
+one instead sums the largest singular values. Mohar proved the general upper bound
+                                                  √
+                                              1+ k
+                                    Mk (n) ≤         n
+                                                 2
+and asked how close it is to the truth [Moh09]. See also [Nik15, Section 4]. Nikiforov
+formulated the following concrete conjecture [Nik15, Conjecture 4.2]: for every fixed k ≥ 2,
+                                                                            √
+if τk := limn→∞ Mkn(n) , then there exists εk > 0 such that τk < 12 1 + k − εk . The
+following proposition resolves this conjecture and proves the stronger finite-n statement.
+Proposition 6.1. For every graph G on n vertices and every 1 ≤ k ≤ n,
+                                                     1 + γ(k)
+                                      Λk (G) ≤                n − k.
+                                                        2
+Consequently,
+                                                      √    
+                                    1                k+ k+2
+                           Mk (n) ≤               1+   √      n − k.
+                                    2                1+ k+2
+Proof. Let A be the adjacency matrix of G. By Ky Fan’s maximum principle,
+                                      Λk (G) = max tr(AQ).
+                                                     Q∈Pk (n)
+
+Fix Q = (qij ) ∈ Pk (n). Since aii = 0 and 0 ≤ aij ≤ 1 for i ̸= j,
+                                      X            X
+                           tr(AQ) =      aij qij ≤   max(0, qij ).
+                                          i̸=j                i̸=j
+
+Using max(0, x) = (x + |x|)/2, this becomes
+                                                          !
+                           1   X              X                   1 ⊤               
+                tr(AQ) ≤              qij +          |qij |   =     1 Q1 + ∥Q∥1 − 2k .
+                           2   i̸=j           i̸=j
+                                                                  2
+
+Now 1⊤ Q1 = ∥Q1∥22 ≤ ∥1∥22 = n, while ∥Q∥1 ≤ γ(k)n. Hence
+                                     1 + γ(k)
+                                      tr(AQ) ≤n − k.
+                                         2
+Taking the maximum over Q ∈ Pk (n) proves the first claim. The second claim follows
+from Theorem 4.1.                                                                □
+
+   As an immediate consequence,
+                     √           Proposition
+                                   √          √ resolves [Nik15, Conjecture 4.2]. Indeed,
+                                             6.1
+for every k ≥ 2, (k + k + 2)/(1 + k + 2) < k, and hence
+                                                 √
+                                                                  √
+                                                      
+                          Mk (n)    1       k+ k+2          1
+                 τk = lim        ≤     1+       √         < (1 + k).
+                      n→∞  n        2       1+ k+2          2
+Thus the conjecture holds with
+                                            √
+                                     √    k+ k+2
+                                 εk = k −   √    > 0.
+                                          1+ k+2
+   This argument also identifies the mixed projection constant
+                                             1
+                                                max ∥Q∥1 + 1⊤ Q1 ,
+                                                                
+                        ηmix (k) := sup
+                                        N ≥k N Q∈Pk (N )
+16              VARUN SIVASHANKAR, QUANYU TANG, AND TANAY WAKHARE
+
+which is already implicit in the k = 2 spectral-sum literature. The same proof gives the
+one-line bound
+                           ηmix (k)
+                Λk (G) ≤            n−k     with     ηmix (k) ≤ 1 + γ(k).
+                              2
+  For k = 2, specialized work gives a much sharper answer. Ebrahimi, Mohar, Nikiforov,
+and Ahmady proved
+                                                     8.0185
+                                  λ1 (G) + λ2 (G) <         n
+                                                        7
+and conjectured the sharp bound 8n/7 [EMNA08]. Recently, Kumar, Liu, Monterde,
+Pragada, and Tait proved this conjecture using graphon and convex-analytic meth-
+ods [KLM+ 26]:
+                                                       8
+                                     λ1 (G) + λ2 (G) ≤ n.
+                                                       7
+Agarwal et al. also proved the related Nordhaus–Gaddum analogue [AAA+ 26]:
+                                                                
+                                                        8
+                          max λ1 (G) + λ2 (G) =            + o(1) n.
+                        |V (G)|=n                        7
+Our general estimate gives only
+                                                7
+                               λ1 (G) + λ2 (G) ≤  n − 2.
+                                                6
+For every
+    √     k > 2, however, the same projection-constant argument improves the general
+(1 + k)n/2 bound in [Moh09].
+
+6.3. Multiplicity of the second eigenvalue. Assume that G is connected, and let m
+be the multiplicity of λ2 (G). Then
+                            λ2 (G) = λm+1 (G) ≤ αm+1 n − 1.
+Consequently,                 
+                    m ≤ max 1 ≤ i ≤ n − 1 : λ2 (G) + 1 ≤ αi+1 n .
+Thus Theorem 2.1 gives an implicit upper bound on the multiplicity of the second
+eigenvalue in terms of λ2 (G) and n.
+   If G = Kn , then λ2 (G) = −1 and m = n − 1, so the displayed finite maximum gives
+only the trivial bound.
+                   √    For connected non-complete graphs, we have λ2 (G) + 1 > 0, and
+since 1/αi+1 = Θ( i), the same inequality yields
+                                                   2 !
+                                              n
+                               m=O                       .
+                                         λ2 (G) + 1
+The asymptotic order already follows from Nikiforov’s bound [Nik15, Theorem 2.6], but
+our estimate is sharper.
+
+6.4. Sparse graphs. Our method is tailored to dense graphs, since it treats the com-
+        and uses only the coarse information 0 ≤ aij ≤ 1. For sparse graphs, the trace
+plement P
+identity ni=1 λi (G)2 = 2e(G) implies
+                                            r
+                                              2e(G)
+                                  λk (G) ≤          .
+                                                k
+An open problem is to obtain bounds that interpolate effectively between the dense regime
+of Theorem 2.1 and sparse or bounded-degree regimes.
+                    GRAPH EIGENVALUES AND PROJECTION CONSTANTS                               17
+
+Acknowledgments. We thank Noga Alon, Matija Bucić, Sergio Cristancho, Julien Codsi,
+Alex Divoux, Clive Elphick, Andrew Lin, Jie Ma, Davin Park, and Shouda Wang for helpful
+discussions. This paper was written with assistance from GPT-5.4. All theorem statements,
+proofs, computations, references, and final arguments were independently checked, revised,
+and finalized by the authors, who take full responsibility for the correctness, originality,
+and integrity of the paper. The first author was supported by the National Science
+Foundation under Grant No. DMS-2349013.
+
+               Appendix A. Positivity of the degree-four kernel
+
+   We prove Lemma 3.3 using 4-tensors. A 4-tensor T = (Tabcd )ra,b,c,d=1 is an array of real
+numbers with four indices. If T = (Tabcd ) and S = (Sabcd ) are two 4-tensors of the same
+size, their Frobenius inner product is defined by
+                                            Xr
+                               ⟨T, S⟩F :=         Tabcd Sabcd .
+                                                      a,b,c,d=1
+
+This is the natural analogue of the usual Frobenius inner product for matrices. For a
+vector u = (u1 , . . . , ur ) ∈ Rr , we write u⊗4 for the 4-tensor with entries
+                                         (u⊗4 )ijkl := ui uj uk ul .
+A 4-tensor is called symmetric if its entries do not change when the indices are permuted.
+
+Lemma 3.3. For r ≥ 1,
+                                                                 3
+                                         f4r (t) = t4 −
+                                                             r(r + 2)
+is positive semidefinite on S r−1 .
+
+Proof. Let Ω = (Ωijkl )1≤i,j,k,l≤r be the symmetric 4-tensor
+                                            1                               
+                          Ωijkl :=               δij δkl + δik δjl + δil δjk ,
+                                        r(r + 2)
+where δab is the Kronecker delta, that is,
+                                                 (
+                                                  1, a = b,
+                                           δab =
+                                                       ̸ b.
+                                                  0, a =
+For u ∈ S r−1 , define
+                                            ψ(u) := u⊗4 − Ω.
+We claim that for all u, v ∈ S r−1 ,
+                                   ⟨ψ(u), ψ(v)⟩F = f4r (⟨u, v⟩).
+Write t = ⟨u, v⟩. We compute each term separately.
+   First,                                X
+                     ⟨u⊗4 , v ⊗4 ⟩F =             ui uj uk ul vi vj vk vl = (u⊤ v)4 = t4 .
+                                        i,j,k,l
+
+   Next,
+                                    1     X
+                 ⟨u⊗4 , Ω⟩F =
+                                                                                        
+                                                 ui uj uk ul δij δkl + δik δjl + δil δjk .
+                                r(r + 2) i,j,k,l
+18                 VARUN SIVASHANKAR, QUANYU TANG, AND TANAY WAKHARE
+
+Each of the three terms contributes
+                     X                         X           X 2
+                         ui uj uk ul δij δkl =   u2i u2k =   u2i = 1,
+                          i,j,k,l                             i,k                       i
+
+so
+                                                                          3
+                                               ⟨u⊗4 , Ω⟩F =                    .
+                                                                      r(r + 2)
+Similarly,
+                                                                          3
+                                               ⟨v ⊗4 , Ω⟩F =                   .
+                                                                      r(r + 2)
+     It remains to compute ⟨Ω, Ω⟩F . Let
+                                      Cijkl := δij δkl + δik δjl + δil δjk ,
+               1
+so that Ω = r(r+2) C. Then
+                                                                    X
+                                                                               2
+                                               ⟨C, C⟩F =                      Cijkl .
+                                                                    i,j,k,l
+           2
+Expanding Cijkl , the three square terms contribute
+                              X                 X
+                                  (δij δkl )2 =   δij δkl = r2 ,
+                                     i,j,k,l                    i,j,k,l
+
+and likewise for the other two square terms, giving 3r2 in total.
+     For the mixed terms,
+                                                X
+                                                          δij δkl δik δjl = r,
+                                                i,j,k,l
+
+since all four indices must be equal. The same holds for each of the other five mixed terms.
+Hence
+                              ⟨C, C⟩F = 3r2 + 6r = 3r(r + 2),
+and therefore
+                                                          1                                 3
+                               ⟨Ω, Ω⟩F =                            ⟨C, C⟩F =                    .
+                                               r2 (r + 2)2                              r(r + 2)
+     Putting everything together,
+                  ⟨ψ(u), ψ(v)⟩F = ⟨u⊗4 − Ω, v ⊗4 − Ω⟩F
+                                    = ⟨u⊗4 , v ⊗4 ⟩F − ⟨u⊗4 , Ω⟩F − ⟨v ⊗4 , Ω⟩F + ⟨Ω, Ω⟩F
+                                                3             3            3
+                                    = t4 −             −           +
+                                            r(r + 2) r(r + 2) r(r + 2)
+                                                3
+                                    = t4 −
+                                            r(r + 2)
+                                        r
+                                    = f4 (t).
+
+     Thus, for any u1 , . . . , un ∈ S r−1 , the matrix
+                                                n                        n
+                                f4r (⟨ui , uj ⟩) i,j=1 = ⟨ψ(ui ), ψ(uj )⟩F i,j=1
+is a Gram matrix, hence is positive semidefinite.                                                    □
+                        GRAPH EIGENVALUES AND PROJECTION CONSTANTS                                   19
+
+Appendix B. Proof of the improved absolute projection constant bound
+
+      We recall the statement of Theorem 4.6.
+Theorem 4.6. Let r ≥ 4 be even, and suppose that r + 2 is not a perfect square. Then, for
+every rank-r orthogonal projection Q ∈ Rn×n ,
+                                     √                    
+                                   r+ r+2            r
+                        ∥Q∥1 ≤        √       −              n.
+                                   1 + r + 2 2(2r)4r+8
+Consequently,                          √
+                                   r+ r+2            r
+                           γ(r) ≤      √      −            .
+                                   1 + r + 2 2(2r)4r+8
+    The proof of Theorem 4.1 contains more information than the inequality itself. In
+Lemma 4.3, after applying the scalar majorant from Lemma 4.4, we discarded several
+nonnegative terms. The goal of this section is to show that, in certain dimensions, those
+slack terms cannot all be small. The scalar slack forces most pairs of row directions to
+lie near the equiangular angle, while the degree-four term prevents too much mass from
+concentrating on pairs with |⟨ui , uj ⟩| close to 1.
+      Let
+                               √                  1                           r+s
+                        s :=    r + 2,        α := ,        βr := rar =           .
+                                                  s                           1+s
+For 0 ≤ t ≤ 1, define the scalar slack
+                                hr (t) := ar + br f2r (t) − ρr f4r (t) − t.
+By (2), we know that
+                                         (1 − t)(st − 1)2 (st + s + 2)
+(3)                             hr (t) =                               .
+                                                  2(s + 1)2
+Thus hr ≥ 0 on [0, 1], and its only zeros are
+                                                      1
+                                t=1           and     t=α= √
+                                                           .
+                                                     r+2
+The zero at α is a double zero. This is the common angle in the known equiangular
+examples where the absolute projection constant bound is sharp.
+   The proof below formalizes the following stability picture. If a projection nearly attains
+∥Q∥1 = βr n, then most weighted pairs of row directions must have |⟨ui , uj ⟩| close to α,
+except possibly for pairs with |⟨ui , uj ⟩| close to 1, which correspond to repeated directions
+up to sign. The scalar slack controls the first kind of bad pair, and the degree-four term
+controls the second. This produces a large weighted graph of pairs near the angle α.
+Weighted Turán forces a clique of size r + 1, but a Seidel-matrix obstruction forbids even
+an approximate local clique of this type when r + 2 is even and not a perfect square.
+
+B.1. Slack in the majorant argument. We keep the notation from the proof of
+Theorem 4.1. Thus Q = V V ⊤ , the rows of V are xi = ci ui , where
+                                                X
+                    ci ≥ 0,      ui ∈ S r−1 ,       c2i ui u⊤
+                                                            i = Ir .
+                                                             i
+Set                                                         
+                    X                    X
+                                                      ⊤  1
+             C :=       ci ,    X :=           ci ui ui − Ir           ,      tij := |⟨ui , uj ⟩|.
+                    i                     i
+                                                         r
+                                                                   F
+20                VARUN SIVASHANKAR, QUANYU TANG, AND TANAY WAKHARE
+
+Recall from Lemma 4.2 that
+(4)                                              C 2 + rX 2 ≤ rn.
+Also,
+                                                           
+                         2
+                              X                         1                    X
+(5)                    X =           ci cj       t2ij −         ,   ∥Q∥1 =         ci cj tij .
+                               i,j
+                                                       r                     i,j
+
+      The following identity gives the exact slack left by the proof of Theorem 4.1.
+Lemma B.1. Assume r ≥ 4. Let
+                                             ∆ := βr n − ∥Q∥1 .
+Then
+                    ∆ = ar rn − C 2 − rX 2 + (rar − br )X 2
+                                            
+(6)
+                                                         X
+                                X
+                                           4        3
+                           + ρr     ci cj tij −           +     ci cj hr (tij ).
+                                i,j
+                                                r(r + 2)    i,j
+
+Each of the four terms on the right-hand side of (6) is nonnegative.
+
+Proof. By the definition of hr ,
+                      t = ar + br f2r (t) − ρr f4r (t) − hr (t)          (0 ≤ t ≤ 1).
+Substitute t = tij , multiply by ci cj , and sum over all ordered pairs. Using (5), we get
+                                                                   X
+                        2       2
+                                         X
+                                                     4        3
+          ∥Q∥1 = ar C + br X − ρr             ci cj tij −           −     ci cj hr (tij ).
+                                          i,j
+                                                          r(r + 2)    i,j
+
+Since βr = rar , rearranging gives (6).
+                                                                                           √
+      The first term is nonnegative by (4). For the second, using s =                            r + 2, we have
+                         s3 + 2s2 − 5s − 4    (s − 2)(s + 1)(s + 3) + 2
+                rar − br =             2
+                                            =                           >0
+                              2(s + 1)                2(s + 1)2
+for r ≥ 4. The third term is nonnegative by Lemma 3.3, and the fourth term is nonnegative
+by (3).                                                                                □
+
+B.2. A local Seidel obstruction. A finite obstruction prevents the near-α pairs from
+containing a large clique. The use of Seidel matrices to encode equiangular line systems is
+standard. See, for example, [LS73, Sei76].
+   Suppose first that there were r + 1 unit vectors in Rr with
+                                                1
+                              |⟨vi , vj ⟩| = √         (i ̸= j).
+                                               r+2
+Choosing signs for the off-diagonal inner products, their Gram matrix has the form
+                                                   1
+                                         Ir+1 + √     S,
+                                                  r+2
+where S is a Seidel matrix: a symmetric matrix with zero diagonal and ±1 off-diagonal
+                                     r
+entries. Since r + 1 vectors
+                         √ in R are linearly dependent, this Gram matrix would be
+singular. Equivalently, − r + 2 would be an eigenvalue of the integer matrix S.
+   When r+2 is even and not a perfect square, this is impossible. Indeed, x2 −(r+2) would
+then divide the characteristic polynomial of S, but modulo 2 every Seidel matrix of odd
+                   GRAPH EIGENVALUES AND PROJECTION CONSTANTS                            21
+
+order has characteristic polynomial with only a simple factor of x. Since x2 − (r + 2) ≡ x2
+(mod 2), this gives a contradiction. The elementary root-separation argument below gives
+a quantitative version of the same obstruction.
+   For m ≥ 2, let Sm denote the set of Seidel matrices of order m, let Jm denote the
+m × m all-ones matrix, and write χS (x) := det(xI − S) for the characteristic polynomial
+of S.
+Lemma B.2. Let m be odd, and let S ∈ Sm . Then
+                             χS (x) ≡ x(x + 1)m−1    (mod 2).
+
+Proof. Modulo 2, every off-diagonal entry of S is 1. Hence
+                                 S ≡ Jm − Im    (mod 2).
+Over F2 , since m is odd, the matrix Jm − Im acts as 0 on ⟨1⟩ and as the identity
+on the hyperplane {v : 1⊤ v = 0}. Therefore its characteristic polynomial over F2 is
+x(x + 1)m−1 .                                                                     □
+
+   We use the following quantitative form of the Seidel obstruction. For a real matrix A,
+let σmin (A) denote its smallest singular value.
+Lemma B.3. Let r ≥ 4, and suppose that d := r + 2 is even and not a perfect square.
+Then every S ∈ Sr+1 satisfies
+                                           
+                                         1        1
+                            σmin Ir+1 + √ S ≥           .
+                                          d   r(2r)2r+1
+
+Proof. Since d = r + 2 is even, r + 1 is odd. Fix S ∈ Sr+1 , and write p(x) := χS (x).
+                      √                                  √
+   We claim that p(− d) ̸= 0. Indeed,√suppose that p(− d) = 0. Since d is not a perfect
+square, the minimal polynomial of − d over Q is x2 − d. Hence x2 − d divides p(x) in
+Q[x]. Since x2 − d is monic, and in particular primitive, Gauss’s lemma implies that
+x2 − d divides p(x) in Z[x]. Reducing modulo 2 and using that d is even, we get x2 | p(x)
+(mod 2). But Lemma B.2 yields p(x) ≡ x(x + 1)r (mod 2), and√the right-hand side is
+divisible by x but not by x2 . This contradiction proves that p(− d) ̸= 0.
+  Since p(x) ∈ Z[x], we may write
+                         √          √
+                       p( d) = u + v d   for some u, v ∈ Z.
+         √           √               √
+   √ p(− d) = u − v d. Moreover, p( d) ̸= 0, since otherwise conjugation would give
+Then
+p(− d) = 0. Hence
+                             √      √
+                           p( d)p(− d) = u2 − v 2 d ∈ Z,
+                 √      √
+and therefore |p( d)p(− d)| ≥ 1.
+  Let λ1 , . . . , λr+1 be the eigenvalues of S. Since S is a Seidel matrix, every row has
+absolute row sum r, and so Gershgorin’s theorem [HJ12, Theorem 6.1.1] gives |λi | ≤ r.
+Therefore
+                                       r+1
+                                √      Y    √            √
+                             |p( d)| =     | d − λi | ≤ ( d + r)r+1 .
+                                    i=1
+                    √       √
+It follows that |p(− d)| ≥ ( d + r)−(r+1) .
+22                     VARUN SIVASHANKAR, QUANYU TANG, AND TANAY WAKHARE
+                          √                   √
+      Since every factor | d + λi | is at most d + r, we have
+                                   r+1
+                            √      Y    √            √             √
+                        |p(− d)| =     | d + λi | ≤ ( d + r)r min | d + λi |.
+                                                                                  1≤i≤r+1
+                                        i=1
+
+Consequently,
+                                            √            √
+                                       min | d + λi | ≥ ( d + r)−(2r+1) .
+                                      1≤i≤r+1
+
+      Finally,
+                                          √
+                                 
+                             1 1                          1               1
+         σmin              = √ min | d + λi | ≥ √ √
+                     Ir+1 + √ S                                     ≥           ,
+                              d d 1≤i≤r+1             d( d + r)2r+1   r(2r)2r+1
+                                             √          √
+where the last inequality uses r ≥ 4, so that d ≤ r and d + r ≤ 2r.                            □
+
+      For the rest of Appendix B, when r is even and r + 2 is not a perfect square, write
+                                                                    1
+(7)                                               ηr :=                   .
+                                                                r(2r)2r+1
+Thus ηr is the explicit lower bound from Lemma B.3.
+      The local gap rules out approximate local equiangular clusters.
+Corollary B.4. Suppose r ≥ 4 is even and r + 2 is not a perfect square. If 0 < ε < ηr /r,
+then there do not exist r + 1 unit vectors v1 , . . . , vr+1 ∈ Rr such that
+                                         ||⟨vi , vj ⟩| − α| ≤ ε               (i ̸= j).
+
+                                                                              ̸ j, choose
+Proof. Suppose such vectors exist, and let Γ be their Gram matrix. For each i =
+the sign sij ∈ {±1} so that sij α has the same sign as ⟨vi , vj ⟩. Then
+                                                Γ = Ir+1 + αS + E,
+where S is the Seidel matrix with zero diagonal and off-diagonal entries sij , while E is
+symmetric with zero diagonal and |Eij | ≤ ε for i ̸= j.
+  We claim that Γ is nonsingular. Suppose instead that Γz = 0 for some nonzero z ∈ Rr+1 .
+By Lemma B.3,
+                                (Ir+1 + αS)z 2 ≥ ηr ∥z∥2 .
+                                                       P
+On the other hand, for each i, we have |(Ez)i | ≤ ε j̸=i |zj |. Hence, by the Cauchy–
+Schwarz inequality,
+                                                     !2
+                                       X X
+                          ∥Ez∥22 ≤ ε2           |zj |
+                                                        i         j̸=i
+                                                        XX
+                                                    2
+                                                ≤ rε                     zj2 = r2 ε2 ∥z∥22 .
+                                                            i    j̸=i
+
+Since (Ir+1 + αS)z = −Ez, we obtain
+                                      ηr ∥z∥2 ≤ ∥Ez∥2 ≤ rε∥z∥2 < ηr ∥z∥2 ,
+a contradiction. Thus Γ is nonsingular. This is impossible, since Γ is the Gram matrix of
+r + 1 vectors in Rr and therefore has rank at most r.                                  □
+                    GRAPH EIGENVALUES AND PROJECTION CONSTANTS                            23
+
+B.3. Small defect forces many good pairs. The next lemma converts a small normal-
+ized defect into a weighted density estimate for the graph of pairs whose inner products
+are close to α.
+Lemma B.5. Suppose that r ≥ 4 is even and that r + 2 is not a perfect square. Set
+                                                ηr
+                                           e := .
+                                                 r
+Let Q be a rank-r projection, with ci , C, and tij as above, and set ∆ := βr n − ∥Q∥1 . Let
+I+ := {i : ci > 0}, and define pi := ci /C for i ∈ I+ . If
+                                       ∆      e2
+                                          <       ,
+                                       C2    128r
+then the graph H with vertex set I+ , in which distinct vertices i, j are adjacent exactly
+when |tij − α| ≤ e/2, satisfies
+                                    X                 1
+                                2         pi pj > 1 − .
+                                                      r
+                                      {i,j}∈E(H)
+
+
+Proof. From (7),
+                                √
+                          e      r+2              1         1
+                            = 2      2r+1
+                                            ≤       2r+1
+                                                         <     .
+                         α    r (2r)          r(2r)        100
+                            √
+Here we used r ≥ 4, so that r + 2 ≤ r. Since also α < 1/2, we have α + e/2 < 1 − e2 .
+Put                                e 4                                  3
+        θ := 1 − e2 ,    A := α −         ,     D := θ4 − A,     c :=          .
+                                    2                                 r(r + 2)
+Since e < α/100, r ≥ 4, and α2 = 1/(r + 2), we have the crude estimates
+                            4             A  1            c−A  2
+                          D≥ ,              ≤ ,               ≤ .
+                            5             D  16            D   3r
+Indeed, A ≤ α4 and
+                                                        1         1       4
+                   D ≥ 1 − 4e2 − α4 ≥ 1 −                     −        2
+                                                                         ≥ .
+                                                   2500(r + 2) (r + 2)    5
+This gives A/D ≤ 5/(4(r + 2)2 ) ≤ 1/16, and (c − A)/D ≤ 5c/4 ≤ 2/(3r).
+   The scalar slack has a uniform lower bound away from its two zeros. By (3),
+                                    s2 (st + s + 2)
+         hr (t) = (1 − t)(t − α)2                   ≥ (1 − t)(t − α)2    (0 ≤ t ≤ 1),
+                                       2(s + 1)2
+              √          √
+because s =       r+2≥    6 and
+                              s2 (st + s + 2)   s2 (s + 2)
+                                              ≥            ≥ 1.
+                                 2(s + 1)2      2(s + 1)2
+If 0 ≤ t ≤ θ and |t − α| ≥ e/2, then either t ≤ (1 + α)/2, in which case 1 − t ≥ (1 − α)/2 ≥
+1/4, or t ≥ (1 + α)/2, in which case (t − α)2 ≥ (1 − α)2 /4 ≥ 1/16 and 1 − t ≥ e2 . Thus in
+both cases
+                                                 e2
+(8)                                      hr (t) ≥ .
+                                                 16
+                                              √        √
+Finally, ρr = s3 /(2(s + 1)2 ) ≥ 1/2 for s = r + 2 ≥ 6.
+24                VARUN SIVASHANKAR, QUANYU TANG, AND TANAY WAKHARE
+
+      The weights (pi )i∈I+ form a probability distribution. Put
+                                                           ∆
+                                                    E :=      .
+                                                           C2
+Partition I+ × I+ into
+                                     n                            eo
+                                G := (i, j) : i ̸= j, |tij − α| ≤    ,
+                                                                  2
+                                U := {(i, j) : tij ≥ θ} ,
+                                B := (I+ × I+ ) \ (G ∪ U).
+The inequality α + e/2 < θ ensures that G ∩ U = ∅, so these three sets form a partition.
+The set G consists of the good pairs. Since tii = 1, all diagonal pairs lie in U. Its
+off-diagonal pairs correspond to nearly coincident directions up to sign. The set B consists
+of the residual bad pairs, which are close to neither α nor 1.
+      Let                  X                           X                        X
+                     g=             pi pj ,      u=             pi pj ,   b=             pi pj .
+                          (i,j)∈G                     (i,j)∈U                  (i,j)∈B
+Then g + u + b = 1. It therefore suffices to prove g > 1 − 1/r.
+      Define the normalized slack quantities:
+                                                                                            
+                       X                       X                                   3
+                   H=      pi pj hr (tij ), M=   pi pj t4ij −                                      .
+                          i,j                                   i,j
+                                                                               r(r + 2)
+By Lemma B.1 and the nonnegativity of the remaining terms, we know that
+                                                 H + ρr M ≤ E.
+In particular, H ≤ E and M ≤ 2E.
+      For every (i, j) ∈ B, we have tij < θ and |tij − α| > e/2. Hence (8) gives
+                                                           e2
+                                                   H≥         b,
+                                                           16
+and therefore
+                                                         16E
+(9)                                                 b≤       .
+                                                          e2
+      The quartic term controls the mass in U. On G, we have t4ij ≥ A. On U, we have
+t4ij ≥ θ4 . On B, we only use t4ij ≥ 0. Thus
+                                     M ≥ (A − c)g + (θ4 − c)u − cb.
+Using g = 1 − u − b, we obtain
+                                              M ≥ A − c + Du − Ab.
+Consequently,                                         
+                                    c−A M            A
+                       1−g =u+b≤           +   + 1+      b
+                                       D     D       D
+                                     2    5E 17E
+                                 ≤      +    + 2 ,
+                                    3r     2   e
+where we used D ≥ 4/5, A/D ≤ 1/16, M ≤ 2E, (c − A)/D ≤ 2/(3r), and (9). Since
+E < e2 /(128r) and e < 1,
+                                              
+                                  2     5    17 1   1
+                          1−g <     +      +       < .
+                                  3 256 128 r       r
+                    GRAPH EIGENVALUES AND PROJECTION CONSTANTS                             25
+
+Hence g > 1 − 1/r. Because every unordered edge of H contributes the two ordered pairs
+(i, j) and (j, i),                       X
+                                 g=2           pi pj .
+                                          {i,j}∈E(H)
+                                                                                           □
+
+   The following weighted form of Turán’s theorem follows from the Motzkin–Straus
+theorem [MS65]. See also [Tal02, Theorem 1.1].
+Lemma B.6 ([MS65]). Let H P   be a finite simple graph with vertex set I, and let (pi )i∈I be
+nonnegative weights satisfying i∈I pi = 1. If H is Kr+1 -free, then
+                                     X                 1
+                                2           pi pj ≤ 1 − .
+                                                       r
+                                   {i,j}∈E(H)
+
+Proof of Theorem 4.6. Fix a rank-r orthogonal projection Q ∈ Rn×n , and set ∆ :=
+βr n − ∥Q∥1 . Set e := ηr /r, and suppose for contradiction that ∆ < rn/(2(2r)4r+8 ). By
+(7),
+                               e2               1              r
+                                     =        5     4r+2
+                                                         =           .
+                             128r         128r (2r)        2(2r)4r+8
+Thus ∆ < e2 n/(128r). Hence
+                                                               e2
+                            X                                    
+                       2
+                      C ≥         ci cj tij = ∥Q∥1 > βr −            n > n.
+                             i,j
+                                                             128r
+                                                           √
+Here the last inequality uses βr − 1 = (r − 1)/(1 + r + 2) > 1/2 and e < 1. Therefore
+                                  ∆     e2 n       e2
+                                     <          <      .
+                                  C2   128r C 2   128r
+   Let H be the weighted graph from Lemma B.5, with vertex weights pi := ci /C for
+i ∈ I+ . That lemma gives
+                                  X              1
+                             2        pi pj > 1 − .
+                                                 r
+                                   {i,j}∈E(H)
+Applying the contrapositive of Lemma B.6, we conclude that H contains a copy of Kr+1 .
+Hence there exist distinct indices i1 , . . . , ir+1 such that
+                                                e     ηr   ηr
+                       ||⟨uia , uib ⟩| − α| ≤ =          <     (a ̸= b).
+                                                2    2r    r
+Taking ε = e/2 contradicts Corollary B.4.
+   We therefore have
+                                               r
+                                     ∆≥              n.
+                                           2(2r)4r+8
+Since ∆ = βr n − ∥Q∥1 , it follows that
+                                                √                
+                                   r            r+ r+2         r
+              ∥Q∥1 ≤ βr −                  n=      √     −            n.
+                               2(2r)4r+8        1 + r + 2 2(2r)4r+8
+Finally, taking the maximum over all rank-r projections of each order n, and then the
+supremum over n ≥ r, gives
+                                          √
+                                      r+ r+2          r
+                             γ(r) ≤       √      −        .
+                                      1 + r + 2 2(2r)4r+8
+                                                                                   □
+26              VARUN SIVASHANKAR, QUANYU TANG, AND TANAY WAKHARE
+
+Remark B.7. The explicit improvement term in Theorem 4.6 is intentionally crude. The
+loss comes mainly from the simple estimate |λi | ≤ r inPthe Seidel gap.     P If one instead
+optimizes that root-separation step using the identities i λi = 0 and i λ2i = r(r + 1),
+then one can take ηr of order (2r)−(r+1) . Since the final gap produced by the argument is
+of size ηr2 /r3 , this would give an improvement of order (2r)−(2r+5) . We do not pursue this
+optimization here, since the resulting constant is still not expected to be sharp and the
+cruder estimate keeps the proof short.
+
+                      Appendix C. Concrete weighted cores
+
+    We spell out the first two examples with nonuniform weights used in Table 1. In each
+example, Pthe sign core B and weights p define Kp = Dp BDp . The projection-side value is
+ΦB (p) = rj=1 λj (Kp ), while the doubled graph construction gives the graph lower bound
+λr (Kp )/2 after taking integer blowups with proportions tending to p. The ancillary files
+contain the full cores and a verification script for the displayed values.
+   For r = 4, the finite-type extraction gives an 11-vertex core with an 8 + 1 + 2 weight
+pattern. The numerical optimization produced this pattern. It was not imposed. The
+projection-side value below is lower-bound evidence for γ(4), and we do not know whether
+the construction gap between it and the graph value persists at the extremal values. Let
+                  v = (1, 1, 1, −1, −1, −1, −1, 1)⊤ ,        18 = (1, . . . , 1)⊤ ,
+and                                            
+                         1  1  1  1 1 −1 −1 −1
+                       1
+                           1 −1 −1 1 −1 1   1 
+                        1 −1 1  1  −1 1  −1 1  
+                                               
+                        1 −1 1  1   1  1 −1 −1
+                     R=
+                                               .
+                        1  1 −1 1   1 −1  1 −1 
+                                                
+                       −1 −1 1   1 −1 1   1  1
+                                               
+                       −1 1 −1 −1 1   1   1  1
+                         −1 1  1 −1 −1 1   1  1
+Then
+                      
+            R −18 v −v
+         −1⊤ 8 1 1  1
+       B=
+          v⊤
+                       ,                    p = (a, . . . , a, b, c, c),   8a + b + 2c = 1.
+                1 1 −1
+           −v ⊤ 1 −1 1
+The projection-side weights found numerically are
+          aQ ≈ 0.0978456601,        bQ ≈ 0.1072573795,             cQ ≈ 0.0549886699,
+giving ΦB (p) ≈ 1.8500840104. On the graph side, the following exact weights equalize the
+four positive eigenvalues of Kp :
+                             √                     √                      √
+                   1145 − 69 2           835 + 284 2            471 + 134 2
+             aG =                 , bG =               , cG =                ,
+                       10937                 10937                  10937
+and hence                                  √
+                                1007 + 1076 2
+                          c5 ≥                  ≈ 0.2312054305.
+                                     10937
+   For r = 5, the construction of Deręgowska, Fickus, Foucart, and Lewandowska [DFFL22]
+has a 10+6 structure: a 10-vector equiangular tight frame in R5 and a 6-vector equiangular
+tight frame in R5 , arranged in a mutually unbiased way. The full 16 × 16 switched sign
+                      GRAPH EIGENVALUES AND PROJECTION CONSTANTS                                    27
+
+core used for the computation appears as r5_dffl_10_plus_6 in the ancillary data. The
+6-vector piece receives total weight p2 , and the 10-vector piece receives total weight q 2 ,
+where                                  √                      √
+                                3(8 −    5)            35 + 3   5
+                          p2 =              ,     q2 =            ,
+                                    59                     59
+so the individual class weights are p2 /6 and q 2 /10. The projection-side value is
+                                                   √
+                                          5(11 + 6 5)
+                                    δ=                 ,
+                                                59
+and the doubled graph construction gives
+                                              √
+                                δ     11 + 6 5
+                          c6 ≥     =              ≈ 0.2069187107.
+                               10        118
+In this case, the numerical search produces equal lower bounds for the graph eigenvalue
+constant and the projection constant after the natural scaling by 2r = 10.
+
+                                           References
+[AAA+ 26] S. Agarwal, C. Antley, J. Aulenbacher, G. Brooks, I. Gonzalez, L. Hawranick, W. Linz, L. Lu,
+          and A. Williams, Generalized Nordhaus–Gaddum inequalities for eigenvalues, arXiv preprint
+          arXiv:2607.15941 (2026).
+[Bas19]   G. Basso, Computation of maximal projection constants, Journal of Functional Analysis 277
+          (2019), no. 10, 3560–3585.
+[BC20]    B. Bukh and C. Cox, Nearly orthogonal vectors and small antipodal spherical codes, Israel
+          Journal of Mathematics 238 (2020), no. 1, 359–388.
+[BHP01] R. Baker, G. Harman, and J. Pintz, The difference between consecutive primes, ii, Proceedings
+          of the London Mathematical Society 83 (2001), no. 3, 532–562.
+[CKM+ 17] H. Cohn, A. Kumar, S. Miller, D. Radchenko, and M. Viazovska, The sphere packing problem
+          in dimension 24, Annals of mathematics 185 (2017), no. 3, 1017–1033.
+[CL09]    B. L. Chalmers and G. Lewicki, Three-dimensional subspace of ℓ5∞ with maximal projection
+          constant, Journal of Functional Analysis 257 (2009), no. 2, 553–592.
+[CL10]            , A proof of the Grünbaum conjecture, Studia Mathematica 200 (2010), no. 2, 103–129.
+[DFFL22] B. Deręgowska, M. Fickus, S. Foucart, and B. Lewandowska, On the value of the fifth maximal
+          projection constant, Journal of Functional Analysis 283 (2022), no. 10, 109634.
+[DGS77] P. Delsarte, J. M. Goethals, and J. J. Seidel, Spherical codes and designs, Geometriae Dedicata
+          6 (1977), no. 3, 363–388.
+[DL23]    B. Deręgowska and B. Lewandowska, A simple proof of the Grünbaum conjecture, Journal of
+          Functional Analysis 285 (2023), no. 2, 109950.
+[EMNA08] J. B. Ebrahimi, B. Mohar, V. Nikiforov, and A. S. Ahmady, On the sum of two largest
+          eigenvalues of a symmetric matrix, Linear Algebra and its Applications 429 (2008), no. 11–12,
+          2781–2787.
+[FS17]    S. Foucart and L. Skrzypek, On maximal relative projection constants, Journal of Mathematical
+          Analysis and Applications 447 (2017), no. 1, 309–328.
+[GH92]    C. D. Godsil and A. D. Hensel, Distance regular covers of the complete graph, Journal of
+          Combinatorial Theory, Series B 56 (1992), no. 2, 205–238.
+[Gil18]   N. Gillespie, Equiangular lines, incoherent sets and quasi-symmetric designs, arXiv preprint
+          arXiv:1809.05739 (2018).
+[Grü60]   B. Grünbaum, Projection constants, Transactions of the American Mathematical Society 95
+          (1960), no. 3, 451–465.
+[HJ12]    Roger A. Horn and Charles R. Johnson, Matrix analysis, 2 ed., Cambridge University Press,
+          2012.
+[Hon88]   Y. Hong, Bounds of eigenvalues of a graph, Acta Mathematicae Applicatae Sinica 4 (1988),
+          no. 2, 165–168.
+[Hon93]           , Bounds of eigenvalues of graphs, Discrete Mathematics 123 (1993), no. 1–3, 65–74.
+28                VARUN SIVASHANKAR, QUANYU TANG, AND TANAY WAKHARE
+
+[KLM+ 26] H. Kumar, L. Liu, H. Monterde, S. Pragada, and M. Tait, Maximum spectral sum of graphs,
+          arXiv preprint arXiv:2604.00512 (2026).
+[Kob25]   T. Kobos, Spaces with the maximal projection constant revisited, 2025.
+[KTJ94]   H. König and N. Tomczak-Jaegermann, Norms of minimal projections, Journal of Functional
+          Analysis 119 (1994), no. 2, 253–280.
+[KTJ03]           , Spaces with maximal projection constants, Studia Mathematica 159 (2003), no. 3,
+          357–372.
+[Li25]    S. Li, Strengthened upper bound on the third eigenvalue of graphs, arXiv preprint
+          arXiv:2501.07494 (2025).
+[Lin23]   W. Linz, Improved lower bounds on the extrema of eigenvalues of graphs, Graphs and
+          Combinatorics 39 (2023), no. 4, 82.
+[LL26]    G. Leonida and S. Li, On graphs with large third eigenvalue, Linear Algebra and its Applications
+          741 (2026), 66–96.
+[LS73]    P. W. H. Lemmens and J. J. Seidel, Equiangular lines, Journal of Algebra 24 (1973), no. 3,
+          494–512.
+[Moh09]   B. Mohar, On the sum of k largest eigenvalues of graphs and symmetric matrices, Journal of
+          Combinatorial Theory, Series B 99 (2009), no. 2, 306–313.
+[MS65]    T. S. Motzkin and E. G. Straus, Maxima for graphs and a new proof of a theorem of Turán,
+          Canadian Journal of Mathematics 17 (1965), 533–540.
+[Nik15]   V. Nikiforov, Extrema of graph eigenvalues, Linear Algebra and its Applications 482 (2015),
+          158–190.
+[Pow89]   D. L. Powers, Bounds on graph eigenvalues, Linear Algebra and its Applications 117 (1989),
+          1–6.
+[Sch42]   I. J. Schoenberg, Positive definite functions on spheres, Duke Mathematical Journal 9 (1942),
+          no. 1, 96–108.
+[Sei76]   J. J. Seidel, A survey of two-graphs, Colloquio Internazionale sulle Teorie Combinatorie (Rome,
+          1973), Tomo I (Rome), Atti dei Convegni Lincei, vol. 17, Accademia Nazionale dei Lincei,
+          1976, pp. 481–511.
+[SW71]    E. Stein and G. Weiss, Introduction to fourier analysis on euclidean spaces, vol. 1, Princeton
+          university press, 1971.
+[Tal02]   J. M. Talbot, Lagrangians of hypergraphs, Combinatorics, Probability and Computing 11
+          (2002), no. 2, 199–216.
+[Tay77]   D. E. Taylor, Regular 2-graphs, Proceedings of the London Mathematical Society 35 (1977),
+          no. 2, 257–274.
+[Via17]   M. Viazovska, The sphere packing problem in dimension 8, Annals of mathematics (2017),
+          991–1015.
+
+     Department of Mathematics, Princeton University, Princeton, New Jersey, USA
+     Email address: varunsiva@princeton.edu
+
+  School of Mathematical Sciences, University of Science and Technology of China,
+Hefei 230026, P. R. China
+     Email address: tangquanyu827@gmail.com
+
+   Department of Electrical Engineering and Computer Science, Massachusetts Institute
+of Technology, Cambridge, Massachusetts, USA
+   MathVision AI
+     Email address: tanay@mathvision.ai
+
