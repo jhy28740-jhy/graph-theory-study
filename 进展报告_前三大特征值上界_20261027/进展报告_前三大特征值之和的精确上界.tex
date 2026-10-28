@@ -728,6 +728,72 @@ P6 & hub--cyc $-$ 距 2$^+$ & $1.251351066898$ & $+0.030217$ \\
 \textbf{在数值上闭合、在单条目类上局部认证}；把它做成全局证明是 W1 的剩余工作，
 与 W2 一起构成主线的两个缺口。
 
+\subsection{W1-全局的结构归约与认证缺口}\label{sec:w1global}
+
+第~\ref{sec:wallcert} 节把三类腔面的 argmax 认证为\emph{局部}最大；把它们升级为\emph{全局}上界
+（记作 W1-全局）是主线的两个缺口之一。本子节先给一条把问题\textbf{降维}的结构定理，
+再诚实交代认证为何仍未完成。
+
+\begin{theorem}[腔面全局上界的球面归约，已证]\label{thm:wallreduce}
+设 $\Sigma\in\{0,1\}^{6\times6}$ 为对称掩码、对角全为 $1$。则上界函数
+$F_\Sigma(X)=\lambda_{\max}(\Sigma\odot\Pi(X))$ 在整张图表上的最大值（因图表是 $\mathrm{Gr}(3,6)$
+的稠密开胞腔、$F_\Sigma$ 连续、$\mathrm{Gr}(3,6)$ 紧，故等于整个 Grassmannian 上的最大值）满足
+\[
+\max_{P\in\mathrm{Gr}(3,6)}\lambda_{\max}(\Sigma\odot P)\;=\;\max_{\|v\|=1}\Lam_3\bigl(\Sigma\odot vv^\top\bigr)
+\;=\;\max_{v\in S^5}\Lam_3\bigl(D_v\Sigma D_v\bigr),\qquad D_v=\mathrm{diag}(v),
+\]
+其中 $\Lam_3$ 为三个最大特征值之和。
+\end{theorem}
+
+\begin{proof}
+$\lambda_{\max}(\Sigma\odot P)=\max_{\|v\|=1}v^\top(\Sigma\odot P)v=\max_{\|v\|=1}\langle\Sigma\odot vv^\top,P\rangle$，
+故 $\max_P\lambda_{\max}(\Sigma\odot P)=\max_{\|v\|=1}\max_{P\in\mathrm{Gr}}\langle\Sigma\odot vv^\top,P\rangle
+=\max_{\|v\|=1}\Lam_3(\Sigma\odot vv^\top)$，末步用 Ky Fan 极大化 $\max_{P\in\mathrm{Gr}(3,6)}\langle C,P\rangle=\Lam_3(C)$；
+再由 $(\Sigma\odot vv^\top)_{ij}=\Sigma_{ij}v_iv_j=(D_v\Sigma D_v)_{ij}$ 得第二式。
+\end{proof}
+
+于是 W1-全局化为一个\textbf{五维球面}上的显式特征值和问题。两个直接推论：
+\emph{(i)}（迹恒等式）因 $\Sigma$ 对角全 $1$，$\mathrm{tr}(D_v\Sigma D_v)=\|v\|^2=1$，故
+$\Lam_3(D_v\Sigma D_v)=1+\Lam_3(-D_v\Sigma D_v)$，目标值 $>1$ 当且仅当 $D_v\Sigma D_v$ 有负谱；
+\emph{(ii)}（鲁棒 LMI 形式）由 Ky Fan 对偶，
+$\max_{v\in S^5}\Lam_3(D_v\Sigma D_v)\le t\iff \Sigma\odot W\preceq tI\ \ \forall W\in\mathcal S$，
+其中 $\mathcal S=\{W:0\preceq W\preceq I,\ \mathrm{tr}W=3\}$ 是秩三投影的凸包（一个谱面体）。
+即 W1-全局等价于一条\textbf{鲁棒线性矩阵不等式}在 $\mathcal S$ 上成立，目标 $t=\rho_0$。
+
+\begin{proposition}[临界点的自洽刻画，已证]\label{prop:w1kkt}
+在 $g(v)=\Lam_3(D_v\Sigma D_v)$ 的光滑点（前三特征值互异处）有 $\nabla g(v)=2(\Sigma\odot P(v))v$，
+其中 $P(v)$ 为 $D_v\Sigma D_v$ 的前三特征投影。故 $v^*\in S^5$ 是临界点当且仅当
+$(\Sigma\odot P^*)v^*=g(v^*)\,v^*$ 且 $P^*$ 是 $D_{v^*}\Sigma D_{v^*}$ 的前三特征投影——一条自洽特征方程。
+\end{proposition}
+
+\begin{remark}[为什么「松弛成 SDP」没用（否定性引理）]\label{rmk:tight}
+最自然的凸化是把秩一约束 $Z=vv^\top$ 松弛为 $Z\succeq0,\ \mathrm{tr}Z=1$，转而求 $\max\Lam_3(\Sigma\odot Z)$。
+但 $Z\mapsto\Lam_3(\Sigma\odot Z)$ 是\emph{凸}函数（线性映射复合凸的 $\Lam_3$），
+而 $\{Z\succeq0,\ \mathrm{tr}Z=1\}$ 的极点恰是秩一投影，故凸函数在紧凸集上的最大仍在极点达到：
+$\max_{Z\succeq0,\,\mathrm{tr}Z=1}\Lam_3(\Sigma\odot Z)=\max_{\|v\|=1}\Lam_3(\Sigma\odot vv^\top)$。
+松弛\textbf{零对偶间隙}，不可能靠它得到 $<\rho_0$ 的上界。同理，双线性形式
+$\max\langle\Sigma\odot vv^\top,W\rangle$ 在 $S^5\times\mathcal S$ 之积上的极大也在双方极点
+（秩一 $vv^\top$、秩三 $P$）达到，本质非凸。这就把 W1-全局的认证逼到\textbf{必须直面非凸性}：
+要么穷举命题~\ref{prop:w1kkt} 的全部临界点并区间认证，要么给鲁棒 LMI（推论 ii）构造矩--SOS（Lasserre）证书。
+二者都是明确、有限的计算，但都不是初等的。
+\end{remark}
+
+\paragraph{数值确认与否证扫描}
+定理~\ref{thm:wallreduce} 的两条独立实现（$9$ 维图表的 Nelder--Mead/Powell 与 $5$ 维球面同法）
+给出\emph{逐位相同}的最大值：class1 $1.254642464407$、class2 $1.236504556084$、class3 $1.256547360473$
+（差 $\le2.2\times10^{-16}$），确认归约无误。球面上 $2000$ 次投影梯度上升（解析梯度 $2(\Sigma\odot P)v$）无一超过 $\rho_0$；
+$4000$ 个非秩一混合 $Z$（$\mathrm{tr}Z=1$）的 $\Lam_3(\Sigma\odot Z)$ 亦全部 $\le$ 秩一最大值
+（$1.171/1.158/1.174$ 对 $1.255/1.237/1.257$），印证注~\ref{rmk:tight}。三类 argmax 满足
+命题~\ref{prop:w1kkt} 的自洽方程（残差 $\sim10^{-7}$），其 $D_{v^*}\Sigma D_{v^*}$ 的前三特征值为
+$(0.695,0.283,0.277)$、$(0.799,0.266,0.172)$、$(0.786,0.262,0.209)$；二、三特征值近简并，
+解释了全局最大盆地的狭窄（$2000$ 次随机上升仅 $1\sim18$ 次命中）。
+
+\textbf{诚实交代}：本子节\emph{证明}了归约（定理~\ref{thm:wallreduce}、命题~\ref{prop:w1kkt}、注~\ref{rmk:tight}），
+但\emph{没有}给出 W1-全局的完整认证——即尚未\emph{证明} $\max_{v\in S^5}\Lam_3(D_v\Sigma D_v)<\rho_0$，
+目前只有强数值证据（两法逐位一致 + 否证扫描干净 + 局部认证）。缺口已从「任意图的全局最优」精确收缩为
+「一个五维球面上显式特征值和的全局上界」，认证路径（临界点穷举 + 区间认证，或鲁棒 LMI 的矩--SOS 证书）明确但尚未执行。
+脚本见 \texttt{证书\_腔面全局归约.py}。
+
 \subsection{远腔反例扫描：对猜想 A1$'$ 的否证性体检}\label{sec:scan}
 
 腔面程序（第~\ref{sec:walls} 节）只覆盖与冠军模式相差一两个条目的近腔；
@@ -1464,7 +1530,7 @@ Hessian 在对称轨道（$D_5$ 与 $O(2)$ 的商）横向上的负定性可用�
 我们\textbf{没有}改进 $\Lam_3(G)\le\Phi n-3$ 这条无条件纪录，缺口 $\Phi-\rho_0=0.0274488$ 一寸未动；
 现役的最好上界仍然属于 \STW。猜想~\ref{conj:A1}（即 $c_3^{\Sigma}=\rho_0$）\textbf{未证}。
 具体地，第~\ref{sec:assemble} 节条件性主定理~\ref{thm:assemble} 的两个前提——
-W1-全局（每类腔面上界函数的全局最大值 $<\rho_0$，目前仅有三类单条目 argmax 的\emph{局部}认证）
+W1-全局（每类腔面上界函数的全局最大值 $<\rho_0$；第~\ref{sec:w1global} 节已把它\emph{证明}归约为五维球面上 $\Lam_3(D_v\Sigma D_v)$ 的全局上界并给出鲁棒 LMI 等价形式，但完整认证——临界点穷举或矩--SOS 证书——仍\emph{未执行}，目前只有两法逐位一致的数值与干净的否证扫描）
 与 W2（远腔度序列型上界，目前仅有否证性数值扫描）——\textbf{均未证}；
 定理~\ref{thm:w3} 的近段稳定性只在半径 $R=0.024942655$ 的冠军腔内邻域成立，\emph{不是}全局上界。
 支撑界 (2a)（极值测度的原子数 $\le6$）\textbf{未证}，目前无条件的只有 $N\le20$
@@ -1544,6 +1610,7 @@ $n\ge8$ 的搜索结果与已证的复制单调性直接矛盾，属于优化伪
 \texttt{证书\_三阶稳定性.py} & 定理~\ref{thm:w3} 的三阶导张量、$C_3$、近段半径 $R$ 与有限差复核 & 本报告 \\
 \texttt{证书\_腔面局部认证.py} & 第~\ref{sec:wallcert} 节三类单条目 argmax 的 Weyl 局部认证 & 本报告 \\
 \texttt{证书\_双条目模式扫描.py} & 第~\ref{sec:wallcert} 节 P1--P6 双条目模式上界（数值） & 本报告 \\
+\texttt{证书\_腔面全局归约.py} & 定理~\ref{thm:wallreduce} 球面归约、KKT、紧致松弛否定与否证扫描的复核 & 本报告 \\
 \bottomrule
 \end{longtable}}
 
