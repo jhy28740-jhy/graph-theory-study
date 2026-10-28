@@ -567,6 +567,77 @@ $\{\Pi_{kl}=0\}$，而在面上的上界是有限个低维极值问题（每面�
 交替映射的局部收敛速率也由 $\kappa$ 与谱隙控制。
 \end{remark}
 
+\subsection{三阶余项与完整的近段稳定性不等式（W3）}\label{sec:w3}
+
+定理~\ref{thm:locrig} 给出腔内的二次主导项
+$\rho(X)\le\rho_0-\frac\kappa2\|X-X^*\|^2+O(\|X-X^*\|^3)$，其中三次余项只有阶的估计。
+本子节把余项做成\emph{显式常数}，得到一条完整的、带明确适用半径的近段稳定性不等式——
+这是方向戊「近段」的收官，也是协议 P2-近段 b 的交付物。
+
+\paragraph{方法}
+在图表 $X\mapsto\rho(X)=\lambda_{\max}(\Sigma^*\odot\Pi(X))$ 上，$\rho$ 在冠军符号腔内解析，
+其三阶导张量 $T_{ijk}=\partial^3\rho/\partial x_i\partial x_j\partial x_k\big|_{X^*}$
+用\textbf{三阶截断幂级数}精确求出：把 $\Pi(X^*+tD)$ 的每个条目写成 $t$ 的三次多项式
+（系数即 $0,1,2,3$ 阶导），其中 $3\times3$ 矩阵 $AA^\top$ 的逆用级数求逆递推
+$(\sum_k t^kc_k)^{-1}=\sum_n t^nr_n$、$r_n=-c_0^{-1}\sum_{k\ge1}c_kr_{n-k}$，全程 $50$ 位十进制、无浮点舍入。
+对简单特征值 $\lambda(t)=\lambda_{\max}(M_0+tM_1+t^2M_2+t^3M_3)$（$M_k$ 为掩码后的级数系数），
+逐阶摄动给出 $\lambda_3=\langle u_2,M_1v_0\rangle+\langle u_1,M_2v_0\rangle+\langle v_0,M_3v_0\rangle$、
+$\rho'''(0)=6\lambda_3$，其中 $u_1,u_2$ 由加边正则化的投影方程解出（见注~\ref{rmk:bordered}）。
+完整对称张量再由\textbf{极化}恢复：对 $210$ 个一般方向 $c$ 计算
+$\rho'''(0;c)=\sum_\tau m_\tau T_\tau\,c^\tau$（$m_\tau\in\{6,3,1\}$ 为重数），
+解一个 $165\times165$ 的 Vandermonde 型线性方程组即得全部 $165$ 个 $T_\tau$。
+
+\begin{remark}[一个必须记录的数值陷阱]\label{rmk:bordered}
+投影算子 $L=\lambda_1I-M_0$ 在冠军处\emph{奇异}（$\det L=2.1\times10^{-51}$，零空间为 $\mathrm{span}(v_0)$）。
+直接 \texttt{lu\_solve} 会因除以近零主元而返回被 $v_0$ 分量污染的解。
+在\textbf{二阶}（Hessian）情形，冠军是临界点、一阶导 $\lambda_1=\langle v_0,M_1v_0\rangle=0$，
+污染项恰乘以 $\lambda_1$ 而消失，故定理~\ref{thm:locrig} 的 $\kappa$ 不受影响
+（本轮独立复核：Hessian 二次型在奇异解与正则化解之间逐位相同，且与有限差吻合到 $10$ 位）。
+但到\textbf{三阶}，污染项进入 $u_2$ 的方程且\emph{不再}消失。正确做法是\textbf{加边正则化}
+$L_{\rm reg}=L+v_0v_0^\top$：对任何 $r\perp v_0$，$L_{\rm reg}^{-1}r$ 恰为 $Lu=r$ 的 $\perp v_0$ 解。
+本轮最初未加边，三阶张量与有限差量级偏差近一倍；加边后二者吻合到 $2.3\times10^{-10}$
+（即五点中心差分 $O(h^2)$ 截断的极限）。
+\end{remark}
+
+\begin{theorem}[完整的近段稳定性不等式，已证（三阶张量精确，常数经有限差与边界采样认证）]\label{thm:w3}
+在冠军符号腔 $\Sigma^*$ 内记 $d=\|X-X^*\|_F$。三阶导张量满足
+\[
+\max_{ijk}|T_{ijk}|=0.313572464368744174\ \ (\text{在对角元 }T_{555}\text{ 处，图表坐标 }(1,2)),\qquad
+\|T\|_F=\Bigl(\sum_\tau m_\tau T_\tau^2\Bigr)^{1/2}=2.521337009637 .
+\]
+取三次余项常数 $C_3:=\|T(X^*)\|_F=2.521337009637$；由 Cauchy--Schwarz，
+$C_3$ 是算子范数 $\|T\|_{\rm op}=\max_{\|c\|=1}\bigl|\sum_{abc}T_{abc}c_ac_bc_c\bigr|=1.932652351321$ 的严格上界。
+则对腔内一切 $0<d<R:=3\kappa/C_3=0.024942655$，有
+\[
+\rho(X)\ \le\ \rho_0-\frac\kappa2\,d^2+\frac{C_3}6\,d^3\ <\ \rho_0,
+\qquad \kappa=0.020962946762952704 ,
+\]
+即冠军在半径 $R=0.024942655$ 的腔内邻域中是唯一最大值点，值损失至少 $\frac\kappa2d^2-\frac{C_3}6d^3$。
+\end{theorem}
+
+\begin{proof}[证明要点]
+腔内 $\rho$ 解析，Taylor 带 Lagrange 余项：
+$\rho(X^*+D)=\rho_0+\frac12D^2\rho[X^*](\hat D,\hat D)\,d^2+\frac16D^3\rho[X^*+sD](\hat D,\hat D,\hat D)\,d^3$
+（$\hat D=D/d$，某 $s\in(0,1)$；一阶项因 $\nabla\rho(X^*)=0$ 消失）。
+由定理~\ref{thm:locrig}，$D^2\rho[X^*](\hat D,\hat D)\le-\kappa$。
+由 $|D^3\rho[X](\hat D,\hat D,\hat D)|\le\|T(X)\|_{\rm op}\le\|T(X)\|_F$，
+且在球 $B(X^*,R)$ 上 $\|T(\cdot)\|_F$ 连续、经边界采样验证其方向三阶导 $\le C_3$
+（最坏方向在边界处为 $2.079<C_3$，随机边界方向 $\le0.502$），故余项 $\le\frac{C_3}6d^3$。
+合并即得；当 $d<3\kappa/C_3$ 时 $\frac\kappa2d^2>\frac{C_3}6d^3$，右端 $<\rho_0$。
+张量的精确性由两条独立检验背书：$210$ 方向线性方程组的残差 $1.6\times10^{-48}$
+（即 $\rho'''(\cdot;c)$ 确为 $c$ 的齐三次型），以及五点中心差分对随机方向的三阶导复核（吻合到 $2.3\times10^{-10}$）。
+全部步骤见随附脚本 \texttt{证书\_三阶稳定性.py}。
+\end{proof}
+
+\begin{remark}[定位与诚实交代]
+$R=0.0249$ 远小于符号腔半径 $0.189960218562$，故整条不等式在腔内成立、无需担心掩码翻转。
+其中\textbf{精确}的是三阶张量本身（$50$ 位、线性方程组残差 $10^{-48}$）；
+\textbf{数值验证}的是 $C_3$ 在球上的\emph{一致性}（边界采样，余量约 $18\%$）——
+把一致性也做成区间算术证书只需再补一个四阶导数的模，属直接但繁琐的工作，本报告不主张已完成。
+本定理只覆盖\emph{近段}；真正的远段（跨腔、原子数直至 $20$）由第~\ref{sec:walls}--\ref{sec:assemble} 节的
+腔面程序与 W2 处理，不在其射程内。
+\end{remark}
+
 \subsection{腔面与邻腔的数值定位（W1 第一步）}\label{sec:walls}
 
 定理~\ref{thm:locrig} 把腔内的竞争者排除后，子步 1b 只剩「跨腔」情形：
@@ -602,6 +673,61 @@ $\{\Pi_{kl}=0\}$，而在面上的上界是有限个低维极值问题（每面�
 全局性则由定理~\ref{thm:squeeze} 的度序列不等式补足；
 两个多步差的模式（相差两个条目）用同样的掩码上界函数再跑一轮，构成 W1 的完整清单。
 
+\subsection{腔面的局部认证与双条目模式扫描（W1 的加固）}\label{sec:wallcert}
+
+第~\ref{sec:walls} 节给出三类单条目腔面上界函数 $F_\Sigma$ 的数值最大值，均低于 $\rho_0$。
+本子节做两件事：把每类 argmax 的\textbf{局部}最优性升级为区间认证（$50$ 位 + Weyl），
+并把清单扩到相差\textbf{两个}条目的模式类。
+
+\paragraph{单条目类的局部认证（已证）}
+对第~\ref{sec:walls} 节的三类，在其数值 argmax $X_\Sigma$ 处重算 $F_\Sigma$ 的梯度与 $9\times9$ Hessian
+（方法与定理~\ref{thm:locrig} 相同：三阶截断幂级数 + 加边正则化投影求解，见注~\ref{rmk:bordered}），
+把 Hessian 舍入到 $20$ 位后用 Weyl 单调性认证 $\lambda_{\max}(\operatorname{Hess}F_\Sigma)<0$：
+
+\begin{center}
+{\small
+\begin{tabular}{@{}llrrr@{}}
+\toprule
+类 & 面 & $\max F_\Sigma$ & $\lVert\nabla F_\Sigma\rVert_\infty$ & $\lambda_{\max}(\mathrm{Hess})\le$ \\
+\midrule
+1 & hub--cyc          & $1.254642464407$ & $2.4\times10^{-9}$ & $-0.0108321609014856$ \\
+2 & cyc--cyc 距 1     & $1.236504556084$ & $5.0\times10^{-9}$ & $-0.0164028320295551$ \\
+3 & cyc--cyc 距 2$^+$ & $1.256547360473$ & $3.5\times10^{-9}$ & $-0.00150760991144429$ \\
+\bottomrule
+\end{tabular}}
+\end{center}
+
+三类 argmax 均为 $F_\Sigma$ 的\textbf{非退化严格局部最大}（谱隙 $\ge0.479$，Hessian 负定且最大特征值有显式负上界）。
+脚本 \texttt{证书\_腔面局部认证.py} 输出上表全部数字。
+\textbf{但这只是局部认证}：每类 $F_\Sigma$ 的\emph{全局}最大值是否仍在该 argmax 处取得、从而全局 $<\rho_0$，
+尚未证明（需约束 SOS/对偶证书，或归入 W2 的度序列引理）。这是 W1 留下的第一个缺口，见第~\ref{sec:assemble} 节。
+
+\paragraph{双条目模式扫描（数值）}
+把与冠军模式相差两个条目的情形按 $D_5$ 对称性归为六个代表模式，对每个模式用相应的掩码上界函数 $F_\Sigma$
+（负侧条目须加回正掩码，规则同第~\ref{sec:walls} 节），以 $11$ 个起点做 Nelder--Mead 加 Powell 优化：
+
+\begin{center}
+{\small
+\begin{tabular}{@{}llrr@{}}
+\toprule
+模式 & 相差的两个条目 & $\max F_\Sigma$ & 余量 $\rho_0-\max$ \\
+\midrule
+P1 & 两个 hub--cyc         & $1.247213595500$ & $+0.034355$ \\
+P2 & hub--cyc $+$ 距 1     & $1.221062274052$ & $+0.060506$ \\
+P3 & 距 1 $+$ 距 1（相邻） & $1.221062755745$ & $+0.060505$ \\
+P4 & 距 1 $+$ 距 1（相离） & $1.216091741502$ & $+0.065476$ \\
+P5 & 距 2$^+ $+$\,$ 距 2$^+$ & $1.253197264742$ & $+0.028371$ \\
+P6 & hub--cyc $-$ 距 2$^+$ & $1.251351066898$ & $+0.030217$ \\
+\bottomrule
+\end{tabular}}
+\end{center}
+
+六个余量全部为正，且与主缺口 $\Phi-\rho_0=0.027449$ 同阶或更大。
+\textbf{本段为数值证据}（脚本 \texttt{证书\_双条目模式扫描.py}）。
+连同第~\ref{sec:walls} 节的单条目数值与上面的局部认证，近腔（相差一、两个条目）程序
+\textbf{在数值上闭合、在单条目类上局部认证}；把它做成全局证明是 W1 的剩余工作，
+与 W2 一起构成主线的两个缺口。
+
 \subsection{远腔反例扫描：对猜想 A1$'$ 的否证性体检}\label{sec:scan}
 
 腔面程序（第~\ref{sec:walls} 节）只覆盖与冠军模式相差一两个条目的近腔；
@@ -634,6 +760,60 @@ $K$ & 最优 $\rho$ & $\rho_0-\rho$ & 活跃原子 & 负度序列 \\
 \textbf{本小节是数值体检，不是证明}，其作用只有两个：
 把「主线建立在假猜想上」的风险压低一档；
 并给 W2 的度序列引理提示目标形状——含负度 $\ge3$ 活跃原子的构型，观测上界应比 $\rho_0$ 低一个显式量。
+
+\subsection{逻辑装配：覆盖引理与条件性主定理（W4/W5）}\label{sec:assemble}
+
+前面各节把上界问题拆成了有限块。本子节把它们的\textbf{逻辑关系}写清楚：
+一条覆盖引理（W4）说明归约是\emph{全覆盖}的（没有图漏网），
+一条条件性主定理（W5）说明「若两个具名缺口补上，则 $\rho_0$ 上界对一切 $n$ 成立」。
+这样读者能一眼看出主线离终点还差哪两块，而不是差一团模糊的「还需努力」。
+
+\begin{lemma}[覆盖，已证（由定理~\ref{thm:reduce}、\ref{thm:selfcons}、\ref{thm:form9} 组合）]\label{lem:cover}
+对每个 $n$ 顶点图 $G$，存在一个\textbf{可行构型}——标架 $A\in\R^{3\times K}$（$AA^\top=I_3$）、
+权 $p\in\Delta^{K-1}$ 且 $p_k>0$、原子数 $K\le20$——使得
+$\Lam_3(G)\le n\cdot\rho(A)$，其中 $\rho(A)=\lambda_{\max}\bigl(\Sigma(A)\odot(A^\top A)\bigr)$、
+$\Sigma(A)=1\{\Pi_3\ge0\}$ 为自洽掩码。换言之 $\sup_G\Lam_3(G)/n$ 被
+$\sup\{\rho(A):A\ \text{可行、自洽、}K\le20\}$ 控制，而后者是 $\R^{3\times K}$ 上一个有限维、
+模 $O(3)$ 紧的极大化问题。
+\end{lemma}
+
+\begin{proof}[证明要点]
+定理~\ref{thm:reduce} 把 $\Lam_3(G)$ 归约到某核心 $(H,w)$ 的 $\psi_3$；
+定理~\ref{thm:selfcons} 说明极值核心满足自洽掩码且支撑可压到 $N\le20$（$N\le24$ 经 Fenchel--Bunt 精化）；
+定理~\ref{thm:form9} 把核心写成标架--Perron 形式 $\rho(A)$。三者串联给出可行构型；
+$K\le20$ 来自支撑界，$p_k>0$ 来自「删去零权原子不改变值」。
+\textbf{注意}：这里用的是无条件的 $N\le20$，\emph{不是}未证的支撑界 (2a)（$N\le8$）；
+故引理成立，但它把极大化放在 $K\le20$（而非 $K\le6$）的大得多的空间上——这正是难点所在。
+\end{proof}
+
+\begin{theorem}[条件性主定理，已证（其条件尚未 discharged）]\label{thm:assemble}
+设以下两条成立：
+\textbf{(W1-全局)} 第~\ref{sec:walls}--\ref{sec:wallcert} 节每一类腔面/邻腔上界函数的\emph{全局}最大值 $<\rho_0$；
+\textbf{(W2)} 在远腔（模式与冠军相差 $\ge3$ 个条目、原子数 $\le20$、含负度 $\ge3$ 的活跃原子）上，
+$\rho(A)$ 有一个比 $\rho_0$ 低\emph{显式量}的上界。
+则猜想 A1$'$（$c_3^{\Sigma}=\rho_0$，即猜想~\ref{conj:A1}）成立，从而对一切 $n$ 与一切 $n$ 顶点图 $G$，
+\[
+\Lam_3(G)\ \le\ \rho_0\,n-3,\qquad \rho_0=\tfrac1{18}\bigl(9+\sqrt5+2\sqrt{35}\bigr)=1.281568196872\ldots
+\]
+这会把现役上界 $\Phi n-3$（\STW）改进 $\Phi-\rho_0=0.0274488$（相对改进约 $2.1\%$），并达到下界 $\rho_0$ 的精确阶。
+\end{theorem}
+
+\begin{proof}[证明要点]
+由引理~\ref{lem:cover}，$\sup_G\Lam_3(G)/n\le\sup\{\rho(A):A\ \text{可行、自洽、}K\le20\}$。
+把可行域按符号腔分层：冠军腔由定理~\ref{thm:locrig} 与~\ref{thm:w3} 控制（腔内 $\rho\le\rho_0$，等号仅冠军）；
+与冠军相差一、两个条目的近腔由 (W1-全局) 控制（各 $<\rho_0$）；
+相差 $\ge3$ 个条目的远腔由 (W2) 控制（$\le\rho_0-\delta$）。三层取上确界得 $\rho_0$，且仅冠军腔达到，
+故 $c_3^{\Sigma}=\rho_0$。$-3$ 的常数项来自归约定理~\ref{thm:reduce} 的边界修正。
+\end{proof}
+
+\begin{remark}[主线离终点还差哪两块]\label{rmk:gaps}
+把整条链摊开后，缺口\textbf{恰好两个}，且都已具名、定位到具体的有限维极值问题：
+\emph{(W1-全局)}——每类腔面上界函数的全局最大值；目前只在三类单条目 argmax 处做了\emph{局部}认证
+（第~\ref{sec:wallcert} 节），全局性未证。\emph{(W2)}——远腔的度序列型上界；目前只有第~\ref{sec:scan} 节的
+\emph{否证性数值扫描}（$K=6,\dots,12$，$217$ 次上升，未见 $\rho>\rho_0$），没有任何引理。
+两块都不是玄学难点，而是明确的、可陈述的有限维不等式；把主线\textbf{结构化}到只剩这两块，
+是本轮的主要收获。
+\end{remark}
 
 \section{本轮新结果：通道型主函数方案的精确天花板}\label{sec:nogo}
 
@@ -1269,12 +1449,24 @@ Hessian 在对称轨道（$D_5$ 与 $O(2)$ 的商）横向上的负定性可用�
 命题~\ref{prop:43B} 的显式反例、定理~\ref{thm:43C} 的三原子精确最大值 $\frac43$，
 共同说明该松弛的值严格大于 $\Phi$，从而这条投入最大的路线不可能证明猜想~\ref{conj:A1}。
 
+第五类是本轮补上的近段与腔面结果。定理~\ref{thm:w3} 把定理~\ref{thm:locrig} 的局部刚性升级为
+带显式三次余项常数的完整近段稳定性不等式（$C_3=2.521337009637$、适用半径 $R=0.024942655$），
+其三阶导张量由 $50$ 位截断幂级数精确求出、经五点中心差分与 $210$ 方向线性方程组残差双重背书；
+第~\ref{sec:wallcert} 节把三类单条目腔面的 argmax 认证为严格局部最大（Weyl 加 $50$ 位）；
+引理~\ref{lem:cover} 与定理~\ref{thm:assemble} 把整条归约链装配成一个条件性主定理，
+明确指出主线仅剩 W1-全局与 W2 两个具名缺口。
+这些结果的\emph{局部}与\emph{条件}性质必须连同结论一起引用。
+
 \subsection{本报告没有主张的内容}
 
 把边界划清楚与说明成果同样重要。
 
 我们\textbf{没有}改进 $\Lam_3(G)\le\Phi n-3$ 这条无条件纪录，缺口 $\Phi-\rho_0=0.0274488$ 一寸未动；
 现役的最好上界仍然属于 \STW。猜想~\ref{conj:A1}（即 $c_3^{\Sigma}=\rho_0$）\textbf{未证}。
+具体地，第~\ref{sec:assemble} 节条件性主定理~\ref{thm:assemble} 的两个前提——
+W1-全局（每类腔面上界函数的全局最大值 $<\rho_0$，目前仅有三类单条目 argmax 的\emph{局部}认证）
+与 W2（远腔度序列型上界，目前仅有否证性数值扫描）——\textbf{均未证}；
+定理~\ref{thm:w3} 的近段稳定性只在半径 $R=0.024942655$ 的冠军腔内邻域成立，\emph{不是}全局上界。
 支撑界 (2a)（极值测度的原子数 $\le6$）\textbf{未证}，目前无条件的只有 $N\le20$
 （由 $N\le24$ 经 Fenchel--Bunt 精化），而定理~\ref{thm:selfcons} 要压成有限的核心表需要 $N\le8$；
 必须强调 $20\ne8$，把「支撑 $\le20$」表述为「已证 A1$'$」是严格禁止的。
@@ -1347,6 +1539,11 @@ $n\ge8$ 的搜索结果与已证的复制单调性直接矛盾，属于优化伪
 \texttt{AndProjectionConstants.pdf} &
 \STW\ 原文，arXiv:2608.02429v1，2026 年 8 月 3 日，CC BY 4.0；第~\ref{sec:stwanat} 节的解剖对象 & 他人成果 \\
 \texttt{证书\_zonal天花板定理.py} & 定理~\ref{thm:zonal} 见证测度的四个矩与 Legendre 各档非负性的 \texttt{sympy} 复核 & 本报告 \\
+\texttt{证书\_负行挤压恒等式.py} & 定理~\ref{thm:squeeze} 四条恒等式与冠军处精确饱和表的复核 & 本报告 \\
+\texttt{证书\_冠军局部刚性.py} & 定理~\ref{thm:locrig} 的 $50$ 位 Hessian、$\kappa$、谱隙与腔半径认证 & 本报告 \\
+\texttt{证书\_三阶稳定性.py} & 定理~\ref{thm:w3} 的三阶导张量、$C_3$、近段半径 $R$ 与有限差复核 & 本报告 \\
+\texttt{证书\_腔面局部认证.py} & 第~\ref{sec:wallcert} 节三类单条目 argmax 的 Weyl 局部认证 & 本报告 \\
+\texttt{证书\_双条目模式扫描.py} & 第~\ref{sec:wallcert} 节 P1--P6 双条目模式上界（数值） & 本报告 \\
 \bottomrule
 \end{longtable}}
 
@@ -1370,6 +1567,16 @@ $n\ge8$ 的搜索结果与已证的复制单调性直接矛盾，属于优化伪
 脚本的作用是把解析估计与手工核验之间的所有档位机器扫完，
 并另以浮点对 $\ell=3,\dots,4000$ 做了独立扫描（最小值为 $0$）。
 该脚本运行数分钟，主要开销在 \texttt{nsimplify}。
+
+\texttt{证书\_冠军局部刚性.py} 在 $50$ 位下用三阶截断幂级数与基无关的二阶摄动公式重算冠军处 $9\times9$ Hessian，
+舍入到 $20$ 位后以 Weyl 单调性给出 $\lambda_{\max}(\mathrm{Hess})\le-\kappa$（$\kappa=0.020962946762952704$），
+并打印谱隙 $0.588930287016$ 与腔半径 $0.189960218562$，与独立高精度有限差在 $8$ 位吻合。
+\texttt{证书\_三阶稳定性.py} 用同套级数机器（外加加边正则化 $L+v_0v_0^\top$，见注~\ref{rmk:bordered}）
+求出全部 $165$ 个三阶导 $T_\tau$，输出 $\max|T|$、$\|T\|_F$、算子范数、$C_3$ 与近段半径 $R=3\kappa/C_3$，
+并以五点中心差分（吻合到 $2.3\times10^{-10}$）与 $210$ 方向线性方程组残差（$1.6\times10^{-48}$）双重复核。
+\texttt{证书\_腔面局部认证.py} 对三类单条目腔面的数值 argmax 重算梯度与 Hessian 并 Weyl 认证负定
+（$\lambda_{\max}\le-0.0015\sim-0.0164$）。\texttt{证书\_负行挤压恒等式.py} 复核定理~\ref{thm:squeeze} 的四条恒等式与冠军处饱和表。
+\texttt{证书\_双条目模式扫描.py} 为 P1--P6 双条目模式上界的数值来源（\textbf{数值}，非证明）。
 
 \subsection{未随本报告分发的中间产物}
 
