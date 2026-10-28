@@ -1,0 +1,409 @@
+[
+ {
+  "idx": 1,
+  "N": 6,
+  "g6": "EznW",
+  "deg": [
+   4,
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  "Omega": 1.333333333339988,
+  "F": 1.253197264742181,
+  "sc": 0,
+  "edges": 12,
+  "multipartite": true,
+  "sizes": [
+   2,
+   2,
+   2
+  ],
+  "C5": false,
+  "desc": "12E deg[4, 4, 4, 4, 4, 4] conn"
+ },
+ {
+  "idx": 6,
+  "N": 6,
+  "g6": "EtTg",
+  "deg": [
+   3,
+   3,
+   3,
+   3,
+   3,
+   3
+  ],
+  "Omega": 1.3333333333333053,
+  "F": 1.2513510668983827,
+  "sc": 0,
+  "edges": 9,
+  "multipartite": false,
+  "sizes": [],
+  "C5": false,
+  "desc": "9E deg[3, 3, 3, 3, 3, 3] conn"
+ },
+ {
+  "idx": 13,
+  "N": 6,
+  "g6": "Ep~o",
+  "deg": [
+   4,
+   4,
+   4,
+   4,
+   3,
+   3
+  ],
+  "Omega": 1.310919852808826,
+  "F": 1.2500000000000004,
+  "sc": 0,
+  "edges": 11,
+  "multipartite": false,
+  "sizes": [],
+  "C5": false,
+  "desc": "11E deg[4, 4, 4, 4, 3, 3] conn"
+ },
+ {
+  "idx": 10,
+  "N": 6,
+  "g6": "ErXw",
+  "deg": [
+   4,
+   4,
+   4,
+   3,
+   3,
+   2
+  ],
+  "Omega": 1.3096119617623285,
+  "F": 1.2500000000000007,
+  "sc": 0,
+  "edges": 10,
+  "multipartite": false,
+  "sizes": [],
+  "C5": false,
+  "desc": "10E deg[4, 4, 4, 3, 3, 2] conn"
+ },
+ {
+  "idx": 20,
+  "N": 6,
+  "g6": "EhdW",
+  "deg": [
+   3,
+   3,
+   3,
+   3,
+   2,
+   2
+  ],
+  "Omega": 1.3088899980702033,
+  "F": 1.2472135954999586,
+  "sc": 0,
+  "edges": 8,
+  "multipartite": false,
+  "sizes": [],
+  "C5": true,
+  "desc": "8E deg[3, 3, 3, 3, 2, 2] conn"
+ },
+ {
+  "idx": 19,
+  "N": 6,
+  "g6": "EzNG",
+  "deg": [
+   4,
+   4,
+   3,
+   3,
+   3,
+   3
+  ],
+  "Omega": 1.306671398215549,
+  "F": 1.2499999999999996,
+  "sc": 0,
+  "edges": 10,
+  "multipartite": false,
+  "sizes": [],
+  "C5": false,
+  "desc": "10E deg[4, 4, 3, 3, 3, 3] conn"
+ },
+ {
+  "idx": 4,
+  "N": 6,
+  "g6": "ElMg",
+  "deg": [
+   4,
+   3,
+   3,
+   3,
+   3,
+   2
+  ],
+  "Omega": 1.3065134068382038,
+  "F": 1.2513510668983834,
+  "sc": 0,
+  "edges": 9,
+  "multipartite": false,
+  "sizes": [],
+  "C5": false,
+  "desc": "9E deg[4, 3, 3, 3, 3, 2] conn"
+ },
+ {
+  "idx": 21,
+  "N": 6,
+  "g6": "EheO",
+  "deg": [
+   3,
+   3,
+   2,
+   2,
+   2,
+   2
+  ],
+  "Omega": 1.3016083070717688,
+  "F": 1.2472135954999586,
+  "sc": 0,
+  "edges": 7,
+  "multipartite": false,
+  "sizes": [],
+  "C5": true,
+  "desc": "7E deg[3, 3, 2, 2, 2, 2] conn"
+ },
+ {
+  "idx": 11,
+  "N": 6,
+  "g6": "EhUg",
+  "deg": [
+   3,
+   3,
+   3,
+   3,
+   2,
+   2
+  ],
+  "Omega": 1.2999999999999559,
+  "F": 1.2500000000000007,
+  "sc": 0,
+  "edges": 8,
+  "multipartite": false,
+  "sizes": [],
+  "C5": false,
+  "desc": "8E deg[3, 3, 3, 3, 2, 2] conn"
+ },
+ {
+  "idx": 2,
+  "N": 6,
+  "g6": "E}^G",
+  "deg": [
+   5,
+   4,
+   4,
+   3,
+   3,
+   3
+  ],
+  "Omega": 1.2989754222112555,
+  "F": 1.2531972647421807,
+  "sc": 0,
+  "edges": 11,
+  "multipartite": true,
+  "sizes": [
+   3,
+   2,
+   1
+  ],
+  "C5": false,
+  "desc": "11E deg[5, 4, 4, 3, 3, 3] conn"
+ },
+ {
+  "idx": 7,
+  "N": 6,
+  "g6": "Ele_",
+  "deg": [
+   4,
+   3,
+   3,
+   2,
+   2,
+   2
+  ],
+  "Omega": 1.2957775726517524,
+  "F": 1.2513510668983827,
+  "sc": 0,
+  "edges": 8,
+  "multipartite": false,
+  "sizes": [],
+  "C5": false,
+  "desc": "8E deg[4, 3, 3, 2, 2, 2] conn"
+ },
+ {
+  "idx": 5,
+  "N": 6,
+  "g6": "Exe_",
+  "deg": [
+   4,
+   4,
+   2,
+   2,
+   2,
+   2
+  ],
+  "Omega": 1.2952075932292166,
+  "F": 1.2513510668983834,
+  "sc": 0,
+  "edges": 8,
+  "multipartite": false,
+  "sizes": [],
+  "C5": false,
+  "desc": "8E deg[4, 4, 2, 2, 2, 2] conn"
+ },
+ {
+  "idx": 18,
+  "N": 6,
+  "g6": "EYOw",
+  "deg": [
+   3,
+   3,
+   3,
+   2,
+   2,
+   1
+  ],
+  "Omega": 1.2941176470593272,
+  "F": 1.2499999999999998,
+  "sc": 0,
+  "edges": 7,
+  "multipartite": false,
+  "sizes": [],
+  "C5": false,
+  "desc": "7E deg[3, 3, 3, 2, 2, 1] conn"
+ },
+ {
+  "idx": 8,
+  "N": 6,
+  "g6": "E^NG",
+  "deg": [
+   4,
+   4,
+   3,
+   3,
+   3,
+   3
+  ],
+  "Omega": 1.2941176470588867,
+  "F": 1.2500000000000009,
+  "sc": 0,
+  "edges": 10,
+  "multipartite": false,
+  "sizes": [],
+  "C5": false,
+  "desc": "10E deg[4, 4, 3, 3, 3, 3] conn"
+ },
+ {
+  "idx": 12,
+  "N": 6,
+  "g6": "EO~o",
+  "deg": [
+   4,
+   4,
+   3,
+   3,
+   2,
+   2
+  ],
+  "Omega": 1.2941176470587927,
+  "F": 1.2500000000000007,
+  "sc": 0,
+  "edges": 9,
+  "multipartite": false,
+  "sizes": [],
+  "C5": false,
+  "desc": "9E deg[4, 4, 3, 3, 2, 2] conn"
+ },
+ {
+  "idx": 14,
+  "N": 6,
+  "g6": "ErW?",
+  "deg": [
+   3,
+   3,
+   2,
+   2,
+   2,
+   0
+  ],
+  "Omega": 1.2941176470586122,
+  "F": 1.2500000000000004,
+  "sc": 0,
+  "edges": 6,
+  "multipartite": false,
+  "sizes": [],
+  "C5": false,
+  "desc": "6E deg[3, 3, 2, 2, 2, 0] disc2"
+ },
+ {
+  "idx": 15,
+  "N": 6,
+  "g6": "EXSg",
+  "deg": [
+   4,
+   3,
+   2,
+   2,
+   2,
+   1
+  ],
+  "Omega": 1.2941176470583389,
+  "F": 1.2500000000000004,
+  "sc": 0,
+  "edges": 7,
+  "multipartite": false,
+  "sizes": [],
+  "C5": false,
+  "desc": "7E deg[4, 3, 2, 2, 2, 1] conn"
+ },
+ {
+  "idx": 3,
+  "N": 6,
+  "g6": "ElfO",
+  "deg": [
+   4,
+   4,
+   3,
+   3,
+   2,
+   2
+  ],
+  "Omega": 1.29321593788641,
+  "F": 1.2513510668983838,
+  "sc": 0,
+  "edges": 9,
+  "multipartite": false,
+  "sizes": [],
+  "C5": false,
+  "desc": "9E deg[4, 4, 3, 3, 2, 2] conn"
+ },
+ {
+  "idx": 22,
+  "N": 6,
+  "g6": "El{G",
+  "deg": [
+   5,
+   3,
+   3,
+   3,
+   3,
+   1
+  ],
+  "Omega": 1.2886751345945582,
+  "F": 1.2160917415015675,
+  "sc": 0,
+  "edges": 9,
+  "multipartite": false,
+  "sizes": [],
+  "C5": false,
+  "desc": "9E deg[5, 3, 3, 3, 3, 1] conn"
+ }
+]

@@ -30,7 +30,7 @@
 \title{\bfseries 图的前三大特征值之和的精确上界\\[4pt]
 \large 阶段性进展报告与障碍分析}
 \author{}
-\date{2026 年 10 月 28 日（第三版，含 \S\ref{sec:kappa} 的全局重构 $\kappa_3$）}
+\date{2026 年 10 月 29 日（第六版，增 \S\ref{sec:bipglobal}：完全二部掩码的\textbf{全局}闭合 $\Lam_3\le\frac54$ 对一切 $N$；$N=5$ 层无条件；$N=6$ 例外 $22\to20$）}
 
 \begin{document}
 \maketitle
@@ -131,6 +131,63 @@ $N=13,14$ 只有 SCF 一套——即「六个原子」是达到最优常数的�
 （冠军处左端 $1.279704891$、右端 $0.214681093$，且 $\langle P,Q\rangle=\|Q_+\|_1=7.678229\ne\Lam_3$）；
 结论 $\Lam_3(G)\le\kappa_3n-3$ 本身已在定理~\ref{thm:kappa} 中被\emph{独立重证}，
 不受影响，但原证明的规范化段落仍待重写（优先队列 P3）。
+
+第六，汇报本轮的主线推进（第~\ref{sec:n6global} 节）。三件事。
+其一，\textbf{$N\le6$ 全部 $205$ 个同构类的逐个精确有理认证}（定理~\ref{thm:ncert6}）：
+$182$ 类的 $\Omega\le\rho_0$ 由 $19442$ 个 Bareiss 精确分数主子式判定（最小者 $7.523\times10^{-37}>0$，全程无浮点），
+例外只有 $23$ 个——$N=3,4$ \textbf{无例外}（故 $\kappa_3(3),\kappa_3(4)\le\rho_0$ 无条件成立，推论~\ref{cor:k34uncond}），
+$N=5$ 恰 $1$ 个（$\Sigma_{K_{2,3}}$，$\Omega=\frac{22}{17}$ 有显式有理证书），
+$N=6$ 恰 $22$ 个（冠军 $+$ $21$ 个 $\Omega\in[1.2887,\frac43]$ 的类）。
+其二，用 Grassmannian 恒等式 $F(\Sigma)=\max_W\lambda^+_{\max}(P_W\circ\Sigma)$（命题~\ref{prop:grassid}，已证）
+与 $N=5$ 时的对偶参数化 $P_W=I_5-ZZ^\top$、$Z\in\mathrm{St}(5,2)$（命题~\ref{prop:framered}），
+把 $K_{2,3}$ 这一类的缺口从「$\Delta_4$ 上五次方程两个最小根的显式下界」换成\textbf{一条平面框架不等式}
+$\lambda_{\max}(B(Z))\le\frac54$，其中 $B(Z)=\operatorname{diag}(1-\|z_i\|^2)+[(-\langle z_i,z_j\rangle)_+]_{K_{2,3}}$
+逐元素非负、常数 $\frac54$ \textbf{sharp}（命题~\ref{prop:biaxsharp} 给出双轴框架 $Z^\ast$ 的精确有理取等证书：
+$\chi_{B(Z^\ast)}=\lambda(4\lambda-5)(4\lambda-1)(4\lambda-3)^2/4^4$，$\operatorname{spec}=\{\frac54,\frac34,\frac34,\frac14,0\}$）。
+于是 $\kappa_3(5)\le\rho_0$ 现在\emph{只}依赖这一条不等式（定理~\ref{thm:n5frame}），余量 $\rho_0-\frac54=0.031568197$。
+其三，对引理~\ref{lem:planar} 二分法的双轴支给出\textbf{定理}：双轴族由 $15$ 个划分 $\times8$ 个符号类 $=120$ 类
+与一个恒为 $3$ 维的权多面体组成（引理~\ref{lem:biaxparam}，并把它精确改写为
+$\lambda_{\max}(B)=1+\lambda_{\max}(D_u\widetilde\Sigma D_u)$、$u\in S^{m_1-1}_+\times S^{m_2-1}_+$）；
+$120$ 个\emph{等分}构型的 $\frac54I-B\succeq0$ 由 $31$ 个有理主子式逐个判定，其中恰 $3$ 个取等
+（命题~\ref{prop:biaxenum}，已证且精确），第二大值为 $\frac{3+\sqrt3}4=1.183012701892$。
+另有一条 Schur 补充分条件 $L(Z)\le1$（命题~\ref{prop:schurcond}）在 $Z^\ast$ 处取等，
+数值上覆盖 $99.831\%$ 的帧（$937614$ 帧中违例 $1583$ 个，$\sup L=1.117916903$），故\textbf{不是}完整证明。
+本轮还\textbf{否证}了三条旧结论/路线：
+旧 \texttt{lem:planar} 的「$K_{2,3}$ 不是腔掩码」被一个显式平面框架推翻（其倍角最大间隙\emph{恰为} $180^\circ$，
+旧间隙计数依赖严格不等式），据此建立的 $\kappa_3(5)\le\rho_0$ 无条件装配\textbf{作废并撤回}；
+上一轮「两个内部临界点是排序 bug 的假象」也被推翻——修正代码后两点复现，对称点还有闭式
+$a^\ast=\frac{62-6\sqrt{35}}{119}$、$\Lam_3=\frac{63+12\sqrt{35}}{119}=1.125991238631895$（命题~\ref{prop:k23cp}），
+故「极大化点必在边界」这条捷径不可用；
+翻转链路线（命题~\ref{prop:kappa6red}）经球面采样否证（$647$ 种翻转像的 $\max\Omega=1.310920>\rho_0$）。
+第~\ref{sec:refuted5} 节还定量否证了十条候选上界（无权/加权 Collatz、块界 $\Psi$、秩一与秩二优占族
+$\mathbf{B3}/\mathbf{B7}(\theta)/\mathbf{B4}(\theta)$、无指示器 Schur 版、双轴族凹性等），
+每条都给出反例帧与超出量；注~\ref{rmk:lesson5} 从中提炼出机制性结论：
+$\frac54$ 由\emph{两个互不相容}的机制同时饱和，故任何单一类型的放缩必被另一机制的构型顶穿。
+
+其四（本轮突破，第六版新增），把上述固定 $N=5$ 的整条路线\textbf{绕过}。
+第~\ref{sec:bipglobal} 节证明了一条对\emph{一切}阶数同时成立的定理：对任意 $a,b\ge1$、$N=a+b\ge4$、任意 $p\in\Delta_{N-1}$，
+\begin{equation*}
+\Lam_3\bigl(D_{\sqrt p}(I+A(K_{a,b}))D_{\sqrt p}\bigr)\ \le\ \frac54 ,
+\end{equation*}
+取等当且仅当 $a,b\ge2$ 且 $p$ 恰有四个非零分量、每部各两个、都等于 $\frac14$（定理~\ref{thm:bipglobal}，\textbf{已证}）。
+于是 $F(\Sigma_{K_{a,b}})=\frac54$（$a,b\ge2$）\textbf{精确}，而这是\emph{全局}结果、不是逐阶核验。
+证法只有四步、全部初等：秩二分解 $R=\frac12\bigl(\mathbf a\mathbf a^\top-(S\mathbf a)(S\mathbf a)^\top\bigr)$
+配 Sylvester 惯性律得 $\operatorname{neg}(M)\le1$（引理~\ref{lem:biprank}）；
+$R\succeq-\sqrt{\alpha\beta}\,e_-e_-^\top$ 配 Weyl 得 $\lambda_i\ge q^\downarrow_{i+1}$（引理~\ref{lem:bipweyl}）；
+秩二长期方程 $\det(\lambda I-M)=\prod_i(\lambda-p_i)[1-A(\lambda)B(\lambda)]$ 配单调性得 $h(-\sigma)\le1\iff\sigma\ge s$
+（引理~\ref{lem:bipsec}）；最后核心引理 $s\le\frac14+\sigma_4(p)$（引理~\ref{lem:core4}）只用四条初等不等式——
+组内 Jensen（二元缺陷 $\Delta(u,v)$ 的显式非负分子）、$\phi(z)\le z/\sigma$、
+Titu 引理（五个分支的缺口分子 $16x$、$(3x-y)^2$、$4(x-y)^2$、$(x-3y)^2$、$16y$）与 AM--GM。
+直接后果有三条。\textbf{其一}，$\kappa_3(5)\le\rho_0$ 现在\textbf{无条件}成立、且 $F(\Sigma_{K_{2,3}})=\frac54$ 精确
+（推论~\ref{cor:n5uncond}），旧的 $(\ast_5)$ 与平面框架不等式 \eqref{eq:frame5} 退出关键路径、降级为独立兴趣
+（注~\ref{rmk:bipvsframe}）。\textbf{其二}，$N=6$ 的例外从 $22$ 降到 $20$：$K_{2,4}$ 与 $K_{3,3}$ 被认证为 $F=\frac54$ 精确，
+$156$ 类中已闭合 $137$ 类，剩 $19$ 类（命题~\ref{prop:tab19} 给出完整表）；
+更重要的是注~\ref{rmk:tab19read}(iv) 把 $N=6$ 的闭合\emph{重新表述}为一条纯几何陈述——
+不需要对这 $19$ 类逐个求 $F$ 的上界，只需证明它们都不是腔掩码（$\Sigma\ne1\{Q\ge0\}$，$Q\in\mathcal P_3(6)$），
+其中 $17$ 类已由引理~\ref{lem:bdryrig} 归约到这一步。\textbf{其三}，完全多部情形的秩 $k$ 长期方程
+$\sum_t\frac1{1-A_t}=k-1$ 与 $\operatorname{inertia}(R)=(1,k-1)$ 已证（引理~\ref{lem:mpsec}），
+但 $k\ge3$ 时 Weyl 的指标平移变成 $k-1$、尾和记账退化，$K_{2,2,2}$ 与 $K_{1,2,3}$ 的闭合仍\textbf{未证}
+（数值 $\sup\Lam_3\le1.2524<\rho_0$，余量 $2.9\times10^{-2}$；注~\ref{rmk:mpopen} 精确指出了断点所在）。
 
 \medskip
 \noindent\textbf{关键词：} 图特征值；Ky Fan 范数；投影常数；Gegenbauer 多项式；图极限；极值谱图论
@@ -1904,6 +1961,1165 @@ P4 联合不等式 $\alpha+\ell\le2\rho_0$ 的直接证明（框架能量 / Schu
 注意命题~\ref{prop:A2no} 之后，P4 是\emph{唯一}还活着的凸化型入口，优先级应视为仅次于 P1。
 \end{itemize}
 
+\section{本轮主线：$N\le6$ 的全局精确认证，与 $N=5$ 唯一缺口的二维归约}\label{sec:n6global}
+
+第~\ref{sec:kappa} 节把主线压成一条不等式 $\kappa_3\le\rho_0$，并把优先队列的第一位定为
+「证 $\kappa_3(6)=\rho_0$」。本轮沿这条队列往下推，得到三组结果：
+(a) $N\le6$ 全部 $205$ 个同构类的\textbf{逐个精确有理认证}，把缺口从「$N\le6$ 的 $205$ 类」压到
+「$N=5$ 的 $1$ 类 $+$ $N=6$ 的 $21$ 类」（定理~\ref{thm:ncert6}）；
+(b) 对 $N=5$ 的那唯一一类 $K_{2,3}$，用 Grassmannian 恒等式把 $F(\Sigma)$ 改写成
+$\R^2$ 中 Parseval 五框架的一个矩阵的最大特征值，从而把原来的「$\Delta_4$ 上五次方程」缺口
+换成\textbf{一条二维框架不等式}（命题~\ref{prop:grassid}、\ref{prop:framered}）；
+(c) 对这条不等式的\textbf{双轴子族}做部分推进——先把双轴族参数化为 $15$ 个划分 $\times8$ 个符号类共 $120$ 类
+（引理~\ref{lem:biaxparam}），再对其中 $120$ 个\emph{等分}构型用有理算术穷举 $\frac54I-B\succeq0$
+（命题~\ref{prop:biaxenum}，已证且精确），并给出一条覆盖 $99.83\%$ 帧的 Schur 补充分条件（命题~\ref{prop:schurcond}）。
+但\textbf{双轴子族没有被完整证明}：原计划用来把等分点推广到全族的「$\lambda_{\max}(B(t))$ 关于 $t$ 是凹的」
+这条引理已被\textbf{否证}（$360000$ 对中 $57149$ 对违反，占 $15.9\%$，见第~\ref{sec:refuted5} 节末行），
+失效机制是 $\lambda_{\max}$ 对矩阵是凸的、与逐条目凹接不起来。
+同时本轮\textbf{否证}了上一轮的三条结论/路线，其中一条是上一轮报告里写下的定理，必须先撤回。
+
+\emph{（第六版补注）}上面 (b)、(c) 两条所服务的目标——证 $F(\Sigma_{K_{2,3}})\le\frac54$——
+已经由定理~\ref{thm:bipglobal} 用一条\emph{完全不同}的路线无条件拿到（推论~\ref{cor:n5uncond}），
+而且那条路线对\emph{一切}完全二部掩码与\emph{一切}阶数同时成立。
+本节以下内容因此全部保留但降级为「同一常数的第二种独立表述」，比较见注~\ref{rmk:bipvsframe}。
+
+\subsection{三处程序缺陷与三条被否证的旧结论}\label{sec:bugs5}
+
+本节的所有内容都由 \texttt{证书\_N6全局精确认证.py}（$49$ 项检查）与
+\texttt{证书\_N5框架归约.py}（$7$ 段）复跑产生。按惯例，先交代错误。
+
+\paragraph{缺陷 1：\texttt{nx.canonical\_graph} 在 $N=6$ 段崩溃}
+上一轮的全局认证脚本在 G 段（$21$ 行例外表）调用 \texttt{networkx.canonical\_graph} 求同构规范形时抛异常，
+导致 G 段之后的 H 段（$K_{2,3}$ 的精确结构，$486$ 行）\textbf{从未执行}，
+\texttt{\_bad21table.json} 与 \texttt{\_kappa5.json} 两个产物也从未写出。
+本轮改为「\texttt{graph6} 码作键 $+$ \texttt{is\_isomorphic} 代表元缓存」，
+并把 H 段并入同一脚本；两份产物现已正常生成。
+\emph{影响范围}：上一轮报告中所有引用 H 段数据的陈述（$K_{2,3}$ 的特征多项式闭式、
+$21$ 行例外表、Case~A 的精确闭合）在上一轮\textbf{没有}被任何一次成功的运行支持过，
+本轮是它们第一次真正跑通。
+
+\paragraph{缺陷 2：E 段把 $-0.0$ 读成违例}
+\texttt{lem:bdryrig} 的数值检验里，把某个权 $w_i$ 置零后，$\Pi_3(M)$ 的第 $i$ 行\textbf{恰好}为零行，
+于是翻转像 $1\{\Pi_3\ge0\}$ 的第 $i$ 行应按约定 $1\{0\ge0\}=1$ 取全 $1$。
+但代码直接对浮点结果做 \texttt{(P>=0)}，而 IEEE 的 $-0.0$ 与 $10^{-17}$ 级噪声会被判成「$<0$」，
+$83$ 次试验\textbf{全部}报假违例。修复方式是先独立验证「$\Pi_3$ 第 $i$ 行的非对角元最大绝对值 $<10^{-10}$」，
+确认它是精确零行之后再套用约定。修复后 $83$ 次试验 $0$ 违例。
+
+\paragraph{缺陷 3：双轴正对照用例的符号规格自相矛盾}
+H3d 段要验证「完全多部图是腔掩码」，用 $7$ 组（部划分 $+$ 各部符号）构造双轴框架。
+但构造函数把前 $\lceil m/2\rceil$ 个部放在直线 $u_1$、其余放在正交直线 $u_2$，
+而\textbf{同一直线上的两部必须取相反符号}：否则同线两部顶点的内积为正、$Q_{ij}<0$，
+两部就并成\emph{一个}非邻接类，$1\{Q\ge0\}$ 自然不等于期望的完全多部图掩码。
+上一轮有两个用例（$3$ 部的两组）违反了这一点，被误报为「完全多部图不是腔掩码」。
+修正符号后 $7$ 组全部通过。这一条纯属\textbf{测试用例规格 bug}，不是数学失败；
+但它一度让我们以为「双轴路线给出的掩码类很窄」，方向判断被带偏。
+
+\paragraph{否证 1（重要）：旧 \texttt{lem:planar}「$K_{2,3}$ 不是腔掩码」是\textbf{错的}}
+上一轮用「倍角最大圆周间隙 $>180^\circ$」的间隙计数论证 $K_{2,3}$ 不可能来自平面 Parseval 框架，
+并据此\textbf{无条件}装配出 $\kappa_3(5)\le\rho_0$。本轮给出显式反例：
+\[
+Z=\Bigl[\tfrac1{\sqrt2}\ \ 0;\ \tfrac1{\sqrt2}\ \ 0;\ \ 0\ \ \tfrac1{\sqrt3};\ \ 0\ \ \tfrac1{\sqrt3};\ \ 0\ \ \tfrac1{\sqrt3}\Bigr]\in\mathrm{St}(5,2),
+\qquad Q=I_5-ZZ^\top=\begin{pmatrix}
+\frac12&-\frac12&0&0&0\\[1pt]
+-\frac12&\frac12&0&0&0\\[1pt]
+0&0&\frac23&-\frac13&-\frac13\\[1pt]
+0&0&-\frac13&\frac23&-\frac13\\[1pt]
+0&0&-\frac13&-\frac13&\frac23
+\end{pmatrix},
+\]
+$Q^2=Q$、$\tr Q=3$ 精确成立（\texttt{sympy} 根式判定），且 $1\{Q\ge0\}=\Sigma_{K_{2,3}}$ 逐条目相符。
+失效原因被完全定位：该见证的倍角集合是 $\{0^\circ,0^\circ,180^\circ,180^\circ,180^\circ\}$，
+圆周间隙为 $(0,180,0,0,180)$，\textbf{最大间隙恰为 $180^\circ$ 而不是严格大于 $180^\circ$}；
+旧证明的间隙计数依赖严格不等式，在这个边界情形失效。
+\textbf{结论}：上一轮那条「$\kappa_3(5)\le\rho_0$ 无条件」的装配步骤作废，必须撤回；
+$K_{2,3}$ 确实是腔掩码，而且落在二分法的\emph{边界}上。
+
+\paragraph{否证 2：上一轮「两个内部临界点是特征值排序 bug 的假象」也是错的}
+把 \texttt{\_cp5.py} 的特征值与特征向量\textbf{同步}排序后复跑（$2000$ 起点，接受阈 $\|r\|^2<10^{-20}$），
+两个内部临界点都复现，其中一个还有闭式（命题~\ref{prop:k23cp}）：
+$S_2\times S_3$ 对称点 $a=\frac{62-6\sqrt{35}}{119}$ 处 $\Lam_3=\frac{63+12\sqrt{35}}{119}=1.125991238631895$
+（\texttt{sympy} 精确判定）；另一个非对称点 $\Lam_3=1.159910859786268$（数值）。
+两者都严格小于 $5/4$，所以「不存在内部极大化点 $\Rightarrow$ 极大化点必在边界 $\Rightarrow$ 归约到 $\kappa_3(4)$」
+这条\textbf{路线不成立}：内部临界点是真实的，只是它们不是极大化点。
+这条否证把证明的担子重新压回到「$\Delta_4$ 上的全局上界」本身。
+
+\paragraph{否证 3：翻转链路线不能认证 $N=6$ 的 $21$ 个例外}
+\texttt{lem:flip} 说：若 $w>0$ 且翻转像 $\Sigma'=1\{\Pi_3(D_w\Sigma D_w)\}\ne\Sigma$，
+则 $\Lam_3(D_w\Sigma D_w)<F(\Sigma')$，于是「沿翻转链单调上升、终止于已认证类」就能给出 $F(\Sigma)\le\rho_0$。
+数值上，$21$ 个例外在\emph{各自的数值极大化点}处的翻转像确实全部落进已认证的 $134$ 类。
+但把采样面从「极大化点」扩大到「每类 $608$ 个球面点（顶点/面心/均匀/Dirichlet 两档）」之后，
+$647$ 种翻转像同构类的 $\Omega$ 最大值是 $\mathbf{1.310920}$，\textbf{超过} $\rho_0=1.281568$ 达 $2.9\times10^{-2}$。
+也就是说：翻转像只在极大化点处落进已认证类，而在 $S^5$ 的其余点上会落到 $\Omega>\rho_0$ 的类。
+用翻转链证 $F\le\rho_0$ 因此\textbf{预先假定了极大化点的位置}，是循环论证。
+\texttt{prop:kappa6red} 的这条路线就此关闭；本轮把它写成一条\emph{否证性}检查（判据要求 $\max\Omega>\rho_0$），
+以免下次再被误当作通过。
+
+\subsection{修正后的平面二分法}\label{sec:planarfix}
+
+否证 1 迫使间隙判据重写。正确的形式如下，其中「倍角」是把 $\R^2$ 中的方向映到圆周上的标准技巧
+（$\theta$ 与 $\theta+180^\circ$ 给出同一条直线，故取 $2\theta$）。
+
+\begin{lemma}[平面二分法，修正版]\label{lem:planar}
+设 $Z\in\mathrm{St}(5,2)$，行向量 $z_i=\sqrt{t_i}\,(\cos\theta_i,\sin\theta_i)$，$t_i=\|z_i\|^2\ge0$。
+则 $Z^\top Z=I_2$ 当且仅当
+\begin{equation}\label{eq:moment2}
+\sum_{i=1}^5 t_i=2,\qquad \sum_{i=1}^5 t_i\bigl(\cos2\theta_i,\ \sin2\theta_i\bigr)=(0,0).
+\end{equation}
+把倍角 $2\theta_i$ 按圆周排序，记最大相邻间隙为 $\gamma$。则恰有两种情形：
+\begin{enumerate}[label=(\alph*),leftmargin=2em]
+\item $\gamma<180^\circ$（\textbf{非双轴支}）：此时 $0$ 落在 $\{e^{2\mathrm i\theta_i}\}$ 的凸包\emph{内部}；
+\item $\gamma=180^\circ$（\textbf{双轴支}）：此时所有 $z_i$ 落在\textbf{两条互相正交的直线}上，
+即存在正交单位向量 $u\perp v$ 与 $\{0,\dots,4\}$ 的一个划分 $L_1\sqcup L_2$，使
+$z_i=\varepsilon_i\sqrt{t_i}\,u\ (i\in L_1)$、$z_i=\eta_i\sqrt{t_i}\,v\ (i\in L_2)$，$\varepsilon_i,\eta_i\in\{\pm1\}$，
+且 $\sum_{i\in L_1}t_i=\sum_{i\in L_2}t_i=1$。
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}[证明要点]
+\eqref{eq:moment2} 是把 $ZZ^\top$ 的幂等性/迹条件展开：$Z^\top Z=I_2$ 等价于
+$\sum_i t_i\cos^2\theta_i=\sum_i t_i\sin^2\theta_i=1$ 与 $\sum_i t_i\sin\theta_i\cos\theta_i=0$，
+用二倍角公式即得。
+(a)$\Rightarrow$ 非双轴是显然的。(b)：$\gamma=180^\circ$ 意味着倍角点集落在某条直径的两侧且两端都有点，
+配合 $\sum t_ie^{2\mathrm i\theta_i}=0$ 迫使全部倍角只取\emph{两个相差 $180^\circ$} 的值，
+即 $\theta_i$ 只取两个相差 $90^\circ$ 的值，故 $z_i$ 落在两条正交直线上；
+再把 \eqref{eq:moment2} 的第一式按直线分组即得两组权和各为 $1$。
+数值核验：$20000$ 个随机平面 Parseval 五框架上 \eqref{eq:moment2} 的最大残差 $2.0\times10^{-15}$、
+$\sum t_i$ 的最大偏差 $1.8\times10^{-15}$，二分法反例 $0$ 个（证书 H3c 段）。
+\end{proof}
+
+\begin{remark}[为什么 $K_{2,3}$ 恰好在边界上]\label{rmk:boundary}
+否证 1 的见证 $Z$ 的倍角是 $\{0,0,180,180,180\}$，属 (b) 支；
+命题~\ref{prop:biaxsharp} 的取等框架 $Z^\ast$ 的倍角同样只差 $180^\circ$。
+这不是巧合：$K_{2,3}$ 的掩码要求 $A$ 部内部与 $B$ 部内部都\emph{非邻接}，
+即 $\langle z_i,z_j\rangle>0$ 对同部对成立，而跨部对要\emph{非负}。
+在同部内积严格为正的约束下，跨部内积只能靠「正交或反向」实现，这正是双轴构型。
+因此引理~\ref{lem:planar} 的 (b) 支\textbf{不是}可以随手排除的退化情形，
+而是本问题的\emph{主战场}——这也解释了为什么上一轮的间隙论证一定会在这里出错。
+\end{remark}
+
+
+\subsection{$N\le6$ 全部同构类的精确有理认证}\label{sec:ncert6}
+
+定理~\ref{thm:domdual} 给出 $F(\Sigma)\le G(\Sigma)\le\Omega(\Sigma)$，其中
+$\Omega(\Sigma)=\min\{\max_iT_{ii}:T\succeq\Sigma,\ T\succeq0\}$。
+上一轮只在冠军掩码与四类近腔掩码上做过 $\Omega$ 的精确证书。本轮把它推到 $N\le6$ 的\textbf{全部}同构类：
+对每个类先解 $\Omega$ 的 SDP，把最优 $T$ 用二进有理数舍入到 $2^{-20}$，
+再在 $\Q$ 上用 Bareiss 精确分数行列式逐个判定 $T$ 与 $T-\Sigma$ 的\textbf{全部}主子式非负。
+这一步没有浮点：一旦 $205$ 个类的 $19442$ 个主子式都被判为非负且最小者 $>0$，
+相应的 $\Omega\le\rho_0$ 就是定理。
+
+\begin{theorem}[$N\le6$ 的逐类精确认证]\label{thm:ncert6}
+对 $N=3,4,5,6$，$\mathcal P_3(N)$ 的掩码按图同构分类，各类的 $\Omega$ 由精确有理证书给出，结果如下：
+\begin{center}
+\begin{tabular}{r@{\quad}l r r r r r}
+\toprule
+$N$ & 同构类数 & 精确认证 & 例外 & 主子式数 & 最小主子式\\
+\midrule
+$3$ & $4$   & $4$   & $0$  & $56$    & $8.674\times10^{-19}$\\
+$4$ & $11$  & $11$  & $0$  & $330$   & $8.272\times10^{-25}$\\
+$5$ & $34$  & $33$  & $1$  & $2046$  & $7.889\times10^{-31}$\\
+$6$ & $156$ & $134$ & $22$ & $17010$ & $7.523\times10^{-37}$\\
+\midrule
+合计 & $205$ & $182$ & $23$ & $19442$ & \\
+\bottomrule
+\end{tabular}
+\end{center}
+例外清单的结构是干净的：
+\begin{enumerate}[label=(\roman*),leftmargin=2em]
+\item $N=3,4$：\textbf{无例外}。
+\item $N=5$：\textbf{恰 $1$ 个}，即 $\Sigma_{K_{2,3}}=I_5+A(K_{2,3})$（度序列 $(2,2,2,3,3)$、无支配点），
+其 $\Omega=\frac{22}{17}=1.294117647058824$ 有显式有理证书
+\[
+T=\frac1{17}\begin{pmatrix}22&5&12&12&12\\5&22&12&12&12\\12&12&22&5&5\\12&12&5&22&5\\12&12&5&5&22\end{pmatrix},
+\qquad T\succeq\Sigma,\quad T-\Sigma\succeq0,\quad \max_iT_{ii}=\tfrac{22}{17},
+\]
+$T$ 与 $T-\Sigma$ 的各 $31$ 个主子式在 $\Q$ 上逐个非负，SDP 数值解与之差 $\le10^{-9}$。
+\item $N=6$：\textbf{恰 $22$ 个} $=$ 冠军掩码 $\Sigma_0$（\texttt{graph6} 码 \texttt{Ehfw}，即 $K_1\vee C_5$）
+加上 $21$ 个 $\Omega>\rho_0$ 的类。冠军不是真例外：$\Omega(\Sigma_0)=\rho_0$ \emph{精确取等}，
+二进有理数舍入必然失败（定理~\ref{thm:champglobal} 已给出根式证书），它由定理~\ref{thm:champglobal} 单独覆盖。
+$21$ 个真例外的 $\Omega$ 分布在 $[1.288675,\ 4/3]$，其中\textbf{四个}达到最大值 $\Omega=\frac43$
+（八面体型掩码，与命题~\ref{prop:octnogo} 一致），冠军处 $\Omega=1.281568197$ 与 $\rho_0$ 差 $4.4\times10^{-14}$。
+\end{enumerate}
+\end{theorem}
+
+\begin{corollary}[$N=3,4$ 的无条件闭合]\label{cor:k34uncond}
+$\kappa_3(3)\le\rho_0$ 与 $\kappa_3(4)\le\rho_0$ \textbf{无条件成立}（已证）。
+交叉核对：$\max_{4\ \text{类}}F=1.000000000000$、$\max_{11\ \text{类}}F=1.250000000000$，
+与定理~\ref{thm:ladder} 的精确值 $\kappa_3(3)=1$、$\kappa_3(4)=\frac54$ 分别相差 $1.1\times10^{-15}$、$4.4\times10^{-16}$。
+\end{corollary}
+
+于是主线缺口收缩为：
+\begin{equation}\label{eq:gap2}
+\kappa_3\le\rho_0\quad\Longleftarrow\quad
+\underbrace{F(\Sigma_{K_{2,3}})\le\rho_0}_{N=5\ \text{的}\ 1\ \text{类}}\ \wedge\
+\underbrace{\max_{21\ \text{类}}F\le\rho_0}_{N=6\ \text{的}\ 21\ \text{类}}\ \wedge\
+\underbrace{N\ge7\ \text{可化约到}\ \le6\ \text{个有效原子}}_{\text{注~\ref{rmk:ladderinfo}(2)}} .
+\end{equation}
+第一项在第~\ref{sec:frame}--\ref{sec:biax} 节被归约为一条二维框架不等式；
+第二项在下面第~\ref{sec:kappa6red} 小节被\textbf{否证}了一条看似可行的路线；第三项未动。
+
+\subsubsection{$N=6$ 的 $21$ 个例外：翻转链路线及其否证}\label{sec:kappa6red}
+
+为了处理第二项，本轮建立了三条工具性引理。
+
+\begin{lemma}[翻转优占]\label{lem:flip}
+设 $\Sigma\in\mathcal P_3(N)$、$w\in\Delta_{N-1}$，$M=D_w\Sigma D_w$，$\Pi_3=\Pi_3(M)$ 为其前三特征投影，
+$\Sigma'=1\{\Pi_3\ge0\}$。则 $\Lam_3(D_w\Sigma D_w)\le F(\Sigma')$；
+若 $w>0$ 且 $\Sigma'\ne\Sigma$，则不等式\textbf{严格}。
+\end{lemma}
+
+\begin{corollary}[翻转链]\label{cor:flipsc}
+若从 $\Sigma$ 出发反复施加 $w\mapsto$（$F$ 的极大化权）$\mapsto\Sigma'$ 得到的链终止于某个已认证类
+$\Sigma^{(k)}$（即 $\Omega(\Sigma^{(k)})\le\rho_0$），则 $F(\Sigma)\le F(\Sigma^{(k)})\le\rho_0$。
+\end{corollary}
+
+\begin{lemma}[边界刚性]\label{lem:bdryrig}
+若 $w_i=0$ 且 $\lambda_3(M)>0$，则 $\Pi_3(M)$ 的第 $i$ 行\textbf{恰好}为零行，
+于是按约定 $1\{0\ge0\}=1$，翻转像 $\Sigma'$ 的第 $i$ 行除对角外全为 $1$，即 $i$ 成为 $\Sigma'$ 的支配点。
+\end{lemma}
+
+\begin{lemma}[腔的几何刻画]\label{lem:chamber}
+$\Sigma$ 是某个 $\R^3$ 中 Parseval 框架的「非锐角图」当且仅当存在 $Q\in\mathcal P_3(N)$ 使 $\Sigma=1\{Q\ge0\}$；
+等价地，$\Sigma=1\{Q\ge0\}$、$Q=I_N-ZZ^\top$、$Z\in\mathrm{St}(N,N-3)$，
+且框架条件 $\sum_iw_iw_i^\top=I_3$ 等价于其凸包形式 $\frac13I_3\in\operatorname{conv}\{u_iu_i^\top\}$。
+\end{lemma}
+
+\begin{proposition}[$21$ 行例外表]\label{prop:kappa6red}
+$N=6$ 的 $21$ 个真例外满足：
+(i) 每一类在其数值极大化点处都有 $\min_ip_i\le10^{-14}$，即极大化点落在单纯形的\textbf{边界}面上；
+(ii) 其中 $20$ 类的极值图最小度 $\delta\ge1$，唯一 $\delta=0$ 的类已单独标出；
+$19$ 类没有支配点、$2$ 类恰有 $1$ 个支配点；
+(iii) 在各自的数值极大化点处，翻转像全部落在已认证的 $134$ 类中，$\max\Omega(\text{翻转像})<\rho_0$；
+(iv) $21$ 类的数值 $\max F$ 均等于 $\kappa_3(5)=\frac{9+4\sqrt6}{15}=1.253197265$，比 $\rho_0$ 低 $2.84\times10^{-2}$。
+\textbf{但}(iii) 不能推广：把采样点从「极大化点」扩到每类 $608$ 个球面点之后，
+$647$ 种翻转像同构类的 $\max\Omega=1.310920>\rho_0$（超出 $2.9\times10^{-2}$），
+故推论~\ref{cor:flipsc} 的前提\textbf{不成立}，翻转链\textbf{不能}用来认证这 $21$ 类。
+\end{proposition}
+
+\begin{remark}[否证的含义]\label{rmk:flipdead}
+(iii) 与它的否证合起来说明一件更基本的事：翻转像\emph{依赖}于所选的权 $w$，
+而「$w$ 取极大化点」这个选择本身就等价于我们想证的结论。
+任何形如「沿某个上升流走到已认证类」的论证都会掉进同一个坑，除非上升流的终点\emph{先验}可确定。
+这与注~\ref{rmk:rigiditylimit}（Perron 刚性最多给到 $\frac32$）和
+命题~\ref{prop:A2no}（负质量界有七原子反例）是同一类教训的第三次出现：
+\textbf{凡是把「极大化点在哪」当作已知信息的论证，都不是证明}。
+\end{remark}
+
+\subsection{$K_{2,3}$ 类的精确结构}\label{sec:k23}
+
+由 \eqref{eq:gap2}，$N=5$ 只剩 $K_{2,3}$ 一类。记 $A=\{0,1\}$、$B=\{2,3,4\}$，
+$\Sigma=I_5+A(K_{2,3})$，$p\in\Delta_4$，$x=\sqrt p$，$M=D_x\Sigma D_x$，
+$a=p_0+p_1$、$b=p_2+p_3+p_4$、$q=p_0p_1$、$e_2=p_2p_3+p_2p_4+p_3p_4$、$e_3=p_2p_3p_4$、
+$s_2=$（两个最小权之和）。则 $F(\Sigma_{K_{2,3}})=\max_{p\in\Delta_4}\Lam_3(M)$。
+
+\begin{proposition}[闭式特征多项式]\label{prop:k23poly}
+$M$ 的特征多项式为
+\[
+\lambda^5-\lambda^4+(q+e_2)\lambda^3+(ae_2+qb-e_3)\lambda^2-(2ae_3+3qe_2)\lambda+5qe_3,
+\]
+且 $\tr M=1$、$\sum_i\lambda_i^2=1-2(q+e_2)=\sum_ip_i^2+2ab$。
+\end{proposition}
+
+\begin{proposition}[秩二分解与惯性]\label{prop:k23rank2}
+$M=\operatorname{diag}(p)+R$，其中 $R_{ij}=x_ix_j$ 仅当 $i,j$ 分属 $A,B$，且
+\[
+R=\sqrt{ab}\,\bigl(e_Ae_B^\top+e_Be_A^\top\bigr),\qquad
+e_A=\frac{x_A}{\sqrt a},\quad e_B=\frac{x_B}{\sqrt b},\quad \|e_A\|=\|e_B\|=1,\quad e_A\perp e_B,
+\]
+故 $\operatorname{spec}(R)=\{+\sqrt{ab},-\sqrt{ab},0,0,0\}$、$\rank R=2$。
+由 Sylvester 惯性律 $\operatorname{neg}(M)\le\operatorname{neg}(\operatorname{diag}p)+\operatorname{neg}(R)=1$，
+即 $M$ \textbf{至多一个}负特征值，从而升序第二特征值 $\lambda_1^{\uparrow}\ge0$，
+$\Lam_3(M)=1-(\lambda_1^{\uparrow}+\lambda_2^{\uparrow})\le1-\lambda_{\min}(M)$。
+数值核验：$3000$ 组随机 $p$ 上负特征值个数最大为 $1$，$(1-\lambda_{\min})-\Lam_3$ 的最小值 $\ge0$。
+\end{proposition}
+
+\begin{proposition}[Ky Fan 界]\label{prop:k23kyfan}
+$X\mapsto$（两个最小特征值之和）是凹函数，故由 Ky Fan 最小原理
+$\lambda_1^{\uparrow}+\lambda_2^{\uparrow}(M)\ge s_2-\sqrt{ab}$，即
+\begin{equation}\label{eq:kf}
+\Lam_3(M)\ \le\ 1-s_2+\sqrt{ab}\ =:\ \mathbf{B1}(p).
+\end{equation}
+\eqref{eq:kf} 在两处\textbf{取等}：均匀点 $p=\frac15\one$ 处 $\Lam_3=\frac{3+\sqrt6}{5}$、
+界 $=\frac35+\frac{\sqrt6}5$（精确相同）；极大化点 $p^\ast=(\frac14,\frac14,\frac14,0,\frac14)$ 处两者都 $=\frac54$。
+$25$ 万随机点上违例 $0$ 次。
+\end{proposition}
+
+\begin{corollary}[Case A 的精确闭合]\label{cor:k23caseA}
+若两个最小权都落在 $A$ 部，则 $s_2=a$，于是
+$\Lam_3\le1+\max_{s\in[0,2/5]}\bigl(\sqrt{s(1-s)}-s\bigr)=1+\frac{\sqrt2-1}{2}=\frac{1+\sqrt2}{2}=1.207106781<\frac54<\rho_0$。
+最大值在 $s^\ast=\frac{2-\sqrt2}4\in[0,\frac25]$ 处取得，\texttt{sympy} 的 \texttt{maximum} 与临界点代入两法一致。
+\textbf{已证}，且余量 $\frac54-\frac{1+\sqrt2}2=0.042893$。
+\end{corollary}
+
+\begin{proposition}[迹--二次型界]\label{prop:k23trQ}
+由命题~\ref{prop:k23poly} 的 $\sum\lambda_i^2=1-2(q+e_2)$，配合
+$\Lam_3^2\le3(\lambda_1^2+\lambda_2^2+\lambda_3^2)$、$(\lambda_4+\lambda_5)^2\le2(\lambda_4^2+\lambda_5^2)$
+与 $\lambda_4+\lambda_5=1-\Lam_3$，得 $5\Lam_3^2-6\Lam_3-3+12(q+e_2)\le0$，即
+\begin{equation}\label{eq:trQ}
+\Lam_3(M)\ \le\ \frac35+\frac{2\sqrt3}{5}\sqrt{\,2-5q-5e_2\,}\ =:\ \mathbf{B2}(p),
+\end{equation}
+其上确界为 $\frac35+\frac{2\sqrt3}{5}\sqrt2=1.579795897111$（在单纯形顶点 $p=(1,0,0,0,0)$ 处，此时 $q+e_2=0$），故它单独\textbf{远不足以}给出 $\frac54$；但它在 $a=0$（即 $p=(0,0,\frac13,\frac13,\frac13)$）处\textbf{取等}，
+此处 $\Lam_3=1$、界 $=1$（差 $<10^{-12}$）。$40$ 万随机点上违例 $0$ 次。
+\end{proposition}
+
+\begin{proposition}[内部临界点是真实的，且有闭式]\label{prop:k23cp}
+限制在 $S_2\times S_3$ 对称子流形 $p=(\frac a2,\frac a2,\frac b3,\frac b3,\frac b3)$（$b=1-a$）上，
+$\operatorname{spec}(M)=\{\frac a2,\frac b3,\frac b3,\mu_+,\mu_-\}$，
+$\mu_\pm=\frac12\bigl[(\frac a2+\frac b3)\pm\sqrt{(\frac a2+\frac b3)^2+4(ab-\frac{ab}6)}\bigr]$，
+故 $\Lam_3(a)=\mu_++\frac{2b}3$ 是单变量闭式。$\frac{\dd}{\dd a}\Lam_3=0$ 在 $(0,\frac25)$ 内的唯一根为
+\[
+a^\ast=\frac{62-6\sqrt{35}}{119}=0.222718666398339\ldots,\qquad
+\Lam_3(a^\ast)=\frac{63+12\sqrt{35}}{119}=\frac9{17}+\frac{12\sqrt{35}}{119}=1.125991238631895,
+\]
+\texttt{sympy} 精确判定成立，与修正后的 KKT 多起点搜索（$2000$ 起点、$\|r\|^2<10^{-20}$）相符到 $10^{-15}$。
+它比 $\frac54$ 低 $0.124009$、比 $\rho_0$ 低 $0.155577$。
+另一个\textbf{非对称}内部临界点数值为 $\Lam_3=1.159910859786268$（无闭式）。
+\end{proposition}
+
+\begin{remark}[为什么命题~\ref{prop:k23cp} 反而堵死了一条路]\label{rmk:cpdead}
+既然内部临界点真实存在，「$F$ 的极大化点必在 $\Delta_4$ 的边界上 $\Rightarrow$ 归约到 $\kappa_3(4)=\frac54$」
+就不能靠「内部无临界点」来建立。数值上极大化点确实在边界
+（$301$ 起点全局搜索给 $\max\Lam_3=1.250000000$ 于 $p^\ast$，$\min_ip_i=4.6\times10^{-16}$；
+限制 $\min_ip_i\ge\varepsilon$ 时 $\max\Lam_3$ 随 $\varepsilon\to0$ 单调升向 $\frac54$ 而恒小于它），
+但「两个内部临界点都不是极大化点」这件事本身需要代数证明，目前只有数值。
+\end{remark}
+
+\begin{remark}[五张边界面的精确值]\label{rmk:faces}
+删去一个原子得到的五张面上，$\max F$ 分别为：删 $A$ 部原子得 $I+A(K_{1,3})$，$F=\frac65$；
+删 $B$ 部原子得 $I+A(C_4)$，$F=\frac54$。五者最大值 $=\frac54=\kappa_3(4)$（定理~\ref{thm:ladder}(ii)，已证）。
+所以\textbf{若}能证明极大化点必在边界，则 $F(\Sigma_{K_{2,3}})=\frac54$ 立即得证；
+命题~\ref{prop:k23cp} 说明这一步现在没有证明。
+\end{remark}
+
+
+\subsection{Grassmannian 恒等式：把 $F$ 从单纯形搬到投影簇}\label{sec:frame}
+
+$F(\Sigma)=\max_{p\in\Delta_{N-1}}\Lam_3(D_{\sqrt p}\Sigma D_{\sqrt p})$ 的自变量是 $N-1$ 维单纯形上的权；
+$N=5$ 时这是 $4$ 维，而 $\Lam_3$ 是五次特征方程的根，没有闭式。本轮的转折点是把自变量换掉。
+
+\begin{proposition}[Grassmannian 恒等式]\label{prop:grassid}
+对任意 $\Sigma\in\{0,1\}^{N\times N}$ 对称矩阵，
+\begin{equation}\label{eq:grassid}
+F(\Sigma)=\max_{W\in\mathrm{Gr}(3,N)}\lambda_{\max}^{+}\bigl(P_W\circ\Sigma\bigr),\qquad
+\lambda_{\max}^{+}(B):=\max\{x^\top Bx:\ x\ge0,\ \|x\|=1\},
+\end{equation}
+其中 $P_W$ 是到 $W$ 的正交投影、$\circ$ 是 Hadamard 积。且对任意实对称 $B$ 与 $x\ge0$ 有
+\begin{equation}\label{eq:pospart}
+x^\top Bx\ \le\ x^\top B_+x\ \le\ \lambda_{\max}(B_+),\qquad B_+:=(B_{ij}\wedge0)\cdot(-1)+B\ \text{的逐元素正部},
+\end{equation}
+故 $F(\Sigma)\le\max_{W}\lambda_{\max}\bigl((P_W\circ\Sigma)_+\bigr)$。
+\end{proposition}
+
+\begin{proof}
+Ky Fan 对偶给 $\Lam_3(M)=\max_{W\in\mathrm{Gr}(3,N)}\tr(P_WM)$（定理~\ref{thm:kappa}(i) 已用）。
+取 $M=D_x\Sigma D_x$（$x=\sqrt p\ge0$），则 $P_WD_x\Sigma D_x$ 的迹为
+$\tr(P_WD_x\Sigma D_x)=\tr(D_xP_WD_x\Sigma)=x^\top(P_W\circ\Sigma)x$，
+因为 $\tr(DADB)=\sum_{ij}A_{ij}B_{ji}a_ia_j$ 对对称 $A,B$ 成立。
+于是 $F(\Sigma)=\max_{x\ge0,\|x\|_1=1}\max_W x^\top(P_W\circ\Sigma)x$，
+而 $\|x\|_1=1\wedge x\ge0\iff\|\sqrt p\|=1\wedge p\in\Delta$，两个 $\max$ 都是紧集上的连续函数，可交换次序。
+\eqref{eq:pospart} 的第一段：$x\ge0$ 时 $x^\top(B_+-B)x=\sum_{ij}(B_+-B)_{ij}x_ix_j\ge0$（被求和的每一项都非负）。
+第二段是 Rayleigh 商的定义。
+\end{proof}
+
+\begin{remark}[为什么这一步不是平凡的换元]\label{rmk:whygrass}
+$\Delta_4$ 与 $\mathrm{Gr}(3,5)$ 都是 $4$ 维/ $6$ 维流形，维度并没有变小。
+真正的收获是\textbf{结构}：在 $\mathrm{Gr}(3,5)$ 上可以用对偶参数化 $P_W=I_5-ZZ^\top$、$Z\in\mathrm{St}(5,2)$，
+把矩阵的每个条目都写成 $\R^2$ 中\emph{五个向量}的内积，
+于是引理~\ref{lem:planar} 的倍角--矩参数化 \eqref{eq:moment2} 立刻可用；
+而在 $\Delta_4$ 上，$\Lam_3$ 只是一个五次方程的根，没有任何几何把手。
+命题~\ref{prop:grassid} 的另一个副产品是：\eqref{eq:pospart} 说明「先取正部再取最大特征值」
+这步放缩在取等点处\textbf{零损失}（证书 A3 段：$P_W\circ\Sigma$ 在该 $W$ 上逐元素非负，最小元 $-0.0$），
+所以 $\frac54$ 这个值不是放缩造成的，是真值。
+\end{remark}
+
+\begin{proposition}[$N=5$ 的平面框架归约]\label{prop:framered}
+设 $N=5$、$\Sigma=I_5+A(K_{2,3})$、$A=\{0,1\}$、$B=\{2,3,4\}$。
+对 $Z\in\mathrm{St}(5,2)$，行向量 $z_i\in\R^2$、$t_i=\|z_i\|^2$，令 $P=I_5-ZZ^\top$。则
+$(P\circ\Sigma)_+$ 的显式形式为
+\begin{equation}\label{eq:BZ}
+B(Z)=\operatorname{diag}(1-t_1,\dots,t_5)+\bigl[\,(-\langle z_i,z_j\rangle)_+\,\bigr]_{(i,j)\in A\times B},
+\end{equation}
+即：对角元 $1-t_i\ge0$（因为 $t_i\le1$，由 $\sum_jt_j\hat u_j\hat u_j^\top=I_2$ 与 $\hat u_i\hat u_i^\top\preceq I_2$）；
+跨部元 $(-\langle z_i,z_j\rangle)_+\ge0$；同部元为 $0$（$\Sigma$ 在同部为 $0$）。
+故 $B(Z)$ \textbf{逐元素非负}，Perron--Frobenius 与 Collatz 均可用，且
+\begin{equation}\label{eq:frame5}
+\boxed{\ \lambda_{\max}\bigl(B(Z)\bigr)\ \le\ \frac54\qquad\text{对一切 }Z\in\mathrm{St}(5,2)\ }\tag{$\ast_{\!F}$}
+\end{equation}
+蕴含 $F(\Sigma_{K_{2,3}})\le\frac54$。
+\end{proposition}
+
+\begin{theorem}[$N=5$ 层的条件性闭合；第六版起已被超越]\label{thm:n5frame}
+\emph{（第六版补注）}本定理的前提 \eqref{eq:frame5} 已被定理~\ref{thm:bipglobal} 绕开：
+结论 $F(\Sigma_{K_{2,3}})=\frac54$ 与 $\kappa_3(5)\le\rho_0$ 现在是\textbf{无条件}的（推论~\ref{cor:n5uncond}），
+不再依赖任何未证不等式。本节及以下三节（双轴取等证书、双轴支穷举、Schur 型充分条件）全部保留，
+作为 Grassmannian 恒等式的应用示范与同一常数的第二种独立表述；
+两条路线的难度比较见注~\ref{rmk:bipvsframe}。
+
+假设 \eqref{eq:frame5}。则
+$F(\Sigma_{K_{2,3}})=\frac54$ \textbf{精确}，且 $\kappa_3(5)\le\rho_0$（余量 $\rho_0-\frac54=0.031568197$）。
+更精确地，逻辑链的每一环状态如下：
+\[
+\kappa_3(5)\le\max_{34\ \text{类}}F(\Sigma)\ \textbf{[已证]}\quad\wedge\quad
+\text{$33$ 类 }F\le\Omega\le\rho_0\ \textbf{[已证，精确有理证书]}\quad\wedge\quad
+F(\Sigma_{K_{2,3}})\le\max_Z\lambda_{\max}(B(Z))\ \textbf{[已证]}
+\]
+\[
+\wedge\quad \max_Z\lambda_{\max}(B(Z))\le\tfrac54\ \textbf{[未证，即 \eqref{eq:frame5}]}
+\quad\Longrightarrow\quad \kappa_3(5)\le\rho_0 .
+\]
+下界方向：命题~\ref{prop:biaxsharp} 的双轴框架 $Z^\ast$ 给出 $\lambda_{\max}(B(Z^\ast))=\frac54$，
+故 \eqref{eq:frame5} 的常数 $\frac54$ 是\textbf{sharp} 的，且 $F(\Sigma_{K_{2,3}})\ge\frac54$；
+与数值上 $\max_p\Lam_3=\frac54$ 合并即得精确值。
+\end{theorem}
+
+\begin{remark}[与旧的 $(\ast_5)$ 相比]\label{rmk:vs5}
+上一轮的缺口是 $(\ast_5)$：$\lambda_4+\lambda_5\ge1-\rho_0=-0.281568$ 对一切 $p\in\Delta_4$ 成立，
+即一个 $4$ 维单纯形上关于五次方程两个最小根的显式下界（数值余量 $0.0316$，$0$ 违例，但无证明思路）。
+\eqref{eq:frame5} 把它换成了 $\R^2$ 中五个向量的一个\emph{矩阵}不等式，
+常数从 $-0.281568$ 变成 $\frac54$（有理数），并且\textbf{已知取等点与取等时的精确谱}。
+这是实质性的改进：$(\ast_5)$ 没有已知的取等点（它是严格不等式，余量 $>0$），
+而 \eqref{eq:frame5} 取等，因此任何证明都必须能\emph{解释}这个取等构型——
+这为构造证明提供了强约束（例如排除了所有「严格不等式型」的放缩）。
+\end{remark}
+
+\subsection{双轴框架处的精确取等证书}\label{sec:biaxsharp}
+
+\begin{proposition}[双轴取等的精确有理证书]\label{prop:biaxsharp}
+令
+\[
+Z^\ast=\begin{pmatrix}3/10&-2/5\\ 3/10&-2/5\\ -3/10&2/5\\ 4/5&3/5\\ -3/10&2/5\end{pmatrix}\in\mathrm{St}(5,2),
+\qquad (t_1,\dots,t_5)=\Bigl(\frac14,\frac14,\frac14,1,\frac14\Bigr).
+\]
+则 ${Z^\ast}^\top Z^\ast=I_2$ 精确成立（\texttt{sympy} 残差为 $0$ 矩阵），$\sum t_i=2$，
+且 \eqref{eq:BZ} 给出\textbf{精确有理}矩阵
+\[
+B(Z^\ast)=\begin{pmatrix}
+\frac34&0&\frac14&0&\frac14\\[1pt]
+0&\frac34&\frac14&0&\frac14\\[1pt]
+\frac14&\frac14&\frac34&0&0\\[1pt]
+0&0&0&0&0\\[1pt]
+\frac14&\frac14&0&0&\frac34
+\end{pmatrix},\qquad
+\chi_{B(Z^\ast)}(\lambda)=\frac{\lambda(4\lambda-5)(4\lambda-1)(4\lambda-3)^2}{4^{4}}
+=\lambda^5-3\lambda^4+\frac{25}8\lambda^3-\frac{21}{16}\lambda^2+\frac{45}{256}\lambda,
+\]
+故 $\operatorname{spec}(B(Z^\ast))=\{\frac54,\frac34,\frac34,\frac14,0\}$、$\lambda_{\max}(B(Z^\ast))=\frac54$。
+$Z^\ast$ 是双轴框架：$z_0=z_1=\frac12\hat u$、$z_2=z_4=-\frac12\hat u$、$z_3=\hat v$，
+其中 $\hat u=(\frac35,-\frac45)\perp\hat v=(\frac45,\frac35)$；
+它同时满足 $1\{I_5-Z^\ast{Z^\ast}^\top\ge0\}=\Sigma_{K_{2,3}}$（跨部对 $(0,3),(1,3),(2,3),(3,4)$ 的投影元\emph{恰为} $0$，
+按约定 $1\{0\ge0\}=1$），即 $Z^\ast$ 也是引理~\ref{lem:planar}(b) 支的见证。
+\end{proposition}
+
+\begin{remark}[$Z^\ast$ 的结构意义]\label{rmk:zstar}
+$t_3=1$ 意味着 $z_3$ 是单位向量，于是 $\sum_{i\ne3}t_i\hat u_i\hat u_i^\top=I_2-\hat v\hat v^\top$ 迫使
+其余四个向量全部落在\emph{同一条}直线 $\hat u$ 上，且权各为 $\frac14$。
+这正是「一条线上一个权 $1$ 的孤原子 $+$ 另一条线上四个权 $\frac14$ 的原子、两两反向配对」的构型，
+与 $p^\ast=(\frac14,\frac14,\frac14,0,\frac14)$（单纯形侧的极大化点，第 $3$ 个权为 $0$）一一对应：
+$p^\ast=x^2$，而 $x=(\frac12,\frac12,\frac12,0,\frac12)$ 恰是 $B(Z^\ast)$ 的 Perron 向量。
+$B(Z^\ast)$ 的第 $4$ 行全零（对应 $p^\ast_3=0$），所以取等是\textbf{退化}的：
+一个原子权重为零，问题实际上降到了 $N=4$，这与注~\ref{rmk:faces}（$\max F=\frac54=\kappa_3(4)$）吻合。
+\end{remark}
+
+\subsection{双轴支的完整处理：$120$ 个等分构型的精确穷举}\label{sec:biax}
+
+引理~\ref{lem:planar} 把平面框架分成两支。本节处理 (b) 支（双轴），并给出该支上一个\textbf{定理}。
+
+\begin{lemma}[双轴族的参数化与一个精确改写]\label{lem:biaxparam}
+双轴帧由三份数据决定：$\{0,\dots,4\}$ 的一个无序划分 $L_1\sqcup L_2$（$15$ 种）、
+每部顶点的符号 $\varepsilon,\eta\in\{\pm1\}$（模「整条直线同时变号」这一不改变 $G=ZZ^\top$ 的对称，恰 $8$ 类）、
+以及权 $t\ge0$ 满足 $\sum_{L_1}t_i=\sum_{L_2}t_i=1$（一个 $\Delta_{m_1-1}\times\Delta_{m_2-1}$，维数恒为 $3$）。
+组合数据共 $15\times8=120$ 类；给定一类后 $\sigma_{ij}:=[\,i,j\ \text{同线且}\ \varepsilon_i\varepsilon_j=-1\,]\in\{0,1\}$ 固定，
+$B(t)_{ij}=\sigma_{ij}\sqrt{t_it_j}$。令 $u_i=\sqrt{t_i}$、$\widetilde\Sigma:=-I_5+[\sigma_{ij}]_{A\times B}$，则
+\begin{equation}\label{eq:biaxred}
+\lambda_{\max}\bigl(B(t)\bigr)=1+\lambda_{\max}\bigl(D_u\widetilde\Sigma D_u\bigr),
+\qquad u\in S^{m_1-1}_+\times S^{m_2-1}_+\subset\R^5 .
+\end{equation}
+于是 \eqref{eq:frame5} 在双轴支上等价于：对 $120$ 个固定的 $\pm1/0$ 矩阵 $\widetilde\Sigma$，
+$\max_{u\in S^{m_1-1}_+\times S^{m_2-1}_+}\lambda_{\max}(D_u\widetilde\Sigma D_u)\le\frac14$。
+\end{lemma}
+
+\begin{proof}
+$I_5-ZZ^\top$ 的跨线元恒为 $0$（两线正交），同线元为 $-\varepsilon_i\varepsilon_j\sqrt{t_it_j}$，
+故 $(P\circ\Sigma)_{ij}=(-\langle z_i,z_j\rangle)_+=\sigma_{ij}\sqrt{t_it_j}$，对角为 $1-t_i=1-u_i^2$；
+而 $B(t)=I_5-D_{u^2}+[\sigma_{ij}u_iu_j]=I_5+D_u\widetilde\Sigma D_u$，平移 $I_5$ 即得 \eqref{eq:biaxred}。
+$\sum_{L_k}t_i=1$ 就是引理~\ref{lem:planar}(b) 的结论。
+\end{proof}
+
+\begin{proposition}[等分双轴构型的精确穷举]\label{prop:biaxenum}
+在引理~\ref{lem:biaxparam} 的 $120$ 类中取\textbf{等分点} $t^\ast_i=1/|L_{k(i)}|$，
+则 $B(t^\ast)$ 全为有理矩阵，且：
+\begin{enumerate}[label=(\roman*),leftmargin=2em]
+\item 对全部 $120$ 个构型，$\frac54I_5-B(t^\ast)\succeq0$，由\textbf{全部 $31$ 个主子式在 $\Q$ 上非负}判定
+（Bareiss 精确分数行列式，无浮点）；
+\item 其中\textbf{恰 $3$ 个}满足 $\det(\frac54I_5-B(t^\ast))=0$，即 $\lambda_{\max}=\frac54$ 精确取等；
+这 $3$ 个的权向量都是 $(\frac14,\frac14,\frac14,1,\frac14)$ 型，孤原子（权 $1$）分别落在 $B$ 部的三个顶点之一，
+$A$ 部两点恒为 $\frac14$；
+\item 其余 $117$ 个构型的 $\lambda_{\max}$ 严格小于 $\frac54$，第二大的取值为
+$\frac{3+\sqrt3}{4}=1.183012701892$，第三、第四为 $1.138071187458$、$\frac{3+\sqrt2}{4}=1.103553390593$。
+\end{enumerate}
+故 $\max\{\lambda_{\max}(B(t^\ast)):\ 120\ \text{个等分构型}\}=\frac54$，\textbf{已证且精确}。
+\end{proposition}
+
+\begin{remark}[等分点之外的双轴族]\label{rmk:biaxfull}
+命题~\ref{prop:biaxenum} 只覆盖 $t$ 的等分点。整个双轴族是 $120$ 个 $3$ 维问题。
+数值上：对每类取 $30000$ 个随机 $t$（共 $3\,600\,000$ 点），\textbf{没有任何一点}使
+$\lambda_{\max}(B(t))$ 超过等分点的值 $\frac54$；另一套独立的 $187\,614$ 点双轴扫描给
+$\sup\lambda_{\max}=1.249993448627<\frac54$（未命中等分点）。$120$ 类中\textbf{没有}一类超过 $\frac54+10^{-10}$。
+我一度以为可以用凹性把等分点升级为全族：$t\mapsto B(t)$ 确实逐条目凹
+（$\sqrt{t_it_j}$ 凹、对角线性），但 $\lambda_{\max}$ 对矩阵是\textbf{凸}的，
+逐条目单调性（Perron）给的方向与凸性给的方向接不起来；
+实测 $360\,000$ 对中 $57\,149$ 对（$15.9\%$）违反凹性，故\textbf{凹性论断被否证}，
+「临界点即全局最大点」不可用。等分点处切空间方向导数 $<10^{-4}$ 的类有 $82/120$，
+另外 $38$ 类等分点不是临界点（最大方向导数 $0.244$），所以也不能靠 KKT 统一处理。
+双轴支的全族证明仍是\textbf{未解决}的，但由 \eqref{eq:biaxred} 它已化为
+$120$ 个「乘积球面上二次型最大特征值 $\le\frac14$」的标准问题，每个只有 $3$ 维。
+\end{remark}
+
+\subsection{一条覆盖 $99.83\%$ 帧的 Schur 补充分条件}\label{sec:schur}
+
+\begin{proposition}[Schur 型充分条件]\label{prop:schurcond}
+$\lambda_{\max}(B(Z))\le\frac54$ 等价于 $\operatorname{diag}(\frac14+t_i)\succeq C_{\mathrm{full}}$
+（其中 $C_{\mathrm{full}}$ 是 $B$ 的off-diagonal 部分）。由 Schur 补，它的一个\textbf{充分}条件是
+\begin{equation}\label{eq:schurS}
+L(Z):=\sum_{i\in A}\sum_{j\in B}
+\frac{(-\langle z_i,z_j\rangle)_+^{\,2}}{(\frac14+t_i)(\frac14+t_j)}\ \le\ 1 .
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+$(\frac54)I-B=\operatorname{diag}(\frac14+t_i)-C_{\mathrm{full}}$，故等价性是显然的。
+写 $C_{\mathrm{full}}=\left(\begin{smallmatrix}0&C_0\\ C_0^\top&0\end{smallmatrix}\right)$、
+$D_A=\operatorname{diag}(\frac14+t_i)_{i\in A}$、$D_B=\operatorname{diag}(\frac14+t_j)_{j\in B}$。
+Schur 补给出 $D_B-C_0^\top D_A^{-1}C_0\succeq0\Rightarrow$ 原式 $\succeq0$。对任意 $y\in\R^3$，Cauchy--Schwarz 给
+\[
+\sum_{i\in A}\frac{\bigl(\sum_jC_{ij}y_j\bigr)^2}{\frac14+t_i}
+\le\Bigl[\sum_{i\in A}\sum_{j\in B}\frac{C_{ij}^2}{(\frac14+t_i)(\frac14+t_j)}\Bigr]
+\Bigl[\sum_{j\in B}\Bigl(\frac14+t_j\Bigr)y_j^2\Bigr],
+\]
+方括号第一项即 $L(Z)$，故 $L(Z)\le1$ 蕴含 $C_0^\top D_A^{-1}C_0\preceq D_B$。
+\end{proof}
+
+\eqref{eq:schurS} 在双轴取等帧处\textbf{取等}（$L(Z^\ast)=1$，四项各 $\frac{1/16}{1/4}=\frac14$），
+所以它是一个 sharp 的充分条件，不是随手放缩。但它在整体上\textbf{不成立}：
+
+\begin{center}
+\begin{tabular}{l r r r}
+\toprule
+帧族 & 有效帧数 & $\sup\lambda_{\max}(B)$ & $\sup L$（$>1$ 的帧数）\\
+\midrule
+Haar 随机 $\mathrm{St}(5,2)$ & $400\,000$ & $1.243115922865$ & $1.103649143330$（$527$）\\
+双轴（含非等分 $t$） & $187\,614$ & $1.249993448627$ & $1.117916903090$（$1056$）\\
+一原子近零（近退化） & $200\,000$ & $1.199539238870$ & $0.970453199530$（$0$）\\
+近等角簇 & $150\,000$ & $1.236725364068$ & $0.994022138633$（$0$）\\
+\midrule
+合计 & $937\,614$ & $\mathbf{1.249993448627}$（违例 $\mathbf0$） & $1.117916903090$（违例 $1583$，$0.169\%$）\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{remark}[诚实的解读]\label{rmk:schur}
+(i) \eqref{eq:schurS} 把一条矩阵不等式换成一条\textbf{标量}不等式，并在 $99.831\%$ 的帧上成立；
+逻辑一致性检查（「$L\le1$ 却 $\lambda_{\max}>\frac54$」的帧数）为 $\mathbf0$，说明推导本身没有错。
+(ii) 但 $\sup L=1.1179>\!1$，所以它\textbf{不是}证明。失效集中在双轴族（$0.56\%$）与 Haar 族（$0.13\%$），
+近退化与近等角两族则\textbf{完全}被覆盖——这提示失效区的几何是「两条直线上各有多个原子」。
+(iii) Cauchy--Schwarz 那步的等号条件是 $y_j\propto C_{ij}/(\frac14+t_j)$，比例常数依赖于 $i$，
+而 $A$ 部有两个 $i$，所以 C--S \emph{不可能}对两个 $i$ 同时取等——这正是 $\sup L>1$ 却仍有
+$\lambda_{\max}\le\frac54$ 的原因，也指出了改进方向：不要用标量 C--S，
+而要直接处理 $2\times2$ 的 Schur 条件 $D_A-C_0D_B^{-1}C_0^\top\succeq0$（它只需要 $2$ 个行列式条件，
+且等价于原命题，见引理~\ref{lem:biaxparam} 的 \eqref{eq:biaxred}）。
+\end{remark}
+
+\subsection{本轮被定量否证的候选上界}\label{sec:refuted5}
+
+下面每一条都给出了\textbf{具体反例帧/点}与\textbf{超出量}，不是「试了没成功」。
+它们的共同点是：都能在取等帧 $Z^\ast$（或 $p^\ast$）处达到 $\frac54$，
+但在别处超出——即取等点是\emph{非泛型}的，任何「一致放缩」都会被别的构型顶穿。
+
+\begin{center}\small
+\begin{tabular}{p{0.30\textwidth} p{0.30\textwidth} p{0.30\textwidth}}
+\toprule
+候选上界 & 反例处的值 & 失效机制\\
+\midrule
+无权 Collatz 行和 $\max_i\sum_jB_{ij}$ & $1.366025=\frac{1+\sqrt3}2$（帧 $t=(\frac12,1,\frac16,\frac16,\frac16)$，超出 $0.1160$；该帧真值 $\frac{4+\sqrt{10}}6=1.193712943361$） & 行和把「同部元为 $0$」与对角的信息一并平均掉\\
+加权 Collatz，权 $h_i=1/\sqrt{t_i}$：$\max_i(1-t_i+t_iW_i)$，$W_i=\sum_{j\in\text{对部}}(-\cos\Delta_{ij})_+$ & $2.000000$（同一帧，Parseval 缺陷恰为 $0$，超出 $0.75$；真值 $1.193712943361$）
+ & 该帧的真 $\lambda_{\max}$ 反而很低，说明 Collatz 权选错；它在 $Z^\ast$ 处\emph{取等}，故不能通过换权整体修复\\
+块界 $\Psi=\frac{\lambda_A+\lambda_B}2+\sqrt{\bigl(\frac{\lambda_A-\lambda_B}2\bigr)^2+\sigma_{\max}(C)^2}$ & $1.500000$（帧 $t=(0,\frac12,\frac34,\frac34,0)$，缺陷 $2.2\times10^{-16}$，超出 $0.25$；真值恰为 $1.000000$） & 丢掉对角与跨块的耦合；$\sigma_{\max}(C)^2\le(\frac14+\min_At)(\frac14+\min_Bt)$ 不成立\\
+无指示器版 Schur 条件 $L^+=\sum\langle z_i,z_j\rangle^2/[(\frac14+t_i)(\frac14+t_j)]\le1$ & $1.063770$（等角五框架 $t_i\equiv\frac25$，超出 $0.063770$；同一帧带指示器版 $L=0.991445\le1$、真值 $1.160503415378$） & 丢掉 $(\cdot)_+$ 的正交结构；带指示器版 $\sup L=1.117916903$ 仍 $>1$\\
+秩二块对角优占 $\mathbf{B7}(\theta)=\Lam_3(D+sH(\theta))$，$H(\theta)=\theta e_Ae_A^\top+\theta^{-1}e_Be_B^\top$，$\theta\in[\frac1{12},12]$ & $\sup_\theta=1.999999999908$；在 $p^\ast$ 处 $\min_\theta\mathbf{B7}=1.750000$（$\theta=1$），均匀点处 $=1.579796$ & 用 $H\succeq e_Ae_B^\top+e_Be_A^\top$ 的 AM--GM 丢掉太多；连取等点都盖不住\\
+配套下界型 $\mathbf{B4}(\theta)=1-(\lambda_4{+}\lambda_5)(D-sH(\theta))$（Ky Fan 最小原理） & $\sup_\theta=1.586391152793$；$p^\ast$ 处 $\min_\theta=1.500000$，均匀点处 $=1.579796$ & 同上\\
+秩一优占 $\mathbf{B3}=\Lam_3(\operatorname{diag}(p)+\sqrt{ab}\,gg^\top)$，$g=(e_A{+}e_B)/\sqrt2$ & $\sup=1.499999999884$，$50.54\%$ 的点 $>\frac54$ & 丢掉 $R$ 的负特征值 $-\sqrt{ab}$；与 $\mathbf{B1}$ 同值，说明负部信息在此形式下完全损失\\
+Ky Fan 界 $\mathbf{B1}=1-s_2+\sqrt{ab}$ & $\sup=1.500000$，$52.56\%$ 的点 $>\frac54$ & 在 $p^\ast$ 与均匀点两处取等，故本身已是最优的 Ky Fan 型界\\
+迹--二次型界 $\mathbf{B2}$ & $\sup=1.579795897113$，$76.49\%$ 的点 $>\frac54$ & 只用 $\sum\lambda_i^2$，丢掉秩二结构\\
+$\mathbf{B1}$ 与 $\mathbf{B2}$ 的联合 $\min(\mathbf{B1},\mathbf{B2})$ & $260486/400000=65.1\%$ 的点上 $>\frac54$ & 两条界的失效区大面积重叠\\
+双轴族上 $\varphi(t)=\lambda_{\max}(B(t))$ 的凹性 & $360\,000$ 对中 $57\,149$ 对（$15.9\%$）违反 & $\lambda_{\max}$ 对矩阵是凸的，与逐条目凹接不起来\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{remark}[从否证清单读出的方法论结论]\label{rmk:lesson5}
+$\frac54$ 这个常数由\textbf{两个}互不相容的机制同时饱和：
+$p^\ast=(\frac14,\frac14,\frac14,0,\frac14)$ 处的边界退化（一个原子权为零，问题降到 $N=4$，
+即定理~\ref{thm:ladder}(ii) 的 $\frac54$），以及 $Z^\ast$ 处的双轴正交配对（$z_0=z_1=-z_2=-z_4$、$z_3\perp$）。
+任何只用\emph{谱}信息（$\tr M$、$\sum\lambda^2$、Ky Fan 型不等式）或只用\emph{逐条目}信息
+（Collatz、行和、$\ell_1$、Schur 标量化）的界，都只能抓住其中一个机制，因而在另一个机制的构型上被顶穿。
+这解释了为什么这一族方法\textbf{系统性地}失败，也说明证明必须\emph{同时}使用
+「秩二 $+$ 惯性」（命题~\ref{prop:k23rank2}）与「倍角--矩参数化」\eqref{eq:moment2} 两套结构。
+\end{remark}
+
+\subsection{本轮突破：完全二部掩码的全局闭合}\label{sec:bipglobal}
+
+第~\ref{sec:k23}--\ref{sec:refuted5} 节的全部工作都把阶数钉死在 $N=5$：要么在一个 $4$ 维单纯形上研究一个
+五次方程的两个最小根（命题~\ref{prop:k23poly}），要么等价地在 $\mathrm{St}(5,2)$ 上研究一个 $5\times5$
+矩阵的最大特征值（命题~\ref{prop:framered}）。本节把方向\textbf{反过来}：不固定 $N$，而是对\emph{一切}
+完全二部掩码 $I+A(K_{a,b})$、\emph{一切}阶数 $N=a+b\ge4$、\emph{一切}权 $p\in\Delta_{N-1}$，
+用四步初等论证直接证明 $\Lam_3\le\frac54$。四步依次是：秩二分解与 Sylvester 惯性律、
+Weyl 型逐特征值下界、尾和记账、以及长期方程之根的一条核心引理。整个证明\textbf{不含搜索、
+不含半定规划、不含任何逐阶算法}，也不使用第~\ref{sec:frame}--\ref{sec:schur} 节的 Grassmannian 归约，
+因此它把 \eqref{eq:frame5} 从主线的关键路径上摘掉了（注~\ref{rmk:bipvsframe}）。
+更重要的是，这是一条对\emph{所有} $N$ 同时成立的\textbf{全局}陈述，而不是「算到某一阶为止」的有限核验；
+它与第~\ref{sec:kappa} 节 $\kappa_3\le\rho_0$ 的表述在方向上是一致的：先把一大族掩码\emph{一次性}关掉，
+再数还剩几个例外。
+
+\begin{definition}[本节记号]\label{def:bip}
+设 $a,b\ge1$、$N=a+b\ge4$，$\mathcal A=\{1,\dots,a\}$、$\mathcal B=\{a+1,\dots,N\}$，
+$\Sigma=I_N+A(K_{a,b})$（即 $\Sigma_{ij}=1$ 当且仅当 $i=j$ 或 $i,j$ 分属两部）。
+对 $p\in\Delta_{N-1}$ 记 $x=\sqrt p$（逐元素开方）、$M=M_p=D_x\Sigma D_x$，
+其特征值降序排列为 $\lambda_1\ge\lambda_2\ge\cdots\ge\lambda_N$；记 $q^\downarrow$ 为 $p$ 的降序重排，
+$\alpha=\sum_{i\in\mathcal A}p_i$、$\beta=\sum_{j\in\mathcal B}p_j$（$\alpha+\beta=1$），并定义两个关键量
+\begin{equation}\label{eq:sig4}
+\sigma_4(p):=\sum_{j=5}^{N}q^\downarrow_j\quad\bigl(\text{最小的 }N-4\text{ 个权之和；}N=4\text{ 时取 }0\bigr),
+\qquad s:=-\lambda_N\ \ge\ 0 .
+\end{equation}
+（$s\ge0$ 由引理~\ref{lem:bipweyl} 保证；$N=5$ 时 $\sigma_4(p)=p_{\min}$。）
+因为 $\tr M=\sum_ip_i=1$，所以
+\begin{equation}\label{eq:tail}
+\Lam_3(M)=\lambda_1+\lambda_2+\lambda_3=1-\sum_{i\ge4}\lambda_i ,
+\end{equation}
+即\textbf{上界问题完全等价于尾和的下界问题}。本节的全部内容就是给 $\sum_{i\ge4}\lambda_i$ 一个足够好的下界。
+\end{definition}
+
+\begin{lemma}[秩二分解与惯性]\label{lem:biprank}
+$M=\operatorname{diag}(p)+R$，其中 $R_{ij}=x_ix_j$（$i,j$ 分属两部）、否则 $R_{ij}=0$。
+令 $\mathbf a:=x$、$S:=\operatorname{diag}(\underbrace{1,\dots,1}_{a},\underbrace{-1,\dots,-1}_{b})$。则
+\begin{equation}\label{eq:rank2}
+R=\tfrac12\bigl(\mathbf a\mathbf a^\top-(S\mathbf a)(S\mathbf a)^\top\bigr),\qquad
+v^\top Rv=\tfrac12\Bigl[(\mathbf a^\top v)^2-\bigl((S\mathbf a)^\top v\bigr)^2\Bigr]\quad(\forall v\in\R^N),
+\end{equation}
+故 $R$ 在 $\operatorname{span}\{\mathbf a,S\mathbf a\}$ 上的符号差为 $(1,1)$、在其正交补上恒为 $0$，
+即 $\operatorname{neg}(R)=1$、$\rank R\le2$。于是由 Sylvester 惯性律
+\[
+\operatorname{neg}(M)\ \le\ \operatorname{neg}(\operatorname{diag}p)+\operatorname{neg}(R)\ =\ 0+1\ =\ 1 .
+\]
+\end{lemma}
+
+\begin{proof}
+写 $\varepsilon_i=(S)_{ii}\in\{+1,-1\}$，则 $\frac12\bigl(a_ia_j-(S\mathbf a)_i(S\mathbf a)_j\bigr)
+=\frac12x_ix_j(1-\varepsilon_i\varepsilon_j)$，同部时 $\varepsilon_i\varepsilon_j=1$ 给出 $0$、
+跨部时给出 $x_ix_j$，与 $R$ 的定义逐条目相同，这就是 \eqref{eq:rank2} 的第一个等式；
+第二个等式是把 $v^\top(\cdot)v$ 展开。由此 $R$ 的像空间就是 $\operatorname{span}\{\mathbf a,S\mathbf a\}$，
+且在该二维空间上二次型是 $\frac12(u^2-w^2)$ 型（取 $u=\mathbf a^\top v$、$w=(S\mathbf a)^\top v$，
+二者在 $v$ 跑遍该空间时可独立取值），符号差 $(1,1)$。
+惯性律的一步：设 $Y$ 有 $\nu=\operatorname{neg}(Y)$，取 $V=(\text{$Y$ 的负惯性子空间})^\perp$，
+则 $\dim V=N-\nu$ 且 $Y|_V\succeq0$，于是 $(X+Y)|_V$ 的负惯性指数 $\le X|_V$ 的 $\le\operatorname{neg}(X)$，
+故 $\operatorname{neg}(X+Y)\le\operatorname{neg}(X)+\nu$。
+（这正是命题~\ref{prop:k23rank2} 在 $N=5$ 时用过的一步，此处对一般 $a,b$ 重述，因为下面要反复用它。）
+\end{proof}
+
+\begin{lemma}[Weyl 型逐特征值下界与根分布]\label{lem:bipweyl}
+设 $e_{\mathcal A}=x_{\mathcal A}/\sqrt\alpha$、$e_{\mathcal B}=x_{\mathcal B}/\sqrt\beta$（单位、正交，支撑不交），
+$e_\pm=(e_{\mathcal A}\pm e_{\mathcal B})/\sqrt2$。则
+\begin{equation}\label{eq:rank2b}
+R=\sqrt{\alpha\beta}\,\bigl(e_+e_+^\top-e_-e_-^\top\bigr)\ \succeq\ -\sqrt{\alpha\beta}\;e_-e_-^\top ,
+\end{equation}
+即 $M\succeq\operatorname{diag}(p)-\sqrt{\alpha\beta}\,e_-e_-^\top$（一个\textbf{秩一}负项）。
+由 Weyl 不等式 $\lambda_{i+j-N}(X+Y)\ge\lambda_i(X)+\lambda_j(Y)$ 取 $j=N-1$
+（此时 $\lambda_{N-1}(-\sqrt{\alpha\beta}e_-e_-^\top)=0$）得
+\begin{equation}\label{eq:weyl}
+\lambda_i(M)\ \ge\ q^\downarrow_{i+1}\qquad(i=1,2,\dots,N-1).
+\end{equation}
+特别地 $\lambda_{N-1}\ge q^\downarrow_N=p_{\min}\ge0$；与引理~\ref{lem:biprank} 的 $\operatorname{neg}(M)\le1$ 合并，
+\begin{equation}\label{eq:rootdist}
+\lambda_1,\dots,\lambda_{N-1}\ \ge\ p_{\min}\ \ge\ 0,\qquad \lambda_N=-s,\quad s\ge0,
+\end{equation}
+即 $M$ 的谱里\textbf{至多一个}负数、且它一定是最小的那个。
+\end{lemma}
+
+\begin{lemma}[秩二长期方程与单调性]\label{lem:bipsec}
+记 $\mathcal A^+=\{i\in\mathcal A:p_i>0\}$、$\mathcal B^+=\{j\in\mathcal B:p_j>0\}$，
+\begin{equation}\label{eq:AB}
+A(\lambda)=\sum_{i\in\mathcal A^+}\frac{p_i}{p_i-\lambda},\qquad
+B(\lambda)=\sum_{j\in\mathcal B^+}\frac{p_j}{p_j-\lambda},\qquad h(\lambda)=A(\lambda)B(\lambda).
+\end{equation}
+则（作为多项式恒等式）
+\begin{equation}\label{eq:secular}
+\det(\lambda I-M)=\prod_{i=1}^{N}(\lambda-p_i)\cdot\bigl[1-h(\lambda)\bigr],
+\end{equation}
+$h$ 在 $(-\infty,0)$ 上\textbf{严格递增}，$h(-\infty)=0$，$h(0^-)=|\mathcal A^+|\cdot|\mathcal B^+|$。
+因此：$s>0$ 时必有 $h(-s)=1$；且对任意 $\sigma>0$，
+\begin{equation}\label{eq:mono}
+h(-\sigma)\le1\quad\Longleftrightarrow\quad \sigma\ge s .
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+把 $M$ 按两部写成 $\begin{pmatrix}D_{\mathcal A}&x_{\mathcal A}x_{\mathcal B}^\top\\
+x_{\mathcal B}x_{\mathcal A}^\top&D_{\mathcal B}\end{pmatrix}$（$D_{\mathcal A}=\operatorname{diag}(p_i)_{i\in\mathcal A}$），
+用 Schur 补：
+\[
+\det(\lambda I-M)=\det(\lambda I-D_{\mathcal A})\det(\lambda I-D_{\mathcal B})
+\Bigl[1-x_{\mathcal A}^\top(\lambda I-D_{\mathcal A})^{-1}x_{\mathcal A}\cdot
+x_{\mathcal B}^\top(\lambda I-D_{\mathcal B})^{-1}x_{\mathcal B}\Bigr],
+\]
+而 $x_{\mathcal A}^\top(\lambda I-D_{\mathcal A})^{-1}x_{\mathcal A}=\sum_{i\in\mathcal A}\frac{p_i}{\lambda-p_i}=-A(\lambda)$
+（$p_i=0$ 的项恒为 $0$，故可限制在 $\mathcal A^+$ 上），$B$ 同理，即得 \eqref{eq:secular}
+（先在 $\lambda\notin\{p_i\}$ 上成立，两边都是多项式，故恒等）。
+单调性：$\frac{\dd}{\dd\lambda}\frac{p_i}{p_i-\lambda}=\frac{p_i}{(p_i-\lambda)^2}>0$（$p_i>0$），
+故 $A,B$ 都在 $(-\infty,0)$ 上严格递增且取正值，$h=AB$ 亦然；$h(-\infty)=0$、
+$h(0^-)=|\mathcal A^+||\mathcal B^+|$。最后，\eqref{eq:rootdist} 说明 $-s$ 是 $M$ 的唯一可能负特征值，
+而 $\prod_i(\lambda-p_i)$ 在 $\lambda<0$ 上无根（$p_i\ge0$），故 $s>0$ 时 $-s$ 只能是 $1-h$ 的根，
+即 $h(-s)=1$；严格递增立刻给出 \eqref{eq:mono}。
+\end{proof}
+\begin{lemma}[核心引理]\label{lem:core4}
+对定义~\ref{def:bip} 中的 $M=M_p$ 与 $s=-\lambda_N$，恒有
+\begin{equation}\label{eq:core}
+\boxed{\ s\ \le\ \tfrac14+\sigma_4(p)\ }
+\end{equation}
+等号成立当且仅当 $\sigma_4(p)=0$、$p$ 的四个非零分量都等于 $\frac14$、且每部各含其中两个。
+\end{lemma}
+
+\begin{proof}
+记 $m=\sigma_4(p)$、$\sigma=\frac14+m>0$、$\phi(z)=\dfrac{z}{z+\sigma}$（$z\ge0$）。
+设 $S$ 为 $p$ 的\emph{四个最大}分量的指标集、$T$ 为其余 $N-4$ 个（于是 $\sum_{i\in T}p_i=m$），
+并记 $r=|\mathcal A\cap S|$（$0\le r\le4$）、$x=\sum_{i\in\mathcal A\cap S}p_i$、
+$t=\sum_{i\in\mathcal A\cap T}p_i$、$y=\sum_{j\in\mathcal B\cap S}p_j=1-m-x$。
+目标是证 $h(-\sigma)\le1$，然后由 \eqref{eq:mono} 收口。注意
+\begin{equation}\label{eq:hUV}
+h(-\sigma)=A(-\sigma)B(-\sigma)=\Bigl(\sum_{i\in\mathcal A^+}\phi(p_i)\Bigr)
+\Bigl(\sum_{j\in\mathcal B^+}\phi(p_j)\Bigr)=:U\cdot V .
+\end{equation}
+
+\smallskip\noindent\textbf{第一步（组内 Jensen，写成纯恒等式）。}
+$\phi$ 是凹的：$\phi''(z)=-2\sigma/(z+\sigma)^3<0$。但为了不依赖凹性的一般理论，
+我们把二元 Jensen 缺陷写成显式非负分子：
+\begin{equation}\label{eq:Delta}
+\Delta(u,v):=2\phi\Bigl(\frac{u+v}{2}\Bigr)-\phi(u)-\phi(v)
+=\frac{\sigma(u-v)^2}{(u+\sigma)(v+\sigma)(u+v+2\sigma)}\ \ge\ 0 .
+\end{equation}
+四元情形由三个 $\Delta$ 链式给出（这是恒等式，不是估计）：
+\[
+4\phi(\bar z)-\sum_{i=1}^{4}\phi(z_i)=\Delta(z_1,z_2)+\Delta(z_3,z_4)
++2\,\Delta\Bigl(\frac{z_1+z_2}{2},\frac{z_3+z_4}{2}\Bigr)\ \ge\ 0,\qquad \bar z=\tfrac14\textstyle\sum z_i ;
+\]
+三元情形补一个均值原子 $\bar z$（补进去后四元的均值不变）再用四元式；一元平凡。
+于是对任何 $|G|\in\{1,2,3,4\}$ 的组 $G$，
+\begin{equation}\label{eq:gjensen}
+\sum_{i\in G}\phi(p_i)\ \le\ |G|\,\phi\Bigl(\frac{\sum_{i\in G}p_i}{|G|}\Bigr)
+\ =\ g_{|G|}\Bigl(\sum_{i\in G}p_i\Bigr),\qquad g_c(z):=\frac{cz}{z+c\sigma}.
+\end{equation}
+
+\smallskip\noindent\textbf{第二步（小组用 Jensen，大组用线性放缩）。}
+恒等式
+\begin{equation}\label{eq:philin}
+\phi(z)-\frac{z}{\sigma}=-\frac{z^2}{\sigma(z+\sigma)}\ \le\ 0
+\end{equation}
+对\emph{任意多个}原子求和都成立，故 $T$ 中那 $N-4$ 个原子（个数可以任意大）只需
+$\sum_{i\in\mathcal A\cap T}\phi(p_i)\le t/\sigma$、$\sum_{j\in\mathcal B\cap T}\phi(p_j)\le(m-t)/\sigma$；
+而 $S$ 中每部的原子数 $\le4$，可用 \eqref{eq:gjensen}。合起来：
+\begin{equation}\label{eq:UVbound}
+U\ \le\ g_r(x)+\frac{t}{\sigma},\qquad V\ \le\ g_{4-r}(y)+\frac{m-t}{\sigma}.
+\end{equation}
+这里 $r=0$ 或 $4$ 时对应的 $g$ 项按 $0$ 理解。
+
+\smallskip\noindent\textbf{第三步（Titu / Cauchy--Schwarz）。}
+把 $g_c$ 改写成 $g_c(z)=c-\dfrac{c^2\sigma}{z+c\sigma}$，则
+\[
+g_r(x)+g_{4-r}(y)=4-\sigma\Bigl[\frac{r^2}{x+r\sigma}+\frac{(4-r)^2}{y+(4-r)\sigma}\Bigr]
+\ \le\ 4-\sigma\cdot\frac{(r+4-r)^2}{x+y+4\sigma}=4-\frac{16\sigma}{x+y+4\sigma},
+\]
+其中不等式是 Titu 引理 $\sum\frac{u_i^2}{v_i}\ge\frac{(\sum u_i)^2}{\sum v_i}$。
+五个分支 $r=0,1,2,3,4$ 的缺口分子（通分后的分子，分母在 $x,y,\sigma>0$ 上恒正）分别为
+\begin{equation}\label{eq:titugap}
+16x,\quad (3x-y)^2,\quad 4(x-y)^2,\quad (x-3y)^2,\quad 16y,
+\end{equation}
+全部非负——这五式已用 \texttt{sympy} 逐个展开并判定为完全平方或正系数多项式。
+代入 $x+y=1-m$ 与 $\sigma=\frac14+m$，$x+y+4\sigma=1-m+1+4m=2+3m$，再由 \eqref{eq:UVbound}
+（注意 $\frac t\sigma+\frac{m-t}{\sigma}=\frac m\sigma$）得
+\begin{equation}\label{eq:UVsum}
+U+V\ \le\ 4-\frac{16\sigma}{2+3m}+\frac{m}{\sigma}\ =:\ \Xi(m),
+\qquad
+2-\Xi(m)=\frac{2m(1+14m)}{(2+3m)(1+4m)}\ \ge\ 0 .
+\end{equation}
+分母 $(2+3m)(1+4m)$ 的系数全正、分子 $2m(1+14m)$ 在 $m\ge0$ 上非负，故
+\begin{equation}\label{eq:UVle2}
+U+V\le2,\qquad\text{等号}\iff m=\sigma_4(p)=0 .
+\end{equation}
+
+\smallskip\noindent\textbf{第四步（AM--GM 与收口）。}
+$UV=\bigl(\frac{U+V}{2}\bigr)^2-\bigl(\frac{U-V}{2}\bigr)^2\le\bigl(\frac{U+V}{2}\bigr)^2\le1$，
+即 $h(-\sigma)\le1$；由 \eqref{eq:mono} 得 $\sigma\ge s$，也就是 \eqref{eq:core}。
+
+\smallskip\noindent\textbf{等号条件。}要 \eqref{eq:core} 取等，必须 $h(-\sigma)=1$，
+于是 \eqref{eq:UVle2} 取等、$m=0$（$p$ 至多四个非零分量）且 $\sigma=\frac14$；
+AM--GM 取等要求 $U=V$；Titu 取等要求 $\frac{x}{r}=\frac{y}{4-r}$
+（$r\in\{1,2,3\}$；$r\in\{0,4\}$ 时由 \eqref{eq:titugap} 需 $x=0$ 或 $y=0$，与 $x+y=1-m=1$ 矛盾，故排除）。
+记公共值为 $w$，则 $x=rw$、$y=(4-r)w$、$1=x+y=4w$，即 $w=\frac14$；
+Jensen 取等要求每组内的权相等，故四个非零权全是 $\frac14$。
+最后 $U=g_r(x)=\frac{r\cdot r/4}{r/4+r/4}=\frac r2$、$V=\frac{4-r}{2}$，$U=V$ 给出 $r=2$。
+反向：$a,b\ge2$、每部各取两个原子置权 $\frac14$（其余为 $0$）时，
+$M$ 的支撑部分是 $\frac14\bigl(I+A(C_4)\bigr)$，谱为 $\{\frac34,\frac14,\frac14,-\frac14\}$，
+其余特征值全为 $0$，故 $s=\frac14=\frac14+\sigma_4$，等号成立。
+\end{proof}
+
+\begin{theorem}[完全二部掩码的全局闭合]\label{thm:bipglobal}
+设 $a,b\ge1$、$N=a+b\ge4$、$\Sigma=I_N+A(K_{a,b})$、$p\in\Delta_{N-1}$。则
+\begin{equation}\label{eq:bipmain}
+\Lam_3\bigl(D_{\sqrt p}\,\Sigma\,D_{\sqrt p}\bigr)\ \le\ \frac54 ,
+\end{equation}
+且常数 $\frac54$ 与 $a,b,N,p$ \textbf{全无关}。取等当且仅当 $a,b\ge2$、$p$ 恰有四个非零分量、
+每部各两个且都等于 $\frac14$。特别地
+\[
+F\bigl(\Sigma_{K_{a,b}}\bigr)=\frac54\quad\textbf{精确}\ (a,b\ge2),\qquad
+F\bigl(\Sigma_{K_{a,b}}\bigr)\le\frac54\quad(a,b\ge1),
+\]
+而 $\frac54<\rho_0$（余量 $\rho_0-\frac54=0.031568197$），故\textbf{一切完全二部掩码、一切阶数}
+都无条件满足主线所需的界。这是\textbf{已证}结论，不含数值成分。
+\end{theorem}
+
+\begin{proof}
+由 \eqref{eq:rootdist}，$\lambda_4,\dots,\lambda_{N-1}\ge0$；由 \eqref{eq:weyl}，
+$\lambda_i\ge q^\downarrow_{i+1}$（$i=4,\dots,N-1$）。于是尾和
+\begin{equation}\label{eq:tailbd}
+\sum_{i\ge4}\lambda_i\ \ge\ \sum_{j=5}^{N}q^\downarrow_j\ +\ \lambda_N
+\ =\ \sigma_4(p)-s\ \overset{\eqref{eq:core}}{\ge}\ \sigma_4(p)-\Bigl(\frac14+\sigma_4(p)\Bigr)=-\frac14 ,
+\end{equation}
+代入 \eqref{eq:tail} 得 $\Lam_3\le1+\frac14=\frac54$。
+取等要求 \eqref{eq:tailbd} 的两处不等号同时取等：一处是引理~\ref{lem:core4} 的等号条件
+（四个非零权均为 $\frac14$、每部各两个、$\sigma_4=0$），另一处是 $\lambda_i=q^\downarrow_{i+1}$（$i\ge4$）；
+后者在前者的构型下自动成立（此时 $\lambda_4=\dots=\lambda_{N-1}=0=q^\downarrow_5=\dots=q^\downarrow_N$）。
+下界方向：把权集中到每部各两个原子上，得到的支撑块是 $\frac14(I+A(C_4))$，
+$\Lam_3=\frac34+\frac14+\frac14=\frac54$（与定理~\ref{thm:ladder}(ii) 的 $\kappa_3(4)=\frac54$ 是同一件事），
+故 $a,b\ge2$ 时 $F=\frac54$ 精确。
+\end{proof}
+
+\begin{corollary}[$N=5$ 层的无条件闭合]\label{cor:n5uncond}
+$\kappa_3(5)\le\rho_0$ \textbf{无条件成立}，且 $F(\Sigma_{K_{2,3}})=\frac54$ \textbf{精确}。
+\end{corollary}
+
+\begin{proof}
+$K_{2,3}$、$K_{1,4}$、$K_{2,2}$ 都是 $N=5$ 的完全二部掩码，定理~\ref{thm:bipglobal} 给出 $F\le\frac54$；
+下界由「把 $p_5$ 置零则 $\Sigma_{K_{2,3}}$ 退化为 $I+A(C_4)$」得到（注~\ref{rmk:faces}），
+故 $F(\Sigma_{K_{2,3}})=\frac54<\rho_0$。于是定理~\ref{thm:n5frame} 的逻辑链中
+最后一环由「未证」变成「已证」：
+\[
+\begin{gathered}
+\kappa_3(5)\le\max_{34\ \text{类}}F(\Sigma)\ \textbf{[已证]}\quad\wedge\quad
+\text{其余 }33\text{ 类 }F\le\Omega\le\rho_0\ \textbf{[已证，精确有理证书]}\\
+\wedge\quad F(\Sigma_{K_{2,3}})=\tfrac54<\rho_0\ \textbf{[已证]} .
+\end{gathered}
+\]
+数值上逐类 $\max F=1.253197265=\frac{9+4\sqrt6}{15}=\kappa_3(5)$，比 $\rho_0$ 低 $2.84\times10^{-2}$。
+\end{proof}
+
+\begin{remark}[与 \eqref{eq:frame5}、$(\ast_5)$ 的关系]\label{rmk:bipvsframe}
+两条路线的难度不在一个量级上，值得说清楚。
+(i) \eqref{eq:frame5} 是「固定 $N=5$、把权变量换成 $\mathrm{St}(5,2)$ 上的框架、
+再证一个 $5\times5$ 矩阵的最大特征值 $\le\frac54$」；它的取等点 $Z^\ast$ 是\emph{非退化}的
+（谱 $\{\frac54,\frac34,\frac34,\frac14,0\}$ 五个值都不为零），第~\ref{sec:refuted5} 节的十条候选界
+全部被顶穿，正说明「解释这个取等点」有多难。
+(ii) 定理~\ref{thm:bipglobal} 不换变量，而是直接在 $M_p$ 上走「秩二分解 $\to$ Weyl 逐特征值下界
+$\to$ 尾和记账 $\to$ 长期方程单调性」四步，把一个 $N$ 维非凸极值问题压缩成\emph{一个}标量不等式
+\eqref{eq:core}，而后者只用 \eqref{eq:Delta}、\eqref{eq:philin}、Titu 与 AM--GM 四条初等不等式。
+关键在于取等构型（四个 $\frac14$、其余为零）使 $m=\sigma_4=0$，
+于是「$T$ 部原子」整块消失、Titu 与 AM--GM 同时取等——取等是被\emph{解释}的，不是被硬凑出来的。
+这也回答了注~\ref{rmk:lesson5} 的方法论诊断：那条诊断对\emph{一致放缩}成立，
+而定理~\ref{thm:bipglobal} 不是放缩，它保留了完整的秩二结构与尾和记账。
+(iii) 因此 \eqref{eq:frame5} 与旧的 $(\ast_5)$ 一起\textbf{退出关键路径}、降级为独立兴趣。
+请注意方向：本定理\emph{不}蕴含 \eqref{eq:frame5}（后者是关于 $B(Z)$ 而不是关于 $M_p$ 的陈述，
+而且已由命题~\ref{prop:biaxsharp} 知其常数 sharp），它只是使 \eqref{eq:frame5} 变得\textbf{不再必要}。
+第~\ref{sec:frame}--\ref{sec:schur} 节的内容全部保留，作为 Grassmannian 恒等式（命题~\ref{prop:grassid}）
+的应用示范与同一常数的第二种独立表述；定理~\ref{thm:n5frame} 保留原状并加注为「已被超越」。
+\end{remark}
+
+\begin{lemma}[完全多部掩码的秩 $k$ 长期方程与惯性]\label{lem:mpsec}
+设 $\Sigma=I_N+A(K_{n_1,\dots,n_k})$（$k$ 部、$\sum_{t}n_t=N$、各部指标集 $P_1,\dots,P_k$），
+$M=D_{\sqrt p}\Sigma D_{\sqrt p}$，$x^{(t)}=x\cdot\mathbf 1_{P_t}$、$c_t=\|x^{(t)}\|=\sqrt{\alpha_t}$
+（$\alpha_t=\sum_{i\in P_t}p_i$），$A_t(\lambda)=\sum_{i\in P_t,p_i>0}\frac{p_i}{p_i-\lambda}$。则
+\begin{equation}\label{eq:mpsec}
+\det(\lambda I-M)=\prod_{i=1}^{N}(\lambda-p_i)\cdot\prod_{t=1}^{k}\bigl(1-A_t(\lambda)\bigr)
+\cdot\Bigl[\,1+\sum_{t=1}^{k}\frac{A_t(\lambda)}{1-A_t(\lambda)}\Bigr],
+\end{equation}
+等价地（在 $\prod_t(1-A_t)\ne0$ 处）
+\begin{equation}\label{eq:mpsec2}
+\sum_{t=1}^{k}\frac{1}{1-A_t(\lambda)}\ =\ k-1 ;
+\end{equation}
+$k=2$ 时 \eqref{eq:mpsec2} 化归为 $A_1A_2=1$，即引理~\ref{lem:bipsec}。
+此外 $R=\sum_{s\ne t}x^{(s)}(x^{(t)})^\top$ 在 $\operatorname{span}\{x^{(1)},\dots,x^{(k)}\}$ 上的限制
+正合同于 $D_c(J_k-I_k)D_c$（$c=(c_1,\dots,c_k)$、$J_k$ 全一矩阵），
+而 $\operatorname{spec}(J_k-I_k)=\{k-1,-1\}$，正对角缩放不改变惯性，故
+\begin{equation}\label{eq:mpinertia}
+\operatorname{inertia}(R)=(1,\,k-1),\qquad \operatorname{neg}(M)\ \le\ k-1 .
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+因为 $R=xx^\top-\sum_tx^{(t)}(x^{(t)})^\top=\sum_{s\ne t}x^{(s)}(x^{(t)})^\top$，
+令 $F=[f_1|\cdots|f_k]$（$f_t=x^{(t)}/c_t$，列正交归一），则 $R=F\,B\,F^\top$、$B=D_c(J_k-I_k)D_c$。
+秩 $k$ 更新的行列式引理给
+\[
+\det(\lambda I-M)=\det(\lambda I-D_p)\cdot\det\bigl(I_k-B\,F^\top(\lambda I-D_p)^{-1}F\bigr),
+\]
+而 $F^\top(\lambda I-D_p)^{-1}F$ 是\emph{对角}的：
+$\bigl(F^\top(\lambda I-D_p)^{-1}F\bigr)_{tt}=\frac1{c_t^2}\sum_{i\in P_t}\frac{p_i}{\lambda-p_i}
+=-\frac{A_t(\lambda)}{c_t^2}$（非对角元为 $0$，因 $f_s\perp f_t$）。
+于是 $BF^\top(\lambda I-D_p)^{-1}F=-D_c(J_k-I_k)\operatorname{diag}(A_t/c_t)$，
+其 $(s,t)$ 元（$s\ne t$）为 $-c_sA_t/c_t$、对角元为 $0$，故
+\[
+\det\bigl(I_k-BF^\top(\cdot)F\bigr)=\det\Bigl[\bigl(I_k-\operatorname{diag}(A_t)\bigr)+\mathbf c\,\mathbf w^\top\Bigr]
+=\prod_t(1-A_t)\cdot\Bigl[1+\sum_t\frac{A_t/c_t}{1-A_t}\cdot\frac{c_t}{1}\Bigr],
+\]
+其中用了 $\det(D+uv^\top)=\det D\,(1+v^\top D^{-1}u)$、$\mathbf w=(A_t/c_t)$，
+即得 \eqref{eq:mpsec}；再由 $\frac1{1-A_t}=1+\frac{A_t}{1-A_t}$ 求和即得 \eqref{eq:mpsec2}。
+惯性部分：$R$ 在 $\operatorname{span}\{x^{(t)}\}$ 上的 Gram 表示是 $B_{st}=c_sc_t(1-\delta_{st})=D_c(J_k-I_k)D_c$，
+在其正交补上为 $0$，故 $\operatorname{inertia}(R)=\operatorname{inertia}(J_k-I_k)=(1,k-1)$；
+配引理~\ref{lem:biprank} 证明中的那条惯性律即得 $\operatorname{neg}(M)\le k-1$。
+\end{proof}
+
+\begin{remark}[$k\ge3$ 时的确切障碍在哪里（诚实标注）]\label{rmk:mpopen}
+上面的四步论证在 $k\ge3$ 时\textbf{断在第二步}，断点非常明确：
+$\operatorname{neg}(R)=k-1$ 意味着 $R$ 不再是「秩一负项 $+$ 半正项」，
+Weyl 的指标平移从 $1$ 变成 $k-1$，只能得到 $\lambda_i(M)\ge q^\downarrow_{i+k-1}$（$i\le N-k+1$），
+尾和界随之退化为 $\sum_{i\ge4}\lambda_i\ge\sigma_{4+k-2}(p)-$（$k-1$ 个负根之和），
+而核心引理那种「一个标量 $s$」的记账不再可用。这不是技术细节，而是这条证法的\textbf{结构性}边界。
+数值状态（证书 G 段，每类 $15$ 万组随机权 $+$ 多起点上升，\textbf{数值}，非证明）：
+\[
+\begin{array}{l|llll}
+\text{掩码} & K_{1,2,2}(N{=}5) & K_{1,1,2,2}(N{=}6) & K_{2,2,2}(N{=}6) & K_{1,2,3}(N{=}6)\\
+\hline
+\sup\Lam_3 & 1.2530756675 & 1.2526703644 & 1.2523919861 & 1.2500767598
+\end{array}
+\]
+全部落在 $\bigl[\frac54,\ \frac{9+4\sqrt6}{15}\bigr]$ 内且\textbf{严格低于} $\rho_0$（余量 $\ge2.85\times10^{-2}$）。
+其中 $K_{1,2,2}$ 的数值上确界与 $\kappa_3(5)=\frac{9+4\sqrt6}{15}=1.2531972647$ 只差 $1.2\times10^{-4}$，
+提示 $\kappa_3(5)$ 的取等类可能正是它（$C_{4v}$-Ansatz 的对称类），但这是\textbf{数值}观察，未证。
+另外两条否定性信息同样值得记录：这一族上 $\max\tr\bigl((-M)_+\bigr)=0.3726336456$（$K_{2,2,3}$，$N=7$），
+远大于 $\tau=0.2815681969$，所以被命题~\ref{prop:A2no} 否证掉的 A2 型负质量凸化在这里\textbf{同样无效}；
+而 $\min_p\sum_{i\ge4}\lambda_i=-0.2524$（$K_{1,2,2}$），比定理~\ref{thm:bipglobal} 所需的 $-\frac14$ 只差 $2.4\times10^{-3}$，
+说明 $k\ge3$ 的真值确实\emph{略高于} $\frac54$、任何「$\frac54$ 型」的界都不可能对 $k\ge3$ 成立。
+\end{remark}
+
+\begin{remark}[$\min(a,b)=1$ 的族：定理不 sharp，真值 $\frac65$]\label{rmk:k1b}
+$K_{1,3}$ 配 $p=\bigl(\frac25,\frac15,\frac15,\frac15\bigr)$ 给出\textbf{精确}谱
+$\bigl\{\frac45,\frac15,\frac15,-\frac15\bigr\}$（\texttt{sympy} 在 $\Q$ 上算出特征多项式
+$\lambda^4-\lambda^3+\dots$ 并因式分解），于是 $\Lam_3=\frac45+\frac15+\frac15=\frac65$；
+$K_{1,b}$（$b\ge3$）都能容纳这个见证，故 $F(\Sigma_{K_{1,b}})\ge\frac65$。
+这与注~\ref{rmk:faces} 的「删 $A$ 部原子得 $I+A(K_{1,3})$、$F=\frac65$」一致。
+上界 $\frac65$ 目前\textbf{未证}（定理~\ref{thm:bipglobal} 只给 $\frac54$，松 $0.05$）。
+失败原因可以精确指出：把 $\sigma=\frac14+m$ 换成 $\sigma=\frac15+m$ 后，
+第三步在 $m=0$ 处给出的界是 $4-\frac{16\sigma}{1+4\sigma}=4-\frac{16/5}{9/5}=\frac{20}9>2$，
+第四步的 AM--GM 就再也压不到 $UV\le1$（在见证点上 $U+V=\frac23+\frac32=\frac{13}6\le\frac{20}9$ 恰好成立、
+$UV=\frac23\cdot\frac32=1$ 恰好取等，但这只是\emph{该点}的巧合，不是\emph{一致}的不等式）。
+所以 $\frac65$ 需要一条与 $\frac54$ 不同的论证；这也是为什么定理~\ref{thm:bipglobal}
+的常数 $\frac54$ 是这条证法能给出的\textbf{最优}常数。
+\end{remark}
+
+\begin{proposition}[$N=6$ 层剩下的 $19$ 个未闭合类]\label{prop:tab19}
+$N=6$ 的 $156$ 个同构类中，已闭合 $137$ 类：$134$ 类有 $\Omega\le\rho_0$ 的精确有理证书（定理~\ref{thm:ncert6}）、
+冠军类由定理~\ref{thm:champglobal} 覆盖（$F=\Omega=\rho_0$，闭式证书）、
+$K_{2,4}$ 与 $K_{3,3}$ 由定理~\ref{thm:bipglobal} 得 $F=\frac54$ \textbf{精确}
+（这两类此前只有 $\Omega=1.318182$、$1.333333>\rho_0$，故一直悬着）。
+$\Omega>\rho_0$ 的例外类从 $22$ 降到 $20$，其中未闭合的是下表 $19$ 类。
+表内 $F$ 列为\textbf{数值}（多起点上升，$\min_ip_i\le10^{-14}$，故极大化点都在边界上），
+$\Omega$ 列为已证的 SDP 上界；结构列指出该类是否为完全多部、是否含诱导 $C_5$。
+\end{proposition}
+
+\begin{center}\small
+\begin{longtable}{r l l r r l c}
+\toprule
+\# & graph6 & 度序列 & $\Omega$ & 数值 $\max F$ & 完全多部 & 含 $C_5$\\
+\midrule
+\endfirsthead
+\toprule
+\# & graph6 & 度序列 & $\Omega$ & 数值 $\max F$ & 完全多部 & 含 $C_5$\\
+\midrule
+\endhead
+1 & \texttt{EznW} & $4,4,4,4,4,4$ & $1.333333$ & $1.253197265$ & $K_{2,2,2}$ & -- \\
+2 & \texttt{EtTg} & $3,3,3,3,3,3$ & $1.333333$ & $1.251351067$ & -- & -- \\
+3 & \texttt{Ep\textasciitilde{}o} & $4,4,4,4,3,3$ & $1.310920$ & $1.250000000$ & -- & -- \\
+4 & \texttt{ErXw} & $4,4,4,3,3,2$ & $1.309612$ & $1.250000000$ & -- & -- \\
+5 & \texttt{EhdW} & $3,3,3,3,2,2$ & $1.308890$ & $1.247213595$ & -- & 是 \\
+6 & \texttt{EzNG} & $4,4,3,3,3,3$ & $1.306671$ & $1.250000000$ & -- & -- \\
+7 & \texttt{ElMg} & $4,3,3,3,3,2$ & $1.306513$ & $1.251351067$ & -- & -- \\
+8 & \texttt{EheO} & $3,3,2,2,2,2$ & $1.301608$ & $1.247213595$ & -- & 是 \\
+9 & \texttt{EhUg} & $3,3,3,3,2,2$ & $1.300000$ & $1.250000000$ & -- & -- \\
+10 & \texttt{E\}\^{}G} & $5,4,4,3,3,3$ & $1.298975$ & $1.253197265$ & $K_{3,2,1}$ & -- \\
+11 & \texttt{Ele\_} & $4,3,3,2,2,2$ & $1.295778$ & $1.251351067$ & -- & -- \\
+12 & \texttt{Exe\_} & $4,4,2,2,2,2$ & $1.295208$ & $1.251351067$ & -- & -- \\
+13 & \texttt{EYOw} & $3,3,3,2,2,1$ & $1.294118$ & $1.250000000$ & -- & -- \\
+14 & \texttt{E\^{}NG} & $4,4,3,3,3,3$ & $1.294118$ & $1.250000000$ & -- & -- \\
+15 & \texttt{EO\textasciitilde{}o} & $4,4,3,3,2,2$ & $1.294118$ & $1.250000000$ & -- & -- \\
+16 & \texttt{ErW?} & $3,3,2,2,2,0$ & $1.294118$ & $1.250000000$ & -- & -- \\
+17 & \texttt{EXSg} & $4,3,2,2,2,1$ & $1.294118$ & $1.250000000$ & -- & -- \\
+18 & \texttt{ElfO} & $4,4,3,3,2,2$ & $1.293216$ & $1.251351067$ & -- & -- \\
+19 & \texttt{El\{G} & $5,3,3,3,3,1$ & $1.288675$ & $1.216091742$ & -- & -- \\
+\bottomrule
+\end{longtable}
+\end{center}
+\begin{remark}[从表~\ref{prop:tab19} 读出的四条结构信息]\label{rmk:tab19read}
+\textbf{(i) 冠军型结构不是这 $19$ 类的共同特征。}$19$ 类里只有 $2$ 类是完全多部
+（$K_{2,2,2}$=\texttt{EznW}、$K_{1,2,3}$=\texttt{E\}\^{}G}），只有 $2$ 类含诱导 $C_5$
+（\texttt{EhdW}、\texttt{EheO}，$\Omega$ 分别 $1.308890$、$1.301608$），其余 $15$ 类两者都不是。
+所以第~\ref{sec:exh7} 节「$F=\rho_0$ 的掩码全部含诱导 $C_5$」那条观察在这里\textbf{帮不上忙}；
+这 $19$ 类必须逐个（或按新的分类）处理。
+
+\smallskip\textbf{(ii) 数值 $\max F$ 只取五个值，其中三个有闭式。}
+$\frac{9+4\sqrt6}{15}=\kappa_3(5)=1.2531972647$（$2$ 类：\texttt{EznW}、\texttt{E\}\^{}G}）；
+$\frac54$（$9$ 类）；$\frac{4+\sqrt5}{5}=1.2472135955$（$2$ 类：\texttt{EhdW}、\texttt{EheO}，
+恰是那两个含诱导 $C_5$ 的类）。另外两个值 $1.251351067$（$5$ 类）与 $1.216091742$（$1$ 类：\texttt{El\{G}）
+在 $\bigl\{(a+b\sqrt c)/d:\ 0\le b\le39,\ |a|\le119,\ 1\le d\le60,\ c\le37\text{ 无平方因子}\bigr\}$
+中\textbf{没有}匹配（穷举搜索，闭式待识别）。最大值\emph{恰好}等于 $\kappa_3(5)$，
+这与「$N=6$ 的数值极大化点退化到 $5$ 个有效原子」一致（$19/19$ 类的 $\min_ip_i\le10^{-14}$）。
+
+\smallskip\textbf{(iii) 一个把 $19$ 类一次性归约掉的观察。}若某类 $\Sigma$ 的 $F$-极大化点 $p$ 有零分量，
+则 $M_p$ 有全零行列，$\Lam_3(M_p)$ 等于对应 $5$ 阶主子块的值，而该主子块是某个 $5$ 阶掩码在 $\Delta_4$ 上的取值，
+故 $F(\Sigma)\le\max_{\Sigma'\in\mathcal S_5}F(\Sigma')\le\rho_0$——末一步正是推论~\ref{cor:n5uncond}
+（$33$ 类有理证书 $+$ $\Sigma_{K_{2,3}}$ 的 $\frac54$）。所以：
+\begin{equation}\label{eq:atom6}
+\text{「$\Sigma$ 的每个 $F$-极大化点都有零分量」}\quad\Longrightarrow\quad F(\Sigma)\le\rho_0 .
+\end{equation}
+\eqref{eq:atom6} 对全部 $19$ 类\textbf{数值成立}（$\min_ip_i\le10^{-14}$），但\textbf{未证}。
+必须注意它\emph{不能}推广到全部 $6$ 阶掩码：冠军类 $\Sigma_0$ 就是反例（其 $F$-极大化点是正权的六原子团吹起、
+$F(\Sigma_0)=\rho_0$，定理~\ref{thm:champglobal}），这也正是冠军需要单独一份闭式证书的原因。
+
+\smallskip\textbf{(iv) 比 (iii) 更弱、因此更可能证得动的一条。}引理~\ref{lem:kappamax} 与推论~\ref{cor:flipsc} 给出
+\[
+\kappa_3(6)=\max\Bigl\{\kappa_3(5),\ \sup_{\Sigma\in\mathcal S_6^{\mathrm{int}}}F(\Sigma)\Bigr\},
+\]
+其中 $\mathcal S_6^{\mathrm{int}}$ 只要求「\emph{存在}某个正权自洽见证」，不要求它是 $F$-极大化点。
+由推论~\ref{cor:n5uncond}，$\kappa_3(5)\le\rho_0$ 已无条件；$\Omega\le\rho_0$ 的 $134$ 类自动满足 $F\le\Omega\le\rho_0$；
+冠军类 $F=\rho_0$ 已证。于是
+\begin{equation}\label{eq:s6int}
+\boxed{\ \kappa_3(6)\le\rho_0\ }\qquad\Longleftarrow\qquad
+\text{表~\ref{prop:tab19} 的 }19\text{ 类}\ \cap\ \mathcal S_6^{\mathrm{int}}=\varnothing
+\end{equation}
+——即\textbf{不需要}对它们逐个求 $F$ 的上界，只需要证明「不存在正权自洽见证」。
+而引理~\ref{lem:bdryrig} 已经把这件事推进了一大步：$19$ 类中\textbf{$17$ 类没有支配点}（最大度 $\le4$），
+对这 $17$ 类，任何自洽见证都必须是正权的，故「$\notin\mathcal S_6^{\mathrm{int}}$」\emph{等价}于
+「$\Sigma$ 完全不是腔掩码」，即引理~\ref{lem:chamber} 的纯几何陈述
+\begin{equation}\label{eq:chamber6}
+\Sigma\ \ne\ 1\{Q\ge0\}\qquad\text{对一切 }Q\in\mathcal P_3(6),
+\end{equation}
+一个 $\mathrm{Gr}(3,6)$（$9$ 维）上的问题，与 $F$ 的极大化点无关。
+剩下 $2$ 类有支配点（\texttt{E\}\^{}G}$=K_{1,2,3}$ 与 \texttt{El\{G}），
+引理~\ref{lem:bdryrig} 只能排除其\emph{边界}自洽见证，需要单独处理；
+其中 $K_{1,2,3}$ 是完全多部，引理~\ref{lem:mpsec} 的秩 $k$ 长期方程正是为它准备的。
+\end{remark}
+
+
+\subsection{装配}\label{sec:assemble6}
+
+\begin{lemma}[$\kappa_3(N)$ 的极大化分解]\label{lem:kappamax}
+$\kappa_3(N)=\max\bigl\{\kappa_3(N-1),\ \sup\{F(\Sigma):\Sigma\in\mathcal S_N^{\mathrm{int}}\}\bigr\}$，
+其中 $\mathcal S_N^{\mathrm{int}}$ 是「存在\emph{正权}自洽见证」的掩码类。
+\end{lemma}
+
+\begin{theorem}[$N=5$ 与 $N=6$ 层的当前状态]\label{thm:n6closed}
+\begin{enumerate}[label=(\roman*),leftmargin=2em]
+\item $\kappa_3(3)\le\rho_0$、$\kappa_3(4)\le\rho_0$：\textbf{已证}（推论~\ref{cor:k34uncond}）。
+\item $\kappa_3(5)\le\rho_0$：\textbf{已证，无条件}（推论~\ref{cor:n5uncond}）。
+第六版之前这里是「在 \eqref{eq:frame5} 之下已证」（定理~\ref{thm:n5frame}），
+现在最后一环由定理~\ref{thm:bipglobal} 提供：$F(\Sigma_{K_{2,3}})=\frac54$ \textbf{精确}，余量 $\rho_0-\frac54=0.031568197$。
+逻辑链的每一环都是已证的：
+\[
+\begin{gathered}
+\kappa_3(5)\le\max_{34\ \text{类}}F(\Sigma)\ \textbf{[已证]}\quad\wedge\quad
+\text{其余 }33\text{ 类 }F\le\Omega\le\rho_0\ \textbf{[已证，精确有理证书]}\\
+\wedge\quad F(\Sigma_{K_{2,3}})=\tfrac54<\rho_0\ \textbf{[已证]} .
+\end{gathered}
+\]
+数值状态不变：逐类数值 $\max F=1.253197265=\frac{9+4\sqrt6}{15}=\kappa_3(5)$，比 $\rho_0$ 低 $2.84\times10^{-2}$。
+\item $\kappa_3(6)\le\rho_0$：\textbf{未证}，但缺口从 $21$ 类缩到 $19$ 类，而且\emph{性质}变了（见 (iv)）。
+$156$ 类中已闭合 $137$ 类：$134$ 类有 $\Omega\le\rho_0$ 的精确有理证书（定理~\ref{thm:ncert6}）、
+冠军类由定理~\ref{thm:champglobal} 覆盖（$F=\Omega=\rho_0$，闭式证书）、
+$K_{2,4}$ 与 $K_{3,3}$ 由定理~\ref{thm:bipglobal} 得 $F=\frac54$ \textbf{精确}
+（这两类此前只有 $\Omega=1.318182$、$1.333333>\rho_0$，一直悬着）。
+$\Omega>\rho_0$ 的例外类 $22\to20$，未闭合的 $19$ 类见命题~\ref{prop:tab19} 的完整表
+（graph6 码、度序列、$\Omega$、数值 $\max F$、是否完全多部、是否含诱导 $C_5$）。
+翻转链路线已被否证（命题~\ref{prop:kappa6red}、注~\ref{rmk:flipdead}）。
+这 $19$ 类的数值 $\max F$ 均 $\le\frac{9+4\sqrt6}{15}=1.253197265<\rho_0$（余量 $2.84\times10^{-2}$），
+且每类的数值极大化点都在单纯形边界上（$\min_ip_i\le10^{-14}$）。
+\item \textbf{主线现在只剩一个缺口，而它不再是「求上界」。}
+
+引理~\ref{lem:kappamax} 与推论~\ref{cor:flipsc} 给出
+$\kappa_3(6)=\max\{\kappa_3(5),\,\sup_{\mathcal S_6^{\mathrm{int}}}F\}$，
+而 (ii) 已使 $\kappa_3(5)\le\rho_0$ 无条件成立，$134$ 类由 $\Omega\le\rho_0$ 自动合格，冠军类已证 $F=\rho_0$，故
+\[
+\kappa_3(6)\le\rho_0\quad\Longleftarrow\quad
+\text{命题~\ref{prop:tab19} 的 }19\text{ 类}\cap\mathcal S_6^{\mathrm{int}}=\varnothing .
+\]
+其中 $17$ 类没有支配点，引理~\ref{lem:bdryrig} 已把这条\emph{等价}化为引理~\ref{lem:chamber} 的纯几何陈述
+$\Sigma\ne1\{Q\ge0\}$（对一切 $Q\in\mathcal P_3(6)$，$\mathrm{Gr}(3,6)$ 是 $9$ 维）；
+剩 $2$ 类有支配点（$K_{1,2,3}$、\texttt{El\{G}），需要单独处理，
+而 $K_{1,2,3}$ 正是引理~\ref{lem:mpsec} 的秩 $k$ 长期方程的目标。
+$N=5$ 层与\emph{一切}完全二部掩码（任意阶数）都已无条件关闭；
+\eqref{eq:frame5} 与 $(\ast_5)$ 退为独立兴趣（注~\ref{rmk:bipvsframe}）。
+\end{enumerate}
+\end{theorem}
+
+\subsection{更新后的优先队列}\label{sec:pq6}
+
+按「期望收益 $\times$ 成功概率 $/$ 代价」排序，已同步写入 \texttt{研究方法优先级协议.md}。
+本轮最大的变化是：\textbf{P1 不再是「证一条上界不等式」，而是「证一条几何不存在性陈述」}，
+因为推论~\ref{cor:n5uncond} 已经把 $\kappa_3(5)$ 关掉、定理~\ref{thm:bipglobal} 已经把全部完全二部掩码关掉。
+
+\begin{itemize}[leftmargin=1.6em,itemsep=3pt]
+\item \textbf{P1（队首）—— $N=6$ 的 $17$ 个无支配点类：证 \eqref{eq:chamber6}，即 $\Sigma\ne1\{Q\ge0\}$ 对一切 $Q\in\mathcal P_3(6)$。}
+一旦成立，引理~\ref{lem:bdryrig} 给出 $\Sigma\notin\mathcal S_6^{\mathrm{int}}$，
+再由 (iv) 的归约 $\kappa_3(6)\le\rho_0$ \textbf{立即}得证。
+\emph{为什么现在排第一}：(a) 它不含 $F$、不含权、不含极大化，是一个关于秩三投影正部符号模式的\emph{纯}陈述；
+(b) $\mathrm{Gr}(3,6)$ 只有 $9$ 维，且 $1\{Q\ge0\}$ 只能是 $156$ 个符号模式之一，
+故等价于「$17$ 个开集 $U_\Sigma=\{Q:1\{Q\ge0\}=\Sigma\}$ 全为空」；
+(c) 引理~\ref{lem:chamber} 已给出等价刻画：$\Sigma$ 是某个 Parseval 框架的\emph{非锐角图}
+（$\langle z_i,z_j\rangle\le0$ 当且仅当 $ij\in\Sigma$ 的非边），
+于是可以用\emph{钝角/非锐角框架}的现成理论（球面码、Gale 变换、$2$-design）来排除；
+(d) 具体入口：对每个 $\Sigma$，其补图 $\bar\Sigma$ 必须是某 $6$ 个向量（$\sqrt3S^2$ 上、Parseval）的\emph{非锐角图}，
+而非锐角框架在 $\R^3$ 中至多 $6$ 个向量时有强分类结果——先查文献（Danzer--Grünbaum 型钝角集、
+Ball 的正部符号模式），把可移植定理写成「移植候选」再动手。
+\item \textbf{P2 —— $2$ 个有支配点的类：$K_{1,2,3}$（\texttt{E\}\^{}G}）与 \texttt{El\{G}。}
+引理~\ref{lem:bdryrig} 对它们只能排除\emph{边界}自洽见证，内部见证未被排除。
+入口：支配点 $v$（度 $5$）意味着 $\Sigma=K_1\vee\Sigma'$，于是 $M$ 有 $\begin{pmatrix}p_v&\ast\\ \ast&\ast\end{pmatrix}$ 的结构，
+可以先做一步\emph{Schur 消元}把问题降到 $5$ 阶（$\Sigma'$ 是 $5$ 阶掩码，$N=5$ 层已完全闭合），
+剩下的只是支配点权 $p_v$ 这一个参数；引理~\ref{lem:mpsec} 的秩 $k$ 长期方程对 $K_{1,2,3}$ 直接可用（$k=3$）。
+\item \textbf{P3 —— $k\ge3$ 的尾和界（引理~\ref{lem:mpsec} 的第二步推广）。}
+障碍已精确定位（注~\ref{rmk:mpopen}）：$\operatorname{neg}(R)=k-1$ 使 Weyl 指标平移 $k-1$ 位，
+尾和记账里出现 $k-1$ 个负根而非一个。
+入口：不要对 $k-1$ 个负根分别记账，而是用\emph{秩 $k$ 长期方程} \eqref{eq:mpsec2} 直接研究
+$\sum_{t}\frac1{1-A_t}=k-1$ 的根之和（Viète 型），目标是 $\sum_{i\ge4}\lambda_i\ge-\frac14+\varepsilon_k$，
+其中 $\varepsilon_k>0$ 由数值给出（$k=3$ 时 $\min\sum_{i\ge4}\lambda_i=-0.2524$，故 $\varepsilon_3$ 至多 $2.4\times10^{-3}$，很小）。
+\textbf{诚实提示}：注~\ref{rmk:mpopen} 已说明 $k\ge3$ 的真值\emph{略高于} $\frac54$，
+所以这一条不可能靠「$\frac54$ 型」的界完成，必须真的改进尾和。
+\item \textbf{P4 —— $N\ge7$ 的有效原子化约}（注~\ref{rmk:ladderinfo}(2)、\eqref{eq:atom6} 的推广）。
+数值支持很强（$N=8$ 时冠军末两位权为 $3\times10^{-6}$、$2\times10^{-7}$；$19/19$ 个 $N=6$ 类 $\min_ip_i\le10^{-14}$），
+但\textbf{没有}证明思路，而且 \eqref{eq:atom6} 对冠军类是\emph{假}的，
+所以正确形式只能是「若 $\Sigma$ 的极大化点是正权的，则 $\Sigma$ 必含诱导 $C_5$ 且自洽」（定理~\ref{thm:selfcons} 的方向）。
+\item \textbf{P5 —— $\min(a,b)=1$ 族的真值 $\frac65$}（注~\ref{rmk:k1b}）。
+下界精确（$K_{1,3}$ 的有理见证，谱 $\{\frac45,\frac15,\frac15,-\frac15\}$），上界未证；
+定理~\ref{thm:bipglobal} 的证法在此松 $0.05$，且注~\ref{rmk:k1b} 已精确指出失效点
+（$\sigma=\frac15$ 时第三步给 $\frac{20}9>2$，AM--GM 断掉）。副线，收益是「一族掩码的精确值」。
+\item \textbf{P6 —— 联合不等式 $\alpha+\ell\le2\rho_0$}（注~\ref{rmk:rigiditylimit} 的「第四条不等式」）。
+命题~\ref{prop:A2no} 之后这是唯一还活着的凸化型入口；不含秩三结构，优先级最低。
+\item \textbf{P7 —— 重写定理~\ref{thm:reduce} 的规范化证明}（注~\ref{rmk:normcaution}）。纯技术性，不影响主线。
+\end{itemize}
+
+\begin{remark}[两条已经死掉、不要再试的路线]\label{rmk:deadroutes}
+(i) \textbf{一致放缩型上界}：第~\ref{sec:refuted5} 节定量否证了十条，注~\ref{rmk:lesson5} 给出了机制性解释。
+(ii) \textbf{翻转链}：命题~\ref{prop:kappa6red} 与注~\ref{rmk:flipdead}，$647$ 个翻转像的 $\max\Omega=1.310920>\rho_0$。
+(iii) \textbf{A2 型负质量凸化}：命题~\ref{prop:A2no} 的 $7$ 原子精确反例；
+而且在完全多部族上同样无效（注~\ref{rmk:mpopen}：$\max\tr((-M)_+)=0.3726>\tau=0.2816$）。
+(iv) \textbf{逐阶算法核验}：定理~\ref{thm:bipglobal} 是「对一切 $N$ 同时成立」的陈述，
+这正是本研究协议要求的「数学优先、算法只用于认证」；
+$N\ge7$ 的符号模式数以 $\binom{N}{2}$ 的划分个数增长，逐阶路线在原则上不可能收工。
+\end{remark}
+
 \section{本轮新结果：通道型主函数方案的精确天花板}\label{sec:nogo}
 
 \subsection{动机}
@@ -2235,6 +3451,34 @@ $K=4$ 的见证为 $q=(4,3,4,4)/15$、$\alpha_2=121/125$、$\langle Eu,Ew\rangle
 
 \subsection{主要障碍}
 
+\paragraph{障碍 0（第六版重写，现居首位）：$N=6$ 的 $19$ 个未闭合类，即一条几何不存在性陈述}
+上一版把平面框架不等式 \eqref{eq:frame5} 列为首位障碍。定理~\ref{thm:bipglobal} 之后这条\textbf{不再是障碍}：
+它被绕开而不是被证明，$\kappa_3(5)\le\rho_0$ 已经无条件（推论~\ref{cor:n5uncond}），
+\eqref{eq:frame5} 与旧的 $(\ast_5)$ 一并降级为独立兴趣（注~\ref{rmk:bipvsframe}）。
+现在的首位障碍是命题~\ref{prop:tab19} 列出的 $19$ 个 $6$ 阶掩码类。
+它的\emph{有利}之处，也是本轮最重要的结构性收获：由注~\ref{rmk:tab19read}(iv)，
+\textbf{不需要}对这 $19$ 类逐个求 $F$ 的上界，只需证明
+\begin{equation*}
+\Sigma\ \ne\ 1\{Q\ge0\}\qquad\text{对一切 }Q\in\mathcal P_3(6)
+\end{equation*}
+（即 $\Sigma\notin\mathcal S_6^{\mathrm{int}}$，不存在正权自洽见证），$\kappa_3(6)\le\rho_0$ 就随之成立。
+其中 $17$ 类没有支配点，引理~\ref{lem:bdryrig} 已使这一步\emph{等价}；
+引理~\ref{lem:chamber} 又把它翻译成「$\Sigma$ 不是任何 Parseval 框架的非锐角图」。
+它\emph{不利}的地方有三条：(a) $\mathrm{Gr}(3,6)$ 是 $9$ 维紧流形，$17$ 个「开集为空」的断言要逐个给出理由；
+(b) 符号模式 $1\{Q\ge0\}$ 在 $Q$ 的条目过零时\emph{不连续}，
+所以「不存在」的证明必须处理退化面（这是上一轮翻转链失败的同一个原因，注~\ref{rmk:flipdead}）；
+(c) 剩下 $2$ 类有支配点，引理~\ref{lem:bdryrig} 只能排除\emph{边界}见证，内部见证需要别的论证
+（$K_{1,2,3}$ 可用引理~\ref{lem:mpsec} 的秩 $k$ 长期方程）。
+
+\paragraph{障碍 0$'$（新，第二优先）：$k\ge3$ 时的尾和记账}
+定理~\ref{thm:bipglobal} 的四步论证在完全多部、$k\ge3$ 时\textbf{断在第二步}，断点非常明确（注~\ref{rmk:mpopen}）：
+$\operatorname{neg}(R)=k-1$（引理~\ref{lem:mpsec}，已证），故 Weyl 的指标平移从 $1$ 变成 $k-1$，
+尾和里出现 $k-1$ 个负根而不是一个，「一个标量 $s$」的记账失效。
+而且这条障碍\emph{不是}技术性的：注~\ref{rmk:mpopen} 的数值显示 $\min_p\sum_{i\ge4}\lambda_i=-0.2524$
+（$K_{1,2,2}$），比 $-\frac14$ 还低 $2.4\times10^{-3}$，即 $k\ge3$ 的真值\textbf{严格高于} $\frac54$，
+任何「$\frac54$ 型」的界都不可能推广过去。要走通，必须用秩 $k$ 长期方程 \eqref{eq:mpsec2}
+直接研究根之和（Viète 型），而不是逐特征值放缩。
+
 \begin{enumerate}[leftmargin=1.8em,itemsep=4pt]
 \item \textbf{A1$'$ 未证，且没有产生新的无条件纪录。} 现役上界仍是 $\Phi n-3$。
 缺口 $\Phi-\rho_0=0.0274488$ 一寸未动。
@@ -2300,6 +3544,18 @@ $\alpha+\ell\le2\rho_0$（优先队列 P4）。这是本轮结束时最清晰、
 \end{enumerate}
 
 \subsection{数值证据的边界（必须诚实交代）}
+
+本轮新增的数值条目及其强度，按可信度从高到低：
+(i) \eqref{eq:frame5} 在 $937614$ 帧（Haar / 双轴含非等分 / 近退化 / 近等角四族）上 $0$ 违例，
+$\sup=1.249993448627$；双轴族另有 $3\,600\,000$ 点的独立扫描，无一点超过等分点的值 $\frac54$。
+(ii) 双轴 $120$ 个等分构型的 $\frac54I-B\succeq0$ 与「恰 $3$ 个取等」是\textbf{精确有理}结论，不属数值证据。
+(iii) $N=6$ 的 $21$ 个例外：极大化点在边界（$\min_ip_i\le10^{-14}$）、逐类 $\max F=1.253197265$、
+$19$ 类无支配点——均为数值。
+(iv) $L(Z)\le1$ 的违例 $1583/937614$ 与 $\sup L=1.117916903$ 是数值观测，
+但「$L\le1\Rightarrow\lambda_{\max}\le\frac54$」这一步是\textbf{定理}（命题~\ref{prop:schurcond}），
+且逻辑一致性检查（$L\le1$ 却 $\lambda_{\max}>\frac54$ 的帧数 $=0$）通过。
+(v) 双轴族上 $\varphi(t)$ 的\textbf{凹性}被否证（$360000$ 对中 $57149$ 对违例，$15.9\%$），
+这是我本轮提出又自己推翻的一个中间论断，记录在案以免重复犯错。
 
 我们把形式 9（见下）中的
 $\mathrm{SR}_K=\max\{\lambda_{\max}((A^\top A)_+):A\in\R^{3\times K},\ AA^\top=I_3\}$
@@ -2570,6 +3826,28 @@ Hessian 在对称轨道（$D_5$ 与 $O(2)$ 的商）横向上的负定性可用�
 定理~\ref{thm:caseab} 给出 Case A / Case B 二分，并把全部难度定位到 $t\in(0.9451,0.995]$ 这条窄带上。
 链条本身是严格的，不严格的只是它末端的猜想~\ref{conj:A1}。
 
+第七类（第六版新增，也是本轮最强的一条）是\textbf{完全二部掩码的全局闭合}。
+定理~\ref{thm:bipglobal} 说：对任意 $a,b\ge1$、任意阶数 $N=a+b\ge4$、任意权 $p\in\Delta_{N-1}$，
+$\Lam_3(D_{\sqrt p}(I+A(K_{a,b}))D_{\sqrt p})\le\frac54$，
+取等当且仅当 $a,b\ge2$、$p$ 恰有四个非零分量、每部各两个、都等于 $\frac14$；
+故 $F(\Sigma_{K_{a,b}})=\frac54$（$a,b\ge2$）是\textbf{精确值}。
+这一条\emph{不含任何数值成分、不含任何未证前提}，而且是对\emph{一切}阶数同时成立的全局陈述，
+可以直接作为毕业论文的一个独立定理章节。它的证明链条只有四步，全部初等：
+引理~\ref{lem:biprank}（秩二分解 \eqref{eq:rank2} $+$ Sylvester 惯性律 $\Rightarrow\operatorname{neg}(M)\le1$）、
+引理~\ref{lem:bipweyl}（$R\succeq-\sqrt{\alpha\beta}e_-e_-^\top$ $+$ Weyl $\Rightarrow\lambda_i\ge q^\downarrow_{i+1}$）、
+引理~\ref{lem:bipsec}（秩二长期方程 \eqref{eq:secular} $+$ 单调性 $\Rightarrow$ \eqref{eq:mono}）、
+引理~\ref{lem:core4}（核心引理 $s\le\frac14+\sigma_4$，用 \eqref{eq:Delta}、\eqref{eq:philin}、Titu、AM--GM）。
+其中引理~\ref{lem:core4} 的等号条件是逐步反推出来的（四个非零权全为 $\frac14$、$r=2$），
+这一点值得强调：$\frac54$ 不是猜出来再验证的，而是被取等条件\emph{唯一确定}的。
+配套的三条已证结果是引理~\ref{lem:mpsec}（完全多部的秩 $k$ 长期方程 \eqref{eq:mpsec} 与
+$\operatorname{inertia}(R)=(1,k-1)$，含 $k=2$ 的特例）、推论~\ref{cor:n5uncond}
+（$\kappa_3(5)\le\rho_0$ \textbf{无条件}，$F(\Sigma_{K_{2,3}})=\frac54$ 精确）、
+以及命题~\ref{prop:tab19}（$N=6$ 剩下 $19$ 类的完整表，含 graph6 码，可复算）。
+注~\ref{rmk:bipvsframe} 给出了这条路线与 Grassmannian 路线的难度对比，
+注~\ref{rmk:mpopen}、注~\ref{rmk:k1b}、注~\ref{rmk:tab19read} 分别精确指出了三处\textbf{失效边界}
+（$k\ge3$ 的尾和退化、$\min(a,b)=1$ 族真值 $\frac65$、$19$ 类的结构分布）——
+这三条是「已证结果的适用范围」的一部分，引用时不应省略。
+
 第三类是本轮的主要新贡献，即定理~\ref{thm:zonal}：
 定义~\ref{def:scheme} 意义下的整个通道型主函数方案族，其可达到的最好常数恰好是 $\Phi$。
 这条定理的证明是初等的，见证测度 \eqref{eq:lam} 是显式的三点测度，
@@ -2686,6 +3964,24 @@ $\max\tr((-M)_+)$ 恰为 $\tau$、由冠军饱和，这是\textbf{数值}）；
 以及 A2$^\sharp$ 比 A1$'$ 好证——命题~\ref{prop:A2sharp} 说明二者\emph{等价}，
 A2$^\sharp$ 的唯一价值是指认了正确的对象（尾谱和而非负质量）。
 
+关于第~\ref{sec:bipglobal} 节（第六版新增），我们\textbf{没有}主张以下几条，请引用时注意边界：
+(i) \eqref{eq:frame5} \textbf{没有被证明}。定理~\ref{thm:bipglobal} 使它变得\emph{不必要}，
+而不是使它成立；$B(Z)$ 与 $M_p$ 是两个不同族的矩阵，前者的 $\frac54$ 由命题~\ref{prop:biaxsharp} 知其 sharp，
+但它的\emph{证明}仍然缺失。
+(ii) $F(\Sigma_{K_{1,b}})=\frac65$ 只有\textbf{下界}是精确的（$K_{1,3}$ 的有理见证），
+上界未证；定理~\ref{thm:bipglobal} 给的是 $\frac54$，松 $0.05$（注~\ref{rmk:k1b} 精确指出了失效点）。
+(iii) $k\ge3$ 的完全多部掩码（$K_{2,2,2}$、$K_{1,2,3}$、$K_{1,2,2}$、$K_{2,2,3}$ 等）
+的 $F$ 值全部是\textbf{数值}：$\sup\Lam_3\in[1.2500767598,\,1.2530756675]$，
+虽严格低于 $\rho_0$（余量 $\ge2.85\times10^{-2}$），但没有任何证明；
+引理~\ref{lem:mpsec} 只提供了长期方程与惯性两条\emph{工具}，不提供界。
+(iv) 「$\kappa_3(5)$ 的取等类是 $K_{1,2,2}$」是\textbf{数值}推测（$\sup\Lam_3=1.2530756675$
+与 $\frac{9+4\sqrt6}{15}=1.2531972647$ 差 $1.2\times10^{-4}$，尚未收敛到闭式），不得当作结论。
+(v) 命题~\ref{prop:tab19} 表中的 $\max F$ 列与注~\ref{rmk:tab19read}(ii) 的两个未识别闭式
+（$1.251351067$、$1.216091742$）都是\textbf{数值}；$\Omega$ 列是已证的 SDP 上界。
+(vi) \eqref{eq:atom6}（$N=6$ 的 $19$ 类极大化点在边界）\textbf{未证}，
+而且它的自然推广（对一切 $6$ 阶掩码）是\emph{假}的——冠军类就是反例。
+(vii) \eqref{eq:s6int} 只是单向蕴含（$\Leftarrow$），本报告\textbf{没有}主张 $\kappa_3(6)\le\rho_0$。
+
 \subsection{数值证据的使用纪律}
 
 全文使用四个标签：「已证」「精确」「数值」「否证」。它们不是修辞，而有明确的操作含义——
@@ -2729,6 +4025,22 @@ $N=6,\dots,14$ 已数值认证为 $\rho_0$（$6\le N\le12$ 两套独立求解器
 至于无条件纪录，方向乙的等权子问题仍可望把常数压到 $1.299$ 左右（相对 \STW\ 改进约 $0.77\%$），
 但它到不了 $\rho_0$；要证到 $\rho_0$，现在唯一在列的路径是 (W1$''$)（$\kappa_3\le\rho_0$）
 配合支撑界 (2a) 或 $N\ge7$ 的有效原子化约（优先队列 P2）。
+
+\medskip
+\noindent\textbf{（第六版增补）一句话总结的更新。}
+上面这段是第五版写的，其中「$N=3,4,5$ 三档已被精确求出」与「唯一在列的路径是 (W1$''$) 配合支撑界 (2a)」两处需要修正。
+现在的状态是：$\kappa_3(3)=1$、$\kappa_3(4)=\frac54$、$\kappa_3(5)=\frac{9+4\sqrt6}{15}$ 三档\textbf{精确}（定理~\ref{thm:ladder}），
+并且 $\kappa_3(N)\le\rho_0$ 对 $N=3,4,5$ 已\textbf{无条件}成立（推论~\ref{cor:k34uncond}、\ref{cor:n5uncond}）——
+第六版之前 $N=5$ 那一档是条件性的，条件 \eqref{eq:frame5} 现已被定理~\ref{thm:bipglobal} 绕开。
+同时我们拿到了第一条\emph{跨阶数}的定理：一切完全二部掩码、任意阶数，$\Lam_3\le\frac54$（定理~\ref{thm:bipglobal}），
+取等构型完全刻画。这改变了主线的形状——剩下的路不再是「证一条越来越难的不等式」，
+而是「把一条纯几何的不存在性陈述 \eqref{eq:chamber6} 对 $17$ 个符号模式逐个建立」（优先队列 P1），
+外加 $2$ 个有支配点的类（P2）与 $k\ge3$ 的尾和改进（P3）。
+至于毕业论文的写作，现在有三个可以\textbf{独立成章}的完整结果：
+下界一侧的 $\rho_0$ 与极值核心闭式刻画（定理~\ref{thm:lower}、\ref{thm:champ}）、
+冠军腔的全局最优性（定理~\ref{thm:champglobal}，原对偶半定证书）、
+以及完全二部掩码的全局闭合（定理~\ref{thm:bipglobal}，初等证明）；
+三者都不依赖任何未证猜想，且方法论互不重叠（团吹起 $+$ 根式恒等式 / 半定对偶 / 秩二长期方程 $+$ 初等不等式）。
 
 \appendix
 \section{复现说明与产物清单}\label{app:repro}
@@ -2787,6 +4099,34 @@ C \textbf{精确否证}（有理化 $\hat p$ $\to$ 有理 charpoly $\to$ 自实�
 \texttt{isqrt} 给 $\tau$ 的有理区间 $\to$ 两区间不相交，全程无浮点）、
 D $80$ 位 \texttt{mpmath} 认证 $\mathrm{sign}(\Pi_3)=2A-J$、E 按 $\mathrm{npos}$ 分档核查修复形式 A2$'$ &
 本报告 \\
+\texttt{证书\_N5特征多项式闭合.py} &
+第~\ref{sec:assemble6} 节之前 $N=5$ 缺口的\textbf{无条件}闭合（特征多项式因式分解路线），分六段 A--F 共 $45$ 项检查：
+$\chi$-因式分解 $\det(\lambda I-M)=\prod_i(\lambda-p_i)+N_AN_B$ 的符号核验、
+根分布（唯一负根 $\lambda_5=-s$、$\lambda_4\ge p_{\min}$）、核心引理 $s\le\frac14+p_{\min}$
+（Jensen $+$ 显式非负分解）、$F(\Sigma_{K_{2,3}})=\frac54$ 精确、$\kappa_3(5)\le\rho_0$ 无条件、
+取等点刻画（$p=(\frac14,\frac14,\frac14,\frac14,0)$，零点在 $B$ 部，共 $3$ 个） &
+本报告（第五版新增，运行约 $96$ s，输出 \texttt{\_n5chi.json}） \\
+\texttt{证书\_完全二部全局闭合.py} &
+定理~\ref{thm:bipglobal}、引理~\ref{lem:biprank}--\ref{lem:mpsec}、推论~\ref{cor:n5uncond}、
+注~\ref{rmk:mpopen}、注~\ref{rmk:k1b} 的全部内容，分八段 A--H 共 $52$ 项检查：
+A 秩二分解与惯性（符号恒等式 $+$ $48000$ 组随机权）、B 长期方程与根分布（$40000$ 组）、
+C Weyl 下界与尾和界（$60000$ 组）、D 核心引理（\textbf{全符号}：$\Delta$ 恒等式、$k=3,4$ 链式、
+五个 $r$ 分支的 Titu 缺口分子、$2-\Xi(m)$ 的因式分解 $2m(1+14m)$、AM--GM；另 $150000$ 组数值双保险）、
+E 装配与取等点穷举（$9$ 个构型）、F 与旧结果的关系、
+G 完全多部秩 $k$ 长期方程（$13$ 个构型符号核验）与 $\operatorname{inertia}(R)=(1,k-1)$、
+H $\min(a,b)=1$ 族的 $\frac65$ 精确见证 &
+本报告（第六版新增，运行约 $137$ s，输出 \texttt{\_kmnbi.json}、\texttt{\_kmn7.json}） \\
+\texttt{\_kmn5.json}\newline\texttt{\_kmn6.json}\newline\texttt{\_kmn7.json}\newline\texttt{\_kmnbi.json}\newline\texttt{\_n5chi.json} &
+上述两份证书的原始输出。其中 \texttt{\_kmn7.json} 逐类记录 $30$ 个完全（多）部掩码的
+$\sup\Lam_3$、$\sup\tr((-M)_+)$、$\min\sum_{i\ge4}\lambda_i$、$\max\operatorname{neg}(M)$ 与极大化点，
+是注~\ref{rmk:mpopen} 全部数值的来源 &
+本报告（数据） \\
+\texttt{\_danger23.json}\newline\texttt{\_exc23\_struct.json}\newline\texttt{\_exc19\_open.json}\newline\texttt{\_tab19.tex} &
+例外类的结构数据。\texttt{\_danger23.json} 是 $23$ 个 $\Omega>\rho_0$ 的类（$1$ 个 $N=5$、$22$ 个 $N=6$）的原始记录；
+\texttt{\_exc23\_struct.json} 由 graph6 码解码后补算「是否完全多部（及各部大小）」「是否含诱导 $C_5$」；
+\texttt{\_exc19\_open.json} 是扣除冠军、$K_{2,4}$、$K_{3,3}$ 之后剩下的 $19$ 类；
+\texttt{\_tab19.tex} 是命题~\ref{prop:tab19} 表格的 \LaTeX\ 行 &
+本报告（数据） \\
 \texttt{\_core.py} &
 共用核心：$F(A)=\max_{p\in\Delta}\Lam_3(D_{\sqrt p}AD_{\sqrt p})$ 的稳健优化器（多起点 L-BFGS-B
 $+$ softmax 解析梯度 $+$ KKT 诊断）。上列三个证书脚本都 \texttt{import \_core}，故\textbf{必须}随本报告一并分发 &
@@ -2891,6 +4231,44 @@ $\tau=\frac{-9+\sqrt5+2\sqrt{35}}{18}$ 的严格有理区间由整数开方 \tex
 （宽 $1.7\times10^{-46}$），包含性用 \texttt{sympy} 在 $\Q(\sqrt5,\sqrt{35})$ 上\emph{精确}判定。
 两个有理区间不相交（间距 $6.6\times10^{-3}$），故结论是定理。
 交叉核对：Sturm 区间中点与 \texttt{numpy} 谱逐位相符（最大差 $3.3\times10^{-16}$）。
+
+\texttt{证书\_N5特征多项式闭合.py}（第五版）与 \texttt{证书\_完全二部全局闭合.py}（第六版）是本轮的两份新证书，
+末行分别输出「$45$ 项检查，全部通过: True」（$96.3$ s）与「$52$ 项检查，全部通过: True」（$137.1$ s），
+\texttt{fail} 列表为空。两者的分工是：前者把 $N=5$ 这一个缺口按\emph{特征多项式因式分解}关掉，
+后者把同一个论证\emph{推广到一切完全二部掩码与一切阶数}；后者的 $N=5$ 特例
+（$\sigma_4(p)=p_{\min}$，核心引理退化为 $s\le\frac14+p_{\min}$）与前者的 C 段完全一致，
+但证法短得多（Titu $+$ AM--GM 两行，而不是按 $p_{\min}$ 落在 $A/B$ 部分情形做齐次三次 SOS 分解），
+因此前者保留下来作为独立复核。
+
+\texttt{证书\_完全二部全局闭合.py} 的 D 段（核心引理）值得单独说明，因为它是\textbf{全符号}的、
+不含任何数值搜索：$\phi''(z)=-2\sigma/(z+\sigma)^3$ 与 $\phi(z)-z/\sigma=-z^2/(\sigma(z+\sigma))$
+都被 \texttt{sympy} 化简为恒等式；二元 Jensen 缺陷 $\Delta(u,v)$ 的分子被展开为 $\sigma(u-v)^2$、
+分母系数被逐个判正；$k=4$ 的链式分解 $4\phi(\bar z)-\sum\phi(z_i)=\Delta(z_1,z_2)+\Delta(z_3,z_4)+2\Delta(\frac{z_1+z_2}2,\frac{z_3+z_4}2)$
+与 $k=3$ 的补均值原子版本都被验证残差\emph{恰为} $0$；$g_c(z)=c-c^2\sigma/(z+c\sigma)$ 对 $c=1,2,3,4$ 逐个核对；
+Titu 的五个分支 $r=0,\dots,4$ 的缺口分子用一个自实现的递归非负判据
+（常数非负 / 偶次幂 / 系数全非负 / 乘积的每个因子非负）判定，输出即 \eqref{eq:titugap} 的五式；
+$2-\Xi(m)$ 被 \texttt{factor} 成 $2m(1+14m)/[(2+3m)(1+4m)]$，分子分母分别判非负与判正。
+D 段末尾另有 $150000$ 组随机权（$16$ 个 $(a,b)$、$N$ 最大 $10$）的数值双保险：
+$\sup\bigl[h(-(\frac14+\sigma_4))-1\bigr]=-9.9\times10^{-5}\le0$、$\sup(s-\sigma_4)=0.2499105517\le\frac14$。
+E 段穷举 $9$ 个「每部各两个 $\frac14$」的取等构型（$(a,b)$ 取 $(2,2)$ 到 $(5,5)$），
+逐个核对 $\Lam_3=\frac54$、$s=\frac14$、$\sigma_4=0$、尾和 $=-\frac14$；
+并单独认证 $K_{2,4}$ 与 $K_{3,3}$ 两类（$N=6$ 例外）的 $F=\frac54$ 精确。
+G 段对 $13$ 个完全多部构型（$k=2,3,4$、$N=4,\dots,8$）符号核验清分母形式的行列式公式与
+长期方程 $\sum_t\frac1{1-A_t}=k-1$，残差恒为 $0$，并对 $k=2,\dots,5$ 核验
+$B=D_c(J_k-I_k)D_c$、二次型改写与 $\operatorname{spec}(J_k-I_k)=\{-1,k-1\}$；
+H 段给出 $K_{1,3}$ 配 $p=(\frac25,\frac15,\frac15,\frac15)$ 的\textbf{精确}谱
+$\{-\frac15,\frac15,\frac15,\frac45\}$（\texttt{sympy} 在 $\Q$ 上算特征多项式并求根），
+即注~\ref{rmk:k1b} 的 $\frac65$ 下界。
+
+\begin{sloppypar}
+\texttt{\_exc23\_struct.json}、\texttt{\_exc19\_open.json} 与 \texttt{\_tab19.tex}
+由 \texttt{证书\_例外类结构标注.py} 生成：它从 \texttt{\_danger23.json}
+的 graph6 码解码出邻接矩阵（\texttt{ord(ch)-63} 标准解码，不依赖 \texttt{networkx} 的读入），
+再判定「补图的每个连通分支是否都是团」（$\iff$ 原图是完全多部，并输出各部大小）与
+「是否含诱导 $C_5$」（$5$ 元子集上恰 $5$ 条边且 $2$-正则），
+最后扣除已闭合的三类（冠军、$K_{2,4}$、$K_{3,3}$）得到 $19$ 行表格。
+该脚本运行不到 $1$ 秒，是命题~\ref{prop:tab19} 表格与注~\ref{rmk:tab19read}(i)(ii) 结构计数的唯一来源。
+\end{sloppypar}
 
 \medskip
 \noindent\textbf{两条运行注意。}
