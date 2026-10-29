@@ -1,0 +1,106 @@
+============================================================================================================
+(A1) CHAMPION ALIGNMENT:  Lam_3(D_x Sigma D_x)  vs  rho(Q_+) = rho_0
+============================================================================================================
+  champion: rho(Q_+)           = 1.2815681968721677
+            rho_0              = 1.2815681968721679   (diff -2.220e-16)
+  x (Perron) = [0.44415263735  0.400681528083 0.400681528083 0.400681528083 0.400681528083 0.400681528083]
+  Sigma (sign mask of Q, loops on) =
+[[1 1 1 1 1 1]
+ [1 1 1 0 0 1]
+ [1 1 1 1 0 0]
+ [1 0 1 1 1 0]
+ [1 0 0 1 1 1]
+ [1 1 0 0 1 1]]
+  spec(D_x Sigma D_x) = [ 0.762031440417  0.259768378227  0.259768378227 -0.083122814311 -0.09922269128  -0.09922269128 ]
+  Lam_3(D_x Sigma D_x) = 1.2815681968721679
+  Lam_3 - rho_0        = 0.000000e+00
+  Lam_3 - rho(Q_+)     = 2.220446e-16
+  tr(M) = 1.000000000000000 (must be 1)   negative tail = -0.281568196872168
+  || Pi_3(D_x Sigma D_x) - Q_champion ||_max = 9.436896e-16
+  [PASS] ALIGNMENT: Lam_3(D_x Sigma D_x) == rho(Q_+) at the champion (gap 2.22e-16) => the champion frame IS the Ky Fan maximizer for its own mask
+  [PASS] Pi_3(D_x Sigma D_x) == Q_champion (dev 9.44e-16): the report thm:kappa(ii) self-consistency claim holds at the champion
+  [PASS] therefore Lam_3(D_x Sigma D_x) = rho_0 exactly: NO kappa_3 > rho_0 witness from the champion (gap 0.00e+00)
+
+============================================================================================================
+(A2) mask / KyFan fixed-point iteration  Q -> Pi_3(D_x Sigma_Q D_x)   (a NEW, non-gradient ascent)
+============================================================================================================
+   N  seed   rho(Q_+) after iteration     max Lam_3 seen      >= rho_0 ?
+    5    0   1.000000000000000   1.000000000000000   
+    5    1   1.000000000000000   1.000000000000000   
+    6    0   1.000000000000000   1.000000000000000   
+    6    1   1.000000000000000   1.000000000000000   
+    7    0   1.000000000000000   1.000000000000000   
+    7    1   1.000000000000001   1.000000000000000   
+    8    0   1.000000000000000   1.000000000000000   
+    8    1   1.000000000000000   1.000000000000000   
+    9    0   1.000000000000000   1.000000000000000   
+    9    1   1.000000000000000   1.000000000000000   
+   10    0   1.000000000000000   1.000000000000000   
+   10    1   1.000000000000000   1.000000000000001   
+   12    0   1.000000000000000   1.000000000000000   
+   12    1   1.000000000000000   1.000000000000000   
+  global max Lam_3 seen over all runs = 1.0000000000000007  (rho_0 = 1.2815681968721679)
+  [PASS] mask-iteration never exceeded rho_0 (max 1.000000000000001, excess -2.82e-01) => no counterexample to kappa_3<=rho_0 found by this new ascent
+
+============================================================================================================
+(A3) complementary-dimension dual form at the champion:  E(x,W) >= -tau_0 with equality?
+     W = any orthonormal (N-3)-frame; E = sum_i x_i^2 ||w_i||^2 - sum_{i!=j} x_i x_j (-<w_i,w_j>)_+
+============================================================================================================
+  spec(M) ascending = [-0.09922269128  -0.09922269128  -0.083122814311  0.259768378227  0.259768378227  0.762031440417]
+  sum of 3 smallest eigenvalues of D_x Sigma D_x = -0.2815681968721678
+  -tau_0 = -0.2815681968721679
+  E(x_champion, W_bottom3) = -0.2815681968721679   (should equal sum of the 3 smallest = 1 - Lam_3)
+  [PASS] dual functional E reproduces tr(W^T M W) exactly (dev 1.11e-16)
+  [PASS] champion dual attains E = -tau_0 exactly (dev 0.00e+00) => the dual form is TIGHT at the champion
+  random scan (N=4..10, 400 trials): min E = -0.128928988708418 ; -tau_0 = -0.281568196872168 ; violations = 0
+  [PASS] no random violation of E >= -tau_0 (worst -0.128928988708418, margin 1.526e-01)
+
+============================================================================================================
+(A4) Gram-energy budget: for d+3 vectors with sum w_i w_i^T = I_d,  sum_{i!=j}<w_i,w_j>^2 <= 3d/(d+3)
+============================================================================================================
+  max off-diagonal Gram energy over d=1..14, 300 random frames each: 2.397330198424024
+  per-d: max off-diag Gram energy vs bound 3d/(d+3):
+     d= 1   0.741303403248615   <=  0.750000000000000   OK
+     d= 2   1.178778754741072   <=  1.200000000000000   OK
+     d= 3   1.483274034115756   <=  1.500000000000000   OK
+     d= 4   1.658757433172777   <=  1.714285714285714   OK
+     d= 5   1.828686675823619   <=  1.875000000000000   OK
+     d= 6   1.932407790918355   <=  2.000000000000000   OK
+     d= 7   2.035355836194016   <=  2.100000000000000   OK
+     d= 8   2.068007123427223   <=  2.181818181818182   OK
+     d= 9   2.142808284709280   <=  2.250000000000000   OK
+     d=10   2.241359953781410   <=  2.307692307692307   OK
+     d=11   2.266361329984791   <=  2.357142857142857   OK
+     d=12   2.305841093239939   <=  2.400000000000000   OK
+     d=13   2.390548335152607   <=  2.437500000000000   OK
+     d=14   2.397330198424024   <=  2.470588235294118   OK
+  tight frame (equal norms) attains 3d/(d+3): d=3 -> 9/2=4.5? no: 3*3/6=1.5 ; champion Q: sum_{i!=j}<v_i,v_j>^2 = 3 - sum g_i^2
+  equality case = equal-norm tight frames (||w_i||^2 = d/(d+3)); built by row/column Sinkhorn:
+   d= 1  sum_{i!=j}<.>^2 = 0.750000000000000   bound 3d/(d+3) = 0.750000000000000   gap=0.00e+00  (iso 0.0e+00, norm-dev 0.0e+00)
+  [PASS] d=1: equal-norm tight frame ATTAINS the budget 3d/(d+3) = 0.750000000000 (gap 0.0e+00)
+   d= 2  sum_{i!=j}<.>^2 = 1.200000000000000   bound 3d/(d+3) = 1.200000000000000   gap=-2.22e-16  (iso 1.8e-17, norm-dev 5.6e-17)
+  [PASS] d=2: equal-norm tight frame ATTAINS the budget 3d/(d+3) = 1.200000000000 (gap -2.2e-16)
+   d= 3  sum_{i!=j}<.>^2 = 1.500000000000001   bound 3d/(d+3) = 1.500000000000000   gap=-6.66e-16  (iso 2.2e-16, norm-dev 1.1e-16)
+  [PASS] d=3: equal-norm tight frame ATTAINS the budget 3d/(d+3) = 1.500000000000 (gap -6.7e-16)
+   d= 4  sum_{i!=j}<.>^2 = 1.714285714285713   bound 3d/(d+3) = 1.714285714285714   gap=1.11e-15  (iso 7.8e-16, norm-dev 4.4e-16)
+  [PASS] d=4: equal-norm tight frame ATTAINS the budget 3d/(d+3) = 1.714285714286 (gap 1.1e-15)
+   d= 6  sum_{i!=j}<.>^2 = 1.999999999999998   bound 3d/(d+3) = 2.000000000000000   gap=2.22e-15  (iso 1.3e-15, norm-dev 2.3e-14)
+  [PASS] d=6: equal-norm tight frame ATTAINS the budget 3d/(d+3) = 2.000000000000 (gap 2.2e-15)
+   d=10  sum_{i!=j}<.>^2 = 2.307692307692306   bound 3d/(d+3) = 2.307692307692307   gap=1.78e-15  (iso 1.7e-15, norm-dev 1.0e-15)
+  [PASS] d=10: equal-norm tight frame ATTAINS the budget 3d/(d+3) = 2.307692307692 (gap 1.8e-15)
+  [PASS] dimension-free form: sum_{i!=j}<w_i,w_j>^2 <= 3d/(d+3) <= 3 on 4200 random frames (max 2.397330198424)
+
+============================================================================================================
+(A5) B_1 <= 3 and B_2 == 0 on random isotropic frames (Cauchy-Schwarz proof: lem:b1three)
+============================================================================================================
+  max B_1 = 3.000000000818618 ; max |B_2| = 3.331e-15
+  C-S-with-respect-to-mu form:  B_1 <= 3*lambda_max(sum g_i u_i u_i^T) ; worst excess = 8.216e-14 (at N=3)
+  latitude tripod (3 pts at u.e=1/sqrt3, 120 deg, g=1): isotropy dev 3.48e-16 ; B_1 = 3.000000000000001
+  orthonormal triple: B_1 = 3.000000000000000
+  [PASS] B_1 <= 3*lambda_max(G) on 3000 random frames (worst excess 8.22e-14) => B_1<=3 exactly when G=I_3
+  [PASS] B_1 = 3 attained by the latitude tripod (isotropy dev 3.5e-16) => sup B_1 = 3 EXACT
+  [PASS] B_2 == 0 on every isotropic frame (max |B_2| = 3.33e-15)
+
+============================================================================================================
+SUMMARY  PASS=17  FAIL=0
+============================================================================================================

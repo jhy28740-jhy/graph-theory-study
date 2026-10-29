@@ -1,0 +1,172 @@
+rho_0 = 1.281568196872168   6*rho_0 = 7.689409181233008   Phi = 1.309016994374947
+budget: J <= 6*rho_0 = 7.689409181233008 ; the equiangular 4-line frame gives J = 7.5
+
+================================================================================================================
+(G1) the EXACT centre identity  kappa3(1/3,1/3,1/3) = ( ||M1||^2 + L ) / 6
+================================================================================================================
+   proof: (t)_+ = (t+|t|)/2 pointwise, and sum_ij g_i g_j <u_i,u_j> = || sum_i g_i u_i ||^2 EXACTLY,
+          so sum_ij g_i g_j (<u_i,u_j>)_+ = (||M1||^2 + L)/2 and kappa3^c = that / 3.
+   no Legendre tail survives: the whole infinite series sum_{k>=2} c_{2k} W_{2k} collapses to L.
+  [PASS] direct (1/3)sum g g (<.>)_+  ==  (||M1||^2+L)/6  on random Parseval frames   max abs dev = 4.441e-16
+
+   configuration                        iso defect     kappa3^c direct (||M1||^2+L)/6 ||M1||^2       L             
+   orthonormal triple                   0.00e+00       1.000000000000 1.000000000000 3.000000000000 3.000000000000
+   latitude 3 (tripod)                  3.48e-16       1.000000000000 1.000000000000 3.000000000000 3.000000000000
+   latitude 4 (equiangular 4-line)      2.22e-16       1.250000000000 1.250000000000 3.000000000000 4.500000000000
+   latitude 5                           4.44e-16       1.247213595500 1.247213595500 3.000000000000 4.483281573000
+   latitude 6                           4.44e-16       1.166666666667 1.166666666667 3.000000000000 4.000000000000
+   latitude 8                           3.33e-16       1.228553390593 1.228553390593 3.000000000000 4.371320343560
+   icosahedron (12)                     1.29e-17       0.947213595500 0.947213595500 0.829179606750 4.854101966250
+   icosahedral 6 lines, best signs      1.29e-17       1.245355992500 1.245355992500 2.618033988750 4.854101966250
+
+   the EQUILIBRIUM candidate: the equiangular 4-line frame (cube diagonals) gives
+      Gram off-diagonal |<u_i,u_j>| = 0.333333333333 = 1/3 exactly -> the 4 LINES are equiangular
+  [PASS] the latitude-4 frame is the equiangular 4-line (cube-diagonal) set: |<u_i,u_j>|=1/3 for i!=j
+  [PASS] equiangular 4-line: ||M1||^2 = 3 EXACTLY (dipole bound saturated) and L = 4.5, J = 7.5, kappa3^c = 5/4   J = 7.500000000000002 ; 6 rho_0 - J = 0.189409
+      => the centre value 5/4 is attained by an EXPLICIT exact frame; the remaining gap to
+         6*rho_0 = 7.689409181 is 0.189409181  (i.e. 2.0% relative)
+
+================================================================================================================
+(G2) PARITY DECOMPOSITION: the two terms of J live in orthogonal sectors
+================================================================================================================
+   nu = nu_e + nu_o with nu_e=(nu+iota#nu)/2 even, nu_o odd.  |<u,v>| is a function of t^2-parity:
+   its Legendre expansion has ONLY even degrees, so int Y_{2k} d(nu_o) = 0 (even harmonic vs odd measure),
+   hence L(nu) = L(nu_e) EXACTLY; and int u d(nu_e) = 0 so M1(nu) = M1(nu_o) EXACTLY.
+  [PASS] L(nu) = L(nu_even) on 300 random isotropic frames (antipodal doubling)   max dev 1.776e-15
+  [PASS] M1(nu_even) = 0 exactly (an even measure has no dipole) and M1(nu)=M1(nu_odd)   max dev 1.665e-16
+   CONSEQUENCE: sup J <= 3 + sup L is TRUE but CRUDE; the real coupling is the positivity
+   nu_e + nu_o >= 0.  Writing dnu_o = f dnu_e with f odd and |f|<=1 gives the exact reduction (G3).
+
+================================================================================================================
+(G3) PROJECTIVE / LINE FORM on RP^2  (the cleanest new form of the centre problem)
+================================================================================================================
+   sup_{|f|<=1, f odd} ||int u f dnu_e||^2 = max_{w in S^2} ( int |<l,w>| dmu(l) )^2 =: A*^2
+   so   J = L + A*^2  with  L = int int |<l,l'>| dmu dmu' ,  mu a positive measure on RP^2,
+        mu(RP^2)=3 , int l l^T dmu = I_3 .
+   orthonormal triple                   lines=3  iso=0.0e+00  L(line)=3.000000000 L(atom)=3.000000000  A*^2=3.000000000 ||M1||^2=3.000000000  J=6.000000000/6.000000000
+   latitude 3 (tripod)                  lines=3  iso=3.5e-16  L(line)=3.000000000 L(atom)=3.000000000  A*^2=3.000000000 ||M1||^2=3.000000000  J=6.000000000/6.000000000
+   latitude 4 (equiangular 4-line)      lines=4  iso=2.2e-16  L(line)=4.500000000 L(atom)=4.500000000  A*^2=3.000000000 ||M1||^2=3.000000000  J=7.500000000/7.500000000
+   latitude 5                           lines=5  iso=4.4e-16  L(line)=4.483281573 L(atom)=4.483281573  A*^2=3.000000000 ||M1||^2=3.000000000  J=7.483281573/7.483281573
+   latitude 6                           lines=6  iso=4.4e-16  L(line)=4.000000000 L(atom)=4.000000000  A*^2=3.000000000 ||M1||^2=3.000000000  J=7.000000000/7.000000000
+   latitude 8                           lines=8  iso=3.3e-16  L(line)=4.371320344 L(atom)=4.371320344  A*^2=3.000000000 ||M1||^2=3.000000000  J=7.371320344/7.371320344
+   icosahedron (12)                     lines=6  iso=1.3e-17  L(line)=4.854101966 L(atom)=4.854101966  A*^2=2.618033989 ||M1||^2=0.829179607  J=7.472135955/5.683281573
+   icosahedral 6 lines, best signs      lines=6  iso=1.3e-17  L(line)=4.854101966 L(atom)=4.854101966  A*^2=2.618033989 ||M1||^2=2.618033989  J=7.472135955/7.472135955
+  [PASS] L(line) == L(atom) exactly, and J(line) = L + A*^2 >= ||M1||^2 + L = J(atom)
+   IMPORTANT: J(line) is the value of the SUPREMUM over all nu having this even part,
+   because the odd part may choose the hemisphere of every line freely (f = +-1 per line).
+   The two differ exactly when the given nu does not already use the optimal hemisphere signs;
+   e.g. the icosahedron: J(atom)=5.683282 but J(line)=7.472136, and the latter is attainable by
+   the 6-atom frame {sign_j * (1/2) l_j} with the sign pattern that maximises the dipole.
+   Hence the centre problem is EXACTLY:
+      kappa3(1/3,1/3,1/3) = (1/6) sup_mu [ L(mu) + A*(mu)^2 ] ,  mu on RP^2, mu(RP^2)=3, int l l^T dmu = I_3.
+
+================================================================================================================
+(G4) EXACT Cauchy-Schwarz defect identity  A(w)^2 = 3 - V(w)/2
+================================================================================================================
+   A(w)=sum_j m_j |<l_j,w>| ; sum_j m_j = 3 ; sum_j m_j <l_j,w>^2 = w^T I_3 w = 1 (isotropy).
+   (sum m a)^2 = (sum m)(sum m a^2) - (1/2) sum_ij m_i m_j (a_i-a_j)^2  with a_j=|<l_j,w>|
+   =>  A(w)^2 = 3 - V(w)/2 ,  V(w) = sum_ij m_i m_j (|<l_i,w>|-|<l_j,w>|)^2 >= 0
+   =>  A*^2 = 3  <=>  V(w*)=0  <=>  every line sits at latitude +-1/sqrt(3) about w*.
+   EXACT sign-pattern form: A* = max_s || sum_j s_j m_j l_j || ; for the equiangular 4-line set
+      A*^2 = 3.000000000000001  (= 3)  and ||M1||^2 of the original 4-atom frame = 3  -> the sign choice
+      that realises A* IS the choice of hemisphere, i.e. M1(nu) itself.  So J = L + A*^2 exactly.
+   equiangular 4-line, w=e_z: A=1.732050807569  A^2=3.000000000000  3-V/2=3.000000000000  V=0.000e+00
+  [PASS] A(w)^2 = 3 - V(w)/2 verified exactly
+  [PASS] A(w)^2 = 3 - V(w)/2 on 60 random frames x 40 directions   max dev 4.441e-15
+  [PASS] COROLLARY (dipole bound, second proof): A*^2 <= 3, equality iff equi-latitude
+
+================================================================================================================
+(G7) the Cauchy-Schwarz budget  L <= f(S2) = S2 + sqrt((9-S2)(3-S2)),  S2 = sum m_j^2
+================================================================================================================
+   proof: L = S2 + sum_{i!=j} m_i m_j |<l_i,l_j>|  and by C-S
+          sum_{i!=j} m_i m_j |<.>| <= sqrt( (9-S2) * G2 ), G2 = sum_{i!=j} m_i m_j <.>^2 = 3 - S2,
+   where G2 = 3-S2 because ||I_3||_F^2 = 3.  f is STRICTLY DECREASING on [0,3].
+   orthonormal triple                   S2=3.000000  L=3.000000000  f(S2)=3.000000000  slack=0.000e+00
+   latitude 3 (tripod)                  S2=3.000000  L=3.000000000  f(S2)=3.000000000  slack=-1.776e-15
+   latitude 4 (equiangular 4-line)      S2=2.250000  L=4.500000000  f(S2)=4.500000000  slack=0.000e+00
+   latitude 5                           S2=1.800000  L=4.483281573  f(S2)=4.739387691  slack=2.561e-01
+   latitude 6                           S2=1.500000  L=4.000000000  f(S2)=4.854101966  slack=8.541e-01
+   latitude 8                           S2=1.125000  L=4.371320344  f(S2)=4.967606537  slack=5.963e-01
+   icosahedron (12)                     S2=1.500000  L=4.854101966  f(S2)=4.854101966  slack=0.000e+00
+   icosahedral 6 lines, best signs      S2=1.500000  L=4.854101966  f(S2)=4.854101966  slack=0.000e+00
+  [PASS] L <= f(S2) never violated   worst excess 1.776e-15
+  [PASS] C-S is EXACTLY TIGHT for every equiangular tight line frame (4-line and icosahedron)
+   equiangular tight n-line frames exist only for n<=6 in R^3 (Gerzon); their exact L:
+      n= 3 : cos^2=0.000000000  L=3.000000000  J=L+? (A*^2 needs equi-latitude)
+      n= 4 : cos^2=0.111111111  L=4.500000000  J=L+? (A*^2 needs equi-latitude)
+      n= 5 : cos^2=0.166666667  L=4.739387691  J=L+? (A*^2 needs equi-latitude)
+      n= 6 : cos^2=0.200000000  L=4.854101966  J=L+? (A*^2 needs equi-latitude)
+      n= 7 : cos^2=0.222222222  L=4.922263446  J=L+? (A*^2 needs equi-latitude)
+
+================================================================================================================
+(G5) EXACT Fourier coefficients of the circle kernel K(th) = |1/2 + cos th| (latitude case)
+================================================================================================================
+   if A*^2 = 3 then every line is at latitude +-1/sqrt3, so on RP^2 the whole problem is a
+   CIRCLE problem: <l_i,l_j> = 1/3 + (2/3)cos(dphi), L = (2/3) Q, Q = int int K(dphi) drho drho,
+   rho mass 3 with Fourier coefficients rho_1 = rho_2 = 0; then kappa3^c = 1/2 + Q/9.
+      n : Khat_numeric        Khat_exact          dev          closed form
+      0 : +0.717995562103574  +0.717995562088459  +1.51e-11   sqrt3/pi+1/6
+      1 : +0.304498890514557  +0.137832223855448  +1.67e-01   sqrt3/(2pi n(n+1))
+      2 : +0.137832223847890  +0.137832223855448  -7.56e-12   sqrt3/(2pi n(n-1))
+      3 : -0.068916111912609  -0.068916111927724  +1.51e-11   -sqrt3/(pi(n^2-1))
+      4 : +0.013783222377988  +0.013783222385545  -7.56e-12   sqrt3/(2pi n(n+1))
+      5 : +0.013783222377986  +0.013783222385545  -7.56e-12   sqrt3/(2pi n(n-1))
+      6 : -0.015752254139793  -0.015752254154908  +1.51e-11   -sqrt3/(pi(n^2-1))
+      7 : +0.004922579415852  +0.004922579423409  -7.56e-12   sqrt3/(2pi n(n+1))
+      8 : +0.004922579415850  +0.004922579423409  -7.56e-12   sqrt3/(2pi n(n-1))
+      9 : -0.006891611177658  -0.006891611192772  +1.51e-11   -sqrt3/(pi(n^2-1))
+     10 : +0.002506040426180  +0.002506040433735  -7.56e-12   sqrt3/(2pi n(n+1))
+     11 : +0.002506040426176  +0.002506040433735  -7.56e-12   sqrt3/(2pi n(n-1))
+     12 : -0.003855446806017  -0.003855446821131  +1.51e-11   -sqrt3/(pi(n^2-1))
+     13 : +0.001514639815032  +0.001514639822587  -7.56e-12   sqrt3/(2pi n(n+1))
+     14 : +0.001514639815027  +0.001514639822587  -7.56e-12   sqrt3/(2pi n(n-1))
+     15 : -0.002461289696590  -0.002461289711704  +1.51e-11   -sqrt3/(pi(n^2-1))
+     16 : +0.001013472226676  +0.001013472234231  -7.55e-12   sqrt3/(2pi n(n+1))
+     17 : +0.001013472226670  +0.001013472234231  -7.56e-12   sqrt3/(2pi n(n-1))
+     18 : -0.001706900589906  -0.001706900605021  +1.51e-11   -sqrt3/(pi(n^2-1))
+     19 : +0.000725432749580  +0.000725432757134  -7.55e-12   sqrt3/(2pi n(n+1))
+     20 : +0.000725432749573  +0.000725432757134  -7.56e-12   sqrt3/(2pi n(n-1))
+     21 : -0.001253020201753  -0.001253020216868  +1.51e-11   -sqrt3/(pi(n^2-1))
+     22 : +0.000544791391084  +0.000544791398638  -7.55e-12   sqrt3/(2pi n(n+1))
+     23 : +0.000544791391076  +0.000544791398638  -7.56e-12   sqrt3/(2pi n(n-1))
+     24 : -0.000958832846488  -0.000958832861603  +1.51e-11   -sqrt3/(pi(n^2-1))
+  [FAIL] Khat_0 = sqrt3/pi + 1/6 exactly   max dev over n=0..24 = 1.667e-01
+  [PASS] sign pattern: Khat_n < 0 iff n = 0 (mod 3), Khat_n > 0 iff n = 1,2 (mod 3), for all n>=3
+   positive-harmonic set P = {n>=4 : n mod 3 in {1,2}} = {4,5,7,8,10,11,...}
+   sum_{n in P} Khat_n = 0.057668426180543   (absolutely convergent, Khat_n ~ sqrt3/(2 pi n^2))
+   sum_{n>=3} Khat_n = -0.051328895423515  (negative: the alternating signs help)
+   budget for the latitude case: kappa3^c <= rho_0  <=>  Q <= 9 rho_0 - 9/2 = 7.034113771850
+                                 Q = 9 Khat_0 + 2 sum_{n>=3} Khat_n |rho_n|^2 , 9 Khat_0 = 6.461960058796
+   => need  2 sum_{n>=3} Khat_n |rho_n|^2 <= 0.572153713053
+
+================================================================================================================
+(G6) NUMERICAL sup of J over Parseval frames St(N,3), N=3..16  (multi-start L-BFGS)
+================================================================================================================
+     N     best J        kappa3^c      6rho_0 - J    ||M1||^2     L          S2       iso
+     3   6.000000000   1.000000000    +1.689409   3.0000000   3.0000000   3.000000  5.5e-11
+     4   7.500000000   1.250000000    +0.189409   3.0000000   4.5000000   2.250000  2.4e-15
+     5   7.504528503   1.250754751    +0.184881   2.9871050   4.5174235   2.114986  8.9e-16
+     6   7.595950307   1.265991718    +0.093459   2.8367515   4.7591988   1.569974  4.4e-16
+     7   7.595950307   1.265991718    +0.093459   2.8367514   4.7591990   1.419671  6.7e-16
+     8   7.595950307   1.265991718    +0.093459   2.8367517   4.7591986   1.564322  4.5e-16
+     9   7.595950307   1.265991718    +0.093459   2.8367516   4.7591987   1.429293  1.1e-15
+    10   7.595950307   1.265991718    +0.093459   2.8367516   4.7591987   1.562887  1.1e-15
+    11   7.595950307   1.265991718    +0.093459   2.8367517   4.7591986   1.348580  4.4e-16
+    12   7.595950307   1.265991718    +0.093459   2.8367516   4.7591987   1.290457  1.1e-15
+    13   7.595950307   1.265991718    +0.093459   2.8367518   4.7591986   1.191776  1.8e-15
+    14   7.595950307   1.265991718    +0.093459   2.8367518   4.7591985   1.062296  1.1e-15
+    15   7.595950307   1.265991718    +0.093459   2.8367514   4.7591989   1.175728  1.3e-15
+    16   7.595950307   1.265991718    +0.093459   2.8367523   4.7591980   1.135894  2.0e-15
+
+   best J found over N=3..16 = 7.595950307218  -> kappa3^c = 1.265991717870
+   6 rho_0 = 7.689409181233 ; margin = 0.093459
+   structure of the best configuration (N=6):
+      g      = [0.5482958  0.5482958  0.54829551 0.54829545 0.54829533 0.25852211]
+      latitude z_j = <u_j, w> : [0.5200638  0.52006387 0.52006391 0.52006402 0.52006403 1.        ]
+      ||M1||^2 = 2.836751487 (max 3) ; S2 = 1.569973885 ; f(S2) = 4.829595240 ; L = 4.759198820
+      off-diagonal |<u_i,u_j>| sorted: [0.319738 0.319738 0.319738 0.319738 0.319739 0.319739 0.319739 0.319739 0.319739 0.319739 0.495905 0.495905 0.495905 0.495905 0.495905 0.495905 0.495905 0.495905
+ 0.495905 0.495905 0.520063 0.520063 0.520063 0.520063 0.520064 0.520064 0.520064 0.520064 0.520065 0.520065]
+
+================================================================================================================
+SUMMARY  PASS=12  FAIL=1
+================================================================================================================

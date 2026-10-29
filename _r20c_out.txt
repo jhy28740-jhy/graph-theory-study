@@ -1,0 +1,74 @@
+================================================================================================================
+(C1) the wheel family  W_{m+1} = hub + C_m :  exact Lam_3(q) and its maximum over q
+================================================================================================================
+   m   W_{m+1}   q*              p*=1-mq*        max Lam_3        brute-force Lam_3     closed form
+    3   W_4      0.125000000000000  0.625000000000000  1.000000000000000  1.000000000000000  2.22e-16
+  [PASS] m=3: closed-form Lam_3(q) matches the brute-force weighted-wheel Lam_3 (dev 2.2e-16)
+    4   W_5      0.229965981940232  0.080136072239072  1.253197264742181  1.253197264742181  0.00e+00
+  [PASS] m=4: closed-form Lam_3(q) matches the brute-force weighted-wheel Lam_3 (dev 0.0e+00)
+    5   W_6      0.160545683970008  0.197271580149962  1.281568196872168  1.281568196872168  2.22e-16
+  [PASS] m=5: closed-form Lam_3(q) matches the brute-force weighted-wheel Lam_3 (dev 2.2e-16)
+    6   W_7      0.119407460306054  0.283555238163674  1.250785674353409  1.250785674353409  0.00e+00
+  [PASS] m=6: closed-form Lam_3(q) matches the brute-force weighted-wheel Lam_3 (dev 0.0e+00)
+    7   W_8      0.091679455918793  0.358243808568451  1.209930568424712  1.209930568424712  0.00e+00
+  [PASS] m=7: closed-form Lam_3(q) matches the brute-force weighted-wheel Lam_3 (dev 0.0e+00)
+    8   W_9      0.071895107900673  0.424839136794616  1.172662030935613  1.172662030935613  2.22e-16
+  [PASS] m=8: closed-form Lam_3(q) matches the brute-force weighted-wheel Lam_3 (dev 2.2e-16)
+    9   W_10     0.057346563296449  0.483880930331958  1.141872704152224  1.141872704152224  2.22e-16
+  [PASS] m=9: closed-form Lam_3(q) matches the brute-force weighted-wheel Lam_3 (dev 2.2e-16)
+   10   W_11     0.046435869071987  0.535641309280133  1.117271951626960  1.117271951626960  2.22e-16
+  [PASS] m=10: closed-form Lam_3(q) matches the brute-force weighted-wheel Lam_3 (dev 2.2e-16)
+   11   W_12     0.038124473363507  0.580630793001421  1.097794656663901  1.097794656663901  2.22e-16
+  [PASS] m=11: closed-form Lam_3(q) matches the brute-force weighted-wheel Lam_3 (dev 2.2e-16)
+   12   W_13     0.031703444155157  0.619558670138110  1.082350842718030  1.082350842718030  2.22e-16
+  [PASS] m=12: closed-form Lam_3(q) matches the brute-force weighted-wheel Lam_3 (dev 2.2e-16)
+   13   W_14     0.026676404487564  0.653206741661672  1.070026429057215  1.070026429057215  0.00e+00
+  [PASS] m=13: closed-form Lam_3(q) matches the brute-force weighted-wheel Lam_3 (dev 0.0e+00)
+   14   W_15     0.022690394465354  0.682334477485048  1.060106011226715  1.060106011226715  2.22e-16
+  [PASS] m=14: closed-form Lam_3(q) matches the brute-force weighted-wheel Lam_3 (dev 2.2e-16)
+   15   W_16     0.019491402271293  0.707628965930605  1.052044529328880  1.052044529328880  2.22e-16
+  [PASS] m=15: closed-form Lam_3(q) matches the brute-force weighted-wheel Lam_3 (dev 2.2e-16)
+  peak over m=3..15 at m=5 (W_6): Lam_3 = 1.281568196872168 ; rho_0 = 1.281568196872168
+  [PASS] the wheel family peaks at W_6 (m=5) with Lam_3 = rho_0 (dev 2.2e-16); no wheel beats the champion
+  m=4 (W_5): numeric q*=0.229965981940232  vs exact (1+sqrt6)/15=0.229965982852212 ; numeric Lam_3=1.253197264742181 vs (9+4sqrt6)/15=1.253197264742181
+  m=5 (W_6): numeric q*=0.160545683970008  vs exact (7+5sqrt7)/126=0.160545686947008 ; numeric p*=0.197271580149962 vs (91-25sqrt7)/126=0.197271565264962
+  stationary equation 4k^2 D = a^2(3(m+1)q-1)^2 , specialised:
+     m=4 : -360*q**2 + 48*q + 8 = 0   ->  q* = 1/15 + sqrt(6)/15 = 0.229965982852212
+     m=5 : -2016*q**2 + 224*q + 16 = 0   ->  q* = 1/18 + 5*sqrt(7)/126 = 0.160545686947008
+     m=6 : -5544*q**2 + 528*q + 16 = 0   ->  q* = 1/21 + 5*sqrt(11)/231 = 0.119407462994706
+     m=7 : -9216*q**2 - 6144*q**2*cos(2*pi/7)**2 + 512*q*cos(2*pi/7)**2 + 768*q - 16 + 64*cos(2*pi/7)**2 = 0   ->  q* = 1/24 + sqrt(14)*sin(3*pi/14)/(24*sqrt(4 - sin(pi/14))) = 0.091679458354485
+  [PASS] (C1) the whole wheel family is analytic: q* solves an explicit quadratic, so Theta(W_n) is an algebraic number for every n
+  --- exact (symbolic, tolerance-free) verification of the two critical wheels ---
+   W_5 : q*=1/15 + sqrt(6)/15  [target 1/15 + sqrt(6)/15]  ok=True
+        p*=1-4q*=11/15 - 4*sqrt(6)/15  [target 11/15 - 4*sqrt(6)/15]  ok=True
+        discriminant D=2/3 ; Lam_3=3/5 + 4*sqrt(6)/15  [target 3/5 + 4*sqrt(6)/15]  ok=True
+  [PASS] W_5 closed form EXACT: q*=(1+sqrt6)/15, p*=(11-4sqrt6)/15, Lam_3=(9+4sqrt6)/15 = kappa_3(5) -- EXACT symbolic second derivation
+  [PASS]    the golden-section optimiser reproduces W_5: |q*-q_exact|=9.1e-10 (tol 1e-7, optimiser accuracy ~1e-9), |Lam_3-exact|=0.0e+00
+   W_6 : q*=1/18 + 5*sqrt(7)/126  [target 1/18 + 5*sqrt(7)/126]  ok=True
+        p*=1-5q*=13/18 - 25*sqrt(7)/126  [target 13/18 - 25*sqrt(7)/126]  ok=True
+        discriminant D=5/7 ; Lam_3=sqrt(5)/18 + 1/2 + sqrt(35)/9  [target sqrt(5)/18 + 1/2 + sqrt(35)/9]  ok=True
+  [PASS] W_6 closed form EXACT: q*=(7+5sqrt7)/126 solves 126q^2-14q-1=0, p*=(91-25sqrt7)/126, Lam_3 = rho_0 EXACTLY (symbolic)
+  [PASS]    the golden-section optimiser reproduces W_6: |q*-q_exact|=3.0e-09 (tol 1e-7, optimiser accuracy ~1e-9), |Lam_3-exact|=2.2e-16
+
+================================================================================================================
+(C2) N=8: extensions of all 1044 seven-vertex graphs + circulants + multipartite + random G(8,p)
+================================================================================================================
+  extensions scanned: 4176 graphs, 421.3 s
+  total N=8-family graphs scanned = 4712
+  max Theta found = 1.281568196872168  at >>graph6<<GXAGn{ (14 edges)
+  x = [4.006815272e-01 0.000000000e+00 4.006815272e-01 4.006815272e-01 1.043938760e-17 4.006815272e-01 4.006815272e-01 4.441526415e-01]
+  rho_0 = 1.281568196872168 ; violations = 0
+  [PASS] N=8 scan: Theta(G) <= rho_0 for every graph scanned (4712 graphs, 0 violations); max = 1.281568196872168
+  [PASS] N=8 max Theta = 1.281568196872168 <= rho_0 (margin -4.44e-16)
+
+================================================================================================================
+(C3) monotonicity: induced subgraphs YES, adding edges NO
+================================================================================================================
+  Theta(W_6) = 1.281568196872168 ;  Theta(J_6 = all-ones mask) = 1.000000000000000
+  [PASS] Theta is NOT monotone under adding edges: J_6 >= W_6 entrywise yet Theta(J_6)=1.000000000000 < Theta(W_6)=1.281568196872 (J-J is not PSD, Schur monotonicity does not apply)
+  Theta(W_6 + isolated vertex) = 1.281568196872168  (>= Theta(W_6) = 1.281568196872168)
+  [PASS] Theta IS monotone under induced subgraphs / adding isolated vertices (dev 2.2e-16)
+
+================================================================================================================
+SUMMARY  PASS=23  FAIL=0
+================================================================================================================

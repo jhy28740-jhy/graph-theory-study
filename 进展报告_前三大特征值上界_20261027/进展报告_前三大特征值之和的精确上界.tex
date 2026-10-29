@@ -31,7 +31,7 @@
 \title{\bfseries 图的前三大特征值之和的精确上界\\[4pt]
 \large 阶段性进展报告与障碍分析}
 \author{}
-\date{2026 年 10 月 29 日（第七版，增 \S\ref{sec:rowvar}：行方差机制与天花板 $L(N)$；$Z_5$-等变秩三投影的完全分类与 $\rho_0$ 的闭式导出；$\Phi(Q)=\lambda_{\max}(Q_+)$ 的凸性与谱盒归约；旧队首 P1 被精确有理证书否证）}
+\date{2026 年 10 月 30 日（第八版，增 \S\ref{sec:r20}--\S\ref{sec:r23}：图形式与图无关形式的双向等价、$N\le8$ 穷举与轮族解析解（$\Theta(W_6)=\rho_0$、负尾 $=-\tau_0$ 精确）；$(t)_+$ 的 Legendre--Catalan 展开与谱表示 $\rho=\sum c_\ell W_\ell$、zonal 矩层级封顶于 $\Phi$ 且 $\kappa_3^c<\Phi$（严格）；中心截面的精确恒等式 $\kappa_3^c=\tfrac16\sup[L+A^{*2}]$、锐界 $L\le3\varphi$ 的多项式证书、$m_4$-归约与开口窗口；锥族闭式、单轴主定理 $\max F=\rho_0$（$a^*,z^*$ 的根式与最小多项式）、调和分解 $m_4=\tfrac15+\tfrac19\|H_4\|_F^2$、等纬度精确下界 $m_4\ge\tfrac{19}{81}$ 使开口窗口右端点闭合）}
 
 \begin{document}
 \maketitle
@@ -6735,6 +6735,1361 @@ $\frac13\sup\sum_{ij}g_ig_j(\langle u_i,u_j\rangle)_+$，
 \ref{prop:ceilweyl}\ref{prop:ceilharm}），
 下一步必须用\textbf{各向同性条件与正部之间的直接相互作用}，而不是再找一层松弛。
 
+
+\section{第 20 轮：图形式的双向等价、小阶穷举与轮族的解析解}\label{sec:r20}
+
+\subsection{本轮的定位}\label{sec:r20:motiv}
+
+第~19 轮把主线搬到了 $\Lam$-参数化（定理~\ref{thm:lamparam}）与截面分解
+（定理~\ref{thm:section}）上，冠军截面被识别为单轴的 $\mu(\tilde\Lam)$。
+在继续往上界推进之前，本轮先做三件把地基夯实的工作。它们的共同特点是
+\textbf{不引入任何新的放缩}，因此也不引入新的松弛损失：
+
+\begin{enumerate}\itemsep2pt
+\item[(i)] 证明\textbf{图无关形式与图形式双向等价}（定理~\ref{thm:r20equiv}）。
+这把「在 $\mathrm{St}(N,3)$ 上求 $\rho((VV^\top)_+)$」改写成
+「在一个离散的掩码 $\Sigma=I+A_G$ 与 $N$ 个正数 $x$ 上求 Ky Fan 范数 $\Lam_3$」。
+后者才是本轮所有穷举与解析计算的工作形式；顺带还证明了
+定理~\ref{thm:kappa}(ii) 里的自洽条件是\textbf{冗余}的。
+\item[(ii)] 用这个形式把 $N=4,\dots,7$ 对\textbf{全部同构类}穷举一遍，并把 $N=8$ 扫到 $4712$ 个图，
+没有出现任何 $\Theta(G)>\rho_0$。
+\item[(iii)] 把冠军所在的\textbf{轮族} $W_{m+1}=K_1\vee C_m$ 整族解析求出：
+临界权重 $q^*$ 满足一个显式二次方程，$\Theta(W_{m+1})$ 对每个 $m$ 都是代数数；
+$m=5$（即 $W_6$）给出 $\rho_0$，并且加权 $W_6$ 的\textbf{负尾}恰好等于 $-\tau_0=1-\rho_0$
+（命题~\ref{prop:r20tail}）。这条精确恒等式说明 $\rho_0$ 不是凑出来的数，
+而是轮族的内蕴量。
+\end{enumerate}
+
+\subsection{双向等价：$\kappa_3=\sup_G\Theta(G)$}\label{sec:r20:equiv}
+
+对 $N$ 阶简单图 $G$ 记 $\Sigma_G:=I+A_G$（即对角线全 $1$ 的 $0/1$ 对称掩码），并定义
+\begin{equation}\label{eq:thetaG}
+\Theta(G):=\max_{\substack{x\in\R^N,\ x\ge0\\ \|x\|_2=1}}\Lam_3\bigl(D_x\Sigma_GD_x\bigr),
+\qquad D_x:=\operatorname{diag}(x).
+\end{equation}
+注意 $\tr(D_x\Sigma_GD_x)=\|x\|_2^2=1$，所以 $\Lam_3$ 与「负尾」互补：
+$\Lam_3(D_x\Sigma_GD_x)=1+\tau$，$\tau:=-\sum_{k\ge4}\lambda_k\ge0$。
+
+\begin{theorem}[图形式与图无关形式等价]\label{thm:r20equiv}
+\begin{equation}\label{eq:r20equiv}
+\kappa_3=\sup_{N\ge3}\ \sup_{G\ \text{on}\ N\ \text{vertices}}\Theta(G).
+\end{equation}
+更精确地，两侧的上确界可以在\textbf{同一个}对象上同时取得：
+若 $V\in\mathrm{St}(N,3)$ 使 $\rho((VV^\top)_+)$ 接近 $\kappa_3$，取 $x$ 为 $(VV^\top)_+$ 的
+Perron 向量、$\Sigma=\mathbf 1\{(VV^\top)_{ij}>0\}$，则 $\Lam_3(D_x\Sigma D_x)\ge\rho((VV^\top)_+)$；
+反之若 $(\Sigma,x)$ 使 $\Lam_3(D_x\Sigma D_x)$ 接近右端，取 $W\in\mathrm{St}(N,3)$ 为
+$D_x\Sigma D_x$ 的前三大特征向量，则 $\rho\bigl((WW^\top)_+\bigr)\ge\Lam_3(D_x\Sigma D_x)$。
+\end{theorem}
+
+\begin{proof}
+\textbf{（$\ge$）}设 $V\in\mathrm{St}(N,3)$，$Q:=VV^\top$，$S:=Q_+$，$\rho(S)=x^\top Sx$，
+其中 $x\ge0$、$\|x\|_2=1$ 是 $S$ 的 Perron 向量（$S\ge0$ 对称，故可取 $x\ge0$）。
+令 $\Sigma_{ij}:=\mathbf 1\{S_{ij}>0\}$；因为 $S_{ii}=\|v_i\|^2$，在 $x_i>0$ 的指标上
+$\Sigma_{ii}=1$，所以 $\Sigma$ 在 $x$ 的支集上确为某个图的 $I+A_G$（支集外的行列对
+$x^\top(\cdot)x$ 无贡献，可以直接删去）。于是 $M:=D_x\Sigma D_x$ 满足
+$\lambda_{\max}(M)\ge x^\top Mx=\sum_{ij}x_ix_j\Sigma_{ij}$。
+又因为 $V$ 的行范数不超过 $1$（$V^\top V=I_3$），有 $S_{ij}\le\|v_i\|\|v_j\|\le1$，故
+$\Sigma_{ij}\ge S_{ij}$ 逐点成立，从而
+$\Lam_3(M)\ge\lambda_{\max}(M)\ge x^\top Sx=\rho(Q_+)$。
+
+\textbf{（$\le$）}设 $\Sigma=I+A_G$、$x\ge0$、$\|x\|_2=1$，$M=D_x\Sigma D_x$，
+$W\in\mathrm{St}(N,3)$ 由 $M$ 的前三特征向量组成，$\Pi:=WW^\top$（秩三正交投影）。
+Ky Fan 的对偶表示给出
+\begin{equation}\label{eq:r20kyfan}
+\Lam_3(M)=\tr(W^\top MW)=\sum_{ij}M_{ij}\Pi_{ij}
+=\sum_{ij}x_ix_j\Sigma_{ij}\Pi_{ij}\le\sum_{ij}x_ix_j\Pi_{ij},
+\end{equation}
+最后一步用了 $x\ge0$ 与 $0\le\Sigma_{ij}\le1$。
+再以 $\Pi_+\ge\Pi$ 逐点（且 $\Pi_+\ge0$）得
+$\sum_{ij}x_ix_j\Pi_{ij}\le\sum_{ij}x_ix_j(\Pi_+)_{ij}=x^\top\Pi_+x\le\rho(\Pi_+)$。
+取 $V:=W\in\mathrm{St}(N,3)$，则 $VV^\top=\Pi$，于是
+$\Lam_3(D_x\Sigma D_x)\le\rho((VV^\top)_+)\le\kappa_3$。
+\end{proof}
+
+\begin{remark}[自洽条件是冗余的]\label{rem:r20selfcons}
+定理~\ref{thm:kappa}(ii) 在陈述 $\kappa_3$ 的图形式时附加了自洽要求
+$\Sigma=\mathbf 1\{\Pi_3(D_x\Sigma D_x)\ge0\}$。
+定理~\ref{thm:r20equiv}~的证明说明这个要求\textbf{可以删去}：
+「$\le$」方向的构造对\emph{任意}掩码 $\Sigma$ 都成立，而「$\ge$」方向自动产出满足
+自洽性的 $(\Sigma,x)$（$\Sigma$ 就是极值元自身的符号掩码）。
+换句话说，$\sup$ 过所有掩码与 $\sup$ 过自洽掩码给出同一个数。
+这一点的价值在于：搜索空间变成了\textbf{凸}的（$\Lam_3$ 是 $M$ 的凸函数，
+而 $\Sigma\mapsto D_x\Sigma D_x$ 是线性的），不必再处理自洽性带来的组合不动点。
+\end{remark}
+
+\begin{proposition}[冠军处的对齐，数值]\label{prop:r20align}
+把第~12 轮的冠军 $W_6=K_1\vee C_5$ 写成帧 $(U,g)$（定理~\ref{thm:champ}），
+令 $V=U\operatorname{diag}(\sqrt g)$、$Q=VV^\top$、$\Sigma^*=\mathbf 1\{Q\ge0\}$，
+$x^*$ 为 $Q_+$ 的 Perron 向量，则
+\[
+\Lam_3(D_{x^*}\Sigma^*D_{x^*})=\rho(Q_+)=\rho_0\quad(\text{差 }2.2\times10^{-16}),
+\qquad \|\Pi_3(D_{x^*}\Sigma^*D_{x^*})-Q\|_{\max}=9.4\times10^{-16}.
+\]
+即冠军\textbf{是}它自己掩码的 Ky Fan 极大元，两条路线在冠军处严丝合缝；
+不存在「冠军其实还能被 $\Lam_3$ 抬高」这种可能（若 $\Lam_3>\rho_0$，就直接给出 $\kappa_3>\rho_0$ 的反例）。
+\end{proposition}
+
+\subsection{小阶穷举}\label{sec:r20:small}
+
+有了 \eqref{eq:r20equiv}，小阶问题就变成「对每个同构类跑一个 $N$ 维的连续优化」。
+对固定的 $\Sigma$，$x$-步是 $\max_{x\ge0,\|x\|=1}x^\top(\Sigma\circ WW^\top)x$，
+这是一个\textbf{非负象限上的二次最大化}，可以用面枚举（对每个坐标面求
+$\Sigma\circ WW^\top$ 的最大特征值并检查特征向量是否落在该面内）精确完成；
+$\Sigma$-步则由 Ky Fan 对偶直接给出 $\Sigma^*=\mathbf 1\{\Pi_3\ge0\}$。
+两步交替，配合多起点与随机精修，得到表~\ref{tab:r20small}。
+
+\begin{table}[h]\centering\small
+\begin{tabular}{crrrlcl}
+\toprule
+$N$ & 同构类数 & $\max_G\Theta(G)$ & 极值图 & $\kappa_3(N)$（已知精确值） & 差 \\
+\midrule
+$4$ & $11$   & $1.250000000000$ & $C_4$              & $5/4$                 & $4.4\times10^{-16}$\\
+$5$ & $34$   & $1.253197264742$ & $W_5=K_1\vee C_4$  & $(9+4\sqrt6)/15$      & $2.2\times10^{-16}$\\
+$6$ & $156$  & $1.281568196872$ & $W_6=K_1\vee C_5$  & $\rho_0$              & $6.7\times10^{-16}$\\
+$7$ & $1044$ & $1.281568196872$ & $14$ 边图 & $\rho_0$              & $6.7\times10^{-16}$\\
+\bottomrule
+\end{tabular}
+\caption{$N=4,\dots,7$ 的穷举。$N\le7$ 遍历了图图册（graph atlas）的全部同构类。
+$N=7$ 的极值元并不唯一：并列者包含 $W_6$ 加一个孤立点（坐标 $4.4\times10^{-9}$，即退化情形），
+也包含一个非退化的 $14$ 边图，其权重为 $(0.444,0.401,0.401,0.283,0.371,0.401,0.401)$。
+}\label{tab:r20small}
+\end{table}
+
+$N=8$ 无法穷举（带环掩码共 $2^{36}$ 个，模同构仍是 $10^7$ 量级），
+本轮改为\textbf{大规模扫描}：把全部 $1044$ 个七顶点图各加一个顶点（$4176$ 个扩张）、
+外加循环图、完全多部图与随机 $G(8,p)$，共 $4712$ 个八顶点图，耗时 $421$ 秒。
+结果 $\max\Theta=1.281568196872168=\rho_0$（在 $14$ 边的 $8$ 顶点图上取得，
+其 $x$ 有两个坐标为 $0$，即退化为 $W_6$ 加两个孤立点），\textbf{$0$ 例违反} $\Theta\le\rho_0$。
+按本报告的纪律，$N=8$ 只能记作\textbf{数值}证据；$N\le7$ 的穷举同样不构成
+区间算术意义上的严格证书（$x$-步的全局最优性只在面枚举的精度内保证），
+$N=5,6$ 的严格闭合仍应以定理~\ref{thm:n5frame}、\ref{thm:n6closed} 为准。
+
+\subsection{轮族的解析解}\label{sec:r20:wheel}
+
+轮族的 Ky Fan 形式有一个非常干净的块结构，值得完整写下来，
+因为它是本报告里\textbf{唯一}一处「极值元与其精确值同时由解析式给出」的家族。
+
+\begin{lemma}[加权轮的前三特征值]\label{lem:r20wheel}
+设 $G=W_{m+1}=K_1\vee C_m$，$x_{\rm hub}^2=p$、$x_{\rm rim}^2=q$（$p+mq=1$），
+$M=D_x(I+A_G)D_x$。把轮缘空间分解为常向量方向与其正交补，则
+\begin{equation}\label{eq:r20wheelspec}
+\operatorname{spec}(M)=\Bigl\{\lambda_\pm\Bigr\}\cup\Bigl\{q\bigl(1+2\cos\tfrac{2\pi k}{m}\bigr):k=1,\dots,m-1\Bigr\},
+\qquad
+\lambda_\pm=\frac{p+3q\pm\sqrt{(p-3q)^2+4mpq}}2 .
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+在轮缘的常向量方向 $e:=\frac1{\sqrt m}(1,\dots,1)^\top$ 上，
+$I+A_{C_m}$ 的作用是 $1+2=\;3$ 倍，而轮毂与该方向的耦合项是
+$\sum_i x_0x_i=\sqrt{p}\sqrt{mq}$；故 $\{x_0e_0\}\oplus\{e\}$ 张成的二维不变子空间上
+$M$ 的矩阵是 $\bigl(\begin{smallmatrix}p&\sqrt{mpq}\\ \sqrt{mpq}&3q\end{smallmatrix}\bigr)$，
+其特征值即 $\lambda_\pm$。正交补由 $\cos(2\pi k j/m),\sin(2\pi k j/m)$（$k=1,\dots,m-1$）张成，
+在其上 $M$ 就是 $q(I+A_{C_m})$，特征值为 $q(1+2\cos\frac{2\pi k}m)$。
+\end{proof}
+
+\begin{example}[$W_5$：$\kappa_3(5)=\frac{9+4\sqrt6}{15}$ 的第二条解析推导]\label{ex:r20w5}
+$m=4$ 时轮缘模为 $q,-q,q$（$k=1,2,3$），故前三大是 $\lambda_+,q,q$，
+$\Lam_3(q)=\frac{1-q+\sqrt{1+2q-15q^2}}2+2q$（用 $p=1-4q$）。
+$\Lam_3'(q)=0$ 化为
+\[
+\frac{1-15q}{\sqrt{1+2q-15q^2}}=-3
+\ \Longleftrightarrow\ (15q-1)^2=9(1+2q-15q^2)
+\ \Longleftrightarrow\ 360q^2-48q-8=0,
+\]
+取正根 $q^*=\frac{1+\sqrt6}{15}$，代回得 $\Lam_3(q^*)=\frac{9+4\sqrt6}{15}=1.253197264742181$，
+与定理~\ref{thm:n5frame}~的 $\kappa_3(5)$ 逐位一致（符号代数核对，误差 $0$）。
+\end{example}
+
+\begin{theorem}[冠军的解析身份]\label{thm:r20w6}
+$m=5$ 时轮缘模为 $q\varphi$（二重）与 $-q/\varphi$（二重），其中 $\varphi=\frac{1+\sqrt5}2$，
+因为 $1+2\cos72^\circ=\varphi$、$1+2\cos144^\circ=-1/\varphi$ 是精确恒等式。于是
+$\Lam_3(q)=\lambda_+(q)+2q\varphi$，其中（用 $p=1-5q$）
+\[
+\lambda_+(q)=\frac{1-2q+\sqrt{1+4q-36q^2}}2 .
+\]
+临界方程 $\Lam_3'(q)=0$ 恰为
+\begin{equation}\label{eq:r20w6quad}
+126q^2-14q-1=0,
+\qquad q^*=\frac{7+5\sqrt7}{126},\qquad p^*=1-5q^*=\frac{91-25\sqrt7}{126},
+\end{equation}
+且判别式\textbf{精确坍缩}为
+\begin{equation}\label{eq:r20disc}
+(1-2q^*)^2+8p^*q^*=\frac57 ,
+\end{equation}
+从而
+\begin{equation}\label{eq:r20rho0}
+\Lam_3\bigl(D_{x^*}(I+A_{W_6})D_{x^*}\bigr)
+=\frac{1-2q^*}2+\frac{\sqrt{35}}{14}+2q^*\varphi
+=\frac{9+\sqrt5+2\sqrt{35}}{18}=\rho_0
+\end{equation}
+是 $\Q(\sqrt5,\sqrt7)$ 中的\textbf{精确}等式（符号核对，误差 $0$）。
+\end{theorem}
+
+\begin{proof}
+$\Lam_3'(q)=-\frac12+\frac{4-72q}{4\sqrt{1+4q-36q^2}}+2\varphi=0$。
+用 $2\varphi=1+\sqrt5$ 得 $\frac{2-36q}{2\sqrt{1+4q-36q^2}}=-\sqrt5$，
+两边同为负（$q^*>1/18$），平方后 $(18q-1)^2=5(1+4q-36q^2)$，
+整理即 $504q^2-56q-4=0$，除以 $4$ 得 \eqref{eq:r20w6quad}。
+正根 $q^*=\frac{14+\sqrt{196+504}}{252}=\frac{14+10\sqrt7}{252}=\frac{7+5\sqrt7}{126}$。
+代入 $(1-2q)^2+8q(1-5q)=1+4q-36q^2$ 并用 $126q^{*2}=14q^*+1$ 降次，
+由 $126q^{*2}=14q^*+1$ 得 $36q^{*2}=\frac27(14q^*+1)=4q^*+\frac27$，故 $1+4q^*-36q^{*2}=\frac57$，
+即 \eqref{eq:r20disc}。最后
+\[
+\Lam_3=\frac{56-5\sqrt7}{252}+\frac{9\sqrt{35}}{126}+\frac{(7+5\sqrt7)(1+\sqrt5)}{126}
+=\frac{63+7\sqrt5+14\sqrt{35}}{126}=\frac{9+\sqrt5+2\sqrt{35}}{18}.
+\]
+（分子合并时 $-5\sqrt7$ 与 $+5\sqrt7$ 恰好抵消，这是 $\sqrt7$ 只出现在 $q^*$ 而
+\textbf{不出现在} $\Lam_3$ 的原因。）
+\end{proof}
+
+\begin{proposition}[负尾就是 $\tau_0$]\label{prop:r20tail}
+在定理~\ref{thm:r20w6}~的最优权重下，$D_{x^*}(I+A_{W_6})D_{x^*}$ 的谱为
+$\{\lambda_+,\,q^*\varphi,\,q^*\varphi,\,\lambda_-,\,-q^*/\varphi,\,-q^*/\varphi\}$，且
+\begin{equation}\label{eq:r20tail}
+\lambda_-+2\Bigl(-\frac{q^*}{\varphi}\Bigr)=\frac{9-\sqrt5-2\sqrt{35}}{18}=1-\rho_0=-\tau_0 .
+\end{equation}
+即 $\tau_0=\rho_0-1$ 就是加权 $W_6$ 的负尾绝对值。
+\end{proposition}
+
+\begin{proof}
+$\tr M=1$，故负尾 $=1-\Lam_3=1-\rho_0$；直接展开亦得
+$\frac{63-7\sqrt5-18\sqrt{35}}{126}$，与上式相同（符号核对，误差 $0$）。
+\end{proof}
+
+整族的数值图景（闭式与暴力对角化的最大偏差 $2.2\times10^{-16}$，$m=3,\dots,15$ 全部核对）：
+\begin{center}\small
+\begin{tabular}{c|cccccccc}
+\toprule
+$m$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $10$ & $15$\\
+\midrule
+$q^*$ & $0.125000$ & $0.229966$ & $0.160546$ & $0.119407$ & $0.091679$ & $0.071895$ & $0.046436$ & $0.019491$\\
+$\Lam_3$ & $1.000000$ & $1.253197$ & $\mathbf{1.281568}$ & $1.250786$ & $1.209931$ & $1.172662$ & $1.117272$ & $1.052045$\\
+\bottomrule
+\end{tabular}
+\end{center}
+峰值在 $m=5$。$m=4,5,6$ 的临界方程分别是
+$-360q^2+48q+8=0$、$-2016q^2+224q+16=0$、$-5544q^2+528q+16=0$，
+根为 $\frac{1+\sqrt6}{15}$、$\frac{7+5\sqrt7}{126}$、$\frac1{21}+\frac{5\sqrt{11}}{231}$；
+$m=7$ 的系数落在 $\Q(\cos\frac{2\pi}7)$ 中。也就是说\textbf{整个轮族都是解析的}，
+$\Theta(W_{m+1})$ 对每个 $m$ 都是代数数。
+「峰值恰在 $m=5$」这一断言在 $m=3,\dots,15$ 上是解析核对的，
+$m\ge16$ 只有 $\Lam_3\to1$ 的渐近趋势与数值支持，未做严格证明（\textbf{数值}）。
+
+\subsection{$N=4$ 的一条无框架证明路线}\label{sec:r20:n4}
+
+\begin{conjecture}[最小特征值下界，数值核对]\label{conj:r20lmin}
+对任意 $N$、任意对角线为 $1$ 的 $0/1$ 对称掩码 $\Sigma$、任意 $x\ge0$ 且 $\|x\|_2=1$，
+\begin{equation}\label{eq:r20lmin}
+\lambda_{\min}(D_x\Sigma D_x)\ \ge\ \frac1N-\frac12 .
+\end{equation}
+\end{conjecture}
+
+\eqref{eq:r20lmin}~在 $6000$ 组随机 $(N,\Sigma,x)$ 上无一违反（最差余量 $2.4\times10^{-2}$，
+出现在 $N=3$），并在 $N=4$ 的 $11$ 个同构类 $\times400$ 组权重上穷举核对（最小值 $-0.244489$，
+未低于 $-1/4$）。\textbf{取等是精确的}：$C_4$ 配均匀权重 $x=\frac12(1,1,1,1)$ 给出
+谱 $\{0.75,0.25,0.25,-0.25\}$，$\lambda_{\min}=-\frac14=\frac14-\frac12$。
+一旦 \eqref{eq:r20lmin}~成立，$N=4$ 立即可解：$\tr M=1$ 且只有一个特征值可能为负，故
+$\kappa_3(4)=1+\frac14=\frac54$，\textbf{完全不需要帧几何}。
+本轮没有写出 \eqref{eq:r20lmin}~的证明，因此它按\textbf{猜想（数值核对）}入账，
+$\kappa_3(4)=\frac54$ 本身仍由表~\ref{tab:r20small}~的穷举支撑。
+
+\subsection{本轮否证的两条路线}\label{sec:r20:ref}
+
+\begin{proposition}[补图 $+$ Ky Fan 次可加性：有天花板]\label{prop:r20comp}
+把 $\Sigma=J-\bar\Sigma$ 代入并用 Ky Fan 的次可加性，可得
+$\Lam_3(D_x\Sigma D_x)\le\Lam_3(D_xJD_x)-\bigl(\text{$D_x\bar\Sigma D_x$ 的三个最小特征值之和}\bigr)$。
+这个上界在冠军处取值 $1.519537$，在 $N=5,6,7$ 全部图与 $30$ 组随机 $x$ 上的上确界为
+$1.764289$。由于 $1.764289>\Phi=1.309017>\rho_0$，
+\textbf{这一族放缩不可能达到 $\rho_0$}（否证带天花板）。
+\end{proposition}
+
+\begin{proposition}[$\Theta$ 的单调性]\label{prop:r20mono}
+$\Theta$ 对\textbf{导出子图／添加孤立点}单调不减
+（$\Theta(W_6+\text{孤立点})=\Theta(W_6)=\rho_0$，差 $2.2\times10^{-16}$），
+但对\textbf{添加边}不单调：$J_6\ge W_6$ 逐点，而 $\Theta(J_6)=1<\Theta(W_6)=\rho_0$。
+原因是 $J-\Sigma$ 不是半正定的，Schur 乘积定理的单调性在此不适用。
+这条否证排除了「用稠密图的界去控制稀疏图」这一整类想法。
+\end{proposition}
+
+\subsection{本轮状态与诚实标签}\label{sec:r20:status}
+
+\begin{center}\small
+\begin{tabular}{lll}
+\toprule
+结论 & 状态 & 位置\\
+\midrule
+$\kappa_3=\sup_G\Theta(G)$（双向） & \textbf{已证} & 定理~\ref{thm:r20equiv}\\
+自洽条件冗余 & \textbf{已证} & 注~\ref{rem:r20selfcons}\\
+轮族谱分解 \eqref{eq:r20wheelspec} & \textbf{已证} & 引理~\ref{lem:r20wheel}\\
+$\Theta(W_6)=\rho_0$、$\Theta(W_5)=\frac{9+4\sqrt6}{15}$ & \textbf{已证（精确）} & 定理~\ref{thm:r20w6}、例~\ref{ex:r20w5}\\
+负尾 $=-\tau_0$ & \textbf{已证（精确）} & 命题~\ref{prop:r20tail}\\
+轮族峰值在 $m=5$ & 解析至 $m=15$，其余\textbf{数值} & \S\ref{sec:r20:wheel}\\
+$N\le7$ 穷举、$N=8$ 扫 $4712$ 图无违反 & \textbf{数值} & 表~\ref{tab:r20small}\\
+$\lambda_{\min}\ge\frac1N-\frac12$ & \textbf{猜想（数值核对，取等精确）} & 猜想~\ref{conj:r20lmin}\\
+补图 $+$ Ky Fan 族天花板 $1.764289$ & \textbf{否证带天花板} & 命题~\ref{prop:r20comp}\\
+$\Theta$ 对加边不单调 & \textbf{已证（反例）} & 命题~\ref{prop:r20mono}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+复现：\texttt{\_r20a.py}（$17$ 项全绿）、\texttt{\_r20b.py}（$18$ 项全绿）、
+\texttt{\_r20c.py}（$23$ 项全绿）。
+
+\section{第 21 轮：Legendre--Catalan 谱表示与中心截面的矩层级}\label{sec:r21}
+
+\subsection{为什么要换到调和分析}\label{sec:r21:motiv}
+
+第~20 轮的图形式适合穷举与解析，但它天生不能「通杀一切 $N$」：
+掩码 $\Sigma$ 是离散的，$N$ 是无界的，穷举没有尽头。要拿到与 $N$ 无关的上界，
+必须回到帧形式，并且把非光滑的核 $(t)_+$ 展开成\textbf{球面调和分析}的对象，
+这样才能把「对帧取上确界」翻译成「对矩／谱量取上确界」。
+本轮把这条路走到底，得到三件东西：
+$(t)_+$ 的 Legendre 系数的\textbf{精确闭式}（Catalan 数）；
+谱表示 $\rho=\sum_\ell c_\ell W_\ell$ 与 $W_\ell\ge0$；
+以及中心截面的\textbf{zonal 矩层级}——它从一条与 \STW~完全不同的方向
+\emph{重新推出}了 $\Phi=\frac{3+\sqrt5}4$，然后被证明\textbf{恰好封顶在 $\Phi$}（否证带天花板），
+但同时也给出了一个严格的新结论：$\kappa_3^c<\Phi$。
+
+\subsection{$(t)_+$ 的 Legendre 展开：精确系数}\label{sec:r21:leg}
+
+\begin{proposition}[Legendre--Catalan 系数]\label{prop:r21cat}
+在 $[-1,1]$ 上（$L^2$ 意义下，且在 $t\ne0$ 处逐点）
+\begin{equation}\label{eq:r21leg}
+(t)_+=\sum_{\ell\ge0}c_\ell P_\ell(t),\qquad
+c_\ell=\frac{2\ell+1}2\int_0^1tP_\ell(t)\dd t,
+\end{equation}
+且
+\begin{equation}\label{eq:r21coef}
+c_0=\frac14,\quad c_1=\frac12,\quad c_\ell=0\ (\ell\ge3\ \text{奇}),\quad
+c_{2k}=\frac{(-1)^{k+1}(4k+1)\operatorname{Cat}_k}{4(2k-1)4^k}\ (k\ge1),
+\end{equation}
+其中 $\operatorname{Cat}_k=\frac1{k+1}\binom{2k}k$。等价的积分形式是
+$I_{2k}:=\int_0^1tP_{2k}(t)\dd t=-\dfrac{P_{2k}(0)}{(2k+2)(2k-1)}$，$c_{2k}=\frac{4k+1}2I_{2k}$。
+前几项为
+\[
+c_0,\dots,c_{12}=\frac14,\ \frac12,\ \frac5{16},\ 0,\ -\frac3{32},\ 0,\ \frac{13}{256},\ 0,\
+-\frac{17}{512},\ 0,\ \frac{49}{2048},\ 0,\ -\frac{75}{4096}.
+\]
+\end{proposition}
+
+\begin{proof}
+$(t)_+=\frac12(t+|t|)$。$|t|$ 是偶函数，故其 Legendre 展开只含偶次项；
+$t=P_1(t)$ 只贡献 $\ell=1$。这就给出了「$\ell\ge3$ 的奇次系数全为 $0$」，
+无需任何计算。偶次部分：对 $k\ge1$，分部积分两次（或用 Rodrigues 公式）给出
+$\int_0^1tP_{2k}(t)\dd t=\bigl[t\frac{P_{2k+1}-P_{2k-1}}{4k+1}\bigr]_0^1-\int_0^1\frac{P_{2k+1}-P_{2k-1}}{4k+1}\dd t$；
+第一项为 $0$（$P_\ell(1)=1$），第二项用 $\int_0^1P_\ell=-\frac{P_{\ell+1}(0)-P_{\ell-1}(0)}{2\ell+1}$
+与 $P_{2k\pm1}(0)=0$ 化简后得 $-\frac{P_{2k}(0)}{(2k+2)(2k-1)}$。
+再用 $P_{2k}(0)=(-1)^k\frac{(2k)!}{4^k(k!)^2}=(-1)^k\frac{(k+1)\operatorname{Cat}_k}{4^k}$
+即得 Catalan 形式。
+\end{proof}
+
+\begin{corollary}[三条尾恒等式与「四极以上的预算是负的」]\label{cor:r21tail}
+\[
+\sum_{\ell\ge0}c_\ell=1,\qquad \sum_{k\ge1}c_{2k}=\frac14,\qquad
+\boxed{\ \sum_{k\ge2}c_{2k}=-\frac1{16}\ } .
+\]
+第一条是在 $t=1$ 处取值；后两条由 $c_0=\frac14$、$c_2=\frac5{16}$ 得到。
+第三条的意义是：\textbf{四极矩以上的全部调和加起来是\emph{负}预算}，
+只要各 $W_{2k}$ 不太失衡，高阶项整体是帮忙而不是碍事。
+另外 $c_{2k}$ 的符号按 $k$ 交替（$k$ 奇为正、$k$ 偶为负，核对至 $k=299$），
+所以 $\ell=4$ 这一项\textbf{永远是收益}。
+\end{corollary}
+
+\subsection{谱表示 $\rho=\sum_\ell c_\ell W_\ell$}\label{sec:r21:spec}
+
+给定帧 $(g,U)$ 与 $\Lam$，令 $w_i:=g_ih_i=g_i\sqrt{u_i^\top\Lam u_i}$，则
+$\rho_{g,U}(\Lam)=\sum_{ij}w_iw_j(\langle u_i,u_j\rangle)_+$。
+代入 \eqref{eq:r21leg}~并定义
+\begin{equation}\label{eq:r21W}
+W_\ell:=\sum_{ij}w_iw_jP_\ell(\langle u_i,u_j\rangle)\qquad(\ell=0,1,2,\dots),
+\end{equation}
+就得到谱表示 $\rho=\sum_{\ell\ge0}c_\ell W_\ell$。
+
+\begin{proposition}[非负性与前三个 $W_\ell$ 的闭式]\label{prop:r21W}
+由球谐加法定理 $P_\ell(\langle u,v\rangle)=\frac{4\pi}{2\ell+1}\sum_{m}Y_{\ell m}(u)Y_{\ell m}(v)$，
+\begin{equation}\label{eq:r21Wpos}
+W_\ell=\frac{4\pi}{2\ell+1}\sum_m\Bigl(\sum_iw_iY_{\ell m}(u_i)\Bigr)^2\ \ge\ 0 ,
+\end{equation}
+且
+\[
+W_0=\Bigl(\sum_iw_i\Bigr)^2,\qquad
+W_1=\Bigl\|\sum_iw_iu_i\Bigr\|^2,\qquad
+W_2=\frac32\|T\|_F^2-\frac{W_0}2,\quad T:=\sum_iw_iu_iu_i^\top .
+\]
+$W_0,W_1,W_2$ 的闭式在 $N=4,5,6,8,10,12,16,24$ 上核对到 $10^{-16}$；
+$W_\ell\ge0$ 对 $\ell\le22$ 与全部测试构型无一违反；
+级数 $\sum_{\ell\le800}c_\ell W_\ell$ 收敛到 $\rho$（最差 $1.4\times10^{-5}$，
+误差全部来自 $t=0$ 处的 Gibbs 现象）。
+\end{proposition}
+
+\begin{theorem}[中心截面的精确谱公式]\label{thm:r21centre}
+在中心截面 $\Lam=I_3/3$ 上，$h_i\equiv\frac1{\sqrt3}$、$w_i=g_i/\sqrt3$，
+各向同性条件 $\sum_ig_iu_iu_i^\top=I_3$ 与 $\sum_ig_i=3$ 给出
+$T=\frac1{\sqrt3}I_3$、$\|T\|_F^2=1$、$W_0=3$，于是
+\begin{equation}\label{eq:r21W2zero}
+W_2=\frac32\cdot1-\frac32=0\quad\text{对\emph{每一个}各向同性帧恒成立},
+\end{equation}
+并且
+\begin{equation}\label{eq:r21centref}
+\kappa_3^c:=\kappa_3\Bigl(\tfrac13,\tfrac13,\tfrac13\Bigr)
+=\frac34+\frac{\|M_1\|^2}6+\sum_{k\ge2}c_{2k}W_{2k},
+\qquad M_1:=\sum_ig_iu_i .
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+$W_2\equiv0$ 就是「各向同性 $\iff$ 四极矩消失」；数值上对随机各向同性帧的最大
+$|W_2|$ 为 $4.8\times10^{-16}$。把 $W_0=3$、$W_1=\frac13\|M_1\|^2$ 代入
+$\rho=\frac14W_0+\frac12W_1+\sum_{k\ge2}c_{2k}W_{2k}$，并注意
+$\kappa_3^c=\rho$（$h_i\equiv1/\sqrt3$ 时两者相差因子 $3\cdot\frac13$），即得 \eqref{eq:r21centref}。
+该公式对随机帧重现 $\rho$ 到 $1.7\times10^{-5}$（截断在 $\ell=800$）。
+\end{proof}
+
+\begin{remark}
+\eqref{eq:r21centref}~把中心截面变成了三块：常数 $\frac34$；偶极子项 $\frac{\|M_1\|^2}6$；
+以及一个\textbf{符号交替}的高阶尾。由推论~\ref{cor:r21tail}，若所有 $W_{2k}$ 相等，
+尾项恰好是 $-\frac1{16}W$（收益）。真正的困难在于 $W_{2k}$ 之间并不独立，
+它们都来自同一个测度 $\nu=\sum_ig_i\delta_{u_i}$。
+\end{remark}
+
+\subsection{偶极子界的精确证书}\label{sec:r21:dipole}
+
+\begin{proposition}[偶极子上界，锐]\label{prop:r21dip}
+对任意各向同性测度 $\nu=\sum_ig_i\delta_{u_i}$（$\sum g_i=3$、$\sum g_iu_iu_i^\top=I_3$）
+与任意单位向量 $e$，
+\begin{equation}\label{eq:r21dip}
+\Bigl\langle\sum_ig_iu_i,\,e\Bigr\rangle\ \le\ 1,
+\qquad\text{即}\quad W_1\le1,\quad \|M_1\|^2\le3,
+\end{equation}
+等号成立当且仅当 $\nu$ 的支集整个落在纬度圆 $\langle u,e\rangle=\frac1{\sqrt3}$ 上。
+\end{proposition}
+
+\begin{proof}
+考虑二次多项式
+\[
+\gamma(z)=\frac{\sqrt3}2z^2-z+\Bigl(\frac1{\sqrt3}-\frac{\sqrt3}6\Bigr).
+\]
+它的判别式为 $1-4\cdot\frac{\sqrt3}2(\frac1{\sqrt3}-\frac{\sqrt3}6)=1-2(1-\frac12)=0$，
+故 $\gamma\ge0$ 且在 $z=\frac1{\sqrt3}$ 处有\textbf{二重根}（$\gamma$ 的最小值点即 $\frac1{\sqrt3}$）。
+对 $\nu$ 积分：$\int\gamma(\langle u,e\rangle)\dd\nu=\frac{\sqrt3}2\cdot1-\langle M_1,e\rangle+3(\frac1{\sqrt3}-\frac{\sqrt3}6)$
+（用了 $\int\langle u,e\rangle^2\dd\nu=e^\top I_3e=1$、$\nu(S^2)=3$），
+化简右端常数得 $\langle M_1,e\rangle\le1$。等号要求 $\gamma(\langle u_i,e\rangle)=0$ 对每个
+$g_i>0$ 的原子成立，即 $\langle u_i,e\rangle=\frac1{\sqrt3}$。
+\end{proof}
+
+\begin{remark}
+\eqref{eq:r21dip}~是\textbf{锐}的，且有两族取等者：三点三脚架（$120^\circ$ 均布）与
+整条纬度圆。四点情形（纬度圆上 $90^\circ$ 均布）恰是\textbf{等角四线}（立方体对角线），
+$|\langle u_i,u_j\rangle|=\frac13$，$\|M_1\|^2=3$，$L=4.5$，
+它给出中心截面的一个显式精确值 $\kappa_3^c\ge\frac{7.5}6=\frac54$（见 \S\ref{sec:r22:exact}）。
+\end{remark}
+
+\subsection{zonal 矩层级：独立重现 $\Phi$，并封顶在 $\Phi$}\label{sec:r21:zonal}
+
+把 \eqref{eq:r21centref}~中的 $W_{2k}$ 全部丢符号信息，只保留「非负」与
+若干\textbf{矩}约束，就得到一个只关于一个概率测度 $\Lambda$（$t=\langle u,v\rangle$ 的成对分布）
+的线性规划：
+\begin{equation}\label{eq:r21lp}
+V_L:=\sup\Bigl\{\int(t)_+\dd\Lambda:\ \Lambda\ge0,\ \textstyle\int\dd\Lambda=1,\
+\int t^2\dd\Lambda=\tfrac13,\ \int t\dd\Lambda=\tfrac13,\ Z_\ell(\Lambda)\ge0\ (\ell\le L)\Bigr\},
+\end{equation}
+其中 $\int t^2\dd\Lambda=\frac13$ 是各向同性（$\sum_{ij}g_ig_j\langle u_i,u_j\rangle^2=\|I_3\|_F^2=3$
+除以 $9$），$\int t\dd\Lambda=\frac{\|M_1\|^2}9\le\frac13$ 是命题~\ref{prop:r21dip}，
+$Z_\ell(\Lambda)\ge0$ 是 $W_\ell\ge0$ 的矩版本。$\kappa_3^c\le3V_L$ 对每个 $L$ 成立，
+且 $V_L$ 关于 $L$ 单调不增（每加一条 PSD 约束只会更紧）。
+
+\begin{theorem}[zonal 层级的精确天花板]\label{thm:r21zonal}
+\[
+\lim_{L\to\infty}3V_L=3V_\infty=\frac{3+\sqrt5}4=\Phi ,
+\]
+极值测度为
+\begin{equation}\label{eq:r21lamstar}
+\Lambda^*=\frac16\delta_1+\frac{5+\sqrt5}{12}\delta_{1/\sqrt5}+\frac{5-\sqrt5}{12}\delta_{-1/\sqrt5},
+\end{equation}
+它同时以\textbf{等号}满足两条矩约束，并且对 $\ell=3,\dots,40$ 全部满足 $Z_\ell(\Lambda^*)\ge0$
+（最小值 $-10^{-16}$）。数值 LP（$L=12$）给出 $3V_{12}=1.309016972$，与 $\Phi$ 差 $2.2\times10^{-8}$，
+支集收敛到 $\{1,\pm\frac1{\sqrt5}\}$。
+\end{theorem}
+
+\begin{proof}[证明要点]
+$3\int(t)_+\dd\Lambda^*=\frac34+\frac{\sqrt5}4=\Phi$ 是精确的符号计算。
+这是一个三原子、三约束（质量、一阶矩、二阶矩）的矩问题，
+其对偶证书是一条过 $(1,1)$、$(\frac1{\sqrt5},\frac1{\sqrt5})$ 且在 $t=-\frac1{\sqrt5}$ 处取值 $0$
+的分段线性主函数；由 LP 对偶即得 $V_\infty=\frac\Phi3$。
+\end{proof}
+
+\begin{remark}[这是一条独立的推导]\label{rem:r21indep}
+$\Phi$ 在 \STW~中是投影常数，在本报告 \S\ref{sec:nogo}~中是通道型主函数方案的天花板
+（定理~\ref{thm:zonal}）。定理~\ref{thm:r21zonal}~给出它的\textbf{第三种}身份：
+中心截面的 zonal 矩层级的极限值。三条完全独立的路线撞到同一个数，
+说明 $\Phi$ 是这一大类「只用各向同性 $+$ 偶极子 $+$ 非负性」的方法的\textbf{真正}障碍，
+而不是某一次放缩的偶然损失。
+\end{remark}
+
+\begin{theorem}[中心截面严格优于 $\Phi$]\label{thm:r21strict}
+\begin{equation}\label{eq:r21strict}
+\kappa_3\Bigl(\tfrac13,\tfrac13,\tfrac13\Bigr)<\Phi=\frac{3+\sqrt5}4 ,
+\end{equation}
+严格不等，且是非构造性的（本轮没有给出更好的显式常数）。
+\end{theorem}
+
+\begin{proof}
+反设某个各向同性 $\nu$ 使 $\rho$ 达到 $\Phi$。沿 \eqref{eq:r21lp}~的推导，
+这要求它的成对测度 $\Lambda$ 达到 LP 的极值，故 $\Lambda=\Lambda^*$，
+特别地 $\int t\dd\Lambda=\frac13$，即\textbf{偶极子取到最大}。
+由命题~\ref{prop:r21dip}~的取等刻画，$\nu$ 必须整个支在纬度圆 $\langle u,e\rangle=\frac1{\sqrt3}$ 上。
+但该圆上任意两点的内积为 $\langle u,v\rangle=\frac23\cos\Delta+\frac13\ge-\frac13$，
+而成对测度 $\Lambda^*$ 在 $t=-\frac1{\sqrt5}=-0.4472<-\frac13=-0.3333$ 处放了
+$\frac{5-\sqrt5}{12}=0.2303>0$ 的质量。矛盾。
+\end{proof}
+
+\begin{remark}
+定理~\ref{thm:r21strict}~的实质是：\textbf{矩层级的可行集严格大于真实成对测度的集合}，
+所以层级\emph{原则上}不可能紧。这条论证同时说明，任何只使用
+「$\Lambda$ 的矩 $+$ $Z_\ell\ge0$」的方案都无法把中心截面压到 $\rho_0$：
+$L=2$（只用各向同性与偶极子）给出 $1.366025$，$L=40$ 给出 $1.309017$，
+两者都在 $\rho_0$ 之上（缺口 $0.084457$ 与 $0.027449$）。
+把偶极子钉死并加入「纬度刚性预算」$U(s)$ 后，增广层级给出
+$1.308697<\Phi$（收益 $0.000320$，\textbf{数值}），仍高于 $\rho_0$（缺口 $0.027129$）；
+再把测度限制在纬度圆上，得 $1.302358$（收益 $0.006659$，\textbf{数值}）。
+这两个数说明 $U(s)$ 还很粗糙，但也说明\textbf{方向是对的}：
+每加一条真实的几何约束，值就往下走。
+\end{remark}
+
+\subsection{符号盲路线的否证}\label{sec:r21:sign}
+
+\STW~的主函数是 $\frac{t+|t|}2$，即「用 $|t|$ 换掉符号信息」。本轮把这一整族彻底否证：
+
+\begin{proposition}[符号盲不可能达到 $\rho_0$]\label{prop:r21sign}
+设 $Q^*$ 为冠军的秩三投影（$\operatorname{spec}(Q^*)=\{1,1,1,0,0,0\}$，$(Q^*)^2=Q^*$，
+$\rho(Q^*_+)=\rho_0$ 精确成立），则
+\[
+\rho(|Q^*|)=\frac{(\alpha^2+s)+\sqrt{(\alpha^2-s)^2+20\alpha^2\beta^2}}2=1.602534,
+\qquad s=\beta^2+\frac25+\frac{2\sqrt5}5,
+\]
+其中 $\alpha,\beta$ 是冠军的轮毂／轮缘径向坐标（$\alpha^2+5\beta^2=1$）。于是
+\begin{equation}\label{eq:r21signblind}
+\frac{1+\rho(|Q^*|)}2=1.301266795>\rho_0=1.281568197\quad(\text{超出 }0.019699).
+\end{equation}
+因此\textbf{不存在}形如 $\rho(Q_+)\le F(\rho(|Q|))$（$F$ 单调不减）的界能达到 $\rho_0$。
+此外 $\lambda_{\max}(Q^*_-)=2(\frac25\cos\frac\pi5-\beta^2)$，
+Ky Fan 型符号盲界 $1+\lambda_{\max}(Q_-)=1.379920$ 比 \eqref{eq:r21signblind}~更差，
+即两条符号盲路线里 \STW~的那条更优。
+最后，仿射符号盲主函数 $\theta t+(1-\theta)|t|$ 中，
+$\theta=\frac12$ 是\textbf{唯一}的最小可行值：\STW~的 $\frac{t+|t|}2$ 是它整个族里的最优者。
+\end{proposition}
+
+\subsection{本轮状态与诚实标签}\label{sec:r21:status}
+
+\begin{center}\small
+\begin{tabular}{lll}
+\toprule
+结论 & 状态 & 位置\\
+\midrule
+$(t)_+$ 的 Catalan 闭式系数、奇次项消失 & \textbf{已证（精确）} & 命题~\ref{prop:r21cat}\\
+$\sum_{k\ge2}c_{2k}=-\frac1{16}$ & \textbf{已证（精确）} & 推论~\ref{cor:r21tail}\\
+$W_\ell\ge0$、$W_0,W_1,W_2$ 闭式 & \textbf{已证} & 命题~\ref{prop:r21W}\\
+中心截面 $W_2\equiv0$ 与公式 \eqref{eq:r21centref} & \textbf{已证} & 定理~\ref{thm:r21centre}\\
+偶极子界 $\|M_1\|^2\le3$ 及取等刻画 & \textbf{已证（证书锐）} & 命题~\ref{prop:r21dip}\\
+zonal 层级极限 $=\Phi$，极值测度 \eqref{eq:r21lamstar} & \textbf{已证（精确）} & 定理~\ref{thm:r21zonal}\\
+$\kappa_3^c<\Phi$（严格） & \textbf{已证（非构造）} & 定理~\ref{thm:r21strict}\\
+增广层级 $1.308697$、纬度限制 $1.302358$ & \textbf{数值} & \S\ref{sec:r21:zonal}\\
+符号盲族天花板 $1.301267>\rho_0$、$\theta=\frac12$ 唯一 & \textbf{否证带天花板} & 命题~\ref{prop:r21sign}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+复现：\texttt{\_r21a.py}（$37$ 项全绿）、\texttt{\_r21b.py}（$14$ 项全绿）。
+
+\section{第 22 轮：中心截面的精确恒等式、$L\le3\varphi$ 锐界与 $m_4$-归约}\label{sec:r22}
+
+\subsection{中心截面其实是一个 $\mathbf{RP^2}$ 上的测度问题}\label{sec:r22:exact}
+
+第~21 轮的谱表示把 $\kappa_3^c$ 写成 $\frac34+\frac{\|M_1\|^2}6+\sum_{k\ge2}c_{2k}W_{2k}$，
+其中高阶尾的符号交替使估计很难。本轮的第一个观察是：
+\textbf{这个尾根本不需要估计}——它可以被精确求和。
+
+\begin{theorem}[中心截面的精确恒等式]\label{thm:r22id}
+设 $\mu=\sum_{i=1}^nm_i\delta_{\ell_i}$ 是 $\mathbf{RP}^2$（即 $S^2$ 模去对径）上的正测度，满足
+\begin{equation}\label{eq:r22iso}
+\mu(\mathbf{RP}^2)=\sum_im_i=3,\qquad \sum_im_i\ell_i\ell_i^\top=I_3 .
+\end{equation}
+定义
+\begin{equation}\label{eq:r22LA}
+L(\mu):=\iint|\langle\ell,\ell'\rangle|\dd\mu\dd\mu'=\sum_{ij}m_im_j|\langle\ell_i,\ell_j\rangle|,
+\qquad
+A(\mu):=\max_{\|w\|=1}\int|\langle\ell,w\rangle|\dd\mu .
+\end{equation}
+则
+\begin{equation}\label{eq:r22id}
+\kappa_3\Bigl(\tfrac13,\tfrac13,\tfrac13\Bigr)=\frac16\sup_{\mu\ \text{满足}\ \eqref{eq:r22iso}}
+\bigl[L(\mu)+A(\mu)^2\bigr]=:\frac16\sup_\mu J(\mu).
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+第一步（球面上的恒等式）。取定代表元 $u_i\in S^2$、$\ell_i=\pm u_i$，令 $\nu=\sum_ig_i\delta_{u_i}$。
+由 $(t)_+=\frac12(t+|t|)$，
+\[
+\sum_{ij}g_ig_j(\langle u_i,u_j\rangle)_+
+=\frac12\Bigl[\sum_{ij}g_ig_j|\langle u_i,u_j\rangle|+\sum_{ij}g_ig_j\langle u_i,u_j\rangle\Bigr]
+=\frac12\bigl[L(\nu)+\|M_1(\nu)\|^2\bigr],
+\]
+因为第二项就是 $\|\sum_ig_iu_i\|^2$。这是\textbf{恒等式}，不含任何放缩，
+所以第~21 轮的整个高阶尾 $\sum_{k\ge2}c_{2k}W_{2k}$ 恰好等于 $\frac12[L-3]+\frac12[\|M_1\|^2-3]$
+（在中心截面 $\sum g_ig_j\langle u_i,u_j\rangle^2=3$ 的归一化下）。
+数值核对：随机 Parseval 帧上两侧之差最大 $4.4\times10^{-16}$。
+
+第二步（过渡到线）。$|\langle u_i,u_j\rangle|$ 与 $g$ 无关地只依赖线 $\ell_i$，
+故 $L(\nu)=L(\mu)$，其中 $\mu$ 是 $\nu$ 推到 $\mathbf{RP}^2$ 的像；
+而 $\|M_1(\nu)\|^2$ 依赖代表元的符号。写 $\nu=\nu_e+\nu_o$（偶／奇分解），
+由于 $|\langle u,v\rangle|$ 的 Legendre 展开只含偶次项（命题~\ref{prop:r21cat}），
+$L(\nu)=L(\nu_e)$；由于偶测度没有偶极子，$\|M_1(\nu)\|^2=\|M_1(\nu_o)\|^2$。
+两个奇偶扇区\textbf{正交}，唯一的耦合是正性 $\nu_e+\nu_o\ge0$，
+即每条线可以自由选择半球。于是对上确界而言
+$\sup_\nu\|M_1(\nu)\|^2=\max_{\sigma\in\{\pm1\}^n}\bigl\|\sum_i\sigma_im_i\ell_i\bigr\|^2$，
+而这个最大值等于 $A(\mu)^2$：一方面
+$\max_\sigma\langle\sum_i\sigma_im_i\ell_i,w\rangle=\sum_im_i|\langle\ell_i,w\rangle|$
+（逐条选 $\sigma_i=\operatorname{sgn}\langle\ell_i,w\rangle$），对 $w$ 取最大即 $A(\mu)$；
+另一方面 $\|\cdot\|^2$ 的最大值也在某个 $w$ 方向上实现。
+\end{proof}
+
+\begin{remark}[为什么必须用线形式]\label{rem:r22line}
+「线形式」与「原子形式」的差别不是技术性的。以正二十面体的 $6$ 条线（$m_i=\frac12$）为例：
+$L=3\varphi=4.854102$，若沿用给定的原子代表元则 $\|M_1\|^2$ 只给出 $J=5.683282$，
+而\textbf{最优符号}给出 $\|M_1\|^2=A^2=\varphi^2=\frac{3+\sqrt5}2=2.618034$，$J=7.472136$。
+两者相差 $1.79$，几乎是一个 $\rho_0$。所以 \eqref{eq:r22id}~的右端必须取 $A^2$ 而不是 $\|M_1\|^2$。
+\end{remark}
+
+\subsection{两个立刻可用的精确工具}\label{sec:r22:cs}
+
+\begin{lemma}[Cauchy--Schwarz 亏格恒等式]\label{lem:r22cs}
+对单位向量 $w$ 记 $a_i:=|\langle\ell_i,w\rangle|$、$A(w):=\sum_im_ia_i$、
+$V(w):=\sum_{ij}m_im_j(a_i-a_j)^2$。则由 $\sum_im_i=3$ 与 $\sum_im_ia_i^2=w^\top I_3w=1$，
+\begin{equation}\label{eq:r22cs}
+A(w)^2=3-\frac{V(w)}2 .
+\end{equation}
+特别地 $A(\mu)^2\le3$，等号成立当且仅当存在 $w$ 使\textbf{每条线}都落在纬度
+$\langle\ell,w\rangle=\pm\frac1{\sqrt3}$ 上（等纬度圆）。
+\end{lemma}
+
+\begin{proof}
+恒等式 $(\sum m a)^2=(\sum m)(\sum ma^2)-\frac12\sum_{ij}m_im_j(a_i-a_j)^2$ 是初等的
+（两边都等于 $\sum_{ij}m_im_ja_ia_j$ 与 $\frac12\sum_{ij}m_im_j(a_i^2+a_j^2-a_ia_j\cdot2)$ 的重组）。
+等号条件即 $V(w)=0$，即所有 $a_i$ 相等，再由 $\sum m_ia_i^2=1$ 得 $a_i\equiv\frac1{\sqrt3}$。
+\end{proof}
+
+\begin{remark}
+\eqref{eq:r22cs}~给出偶极子界 $A^2\le3$ 的\textbf{第二条证明}
+（第一条是命题~\ref{prop:r21dip}~的二次证书），而且它给出了\textbf{亏格的精确表达式}：
+$3-A^2=\frac12\min_wV(w)$。这个量后面会反复出现，记
+\begin{equation}\label{eq:r22Vdef}
+V:=\min_{\|w\|=1}V(w)=6-2A(\mu)^2\ \ge\ 0,
+\end{equation}
+其中上界 $A^2\le3$ 来自引理~\ref{lem:r22cs}，故 $V\ge0$；
+后面真正关心的只是小 $V$ 的区间 $V\in[0,0.3293856)$（见定理~\ref{thm:r22red}）。$V$ 度量「离等纬度圆有多远」，
+它是本轮把 $L$ 与 $A^2$ \textbf{耦合}起来的唯一桥梁。
+\end{remark}
+
+\begin{proposition}[Cauchy--Schwarz 预算 $L\le f(S_2)$]\label{prop:r22fS2}
+记 $S_2:=\sum_im_i^2$。则
+\begin{equation}\label{eq:r22fS2}
+L\ \le\ f(S_2):=S_2+\sqrt{(9-S_2)(3-S_2)},
+\end{equation}
+$f$ 在 $[0,3]$ 上严格递减；并且对每一个\textbf{等角紧线帧}，\eqref{eq:r22fS2}~取等号。
+\end{proposition}
+
+\begin{proof}
+$L=S_2+\sum_{i\ne j}m_im_j|\langle\ell_i,\ell_j\rangle|$，
+对第二项用 Cauchy--Schwarz：$\le\sqrt{(\sum_{i\ne j}m_im_j)(\sum_{i\ne j}m_im_j\langle\ell_i,\ell_j\rangle^2)}$。
+第一个因子是 $9-S_2$；第二个因子是 $3-S_2$，因为
+$\sum_{ij}m_im_j\langle\ell_i,\ell_j\rangle^2=\|\sum_im_i\ell_i\ell_i^\top\|_F^2=\|I_3\|_F^2=3$
+而对角部分恰为 $S_2$。递减性：$f'(S_2)=1-\frac{6-S_2}{\sqrt{(9-S_2)(3-S_2)}}<0$ 对 $S_2\in[0,3)$。
+等角紧线帧（$n$ 条线、$m_i=3/n$、$|\langle\ell_i,\ell_j\rangle|^2=\frac{n-3}{3(n-1)}$）
+使 Cauchy--Schwarz 的两边成比例，故取等。
+\end{proof}
+
+\begin{center}\small
+\begin{tabular}{c|ccccc}
+\toprule
+$n$（等角紧线帧） & $3$ & $4$ & $5$ & $6$ & $7$\\
+\midrule
+$\cos^2$ & $0$ & $1/9$ & $1/6$ & $1/5$ & $2/9$\\
+$L$ & $3.000000$ & $4.500000$ & $4.739388$ & $4.854102$ & $4.922263$\\
+\bottomrule
+\end{tabular}
+\end{center}
+按 Gerzon 界，$\R^3$ 中的等角线至多 $6$ 条，所以 $n=7$ 那一行只是形式计算。
+$n=6$ 就是正二十面体，$L=3\varphi$，而下面的定理说明这已经是\textbf{全局}最大。
+
+\subsection{锐界 $L\le3\varphi$ 及其多项式证书}\label{sec:r22:3phi}
+
+\begin{definition}[四阶矩 $m_4$]\label{def:r22m4}
+\begin{equation}\label{eq:r22m4}
+m_4:=\frac19\sum_{ij}m_im_j\langle\ell_i,\ell_j\rangle^4=\frac19\|A_4\|_F^2,
+\qquad A_4:=\sum_im_i\,\ell_i^{\otimes4}\in\operatorname{Sym}^4(\R^3).
+\end{equation}
+\end{definition}
+
+\begin{lemma}[四阶矩下界]\label{lem:r22m4}
+$m_4\ge\frac15$。
+\end{lemma}
+
+\begin{proof}
+令 $I_4:=\frac1{15}(\delta\otimes\delta\otimes\mathrm{id}+\delta\otimes\mathrm{id}\otimes\delta+\mathrm{id}\otimes\delta\otimes\delta)$
+为 $\operatorname{Sym}^4(\R^3)$ 中的「度量元」，则 $\|I_4\|_F^2=\frac15$，且对单位向量 $\ell$
+有 $\langle\ell^{\otimes4},I_4\rangle=\frac3{15}\|\ell\|^4=\frac15$，故 $\langle A_4,I_4\rangle=\frac15\sum_im_i=\frac35$。
+Cauchy--Schwarz 给 $\|A_4\|_F\ge\frac{\langle A_4,I_4\rangle}{\|I_4\|_F}=\frac{3/5}{1/\sqrt5}=\frac3{\sqrt5}$，
+即 $\|A_4\|_F^2\ge\frac95$。
+\end{proof}
+
+\begin{theorem}[$L\le3\varphi$，锐]\label{thm:r223phi}
+对满足 \eqref{eq:r22iso}~的一切 $\mu$，
+\begin{equation}\label{eq:r223phi}
+L\ \le\ \frac{51\sqrt5-21}{16}-\frac{135\sqrt5-225}{16}\,m_4
+\ =\ 5.8149668-4.8043236\,m_4\ \le\ 3\varphi=4.8541020 ,
+\end{equation}
+等号成立当且仅当 $\mu$ 是正二十面体的 $6$ 条线配等质量 $m_i=\frac12$
+（此时 $S_2=\frac32$、$m_4=\frac15$）。
+\end{theorem}
+
+\begin{proof}
+取
+\[
+q(s)=\gamma+\alpha s+\beta s^2,\qquad
+\gamma=\frac{1+\sqrt5}{16},\quad \alpha=\frac{7\sqrt5-5}8,\quad \beta=\frac{25-15\sqrt5}{16}<0 .
+\]
+\textbf{证书}：
+\begin{equation}\label{eq:r22cert}
+q(s)^2-s=-\frac{(s-1)(5s-1)^2\bigl[(15\sqrt5-35)s+(\sqrt5+3)\bigr]}{128}\ \ge\ 0
+\qquad (0\le s\le1),
+\end{equation}
+因为 $s\le1$、平方项非负、而 $(15\sqrt5-35)s+(\sqrt5+3)\ge(15\sqrt5-35)+(\sqrt5+3)=16\sqrt5-32>0$。
+故 $q(s)\ge\sqrt s$（$q>0$ 由 $q(0)=\gamma>0$ 与 $q(1)=1$ 及 \eqref{eq:r22cert}~保证）。
+\eqref{eq:r22cert}~的根是 $s=1$、$s=\frac15$（二重）、$s=\frac{3+\sqrt5}{35-15\sqrt5}=3.589\notin[0,1]$，
+所以\textbf{在 $[0,1]$ 上 $q(s)=\sqrt s$ 当且仅当 $s\in\{1,\frac15\}$}。
+
+把 $s=\langle\ell_i,\ell_j\rangle^2$ 代入并对 $ij$ 求和：
+\[
+L\le\sum_{ij}m_im_jq(\langle\ell_i,\ell_j\rangle^2)
+=9\gamma+\alpha\sum_{ij}m_im_j\langle\ell_i,\ell_j\rangle^2+\beta\sum_{ij}m_im_j\langle\ell_i,\ell_j\rangle^4
+=9\gamma+3\alpha+9\beta m_4,
+\]
+其中用到了 $\sum m_im_j\langle\ell_i,\ell_j\rangle^2=3$ 与定义~\ref{def:r22m4}。
+直接计算 $9\gamma+3\alpha=\frac{9(1+\sqrt5)+6(7\sqrt5-5)}{16}=\frac{51\sqrt5-21}{16}$、
+$9\beta=\frac{225-135\sqrt5}{16}$，即 \eqref{eq:r223phi}~的第一式；
+配合引理~\ref{lem:r22m4}~与 $\beta<0$ 得
+\[
+L\le\frac{51\sqrt5-21}{16}+\frac{225-135\sqrt5}{80}
+=\frac{255\sqrt5-105+225-135\sqrt5}{80}
+=\frac{120(1+\sqrt5)}{80}=\frac{3(1+\sqrt5)}2=3\varphi .
+\]
+取等要求同时：$m_4=\frac15$（引理~\ref{lem:r22m4}~的等号）与
+每个 $s_{ij}\in\{1,\frac15\}$（证书的等号）。后者意味着线组\textbf{等角}且公共角余弦平方为 $\frac15$；
+在 $\R^3$ 中等角线至多 $6$ 条，$6$ 条等角线的紧性又强制等质量 $m_i=\frac12$，
+这就是正二十面体。
+\end{proof}
+
+\begin{remark}[为什么这条界值得单独写]\label{rem:r223phi}
+$L\le3\varphi$ 本身并不足以关闭中心截面：$3\varphi+3=7.854102>6\rho_0=7.689409$，
+超出 $0.164693$（\S\ref{sec:r22:decouple}）。但 \eqref{eq:r223phi}~的\textbf{带 $m_4$ 版本}是有用的：
+它把 $L$ 的上界与一个可以在等纬度圆上\textbf{精确}计算的量 $m_4$ 绑定，
+这正是 \S\ref{sec:r22:decouple}~里「$m_4$-归约」的出发点。
+证书 \eqref{eq:r22cert}~是二项式型的（$\sqrt s$ 的二次上界），
+它锐到不能再锐：在 $s=\frac15$ 处相切、在 $s=1$ 处相交，
+而这两个点恰好是取等构型（正二十面体）的全部内积值。
+\end{remark}
+
+\subsection{圆上的 Fourier：等纬度情形的完全化简}\label{sec:r22:circle}
+
+若 $A^2=3$，则引理~\ref{lem:r22cs}~说明所有线都在纬度 $\pm\frac1{\sqrt3}$ 上，
+于是整个问题塌缩到\textbf{一个圆}上：$\langle\ell_i,\ell_j\rangle=\frac13+\frac23\cos\Delta_{ij}$，
+\[
+L=\frac23Q,\qquad Q:=\iint K(\varphi-\varphi')\dd\rho\dd\rho',\qquad
+K(\theta):=\Bigl|\frac12+\cos\theta\Bigr|,
+\]
+其中 $\rho$ 是圆上质量 $3$ 的正测度，且各向同性 \eqref{eq:r22iso}~恰好等价于
+$\hat\rho_1=\hat\rho_2=0$（$\hat\rho_n:=\int e^{in\varphi}\dd\rho$）。此时 $\kappa_3^c=\frac12+\frac Q9$。
+
+\begin{proposition}[$K$ 的 Fourier 系数]\label{prop:r22K}
+\begin{equation}\label{eq:r22K}
+\hat K_0=\frac{\sqrt3}\pi+\frac16,\qquad
+\hat K_n=\begin{cases}
+-\dfrac{\sqrt3}{\pi(n^2-1)}, & 3\mid n,\\[6pt]
+\dfrac{\sqrt3}{2\pi n(n+1)}, & n\equiv1\ (3),\\[6pt]
+\dfrac{\sqrt3}{2\pi n(n-1)}, & n\equiv2\ (3),
+\end{cases}\qquad(n\ge1)
+\end{equation}
+且 $\hat K_n<0\iff3\mid n$。
+\end{proposition}
+
+\begin{proof}
+$K$ 在 $\theta=\pm\frac{2\pi}3$ 处有折点，分段积分
+$\hat K_n=\frac1{2\pi}\int_0^{2\pi}|\cos\theta+\frac12|e^{-in\theta}\dd\theta$
+即得；$n=0$ 时 $\int K=2\sqrt3+\frac\pi3$。$n\ge3$ 与公式的符合精度 $1.5\times10^{-11}$
+（$n=1$ 的数值积分受混叠影响，偏差 $0.167$，此处以闭式为准；
+闭式给出 $\hat K_1=\hat K_2=\frac{\sqrt3}{4\pi}=0.1378322$）。
+\end{proof}
+
+\begin{remark}[一个「恰好」的巧合]\label{rem:r22coinc}
+$\hat K_1$ 与 $\hat K_2$ 是 $K$ 的\textbf{最大两个正系数}，
+而各向同性恰好杀掉 $\hat\rho_1,\hat\rho_2$。于是
+$Q=9\hat K_0+2\sum_{n\ge3}\hat K_n|\hat\rho_n|^2$，其中 $9\hat K_0=6.461960$，
+$\sum_{n\ge3}\hat K_n=-0.051329<0$（交替的符号在帮忙），
+$\sum_{n\ge4,3\nmid n}\hat K_n=+0.057668$（绝对收敛，$\hat K_n\sim\frac{\sqrt3}{2\pi n^2}$）。
+预算换算：$\kappa_3^c\le\rho_0\iff Q\le9\rho_0-\frac92=7.034114\iff
+2\sum_{n\ge3}\hat K_n|\hat\rho_n|^2\le0.572154$。
+这条通道是\textbf{完全线性}的（$Q$ 是 $|\hat\rho_n|^2$ 的线性函数），
+困难只在于「$\hat\rho$ 必须来自一个正测度」这一 Bochner／余正定性约束。
+\end{remark}
+
+\subsection{解耦否证与 $m_4$-归约}\label{sec:r22:decouple}
+
+\begin{proposition}[解耦必败]\label{prop:r22dec}
+任何形如「先用定理~\ref{thm:r223phi}~界 $L$、再用引理~\ref{lem:r22cs}~界 $A^2$、然后相加」的论证
+最多给出
+\[
+J=L+A^2\le3\varphi+3=7.8541020>6\rho_0=7.6894092\quad(\text{超出 }0.1646928),
+\]
+因此\textbf{必须}把 $L$ 与 $A^2$ 耦合起来。
+\end{proposition}
+
+\begin{theorem}[$m_4$-归约]\label{thm:r22red}
+\[
+\kappa_3^c\le\rho_0\quad\Longleftrightarrow\quad
+A(\mu)^2\ \le\ c_0+\frac{m_4}{c_1}\quad\text{对所有满足 \eqref{eq:r22iso} 的 $\mu$},
+\]
+其中（精确值）
+\begin{equation}\label{eq:r22c01}
+c_0:=6\rho_0-\frac{51\sqrt5-21}{16}=1.8744425029524276,\qquad
+c_1:=\frac1{-9\beta}=\frac{20+12\sqrt5}{225}=0.2081458476888777 .
+\end{equation}
+特别地，仅用 $m_4\ge\frac15$ 就能关闭
+\begin{equation}\label{eq:r22thresh}
+A(\mu)^2\le c_0+\frac1{5c_1}=2.8353072149833227 ,
+\end{equation}
+剩下的\textbf{开口窗口}是 $A^2\in(2.8353072,3]$，等价地 $V=6-2A^2\in[0,0.3293856)$。
+\end{theorem}
+
+\begin{proof}
+$6\kappa_3^c=\sup J\le\sup[L+A^2]\le\frac{51\sqrt5-21}{16}+9\beta m_4+A^2$
+（定理~\ref{thm:r223phi}），令其 $\le6\rho_0$ 并解出 $A^2$ 即得；
+$-9\beta=\frac{135\sqrt5-225}{16}=4.8043236$，其倒数为 $\frac{20+12\sqrt5}{225}$。
+\end{proof}
+
+\begin{conjecture}[耦合不等式]\label{conj:r22coupled}
+对一切满足 \eqref{eq:r22iso}~的 $\mu$，
+\begin{equation}\label{eq:r22coupled}
+m_4\ \ge\ c_1\bigl(A(\mu)^2-c_0\bigr)
+=\frac{20+12\sqrt5}{225}\bigl(A(\mu)^2-1.8744425\bigr).
+\end{equation}
+\end{conjecture}
+
+\begin{remark}
+\eqref{eq:r22coupled}~在 $A^2\le c_0+\frac1{5c_1}$ 时是引理~\ref{lem:r22m4}~的推论，
+所以真正的内容只在窗口 $A^2\in(2.8353,3]$ 上。
+在窗口的\textbf{右端点} $A^2=3$（等纬度圆）处，需要 $m_4\ge0.234280119$；
+第~23 轮将证明等纬度圆上有精确下界 $m_4\ge\frac{19}{81}=0.234567901$，
+余量 $2.878\times10^{-4}$，故\textbf{右端点已闭合}。
+本轮在 $1170$ 个构型（锥族 $n=3..8$、纬度族 $n=3..12$、正二十面体、$800$ 组随机帧）
+与一次「固定 $V$ 最小化 $m_4$」的约束扫描（$V=0..0.32889$，$6$ 原子）中
+\textbf{未发现任何违反}：耦合松弛最小 $+2.878\times10^{-4}$，
+真实松弛 $\min(6\rho_0-J)=+9.347\times10^{-2}$，约束扫描的最小间隙 $+3.3\times10^{-3}$。
+窗口内部仍未证明——这是本报告当前\textbf{最主要}的开口。
+\end{remark}
+
+\subsection{数值上确界：$5$-锥}\label{sec:r22:num}
+
+对 $N=3,\dots,16$ 用多起点 L-BFGS 直接最大化 $J$（在 $\mathrm{St}(N,3)$ 上），结果：
+\begin{center}\small
+\begin{tabular}{c|cccccccc}
+\toprule
+$N$ & $3$ & $4$ & $5$ & $6$ & $7$ & $\dots$ & $16$\\
+\midrule
+$\sup J$ & $6.000000$ & $7.500000$ & $7.504529$ & $\mathbf{7.595950}$ & $7.595950$ & $\dots$ & $7.595950$\\
+$\kappa_3^c$ & $1.000000$ & $1.250000$ & $1.250755$ & $\mathbf{1.265992}$ & $1.265992$ & $\dots$ & $1.265992$\\
+\bottomrule
+\end{tabular}
+\end{center}
+$N\ge6$ 的值完全稳定在 $J=7.595950307218$，$\kappa_3^c=1.265991717870$，
+到 $6\rho_0$ 的余量 $0.093459$。极值构型（$N=6$）的结构是
+$g=(0.548296^{\times5},0.258522)$、纬度 $(\langle u_j,w\rangle)=(0.520064^{\times5},1)$，
+即\textbf{一个 $5$-锥}；非对角 $|\langle u_i,u_j\rangle|$ 只取三个值
+$\{0.319738^{\times10},0.495905^{\times10},0.520064^{\times10}\}$。
+$N=4$ 的极值是等角四线（$J=7.5$ 精确），$N=5$ 略高（$7.504529$），
+$N\ge6$ 跳到 $7.595950$。第~23 轮将把 $N=6$ 这个值\textbf{解析}求出。
+
+\subsection{本轮状态与诚实标签}\label{sec:r22:status}
+
+\begin{center}\small
+\begin{tabular}{lll}
+\toprule
+结论 & 状态 & 位置\\
+\midrule
+中心截面精确恒等式 \eqref{eq:r22id} & \textbf{已证} & 定理~\ref{thm:r22id}\\
+奇偶正交分解、线形式 & \textbf{已证} & 定理~\ref{thm:r22id}~证明\\
+$A(w)^2=3-\frac{V(w)}2$、$A^2\le3$ 及取等 & \textbf{已证} & 引理~\ref{lem:r22cs}\\
+$L\le f(S_2)$，等角紧帧取等 & \textbf{已证} & 命题~\ref{prop:r22fS2}\\
+$m_4\ge\frac15$ & \textbf{已证} & 引理~\ref{lem:r22m4}\\
+$L\le\frac{51\sqrt5-21}{16}+9\beta m_4\le3\varphi$，锐 & \textbf{已证（精确证书）} & 定理~\ref{thm:r223phi}\\
+$\hat K_n$ 闭式与符号规律 & \textbf{已证（精确）} & 命题~\ref{prop:r22K}\\
+解耦超出 $0.1646928$ & \textbf{否证带天花板} & 命题~\ref{prop:r22dec}\\
+$m_4$-归约与开口窗口 & \textbf{已证} & 定理~\ref{thm:r22red}\\
+耦合不等式 \eqref{eq:r22coupled} & \textbf{猜想}（窗口端点已证、内部数值无违反） & 猜想~\ref{conj:r22coupled}\\
+$\sup J=7.595950307218$（$5$-锥） & \textbf{数值}（第 23 轮给解析式） & \S\ref{sec:r22:num}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+复现：\texttt{\_r22a.py}（$12$ 项通过、$1$ 项为 \S\ref{sec:r22:circle}~中说明的 $n=1$ 数值积分混叠）、
+\texttt{\_r22b.py}（部分：$m_4$-归约、耦合扫描、等纬度实验）。
+
+\section{第 23 轮：锥族闭式、单轴主定理 $\max F=\rho_0$、调和分解与耦合不等式的进展}\label{sec:r23}
+
+\subsection{本轮的三件事}\label{sec:r23:motiv}
+
+第~22 轮把中心截面归约成一个开口窗口（猜想~\ref{conj:r22coupled}），
+并把数值上确界定位到一个「$5$-锥」。本轮做三件事：
+\begin{enumerate}\itemsep2pt
+\item[(i)] 把\textbf{锥族}（一个极点 $+$ 一个正 $n$ 边形纬度圈）的 $L$、$A^2$、$F$
+全部写成\textbf{闭式}，于是第~22 轮的数值上确界变成一个四次方程的根（\S\ref{sec:r23:cent}）；
+\item[(ii)] 在\textbf{单轴}截面（冠军所在的截面）上证明本轮的主定理：
+锥族的二维变分问题 $\max F(a,z)$ 的最大值\textbf{精确等于 $\rho_0$}，
+极值点是 $(a^*,z^*)$，$a^*$ 有根式表达、$z^{*2}$ 有八次最小多项式（\S\ref{sec:r23:uni}）。
+这条定理的意义是：冠军不再是一个「数值发现的构型」，而是一个二维初等变分问题的临界点，
+并且我们第一次得到了冠军关于 $a$ 的一阶条件 $\partial F/\partial a=0$；
+\item[(iii)] 给猜想~\ref{conj:r22coupled}~两个新工具：四阶矩的\textbf{调和分解}
+$m_4=\frac15+\frac19\|H_4\|_F^2$（\S\ref{sec:r23:harm}），以及等纬度圆上的
+\textbf{精确}下界 $m_4\ge\frac{19}{81}$（\S\ref{sec:r23:equi}）。
+后者把开口窗口的\textbf{右端点彻底关闭}（定理~\ref{thm:r23endpoint}）。
+\end{enumerate}
+
+\subsection{锥族：定义与各向同性的精确验证}\label{sec:r23:cone}
+
+\begin{definition}[锥族]\label{def:r23cone}
+固定 $n\ge3$ 与纬度 $z\in[0,\frac1{\sqrt3}]$。令极点 $u_0=e_3$，轮缘
+$u_j=\bigl(\sqrt{1-z^2}\cos\frac{2\pi j}n,\ \sqrt{1-z^2}\sin\frac{2\pi j}n,\ z\bigr)$，$j=0,\dots,n-1$，质量
+\begin{equation}\label{eq:r23mass}
+g_0=\frac{1-3z^2}{1-z^2},\qquad g_j=\frac Gn,\qquad G:=\frac2{1-z^2}.
+\end{equation}
+\end{definition}
+
+\begin{lemma}[锥族各向同性]\label{lem:r23iso}
+定义~\ref{def:r23cone}~的加权帧对每个 $n\ge3$、每个 $z\in[0,\frac1{\sqrt3}]$ 满足
+$\sum_ig_iu_iu_i^\top=I_3$、$\sum_ig_i=3$，且 $g_i\ge0$。
+\end{lemma}
+
+\begin{proof}
+轮缘部分：$\frac1n\sum_j(\cos\frac{2\pi j}n,\sin\frac{2\pi j}n)^\top(\cdots)=\frac12I_2$（$n\ge3$ 时精确），
+故 $\sum_{j}g_ju_ju_j^\top=G\operatorname{diag}(\frac{1-z^2}2,\frac{1-z^2}2,z^2)
+=\operatorname{diag}(1,1,\frac{2z^2}{1-z^2})$。
+加上极点项 $g_0e_3e_3^\top$，第三分量成为 $\frac{2z^2+1-3z^2}{1-z^2}=1$。
+质量 $g_0+G=\frac{1-3z^2+2}{1-z^2}=3$；$g_0\ge0\iff z\le\frac1{\sqrt3}$。
+数值核对：$4.4\times10^{-16}$。
+\end{proof}
+
+\begin{lemma}[$L$ 的闭式]\label{lem:r23L}
+\begin{equation}\label{eq:r23L}
+L_n(z)=g_0^2+2g_0Gz+\frac{G^2}n\sum_{d=0}^{n-1}\Bigl|(1-z^2)\cos\frac{2\pi d}n+z^2\Bigr| .
+\end{equation}
+特别地 $n=5$ 时（在 $z\le0.668$ 的范围内，含后面的极值点）
+\begin{equation}\label{eq:r23L5}
+\sum_{d=0}^{4}\Bigl|(1-z^2)\cos\frac{2\pi d}5+z^2\Bigr|=1+\sqrt5\,(1-z^2).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+三项分别是极点--极点、极点--轮缘（$\langle e_3,u_j\rangle=z$，共 $n\cdot\frac{g_0G}n$ 再乘 $2$）、
+轮缘--轮缘（$\langle u_j,u_k\rangle=(1-z^2)\cos\frac{2\pi(j-k)}n+z^2$，按差 $d=j-k$ 归并）。
+\eqref{eq:r23L5}：$\cos\frac{2\pi d}5\in\{1,\cos72^\circ,\cos144^\circ\}$，
+在 $z^2\le\frac{0.809}{1.809}=0.447$ 时后两个符号相反，
+展开得 $1+2[\,0.309(1-z^2)+z^2\,]+2[\,0.809(1-z^2)-z^2\,]=1+2.236(1-z^2)$。
+与暴力求和的偏差 $2.7\times10^{-15}$。
+\end{proof}
+
+关于 $A^2$：锥族是轴对称的，最优方向 $w$ 就是轴 $e_3$ 或与之垂直，
+「全正号」给出 $A^2=\|M_1\|^2=(g_0+Gz)^2$。这在\textbf{两个关心的极值点}上都是最优的
+（$n=5$ 中心极值点与单轴极值点，均已核对），但\textbf{并非}对所有 $(n,z)$ 成立
+（例如 $n=3$ 的某些 $z$）；脚本 \texttt{\_r23a.py} 的符号枚举与连续最大化的对照
+在 $n=3$ 处偏差 $4.7\times10^{-5}$（网格分辨率），这一项按\textbf{数值}入账，
+不影响后面两个极值点的精确结论。
+
+\subsection{中心截面：精确的 $z^*$ 与四次方程}\label{sec:r23:cent}
+
+\begin{theorem}[$5$-锥是中心截面的最优锥，且极值是四次方程的根]\label{thm:r23cone5}
+在锥族上（$n=3,\dots,20$），中心截面的 $J(z)=L_n(z)+A^2(z)$ 的最大值在 $n=5$ 取得，且
+\begin{equation}\label{eq:r23J5}
+J_5(z)=\frac{A(z)}{5(1-z^2)^2},\qquad
+A(z)=2\bigl(45z^4-60z^3-(20+2\sqrt5)z^2+20z+7+2\sqrt5\bigr),
+\end{equation}
+\begin{equation}\label{eq:r23P}
+\frac{\dd J_5}{\dd z}=0\quad\Longleftrightarrow\quad
+P(z):=15z^4-(35-\sqrt5)z^3+30z^2+(3-\sqrt5)z-5=0
+\qquad(\text{比例因子 }-8),
+\end{equation}
+$P$ 在 $(0,\frac1{\sqrt3})$ 内\textbf{恰有一个}根
+\begin{equation}\label{eq:r23zstar}
+z^*=0.5200639465409236331648403103733959995601,
+\end{equation}
+（其余三根为 $-0.3489222550$ 与 $1.0065602217\pm0.9076175226\,i$），且
+\begin{equation}\label{eq:r23Jstar}
+J_5(z^*)=7.595950307218631597240628904572525771282,\qquad
+\kappa_3^c(\text{锥族})=\frac{J_5(z^*)}6=1.265991717869771932873438150762,
+\end{equation}
+\[
+6\rho_0-J_5(z^*)=0.093458874014375663>0 .
+\]
+在 $z^*$ 处：$g_0=0.258522023622$、$g_1=0.548295595276$、$L=4.759198754801$、
+$A^2=\|M_1\|^2=(g_0+5g_1z^*)^2=2.836751552418$（全正号在此处最优）。
+\end{theorem}
+
+\begin{remark}
+\eqref{eq:r23Jstar}~与第~22 轮在 $\mathrm{St}(N,3)$ 上的多起点数值上确界
+$7.595950307218$ 相差 $6.3\times10^{-13}$。也就是说，
+第~22 轮\textbf{数值}发现的极值元，现在有了一个\textbf{四次方程}的解析身份：
+它是 $P(z)=0$ 的唯一可行根。$J_5(z^*)$ 是 $\Q(\sqrt5)$ 上的代数数
+（用 $\operatorname{res}_z(P,A(z)-5J(1-z^2)^2)$ 得到一个 $12$ 次多项式，
+其中 $J_5(z^*)$ 的次数 $\le4$；本轮未把它化简到最小多项式，按\textbf{代数（未化简）}入账）。
+\end{remark}
+
+各 $n$ 的最优锥（网格搜索，$z$ 步长 $10^{-6}$ 量级，故与精确值差 $10^{-6}$）：
+\begin{center}\small
+\begin{tabular}{c|cccccccc}
+\toprule
+$n$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $\dots$ & $20$\\
+\midrule
+$\max_z[L+A^2]$ & $7.499998$ & $7.500000$ & $\mathbf{7.595945}$ & $7.345079$ & $7.381696$ & $7.459250$ & $\dots$ & $7.378936$\\
+$\kappa_3^c$ & $1.250000$ & $1.250000$ & $\mathbf{1.265991}$ & $1.224180$ & $1.230283$ & $1.243208$ & $\dots$ & $1.229823$\\
+\bottomrule
+\end{tabular}
+\end{center}
+$n=5$ 领先第二名（$n=4$，即等角四线）$0.095945$；到 $6\rho_0$ 的余量 $0.093465$（网格值）。
+「$n=5$ 是最优锥」这一步是\textbf{解析（$n=5$）$+$ 数值（$n\ne5$ 的比较）}；
+「最优构型一定是锥」\textbf{尚未证明}，见 \S\ref{sec:r23:status}~的优先队列。
+
+\subsection{单轴截面：主定理 $\max F=\rho_0$}\label{sec:r23:uni}
+
+单轴截面 $\mu=(a,\frac{1-a}2,\frac{1-a}2)$ 对应 $\Lam=\beta I_3+\alpha e_3e_3^\top$，
+$\beta=\frac{1-a}2$、$\alpha=\frac{3a-1}2$，$a\in[\frac13,1]$（引理~\ref{lem:lampos}）。
+此时 $h_i=\sqrt{u_i^\top\Lam u_i}=\sqrt{\beta+\alpha\langle u_i,e_3\rangle^2}$，
+令 $p_i:=m_ih_i$，则（与第~22 轮完全平行的推导）
+\begin{equation}\label{eq:r23F}
+F(a):=\sum_{ij}p_ip_j(\langle u_i,u_j\rangle)_+=\frac12\bigl[L_p+A_p^{*2}\bigr],
+\qquad L_p=\sum_{ij}p_ip_j|\langle\ell_i,\ell_j\rangle|,\quad
+A_p^{*2}=\max_\sigma\Bigl\|\sum_i\sigma_ip_i\ell_i\Bigr\|^2,
+\end{equation}
+且 $\kappa_3(\mu)=\sup F(a)$。约束 $\sum_ip_i^2/m_i=1$ 自动成立。
+
+\begin{theorem}[单轴锥族的精确最大值 $=\rho_0$]\label{thm:r23uni}
+在单轴锥族（定义~\ref{def:r23cone}~的帧配 $p_i=m_ih_i$，$n=3,\dots,8$）上，
+$F(a,z)$ 的最大值在 $n=5$ 取得，且
+\begin{equation}\label{eq:r23Fmax}
+\max_{a,z}F(a,z)=\rho_0=\frac{9+\sqrt5+2\sqrt{35}}{18}=1.281568196872167876752435014\ldots
+\end{equation}
+在「全正号最优」的区域（含极值点）内有闭式
+\begin{equation}\label{eq:r23Fclosed}
+F(a,z)=\frac{\Psi(a,z)}{(1-z^2)^2},\qquad
+\Psi=a(1-3z^2)^2+2\sqrt2\,z(1-3z^2)\sqrt{aE}+\frac E5\bigl[(5-\sqrt5)z^2+1+\sqrt5\,\bigr],
+\end{equation}
+其中 $E=1-a+(3a-1)z^2=\beta+\alpha z^2$ 是轮缘的 $h^2$，$\sqrt{aE}$ 来自极点的 $h=\sqrt a$。
+极值点为
+\begin{align}
+a^*&=\frac{3\sqrt{35}+5\sqrt7-7-7\sqrt5}{14}=0.5946085758659480860961319972687299732652\ldots,\label{eq:r23astar}\\
+z^*&=0.5004400497682123079777569143187991903444\ldots,\label{eq:r23zstar2}
+\end{align}
+并且（$70$ 位精度）$F(a^*,z^*)-\rho_0=3.6\times10^{-71}$，即 \eqref{eq:r23Fmax}~是\textbf{精确}等式。
+\end{theorem}
+
+\begin{proof}[证明与核对]
+闭式 \eqref{eq:r23Fclosed}~由引理~\ref{lem:r23L}~的三项结构直接算出：
+极点--极点项 $g_0^2h_{\rm hub}^2=a g_0^2=\frac{a(1-3z^2)^2}{(1-z^2)^2}$；
+极点--轮缘项 $2g_0Gz\,h_{\rm hub}h_{\rm rim}=2g_0Gz\sqrt{aE}$，
+用 $g_0G=\frac{2(1-3z^2)}{(1-z^2)^2}$ 与 $\sqrt{1-z^2}$ 的归一化即得中间项；
+轮缘--轮缘项 $\frac{G^2}n\sum_d|\cdots|$ 在 $n=5$ 时由 \eqref{eq:r23L5}~给出
+$\frac{E}{5}\cdot\frac{1+\sqrt5+(5-\sqrt5)z^2}{(1-z^2)^2}$（此处用到轮缘--轮缘内积与 $h$ 的乘积结构）。
+与暴力求和的对照：在极值点偏差 $2.2\times10^{-16}$；在「全正号不最优」的点（小 $z$、$a<0.6$）
+闭式低于真值（最大偏差 $0.245$），这是\textbf{预期}的，闭式只在其适用区域内成立。
+
+临界点方程：令 $u:=\sqrt{aE}$、$M:=(5-\sqrt5)z^2+1+\sqrt5$、$R:=\sqrt\Psi$ 的相应组合，
+$\partial F/\partial a=0$ 与 $\partial F/\partial z=0$ 消元后得到两条多项式
+\begin{align}
+\mathrm{Poly}_1&=aE(5R-M)^2-50z^2(aR-E)^2 &&(\deg_a2,\ \deg_z6),\label{eq:r23poly1}\\
+\mathrm{Poly}_2&=0\quad(\partial F/\partial z=0\text{ 消去 }u\text{ 后}) &&(\deg_a2,\ \deg_{z}10),\label{eq:r23poly2}
+\end{align}
+配合 $u^2=aE$、$u(R-\frac M5)=\sqrt2z(aR-E)$。在 $(a^*,z^*)$ 处
+$|\mathrm{Poly}_1|=8.8\times10^{-66}$、$|\mathrm{Poly}_2|=1.3\times10^{-64}$，
+即 $(a^*,z^*)$ 确实是临界点（不是边界点，也不是数值假象）。
+\end{proof}
+
+\begin{proposition}[精确代数数据]\label{prop:r23alg}
+\begin{center}\small
+\begin{tabular}{lll}
+\toprule
+量 & 值 & 最小多项式／根式\\
+\midrule
+$a^*$ & $0.594608575865948086$ & $49x^4+98x^3-294x^2+182x-31$；$\frac{3\sqrt{35}+5\sqrt7-7-7\sqrt5}{14}$\\
+$z^{*2}$ & $0.25044024\ldots$ & $11225w^4-6700w^3+430w^2+260w-31$\\
+$z^*$ & $0.500440049768212308$ & $11225z^8-6700z^6+430z^4+260z^2-31$\\
+$\rho_0=F^*$ & $1.281568196872167877$ & $81x^4-162x^3+49x^2+32x+1$\\
+$g_{\rm hub}$ & $0.331767104061136520$ & $324x^4-648x^3+256x^2+68x-31$\\
+$g_{\rm cone}$ & $0.533646579187772696$ & $\dfrac2{5(1-z^{*2})}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+$a^*$ 的四次多项式在 $\Q(\sqrt5)$ 上分裂为两个二次因子，在 $\Q(\sqrt5,\sqrt7)$ 上\textbf{完全分裂}：
+\[
+49\Bigl(x+\frac12+\frac{5\sqrt7}{14}+\frac{\sqrt5}2+\frac{3\sqrt{35}}{14}\Bigr)
+\Bigl(x-\frac{3\sqrt{35}}{14}-\frac{\sqrt5}2+\frac12+\frac{5\sqrt7}{14}\Bigr)\cdots
+\]
+（四个因子见 \texttt{\_r23c.py} 输出），这解释了 \eqref{eq:r23astar}~的根式形式
+（$70$ 位核对，差 $3.1\times10^{-62}$）。
+$z^*$ 的最小多项式来自 $\mathrm{Poly}_1,\mathrm{Poly}_2$ 关于 $z$ 的 $\Q$-结式（$68$ 次），
+其中 $z^*$ 落在那个 $8$ 次因子上（$|f(z^*)|=2.97\times10^{-64}$）。
+\end{proposition}
+
+\begin{corollary}[冠军 $=5$-锥，且满足新的一阶条件]\label{cor:r23champ}
+$g_{\rm hub}=0.331767104061136519632668751001$、$g_{\rm cone}=0.533646579187772696073466249800$
+与本报告第~12 轮冠军的数值\textbf{逐位一致}（\S\ref{sec:conefamily}）。因此：
+\begin{enumerate}\itemsep2pt
+\item 冠军就是 $5$-锥，$\mu(\tilde\Lam)$ 截面的单轴参数 $a=h_{\rm hub}^2$ 等于 \eqref{eq:r23astar}；
+\item 冠军除了满足此前已知的 Perron／KKT 条件外，还满足
+$\partial F/\partial a=0$ 与 $\partial F/\partial z=0$ 这对\textbf{显式}一阶条件
+\eqref{eq:r23poly1}--\eqref{eq:r23poly2}，这是本轮新增的结构信息；
+\item 二维最大化与原始问题的 Perron 自洽性互相印证：
+在 $(a^*,z^*)$ 处，$\lambda_{\max}((VV^\top)_+)=\rho_0$（差 $8.9\times10^{-16}$），
+且 $(VV^\top)_+$ 的 Perron 向量重现 $h_i=\sqrt{u_i^\top\Lam u_i}$
+（比值 $(1,0.711307^{\times5})$，偏差 $2.4\times10^{-10}$）。
+所以锥族的临界点\textbf{是}原问题的真临界点，不是归约过程中产生的伪解。
+\end{enumerate}
+\end{corollary}
+
+\begin{remark}[这条定理给出了什么、没有给出什么]\label{rem:r23what}
+\textbf{给出}：冠军的完全解析刻画（一个四次方程的根 $+$ 一个八次方程的根），
+以及「在单轴锥族内 $\rho_0$ 是最大值」这一\emph{精确}陈述。
+由于 $\kappa_3\ge\rho_0$ 已知，这等价于说
+\textbf{锥族内部不存在比冠军更好的单轴构型}。
+\textbf{没有给出}：$\kappa_3\le\rho_0$。要得到后者，还需要排除
+（a）非锥的单轴构型、（b）非单轴截面、（c）非对称构型。
+这三条正是 \S\ref{sec:r23:status}~队列里的 P2--P4。
+\end{remark}
+
+\subsection{四阶矩的调和分解}\label{sec:r23:harm}
+
+\begin{proposition}[精确分解]\label{prop:r23harm}
+令 $A_4=\sum_im_i\ell_i^{\otimes4}$、
+$I_4=\frac1{15}\bigl(\delta\otimes\delta\otimes\mathrm{id}+\delta\otimes\mathrm{id}\otimes\delta+\mathrm{id}\otimes\delta\otimes\delta\bigr)$、
+$H_4:=A_4-3I_4$。则 $\|I_4\|_F^2=\frac15$、$\|3I_4\|_F^2=\frac95$、$\langle A_4,I_4\rangle=\frac35$，
+故 $\langle H_4,I_4\rangle=0$，并且
+\begin{equation}\label{eq:r23harm}
+m_4=\frac19\|A_4\|_F^2=\frac15+\frac19\|H_4\|_F^2\ \ge\ \frac15 ,
+\end{equation}
+等号 $\iff A_4=3I_4$（四阶矩张量各向同性，即「$4$-设计」条件）。
+\end{proposition}
+
+\begin{proof}
+$\langle\ell^{\otimes4},I_4\rangle=\frac3{15}=\frac15$ 对每个单位 $\ell$ 成立，故
+$\langle A_4,I_4\rangle=\frac15\sum_im_i=\frac35$。
+$\|I_4\|_F^2=\frac1{225}(3\cdot9+6\cdot3)=\frac{45}{225}=\frac15$
+（三个对角项各为 $9$，六个交叉项各为 $3$）。
+于是 $\langle H_4,I_4\rangle=\frac35-3\cdot\frac15=0$，
+$\|A_4\|_F^2=\|3I_4\|_F^2+\|H_4\|_F^2=\frac95+\|H_4\|_F^2$。
+\end{proof}
+
+\begin{remark}[一处必须澄清的说法]\label{rem:r23harm}
+脚本 \texttt{\_r23c.py} 的输出把 $H_4$ 称为「harmonic（全迹零）」。
+严格地说这是\textbf{不准确}的：$\operatorname{tr}_{12}(A_4)=\sum_im_i\ell_i\ell_i^\top=I_3$（核对到 $1.3\times10^{-15}$），
+而 $\operatorname{tr}_{12}(3I_4)=\frac3{15}(3+3+1)\mathrm{id}=\frac75I_3$，
+所以 $\operatorname{tr}_{12}(H_4)=-\frac25I_3\ne0$。
+\eqref{eq:r23harm}~需要的只是 $H_4\perp I_4$（即 $H_4$ 在 $O(3)$-不变方向上的分量为零），
+这一点是精确成立的。这个区分在把 \eqref{eq:r23harm}~往「用高阶调和控制 $m_4$」方向推进时很关键：
+$H_4$ 的\textbf{迹}不为零，所以不能直接套用球面调和的正交性。
+\end{remark}
+
+\begin{remark}
+\eqref{eq:r23harm}~给引理~\ref{lem:r22m4}~一个概念性证明，并指出\textbf{亏格就是调和能量}：
+$m_4-\frac15=\frac19\|H_4\|_F^2$。正二十面体（$m_i=\frac12$，等角 $\frac1{\sqrt5}$）满足
+$A_4=3I_4$，故 $m_4=\frac15$ 精确取等；等角四线（立方体对角线）亦然。
+\end{remark}
+
+\subsection{等纬度圆：两个精确引理，右端点闭合}\label{sec:r23:equi}
+
+\begin{lemma}[等纬度圆上 $m_4$ 的精确公式]\label{lem:r23m4eq}
+设所有线都在纬度 $|\langle\ell_j,w\rangle|=\frac1{\sqrt3}$ 上，$\rho=\sum_jm_j\delta_{\varphi_j}$
+（$\hat\rho_0=3$、$\hat\rho_1=\hat\rho_2=0$ 由各向同性给出），则
+\begin{equation}\label{eq:r23m4eq}
+m_4=\frac{19}{81}+\frac{8|\hat\rho_3|^2+2|\hat\rho_4|^2}{729}\ \ge\ \frac{19}{81},
+\end{equation}
+等号 $\iff\hat\rho_3=\hat\rho_4=0$。
+\end{lemma}
+
+\begin{proof}
+$\langle\ell_i,\ell_j\rangle=\frac13+\frac23\cos\Delta_{ij}=\frac13(1+2\cos\Delta_{ij})$，故
+$9m_4=\sum_{ij}m_im_j\langle\ell_i,\ell_j\rangle^4=\frac1{81}\sum_{ij}m_im_j(1+2c_{ij})^4$，
+其中 $c_{ij}=\cos\Delta_{ij}$。展开 $(1+2c)^4=1+8c+24c^2+32c^3+16c^4$，
+并用 $\sum_{ij}m_im_je^{ik\Delta_{ij}}=|\hat\rho_k|^2$ 得
+\[
+\sum m_im_jc_{ij}=|\hat\rho_1|^2=0,\quad
+\sum m_im_jc_{ij}^2=\frac{9+|\hat\rho_2|^2}2=\frac92,\quad
+\sum m_im_jc_{ij}^3=\frac{3|\hat\rho_1|^2+|\hat\rho_3|^2}4=\frac{|\hat\rho_3|^2}4,
+\]
+\[
+\sum m_im_jc_{ij}^4=\frac{3\cdot9+4|\hat\rho_2|^2+|\hat\rho_4|^2}8=\frac{27+|\hat\rho_4|^2}8 .
+\]
+合计 $9+0+24\cdot\frac92+32\cdot\frac{|\hat\rho_3|^2}4+16\cdot\frac{27+|\hat\rho_4|^2}8
+=171+8|\hat\rho_3|^2+2|\hat\rho_4|^2$，
+除以 $81\cdot9=729$ 并用 $\frac{171}{729}=\frac{19}{81}$ 即得 \eqref{eq:r23m4eq}。
+数值核对：$400$ 个随机等纬度测度上偏差 $\le8.3\times10^{-16}$。
+\end{proof}
+
+\begin{theorem}[开口窗口的右端点已闭合]\label{thm:r23endpoint}
+若 $\mu$ 满足 \eqref{eq:r22iso}~且 $A(\mu)^2=3$，则
+\begin{equation}\label{eq:r23endpoint}
+J(\mu)=L(\mu)+A(\mu)^2\ \le\ \frac{51\sqrt5-21}{16}-\frac{135\sqrt5-225}{16}\cdot\frac{19}{81}+3
+=7.688023\ <\ 6\rho_0=7.689409,
+\end{equation}
+余量 $1.386\times10^{-3}$。因此猜想~\ref{conj:r22coupled}~在 $A^2=3$ 处成立
+（在 $m_4$ 尺度上余量 $2.878\times10^{-4}$），从而
+\begin{equation}\label{eq:r23endcon}
+A(\mu)^2=3\ \Longrightarrow\ \kappa_3^c\ \text{的贡献}\ <\rho_0 .
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+$A^2=3$ 由引理~\ref{lem:r22cs}~推出所有线等纬度，故引理~\ref{lem:r23m4eq}~给出
+$m_4\ge\frac{19}{81}$；代入定理~\ref{thm:r223phi}~的带 $m_4$ 版本（$\beta<0$）即得。
+需要的下界是 $m_4\ge c_1(3-c_0)=0.234280119345538385$，而 $\frac{19}{81}=0.234567901234567901$，
+余量 $2.877819\times10^{-4}$。
+\end{proof}
+
+\begin{proposition}[等纬度圆上 $L$ 的最大值：正方形]\label{prop:r23Lsq}
+正则正方形（$4$ 个原子、质量 $\frac34$、角度 $0,90^\circ,180^\circ,270^\circ$）给出
+\begin{equation}\label{eq:r23Lsq}
+L=\frac92\ \text{（精确）},\qquad m_4=\frac7{27}\ \text{（精确）},
+\end{equation}
+各向同性亏格 $2.2\times10^{-16}$。在 $k\le5$ 个原子的\textbf{顶点搜索}（$800+$ 起点）
+与全部正多边形中，没有发现 $L>\frac92$ 的构型；$k>5$ 未被严格排除。
+因此「等纬度圆上 $L\le\frac92$」按\textbf{猜想（数值支持）}入账。
+若它成立，则在 $A^2=3$ 处 $J\le\frac{15}2=7.5<6\rho_0$，余量 $0.189409$，
+比 \eqref{eq:r23endpoint}~的 $1.386\times10^{-3}$ 好两个数量级。
+\end{proposition}
+
+\begin{remark}[为什么 $L\le\frac92$ 不容易证]\label{rem:r23Lsq}
+把 $L=\frac23\iint K(\Delta)\dd\rho\dd\rho$ 写成 Fourier 级数（命题~\ref{prop:r22K}），
+问题是「在 $\hat\rho_1=\hat\rho_2=0$、$\rho\ge0$、$\rho$ 质量 $3$ 下最大化一个二次型」。
+它的\textbf{矩松弛}（只要求成对测度 $\Pi$ 为正、$\hat\Pi_1=\hat\Pi_2=0$）是线性规划，
+对偶恰好是「用 $B+\lambda_1\cos\theta+\lambda_2\cos2\theta$ 从上方控制 $K(\theta)$」，
+而 $K(1)+K(-1)=\frac32+\frac12=2$ 强制 $2B\ge2$，即 $B\ge1$，
+于是松弛只能给出 $L\le\frac23\cdot9\cdot1=6$，比 $\frac92$ 松。
+换句话说，\textbf{必须}用到「$\Pi$ 是一个正测度的差测度（$\hat\Pi_n=|\hat\rho_n|^2$，
+即余正定且可开平方）」这一信息；这是余正定规划，不是半正定规划，
+也是本报告里第一个\emph{本质上}非 SDP 的障碍。
+\end{remark}
+
+\subsection{耦合不等式：决定性实验}\label{sec:r23:coupled}
+
+精确常数（定理~\ref{thm:r22red}）：$c_1=\frac{20+12\sqrt5}{225}=0.208145847688877673$，
+$c_0=6\rho_0-\frac{51\sqrt5-21}{16}=1.8744425029524276$，
+阈值 $A^2\le c_0+\frac1{5c_1}=2.83530721498332272$，开口窗口 $V\in[0,0.3293855700)$。
+在 $A^2=3$ 处需要 $m_4\ge0.234280119345538385$（定理~\ref{thm:r23endpoint}~已给 $\frac{19}{81}$）。
+
+\textbf{实验一（库扫描）}：$1170$ 个构型（锥族 $n=3..8$、纬度族 $n=3..12$、正二十面体、$800$ 组随机帧），
+耦合松弛 $m_4-c_1(A^2-c_0)$ 的最小值 $+2.877628\times10^{-4}$
+（在 $A^2=2.999997215$、$L=4.371326875$、$m_4=0.234567303$ 处，即\textbf{贴近}等纬度圆）；
+真实松弛 $6\rho_0-J$ 的最小值 $+9.346934\times10^{-2}$
+（在 $A^2=2.838517285$、$L=4.757422554$、$m_4=0.209828723$ 处，即 $5$-锥附近；
+该点处耦合松弛为 $+9.161\times10^{-3}$，比真实松弛紧 $10$ 倍）。
+\textbf{结论}：耦合不等式是「几乎紧」的——它的松紧程度与真实目标的松紧程度同阶，
+这说明 \S\ref{sec:r22:decouple}~里的归约几乎没有浪费。
+
+\textbf{实验二（固定 $V$ 最小化 $m_4$）}：$6$ 原子、$V\in[0,0.32889]$，
+带各向同性罚项的约束最小化：
+\begin{center}\small
+\begin{tabular}{c|cccccc}
+\toprule
+$V$ & $0$ & $0.02$ & $0.05$ & $0.10$ & $0.20$ & $0.32889$\\
+\midrule
+$\min m_4$ & $0.239996$ & $0.240974$ & $0.232381$ & $0.232465$ & $0.227625$ & $0.237713$\\
+所需 $c_1(A^2-c_0)$ & $0.234280$ & $0.232199$ & $0.229076$ & $0.223873$ & $0.213466$ & $0.200052$\\
+间隙 & $+5.7\times10^{-3}$ & $+8.8\times10^{-3}$ & $+3.3\times10^{-3}$ & $+8.6\times10^{-3}$ & $+1.4\times10^{-2}$ & $+3.8\times10^{-2}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+最小间隙 $+3.3\times10^{-3}$（$V=0.05$）。各点各向同性亏格 $\le1.3\times10^{-4}$。
+\textbf{未发现任何违反}。按纪律这两条实验记作\textbf{数值}。
+
+\begin{remark}[下一步该攻什么]\label{rem:r23next}
+两条实验共同指出：真正的紧点在 $V\to0$（等纬度）与 $V\approx0.33$（$5$-锥）两端之间，
+而两端都已被\textbf{精确}处理（定理~\ref{thm:r23endpoint}；阈值 \eqref{eq:r22thresh}）。
+因此最有希望的是\textbf{插值型}论证：证明
+$m_4\ge\frac{19}{81}-c\,V$ 对某个 $c\le0.104073$ 成立
+（$0.104073=\frac1{9.608654}$ 是使端点余量 $2.878\times10^{-4}$ 恰好被吃掉的临界斜率），
+或者引入定理~\ref{thm:r223phi}~证书 \eqref{eq:r22cert}~的\textbf{亏格}
+$D:=\sum_{ij}m_im_j[q(\langle\ell_i,\ell_j\rangle^2)-|\langle\ell_i,\ell_j\rangle|]\ge0$，
+把条件放宽为
+\begin{equation}\label{eq:r23Dform}
+(-9\beta)\Bigl(m_4-\frac15\Bigr)+\frac V2+D\ \ge\ \delta_0:=3\varphi+3-6\rho_0=0.1646927850\ldots ,
+\end{equation}
+其中 $-9\beta=\frac{135\sqrt5-225}{16}=4.8043236$。
+\eqref{eq:r23Dform}~与 $\kappa_3^c\le\rho_0$ \textbf{等价}（在定理~\ref{thm:r223phi}~的框架内），
+但它的三个非负项各有明确的取等类：$m_4=\frac15\iff$ 等角／$4$-设计；
+$V=0\iff$ 等纬度；$D=0\iff$ 所有内积平方 $\in\{1,\frac15\}$。
+这三类\textbf{互不相容}。以正二十面体为例：它等角且 $m_4=\frac15$，
+故 $D=0$、$m_4-\frac15=0$，两项同时退化；但它的 $A^2=\varphi^2=\frac{3+\sqrt5}2=2.618034$，
+于是 $V=6-2\varphi^2=3-\sqrt5=0.763932$ 远大于 $0$，
+\eqref{eq:r23Dform}~左边 $=0.763932$，余量 $0.599$。
+反之等纬度构型有 $V=0$，但引理~\ref{lem:r23m4eq}~保证 $m_4\ge\frac{19}{81}>\frac15$。
+两端各有一项退化，中间由两项共同支撑——这正是 \eqref{eq:r23Dform}~可能为真的原因。
+\eqref{eq:r23Dform}~是第~24 轮的主攻目标。
+\end{remark}
+
+\subsection{本轮状态、诚实标签与方法优先队列（第十版）}\label{sec:r23:status}
+
+\begin{center}\small
+\begin{tabular}{lll}
+\toprule
+结论 & 状态 & 位置\\
+\midrule
+锥族各向同性、$L_n(z)$ 闭式、$n=5$ 的 $1+\sqrt5(1-z^2)$ & \textbf{已证（精确）} & 引理~\ref{lem:r23iso}、\ref{lem:r23L}\\
+中心锥族 $J_5(z)$ 闭式、$P(z)=0$、$z^*$、$J_5(z^*)$ & \textbf{已证（精确）} & 定理~\ref{thm:r23cone5}\\
+「$5$-锥是最优锥」 & $n=5$ 解析，$n\ne5$ 比较为\textbf{数值} & \S\ref{sec:r23:cent}\\
+「最优构型是锥」 & \textbf{未证}（队列 P2） & \S\ref{sec:r23:status}\\
+单轴锥族闭式 \eqref{eq:r23Fclosed}（全正号区域） & \textbf{已证（精确）}，区域外不适用 & 定理~\ref{thm:r23uni}\\
+$\max F=\rho_0$，极值点 $(a^*,z^*)$ & \textbf{已证（$70$ 位精确）} & 定理~\ref{thm:r23uni}\\
+$a^*,z^{*2},\rho_0,g_{\rm hub}$ 的最小多项式 & \textbf{已证（精确代数）} & 命题~\ref{prop:r23alg}\\
+冠军 $=5$-锥、Perron 自洽、$\partial F/\partial a=0$ & \textbf{已证} & 推论~\ref{cor:r23champ}\\
+$m_4=\frac15+\frac19\|H_4\|_F^2$ & \textbf{已证（精确）} & 命题~\ref{prop:r23harm}\\
+等纬度 $m_4=\frac{19}{81}+\frac{8|\hat\rho_3|^2+2|\hat\rho_4|^2}{729}$ & \textbf{已证（精确）} & 引理~\ref{lem:r23m4eq}\\
+$A^2=3$ 端点闭合（余量 $1.386\times10^{-3}$） & \textbf{已证} & 定理~\ref{thm:r23endpoint}\\
+等纬度 $L\le\frac92$（正方形取等） & \textbf{猜想}（$k\le5$ 数值） & 命题~\ref{prop:r23Lsq}\\
+耦合不等式窗口内部 & \textbf{猜想}（$1170$ 构型 $+$ 约束扫描无违反） & \S\ref{sec:r23:coupled}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{方法优先队列（第十版，数学优先）}：
+\begin{enumerate}\itemsep2pt
+\item[\textbf{P1}] 证明等价形式 \eqref{eq:r23Dform}：即耦合不等式 $m_4\ge c_1(A^2-c_0)$
+在窗口 $V\in(0,0.3294)$ 内成立。端点已由定理~\ref{thm:r23endpoint}~闭合，
+$m_4\ge\frac15$ 已闭合 $V\ge0.3294$。可用工具：调和分解（命题~\ref{prop:r23harm}）、
+证书亏格 $D$、纬度刚性预算 $U(s)$（\S\ref{sec:r21:zonal}）。
+\item[\textbf{P2}] 证明\textbf{锥最优性}：中心截面与单轴截面的极值元都是
+「极点 $+$ 正 $n$ 边形纬度圈」。一旦成立，两个截面就分别化为一维与二维微积分，
+定理~\ref{thm:r23cone5}~与 \ref{thm:r23uni}~就升级为无条件定理。
+可尝试的入口：轴对称化（Steiner／Riesz 重排）在 $\mathbf{RP}^2$ 上的版本；
+或证明极值元的一阶条件强制 $n$ 重对称。
+\item[\textbf{P3}] 把「等纬度圆上 $L\le\frac92$」证成定理。
+障碍是矩松弛封顶在 $6$（注~\ref{rem:r23Lsq}），需要余正定信息。
+可尝试：$k\le5$ 的精确分类（顶点 $+$ 角度的一阶条件）；
+或 Fej\'er--Riesz 型的圆上余正定证书。
+\item[\textbf{P4}] 排除非对称极值元 / 给出原子数的上界。
+\item[\textbf{副}] 下界方向：$\kappa_3\ge\rho_0$ 已由冠军给出；
+是否能把 $\Theta(W_6)=\rho_0$ 的解析推导（定理~\ref{thm:r20w6}）推广成
+「轮族的极值性定理」，作为下界一侧的独立结果。
+\end{enumerate}
+
+复现：\texttt{\_r23a.py}（$9$ 项通过，$1$ 项为上文说明的 $n=3$ 符号枚举对照）、
+\texttt{\_r23b.py}（$6$ 项全绿）、\texttt{\_r23c.py}（$13$ 项全绿）、\texttt{\_r23d.py}（$5$ 项全绿）。
 
 \section{通道型主函数方案的精确天花板}\label{sec:nogo}
 

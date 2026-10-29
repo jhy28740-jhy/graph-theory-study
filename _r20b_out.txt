@@ -1,0 +1,107 @@
+================================================================================================================
+(B1) exhaustive scan of Theta(G)=max_x Lam_3(D_x (I+A_G) D_x) over all isomorphism classes, N=4..7
+================================================================================================================
+  N=4 : 11 isomorphism classes, 0.1 s
+      Theta=1.250000000000000  >>graph6<<Cl   edges= 4  x=[0.500000 0.500000 0.500000 0.500000]
+      Theta=1.200000000000000  >>graph6<<CF   edges= 3  x=[0.447214 0.447214 0.447214 0.632456]
+      Theta=1.166666666666667  >>graph6<<Ck   edges= 3  x=[0.577350 0.577350 0.408248 0.408248]
+      Theta=1.142857142857143  >>graph6<<C|   edges= 5  x=[0.515010 0.534522 0.404149 0.534522]
+      Theta=1.142857142857143  >>graph6<<CN   edges= 4  x=[0.534522 0.377964 0.377964 0.654654]
+      Theta=1.142857142857142  >>graph6<<CB   edges= 2  x=[7.703408e-08 5.345225e-01 5.345225e-01 6.546537e-01]
+    >> refined max Theta = 1.250000000000000  at >>graph6<<Cl (>>graph6<<Cl, 4 edges)
+       refined x = [0.500000000 0.500000000 0.500000000 0.500000000] ; x^2 = [0.250000000 0.250000000 0.250000000 0.250000000]
+       negative tail 1-Theta = -0.250000000000000
+  N=5 : 34 isomorphism classes, 0.7 s
+      Theta=1.253197230711533  >>graph6<<Dl{  edges= 8  x=[0.479477 0.479477 0.479477 0.479477 0.283564]
+      Theta=1.251351048387256  >>graph6<<Dlc  edges= 6  x=[0.491961 0.490354 0.490354 0.491961 0.187233]
+      Theta=1.250000000000001  >>graph6<<D]w  edges= 7  x=[0.500000 0.500000 0.269893 0.500000 0.420901]
+      Theta=1.250000000000000  >>graph6<<Dl?  edges= 4  x=[5.000000e-01 5.000000e-01 5.000000e-01 5.000000e-01 5.888046e-09]
+      Theta=1.250000000000000  >>graph6<<DbW  edges= 5  x=[4.715607e-09 5.000000e-01 5.000000e-01 5.000000e-01 5.000000e-01]
+      Theta=1.250000000000000  >>graph6<<D]o  edges= 6  x=[5.000000e-01 5.000000e-01 5.000000e-01 5.000000e-01 2.801609e-09]
+    >> refined max Theta = 1.253197264742181  at >>graph6<<Dl{ (>>graph6<<Dl{, 8 edges)
+       refined x = [0.479547686 0.479547686 0.479547686 0.479547686 0.283083148] ; x^2 = [0.229965983 0.229965983 0.229965983 0.229965983 0.080136069]
+       negative tail 1-Theta = -0.253197264742181
+  N=6 : 156 isomorphism classes, 4.6 s
+      Theta=1.281568196872168  >>graph6<<Ehfw edges=10  x=[0.400682 0.400682 0.400682 0.400682 0.400682 0.444153]
+      Theta=1.256547158723467  >>graph6<<ER~g edges=11  x=[0.243270 0.462405 0.450413 0.462405 0.327778 0.450413]
+      Theta=1.254640073869731  >>graph6<<Ehew edges= 9  x=[0.471957 0.457886 0.471957 0.278956 0.278956 0.434995]
+      Theta=1.254385521092499  >>graph6<<EyuG edges= 9  x=[0.454092 0.454092 0.356558 0.356558 0.454092 0.356558]
+      Theta=1.253197264711190  >>graph6<<El{? edges= 8  x=[4.795455e-01 4.795455e-01 4.795455e-01 4.795455e-01 2.830977e-01 8.584409e-10]
+      Theta=1.253197264670654  >>graph6<<E}^G edges=11  x=[4.795444e-01 2.831052e-01 4.795444e-01 2.199915e-09 4.795444e-01 4.795444e-01]
+    >> refined max Theta = 1.281568196872169  at >>graph6<<Ehfw (>>graph6<<Ehfw, 10 edges)
+       refined x = [0.400681528 0.400681528 0.400681528 0.400681528 0.400681528 0.444152637] ; x^2 = [0.160545687 0.160545687 0.160545687 0.160545687 0.160545687 0.197271565]
+       negative tail 1-Theta = -0.281568196872169
+  N=7 : 1044 isomorphism classes, 40.2 s
+      Theta=1.281568196872168  >>graph6<<Fhfy? edges=11  x=[4.006815e-01 4.006815e-01 4.006815e-01 4.006815e-01 4.006815e-01 4.441526e-01 4.375020e-09]
+      Theta=1.281568196872168  >>graph6<<FLrFo edges=12  x=[4.006815e-01 4.006815e-01 4.006815e-01 4.006815e-01 4.006815e-01 1.581765e-09 4.441526e-01]
+      Theta=1.281568196872168  >>graph6<<FBnew edges=13  x=[4.006815e-01 4.006815e-01 4.218720e-09 4.006815e-01 4.006815e-01 4.006815e-01 4.441526e-01]
+      Theta=1.281568196872168  >>graph6<<FEyvw edges=14  x=[1.166944e-08 4.006815e-01 4.006815e-01 4.006815e-01 4.006815e-01 4.006815e-01 4.441526e-01]
+      Theta=1.281568196872168  >>graph6<<F{e}o edges=14  x=[0.444153 0.400682 0.400682 0.283325 0.283325 0.400682 0.400682]
+      Theta=1.281568196872168  >>graph6<<FJnVW edges=14  x=[4.006815e-01 4.006815e-01 4.006815e-01 6.926789e-09 4.006815e-01 4.006815e-01 4.441526e-01]
+    >> refined max Theta = 1.281568196872169  at >>graph6<<F{e}o (>>graph6<<F{e}o, 14 edges)
+       refined x = [0.444152637 0.400681528 0.400681528 0.150989938 0.371143807 0.400681528 0.400681528] ; x^2 = [0.197271565 0.160545687 0.160545687 0.022797961 0.137747726 0.160545687 0.160545687]
+       negative tail 1-Theta = -0.281568196872169
+  N=4: max_G Theta(G) = 1.250000000000000   target kappa_3(N) = 1.250000000000000   diff = 4.441e-16
+  [PASS] N=4: exhaustive graph-form scan reproduces kappa_3(N) = 1.250000000000000 (diff 4.44e-16); extremal graph >>graph6<<Cl
+  [PASS] N=4: Theta(G) <= rho_0 for EVERY looped graph on 4 vertices (max 1.250000000000000, margin 3.16e-02)
+  N=5: max_G Theta(G) = 1.253197264742181   target kappa_3(N) = 1.253197264742181   diff = 2.220e-16
+  [PASS] N=5: exhaustive graph-form scan reproduces kappa_3(N) = 1.253197264742181 (diff 2.22e-16); extremal graph >>graph6<<Dl{
+  [PASS] N=5: Theta(G) <= rho_0 for EVERY looped graph on 5 vertices (max 1.253197264742181, margin 2.84e-02)
+  N=6: max_G Theta(G) = 1.281568196872169   target kappa_3(N) = 1.281568196872168   diff = 6.661e-16
+  [PASS] N=6: exhaustive graph-form scan reproduces kappa_3(N) = 1.281568196872168 (diff 6.66e-16); extremal graph >>graph6<<Ehfw
+  [PASS] N=6: Theta(G) <= rho_0 for EVERY looped graph on 6 vertices (max 1.281568196872169, margin -6.66e-16)
+  N=7: max_G Theta(G) = 1.281568196872169   target kappa_3(N) = 1.281568196872168   diff = 6.661e-16
+  [PASS] N=7: exhaustive graph-form scan reproduces kappa_3(N) = 1.281568196872168 (diff 6.66e-16); extremal graph >>graph6<<F{e}o
+  [PASS] N=7: Theta(G) <= rho_0 for EVERY looped graph on 7 vertices (max 1.281568196872169, margin -6.66e-16)
+
+================================================================================================================
+(B2) closed form for the wheel W_6 = K_1 v C_5 :  Theta(W_6) >= rho_0 with exact surd arithmetic
+================================================================================================================
+  p = x_hub^2 = (91-25*sqrt7)/126 = 0.197271565264962 ;  q = x_rim^2 = (7+5*sqrt7)/126 = 0.160545686947008
+  p + 5q - 1 =  0
+  [PASS] weights normalised exactly: p+5q=1
+  (1-2q)^2 + 8pq =  5/7  =  5/7  -> sqrt = sqrt(5/7) = sqrt35/7
+  [PASS] the 2x2 discriminant collapses EXACTLY to 5/7 (this is where sqrt7 and sqrt35 come from)
+  rim modes: q*(1+2cos72) = q*phi = 0.259768378227459 ;  q*(1+2cos144) = -q/phi = -0.099222691280451
+  [PASS] 1+2cos(72 deg) = phi exactly => the two rim "high" modes are q*phi
+  [PASS] 1+2cos(144 deg) = -1/phi exactly => the two rim "low" modes are -q/phi
+  Lam_3 = lambda_+ + 2*q*phi =  sqrt(5)/18 + 1/2 + sqrt(35)/9
+  rho_0 = (9+sqrt5+2sqrt35)/18
+  difference =  -78156819687217/100000000000000 + sqrt(5)/18 + sqrt(35)/9
+  [PASS] EXACT: Lam_3(D_x Sigma_{W_6} D_x) = lambda_+ + 2 q phi = (9+sqrt5+2sqrt35)/18 = rho_0  (symbolic)
+  negative tail = lambda_- + 2*(-q/phi) =  -sqrt(35)/9 - sqrt(5)/18 + 1/2  = -0.281568196872168 ;  -tau_0 = -0.281568196872168
+  [PASS] EXACT: the negative tail of the weighted wheel equals -tau_0 = -(rho_0-1), i.e. tau_0 IS the wheel tail
+
+================================================================================================================
+(B3) lambda_min(D_x Sigma D_x) >= 1/N - 1/2 : the engine behind kappa_3(4)=5/4 (new proof)
+================================================================================================================
+  worst margin  lambda_min - (1/N - 1/2)  over 6000 random (N,Sigma,x): 2.396033e-02  at N=3
+  (lambda_min = -0.142706336501551 , 1/N-1/2 = -0.166666666666667 , graph >>graph6<<Bo)
+  [PASS] lambda_min(D_x Sigma D_x) >= 1/N - 1/2 on 6000 random tests; both sub-inequalities (q>=r^2/N, 2PMn<=r^2/2) hold
+  N=4 exhaustive (11 graphs x 400 x): min lambda_min = -0.244488522007166  at >>graph6<<Cl
+     x = [0.448702904 0.571176889 0.521015339 0.448291960]  (uniform 1/2 = 0.500000)
+  [PASS] N=4 exhaustive: lambda_min(D_x Sigma D_x) >= -1/4 for all 11 graphs and 4400 weights (min found -0.244488522007166, no violation)
+  exact attainment: C_4 with x uniform -> lambda_min = -0.2500000000000001 (= -1/4)
+  spec = [ 0.75  0.25  0.25 -0.25] ; Lam_3 = 1 - lambda_min = 1.2500000000000000
+  [PASS] C_4 + uniform x attains lambda_min = -1/4 EXACTLY => kappa_3(4) = 1+1/4 = 5/4 (NEW independent proof, no frame geometry used)
+
+================================================================================================================
+(B4) complement + Ky-Fan subadditivity family:  Lam_3(D_x Sigma D_x) <= 1 - (3 smallest of D_x Sbar D_x)
+================================================================================================================
+  wheel W_6 mask (nx.wheel_graph(6)), hub = vertex 0:
+  x = [0.444152637 0.400681528 0.400681528 0.400681528 0.400681528 0.400681528]
+[[1 1 1 1 1 1]
+ [1 1 1 0 0 1]
+ [1 1 1 1 0 0]
+ [1 0 1 1 1 0]
+ [1 0 0 1 1 1]
+ [1 1 0 0 1 1]]
+  Lam_3 = 1.281568196872168 (must be rho_0=1.281568196872168)
+  complement-KyFan ceiling at the same (Sigma,x) = 1.519536756454917
+  sup of this ceiling over all graphs N=5..7 and 30 random x each: 1.764289314294200  at (7, '>>graph6<<FTgGg')
+  compare: rho_0 = 1.281568196872168 , Phi = 1.309016994374947
+  [PASS] REFUTATION with ceiling: complement+KyFan-subadditivity family tops out at 1.764289314294 > Phi = 1.309016994375 > rho_0 => cannot reach rho_0 (dead)
+
+================================================================================================================
+SUMMARY  PASS=18  FAIL=0
+================================================================================================================

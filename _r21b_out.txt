@@ -1,0 +1,89 @@
+================================================================================================================
+(F1) the exact extremal pair-measure of the zonal moment hierarchy
+================================================================================================================
+   Lam* = 1/6 d_1 + sqrt(5)/12 + 5/12 d_{1/sqrt5} + 5/12 - sqrt(5)/12 d_{-1/sqrt5}
+   masses: 1/6=0.166666666667  (5+sqrt5)/12=0.603005664792  (5-sqrt5)/12=0.230327668542  total=1
+  [PASS] the three masses add to exactly 1
+   int t dLam* = 1/3 = 0.333333333333333 ; int t^2 dLam* = 1/3 = 0.333333333333333 (target 1/3)
+  [PASS] Lam* satisfies BOTH exact constraints with EQUALITY: int t^2 dLam = 1/3 (isotropy) and int t dLam = 1/3 (dipole saturated)
+   int (t)_+ dLam* = sqrt(5)/12 + 1/4 = 0.436338998124982 ; times 3 = sqrt(5)/4 + 3/4 = 1.309016994374947
+  [PASS] 3 int (t)_+ dLam* = (3+sqrt5)/4 = Phi EXACTLY: the zonal moment hierarchy reproduces STW's constant from a completely different direction
+   Z_l(Lam*) for l=0..12 : 0:+1.000000, 1:+0.333333, 2:-0.000000, 3:+0.000000, 4:+0.000000, 5:+0.240000, 6:+0.440000, 7:+0.205333, 8:-0.000000, 9:+0.069333, 10:+0.131733, 11:+0.241813, 12:+0.342720
+   min_{3<=l<=40} Z_l = -0.000000000
+  [PASS] Lam* also satisfies Z_l >= 0 for every l=3..40, so it survives the WHOLE hierarchy (the hierarchy cannot separate it)
+   numeric LP (L=12): value 0.436338990760606 -> 3V = 1.309016972281819 (Phi=1.309016994374947, dev 2.21e-08)
+     support [-0.447333 -0.447     0.447     0.447333  1.      ]
+     weights [0.147559 0.082769 0.216576 0.38643  0.166667]
+  [PASS] the numerical LP optimum equals Phi to 2.2e-08, with support converging to {1, +-1/sqrt5}
+
+================================================================================================================
+(F2) Lam* is NOT REALISABLE by any isotropic measure on S^2  =>  centre < Phi STRICTLY
+================================================================================================================
+   step 1: int t dLam = |m_1|^2, and Lam* gives |m_1|^2 = 1/3 = the MAXIMUM (E4)
+   step 2: E4 equality holds iff nu is supported on the latitude circle z = 1/sqrt3
+   step 3: on that latitude <u,v> = (2/3)cos(dtheta)+1/3, so min <u,v> = 1/3-2/3 = -1/3 = -1/3
+   step 4: but Lam* puts mass (5-sqrt5)/12 = 0.230327668542 > 0 at t = -1/sqrt5 = -0.447213595500 < -1/3
+           -1/3 - (-1/sqrt5) = -1/3 + sqrt(5)/5 = 0.113880262167 > 0
+  [PASS] CONTRADICTION: the latitude forces t >= -1/3 everywhere, yet Lam* needs mass (5-sqrt5)/12 at t=-1/sqrt5 < -1/3
+   => the true pair-measure of any isotropic nu lies in a STRICTLY SMALLER set than the LP feasible set,
+      hence kappa_3(1/3,1/3,1/3) <= 3 V_L with STRICT inequality for every L: the hierarchy cannot be tight.
+  [PASS] NEW (exact): the centre section satisfies kappa_3(1/3,1/3,1/3) < Phi = 1.309017 (strict, non-constructive)
+
+================================================================================================================
+(F3) the elementary angular inequality and the canonical angle arccos(-1/3)
+================================================================================================================
+   for u,v in S^2 with polar angles psi_u, psi_v from the dipole axis:
+     <u,v> = cos psi_u cos psi_v + sin psi_u sin psi_v cos(dphi) >= cos(psi_u + psi_v)
+  [PASS] <u,v> >= cos(psi_u+psi_v) verified on 200000 random triples (0 violations)
+   2 arccos(1/sqrt3) = 1.9106332362490186 ; arccos(-1/3) = 1.9106332362490186 ; |difference| = 0.00e+00
+   cos(2 psi_L) = 2 cos^2(psi_L)-1 = 2*(1/3)-1 = -1/3
+   both angles lie in (0,pi) (arccos(1/sqrt3)=0.955317 < pi/2, so twice it is 1.910633 < pi) and arccos is injective there
+  [PASS] EXACT identity  2 arccos(1/sqrt3) = arccos(-1/3)  (via cos(2psi_L)=2/3-1=-1/3 and injectivity of arccos on (0,pi))
+  [PASS] cos(2 arccos(1/sqrt3)) = -1/3 exactly: the dipole-extremal latitude is EXACTLY the set on which two points can be at most arccos(-1/3) apart
+
+================================================================================================================
+(F4) rigidity: how much mass can an isotropic nu put below t = -1/3 ?
+================================================================================================================
+   proof: t >= z_u z_v - sqrt((1-z_u^2)(1-z_v^2)) >= z_u z_v - 1 + (z_u^2+z_v^2)/2 = (z_u+z_v)^2/2 - 1 ... 
+          => (-1/3 - t)_+ <= (2/3 - (z_u+z_v)^2/2)_+ = ((2/sqrt3 - W)(2/sqrt3 + W))_+/2 , W = z_u+z_v
+   E W = 2 mu, Var W = 2v with mu = |m_1| = sqrt(s), v = 1/3 - s   (isotropy gives E z^2 = 1/3)
+   => U(s) = E[(-1/3-t)_+] <= (1/2)(2/sqrt3+2) sqrt((2/sqrt3-2 sqrt s)^2 + 2(1/3-s))
+   scan over isotropic frames N=3..39, 296 configurations: max ( E[(-1/3-t)_+] - U(s) ) = -3.502e-16
+  [PASS] the rigidity budget U(s) is never violated (296 configurations); U(1/3)=0 exactly, U(0.3)=0.417858, U(0.2)=0.912152, U(0)=2.230710
+   U(1/3)=3.502e-16  U(0.33)=0.129113  U(0.32)=0.260196  U(0.30)=0.417858  U(0.25)=0.688634
+
+================================================================================================================
+(F5) the AUGMENTED hierarchy: dipole pinned at s + rigidity budget U(s)
+================================================================================================================
+     s        V(s)        3V(s)       vs rho_0      vs Phi        U(s)
+   0.33333   0.434119213   1.302357639   +0.020789   -0.006659   0.000000
+   0.33333   0.434457193   1.303371579   +0.021803   -0.005645   0.002231
+   0.33333   0.434688561   1.304065683   +0.022497   -0.004951   0.003864
+   0.33332   0.435099945   1.305299834   +0.023732   -0.003717   0.007054
+   0.33330   0.435645311   1.306935934   +0.025368   -0.002081   0.012218
+   0.33323   0.436232437   1.308697310   +0.027129   -0.000320   0.022309
+   0.33300   0.436172491   1.308517472   +0.026949   -0.000500   0.040717
+   0.33233   0.435838991   1.307516972   +0.025949   -0.001500   0.070594
+   0.33033   0.434838991   1.304516972   +0.022949   -0.004500   0.122457
+   0.30000   0.419672324   1.259016972   -0.022551   -0.050000   0.417858
+   0.31333   0.426338991   1.279016972   -0.002551   -0.030000   0.320312
+   0.26667   0.403005657   1.209016972   -0.072551   -0.100000   0.607217
+   0.28333   0.411338991   1.234016972   -0.047551   -0.075000   0.518662
+   0.16667   0.353005657   1.059016972   -0.222551   -0.250000   1.055429
+   0.18333   0.361338991   1.084016972   -0.197551   -0.225000   0.983809
+   0.13333   0.336338991   1.009016972   -0.272551   -0.300000   1.201397
+   0.08333   0.311338991   0.934016972   -0.347551   -0.375000   1.439917
+   0.00000   0.269672324   0.809016972   -0.472551   -0.500000   2.230710
+   worst case over s: 3V = 1.308697310 at s=0.33323   (rho_0=1.281568197, Phi=1.309016994)
+  [PASS] the AUGMENTED hierarchy (dipole pinned + rigidity budget) gives 1.308697310 < Phi = 1.309016994 : a strict, computable improvement over STW for the CENTRE section (gain 0.000320)
+  [PASS] but 1.308697310 is still above rho_0 = 1.281568197 (gap 0.027129): the centre is NOT closed yet -- U(s) is crude
+
+   the LATITUDE-RESTRICTED LP (dipole exactly maximal, s=1/3, so t >= -1/3 forced):
+     L=2 : 3V = 1.333333333333   support [-0.333333  0.666667]  weights [0.333333 0.666667]
+     L=4 : 3V = 1.302357642212   support [-0.333333  0.509778  0.51      1.      ]  weights [0.302358 0.143466 0.394271 0.159905]
+     L=8 : 3V = 1.302357642211   support [-0.333333  0.509778  0.51      1.      ]  weights [0.302358 0.143466 0.394271 0.159905]
+  [PASS] the latitude-restricted value 3V = 1.302357642 is strictly below Phi (gain 0.006659): this is the value the hierarchy would take IF the dipole were exactly maximal
+
+================================================================================================================
+SUMMARY  PASS=14  FAIL=0
+================================================================================================================
