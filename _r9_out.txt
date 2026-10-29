@@ -1,0 +1,41 @@
+========================================================================================================
+(L1) rho(Lam) 的几何平均表示  rho(Lam)=sum_ij (Q+)_ij sqrt(L_i L_j),  L_i=g_i u_i'Lam u_i  => 凹（解析）
+========================================================================================================
+  冠军几何上两种写法最大差 = 8.882e-16
+  [PASS] 几何平均表示与原定义一致 (max 8.88e-16)
+  冠军凹性余量 +9.9370e-06
+  [PASS] 冠军几何上 rho(Lam) 凹（解析已证，数值余量 +9.94e-06）
+
+========================================================================================================
+(L2) 临界点上 Lam~ >= 0（可容许性）与 Lam~ 是 {tr=1} 上的全局极大点
+========================================================================================================
+   N= 6 rho-rho0=-8.16e-02 lam_min(Lam~)=+0.166666667 KKT残差=5.4e-15 max_Lam rho(Lam)=1.200000000000 (差 +6.66e-16) |Lam_arg-Lam~|=1.5e-01 切向界违背=0.0e+00
+  [PASS] N=6: Lam~>=0 (lam_min=+1.667e-01) 且满足 KKT
+  [PASS] N=6: max_Lam rho(Lam) = rho（Lam~ 是全局极大点），差 6.66e-16
+  [PASS] N=6: 切向界 rho(Lam) <= rho*tr(Lam) 在 400 个随机 Lam 上成立（最大违背 0.00e+00）
+   N= 7 rho-rho0=-2.15e-02 lam_min(Lam~)=+0.189615023 KKT残差=5.9e-07 max_Lam rho(Lam)=1.260028797691 (差 -2.68e-13) |Lam_arg-Lam~|=2.6e-07 切向界违背=0.0e+00
+  [FAIL] N=7: Lam~>=0 (lam_min=+1.896e-01) 且满足 KKT
+  [PASS] N=7: max_Lam rho(Lam) = rho（Lam~ 是全局极大点），差 -2.68e-13
+  [PASS] N=7: 切向界 rho(Lam) <= rho*tr(Lam) 在 400 个随机 Lam 上成立（最大违背 0.00e+00）
+   N= 8 rho-rho0=+0.00e+00 lam_min(Lam~)=+0.202695712 KKT残差=4.9e-02 max_Lam rho(Lam)=1.281568196871 (差 -7.44e-13) |Lam_arg-Lam~|=1.1e-06 切向界违背=0.0e+00
+  [FAIL] N=8: Lam~>=0 (lam_min=+2.027e-01) 且满足 KKT
+  [PASS] N=8: max_Lam rho(Lam) = rho（Lam~ 是全局极大点），差 -7.44e-13
+  [PASS] N=8: 切向界 rho(Lam) <= rho*tr(Lam) 在 400 个随机 Lam 上成立（最大违背 0.00e+00）
+   N= 9 rho-rho0=-2.69e-02 lam_min(Lam~)=+0.220472409 KKT残差=2.0e-06 max_Lam rho(Lam)=1.254642464131 (差 +6.66e-16) |Lam_arg-Lam~|=4.6e-06 切向界违背=0.0e+00
+  [FAIL] N=9: Lam~>=0 (lam_min=+2.205e-01) 且满足 KKT
+  [PASS] N=9: max_Lam rho(Lam) = rho（Lam~ 是全局极大点），差 6.66e-16
+  [PASS] N=9: 切向界 rho(Lam) <= rho*tr(Lam) 在 400 个随机 Lam 上成立（最大违背 0.00e+00）
+   N=10 rho-rho0=-4.44e-16 lam_min(Lam~)=+0.202695712 KKT残差=4.4e-16 max_Lam rho(Lam)=1.281568196872 (差 -1.91e-14) |Lam_arg-Lam~|=1.6e-07 切向界违背=0.0e+00
+  [PASS] N=10: Lam~>=0 (lam_min=+2.027e-01) 且满足 KKT
+  [PASS] N=10: max_Lam rho(Lam) = rho（Lam~ 是全局极大点），差 -1.91e-14
+  [PASS] N=10: 切向界 rho(Lam) <= rho*tr(Lam) 在 400 个随机 Lam 上成立（最大违背 0.00e+00）
+   N=11 rho-rho0=+0.00e+00 lam_min(Lam~)=+0.202695712 KKT残差=4.9e-02 max_Lam rho(Lam)=1.281568196869 (差 -3.03e-12) |Lam_arg-Lam~|=2.3e-06 切向界违背=0.0e+00
+  [FAIL] N=11: Lam~>=0 (lam_min=+2.027e-01) 且满足 KKT
+  [PASS] N=11: max_Lam rho(Lam) = rho（Lam~ 是全局极大点），差 -3.03e-12
+  [PASS] N=11: 切向界 rho(Lam) <= rho*tr(Lam) 在 400 个随机 Lam 上成立（最大违背 0.00e+00）
+   N=12 rho-rho0=-1.80e-08 lam_min(Lam~)=+0.202695708 KKT残差=3.4e-02 max_Lam rho(Lam)=1.281568178523 (差 -3.94e-10) |Lam_arg-Lam~|=3.7e-07 切向界违背=0.0e+00
+  [FAIL] N=12: Lam~>=0 (lam_min=+2.027e-01) 且满足 KKT
+  [PASS] N=12: max_Lam rho(Lam) = rho（Lam~ 是全局极大点），差 -3.94e-10
+  [PASS] N=12: 切向界 rho(Lam) <= rho*tr(Lam) 在 400 个随机 Lam 上成立（最大违背 0.00e+00）
+
+第八段汇总：PASS=18 FAIL=5

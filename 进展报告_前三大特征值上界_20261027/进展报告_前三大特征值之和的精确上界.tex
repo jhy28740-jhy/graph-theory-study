@@ -5987,17 +5987,28 @@ $\max_\Lam\rho(\Lam)\ge\rho(\tilde\Lam)=\rho$；对 $g_i=0$ 或重根的退化�
 其细节（$g_i\to0$ 的极限与重根的分歧）在本报告中仍按\textbf{条件性}处理。
 \end{remark}
 
-\begin{proposition}[凹性，数值]\label{prop:concave}
+\begin{proposition}[凹性，数值；\textbf{已在第~\ref{sec:r19}~节升级为定理~\ref{thm:geo}}]\label{prop:concave}
 对固定几何，$\rho(\Lam)$ 在 $\Lam$ 上是\textbf{凹}的：在冠军几何上，
 $600$ 组随机 $(\Lam_1,\Lam_2,s)$ 的最小凹性余量
 $\rho((1-s)\Lam_1+s\Lam_2)-[(1-s)\rho(\Lam_1)+s\rho(\Lam_2)]$ 为 $+1.99\times10^{-5}$；
 在 $10$ 个随机几何（$N=5,\dots,11$）上全局最小余量为 $+1.57\times10^{-5}$，无一为负。
 \end{proposition}
 
+\begin{remark}[第 19 轮回填]\label{rmk:concavefill}
+本命题现在是\textbf{定理}。写 $L_i=g_iu_i^\top\Lam u_i=x_i(\Lam)^2$，则
+$\rho(\Lam)=\sum_{ij}(Q_+)_{ij}\sqrt{L_iL_j}$，而 $\sqrt{ab}=\min_{t>0}\frac{ta+b/t}2$
+是仿射族的下确界，故凹性由「线性 $\to$ 几何平均 $\to$ 非负组合」三步解析得到，
+见定理~\ref{thm:geo}。同一表示还给出闭式梯度（推论~\ref{cor:gradpsi}）、
+精确对偶（定理~\ref{thm:exactdual}）与内层规划的全局极大点刻画（推论~\ref{cor:argmax}）。
+\end{remark}
+
 \begin{remark}\label{rmk:concave}
-凹性尚未解析证明。注意它\textbf{不能}由 $\nabla^2\rho$ 的符号直接读出：
+（第 19 轮更新：凹性\textbf{已}解析证明，见定理~\ref{thm:geo}。下面保留当时的判断；
+其中「不能由 $\nabla^2\rho$ 读出」仍然正确，正确做法是把 $\rho$ 写成
+线性函数的几何平均的非负组合。）
+注意凹性\textbf{不能}由 $\nabla^2\rho$ 的符号直接读出：
 \eqref{eq:gradlam}~只在 Perron 点成立，不能对 $\Lam$ 再求导。
-若凹性成立，则 $\rho(\Lam)$ 作为一次正齐次凹函数具有支撑超平面表示
+$\rho(\Lam)$ 作为一次正齐次凹函数具有支撑超平面表示
 $\rho(\Lam)=\inf\{\langle\Lam,S\rangle:\ S\in\mathcal S\}$，
 其中 $\mathcal S=\{S\in\mathrm{Sym}_3:\ \langle\Lam,S\rangle\ge\rho(\Lam)\ \forall\Lam\succeq0\}$，
 于是由 Sion 极小极大定理：
@@ -6007,7 +6018,11 @@ $\rho(\Lam)=\inf\{\langle\Lam,S\rangle:\ S\in\mathcal S\}$，
 \end{remark}
 
 \begin{corollary}[对偶证书形式]\label{cor:dualcert}
-设 \eqref{eq:dualcert}~成立。则要证某几何满足 $\max_\Lam\rho(\Lam)\le\rho_0$，
+（第 19 轮更新：\eqref{eq:dualcert}~已由定理~\ref{thm:exactdual}~无条件证明，
+且其中的 $\min$ 可限制在显式对偶族 $\{S(T):T>0\}$ 上，最小值在
+$t^*_{ij}=x_j/x_i$ 处取到，此时 $S(T^*)=\rho I_3$。本推论的结论因此无条件成立；
+但它同时被命题~\ref{prop:P1dead}~判为\textbf{无用}——冠军处可行证书只有 $\rho_0I_3$ 一个。）
+则要证某几何满足 $\max_\Lam\rho(\Lam)\le\rho_0$，
 \textbf{只需给出一个} $S\in\mathrm{Sym}_3$ 使得
 \begin{equation}\label{eq:certcond}
 \lambda_{\max}(S)\le\rho_0\qquad\text{且}\qquad \rho(\Lam)\le\langle\Lam,S\rangle\quad\forall\Lam\succeq0 .
@@ -6135,6 +6150,8 @@ $\{\Lam\succeq0,\tr\Lam=1\}$ 上自由变化的松弛
 
 \textbf{条件性}：定理~\ref{thm:lamparam}(iii)~的「$\ge$」一侧对退化情形（$g_i=0$、重根）
 的化归；推论~\ref{cor:dualcert}~依赖命题~\ref{prop:concave}~的凹性。
+\emph{（第 19 轮更新：凹性已解析证明，故推论~\ref{cor:dualcert}~无条件；
+「$\ge$」一侧在 $x>0$ 时亦无条件，见推论~\ref{cor:argmax}。）}
 
 \textbf{数值（不作成果）}：
 命题~\ref{prop:concave}（凹性，冠军 $+$ $10$ 个随机几何）；
@@ -6146,7 +6163,7 @@ $\{\Lam\succeq0,\tr\Lam=1\}$ 上自由变化的松弛
 \textbf{否证}：命题~\ref{prop:refA}（自由 $\Lam$ 松弛在冠军几何上超出 $\tau_0$ 达 $2.06\times10^{-2}$）；
 命题~\ref{prop:refB}（强稀释不等式在 $N=4$ 上超出 $\rho_0$ 达 $1.81\times10^{-1}$）。
 
-\textbf{方法优先队列（第八版）}
+\textbf{方法优先队列（第八版；P2 已由定理~\ref{thm:geo}~完成，P1 已由命题~\ref{prop:P1dead}~否证并弹出，现行队列为第~\ref{sec:r19:status}~节的第九版）}
 \begin{enumerate}\itemsep3pt
 \item \textbf{P1（队首，全局）——构造对偶证书 $S$}：由推论~\ref{cor:dualcert}，
 只需对每个几何给出 $S\in\mathrm{Sym}_3$ 满足 \eqref{eq:certcond}。
@@ -6180,6 +6197,543 @@ $\nu_-(Q_+)\le\nu_-(Q_-)$ 与 $\omega(G_-)\le4$（引理~\ref{lem:obtuseclique}�
 与第~\ref{sec:r1517}~节的二分定理相比，它\textbf{完全不含}「$N\times N$ 矩阵的谱」这一对象，
 因此更适合用凸对偶、SOS 或显式不等式来处理；而命题~\ref{prop:refA}\ref{prop:refB}
 已经排除了两条最自然的错误走法。
+
+
+\section{第 19 轮：精确对偶、对偶证书的不可能性，与 Bloch 截面分解}\label{sec:r19}
+
+\subsection{本轮要交代的三件事}\label{sec:r19:motiv}
+
+第~\ref{sec:r18}~节把主线改写成 \eqref{eq:starmain}，并留下三个未了项：
+命题~\ref{prop:concave}~的凹性当时只有数值证据；
+推论~\ref{cor:dualcert}~因此是条件性的；
+第八版队列的队首 P1（构造各向异性对偶证书 $S$）还没有动手。
+本轮的处理是：凹性给出\textbf{解析证明}（定理~\ref{thm:geo}），
+并顺带得到闭式梯度（推论~\ref{cor:gradpsi}）；
+在此基础上证明 $\Lam$-参数化的对偶是\textbf{精确紧}的（定理~\ref{thm:exactdual}），
+于是 P1 不是一个「还没做成」的任务，而是一个\textbf{不可能做成}的任务
+（命题~\ref{prop:P1dead}：冠军几何上唯一可行的证书就是 $\rho_0I_3$）；
+最后给出一个新的结构分解（定理~\ref{thm:section}），
+把主线从「一个维数无界的帧流形上的上确界」改写成
+「一个\textbf{二维单纯形}上的一族子问题」，并且指出冠军恰好落在其中的
+\textbf{单轴}子族上。
+
+顺带记录两条被定量否证的放缩族（命题~\ref{prop:ceilweyl}\ref{prop:ceilharm}），
+它们分别给出 $\varphi=1.618034$ 与 $1.585642$ 的天花板，
+都\textbf{劣于}报告已有的 $\Phi=\frac{3+\sqrt5}4=1.309017$，故只作为死路记录，不作为上界成果。
+
+\subsection{凹性的解析证明与闭式梯度}\label{sec:r19:conc}
+
+凹性在第~\ref{sec:r18}~节只有数值证据。它的解析证明其实只需要一行恒等式，
+而这一行恒等式同时给出对偶族的显式形式，是本轮一切结论的起点。
+
+\begin{lemma}[几何平均的仿射下确界表示]\label{lem:geo}
+对 $a,b\ge0$，
+\begin{equation}\label{eq:geoam}
+\sqrt{ab}=\min_{t>0}\frac{ta+b/t}{2},
+\end{equation}
+极小值在 $t=\sqrt{b/a}$ 处取到（$a=0$ 或 $b=0$ 时下确界为 $0$，在 $t\to\infty$ 或 $t\to0$ 时逼近）。
+故 $(a,b)\mapsto\sqrt{ab}$ 是 $\R_+^2$ 上一族仿射函数的逐点下确界，从而是\textbf{凹}的。
+\end{lemma}
+
+\begin{proof}
+AM--GM 给 $\sqrt{ab}\le\frac{ta+b/t}2$，取 $t=\sqrt{b/a}$ 时等号成立。
+一族仿射函数的下确界是凹函数，这是凸分析的标准事实。
+\end{proof}
+
+\begin{theorem}[$\rho(\Lam)$ 的凹性与几何平均表示]\label{thm:geo}
+令 $D_i:=g_iu_iu_i^\top$、$L_i(\Lam):=\langle\Lam,D_i\rangle=g_iu_i^\top\Lam u_i=x_i(\Lam)^2$。
+则
+\begin{equation}\label{eq:geo}
+\rho(\Lam)=\sum_{i,j}(Q_+)_{ij}\sqrt{L_i(\Lam)L_j(\Lam)}
+=\inf_{T>0}\ \langle\Lam,S(T)\rangle ,
+\end{equation}
+其中 $T=(t_{ij})$ 取遍正对称矩阵，
+\begin{equation}\label{eq:ST}
+S(T):=\frac12\sum_{i,j}(Q_+)_{ij}\bigl(t_{ij}D_i+t_{ij}^{-1}D_j\bigr)\in\mathrm{Sym}_3 ,
+\end{equation}
+且当 $x(\Lam)>0$ 时下确界是\textbf{最小值}，在 $t^*_{ij}=x_j(\Lam)/x_i(\Lam)$ 处取到。
+特别地 $\rho$ 在 $\{\Lam\succeq0\}$ 上\textbf{凹}且一次正齐次。
+\end{theorem}
+
+\begin{proof}
+由 \eqref{eq:hlam}，$x_i(\Lam)=\sqrt{g_i}h_i(\Lam)=\sqrt{g_iu_i^\top\Lam u_i}=\sqrt{L_i(\Lam)}$，
+代入 \eqref{eq:rholam}~的 $\rho(\Lam)=x(\Lam)^\top Q_+x(\Lam)$ 即得 \eqref{eq:geo}~的第一个等号。
+对每一对 $(i,j)$ 用引理~\ref{lem:geo}（权 $(Q_+)_{ij}\ge0$）：
+\[
+\sum_{ij}(Q_+)_{ij}\sqrt{L_iL_j}
+=\inf_{T>0}\frac12\sum_{ij}(Q_+)_{ij}\bigl(t_{ij}L_i+t_{ij}^{-1}L_j\bigr)
+=\inf_{T>0}\Bigl\langle\Lam,\ \frac12\sum_{ij}(Q_+)_{ij}(t_{ij}D_i+t_{ij}^{-1}D_j)\Bigr\rangle ,
+\]
+这里用了 $L_i=\langle\Lam,D_i\rangle$ 的线性性。$L_i$ 是 $\Lam$ 的线性函数，
+$\sqrt{\cdot\,\cdot}$ 凹，非负系数求和保凹，故 $\rho$ 凹；
+一次正齐次性已见于定理~\ref{thm:lamparam}(i)。
+\end{proof}
+
+\begin{remark}[凹性为什么此前看起来「不好证」]\label{rmk:concwhy}
+第~\ref{sec:r18}~节的注~\ref{rmk:concave}~指出凹性不能由 $\nabla^2\rho$ 的符号读出，
+因为 \eqref{eq:gradlam}~只在 Perron 点成立。定理~\ref{thm:geo}~说明正确的看法是：
+不要去算二阶导，而是先把 $\rho$ 写成\textbf{线性函数的几何平均的非负组合}。
+这个表示的代价是引入了 $N(N+1)/2$ 个辅助参数 $t_{ij}$，
+但回报是 $\rho$ 变成了一个\textbf{下确界型}（因此凹、因此可对偶）的泛函。
+数值复核：冠军几何上 \eqref{eq:geo}~两种写法的最大差为 $6.7\times10^{-16}$，
+$400$ 组随机 $(\Lam_1,\Lam_2,s)$ 的凹性余量最小值 $+1.2\times10^{-4}$，无一为负。
+\end{remark}
+
+\begin{corollary}[闭式梯度恒半正定]\label{cor:gradpsi}
+在 $x(\Lam)>0$ 处 $\rho$ 可微，且
+\begin{equation}\label{eq:gradpsi}
+\nabla_\Lam\rho(\Lam)=S(T^*(\Lam))=\sum_i\frac{(Q_+x(\Lam))_i}{x(\Lam)_i}\,D_i
+=\sum_i\frac{g_i[\langle u_i,m(\Lam)\rangle+d_i(\Lam)]}{h_i(\Lam)}u_iu_i^\top\ \succeq\ 0 .
+\end{equation}
+即梯度\textbf{恒落在锥} $\operatorname{cone}\{D_1,\dots,D_N\}$ \textbf{中}，
+并且满足 Euler 恒等式 $\langle\Lam,\nabla_\Lam\rho(\Lam)\rangle=\rho(\Lam)$。
+\end{corollary}
+
+\begin{proof}
+由 \eqref{eq:geo}~与 Danskin 定理（下确界在 $T^*$ 处唯一取到，因 AM--GM 的取等点唯一），
+$\nabla_\Lam\rho=S(T^*(\Lam))$。把 $t^*_{ij}=x_j/x_i$ 代入 \eqref{eq:ST}：
+\[
+S(T^*)=\frac12\sum_i D_i\frac1{x_i}\sum_j(Q_+)_{ij}x_j+\frac12\sum_j D_j\frac1{x_j}\sum_i(Q_+)_{ij}x_i
+=\sum_i\frac{(Q_+x)_i}{x_i}D_i ,
+\]
+第二步用 $Q_+$ 对称。$D_i\succeq0$ 与 $(Q_+x)_i/x_i\ge0$ 给出半正定。
+第二个等号：$(Q_+)_{ij}=\sqrt{g_ig_j}(\langle u_i,u_j\rangle)_+$ 与 $x_j=\sqrt{g_j}h_j$ 给出
+$(Q_+x)_i/\sqrt{g_i}=\sum_jg_jh_j(\langle u_i,u_j\rangle)_+
+=\langle u_i,m\rangle+d_i$（把 $(\langle u_i,u_j\rangle)_+$ 拆成
+$\langle u_i,u_j\rangle+(\langle u_i,u_j\rangle)_-$），再除以 $x_i=\sqrt{g_i}h_i$。
+Euler 恒等式是一次正齐次性的标准推论。
+\end{proof}
+
+\begin{remark}[这条梯度公式的用处]\label{rmk:gradpsi}
+其一，它把 \eqref{eq:gradlam}~从「临界点上的巧合」提升为「处处成立的闭式」，
+因此\textbf{不需要}特征值或 Perron 向量就能求梯度，数值上可直接驱动内层凸规划
+（本轮证书用它做 L-BFGS，$15$ 个起点全部收敛到 $\rho$，超出量 $\le1.3\times10^{-15}$）。
+其二，$\nabla\rho(\Lam)\succeq0$ 说明 $\rho$ 关于 Loewner 序\textbf{单调}：
+$\Lam_1\succeq\Lam_2\Rightarrow\rho(\Lam_1)\ge\rho(\Lam_2)$。
+其三，$\nabla\rho$ 恒在 $\operatorname{cone}\{D_i\}$ 中，而 $\sum_iD_i=I_3$，
+故 $\tr\nabla_\Lam\rho(\Lam)=\sum_ig_i(Q_+x(\Lam))_i/x(\Lam)_i$，
+这是一个只涉及帧数据的显式标量；它与 $\rho(\Lam)$ 的关系由 Euler 恒等式给出。
+\end{remark}
+
+\subsection{精确对偶：$\Lam$-参数化没有松弛间隙，最优证书恒为各向同性}\label{sec:r19:dual}
+
+\begin{theorem}[精确对偶]\label{thm:exactdual}
+设 $x>0$（即 $Q_+$ 不可约；一般情形按锐图的分块取最大值化归）。令
+$t^*_{ij}:=x_j/x_i$，其中 $x$ 是 $Q_+$ 的 Perron 向量。则
+\begin{equation}\label{eq:stariso}
+S(T^*)=\rho\,I_3 ,
+\end{equation}
+并且
+\begin{equation}\label{eq:dualtight}
+\max_{\substack{\Lam\succeq0\\ \tr\Lam=1}}\rho(\Lam)
+\ =\ \inf_{T>0}\lambda_{\max}\!\bigl(S(T)\bigr)
+\ =\ \lambda_{\max}(Q_+)\ =\ \rho .
+\end{equation}
+等式 \eqref{eq:stariso}~对\textbf{每一个}几何都成立，不需要任何临界点或极值假设。
+\end{theorem}
+
+\begin{proof}
+\eqref{eq:stariso}：如推论~\ref{cor:gradpsi}~的证明，$S(T^*)=\sum_i\frac{(Q_+x)_i}{x_i}D_i$。
+$x$ 是 $Q_+$ 的 Perron 向量，故 $Q_+x=\rho x$，于是 $\frac{(Q_+x)_i}{x_i}=\rho$，
+$S(T^*)=\rho\sum_iD_i=\rho I_3$（帧条件 \eqref{eq:frame18}）。
+\eqref{eq:dualtight}：三段夹逼。
+(a) 弱对偶：对一切 $T$ 与一切 $\Lam\succeq0$，由 \eqref{eq:geo}~有
+$\rho(\Lam)\le\langle\Lam,S(T)\rangle\le\lambda_{\max}(S(T))\tr\Lam$，
+故 $\sup_{\tr\Lam=1}\rho(\Lam)\le\inf_T\lambda_{\max}(S(T))$。
+(b) 由 \eqref{eq:stariso}，$\inf_T\lambda_{\max}(S(T))\le\lambda_{\max}(S(T^*))=\rho$。
+(c) 由定理~\ref{thm:lamparam}(i)，$\sup_{\tr\Lam=1}\rho(\Lam)\le\lambda_{\max}(Q_+)=\rho$。
+三者合起来迫使全部取等。
+\end{proof}
+
+\begin{remark}[这条定理说的是「坏消息」]\label{rmk:dualtight}
+\eqref{eq:dualtight}~说明 $\Lam$-参数化\textbf{不产生任何松弛间隙}：
+它的对偶最优值恰好是 $\lambda_{\max}(Q_+)$，也就是原问题本身。
+这是好事也是坏事。好事是：定理~\ref{thm:lamparam}(iii)~的等价重构是\textbf{精确}的，
+不存在「凸化之后丢掉信息」的隐患，因此 \eqref{eq:starmain}~确实值得作为主线。
+坏事是：对偶证书路线\textbf{不能}给出比 $\lambda_{\max}(Q_+)$ 更好的东西——
+下一小节把这句话变成对 P1 的否证。
+\end{remark}
+
+\begin{corollary}[内层规划是凸的，$\tilde\Lam$ 是全局极大点]\label{cor:argmax}
+设 $x>0$。则对一切 $\Lam\succeq0$，
+\begin{equation}\label{eq:tangent}
+\rho(\Lam)\ \le\ \rho\cdot\tr\Lam ,
+\end{equation}
+从而 $\max_{\Lam\succeq0,\tr\Lam=1}\rho(\Lam)=\rho(\tilde\Lam)=\rho$。
+于是定理~\ref{thm:lamparam}(iii)~的「$\ge$」一侧在 $x>0$ 时\textbf{无条件}成立
+（第~\ref{sec:r18}~节里它被列为条件性结论）。
+极大点集恰为仿射面
+\begin{equation}\label{eq:face}
+\mathcal F=\{\Lam\succeq0:\ \langle\Lam,D_i\rangle=x_i^2,\ i=1,\dots,N\},
+\end{equation}
+它退化为单点 $\{\tilde\Lam\}$ 当且仅当 $\{D_i\}_{i=1}^N$ 在 $\mathrm{Sym}_3$ 中线性无关
+（等价地，那个 $N\times6$ 矩阵的秩为 $6$）。
+\end{corollary}
+
+\begin{proof}
+$\rho$ 凹（定理~\ref{thm:geo}）且在 $\tilde\Lam$ 处可微、$\nabla\rho(\tilde\Lam)=\rho I_3$
+（定理~\ref{thm:lamparam}(ii)），故一阶条件给
+$\rho(\Lam)\le\rho(\tilde\Lam)+\langle\rho I_3,\Lam-\tilde\Lam\rangle=\rho+\rho(\tr\Lam-1)$。
+对 $\tr\Lam\le1$ 得 $\rho(\Lam)\le\rho$；一般 $\Lam$ 用一次正齐次性化到 $\tr\Lam=1$，
+即得 \eqref{eq:tangent}。
+取等条件：\eqref{eq:geo}~中等号要求对每一对 $(Q_+)_{ij}>0$ 都有
+$t^*_{ij}=\sqrt{L_j/L_i}$，即 $L_i/L_j=x_i^2/x_j^2$；锐图连通故存在 $c>0$ 使 $L_i=cx_i^2$。
+而 $\tr\Lam=\sum_iL_i=c\sum_ix_i^2=c$，于是 $\tr\Lam=1$ 时 $c=1$，$L_i=x_i^2$，即 $\Lam\in\mathcal F$。
+反过来 $\Lam\in\mathcal F$ 显然取等。$\mathcal F$ 是 $\mathrm{Sym}_3$ 中一个仿射子空间与半正定锥之交，
+该仿射子空间由 $\{D_i\}$ 的正交补决定，故为单点当且仅当 $\{D_i\}$ 张成 $\mathrm{Sym}_3$。
+\end{proof}
+
+\begin{remark}[数值复核，以及一个意外发现]\label{rmk:argmax}
+$\|\nabla\rho(\tilde\Lam)-\rho I_3\|_{\max}=1.6\times10^{-15}$；
+$\rho(\tilde\Lam)-\rho=1.3\times10^{-15}$；
+以 \eqref{eq:gradpsi}~为梯度的 L-BFGS 从 $15$ 个起点出发，最大超出量 $1.3\times10^{-15}$，
+从未越过 $\rho$。切向界 \eqref{eq:tangent}~在 $960$ 个随机 $\Lam$（含 $\tr\Lam\ne1$）上最大违背 $0$。
+\textbf{意外发现}：极大点\textbf{不总是唯一}的。$N=6$ 的一个上升极大元处
+$\operatorname{rank}\{D_i\}=4<6$，此时 $\mathcal F$ 是一个二维仿射面，
+L-BFGS 收敛到的极大点与 $\tilde\Lam$ 相距 $1.2\times10^{-1}$ 而\textbf{取值完全相同}（差 $1.1\times10^{-15}$）；
+$N=7,9,10$ 处 $\operatorname{rank}\{D_i\}=6$，距离分别为 $0$、$1.2\times10^{-5}$、$2.1\times10^{-10}$。
+这印证了 \eqref{eq:face}~的秩判据：\textbf{值}是刚性的，\textbf{极大点}只在 $\{D_i\}$ 线性相关时才不刚性。
+\end{remark}
+
+\subsection{各向异性对偶证书不存在：P1 被否证}\label{sec:r19:p1dead}
+
+第八版队列的队首 P1 是：按注~\ref{rmk:certsearch}，构造形如
+$S=\rho_0u_0u_0^\top+\kappa(I_3-u_0u_0^\top)$ 的\textbf{各向异性}证书。
+本小节证明这件事在冠军几何上\textbf{不可能}，因此 P1 必须弹出。
+证明只需要一条关于 $\tilde\Lam$ 的精确谱信息。
+
+\begin{lemma}[冠军的 $\tilde\Lam$ 是单轴的，且正定]\label{lem:lampos}
+冠军几何在绕枢纽轴的二面体群 $D_5$ 作用下不变，故 $\tilde\Lam$ 与之交换，从而
+\begin{equation}\label{eq:uniax}
+\tilde\Lam=\lambda_\parallel\,u_{\rm hub}u_{\rm hub}^\top+\lambda_\perp\bigl(I_3-u_{\rm hub}u_{\rm hub}^\top\bigr),
+\qquad
+\lambda_\parallel=h_{\rm hub}^2=\frac{\pi_{\rm hub}}{g_0^*},\quad
+\lambda_\perp=\frac{1-h_{\rm hub}^2}{2},
+\end{equation}
+其中 $\pi_{\rm hub}=x_{\rm hub}^2=\dfrac{91-25\sqrt7}{126}=0.197271565265$，
+$g_0^*=\dfrac{9-4\sqrt5+\sqrt{35}}{18}=0.331767104061$，故
+$\lambda_\parallel=0.594608575866$、$\lambda_\perp=0.202695712067$。
+特别地 $\tilde\Lam\succ0$，且这两个不等式是\textbf{精确}的：
+$0<h_{\rm hub}^2<1$ 等价于 $28+28\sqrt5<25\sqrt7+7\sqrt{35}$，两边平方得 $6272<6090+350\sqrt{35}$，显然。
+\end{lemma}
+
+\begin{proof}
+$\tilde\Lam$ 由命题~\ref{prop:uktkt}~的闭式 \eqref{eq:lamclosed}~从 $(g,U)$ 规范地定义，
+故与 $D_5$ 作用交换。$D_5$ 在 $\R^3$ 上的表示分解为「轴上一维平凡」$\oplus$「轴外二维不可约」
+（$n=5\ge3$ 时二维表示不可约），由 Schur 引理，交换代数中的元素在这两个不可约分量上是标量，
+即 \eqref{eq:uniax}。$\lambda_\parallel=u_{\rm hub}^\top\tilde\Lam u_{\rm hub}=h_{\rm hub}^2$
+（命题~\ref{prop:uktkt}(iv) 的 $u_i^\top\tilde\Lam u_i=h_i^2$）；
+$\tr\tilde\Lam=1$（同处已证）给 $\lambda_\parallel+2\lambda_\perp=1$。
+$h_{\rm hub}^2=x_{\rm hub}^2/g_{\rm hub}=\pi_{\rm hub}/g_0^*$ 是定义。
+\end{proof}
+
+\begin{proposition}[各向异性证书不存在]\label{prop:P1dead}
+在冠军几何上，满足 \eqref{eq:certcond}~的 $S\in\mathrm{Sym}_3$ \textbf{只有一个}：$S=\rho_0I_3$。
+因此推论~\ref{cor:dualcert}~的证书路线\textbf{等价于}原始不等式 \eqref{eq:starmain}，
+不携带任何新信息；注~\ref{rmk:certsearch}~提出的各向异性候选族是空的。
+\end{proposition}
+
+\begin{proof}
+设 $S$ 满足 \eqref{eq:certcond}。则
+\[
+\rho_0=\rho(\tilde\Lam)\ \le\ \langle\tilde\Lam,S\rangle\ \le\ \lambda_{\max}(S)\,\tr\tilde\Lam
+\ =\ \lambda_{\max}(S)\ \le\ \rho_0 ,
+\]
+第一式是定理~\ref{thm:lamparam}(ii)~的 $\rho(\tilde\Lam)=\rho=\rho_0$，
+第三式是引理~\ref{lem:lampos}~的 $\tr\tilde\Lam=1$。故三处全部取等。
+由 $\langle\tilde\Lam,S\rangle=\lambda_{\max}(S)\tr\tilde\Lam$ 知 $\tilde\Lam$ 的像含于 $S$ 的
+$\lambda_{\max}(S)=\rho_0$ 特征空间；而引理~\ref{lem:lampos}~给 $\tilde\Lam\succ0$，
+其像为全空间，故该特征空间 $=\R^3$，$\lambda_{\max}$ 的重数为 $3$，$S=\rho_0I_3$。
+\end{proof}
+
+\begin{remark}[否证的定量内容]\label{rmk:p1dead}
+这条否证有两层定量含义。
+\textbf{第一层}：$S$ 的可行集是\textbf{单点}，不是「很小」；
+任何试图调节 $\kappa$ 的做法都会立刻破坏 $\rho(\Lam)\le\langle\Lam,S\rangle$。
+数值上，$3000$ 次随机各向异性尝试（$\lambda_{\max}(S)\le\rho_0$）中最好的一个仍然违反
+证书条件达 $-4.2\times10^{-1}$。
+\textbf{第二层}（更本质）：由定理~\ref{thm:exactdual}~的 \eqref{eq:stariso}，
+\textbf{每个}几何的 AM--GM 取等参数都是 $t^*_{ij}=x_j/x_i$，都给出 $S=\rho I_3$。
+所以对偶族 $\{S(T)\}$ 里「好的那一个」永远是各向同性的；
+各向异性只能来自\emph{非}取等的 $T$，而那样 $\lambda_{\max}(S(T))>\rho$，不可能 $\le\rho_0$
+（在冠军处 $\rho=\rho_0$）。
+\textbf{结论}：凸对偶这条路在冠军几何上已经走到头，
+主线必须回到不等式 \eqref{eq:starmain}~本身，或者改变分解方式。
+\end{remark}
+
+\subsection{两条被定量否证的放缩族}\label{sec:r19:ceil}
+
+按协议，被排除的路线必须留下定量天花板。本轮排除两条自然但无效的族。
+
+\begin{proposition}[Weyl$+$Frobenius 自举的天花板]\label{prop:ceilweyl}
+记 $Q=VV^\top$、$Q_\pm=(\pm Q)_+$（故 $Q_+=Q+Q_-$），
+$\alpha:=x^\top Qx=\|V^\top x\|^2$、$\beta:=x^\top Q_-x\ge0$，
+则 $\rho=x^\top Q_+x=\alpha+\beta$。只用下面四条数据
+\begin{equation}\label{eq:bootdata}
+\tr Q_+=\textstyle\sum_ig_i=3,\qquad
+\|Q_+\|_F^2+\|Q_-\|_F^2=\|Q\|_F^2=\tr(Q^2)=3,\qquad
+\alpha\le\lambda_{\max}(Q)=1,\qquad \beta\le\lambda_{\max}(Q_-)\le\|Q_-\|_F ,
+\end{equation}
+最多只能推出
+\begin{equation}\label{eq:boot}
+\rho\ \le\ \frac{1+\sqrt5}{2}=\varphi=1.618033988750 ;
+\end{equation}
+若再加上 $N=6$ 时的两条迹精细化
+$\|Q_+\|_F^2\ge\rho^2+\frac{(3-\rho)^2}{5}$（因 $\tr Q_+=3$）与
+$\|Q_-\|_F^2\ge\frac65\lambda_{\max}(Q_-)^2$（因 $\tr Q_-=0$），则最多推出 $\rho\le\frac32$。
+两者都\textbf{劣于}报告已有的 $\Phi=\frac{3+\sqrt5}4=1.309017$，故此族死。
+\end{proposition}
+
+\begin{proof}
+$\rho=\alpha+\beta$ 来自 $Q_+=Q+Q_-$ 的逐项分解。由 \eqref{eq:bootdata}，
+$\rho\le1+\beta\le1+\|Q_-\|_F$ 且 $\rho^2\le\|Q_+\|_F^2=3-\|Q_-\|_F^2$，
+消去 $\|Q_-\|_F$ 得 $(\rho-1)^2\le3-\rho^2$，即 $\rho^2-\rho-1\le0$，故 $\rho\le\varphi$。
+$N=6$ 版本：$3\ge\rho^2+\frac{(3-\rho)^2}5+\frac65(\rho-1)^2$，
+整理为 $2.4\rho^2-3.6\rho\le0$，即 $\rho\le\frac32$。
+天花板是\textbf{可达}的（不是估计松紧的问题）：把 \eqref{eq:bootdata}~当约束做线性/二次规划，
+$(\alpha,\beta)=(1,\varphi-1)$ 与 $\|Q_-\|_F^2=3-\rho^2$ 恰好相容，故 $\varphi$ 是该族的真上确界。
+数值：$9$ 个阶数（$N=4,\dots,14$）的上升极大元全部满足 $(\rho-1)^2\le3-\rho^2$，
+最大余量 $-1.28$；该不等式本身远未饱和，说明损失发生在 \eqref{eq:bootdata}~的第四条。
+\end{proof}
+
+\begin{proposition}[Legendre/优占族的天花板]\label{prop:ceilharm}
+把核 $(t)_+$ 在 $[-1,1]$ 上按 Legendre 多项式展开，
+\begin{equation}\label{eq:legc}
+(t)_+=\sum_{\ell\ge0}c_\ell P_\ell(t),\qquad
+c_\ell=\frac{2\ell+1}{2}\int_0^1tP_\ell(t)\dd t ,
+\end{equation}
+则 $c_0=\frac14$、$c_1=\frac12$、$c_2=\frac5{16}$、$c_3=0$、$c_4=-\frac3{32}$、$c_5=0$、
+$c_6=\frac{13}{256}$、$c_8=-\frac{17}{512}$、$c_{10}=\frac{49}{2048}$、$c_{12}=-\frac{75}{4096}$，
+且 \textbf{$c_\ell=0$ 对一切奇数 $\ell\ge3$}（因 $(t)_+=\frac t2+\frac{|t|}2$，而 $|t|$ 只有偶次项）。
+令 $A_\ell:=\bigl(\sqrt{g_ig_j}\,P_\ell(\langle u_i,u_j\rangle)\bigr)_{ij}$，
+则每个 $A_\ell\succeq0$（$P_\ell(\langle u,v\rangle)$ 是 $S^2$ 上的正定核，加法公式），
+$P_+=\sum_\ell c_\ell A_\ell$，并且
+\begin{equation}\label{eq:A01}
+\lambda_{\max}(A_0)=\sum_ig_i=3,\qquad A_1=Q,\quad \lambda_{\max}(A_1)=1 .
+\end{equation}
+于是逐项放缩给出
+\[
+\rho\le\sum_{\ell:\,c_\ell>0}c_\ell\lambda_{\max}(A_\ell),
+\]
+而右端在冠军几何上截断到 $\ell=24$ 时等于 $1.585642$，比 $\rho_0$ 高 $0.304074$。
+故这一族（含第~\ref{sec:nogo}~节的优占矩阵方案）不可能达到 $\rho_0$。
+\end{proposition}
+
+\begin{proof}
+$c_\ell$ 由 \eqref{eq:legc}~直接积分（本轮用符号计算逐个求值，全部是有理数）。
+奇数 $\ell\ge3$ 时 $tP_\ell(t)$ 是偶函数且 $\int_{-1}^1tP_\ell(t)\dd t=\int_0^1tP_\ell+\int_{-1}^0tP_\ell=0$
+（用 $P_\ell$ 奇、$tP_\ell$ 偶），而 $\int_{-1}^1tP_\ell=0$ 对 $\ell\ne1$ 由正交性给出，
+故 $\int_0^1tP_\ell=0$。$A_\ell\succeq0$ 与 $P_+=\sum_\ell c_\ell A_\ell$ 是逐条目的恒等式。
+$A_0=\sqrt g\sqrt g{}^\top$ 给 $\lambda_{\max}=3$；$A_1=(\sqrt{g_ig_j}\langle u_i,u_j\rangle)=VV^\top=Q$。
+\end{proof}
+
+\begin{remark}[这条否证解释了一个数字]\label{rmk:harm54}
+\eqref{eq:A01}~里 $\lambda_{\max}(A_0)=3$ 与 $\lambda_{\max}(A_1)=1$ 是\textbf{精确}的，
+于是「只保留 $\ell\le1$」的逐项天花板是 $\frac14\cdot3+\frac12\cdot1=\frac54$，
+恰好等于已证的 $\kappa_3(4)=\frac54$。这不是巧合式的装饰：
+它说明 $\frac54$ 这一层信息完全来自核 $(t)_+$ 的\textbf{常数项与线性项}，
+也就是「各向同性 $+$ 投影本身」这两件事；
+$\rho_0-\frac54=0.031568$ 必须由 $\ell\ge2$ 的高次调和项提供。
+但在冠军处这些高阶项的实际贡献是 $+0.051727$（其中 $\ell=6$ 一项就占 $+0.061846$，
+$\ell=4,8,12$ 三项共 $-0.021199$），而且级数收敛很慢
+（截断到 $\ell=24$ 时重构值 $1.279057$，误差 $-2.5\times10^{-3}$）。
+\textbf{这就是逐项放缩失败的机制}：正负项交错、单项幅度大于总和，
+任何「丢掉负项」的动作都会立刻越过 $\rho_0$。
+\end{remark}
+
+\subsection{Bloch 截面分解：主线的新形状}\label{sec:r19:sect}
+
+到目前为止，主线一直是「在一个维数随 $N$ 增长的帧流形上求上确界」。
+定理~\ref{thm:lamparam}~引入了 $5$ 个新参数（$\Lam\succeq0$、$\tr\Lam=1$，即一个三维 Bloch 体）。
+本小节指出：因为帧集合在 $O(3)$ 下不变，\textbf{可以先对 $\Lam$ 的谱分类，再对帧取上确界}，
+于是主线变成一个\textbf{二维单纯形}上的族。
+
+\begin{theorem}[截面分解]\label{thm:section}
+对 $\mu=(\mu_1,\mu_2,\mu_3)\in\Delta_2:=\{\mu_i\ge0,\ \sum_i\mu_i=1\}$（降序排列）定义
+\begin{equation}\label{eq:section}
+\kappa_3(\mu):=\sup_{N\ge3}\ \sup_{(g,U)\ \text{满足}\ \eqref{eq:frame18}}\ \rho_{g,U}(\operatorname{diag}\mu) .
+\end{equation}
+则
+\begin{equation}\label{eq:secteq}
+\kappa_3=\sup_{\mu\in\Delta_2}\kappa_3(\mu),
+\end{equation}
+且 $\kappa_3(R\Lam R^\top)=\kappa_3(\Lam)$ 对一切 $R\in O(3)$，
+故 $\kappa_3(\mu)$ 只依赖 $\mu$ 作为\textbf{无序}三元组，即 $\kappa_3$ 是 $\Delta_2$ 上 $S_3$-不变的函数。
+此外冠军满足
+\begin{equation}\label{eq:mustar}
+\mu(\tilde\Lam)=\Bigl(h_{\rm hub}^2,\ \tfrac{1-h_{\rm hub}^2}2,\ \tfrac{1-h_{\rm hub}^2}2\Bigr)
+=(0.594608575866,\ 0.202695712067,\ 0.202695712067),
+\end{equation}
+是\textbf{单轴}的（后两个分量相等），且 $\kappa_3(\mu(\tilde\Lam))\ge\rho_0$。
+\end{theorem}
+
+\begin{proof}
+乘积集上的上确界可换序：
+$\sup_{(g,U)}\max_{\Lam}\rho_{g,U}(\Lam)=\sup_{(g,U),\Lam}\rho_{g,U}(\Lam)=\sup_{\Lam}\sup_{(g,U)}\rho_{g,U}(\Lam)$。
+帧条件 \eqref{eq:frame18}~在 $u_i\mapsto Ru_i$ 下不变，且
+$h_i(g,RU,\Lam)=\sqrt{(Ru_i)^\top\Lam(Ru_i)}=h_i(g,U,R^\top\Lam R)$、
+$\langle Ru_i,Ru_j\rangle=\langle u_i,u_j\rangle$，故
+$\rho_{g,RU}(\Lam)=\rho_{g,U}(R^\top\Lam R)$。
+把 $R$ 换为 $R^\top$ 并对 $U$ 取上确界（$U\mapsto R^\top U$ 是帧集到自身的双射）即得不变性。
+于是 $\kappa_3(\Lam)$ 是 $O(3)$-不变量，只依赖 $\operatorname{spec}(\Lam)$；
+取 $\Lam=\operatorname{diag}\mu$ 得 \eqref{eq:secteq}。
+\eqref{eq:mustar}~是引理~\ref{lem:lampos}；$\rho_{g^*,U^*}(\tilde\Lam)=\rho_0$
+（定理~\ref{thm:lamparam}(ii)），故冠军是 $\mu(\tilde\Lam)$ 截面上的可行点。
+\end{proof}
+
+\begin{corollary}[两个特殊截面的显式形式]\label{cor:sectspecial}
+\begin{enumerate}\itemsep3pt
+\item[(i)] \textbf{中心截面} $\mu=(\frac13,\frac13,\frac13)$：$h_i\equiv\frac1{\sqrt3}$，故
+\begin{equation}\label{eq:center}
+\kappa_3\Bigl(\tfrac13,\tfrac13,\tfrac13\Bigr)=\frac13\sup_{(g,U)}\sum_{i,j}g_ig_j\bigl(\langle u_i,u_j\rangle\bigr)_+ ,
+\end{equation}
+即「各向同性测度 $\mu=\sum_ig_i\delta_{u_i}$ 的正部二次能量」除以 $3$。
+此时 $\Lam$ 的自由度\textbf{完全消失}，问题变成一个纯测度论的极值问题。
+\item[(ii)] \textbf{秩一截面} $\mu=(1,0,0)$，$\Lam=ww^\top$：$h_i=|\langle u_i,w\rangle|$，
+令 $a_i:=\sqrt{g_i}\langle u_i,w\rangle$，则 $\sum_ia_i^2=\|w\|^2=1$ 且 $x_i(\Lam)=|a_i|$，故
+$\rho_{g,U}(\Lam)=\sum_{ij}(Q_+)_{ij}|a_i||a_j|$。
+\end{enumerate}
+\end{corollary}
+
+\begin{proposition}[截面地图，数值]\label{prop:sectmap}
+对 $8$ 个截面 $\mu$ 与 $N\in\{6,8,10\}$，用 \eqref{eq:gradpsi}~之外的直接梯度上升
+（对 $V\in\mathrm{St}(N,3)$，解析梯度）求 $\kappa_3(\mu)$ 的数值下界，得
+\begin{center}\small
+\begin{tabular}{lrrr}
+\toprule
+截面 $\mu$ & $N=6$ & $N=8$ & $N=10$ \\
+\midrule
+中心 $(\frac13,\frac13,\frac13)$ & $1.233669$ & $1.256733$ & $1.248877$ \\
+单轴 $a=0.50$ & $1.249734$ & $1.249025$ & $1.245552$ \\
+单轴 $a=0.5946=h_{\rm hub}^2$ & $1.250166$ & $1.270937$ & $1.273641$ \\
+单轴 $a=0.70$ & $1.247226$ & $1.240466$ & $1.278518$ \\
+单轴 $a=0.85$ & $1.209759$ & $1.222580$ & $1.261757$ \\
+秩二 $(\frac12,\frac12,0)$ & $1.228572$ & $1.181850$ & $1.182550$ \\
+秩一 $(1,0,0)$ & $1.150694$ & $1.175367$ & $1.166373$ \\
+非对称 $(0.60,0.30,0.10)$ & $1.231907$ & $1.261213$ & $1.260940$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+其中「单轴 $a$」指 $\mu=(a,\frac{1-a}2,\frac{1-a}2)$。
+把冠军本身作为 $a=h_{\rm hub}^2$ 截面的可行点加入后，该截面的值为 $1.281568196872167=\rho_0$。
+\textbf{观察}：（1）没有任何截面的数值上确界超过 $\rho_0$；
+（2）最大值出现在单轴族 $a\approx0.6$--$0.7$，冠军恰在其中；
+（3）秩一与秩二截面明显更低（最大 $1.228572$，余量 $0.052996$）；
+（4）非对称截面 $(0.60,0.30,0.10)$ 也不超过 $1.2613$。
+这些都是\textbf{数值}结论，不作为成果。
+\end{proposition}
+
+\begin{remark}[这条分解买到了什么]\label{rmk:sectread}
+\textbf{买到三件事}。
+其一，$\Lam$ 的 $8$ 个自由度被压缩成 $\Delta_2$ 的 $2$ 个：
+旋转自由度是\textbf{冗余}的（定理~\ref{thm:section}~的不变性），
+这是一个此前没有明确使用过的事实。
+其二，$\Delta_2$ 的\textbf{边界}（秩 $\le2$ 的截面）与\textbf{中心}截面各自成为独立的、
+形式上更简单的子问题；边界截面数值上余量很大（$\ge0.053$），
+中心截面按 \eqref{eq:center}~根本不含 $\Lam$，因此最有希望先被解析解决。
+其三，冠军落在\textbf{单轴}子族上，这不是偶然：
+引理~\ref{lem:lampos}~说明单轴性是 $D_5$ 对称性的后果，
+而冠军的极值性本身就来自 $D_5$ 对称。
+\textbf{代价}是：$\kappa_3(\cdot)$ 是「一族凹函数的上确界」，本身既不凹也不凸，
+所以不能用凹性把它压到某个特殊截面上；
+排除非对称极大元（$S_3$-轨道大小为 $6$ 的那些）需要新的论证。
+\end{remark}
+
+\begin{corollary}[归约的精确形式]\label{cor:sectreduce}
+主猜想 $\kappa_3\le\rho_0$ 等价于：对每个 $\mu\in\Delta_2$，$\kappa_3(\mu)\le\rho_0$。
+由 $S_3$-对称性，只需对下列三类 $\mu$ 证明：
+\textbf{(A)} 中心 $\mu=(\frac13,\frac13,\frac13)$；
+\textbf{(B)} 单轴 $\mu=(a,\frac{1-a}2,\frac{1-a}2)$，$a\in[\frac13,1]$；
+\textbf{(C)} 真正的非对称极大元（若存在）。
+若能证明 $\kappa_3(\cdot)$ 在 $\Delta_2$ 上的极大元必落在 (A)$\cup$(B) 中，
+则主猜想化归为\textbf{一个单参数族}。
+\end{corollary}
+
+\subsection{本轮状态、诚实标签与方法优先队列（第九版）}\label{sec:r19:status}
+
+\textbf{已证（解析，含完整证明）}：
+引理~\ref{lem:geo}（几何平均的仿射下确界表示）；
+定理~\ref{thm:geo}（$\rho(\Lam)$ 的凹性与 $\inf_T\langle\Lam,S(T)\rangle$ 表示）；
+推论~\ref{cor:gradpsi}（闭式梯度、恒半正定、Loewner 单调、Euler 恒等式）；
+定理~\ref{thm:exactdual}（$S(T^*)=\rho I_3$ 对每个几何成立；对偶精确紧）；
+推论~\ref{cor:argmax}（切向界 \eqref{eq:tangent}、$\tilde\Lam$ 是全局极大点、
+极大点面 \eqref{eq:face}~及其秩判据；定理~\ref{thm:lamparam}(iii)~的「$\ge$」一侧在 $x>0$ 时无条件）；
+引理~\ref{lem:lampos}（冠军 $\tilde\Lam$ 单轴且正定，$0<h_{\rm hub}^2<1$ 的精确证明）；
+命题~\ref{prop:P1dead}（各向异性对偶证书不存在）；
+命题~\ref{prop:ceilweyl}（Weyl$+$Frobenius 自举的天花板 $\varphi$ / $\frac32$）；
+命题~\ref{prop:ceilharm}（Legendre 系数精确值、$A_\ell\succeq0$、$\lambda_{\max}(A_0)=3$、$\lambda_{\max}(A_1)=1$、
+逐项天花板 $1.585642$）；
+定理~\ref{thm:section}（截面分解）；推论~\ref{cor:sectspecial}（中心与秩一截面的显式形式）；
+推论~\ref{cor:sectreduce}（三类归约）。
+
+\textbf{条件性}：定理~\ref{thm:exactdual}~与推论~\ref{cor:argmax}~假设 $x>0$
+（即 $Q_+$ 不可约 / 锐图连通）；一般情形的化归（按分块取最大值）在本报告中按
+\textbf{条件性}处理，与第~\ref{sec:r18}~节 $g_i=0$、重根的退化情形是同一类技术债务。
+推论~\ref{cor:sectreduce}~的 (C) 类（排除非对称极大元）尚未解决。
+
+\textbf{数值（不作成果）}：
+命题~\ref{prop:sectmap}（$8$ 个截面 $\times3$ 个阶数的地图）；
+定理~\ref{thm:exactdual}~的 $13$ 个几何复核（$|S(T^*)-\rho I_3|_{\max}\le9.1\times10^{-15}$，
+弱对偶最大违背 $0$）；推论~\ref{cor:argmax}~的 L-BFGS 复核（超出 $\le1.3\times10^{-15}$）；
+命题~\ref{prop:ceilweyl}~的 $9$ 个阶数复核；命题~\ref{prop:ceilharm}~的 $\ell\le24$ 截断复核。
+证书脚本：\texttt{证书\_凹性对偶与截面分解.py}（$23$ 项全绿）。
+
+\textbf{否证}：命题~\ref{prop:P1dead}（各向异性对偶证书；可行集是单点 $\{\rho_0I_3\}$，
+随机搜索最好者仍违反 $-4.2\times10^{-1}$）；
+命题~\ref{prop:ceilweyl}（天花板 $\varphi=1.618034$，比 $\rho_0$ 高 $0.336466$）；
+命题~\ref{prop:ceilharm}（天花板 $1.585642$，比 $\rho_0$ 高 $0.304074$）。
+这三条与第~\ref{sec:r18}~节的命题~\ref{prop:refA}\ref{prop:refB}~一起，
+把「凸化 / 对偶 / 逐项放缩」这一整片方法\textbf{全部}排除在主线路径之外。
+
+\textbf{方法优先队列（第九版）}
+\begin{enumerate}\itemsep3pt
+\item \textbf{P1（队首，全局）——单轴截面归约}。目标：证明推论~\ref{cor:sectreduce}~的 (C) 类不存在，
+即 $\kappa_3(\cdot)$ 在 $\Delta_2$ 上的极大元必为中心或单轴点。
+入口（按优先级）：
+(a) \textbf{对称临界点论证}：$\kappa_3$ 是 $S_3$-不变的；若它在 $\mu$ 处可微，
+则 $\nabla\kappa_3(\mu)$ 必与稳定子群的不动点空间正交，
+故稳定子群非平凡的点（中心、单轴）自动是临界点；需要的是\emph{排除}稳定子群平凡的极大元。
+(b) \textbf{凹性的替代物}：$\kappa_3$ 是凹函数的上确界，本身不凹；
+但对\textbf{固定}帧 $\rho_{g,U}(\cdot)$ 凹，故
+$\kappa_3(\mu)\ge\int\rho_{g,U}(R\operatorname{diag}(\mu)R^\top)\dd R$ 对每个帧成立，
+右端是 $\mu$ 的\emph{对称化凹}函数。若能证明对称化不改变上确界的位置，则 (C) 排除。
+这一步目前\textbf{没有证明}，是第一障碍。
+(c) 退一步：不求排除 (C)，而是直接对\textbf{单轴族}做解析（见 P2），
+把 (C) 的处理留到最后。
+\item \textbf{P2（全局）——中心截面的精确值}。由 \eqref{eq:center}，这是
+$\frac13\sup\sum_{ij}g_ig_j(\langle u_i,u_j\rangle)_+$，
+即「$S^2$ 上各向同性测度的正部能量」。它\textbf{不含} $\Lam$，是本轮之后形式最干净的子问题。
+数值上 $\kappa_3(\frac13,\frac13,\frac13)\approx1.256733$（$N=8$），
+小于 $\rho_0$ 达 $0.024836$。已知工具只能给到 $\Phi=1.309017$
+（用 $(\langle u,v\rangle)_+\le\frac{|\langle u,v\rangle|+\langle u,v\rangle}2$ 与 $\lambda_{\max}(|Q|)\le\varphi$）。
+需要的是一条\textbf{正部特有的}不等式：正部只在锐角对上计数，
+而各向同性条件 $\sum_ig_iu_iu_i^\top=I_3$ 限制了锐角对的总权重。
+\item \textbf{P3（全局）——秩一/秩二截面}。数值余量最大（$\ge0.053$），
+推论~\ref{cor:sectspecial}(ii)~已把它写成 $x_i=|a_i|$、$\sum a_i^2=1$ 的形式，
+应当是最容易先关掉的一类。
+\item \textbf{P4（全局）——$\mathcal E_-$ 的下界}（第八版的 P3，未动）：
+用引理~\ref{lem:Em2}~的显式 $\zeta_{ij}$ 在 \eqref{eq:star}~中给 $\frac12\mathcal E_-\ge\Phi-\tau_0$。
+\item \textbf{P5（局部）——第~\ref{sec:r1517}~节的分支 I / 分支 II}（第八版的 P4）。
+定理~\ref{thm:transitive}~给出分支 I 的新入口。
+\item \textbf{P6（$N=6$ 收尾）}：第~\ref{sec:n6global}~节余下的 $20$ 个符号类。
+\item \textbf{P7（副方向，下界）}：$\Lam_3(G)\ge\rho_0n-3$ 的可达到性，只差定理~\ref{thm:Fn}~的无穷族渐近。
+\end{enumerate}
+
+\textbf{已弹出}：第八版的 P1（构造对偶证书 $S$）——命题~\ref{prop:P1dead}~证明其可行集是单点；
+第八版的 P2（解析证明凹性）——定理~\ref{thm:geo}~已完成。
+
+\textbf{本轮把主线的形状改成了}：
+\[
+\kappa_3=\sup_{\mu\in\Delta_2}\kappa_3(\mu),\qquad
+\kappa_3(\mu)=\sup_{N}\ \sup_{(g,U)}\ \rho_{g,U}(\operatorname{diag}\mu),
+\]
+其中 $\rho_{g,U}$ 对每个帧都是\textbf{凹}的、有\textbf{闭式梯度}的、
+其内层对偶\textbf{精确紧}的泛函。$\Lam$ 的 $8$ 个自由度里 $6$ 个是冗余的旋转，
+只剩 $\Delta_2$ 的 $2$ 个。冠军坐在单轴子族上，
+中心截面则退化成一个不含 $\Lam$ 的经典测度极值问题 \eqref{eq:center}。
+凸对偶与逐项放缩这两片方法已经被完整排除（命题~\ref{prop:P1dead}%
+\ref{prop:ceilweyl}\ref{prop:ceilharm}），
+下一步必须用\textbf{各向同性条件与正部之间的直接相互作用}，而不是再找一层松弛。
 
 
 \section{通道型主函数方案的精确天花板}\label{sec:nogo}

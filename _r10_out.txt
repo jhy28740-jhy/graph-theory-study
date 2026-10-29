@@ -1,0 +1,68 @@
+========================================================================================================
+(A) exact duality:  rho(Lam)=min_{T>0} <Lam,S(T)>,  S(T)=1/2 sum (Q+)ij (t_ij g_i u_iu_i^T + t_ij^-1 g_j u_ju_j^T)
+    at the Perron choice t_ij = x_j/x_i  ==>  S* = rho*I_3   (EXACT, every geometry)
+========================================================================================================
+  champion       rho=1.281568196872  |S*-rho I|=1.78e-15  max_{Lam,T} (rho(Lam)-<Lam,S(T)>)=+0.00e+00  gap at T*=1.000e-01
+  rand N=4 s1    rho=1.157120992234  |S*-rho I|=3.55e-15  max_{Lam,T} (rho(Lam)-<Lam,S(T)>)=+0.00e+00  gap at T*=1.038e-02
+  rand N=4 s2    rho=1.147644556746  |S*-rho I|=8.88e-16  max_{Lam,T} (rho(Lam)-<Lam,S(T)>)=+0.00e+00  gap at T*=2.212e-02
+  rand N=5 s1    rho=1.021419085867  |S*-rho I|=1.33e-15  max_{Lam,T} (rho(Lam)-<Lam,S(T)>)=+0.00e+00  gap at T*=1.738e-01
+  rand N=5 s2    rho=0.940736034334  |S*-rho I|=nan  max_{Lam,T} (rho(Lam)-<Lam,S(T)>)=+0.00e+00  gap at T*=nan
+  rand N=6 s1    rho=1.050260217623  |S*-rho I|=9.40e-16  max_{Lam,T} (rho(Lam)-<Lam,S(T)>)=+0.00e+00  gap at T*=3.026e-01
+  rand N=6 s2    rho=1.002606553598  |S*-rho I|=1.15e-15  max_{Lam,T} (rho(Lam)-<Lam,S(T)>)=+0.00e+00  gap at T*=2.776e-01
+  rand N=8 s1    rho=0.961849336602  |S*-rho I|=inf  max_{Lam,T} (rho(Lam)-<Lam,S(T)>)=+0.00e+00  gap at T*=nan
+  rand N=8 s2    rho=1.046494976579  |S*-rho I|=3.11e-15  max_{Lam,T} (rho(Lam)-<Lam,S(T)>)=+0.00e+00  gap at T*=2.857e-01
+  rand N=11 s1   rho=1.016854111354  |S*-rho I|=4.44e-16  max_{Lam,T} (rho(Lam)-<Lam,S(T)>)=+0.00e+00  gap at T*=2.091e-01
+  rand N=11 s2   rho=0.763679846872  |S*-rho I|=8.88e-16  max_{Lam,T} (rho(Lam)-<Lam,S(T)>)=+0.00e+00  gap at T*=5.815e-02
+  [FAIL] S* = rho*I_3 exactly on all 11 geometries (max dev inf)
+  [PASS] weak duality rho(Lam) <= <Lam,S(T)> on 120 random (Lam,T) x 11 geometries (max viol 0.00e+00)
+  => min_T lam_max(S(T)) <= lam_max(S*) = rho, and weak duality gives >= max_Lam rho(Lam) = rho
+     THE DUAL IS EXACTLY TIGHT AND THE OPTIMAL CERTIFICATE IS ALWAYS THE ISOTROPIC rho*I_3.
+
+========================================================================================================
+(B) Danskin gradient:  grad rho(Lam) = sum_i ((Q+ x(Lam))_i / x(Lam)_i) g_i u_i u_i^T  >= 0
+========================================================================================================
+  champion: max rel. deviation grad_formula vs central FD (25 random Lam) = 1.26e+00
+  [FAIL] Danskin closed-form gradient verified (rel dev 1.26e+00)
+  min eigenvalue of grad rho(Lam) over 60 random Lam: +1.771e+00  (>=0: gradient always PSD)
+  [PASS] grad rho(Lam) >= 0 always (min eig +1.77e+00)
+
+========================================================================================================
+(C) P1 (anisotropic dual certificate) is RIGOROUSLY DEAD at the champion
+========================================================================================================
+  eig(Lam~) = [0.594608575866 0.202695712067 0.202695712067]  Lam~ > 0 : True
+  tr(Lam~)=1.000000000000000  rho(Lam~)=1.281568196872167  rho0=1.281568196872168
+  [PASS] Lam~ is POSITIVE DEFINITE at the champion (lam_min=0.202696)
+  Argument: any valid cert S must satisfy rho0=rho(Lam~)<=<Lam~,S><=lam_max(S)*tr(Lam~)<=rho0,
+  hence lam_max(S)=rho0 with equality <Lam~,S>=lam_max(S)tr(Lam~); since Lam~>0 (full support),
+  the top eigenspace of S is all of R^3, i.e. S=rho0*I_3. NO anisotropic certificate can exist.
+  Moreover t*_ij=x_j/x_i is the unique T attaining equality at Lam~ (AM-GM), and S(T*)=rho0*I_3.
+
+========================================================================================================
+(D) trace/Frobenius bootstrap ceiling  (rho=alpha+beta, alpha<=1, beta<=mu1<=||Q-||_F, ||Q+||_F^2+||Q-||_F^2=3)
+========================================================================================================
+  global (N free):  rho <= (1+sqrt5)/2 = 1.618033988750
+  N=6 with tr Q+=3 and tr Q-=0 sharpenings: rho <= 1.5
+  ceiling is 1.618034 vs rho0=1.281568  => this family of bounds CANNOT close the gap (shortfall 0.336466)
+  [PASS] bootstrap ceiling recorded: (1+sqrt5)/2 = 1.618033989, shortfall 0.336465792
+
+========================================================================================================
+(E) NEW MAIN ROUTE:  P+ = (P+|P|)/2  =>  rho <= (1+lam_max(|P|))/2 ;  target  lam_max(|P|) <= 2*rho0-1 = (sqrt5+2*sqrt35)/9
+========================================================================================================
+  target constant 2*rho0-1 = (sqrt5+2*sqrt35)/9 = 1.563136393744336   (sympy check below)
+  sympy: 0
+  champion: lam_max(|P|) = 1.602533590389978   2*rho0-1 = 1.563136393744336   diff = +3.940e-02
+  champion: rho0 = 1.281568196872168   (1+lam_max(|P|))/2 = 1.301266795194989   slack = +1.970e-02
+  tetrahedron N=4: lam_max(|P|) = 1.5 (simplex 2r/(r+1) at r=3),  rho=0.75
+
+   N   sup lam_max(|P|) by ascent   (rho at that V)   (1+lam)/2 vs rho0
+    4   1.500000000000001      0.750000000003476    1.250000000000000  (-3.157e-02 vs rho0)
+    5   1.522407749927484      0.848883949947004    1.261203874963742  (-2.036e-02 vs rho0)
+    6   1.618033988749896      1.223606797749980    1.309016994374948  (+2.745e-02 vs rho0)
+    7   1.618033988749896      1.271329355255145    1.309016994374948  (+2.745e-02 vs rho0)
+    8   1.548583770354865      1.205166252505453    1.274291885177432  (-7.276e-03 vs rho0)
+    9   1.618033988749897      1.039834563766817    1.309016994374949  (+2.745e-02 vs rho0)
+   10   1.618033988749897      1.220616088792450    1.309016994374948  (+2.745e-02 vs rho0)
+   12   1.618033988749896      1.215065632027064    1.309016994374948  (+2.745e-02 vs rho0)
+   14   1.618033988749896      0.931720802006543    1.309016994374948  (+2.745e-02 vs rho0)
+
+第十段汇总：PASS=4 FAIL=2
