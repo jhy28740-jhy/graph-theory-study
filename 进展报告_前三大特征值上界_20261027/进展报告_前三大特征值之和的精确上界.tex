@@ -31,7 +31,7 @@
 \title{\bfseries 图的前三大特征值之和的精确上界\\[4pt]
 \large 阶段性进展报告与障碍分析}
 \author{}
-\date{2026 年 10 月 30 日（第八版，增 \S\ref{sec:r20}--\S\ref{sec:r23}：图形式与图无关形式的双向等价、$N\le8$ 穷举与轮族解析解（$\Theta(W_6)=\rho_0$、负尾 $=-\tau_0$ 精确）；$(t)_+$ 的 Legendre--Catalan 展开与谱表示 $\rho=\sum c_\ell W_\ell$、zonal 矩层级封顶于 $\Phi$ 且 $\kappa_3^c<\Phi$（严格）；中心截面的精确恒等式 $\kappa_3^c=\tfrac16\sup[L+A^{*2}]$、锐界 $L\le3\varphi$ 的多项式证书、$m_4$-归约与开口窗口；锥族闭式、单轴主定理 $\max F=\rho_0$（$a^*,z^*$ 的根式与最小多项式）、调和分解 $m_4=\tfrac15+\tfrac19\|H_4\|_F^2$、等纬度精确下界 $m_4\ge\tfrac{19}{81}$ 使开口窗口右端点闭合）}
+\date{2026 年 10 月 30 日（第九版，增 \S\ref{sec:r24}：四阶矩张量的圆柱分块恒等式 $\|A_4\|_F^2=\sum\binom{4}{a,b,c}\mathcal{M}_{abc}^2$ 与两个块的显式完全平方松弛；主插值定理 $9m_4\ge\frac{19}9-\frac73\sigma_u^2+\frac{35}8\sigma_u^4$（把 $m_4\ge\frac15$ 与 $m_4\ge\frac{19}{81}$ 统一为同一条曲线的两端，并由「极点 $+$ 正 $n\ge5$ 边形」闭式族逐点取等）；桥接引理 $\sigma_u^2\le R(A)V$、$R(\sqrt3)=\frac{2+\sqrt3}9$；\textbf{中心截面闭合} $\kappa_3^c\le\rho_0-1.7333\times10^{-4}=1.281394870601$，耦合不等式由猜想升级为定理；任意截面的精确恒等式 $\rho=\frac12[L_w+\alpha_w]$ 与推广到单轴截面的确切障碍）}
 
 \begin{document}
 \maketitle
@@ -8090,6 +8090,614 @@ $m_4\ge\frac15$ 已闭合 $V\ge0.3294$。可用工具：调和分解（命题~\r
 
 复现：\texttt{\_r23a.py}（$9$ 项通过，$1$ 项为上文说明的 $n=3$ 符号枚举对照）、
 \texttt{\_r23b.py}（$6$ 项全绿）、\texttt{\_r23c.py}（$13$ 项全绿）、\texttt{\_r23d.py}（$5$ 项全绿）。
+
+\section{第 24 轮：圆柱分块分解、$\sigma_u^2$--$V$ 桥接与中心截面的闭合}\label{sec:r24}
+
+\subsection{本轮的目标、方法与主定理}\label{sec:r24:intro}
+
+第~23 轮结束时，中心截面上只剩一个开口。定理~\ref{thm:r22red}~把 $\kappa_3^c\le\rho_0$
+归约为耦合不等式 $m_4\ge c_1(A^2-c_0)$；端点 $A^2=3$ 由定理~\ref{thm:r23endpoint}~闭合，
+$A^2\le c_0+\frac1{5c_1}$ 由引理~\ref{lem:r22m4}~的 $m_4\ge\frac15$ 闭合，
+剩下的窗口 $V=6-2A^2\in[0,0.3293856)$ 就是注~\ref{rem:r23next}~里写下的等价形式
+\eqref{eq:r23Dform}。本轮解决它。
+
+\textbf{本轮不使用任何数值优化}（这一点与第~22、23 轮里的库扫描不同：那里的扫描只是探路，
+结论必须由代数给出）。方法是三块互相独立的初等代数：
+
+\begin{enumerate}\itemsep3pt
+\item \textbf{圆柱分块}（引理~\ref{lem:r24mom}）。把四阶矩张量
+$A_4=\sum_im_i\ell_i^{\otimes4}$ 在「以 $A(\mu)$ 的最优轴为第三轴」的正交基下按指标重数分成
+$15$ 块，得到一个精确的平方和恒等式 $\|A_4\|_F^2=\sum_{a+b+c=4}\binom{4}{a,b,c}\mathcal{M}_{abc}^2=9m_4$。
+\item \textbf{两个块的显式松弛}（引理~\ref{lem:r24wblock}、\ref{lem:r24a0block}）。只保留其中 $6$ 块
+（占 $81$ 份权重的 $21$ 份），把每一块写成「一个只依赖纬度方差 $\sigma_u^2$ 的下界 $+$ 一个显式完全平方」。
+相加得到主插值定理~\ref{thm:r24interp}：
+\[
+9m_4\ \ge\ g(\sigma_u^2):=\frac{19}9-\frac73\sigma_u^2+\frac{35}8\sigma_u^4 .
+\]
+这条曲线在 $\sigma_u^2=0$ 处等于 $\frac{19}9$（引理~\ref{lem:r23m4eq}~的等纬度底），
+在 $\sigma_u^2=\frac4{15}$ 处等于 $\frac95$（引理~\ref{lem:r22m4}~的全局底），
+而且它的唯一驻点恰好就是 $\frac4{15}$。也就是说，前两轮各自独立得到的两个下界
+\textbf{是同一条曲线的两个端点}，本轮给出了它们之间的插值，并且这个插值是锐利的
+（命题~\ref{prop:r24sharp}~给出一个闭式取等族）。
+\item \textbf{$\sigma_u^2$--$V$ 桥接}（引理~\ref{lem:r24bridge}）。$\sigma_u^2\le R(A)V$，
+其中 $R(A)=\frac{(1+1/\sqrt3)^2}{\sqrt3(\sqrt3+A)}$ 严格递减，$R(\sqrt3)=\frac{2+\sqrt3}9$。
+这一步把「离等纬度圆有多远」的两种度量（四阶的 $\sigma_u^2$ 与二阶的 $V$）联系起来。
+\end{enumerate}
+
+三块合起来把 \eqref{eq:r23Dform}~变成一个关于 $V$ 的二次式，其首项为正、判别式为负。
+
+\begin{theorem}[中心截面闭合，本轮主定理]\label{thm:r24main}
+对一切满足 \eqref{eq:r22iso}~的 $\mu$，
+\[
+6\rho_0-J(\mu)\ \ge\ 1.039957626350\times10^{-3},
+\]
+从而
+\begin{equation}\label{eq:r24main}
+\kappa_3^c=\kappa_3\Bigl(\tfrac13,\tfrac13,\tfrac13\Bigr)\ \le\ \rho_0-1.733262710583\times10^{-4}
+\ =\ 1.281394870601110\ <\ \rho_0 .
+\end{equation}
+特别地，猜想~\ref{conj:r22coupled}~成立（升级为定理~\ref{thm:r24conj}），
+开口窗口 $V\in[0,0.3293856)$ 完全闭合。
+\end{theorem}
+
+\textbf{诚实说明（本定理不解决全局问题）。}
+冠军 $W_6$ 位于\textbf{单轴}截面 $\mu=(h_{\rm hub}^2,\frac{1-h_{\rm hub}^2}2,\frac{1-h_{\rm hub}^2}2)$
+上并精确取到 $\rho_0$（定理~\ref{thm:r23uni}、推论~\ref{cor:r23champ}），
+所以全局上界 $\kappa_3\le\rho_0$ 如果成立就\textbf{不可能}被改进，
+而它的证明必须处理单轴截面。定理~\ref{thm:r24main}~排除的是整个中心截面，
+即 $\Delta_2$ 中对称性最高的那一点。\S\ref{sec:r24:general}~把恒等式 \eqref{eq:r22id}~推广到
+\textbf{任意}截面（命题~\ref{prop:r24gen}），并精确指出推广受阻的位置：
+目标泛函用的是 $h$-倾斜权重 $w_i=g_ih_i$，而各向同性约束用的是裸权重 $g_i$，
+两者只在中心截面重合。这是下一轮的主攻点。
+
+\subsection{设置：最优轴坐标系与纬度方差}\label{sec:r24:setup}
+
+设 $\mu=\sum_{i=1}^nm_i\delta_{\ell_i}$ 满足 \eqref{eq:r22iso}~（$\sum_im_i=3$、$\sum_im_i\ell_i\ell_i^\top=I_3$），
+并取 $A:=A(\mu)=\max_{\|w\|=1}\sum_im_i|\langle\ell_i,w\rangle|$ 的一个最优轴 $w$（引理~\ref{lem:r22cs}）。记
+\begin{equation}\label{eq:r24setup}
+b_i:=|\langle\ell_i,w\rangle|\in[0,1],\qquad u_i:=b_i^2,\qquad r_i:=\sqrt{1-u_i},
+\end{equation}
+并取标准正交基 $(e_1,e_2,e_3)$ 使 $e_3=w$，于是
+$\ell_i=(r_i\cos\varphi_i,\ r_i\sin\varphi_i,\ \pm b_i)$。
+因为下文只出现\textbf{四次齐次}单项式，$\ell_i$ 的符号（即 $\pm b_i$ 的选取）无关紧要；
+这一点与注~\ref{rem:r22line}~里的讨论一致。定义\textbf{纬度方差}
+\begin{equation}\label{eq:r24sigu}
+\sigma_u^2\ :=\ \sum_im_i\Bigl(u_i-\frac13\Bigr)^2\ \ge\ 0 .
+\end{equation}
+
+\begin{lemma}[三个立刻可用的精确关系]\label{lem:r24basic}
+在 \eqref{eq:r24setup}~的记号下：
+\begin{enumerate}\itemsep2pt
+\item[(i)] $\sum_im_iu_i=w^\top I_3w=1$，故
+$\mathcal{X}:=\sum_im_iu_i^2=\frac13+\sigma_u^2$；
+\item[(ii)] $\sigma_u^2\le\frac23$，等号当且仅当「质量 $1$ 全部在 $u=1$、质量 $2$ 全部在 $u=0$」；
+\item[(iii)] $\sum_im_ib_i=A$，且 $V=6-2A^2$（\eqref{eq:r22Vdef}）。
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) 由 $\sigma_u^2=\sum_im_iu_i^2-\frac23\sum_im_iu_i+\frac19\sum_im_i
+=\mathcal{X}-\frac23+\frac13=\mathcal{X}-\frac13$。
+(ii) 在约束 $\sum_im_iu_i=1$、$0\le u_i\le1$、$\sum_im_i=3$ 下，$\mathcal{X}=\sum_im_iu_i^2$
+的最大值由「把 $u$ 推到端点」达到：取质量 $1$ 于 $u=1$、质量 $2$ 于 $u=0$，得 $\mathcal{X}=1$，
+故 $\sigma_u^2\le1-\frac13=\frac23$。
+(iii) $w$ 是最优轴，故 $A=\sum_im_i|\langle\ell_i,w\rangle|=\sum_im_ib_i$；
+$V=V(w)=\sum_{ij}m_im_j(b_i-b_j)^2=2(\sum_im_i)(\sum_im_ib_i^2)-2(\sum_im_ib_i)^2=6-2A^2$。
+\end{proof}
+
+\begin{definition}[圆柱矩]\label{def:r24mom}
+对 $a+b+c=4$ 的非负整数组 $(a,b,c)$ 定义
+\begin{equation}\label{eq:r24Mabc}
+\mathcal{M}_{abc}:=\sum_im_i\,b_i^{a}\,(r_i\cos\varphi_i)^{b}\,(r_i\sin\varphi_i)^{c}.
+\end{equation}
+即 $\mathcal{M}_{abc}=\sum_im_i\xi_{i3}^a\xi_{i1}^b\xi_{i2}^c$，其中 $\xi_i$ 是 $\ell_i$ 在该基下的坐标；
+\textbf{第一个下标是 $w$-方向的重数}。共 $15$ 个矩，多项式系数
+$\binom{4}{a,b,c}=\frac{4!}{a!b!c!}$ 之和为 $3^4=81$。
+\end{definition}
+
+\subsection{四阶矩张量的圆柱分块恒等式}\label{sec:r24:block}
+
+\begin{lemma}[15 矩恒等式]\label{lem:r24mom}
+记 $A_4=\sum_im_i\ell_i^{\otimes4}$。则
+\begin{equation}\label{eq:r24mom}
+\|A_4\|_F^2\ =\ \sum_{a+b+c=4}\binom{4}{a,b,c}\mathcal{M}_{abc}^2\ =\ 9m_4 .
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+第二个等号：$(A_4)_{ijkl}=\sum_am_a\xi_{ai}\xi_{aj}\xi_{ak}\xi_{al}$，故
+\[
+\|A_4\|_F^2=\sum_{a,b}m_am_b\Bigl(\sum_i\xi_{ai}\xi_{bi}\Bigr)^4
+=\sum_{a,b}m_am_b\langle\ell_a,\ell_b\rangle^4=9m_4
+\]
+（与 $m_4$ 的定义一致，也与命题~\ref{prop:r23harm}~的记号一致）。
+第一个等号：把 $81$ 个指标组 $(i,j,k,l)\in\{1,2,3\}^4$ 按重数模式
+$(a,b,c)=(\#\{i,j,k,l\}=3\},\#\{=1\},\#\{=2\})$ 分类；每个模式恰含 $\binom{4}{a,b,c}$ 个指标组，
+而同一模式内所有指标组对 $\|A_4\|_F^2$ 的贡献都等于
+$\bigl(\sum_am_a\xi_{a3}^a\xi_{a1}^b\xi_{a2}^c\bigr)\bigl(\sum_b m_b\xi_{b3}^a\xi_{b1}^b\xi_{b2}^c\bigr)
+=\mathcal{M}_{abc}^2$。求和即得。
+数值核对：$300$ 个随机各向同性测度上偏差 $\le1.1\times10^{-14}$。
+\end{proof}
+
+\begin{remark}[为什么要丢掉 $60/81$ 的权重]\label{rem:r24drop}
+我们只保留六个模式
+\[
+\mathcal{W}:=\{(4,0,0),(2,2,0),(2,0,2)\},\qquad
+\mathcal{Z}:=\{(0,4,0),(0,2,2),(0,0,4)\},
+\]
+分别称为 \textbf{$w$-块}与 \textbf{$a{=}0$ 块}；其权重之和为 $1+6+6+1+6+1=21$。
+丢掉的九个模式
+\[
+(3,1,0),(3,0,1),(2,1,1),(1,3,0),(1,0,3),(1,2,1),(1,1,2),(0,3,1),(0,1,3)
+\]
+共 $60$ 份权重，全部非负，可以直接扔掉。丢掉 $74\%$ 的权重仍能得到\textbf{锐利}结果，
+原因是这六块恰好携带了三个被各向同性完全决定的量：
+\[
+\mathcal{M}_{400}=\sum_im_iu_i^2=\mathcal{X},\qquad
+\mathcal{M}_{220}+\mathcal{M}_{202}=\sum_im_iu_i(1-u_i)=1-\mathcal{X},
+\]
+\[
+\mathcal{M}_{040}+\mathcal{M}_{004}+2\mathcal{M}_{022}=\sum_im_i(1-u_i)^2=1+\mathcal{X}.
+\]
+换句话说，被保留的块是 \eqref{eq:r24mom}~中唯一能\textbf{只用 $\sigma_u^2$ 表示}的部分。
+\end{remark}
+
+\subsection{两个块的精确松弛恒等式}\label{sec:r24:blocks}
+
+下面两个引理的形式是\textbf{恒等式}而不是不等式：右端多出来的项是完全平方，
+所以本轮不存在任何「先放缩再估计」的步骤，下界与亏格同时给出。
+
+\begin{lemma}[$w$-块]\label{lem:r24wblock}
+\[
+\mathcal{M}_{400}^2+6\mathcal{M}_{220}^2+6\mathcal{M}_{202}^2
+\ =\ \mathcal{X}^2+3(1-\mathcal{X})^2+3\bigl(\mathcal{M}_{220}-\mathcal{M}_{202}\bigr)^2
+\ \ge\ \frac{13}9-\frac{10}3\sigma_u^2+4\sigma_u^4 .
+\]
+\end{lemma}
+
+\begin{proof}
+记 $p:=\mathcal{M}_{220}$、$q:=\mathcal{M}_{202}$。由
+$\mathcal{M}_{220}+\mathcal{M}_{202}=\sum_im_ib_i^2\bigl[(r_i\cos\varphi_i)^2+(r_i\sin\varphi_i)^2\bigr]
+=\sum_im_iu_i(1-u_i)=1-\mathcal{X}$（引理~\ref{lem:r24basic}(i)），
+\[
+6p^2+6q^2-3(p+q)^2-3(p-q)^2=6p^2+6q^2-3(2p^2+2q^2)=0 ,
+\]
+即 $\mathcal{X}^2+6p^2+6q^2=\mathcal{X}^2+3(1-\mathcal{X})^2+3(p-q)^2$。
+再代入 $\mathcal{X}=\frac13+\sigma_u^2$：
+$\mathcal{X}^2+3(1-\mathcal{X})^2=(\frac13+\sigma_u^2)^2+3(\frac23-\sigma_u^2)^2
+=\frac{13}9-\frac{10}3\sigma_u^2+4\sigma_u^4$。
+数值核对：$300$ 个随机测度上恒等式偏差 $\le1.3\times10^{-14}$。
+\end{proof}
+
+\begin{lemma}[$a{=}0$ 块]\label{lem:r24a0block}
+记 $\mathcal{P}:=\mathcal{M}_{040}$、$\mathcal{S}:=\mathcal{M}_{004}$、$\mathcal{Q}:=\mathcal{M}_{022}$、
+$\mathcal{T}:=\frac43+\sigma_u^2$。则 $\mathcal{P}+\mathcal{S}+2\mathcal{Q}=\mathcal{T}$，且
+\[
+\mathcal{P}^2+\mathcal{S}^2+6\mathcal{Q}^2
+\ =\ \frac{3\mathcal{T}^2}8+8\Bigl(\mathcal{Q}-\frac{\mathcal{T}}8\Bigr)^2+\frac{(\mathcal{P}-\mathcal{S})^2}2
+\ =\ \frac23+\sigma_u^2+\frac38\sigma_u^4+8\Bigl(\mathcal{Q}-\frac{\mathcal{T}}8\Bigr)^2+\frac{(\mathcal{P}-\mathcal{S})^2}2 .
+\]
+\end{lemma}
+
+\begin{proof}
+因为 $(r_i\cos\varphi_i)^2+(r_i\sin\varphi_i)^2=r_i^2=1-u_i$，
+\[
+\mathcal{P}+\mathcal{S}+2\mathcal{Q}=\sum_im_i\bigl[(r_i\cos\varphi_i)^2+(r_i\sin\varphi_i)^2\bigr]^2
+=\sum_im_i(1-u_i)^2=3-2+\mathcal{X}=1+\mathcal{X}=\frac43+\sigma_u^2=\mathcal{T}.
+\]
+又 $\mathcal{P}^2+\mathcal{S}^2=\frac12(\mathcal{P}+\mathcal{S})^2+\frac12(\mathcal{P}-\mathcal{S})^2$
+且 $\mathcal{P}+\mathcal{S}=\mathcal{T}-2\mathcal{Q}$，故
+\[
+\mathcal{P}^2+\mathcal{S}^2+6\mathcal{Q}^2
+=\frac12(\mathcal{T}-2\mathcal{Q})^2+6\mathcal{Q}^2+\frac{(\mathcal{P}-\mathcal{S})^2}2
+=8\mathcal{Q}^2-2\mathcal{T}\mathcal{Q}+\frac{\mathcal{T}^2}2+\frac{(\mathcal{P}-\mathcal{S})^2}2 ,
+\]
+而 $8\mathcal{Q}^2-2\mathcal{T}\mathcal{Q}+\frac{\mathcal{T}^2}2
+=8\bigl(\mathcal{Q}-\frac{\mathcal{T}}8\bigr)^2+\frac{3\mathcal{T}^2}8$（配方）。
+最后 $\frac{3\mathcal{T}^2}8=\frac38(\frac43+\sigma_u^2)^2=\frac23+\sigma_u^2+\frac38\sigma_u^4$。
+数值核对：恒等式偏差 $\le6.6\times10^{-15}$，约束 $\mathcal{P}+\mathcal{S}+2\mathcal{Q}=\mathcal{T}$ 偏差 $\le5.8\times10^{-15}$。
+\end{proof}
+
+\begin{remark}[与常用放缩的对比]\label{rem:r24noscale}
+一个更「自然」的做法是对 $\mathcal{P}^2+\mathcal{S}^2+6\mathcal{Q}^2$ 直接用
+Cauchy--Schwarz 加上 $\mathcal{P},\mathcal{S}\ge\frac13$（由 $\sum_im_i(r_i\cos\varphi_i)^2=1$ 与
+$\sum_im_i=3$），这只能给出 $\frac23+\sigma_u^2$ 而\textbf{丢掉 $\frac38\sigma_u^4$}。
+本轮的关键是先把约束 $\mathcal{P}+\mathcal{S}+2\mathcal{Q}=\mathcal{T}$ 用起来、再对 $\mathcal{Q}$ 配方，
+于是 $\mathcal{Q}$ 的最优值 $\frac{\mathcal{T}}8=\frac16+\frac{\sigma_u^2}8$ 自动产生出
+$\frac38\sigma_u^4$ 这一项。定理~\ref{thm:r24centre}~的判别式之所以为负，
+\textbf{完全依赖这个四次项}（见注~\ref{rem:r24slope}）。
+\end{remark}
+
+\subsection{主插值定理}\label{sec:r24:interp}
+
+\begin{theorem}[$m_4$ 关于纬度方差的锐利下界]\label{thm:r24interp}
+设 $\mu$ 满足 \eqref{eq:r22iso}，$w$ 为 $A(\mu)$ 的最优轴，$\sigma_u^2$ 如 \eqref{eq:r24sigu}。则
+\begin{equation}\label{eq:r24interp}
+9m_4\ \ge\ g(\sigma_u^2)\ :=\ \frac{19}9-\frac73\sigma_u^2+\frac{35}8\sigma_u^4 ,
+\end{equation}
+更精确地
+\begin{equation}\label{eq:r24defect}
+9m_4-g(\sigma_u^2)=3(\mathcal{M}_{220}-\mathcal{M}_{202})^2
++8\Bigl(\mathcal{Q}-\frac{\mathcal{T}}8\Bigr)^2+\frac{(\mathcal{P}-\mathcal{S})^2}2
++\sum\nolimits'\binom{4}{a,b,c}\mathcal{M}_{abc}^2\ \ge\ 0 ,
+\end{equation}
+其中 $\sum'$ 遍历注~\ref{rem:r24drop}~里被丢掉的九个模式。
+等价地 $m_4\ge\frac{19}{81}-\frac{7}{27}\sigma_u^2+\frac{35}{72}\sigma_u^4$。
+\end{theorem}
+
+\begin{proof}
+引理~\ref{lem:r24mom}~把 $9m_4$ 写成 $15$ 个非负项之和；
+保留 $w$-块与 $a{=}0$ 块，用引理~\ref{lem:r24wblock}、\ref{lem:r24a0block}~的恒等式，
+\[
+\Bigl(\frac{13}9-\frac{10}3\sigma_u^2+4\sigma_u^4\Bigr)+\Bigl(\frac23+\sigma_u^2+\frac38\sigma_u^4\Bigr)
+=\frac{19}9-\frac73\sigma_u^2+\frac{35}8\sigma_u^4=g(\sigma_u^2),
+\]
+其余项即 \eqref{eq:r24defect}~的右端。数值核对：$300$ 个随机各向同性测度、
+$1190$ 个锥族构型、$70$ 个闭式族构型上，\eqref{eq:r24interp}~无一违反（最大违反 $4.4\times10^{-15}$）。
+\end{proof}
+
+\begin{corollary}[两个已知底是同一条曲线的两个端点]\label{cor:r24floors}
+$g'(t)=-\frac73+\frac{35}4t$，唯一驻点 $t_0=\frac4{15}$；
+$g(0)=\frac{19}9$、$g(\frac4{15})=\frac95$、$g(\frac23)=\frac52$。于是：
+\begin{enumerate}\itemsep2pt
+\item[(i)] $9m_4\ge\frac95$，即 $m_4\ge\frac15$ —— 这就是引理~\ref{lem:r22m4}；
+\item[(ii)] 若 $\sigma_u^2=0$（即所有线等纬度，引理~\ref{lem:r22cs}~的取等类），
+则 $9m_4\ge\frac{19}9$，即 $m_4\ge\frac{19}{81}$ —— 这就是引理~\ref{lem:r23m4eq}~的下界部分；
+\item[(iii)] 在中间提供新信息，例如 $\sigma_u^2=0.1$ 处 $9m_4\ge1.921528$，即 $m_4\ge0.2135031$，
+比 $\frac15$ 高 $0.0135$。
+\end{enumerate}
+\end{corollary}
+
+\begin{remark}\label{rem:r24floors}
+推论~\ref{cor:r24floors}~说明本轮的定理不是「又一个独立下界」：
+它把第~22 轮的全局底 $\frac15$ 与第~23 轮的等纬度底 $\frac{19}{81}$
+统一成同一条四次曲线的两个端点，而驻点位置 $\frac4{15}$ 不是人为选定的，
+是 $g'=0$ 自动给出的。$\frac4{15}$ 这个数的几何含义是：
+正二十面体的纬度方差恰好是 $\frac4{15}$（命题~\ref{prop:r24sharp}）。
+\end{remark}
+
+\begin{proposition}[锐利性：一个闭式取等族]\label{prop:r24sharp}
+对 $\delta\in[0,\frac12]$ 与 $n\ge5$，考虑「极点 $+$ 正 $n$ 边形纬度圈」的线测度：
+\[
+m_{\rm pole}=\delta,\qquad m_j=\frac{3-\delta}n\quad(j=1,\dots,n),\qquad \ell_{\rm pole}=e_3,
+\]
+\[
+\ell_j=\Bigl(\sqrt{1-u_2}\cos\tfrac{2\pi j}n,\ \sqrt{1-u_2}\sin\tfrac{2\pi j}n,\ \sqrt{u_2}\Bigr),
+\]
+其中 $u_2=\frac{1-\delta}{3-\delta}$。则它满足 \eqref{eq:r22iso}，且下列各式\textbf{全部精确}：
+\begin{equation}\label{eq:r24family}
+r_2^2=\frac2{3-\delta},\quad
+A=\delta+\sqrt{(3-\delta)(1-\delta)},\quad
+\sigma_u^2=\frac{4\delta}{3(3-\delta)},\quad
+\mathcal{T}=\frac4{3-\delta},\quad
+\mathcal{Q}=\frac1{2(3-\delta)}=\frac{\mathcal{T}}8 ;
+\end{equation}
+极点轴就是 $A$-最优轴；$\mathcal{M}_{220}=\mathcal{M}_{202}$、$\mathcal{P}=\mathcal{S}$；
+被丢掉的九个矩全为零。因此
+\begin{equation}\label{eq:r24attain}
+9m_4=g(\sigma_u^2)\quad\text{精确成立},
+\end{equation}
+且当 $\delta$ 从 $0$ 增到 $\frac12$ 时 $\sigma_u^2$ 从 $0$ 单调增到 $\frac4{15}$。
+两个端点是已知构型：$\delta=0$ 是等纬度正 $n$ 边形（$m_4=\frac{19}{81}$），
+$\delta=\frac12$ 是\textbf{正二十面体}（$n=5$，$m_i=\frac12$，等角 $\frac1{\sqrt5}$，$m_4=\frac15$）。
+\end{proposition}
+
+\begin{proof}
+各向同性：$\sum_im_i=\delta+(3-\delta)=3$；
+$\sum_im_ib_i^2=\delta+(3-\delta)\frac{1-\delta}{3-\delta}=1$；
+平面内 $\sum_im_ir_i^2=(3-\delta)\frac2{3-\delta}=2$，由正 $n$ 边形的对称性（$n\ge3$）在两轴间平分，
+交叉项为零。$\sigma_u^2$：
+$\delta(1-\frac13)^2+(3-\delta)(\frac{1-\delta}{3-\delta}-\frac13)^2
+=\frac{4\delta}9+(3-\delta)\frac{4\delta^2}{9(3-\delta)^2}=\frac{4\delta}9+\frac{4\delta^2}{9(3-\delta)}
+=\frac{4\delta}{3(3-\delta)}$。
+$A$：极点轴给 $\delta+(3-\delta)\sqrt{u_2}=\delta+\sqrt{(3-\delta)(1-\delta)}$。
+$\mathcal{Q}=\sum_{\rm ring}m_jr_2^4\cos^2\varphi_j\sin^2\varphi_j=(3-\delta)\frac{4}{(3-\delta)^2}\cdot\frac18
+=\frac1{2(3-\delta)}$，而 $\frac{\mathcal{T}}8=\frac18(\frac43+\frac{4\delta}{3(3-\delta)})
+=\frac18\cdot\frac4{3-\delta}=\frac1{2(3-\delta)}$，故 $\mathcal{Q}=\frac{\mathcal{T}}8$。
+$\mathcal{M}_{220}=\mathcal{M}_{202}$、$\mathcal{P}=\mathcal{S}$ 由
+$\sum_j\cos^2\varphi_j=\sum_j\sin^2\varphi_j=\frac n2$ 与
+$\sum_j\cos^4\varphi_j=\sum_j\sin^4\varphi_j=\frac{3n}8$（$n\ge5$）。
+九个被丢弃的矩：极点的 $r=0$，故任何 $(b,c)\ne(0,0)$ 的模式在极点上为零；
+圈上的贡献正比于 $\sum_j\cos^p\varphi_j\sin^q\varphi_j$，其中 $1\le p+q\le4$，
+展开成 $\sum_j e^{\mathrm{i}k\varphi_j}$（$1\le|k|\le4$）后由 $n\ge5$ 时 $n\nmid k$ 而全部消没。
+数值核对：$\delta\in[10^{-5},\frac12]$、$n\in\{5,6,7,8,12\}$ 共 $70$ 个构型上
+$|9m_4-g(\sigma_u^2)|\le3.1\times10^{-15}$，$|A-A_{\rm pole}|\le6.7\times10^{-16}$，
+$\sigma_u^2$ 与闭式 \eqref{eq:r24family}~一致到 $10^{-12}$。
+\end{proof}
+
+\begin{remark}[同一族也取到桥接常数的极限]\label{rem:r24samefam}
+由 \eqref{eq:r24family}，$V=6-2A^2$，故
+$\lim_{\delta\to0}\frac{\sigma_u^2}V=\frac{2+\sqrt3}9=R(\sqrt3)$（符号极限，已核对）。
+也就是说，\textbf{命题~\ref{prop:r24sharp}~的取等族与引理~\ref{lem:r24bridge}~的取等族是同一个族}。
+这有两个后果：（1）整条链条在这一族上逐点取等，
+所以定理~\ref{thm:r24centre}~里的一致余量 $1.040\times10^{-3}$ 是\textbf{本方法的确切天花板}
+（注~\ref{rem:r24ceiling}）；（2）任何改进都必须来自
+\eqref{eq:r23Dform}~里被本轮置零的证书亏格 $D$。
+\end{remark}
+
+\begin{remark}[$\delta>\frac12$ 时最优轴会倾斜（本轮的意外发现）]\label{rem:r24tilt}
+把命题~\ref{prop:r24sharp}~的族延拓到 $\delta>\frac12$，$A$-最优轴\textbf{不再是极点轴}：
+数值上 $\delta=0.7$ 处最优轴与极轴的夹角余弦为 $0.529$，$A=1.636172>A_{\rm pole}=1.530662$；
+$\delta=0.9$ 处为 $0.599$ 与 $1.656107>1.358258$。此时 \eqref{eq:r24interp}~仍成立
+（$\delta=0.7,0.9,0.99$ 处 $9m_4-g$ 分别为 $+0.075,+0.339,+0.549$），但不再取等。
+这说明「极点质量越大、最优轴越贴近极轴」这一直觉是\textbf{错的}：
+当极点质量超过 $\frac12$ 后，把轴往圈的方向倾斜能同时收获极点与圈的贡献。
+这个现象与单轴截面上冠军的结构（一个 hub $+$ 一个 $5$-圈）方向一致，
+下一轮值得单独研究：它可能给出单轴截面上 $A_w$ 的一个非平凡上界。
+\end{remark}
+
+\subsection{$\sigma_u^2$--$V$ 桥接引理}\label{sec:r24:bridge}
+
+\begin{lemma}[桥接]\label{lem:r24bridge}
+设 $A=A(\mu)<\sqrt3$。则
+\begin{equation}\label{eq:r24bridge}
+\sigma_u^2\ \le\ R(A)\,V,\qquad
+R(A):=\frac{\bigl(1+\frac1{\sqrt3}\bigr)^2}{\sqrt3\,(\sqrt3+A)} ,
+\end{equation}
+$R$ 在 $(0,\sqrt3]$ 上严格递减，且
+\begin{equation}\label{eq:r24Rlim}
+R(\sqrt3)=\frac{2+\sqrt3}9=0.4146723119520975\ldots
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+记 $b_0=\frac1{\sqrt3}$。由 $u_i-\frac13=b_i^2-b_0^2=(b_i-b_0)(b_i+b_0)$ 与 $b_i\le1$，
+\[
+\sigma_u^2=\sum_im_i(b_i-b_0)^2(b_i+b_0)^2\ \le\ (1+b_0)^2\sum_im_i(b_i-b_0)^2 .
+\]
+而 $\sum_im_i(b_i-b_0)^2=\sum_im_ib_i^2-2b_0\sum_im_ib_i+b_0^2\sum_im_i
+=1-\frac{2A}{\sqrt3}+1=2-\frac{2A}{\sqrt3}=\frac{2(\sqrt3-A)}{\sqrt3}$
+（引理~\ref{lem:r24basic}(i)(iii)），且 $V=6-2A^2=2(\sqrt3-A)(\sqrt3+A)$。相除：
+\[
+\frac{\sigma_u^2}V\ \le\ \frac{(1+\frac1{\sqrt3})^2\cdot\frac{2(\sqrt3-A)}{\sqrt3}}{2(\sqrt3-A)(\sqrt3+A)}
+\ =\ \frac{(1+\frac1{\sqrt3})^2}{\sqrt3(\sqrt3+A)}=R(A).
+\]
+$A=\sqrt3$ 时 $V=0$ 且 $\sigma_u^2=0$（引理~\ref{lem:r22cs}~的取等类），
+\eqref{eq:r24bridge}~按连续延拓理解为 $\sigma_u^2\le R(\sqrt3)\cdot0=0$，仍然正确。
+$R$ 递减显然；$R(\sqrt3)=\frac{(1+1/\sqrt3)^2}{6}=\frac{(\sqrt3+1)^2}{18}=\frac{4+2\sqrt3}{18}=\frac{2+\sqrt3}9$。
+数值核对：$300$ 个随机测度上 $\sigma_u^2-R(A)V\le0$（最大违反 $0$），
+实测 $\sigma_u^2/V$ 的最大值 $0.386688\le\frac{2+\sqrt3}9$。
+\end{proof}
+
+\begin{corollary}[窗口内的桥接常数]\label{cor:r24Rw}
+由 $A^2=3-\frac V2$，$A$ 随 $V$ 递减，故
+\[
+h(V):=R(A(V))\,V=\frac{(1+1/\sqrt3)^2V}{\sqrt3\,\bigl(\sqrt3+\sqrt{3-V/2}\bigr)}
+\]
+关于 $V$ 严格递增，且 $\sigma_u^2\le h(V)$。在开口窗口 $V\le V_{\rm win}:=2\delta_0=0.3293855700333546$ 内，
+$A\ge A_{\min}:=\sqrt{3-\delta_0}=1.6838370511968557$，故
+\begin{equation}\label{eq:r24Rw}
+\sigma_u^2\ \le\ R_{\rm w}V,\qquad
+R_{\rm w}:=R(A_{\min})=\frac{(1+1/\sqrt3)^2}{\sqrt3(\sqrt3+\sqrt{3-\delta_0})}=0.4205252294509481\ldots ,
+\end{equation}
+且 $h(V_{\rm win})=0.1385149424161078<\frac4{15}$，
+即在整个窗口内 $g$ 处于\textbf{递减支}（这保证代换 $\sigma_u^2\mapsto R_{\rm w}V$ 的方向正确）。
+\end{corollary}
+
+\subsection{中心截面闭合}\label{sec:r24:centre}
+
+\begin{theorem}[中心截面闭合]\label{thm:r24centre}
+定理~\ref{thm:r24main}~成立。精确地：对一切满足 \eqref{eq:r22iso}~的 $\mu$，
+\begin{equation}\label{eq:r24Phi}
+6\rho_0-J(\mu)\ \ge\ \Phi(V)\ \ge\ 1.039957626350013\times10^{-3},
+\end{equation}
+其中 $\Phi$ 由下面的三分支给出。
+\end{theorem}
+
+\begin{proof}
+第一步（把 $J$ 化成三个非负项）。定理~\ref{thm:r223phi}~的多项式证书
+$q(s)=\gamma+\alpha s+\beta s^2\ge\sqrt s$ 给出
+$L\le\sum_{ij}m_im_jq(\langle\ell_i,\ell_j\rangle^2)=9\gamma+3\alpha+9\beta m_4=K_1-Bm_4$
+（$B:=-9\beta=\frac{135\sqrt5-225}{16}=4.8043235601544758$），
+其亏格正是 $D=\sum_{ij}m_im_j[q(\langle\ell_i,\ell_j\rangle^2)-|\langle\ell_i,\ell_j\rangle|]\ge0$，
+故 $L=K_1-Bm_4-D$。再由引理~\ref{lem:r22cs}，$A^2=3-\frac V2$。于是
+\[
+\begin{gathered}
+6\rho_0-J=6\rho_0-L-A^2=B\Bigl(m_4-\frac15\Bigr)+\frac V2+D-\delta_0,\\[2pt]
+\delta_0=3\varphi+3-6\rho_0=\frac{9+7\sqrt5-4\sqrt{35}}6=0.1646927850166773 .
+\end{gathered}
+\]
+这就是 \eqref{eq:r23Dform}（其中用到恒等式 $K_1-\frac B5=3\varphi$，符号核对通过）。
+
+第二步（用本轮的两个新工具下界 $m_4$）。由定理~\ref{thm:r24interp}~与引理~\ref{lem:r22m4}，
+$m_4\ge\max\bigl(\frac19g(\sigma_u^2),\frac15\bigr)$；由推论~\ref{cor:r24Rw}，$\sigma_u^2\le h(V)$。
+因为 $g\ge\frac95$ 恒成立（推论~\ref{cor:r24floors}(i)）且 $g$ 在 $[0,\frac4{15}]$ 上递减，
+\[
+\Phi(V):=B\Bigl(\frac19g\bigl(\min\{h(V),\tfrac4{15}\}\bigr)-\frac15\Bigr)+\frac V2-\delta_0
+\ \le\ 6\rho_0-J(\mu)\qquad(D\ge0\ \text{已置零}).
+\]
+
+第三步（三分支的一致下界）。令
+$m_1:=1.039957626350013\times10^{-3}$，$V_2:=2(\delta_0+m_1)=0.331465485286055$。
+\begin{itemize}\itemsep3pt
+\item \textbf{分支 1：$0\le V\le V_{\rm win}$。}此时 $h(V)\le R_{\rm w}V\le h(V_{\rm win})<\frac4{15}$，
+$g$ 递减，故 $\frac19g(h(V))\ge\frac19g(R_{\rm w}V)$，
+$\Phi(V)\ge c_2V^2+c_1V+c_0=:Q(V)$，其中
+\[
+c_2=\frac{35B}{72}R_{\rm w}^2=0.4130017665424713,\qquad
+c_1=\frac12-\frac{7B}{27}R_{\rm w}=-0.0237916619419962,
+\]
+\[
+c_0=B\Bigl(\frac{19}{81}-\frac15\Bigr)-\delta_0=\frac{14B}{405}-\delta_0=0.0013825973096503 .
+\]
+$c_2>0$，判别式 $\Delta=c_1^2-4c_2c_0=-1.718017347247482\times10^{-3}<0$（$50$ 位高精度核对同号），
+故 $Q$ 恒正，最小值在顶点 $V^*=-\frac{c_1}{2c_2}=0.0288033416190601\in(0,V_{\rm win})$ 处，
+$Q(V^*)=-\frac{\Delta}{4c_2}=m_1$。
+\item \textbf{分支 2：$V_{\rm win}\le V\le V_2$。}此时 $h(V)\le h(V_2)=0.1394022027631684<\frac4{15}$，
+$g$ 递减，故 $\frac19g(h(V))\ge\frac19g(h(V_2))$，且 $\frac V2-\delta_0\ge\frac{V_{\rm win}}2-\delta_0=0$，
+\[
+\Phi(V)\ \ge\ B\Bigl(\frac19g(h(V_2))-\frac15\Bigr)\ =\ 0.037825275611143\ >\ m_1 .
+\]
+\item \textbf{分支 3：$V\ge V_2$。}只用 $m_4\ge\frac15$（即定理~\ref{thm:r22red}）：
+$\Phi(V)\ge\frac V2-\delta_0\ge\frac{V_2}2-\delta_0=m_1$。
+\end{itemize}
+三分支合并得 $\Phi(V)\ge m_1$ 对一切 $V\ge0$，即 \eqref{eq:r24Phi}。
+除以 $6$ 得 $\kappa_3^c\le\rho_0-\frac{m_1}6=\rho_0-1.733262710583346\times10^{-4}=1.281394870601110$。
+\end{proof}
+
+\begin{theorem}[猜想~\ref{conj:r22coupled}~成立]\label{thm:r24conj}
+对一切满足 \eqref{eq:r22iso}~的 $\mu$，$m_4\ge c_1(A(\mu)^2-c_0)$，
+且等号\textbf{不可能}达到：更强的 \eqref{eq:r24Phi}~成立。
+因此开口窗口 $A^2\in(2.8353072,3]$（即 $V\in[0,0.3293856)$）完全闭合，
+定理~\ref{thm:r22red}~的归约成为\textbf{无条件}的：$\kappa_3^c\le\rho_0$。
+\end{theorem}
+
+\begin{proof}
+定理~\ref{thm:r24centre}~的证明第一、二步已给出
+$B(m_4-\frac15)+\frac V2+D\ge\delta_0+\Phi(V)$，而 $\Phi(V)>0$，故严格成立；
+$m_4\ge c_1(A^2-c_0)$ 是它的等价改写（定理~\ref{thm:r22red}）。
+\end{proof}
+
+\begin{remark}[为什么线性插值一定不够]\label{rem:r24slope}
+注~\ref{rem:r23next}~曾建议证明 $m_4\ge\frac{19}{81}-cV$，并算出临界斜率 $c\le0.104073$。
+本轮的链条给出的\textbf{有效线性斜率}是 $\frac7{27}R_{\rm w}=0.1090256>0.104073$，
+即纯线性插值\textbf{必然失败}（超出 $4.8\%$）。
+把它救回来的是引理~\ref{lem:r24a0block}~产生的四次项：
+$\frac{35}{72}R_{\rm w}^2V^2=0.0859635V^2$，乘上 $B$ 后正是 $c_2$。
+没有它，判别式将为正，窗口关不上。这解释了为什么必须走
+「四阶矩张量分块」而不是「一维插值不等式」的路线。
+\end{remark}
+
+\begin{remark}[方法的天花板与真实余量的差距]\label{rem:r24ceiling}
+由注~\ref{rem:r24samefam}，命题~\ref{prop:r24sharp}~的闭式族同时取到
+定理~\ref{thm:r24interp}~与引理~\ref{lem:r24bridge}~的等号，
+所以一致余量 $m_1=1.040\times10^{-3}$ 是\textbf{本轮方法的确切上限}，
+不可能通过更精细的估计（在同一条链上）提高。
+另一方面，\S\ref{sec:r22:num}~的数值上确界是 $\sup J=7.595950307218$，
+真实余量 $6\rho_0-\sup J=9.346\times10^{-2}$，比 $m_1$ 大约 $90$ 倍。
+两者之间的差距全部来自被本轮丢弃的信息：
+九个被丢掉的矩（注~\ref{rem:r24drop}）、证书亏格 $D$（在等纬度圈上 $D\approx0.205$，
+是实际余量的主要来源）、以及桥接引理中 $(b_i+b_0)^2\le(1+b_0)^2$ 这一步。
+换言之：中心截面虽然\textbf{已经闭合}，但闭合得很「薄」，
+若要把 $\kappa_3^c$ 的\textbf{精确值}（猜测为 $1.265991717870$）证出来，需要新的想法。
+\end{remark}
+
+\subsection{任意截面的精确恒等式与推广的真实障碍}\label{sec:r24:general}
+
+定理~\ref{thm:r22id}~只对中心截面给出了 $\kappa_3^c=\frac16\sup[L+A^2]$ 这种「不含特征值」的形式。
+本轮把它推广到\textbf{任意}截面，从而为下一轮（单轴截面）准备好框架。
+
+\begin{proposition}[任意截面的精确恒等式]\label{prop:r24gen}
+设 $(g,U)$ 满足 \eqref{eq:frame18}，$\Lam\succeq0$、$\tr\Lam=1$，
+$h_i=\sqrt{u_i^\top\Lam u_i}$，并记 \textbf{$h$-倾斜权重}
+\begin{equation}\label{eq:r24w}
+w_i:=g_ih_i,\qquad
+L_w:=\sum_{ij}w_iw_j|\langle u_i,u_j\rangle|,\qquad
+\alpha_w:=\Bigl\|\sum_iw_iu_i\Bigr\|^2,\qquad
+A_w:=\max_{\|z\|=1}\sum_iw_i|\langle u_i,z\rangle| .
+\end{equation}
+则
+\begin{align}
+\rho_{g,U}(\Lam)&=\tfrac12\bigl[L_w+\alpha_w\bigr],\label{eq:r24gen1}\\
+\kappa_3(\mu)&=\tfrac12\sup_{(g,U)\ \text{满足}\ \eqref{eq:frame18},\ \mu(\Lam)=\mu}\bigl[L_w+A_w^2\bigr],
+\label{eq:r24gen2}
+\end{align}
+且下列两个约束\textbf{精确}成立：
+\begin{equation}\label{eq:r24gen3}
+\sum_iw_ih_i=\tr\Lam=1,\qquad
+\sum_i\frac{w_i}{h_i}u_iu_i^\top=I_3\quad\Bigl(\text{即 }g_i=\frac{w_i}{h_i}\Bigr).
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+$x_i=\sqrt{g_i}h_i$，$(Q_+)_{ij}=\sqrt{g_ig_j}(\langle u_i,u_j\rangle)_+$，故
+$\rho_{g,U}(\Lam)=x^\top Q_+x=\sum_{ij}g_ig_jh_ih_j(\langle u_i,u_j\rangle)_+
+=\sum_{ij}w_iw_j(\langle u_i,u_j\rangle)_+$。
+用 $(t)_+=\frac12(t+|t|)$ 与 $\sum_{ij}w_iw_j\langle u_i,u_j\rangle=\|\sum_iw_iu_i\|^2$ 得
+\eqref{eq:r24gen1}。
+\eqref{eq:r24gen2}：把 $u_i$ 换成 $-u_i$ 不改变 $g_iu_iu_i^\top$、$h_i$、$L_w$，
+只改变 $\alpha_w$，故对上确界而言可以把 $\alpha_w$ 换成符号最优值
+$\max_\varepsilon\|\sum_i\varepsilon_iw_iu_i\|^2=A_w^2$（与定理~\ref{thm:r22id}~证明第二步同理）。
+\eqref{eq:r24gen3}：$\sum_iw_ih_i=\sum_ig_ih_i^2=\sum_ig_iu_i^\top\Lam u_i=\tr(\Lam\sum_ig_iu_iu_i^\top)=\tr\Lam$；
+第二式即 \eqref{eq:frame18}~用 $g_i=w_i/h_i$ 改写。
+数值核对：四类截面（中心、单轴 $a\in[0.3,1]$、秩一、一般）各约 $100$ 个随机帧上，
+\eqref{eq:r24gen1}~最大相对偏差 $4.9\times10^{-16}$、\eqref{eq:r24gen2}~为 $6.3\times10^{-16}$、
+\eqref{eq:r24gen3}~为 $2.6\times10^{-15}$ 与 $8.9\times10^{-16}$，且 $\rho_{g,U}(\Lam)\le\lambda_{\max}(Q_+)$。
+\end{proof}
+
+\begin{remark}[推广受阻的确切位置]\label{rem:r24obs}
+中心截面之所以能用本轮的分块机器，是因为 $h_i\equiv\frac1{\sqrt3}$ 是常数，
+于是 $w_i=g_i/\sqrt3$ 与 $g_i$ \textbf{成正比}，目标权重与各向同性权重是同一套（差一个常数），
+从而 $m_i:=g_i$ 同时满足 $\sum_im_i=3$ 与 $\sum_im_i\ell_i\ell_i^\top=I_3$，
+引理~\ref{lem:r24mom}--\ref{lem:r24a0block}~里用到的三个量
+$\sum_im_iu_i$、$\sum_im_iu_i^2$、$\sum_im_i(1-u_i)^2$ 全都被这两个约束决定。
+单轴截面 $\Lam=bI_3+(a-b)ee^\top$ 下 $h_i=\sqrt{b+(a-b)\langle u_i,e\rangle^2}$ 随 $i$ 变化，
+两套权重\textbf{分离}：数值上（冠军截面 $a=h_{\rm hub}^2=0.594608575866$）
+$\bigl\|\sum_ig_iu_iu_i^\top-I_3\bigr\|_{\max}=8.9\times10^{-16}$ 而
+$\bigl\|\sum_iw_iu_iu_i^\top-I_3\bigr\|_{\max}=4.94\times10^{-1}$。
+所以本轮的分块恒等式\textbf{不能直接搬运}。
+\eqref{eq:r24gen3}~指出了仍然精确成立的东西：
+各向同性对\textbf{商权重} $w_i/h_i$ 成立，而 $\sum_iw_ih_i=1$ 把两套权重耦合起来。
+下一轮的任务就是把引理~\ref{lem:r24mom}~改写成关于「$w$-加权矩 $+$ $h$-倾斜约束」的版本。
+一条可能的入口：对固定的 $h$，令 $\tilde m_i:=3w_i/h_i\cdot\frac1{\sum_jw_j/h_j}$
+（注意 $\sum_iw_i/h_i=3$，故 $\tilde m_i=w_i/h_i$ 本身就已归一），
+则 $\sum_i\tilde m_iu_iu_i^\top=I_3$，$\tilde m$ 是一个合法的中心截面测度，
+而目标里的权重是 $w_i=\tilde m_ih_i$。于是单轴截面的问题变成：
+\textbf{在一个中心截面测度上，用 $h$-倾斜的权重重新计算 $L$ 与 $A$}。
+这把「新截面」化归为「旧截面上的加权变形」，是有希望的方向，但倾斜破坏了
+$\sum\tilde m_iu_i=1$ 这一本轮所有矩计算的基石。
+\end{remark}
+
+\subsection{本轮状态、诚实标签与方法优先队列（第十一版）}\label{sec:r24:status}
+
+\begin{center}\small
+\begin{tabular}{lll}
+\toprule
+结论 & 状态 & 位置\\
+\midrule
+15 矩恒等式 $\|A_4\|_F^2=\sum\binom{4}{a,b,c}\mathcal{M}_{abc}^2=9m_4$ & \textbf{已证（精确）} & 引理~\ref{lem:r24mom}\\
+$\mathcal{X}=\frac13+\sigma_u^2$、$\sigma_u^2\le\frac23$、$V=6-2A^2$ & \textbf{已证} & 引理~\ref{lem:r24basic}\\
+$w$-块的显式松弛恒等式 & \textbf{已证（精确）} & 引理~\ref{lem:r24wblock}\\
+$a{=}0$ 块的显式松弛恒等式（含 $\frac38\sigma_u^4$） & \textbf{已证（精确）} & 引理~\ref{lem:r24a0block}\\
+主插值定理 $9m_4\ge g(\sigma_u^2)$ & \textbf{已证} & 定理~\ref{thm:r24interp}\\
+它同时含 $m_4\ge\frac15$ 与 $m_4\ge\frac{19}{81}$ 为两端点 & \textbf{已证（精确）} & 推论~\ref{cor:r24floors}\\
+取等族（极点 $+$ 正 $n\ge5$ 边形，$\delta\in[0,\frac12]$）的闭式 & \textbf{已证（精确）} & 命题~\ref{prop:r24sharp}\\
+$\delta=\frac12$ 即正二十面体、$\delta=0$ 即等纬度正多边形 & \textbf{已证（精确）} & 命题~\ref{prop:r24sharp}\\
+$\delta>\frac12$ 时最优轴倾斜 & \textbf{数值}（现象明确，未证） & 注~\ref{rem:r24tilt}\\
+桥接 $\sigma_u^2\le R(A)V$、$R(\sqrt3)=\frac{2+\sqrt3}9$ & \textbf{已证（精确）} & 引理~\ref{lem:r24bridge}\\
+窗口内 $R(A)\le R_{\rm w}=0.4205252295$、$h$ 递增 & \textbf{已证} & 推论~\ref{cor:r24Rw}\\
+$K_1-\frac B5=3\varphi$、$\delta_0=\frac{9+7\sqrt5-4\sqrt{35}}6$ & \textbf{已证（精确代数）} & 定理~\ref{thm:r24centre}~证明\\
+判别式 $\Delta=-1.718\times10^{-3}<0$、三分支一致余量 $m_1$ & \textbf{已证（$50$ 位核对）} & 定理~\ref{thm:r24centre}\\
+\textbf{中心截面闭合} $\kappa_3^c\le\rho_0-1.7333\times10^{-4}$ & \textbf{已证} & 定理~\ref{thm:r24main}\\
+耦合不等式（原猜想~\ref{conj:r22coupled}） & \textbf{已证}（升级为定理） & 定理~\ref{thm:r24conj}\\
+一致余量 $1.040\times10^{-3}$ 是本方法的确切天花板 & \textbf{已证（取等族）} & 注~\ref{rem:r24ceiling}\\
+任意截面恒等式 $\rho=\frac12[L_w+\alpha_w]$ & \textbf{已证} & 命题~\ref{prop:r24gen}\\
+$\kappa_3^c$ 的精确值 $=1.265991717870$ & \textbf{数值}（第 22、23 轮） & \S\ref{sec:r22:num}\\
+全局 $\kappa_3\le\rho_0$（单轴截面） & \textbf{未证}（新 P1） & 注~\ref{rem:r24obs}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{方法优先队列（第十一版，数学优先）}：
+\begin{enumerate}\itemsep2pt
+\item[\textbf{P1}] \textbf{单轴截面的加权分块}。按注~\ref{rem:r24obs}，把引理~\ref{lem:r24mom}~改写成
+「$h$-倾斜权重」版本：对 $\Lam=bI_3+(a-b)ee^\top$，$h_i^2=b+(a-b)\langle u_i,e\rangle^2$，
+目标是 $\frac12[L_w+A_w^2]\le\rho_0$。已知冠军在此截面上\textbf{取等}（定理~\ref{thm:r23uni}），
+所以任何松弛都必须精确到能容纳 $W_6$；这既是难点也是校验标准
+（新工具若在 $W_6$ 上不取等，就一定不够用）。
+可尝试的入口：（a）以 $e$ 为第三轴做同样的圆柱分块，但用
+$\sum_i(w_i/h_i)u_iu_i^\top=I_3$ 与 $\sum_iw_ih_i=1$ 替换 $\sum m_i=3$、$\sum m_iu_i=1$；
+（b）注~\ref{rem:r24tilt}~的轴倾斜现象给出 $A_w$ 的非平凡上界的线索；
+（c）把 $\frac12[L_w+\alpha_w]$ 对 $a$ 做凸性/单调性分析（$\rho(\Lam)$ 的凹性，定理~\ref{thm:geo}）。
+\item[\textbf{P2}] \textbf{锥最优性}（沿用第十版 P2）。中心与单轴两个截面的数值极值元都是
+「极点 $+$ 正 $n$ 边形」，而命题~\ref{prop:r24sharp}~说明这一族在中心截面上\textbf{就是}取等族。
+若能证明极值元必为锥，两个截面都化为一维/二维微积分。
+入口：$\mathbf{RP}^2$ 上的 Steiner／Riesz 重排，或极值元一阶条件强制 $n$ 重对称。
+\item[\textbf{P3}] \textbf{提高中心截面的余量}。注~\ref{rem:r24ceiling}~指出三处可回收的信息：
+九个被丢弃的矩、证书亏格 $D$、桥接中的 $(b_i+b_0)^2\le(1+b_0)^2$。
+按取等族的结构，$D$ 是唯一能带来量级改进的一项（等纬度圈上 $D\approx0.205$）。
+\item[\textbf{P4}] \textbf{等纬度圆上 $L\le\frac92$}（沿用第十版 P3）。障碍仍是矩松弛封顶在 $6$
+（注~\ref{rem:r23Lsq}），需要余正定信息；入口：$k\le5$ 的精确分类或 Fej\'er--Riesz 型证书。
+\item[\textbf{副}] \textbf{下界方向}：把 $\Theta(W_6)=\rho_0$（定理~\ref{thm:r20w6}）推广成
+「轮族的极值性定理」，作为下界一侧的独立结果。
+\end{enumerate}
+
+复现：\texttt{\_r24b.py}（$53$ 项全绿：常数代数、两个块的精确松弛恒等式、15 矩恒等式、桥接、
+三分支一致余量、$300$ 随机测度 $+$ 闭式族 $+$ $1190$ 锥族构型 $+$ 正二十面体 $+$ 等角四线 $+$ 等纬度正多边形）、
+\texttt{\_r24c.py}（$7$ 项全绿：任意截面恒等式与两套权重的分离）、
+\texttt{\_r24d.py}（$16$ 项全绿：取等族的闭式、符号极限 $\lim\sigma_u^2/V=\frac{2+\sqrt3}9$、
+不依赖网格的三分支一致余量、$50$ 位高精度复核）；
+合并证书见报告目录下 \texttt{证书\_中心截面闭合与圆柱分块.py}（$70$ 项全绿，输出 \texttt{\_cert\_r24\_out.txt}，约 $20$ 秒）。
 
 \section{通道型主函数方案的精确天花板}\label{sec:nogo}
 
