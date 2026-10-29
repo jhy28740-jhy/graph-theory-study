@@ -1,0 +1,44 @@
+========================================================================================================
+(H-fix) u-KKT 的正确形式：nu_i=0，Lam~ u_i = (h_i/rho) W_i，Lam~ = (1/rho) sum_{acute} g_i g_j h_i h_j u_i u_j^T
+========================================================================================================
+   冠军: |Lam u_i-(h_i/rho)W_i|=5.55e-16 |u'Lam u-h^2|=5.00e-16 |tr Lam-1|=2.22e-16 |R15-3|=7.22e-16 反对称=5.55e-17 lam_min=0.202695712
+   eig(Lam~)= [0.5946085759 0.2026957121 0.2026957121]   |Lam~-lstsq fit|=5.00e-16
+  [PASS] 冠军: 显式公式 Lam~=(1/rho)sum_{acute} g_ig_jh_ih_j u_iu_j^T 满足全部四条 KKT 关系 (max=7.22e-16)
+  [PASS] 冠军: Lam~ >= 0, lam_min=0.202695712
+  [PASS] tr(Lam~)=1 是【恒等式】(=sum g_i h_i^2)，不依赖临界性
+
+========================================================================================================
+(J) 精化 (STAR')：Psi(Lam) = tr(Lam Xi)+alpha(Lam)-1-tau0-(1/2)E_-(h(Lam)) <= 0 ?
+========================================================================================================
+  --- 冠军几何 ---
+   max Psi = -0.000000000000  (需 <=0)   argmax eig(Lam)=[0.59460856 0.20269574 0.2026957 ]
+   在 KKT 点 Lam~ 处 Psi = -8.882e-16
+  [PASS] (STAR') 在冠军几何上成立：max_Lam Psi = -9.439e-16 <= 0
+  --- Stiefel 极大元几何 (N=7..12) 与随机构型 ---
+   max N=6        rho-rho0=-6.55e-02  max Psi=-6.547646e-02  Psi(Lam~_KKT)=-6.548e-02  E_-(h_true)/2=2.925e-03
+   max N=7        rho-rho0=-2.69e-02  max Psi=-2.692578e-02  Psi(Lam~_KKT)=-2.693e-02  E_-(h_true)/2=6.380e-04
+   max N=8        rho-rho0=-2.69e-02  max Psi=-2.692580e-02  Psi(Lam~_KKT)=-2.693e-02  E_-(h_true)/2=6.383e-04
+   max N=9        rho-rho0=-2.86e-11  max Psi=-2.924465e-11  Psi(Lam~_KKT)=-2.922e-11  E_-(h_true)/2=2.870e-13
+   max N=10       rho-rho0=-2.69e-02  max Psi=-2.692596e-02  Psi(Lam~_KKT)=-2.693e-02  E_-(h_true)/2=6.392e-04
+   max N=12       rho-rho0=-4.22e-13  max Psi=-4.319231e-13  Psi(Lam~_KKT)=-4.310e-13  E_-(h_true)/2=4.242e-15
+   rand N=6 t=0   rho-rho0=-1.78e-01  max Psi=-1.787511e-01  Psi(Lam~_KKT)=-2.008e-01  E_-(h_true)/2=5.706e-02
+   rand N=11 t=1  rho-rho0=-3.65e-01  max Psi=-4.261140e-01  Psi(Lam~_KKT)=-4.377e-01  E_-(h_true)/2=1.682e-01
+   rand N=8 t=2   rho-rho0=-2.10e-01  max Psi=-2.195655e-01  Psi(Lam~_KKT)=-2.266e-01  E_-(h_true)/2=1.368e-01
+   rand N=6 t=3   rho-rho0=-2.44e-01  max Psi=-2.546562e-01  Psi(Lam~_KKT)=-2.688e-01  E_-(h_true)/2=1.625e-01
+   rand N=11 t=4  rho-rho0=-3.90e-01  max Psi=-4.636328e-01  Psi(Lam~_KKT)=-4.753e-01  E_-(h_true)/2=1.858e-01
+   rand N=8 t=5   rho-rho0=-4.12e-01  max Psi=-4.734019e-01  Psi(Lam~_KKT)=-4.855e-01  E_-(h_true)/2=1.717e-01
+   rand N=11 t=6  rho-rho0=-2.04e-01  max Psi=-2.313837e-01  Psi(Lam~_KKT)=-2.436e-01  E_-(h_true)/2=9.617e-02
+   rand N=12 t=7  rho-rho0=-3.06e-01  max Psi=-3.460617e-01  Psi(Lam~_KKT)=-3.652e-01  E_-(h_true)/2=1.382e-01
+   rand N=6 t=8   rho-rho0=-3.96e-01  max Psi=-4.265111e-01  Psi(Lam~_KKT)=+nan  E_-(h_true)/2=4.524e-01
+   rand N=8 t=9   rho-rho0=-1.83e-01  max Psi=-1.841596e-01  Psi(Lam~_KKT)=-1.890e-01  E_-(h_true)/2=3.955e-02
+   rand N=8 t=10  rho-rho0=-1.84e-01  max Psi=-1.891643e-01  Psi(Lam~_KKT)=-2.011e-01  E_-(h_true)/2=1.100e-01
+   rand N=8 t=11  rho-rho0=-1.44e-01  max Psi=-1.529038e-01  Psi(Lam~_KKT)=-1.552e-01  E_-(h_true)/2=3.351e-02
+   rand N=10 t=12 rho-rho0=-2.84e-01  max Psi=-3.135261e-01  Psi(Lam~_KKT)=-3.243e-01  E_-(h_true)/2=1.414e-01
+   rand N=12 t=13 rho-rho0=-8.76e-02  max Psi=-8.890867e-02  Psi(Lam~_KKT)=-8.963e-02  E_-(h_true)/2=4.560e-03
+   rand N=8 t=14  rho-rho0=-2.03e-01  max Psi=-2.082187e-01  Psi(Lam~_KKT)=-2.124e-01  E_-(h_true)/2=6.418e-02
+   rand N=8 t=15  rho-rho0=-1.96e-01  max Psi=-1.970065e-01  Psi(Lam~_KKT)=-2.024e-01  E_-(h_true)/2=5.733e-03
+   rand N=9 t=16  rho-rho0=-2.58e-01  max Psi=-2.637340e-01  Psi(Lam~_KKT)=-2.676e-01  E_-(h_true)/2=1.030e-01
+   rand N=6 t=17  rho-rho0=-2.93e-01  max Psi=-2.993008e-01  Psi(Lam~_KKT)=-3.180e-01  E_-(h_true)/2=2.207e-01
+  [PASS] (STAR') 在 24 个几何(极大元+随机)上全部成立，max Psi = -4.319e-13
+
+第五段汇总：PASS=5  FAIL=0

@@ -24,13 +24,14 @@
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
 \newcommand{\one}{\mathbf{1}}
 \newcommand{\STW}{\textup{[STW26]}}
 
 \title{\bfseries 图的前三大特征值之和的精确上界\\[4pt]
 \large 阶段性进展报告与障碍分析}
 \author{}
-\date{2026 年 10 月 29 日（第六版，增 \S\ref{sec:bipglobal}：完全二部掩码的\textbf{全局}闭合 $\Lam_3\le\frac54$ 对一切 $N$；$N=5$ 层无条件；$N=6$ 例外 $22\to20$）}
+\date{2026 年 10 月 29 日（第七版，增 \S\ref{sec:rowvar}：行方差机制与天花板 $L(N)$；$Z_5$-等变秩三投影的完全分类与 $\rho_0$ 的闭式导出；$\Phi(Q)=\lambda_{\max}(Q_+)$ 的凸性与谱盒归约；旧队首 P1 被精确有理证书否证）}
 
 \begin{document}
 \maketitle
@@ -188,6 +189,75 @@ $156$ 类中已闭合 $137$ 类，剩 $19$ 类（命题~\ref{prop:tab19} 给出�
 $\sum_t\frac1{1-A_t}=k-1$ 与 $\operatorname{inertia}(R)=(1,k-1)$ 已证（引理~\ref{lem:mpsec}），
 但 $k\ge3$ 时 Weyl 的指标平移变成 $k-1$、尾和记账退化，$K_{2,2,2}$ 与 $K_{1,2,3}$ 的闭合仍\textbf{未证}
 （数值 $\sup\Lam_3\le1.2524<\rho_0$，余量 $2.9\times10^{-2}$；注~\ref{rmk:mpopen} 精确指出了断点所在）。
+
+第七，汇报第 12 轮的工作（第~\ref{sec:rowvar} 节）。这一轮有一条坏消息、一个新机制和一条主定理。
+\textbf{坏消息}（否证）：第六版的队首 P1——「证 $N=6$ 的 $17$ 个无支配点类不是腔掩码」——被一个\emph{精确有理}证书推翻：
+$Q=\frac12(I_6-M)$（$M$ 为完美匹配的置换矩阵）属于 $\mathcal P_3(6)$ 且 $1\{Q\ge0\}=I_6+A(K_{2,2,2})$，
+故 $K_{2,2,2}$ \emph{是}腔掩码（命题~\ref{prop:chamberdead}）；进一步数值扫描显示 $19$ 个未闭合类\textbf{全部}是腔掩码
+（符号违背量 $\le5\times10^{-19}$），即「纯几何不存在性」这条路线能关闭的类数是 $0$。
+\textbf{新机制}（已证）：我们找到一组作用在\emph{每一行}上的恒等式与不等式——
+行能量恒等式 $a_i+r_i=g_i(1-g_i)$、Perron 行方程 $s_i=(\rho-g_i)x_i$、三角形恒等式 \eqref{eq:tri}
+（引理~\ref{lem:rowid}），以及由它们导出的四条 Cauchy--Schwarz 不等式 $[f],[g],[h_1],[h_2]$（命题~\ref{prop:fourcs}）。
+冠军处这四条\textbf{同时取等}（残差 $\le10^{-16}$），只有五个锥行的 $[f]$ 留有 $1.8\times10^{-3}$ 的余量。
+由此得到一个四参数族 $(g,\pi,r,w)$ 上的松弛 REL，$\kappa_3(N)\le\mathrm{REL}(N)$ 无条件成立，
+并且在\emph{双均匀层}（$g_i\equiv3/N$、$\pi_i\equiv1/N$）上 REL 可以精确求解：
+\textbf{定理~\ref{thm:LN}}：$\rho\le L(N)=\frac{2+\kappa_N}{1+\kappa_N}$，$\kappa_N=\sqrt{\frac{3(N-1)}{N-3}}$。
+这一个闭式同时重导了两条已知结果——$\lim_{N\to\infty}L(N)=\frac{1+\sqrt3}2$ 是 Mohar 的常数，
+$L(6)=\frac{3+\sqrt5}4=\Phi$ 是 \STW\ 的常数——并且 $L(4)=\frac54$ \textbf{取等}，给出 $\kappa_3(4)=\frac54$ 的第二条证明。
+命题~\ref{prop:fracdeg} 解释了它为什么不能更好：取等\emph{强制}钝角图正则、度为 $n^*=N\kappa_N/(3(1+\kappa_N))$，
+并强制 $Q$ 两值，故 $n^*$ 必须是整数；$n^*\in\Z$ 当且仅当 $\frac{3(N-1)}{N-3}$ 是 $\Q$ 中的平方，
+这只对一支\emph{无穷但极稀疏}的 Pell 例外集 $\mathcal E=\{4,9,28,99,364,1353,5044,18819,\dots\}$ 发生
+（$n^*(6)=\frac{5-\sqrt5}2$ 无理）。所以 $\Phi-\rho_0$ 这个缺口的本质是\textbf{度的整性}，不是 Cauchy--Schwarz 太粗。
+定理~\ref{thm:unattain} 进一步处理例外集：可达性会强制钝角图是\emph{强正则图}（或等团不交并），
+而强正则图的重数整性对 $\mathcal E$ 中 $9\le N\le7.1\times10^8$ 的每一个成员都失败，
+故 \textbf{$L(N)$ 对一切 $5\le N\le7.1\times10^8$ 不可达，$N=4$ 是唯一取等的阶数}。
+（附带一条自我修正：命题~\ref{prop:fracdeg} 的第一版断言「$n^*$ 对一切 $N\ge5$ 无理」，
+$n^*(9)=2$ 是反例，见注~\ref{rmk:fracdegfix}。）$N=6$ 的整数化阶梯（命题~\ref{prop:ladder6}）把双均匀层压到 $\frac{13}{10}$，
+再用两值刚性（命题~\ref{prop:twovalue}，符号谱计算）排除其可达性。
+\textbf{主定理}（已证）：$N=6$ 的\emph{全部} $Z_5$-等变秩三投影恰好构成一条一维代数弧（引理~\ref{lem:z5class}），
+弧上的 Perron 特征值有闭式 $\rho(s)=\frac{6+\sqrt5-2s+\sqrt{P(s)}}{10}$，
+它在弧内部有唯一临界点 $s^*=\frac{9+4\sqrt5-\sqrt{35}}{18}$，而 $\rho(s^*)=\frac{9+\sqrt5+2\sqrt{35}}{18}=\rho_0$
+\textbf{精确相等}（定理~\ref{thm:conefam}）。于是 $\rho_0$ 的地位从「一个被验证过的下界见证」升级为
+「一条显式代数弧的唯一极大值」。意外的副产品是：定理~\ref{thm:zonal} 的见证——正二十面体等角线系——
+就在\emph{同一条弧}上，位于 $s=\frac12$，值 $\frac{5+\sqrt5+\sqrt{30}}{10}=1.271329355$，
+即本报告两个最重要的六阶对象是同一条弧的中点与顶点。
+另外两条一般性结果：$\Phi(Q)=\lambda_{\max}(Q_+)$ 在全体对称矩阵上是\textbf{凸}的，
+故 $\operatorname{conv}(\mathcal P_3(N))=\mathcal S_N$ 且秩三约束在求上确界时无损（定理~\ref{thm:convex}）；
+余秩一层的符号分类给出 $\kappa_2(3)=\frac87$ 的一条三行新证明（推论~\ref{cor:k23}）。
+现状的量化阶梯是
+$1.366025$（Mohar）$>1.309017$（$\Phi=$ REL 自由上确界）$>1.300000$（$\frac{13}{10}=$ 加整性）
+$>1.284781$（加 $Z_5$ 对称）$>1.281568$（$\rho_0$）；
+剩余的 $3.2\times10^{-3}$ 已定位到 REL 丢掉的秩三信息（\eqref{eq:tri} 与四点 Gram 行列式），见第~\ref{sec:diag} 小节。
+
+第八，汇报第 13--14 轮的工作（第~\ref{sec:harm} 节）。这一轮换了两次语言，目的都是让阶数 $N$ 从问题里消失。
+\textbf{调和恒等式}（定理~\ref{thm:harmonic}，已证）：$\rho H=3$、$H=\sum_ic_i/(G_+c)_i$，
+于是主猜想等价于\emph{下界} $H\ge3/\rho_0=2.340882059435$（猜想~\ref{conj:Hform}）；
+$\Psi\le\sqrt3$ 同时获得精确缺陷式 $3-\Psi^2=\sum_{i<j}c_ic_j(p_i-p_j)^2/(p_ip_j)$（定理~\ref{thm:psi}），
+Mohar 常数 $\frac12(1+\sqrt3)$ 得到两个新证明，「永不取等」的最短理由是：取等会强制 $|Q|$ 秩一，
+而秩一与 $\rank Q=3$ 矛盾（定理~\ref{thm:projmohar}）。
+\textbf{$N$-自由重构}（定理~\ref{thm:nfree}，已证）：$\kappa_3$ 等于球面紧框架测度类
+$\{\mu\ge0:\mu(S^2)=3,\ \int uu^\top\dd\mu=I_3\}$ 上核为 $(\langle u,u'\rangle)_+$ 的二次型上确界；
+该集合凸紧，其极端点由 Carathéodory 至多 $6$ 个原子（命题~\ref{prop:extreme}）。
+\textbf{二阶变分公式}（定理~\ref{thm:secondvar}，已证，$45$ 组数值核验到 $4\times10^{-8}$）：
+沿矩核直线 $\rho''=2\rho\sum_{k\ge2}\frac{\rho_k}{\rho-\rho_k}\langle a,w_k\rangle^2$，
+故 $Q_+\succeq0$ 即凸（推论~\ref{cor:psdconvex}）、内部极值必须满足 $\nu_-(Q_+)\ge N-6$（推论~\ref{cor:nuneg}），
+并得到\emph{条件性}六原子归约定理（定理~\ref{thm:atomreduce}）：沿线段恒有 $Q_+\succeq0$ 时，
+任意 $N\ge7$ 构型可化约到 $\le6$ 原子而不减小 $\rho$，主猜想遂\textbf{完全化归}为 $N=6$ 的有限问题
+（这正是注~\ref{rmk:ladderinfo}(2) 一直缺少方法的那一步）。
+数值上：$96/96$ 条矩核线段的最大值在端点、$18$ 条杀原子链全部单调，
+冠军外加 $1\sim6$ 个原子后归约精确回到 $\rho_0$（差 $\le2\times10^{-15}$）；
+$\kappa_3(N)=\rho_0$ 的数值验证由 $N=14$ 推进到 $N=20$。
+\textbf{族 $F_n$}（定理~\ref{thm:Fn}，已证）：枢纽 $+$ 正 $n$ 边形族可逐 $n$ 精确求解，
+$n=3,4,5,6$ 的峰值为 $\frac65$、$\frac{9+4\sqrt6}{15}$、$\rho_0$、$\frac{13+4\sqrt{11}}{21}$，
+对应驻点 $\frac45$、$\frac{24-\sqrt6}{30}$、$\frac{45+4\sqrt5-\sqrt{35}}{90}$、$\frac{30-\sqrt{11}}{63}$；
+$n\ge7$（数值）与 $n\to\infty$（极限 $1.248749$）均低于 $\rho_0$，
+故\textbf{族内峰值唯一在 $n=5$、即 $N=6$}（推论~\ref{cor:Fnpeak}）。
+$\rho_0$ 由此第一次有了不依赖数值搜索的解析来源，冠军的质量、夹角与全谱都有闭式（推论~\ref{cor:champclosed}），
+而 $F_5$ 与第 12 轮的 $Z_5$-等变弧是同一条曲线（$s=5g-2$，注~\ref{rmk:F5arc}）。
+诚实交代：无条件版归约仍是\textbf{猜想}；$\lambda_{\max}(|Q|)\le2\rho_0-1$ 被冠军\textbf{否证}
+（$1.602534>1.563136$），挫折界差 $1.17\times10^{-2}$，
+REL2 的 $1.314006274436$ 是伪值（$\rho H=3.078911\ne3$，被调和恒等式当场识破），
+REL4 的数值求解不可靠（$N=4$ 只得 $1.249796<\frac54$）已放弃。
 
 \medskip
 \noindent\textbf{关键词：} 图特征值；Ky Fan 范数；投影常数；Gegenbauer 多项式；图极限；极值谱图论
@@ -3003,12 +3073,22 @@ $F(\Sigma_0)=\rho_0$，定理~\ref{thm:champglobal}），这也正是冠军需�
 \end{equation}
 ——即\textbf{不需要}对它们逐个求 $F$ 的上界，只需要证明「不存在正权自洽见证」。
 而引理~\ref{lem:bdryrig} 已经把这件事推进了一大步：$19$ 类中\textbf{$17$ 类没有支配点}（最大度 $\le4$），
-对这 $17$ 类，任何自洽见证都必须是正权的，故「$\notin\mathcal S_6^{\mathrm{int}}$」\emph{等价}于
-「$\Sigma$ 完全不是腔掩码」，即引理~\ref{lem:chamber} 的纯几何陈述
+对这 $17$ 类，任何自洽见证都必须是正权的，故「$\Sigma$ 完全不是腔掩码」\emph{蕴含}「$\Sigma\notin\mathcal S_6^{\mathrm{int}}$」
+（\textbf{反方向不成立}：$K_{2,2,2}$ 是腔掩码却与 $F$ 无关，见命题~\ref{prop:chamberdead}），即引理~\ref{lem:chamber} 的纯几何陈述
 \begin{equation}\label{eq:chamber6}
 \Sigma\ \ne\ 1\{Q\ge0\}\qquad\text{对一切 }Q\in\mathcal P_3(6),
 \end{equation}
 一个 $\mathrm{Gr}(3,6)$（$9$ 维）上的问题，与 $F$ 的极大化点无关。
+
+\smallskip
+\noindent\fbox{\parbox{0.95\linewidth}{\small\textbf{第 12 轮更新（否证）}：
+上面这条路线已经\textbf{死掉}。命题~\ref{prop:chamberdead} 给出一个精确有理证书
+$Q=\frac12(I_6-M)\in\mathcal P_3(6)$，使 $1\{Q\ge0\}=I_6+A(K_{2,2,2})$，
+即 \eqref{eq:chamber6} 对 $\Sigma=I+A(K_{2,2,2})$ 为假；数值扫描进一步显示
+$19$ 个未闭合类\textbf{全部}是腔掩码（符号违背量 $\le5\times10^{-19}$）。
+因此 \eqref{eq:chamber6} 不能作为 \eqref{eq:s6int} 的后件使用，
+必须换成第~\ref{sec:chamberdead} 小节末尾指出的\emph{耦合}条件
+$\Sigma=1\{\Pi_3(D_p^{1/2}\Sigma D_p^{1/2})\ge0\}$。详见第~\ref{sec:rowvar} 节。}}
 剩下 $2$ 类有支配点（\texttt{E\}\^{}G}$=K_{1,2,3}$ 与 \texttt{El\{G}），
 引理~\ref{lem:bdryrig} 只能排除其\emph{边界}自洽见证，需要单独处理；
 其中 $K_{1,2,3}$ 是完全多部，引理~\ref{lem:mpsec} 的秩 $k$ 长期方程正是为它准备的。
@@ -3065,14 +3145,18 @@ $N=5$ 层与\emph{一切}完全二部掩码（任意阶数）都已无条件关�
 \end{enumerate}
 \end{theorem}
 
-\subsection{更新后的优先队列}\label{sec:pq6}
+\subsection{更新后的优先队列（第六版，\textbf{已被第~\ref{sec:pq7} 小节取代}）}\label{sec:pq6}
+
+\textbf{阅读提示（第 12 轮）}：本小节保留原文以记录思路演化，但\textbf{不再有效}。
+下面的 P1 已被命题~\ref{prop:chamberdead} 否证（$19/19$ 类都是腔掩码），
+P6 已被引理~\ref{lem:slope1} 吸收为与主猜想逐字等价。现行队列见第~\ref{sec:pq7} 小节。
 
 按「期望收益 $\times$ 成功概率 $/$ 代价」排序，已同步写入 \texttt{研究方法优先级协议.md}。
 本轮最大的变化是：\textbf{P1 不再是「证一条上界不等式」，而是「证一条几何不存在性陈述」}，
 因为推论~\ref{cor:n5uncond} 已经把 $\kappa_3(5)$ 关掉、定理~\ref{thm:bipglobal} 已经把全部完全二部掩码关掉。
 
 \begin{itemize}[leftmargin=1.6em,itemsep=3pt]
-\item \textbf{P1（队首）—— $N=6$ 的 $17$ 个无支配点类：证 \eqref{eq:chamber6}，即 $\Sigma\ne1\{Q\ge0\}$ 对一切 $Q\in\mathcal P_3(6)$。}
+\item \textbf{P1（队首，\textcolor{red}{第 12 轮已否证并弹出}）—— $N=6$ 的 $17$ 个无支配点类：证 \eqref{eq:chamber6}，即 $\Sigma\ne1\{Q\ge0\}$ 对一切 $Q\in\mathcal P_3(6)$。\ \textcolor{red}{【$19/19$ 类都是腔掩码，命题~\ref{prop:chamberdead}】}}
 一旦成立，引理~\ref{lem:bdryrig} 给出 $\Sigma\notin\mathcal S_6^{\mathrm{int}}$，
 再由 (iv) 的归约 $\kappa_3(6)\le\rho_0$ \textbf{立即}得证。
 \emph{为什么现在排第一}：(a) 它不含 $F$、不含权、不含极大化，是一个关于秩三投影正部符号模式的\emph{纯}陈述；
@@ -3120,7 +3204,2985 @@ $\sum_{t}\frac1{1-A_t}=k-1$ 的根之和（Viète 型），目标是 $\sum_{i\ge
 $N\ge7$ 的符号模式数以 $\binom{N}{2}$ 的划分个数增长，逐阶路线在原则上不可能收工。
 \end{remark}
 
-\section{本轮新结果：通道型主函数方案的精确天花板}\label{sec:nogo}
+
+\section{本轮新结果（第 12 轮）：正部的行方差机制、天花板 $L(N)$，与 $Z_5$-等变弧的完全分类}\label{sec:rowvar}
+
+本节是第 12 轮工作的完整记录。它有一条\textbf{坏消息}（旧队首 P1 的「腔掩码不存在性」路线被一个精确有理证书否证，
+第~\ref{sec:chamberdead} 小节），和一条\textbf{好消息}（我们找到了一个全新的不等式机制——「行方差机制」——
+它同时把 Mohar 的 $\frac{1+\sqrt3}2$ 与 \STW\ 的 $\Phi=\frac{3+\sqrt5}4$ 重导为\emph{同一个}闭式 $L(N)$ 在
+$N\to\infty$ 与 $N=6$ 处的取值，并且在冠军处\emph{四重取等}；第~\ref{sec:rowid}--\ref{sec:symlayer} 小节）。
+坏消息的意义在于：它说明「纯几何的存在性/不存在性」这条路上已经没有任何可关闭的类；
+好消息的意义在于：它把主线缺口从「一条越来越难的不等式」换成了「一个可以逐条加约束的有限维松弛」，
+并且\textbf{把缺口定量地压缩到 $3.2\times10^{-3}$}（在 $Z_5$-对称层内）。
+
+\subsection{旧队首 P1 被否证：$K_{2,2,2}$ 是腔掩码（精确有理证书）}\label{sec:chamberdead}
+
+注~\ref{rmk:tab19read}(iv) 把「$\Sigma\notin\mathcal S_6^{\mathrm{int}}$」\emph{等价}化为
+\eqref{eq:chamber6}（$\Sigma\ne1\{Q\ge0\}$ 对一切 $Q\in\mathcal P_3(6)$）。这个等价化是\textbf{错的}。
+
+\begin{proposition}[腔掩码否证，已证（$\Q$ 上精确）]\label{prop:chamberdead}
+设 $M$ 为 $K_6$ 中某个完美匹配的置换矩阵（三对不相邻的 $2$-循环），令
+\[
+Q=\tfrac12\,(I_6-M)\ \in\ \Q^{6\times6}.
+\]
+则 $Q^\top=Q$、$Q^2=Q$、$\tr Q=3$（故 $Q\in\mathcal P_3(6)$，特征值为 $1,1,1,0,0,0$），
+$q_{ii}=\frac12>0$，匹配对上 $q_{ij}=-\frac12<0$，其余位置 $q_{ij}=0$。于是
+\[
+1\{Q\ge0\}=J_6-M=I_6+A(K_{2,2,2}),
+\]
+即 \texttt{EznW}$\,=K_{2,2,2}$ \textbf{是}腔掩码。因此 \eqref{eq:chamber6} 对 $\Sigma=I+A(K_{2,2,2})$ 为\textbf{假}。
+\end{proposition}
+
+\begin{proof}
+$M$ 是对合（$M^2=I_6$）且 $\tr M=0$，特征值为 $+1$（三重）与 $-1$（三重）。
+故 $Q=\frac12(I_6-M)$ 的特征值为 $\frac12(1-1)=0$（三重）与 $\frac12(1+1)=1$（三重），
+$Q^2=\frac14(I-2M+M^2)=\frac14(2I-2M)=Q$，$\tr Q=3$。符号模式由构造直接读出；
+$K_6$ 去掉一个完美匹配正是完全三部图 $K_{2,2,2}$。全部计算在 $\Q$ 上进行，无任何数值成分。$\square$
+\end{proof}
+
+\begin{remark}[这条否证的真实后果]\label{rmk:chamberdead}
+(i) 我们把 $N=6$ 的 $19$ 个未闭合类逐个做了数值腔搜索，结果是
+\textbf{$19/19$ 都是腔掩码}（每个类都找到 $Q\in\mathcal P_3(6)$ 使 $1\{Q\ge0\}=\Sigma$，
+符号违背量 $\le5\times10^{-19}$，即精确到机器精度）。所以
+\textbf{「证明不是腔掩码」这条几何路线关闭的类数是 $0$}，旧 P1 应当弹出。
+
+(ii) 引理~\ref{lem:bdryrig} 本身没有错，错的是对它的读法：对无支配点的类，
+「$\Sigma$ 是腔掩码」只是「$\Sigma\in\mathcal S_6^{\mathrm{int}}$」的\textbf{必要条件}，不是充分条件。
+真正缺的约束是\emph{耦合}条件
+\[
+\Sigma=1\bigl\{\Pi_3(D_p^{1/2}\Sigma D_p^{1/2})\ge0\bigr\},
+\]
+即掩码必须是\textbf{它自己}（带某个正权 $p$）的前三特征投影的符号模式。
+命题~\ref{prop:chamberdead} 的 $Q=\frac12(I_6-M)$ 恰好说明了二者之差：
+它的 $1\{Q\ge0\}=I+A(K_{2,2,2})$，但 $Q_+=\frac12I_6$ 的 Perron 向量是退化的、
+$\rho(Q_+)=\frac12$，与 $F(I+A(K_{2,2,2}))=\kappa_3(5)=\frac{9+4\sqrt6}{15}$ 毫无关系。
+「是腔掩码」完全不涉及自洽性，这就是它太弱的原因。
+
+(iii) 因此注~\ref{rmk:tab19read}(iv) 中的「等价」必须降级为「必要条件」；
+\eqref{eq:s6int} 仍然是正确的蕴含（$\Leftarrow$ 方向不受影响），但它的\emph{后件}不再能用
+引理~\ref{lem:chamber} 的纯几何陈述来建立。$N=6$ 的 $19$ 类回到「必须使用自洽耦合」的状态。
+\end{remark}
+
+\subsection{本节记号与三条新恒等式}\label{sec:rowid}
+
+\textbf{记号（本节专用，与 \S\ref{sec:nogo} 的框架行记号分离）。}
+设 $Q=(q_{ij})\in\mathcal P_3(N)$，即 $Q^2=Q=Q^\top$、$\tr Q=3$（故 $0\preceq Q\preceq I$），
+$x\ge0$、$\|x\|=1$、$Q_+x=\rho x$（$\rho=\rho(Q_+)=\lambda_{\max}(Q_+)$）。
+沿用命题~\ref{prop:perronrig} 的 $\alpha=x^\top Qx$、$\beta=x^\top Q_-x$、$d=Q_-x$、$\delta=\|d\|^2$、$\ell=x^\top|Q|x$。
+新增：
+\[
+g_i:=q_{ii}=c_i^2\quad(\text{故 }0\le g_i\le1,\ \textstyle\sum_ig_i=3),\qquad
+\pi_i:=x_i^2\quad(\textstyle\sum_i\pi_i=1),
+\]
+\[
+O:=\{(i,j):i\ne j,\ q_{ij}<0\},\qquad A:=\{(i,j):i\ne j,\ q_{ij}>0\},
+\]
+\[
+a_i:=\!\!\sum_{j\ne i}\!\bigl((q_{ij})_+\bigr)^2,\quad
+r_i:=\!\!\sum_{j\ne i}\!\bigl((q_{ij})_-\bigr)^2,\quad
+v_i:=\!\!\sum_{(i,j)\in A}\!\!\pi_j,\quad
+w_i:=\!\!\sum_{(i,j)\in O}\!\!\pi_j,
+\]
+于是 $v_i+w_i+\pi_i=1$（$\pi_i$ 自己那一项既不属于 $A$ 也不属于 $O$）。再记
+\[
+s_i:=\sum_{j\ne i}(q_{ij})_+x_j\quad(\text{正部行和}),\qquad
+S_O:=\sum_ir_i,\qquad W_O:=\sum_i\pi_iw_i,\qquad R:=\sum_ir_iw_i .
+\]
+
+\begin{lemma}[三条新恒等式，已证]\label{lem:rowid}
+在上述记号下，对\emph{任意} $Q\in\mathcal P_3(N)$ 与\emph{任意}满足 $Q_+x=\rho x$ 的 $x\ge0$、$\|x\|=1$：
+\begin{enumerate}[label=(\roman*),leftmargin=2.2em]
+\item \textbf{行能量恒等式}：$\displaystyle a_i+r_i=\sum_{j\ne i}q_{ij}^2=g_i(1-g_i)$；
+特别地 $\sum_{ij}q_{ij}^2=3$、$\sum_i(a_i+r_i)=3-\sigma$，其中 $\sigma:=\sum_ig_i^2$。
+\item \textbf{Perron 行方程}：$s_i=(\rho-g_i)x_i$；等价地 $\rho=g_i+s_i/x_i$（$x_i>0$ 时）。
+\item \textbf{Hadamard 平方与三次迹}：$Q\circ Q\succeq0$、$(Q\circ Q)\one=g$、$\one^\top(Q\circ Q)\one=3$，
+故 $\lambda_{\max}(Q\circ Q)\le\max_ig_i\le1$；又 $\tr Q^3=\tr Q=3$ 给出\textbf{三角形恒等式}
+\begin{equation}\label{eq:tri}
+\sum_{i<j<k}q_{ij}q_{jk}q_{ki}\ =\ \tfrac16\Bigl(3-3\sigma+2\sum_ig_i^3\Bigr).
+\end{equation}
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) $(Q^2)_{ii}=\sum_jq_{ij}^2=Q_{ii}=g_i$，而 $q_{ii}^2=g_i^2$，故 $\sum_{j\ne i}q_{ij}^2=g_i-g_i^2$；
+又 $q_{ij}^2=((q_{ij})_+)^2+((q_{ij})_-)^2$ 逐项成立。对 $i$ 求和并用 $\sum g_i=3$ 得第二句。
+
+(ii) $Q_+x=\rho x$ 的第 $i$ 行是 $(Q_+)_{ii}x_i+\sum_{j\ne i}(q_{ij})_+x_j=\rho x_i$；
+因 $g_i\ge0$ 有 $(Q_+)_{ii}=g_i$，故 $s_i=(\rho-g_i)x_i$。
+
+(iii) $Q\succeq0\Rightarrow Q\circ Q\succeq0$（Schur 乘积定理）。
+$(Q\circ Q)\one$ 的第 $i$ 分量就是 $\sum_jq_{ij}^2=g_i$，即 (i)；
+再与 $\one$ 作内积得 $\one^\top(Q\circ Q)\one=\sum_ig_i=3$。
+非负矩阵的谱半径介于最小行和与最大行和之间，故 $\lambda_{\max}(Q\circ Q)\le\max_ig_i$。
+最后，$\tr Q^3=\sum_{ijk}q_{ij}q_{jk}q_{ki}$ 按「下标重合个数」分三类：
+三个都相同给 $\sum_ig_i^3$；恰有两个相同给 $3\sum_{i\ne j}g_iq_{ij}^2=3\sum_ig_i\cdot g_i(1-g_i)=3\sigma-3\sum_ig_i^3$（用 (i)）；
+三个互不相同给 $6\sum_{i<j<k}q_{ij}q_{jk}q_{ki}$。三者之和 $=\tr Q^3=\tr Q=3$，整理即 \eqref{eq:tri}。$\square$
+\end{proof}
+
+\begin{remark}\label{rmk:rowidread}
+(i) 引理~\ref{lem:rowid}(i) 是\textbf{秩三投影的全部「逐行」内容}：它说每一行的能量 $g_i(1-g_i)$
+被正部与负部按 $a_i:r_i$ 精确瓜分。第~\ref{sec:stwanat} 节的 \STW\ 解剖只用到了它的求和版
+$\sum_{ij}q_{ij}^2=3$（即 Mohar 界里的那个 $\sqrt3$）；\textbf{逐行}使用它是本轮的新想法。
+
+(ii) (ii) 把「$\rho$ 有多大」直接翻译成「每一行的正部行和有多大」，
+于是对正部行和做一次 Cauchy--Schwarz 就得到 $\rho$ 的\emph{逐行}上界——这是第~\ref{sec:relax} 小节的发动机。
+
+(iii) \eqref{eq:tri} 是一条\textbf{尚未使用}的强约束：它说全部三角形乘积之和由对角线单独决定。
+冠军处 $\sigma=1.533964$、$\sum g_i^3=0.796424$，故右端 $=-0.0015073$（一个很小的负数），
+这说明钝角三角形与锐角三角形几乎完全抵消。把它翻译成符号模式的组合约束是 P1$'$ 的入口之一。
+\end{remark}
+
+
+\subsection{四条 Cauchy--Schwarz 不等式，与冠军的「四重取等」}\label{sec:fourcs}
+
+\begin{proposition}[行方差不等式组，已证]\label{prop:fourcs}
+记号同第~\ref{sec:rowid} 小节。则下列四条\textbf{无条件}成立（不需要自洽性）：
+\begin{align}
+\text{\textbf{[f]}}\quad &(\rho-g_i)^2\,\pi_i\ \le\ a_iv_i
+&&\text{（每一行，正部行和的 CS）}\label{eq:f}\\
+\text{\textbf{[g]}}\quad &\beta^2\ \le\ S_OW_O
+&&\text{（负部的整体 CS）}\label{eq:g}\\
+\text{\textbf{[h1]}}\quad &\beta\ \le\ \sum_i\sqrt{\pi_ir_iw_i}
+&&\text{（负部的逐行 CS）}\label{eq:h1}\\
+\text{\textbf{[h2]}}\quad &\alpha(1-\alpha)+\beta^2\ \le\ R
+&&\text{（命题~\ref{prop:perronrig}(c) $+$ 逐行 CS）}\label{eq:h2}
+\end{align}
+\end{proposition}
+
+\begin{proof}
+\eqref{eq:f}：由引理~\ref{lem:rowid}(ii) 与 Cauchy--Schwarz，
+$s_i^2=\Bigl(\sum_{(i,j)\in A}(q_{ij})_+x_j\Bigr)^2\le
+\Bigl(\sum_{(i,j)\in A}\bigl((q_{ij})_+\bigr)^2\Bigr)\Bigl(\sum_{(i,j)\in A}x_j^2\Bigr)=a_iv_i$，
+而 $s_i=(\rho-g_i)x_i$。
+
+\eqref{eq:g}：$\beta=\sum_{(i,j)\in O}(-q_{ij})x_ix_j\le
+\sqrt{\bigl(\sum_Oq_{ij}^2\bigr)\bigl(\sum_Ox_i^2x_j^2\bigr)}$，
+其中 $\sum_Oq_{ij}^2=\sum_ir_i=S_O$（每个非对角元被有序对数一次），$\sum_O\pi_i\pi_j=\sum_i\pi_iw_i=W_O$。
+
+\eqref{eq:h1}：$d_i=(Q_-x)_i=\sum_{(i,j)\in O}(-q_{ij})x_j\le\sqrt{r_iw_i}$，
+故 $\beta=\langle x,d\rangle=\sum_ix_id_i\le\sum_i\sqrt{\pi_ir_iw_i}$。
+
+\eqref{eq:h2}：$\delta=\|d\|^2=\sum_id_i^2\le\sum_ir_iw_i=R$，代入命题~\ref{prop:perronrig}(c) 的
+$\delta=\beta^2+\alpha(1-\alpha)$。$\square$
+\end{proof}
+
+\begin{remark}[冠军是这四条的\textbf{四重取等}点]\label{rmk:quadtight}
+对冠军 $Q^*\in\mathcal P_3(6)$（$K_1\vee C_5$ 核心、权 $w^*=(a^*,b^*\times5)$、定理~\ref{thm:champ}），
+数值到 $10^{-16}$：
+\begin{center}\small
+\begin{tabular}{lrr}
+\toprule
+量 & 值 & 说明\\
+\midrule
+$g_{\rm hub},g_{\rm cone}$ & $0.331767104061,\ 0.533646579188$ & 和为 $3$\\
+$\pi_{\rm hub},\pi_{\rm cone}$ & $0.197271565265,\ 0.160545686947$ & 和为 $1$\\
+$a_{\rm hub},a_{\rm cone}$ & $0.221697692724,\ 0.176698138437$ & \\
+$r_{\rm hub},r_{\rm cone}$ & $0,\ 0.072169769272$ & 枢纽行无钝角\\
+$v_{\rm hub},v_{\rm cone}$ & $0.802728434735,\ 0.518362939159$ & \\
+$w_{\rm hub},w_{\rm cone}$ & $0,\ 0.321091373894$ & \\
+\midrule
+\eqref{eq:f} 枢纽行 & $0.177963041865=0.177963041865$ & \textbf{取等}（残差 $2.8\times10^{-17}$）\\
+\eqref{eq:f} 锥顶点行 & $0.089807129438\le0.091593766384$ & 缺口 $1.787\times10^{-3}$\\
+\eqref{eq:g} & $\beta^2=0.093008492800568=S_OW_O$ & \textbf{取等}（残差 $4.2\times10^{-17}$）\\
+\eqref{eq:h1} & $\beta=0.304972937817=\sum\sqrt{\pi_ir_iw_i}$ & \textbf{取等}\\
+\eqref{eq:h2} & $\alpha(1-\alpha)+\beta^2=0.115865451846=R$ & \textbf{取等}\\
+\bottomrule
+\end{tabular}
+\end{center}
+取等的原因很清楚：$Z_5$-对称使枢纽行的 $5$ 个正元全相等、$x$ 在锥顶点上也全相等，
+于是 \eqref{eq:f} 的 CS 自动取等；钝角图是五角星、$10$ 个钝角元全相等，
+于是 \eqref{eq:g}\eqref{eq:h1}\eqref{eq:h2} 也全部取等。
+\textbf{唯一不取等的是 $5$ 个锥顶点行的 \eqref{eq:f}}（缺口 $1.787\times10^{-3}$），
+原因同样清楚：锥顶点行有 $1$ 个枢纽正元 $0.210570$ 与 $2$ 个近邻正元 $0.257253$，两者不等，
+故 CS 的「成比例」条件失效。\textbf{这 $1.787\times10^{-3}$ 就是全部主线的来源}
+（第~\ref{sec:diag} 小节把这句话精确化）。
+\end{remark}
+
+\subsection{行方差松弛 REL 与天花板 $L(N)$：Mohar 与 \STW\ 常数的统一重导}\label{sec:relax}
+
+把命题~\ref{prop:fourcs} 与引理~\ref{lem:rowid}(i) 里的 $a_i=g_i(1-g_i)-r_i$ 合起来，
+就得到一个\textbf{只含 $(g,\pi,r,w)$ 的有限维松弛}：$Q$ 本身、符号图案、秩三条件统统被丢掉，
+只留下「行能量如何瓜分」与「钝角质量如何分布」。
+
+\begin{definition}[行方差松弛 REL]\label{def:rel}
+对给定的 $N$，REL$(N)$ 是如下最大化问题的最优值：在
+$g\in[0,1]^N$、$\sum g_i=3$；$\pi\ge0$、$\sum\pi_i=1$；$0\le r_i\le g_i(1-g_i)$；$0\le w_i\le1-\pi_i$
+上，最大化 $\rho=\alpha+\beta$，约束为 $0\le\alpha\le1$、$\beta\ge0$，以及
+\begin{equation}\label{eq:rel}
+(\rho-g_i)^2\pi_i\le\bigl(g_i(1-g_i)-r_i\bigr)(1-\pi_i-w_i)\ \ \forall i,\qquad
+\beta^2\le S_OW_O,\qquad \beta\le\sum_i\sqrt{\pi_ir_iw_i},\qquad
+\alpha(1-\alpha)+\beta^2\le R .
+\end{equation}
+\end{definition}
+
+由命题~\ref{prop:fourcs} 与引理~\ref{lem:rowid}(i)，任何真实构型都给出 REL 的一个可行点，故
+\begin{equation}\label{eq:relvalid}
+\boxed{\ \kappa_3(N)\ \le\ \mathrm{REL}(N)\ }\qquad(\text{无条件}).
+\end{equation}
+内层（给定 $(g,\pi,r,w)$ 后对 $(\alpha,\beta)$ 的）最大化是\textbf{一维且闭式}的：
+$\beta$ 的上限是 $\beta_{\max}=\min\{\sqrt{S_OW_O},\ \sum_i\sqrt{\pi_ir_iw_i},\ \sqrt R\}$，
+且 $\rho(\beta)=\beta+\min\{1,\ \frac12(1+\sqrt{(1-4(R-\beta^2))_+}),\ \min_i(g_i+\sqrt{a_iv_i/\pi_i})-\beta\}$
+在 $[0,\beta_{\max}]$ 上单调增，故内层最优值就是
+\begin{equation}\label{eq:inner}
+\lambda^*(g,\pi,r,w)=\min\Bigl\{\,1+\beta_{\max},\ \ \min_i\Bigl(g_i+\sqrt{\tfrac{a_i(1-\pi_i-w_i)}{\pi_i}}\Bigr)\Bigr\}
+\quad(\text{当 }\beta_{\max}\text{ 使 }\alpha=1\text{ 可行时}).
+\end{equation}
+\textbf{冠军处 $\lambda^*=\rho_0$ 精确成立}（数值到 $10^{-16}$；因为 \eqref{eq:f} 的枢纽行取等、
+且 $\beta_{\max}=\beta$）。也就是说 REL 在冠军身上\textbf{一点都不松}——松的是别处。
+
+\begin{theorem}[均匀层的天花板 $L(N)$，已证]\label{thm:LN}
+设 $Q\in\mathcal P_3(N)$、$Q_+x=\rho x$，且\textbf{双均匀}：$g_i\equiv\frac3N$、$\pi_i\equiv\frac1N$。
+记
+\[
+\kappa_N:=\sqrt{\frac{3(N-1)}{N-3}}\qquad(N\ge4),\qquad
+L(N):=\frac{2+\kappa_N}{1+\kappa_N}.
+\]
+则 $\rho\le L(N)$，且等号成立的必要条件是钝角度
+$n^*:=N\omega^*=\dfrac{N\kappa_N}{3(1+\kappa_N)}$（其中 $\omega^*=\dfrac{\kappa_N}{3(1+\kappa_N)}$）。
+具体地
+\[
+L(3)=1,\quad L(4)=\frac54,\quad L(5)=\frac{4+\sqrt6}5=1.289897949,\quad
+L(6)=\frac{3+\sqrt5}4=\Phi=1.309016994,
+\]
+\[
+L(7)=\frac{5+3\sqrt2}7=1.320377241,\quad
+L(8)=\frac{11+\sqrt{105}}{16}=1.327934423,\quad
+L(12)=\frac{5+\sqrt{33}}8=1.343070331,
+\]
+$L(N)$ 关于 $N$ 严格递增，且 $\displaystyle\lim_{N\to\infty}L(N)=\frac{2+\sqrt3}{1+\sqrt3}=\frac{1+\sqrt3}2=1.366025404$。
+\end{theorem}
+
+\begin{remark}[这条定理为什么值得单独立一条]\label{rmk:LNread}
+(i) \textbf{Mohar 界与 \STW\ 界是同一个闭式的两端。}
+$\lim_{N\to\infty}L(N)=\frac{1+\sqrt3}2$ 正是 Mohar 的常数；$L(6)=\frac{3+\sqrt5}4=\Phi$ 正是 \STW\ 的常数。
+两者在我们的框架里\textbf{不是两条独立的不等式}，而是「行方差机制」在 $N=\infty$ 与 $N=6$ 处的取值。
+这解释了第~\ref{sec:stwanat} 节留下的疑问：为什么 \STW\ 的 $\Phi$ 偏偏是 $\frac{3+\sqrt5}4$
+——因为 $\kappa_6=\sqrt5$，而 $\sqrt5$ 来自 $3(N-1)/(N-3)$ 在 $N=6$ 处的值，即「行能量 $3$」与「$N-3=\dim\ker Q$」。
+
+(ii) $L(4)=\frac54=\kappa_3(4)$（报告已知的精确值），而且\textbf{取等}：
+$N=4$ 时 $n^*=\frac{4\cdot3}{3\cdot4}=1$ 是整数，极值构型正是定理~\ref{thm:bipglobal} 的
+$K_{2,2}$ 见证 $Q=\frac34I_4+\frac14A(K_{2,2})-\frac14M=I_4-vv^\top$，$v=(\frac12,\frac12,-\frac12,-\frac12)$（谱 $\{1,1,1,0\}$，见注~\ref{rmk:n4exact} 的精确计算）。
+所以这个机制\textbf{不是永远松的}：在 $N=4$ 它精确。
+
+(iii) 均匀层只是 REL 的一个子类。我们对 REL 的\emph{自由}（$4N$ 维）上确界做了全局搜索
+（差分进化，$170$--$350$ 代，Sobol 初始化，多起点），结果与 $L(N)$ 逐位吻合：
+\begin{center}\small
+\begin{tabular}{c|cccccc}
+\toprule
+$N$ & 5 & 6 & 7 & 8 & 10 & 12\\
+\midrule
+REL 自由搜索 & $1.2898973$ & $1.3090164$ & $1.3203769$ & $1.3279311$ & $1.3373855$ & $1.3430693$\\
+$L(N)$ 闭式 & $1.2898979$ & $1.3090170$ & $1.3203772$ & $1.3279344$ & $1.3373864$ & $1.3430703$\\
+差 & $-6.5\!\times\!10^{-7}$ & $-5.6\!\times\!10^{-7}$ & $-3.1\!\times\!10^{-7}$ & $-3.4\!\times\!10^{-6}$ & $-9.0\!\times\!10^{-7}$ & $-1.0\!\times\!10^{-6}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+（\textbf{数值}标签：这一行的吻合度强烈提示 $\mathrm{REL}(N)=L(N)$，但我们\textbf{只对均匀子类给出了证明}。
+若 $\mathrm{REL}(N)=L(N)$ 对一切 $N$ 成立，则 $\kappa_3(N)\le L(N)$ 成为无条件定理，
+它在 $N\le6$ 优于或等于 \STW，在 $N\ge7$ 弱于 \STW。）
+\end{remark}
+
+\begin{proof}[定理~\ref{thm:LN} 的证明]
+双均匀时令 $\varrho:=r_i$（各行的负部能量，由对称性可设相同）、$\omega:=w_i$、$c:=N\varrho$。则
+$a_i=\frac3N(1-\frac3N)-\varrho$，$v_i=1-\frac1N-\omega$，
+\[
+S_O=c,\qquad W_O=\sum_i\pi_iw_i=\omega,\qquad R=c\omega,\qquad
+\sum_i\sqrt{\pi_ir_iw_i}=N\sqrt{\tfrac1N\varrho\omega}=\sqrt{c\omega},
+\]
+即 $\beta_{\max}=\min\{\sqrt{c\omega},\sqrt{c\omega},\sqrt{c\omega}\}=\sqrt{c\omega}$（三个上限\emph{退化成一个}）。
+于是 \eqref{eq:inner} 给出 $\rho\le\min\{A,B\}$，其中
+\[
+A:=\frac3N+\sqrt{\Bigl(3-\frac9N-c\Bigr)\Bigl(1-\frac1N-\omega\Bigr)},\qquad
+B:=1+\sqrt{c\omega}.
+\]
+$A$ 关于 $c$ 严格减、$B$ 关于 $c$ 严格增（$\omega$ 固定时同理反向），故 $\min\{A,B\}$ 的上确界在
+$A=B$ 处取得（边界 $c=0$ 或 $\omega=0$ 给 $B=1$，边界 $c=3-\frac9N$ 给 $A=\frac3N$，都更小）。
+设 $A=B=L$，记 $K=3-\frac9N=\frac{3(N-3)}N$、$M=1-\frac1N=\frac{N-1}N$，则
+\[
+(K-c)(M-\omega)=\Bigl(L-\frac3N\Bigr)^2,\qquad c\omega=(L-1)^2 .
+\]
+把第二式代入第一式并展开，$L^2$ 相消，得
+\[
+\frac{4(N-3)}N=\frac{3(N-3)}N\,\omega+\frac{N-1}N\,c+\frac{2(N-3)}N\,L,
+\]
+其中用到 $KM+1-\frac9{N^2}=\frac{3(N-3)(N-1)+N^2-9}{N^2}=\frac{4N^2-12N}{N^2}=\frac{4(N-3)}N$。两边乘 $\frac{N}{2(N-3)}$：
+\begin{equation}\label{eq:Lstar}
+L=2-\frac32\,\omega-\frac{N-1}{2(N-3)}\,c .
+\end{equation}
+对 \eqref{eq:Lstar} 的后两项用 AM--GM，并用 $c\omega=(L-1)^2$：
+\[
+\frac32\omega+\frac{N-1}{2(N-3)}c\ \ge\ 2\sqrt{\frac{3(N-1)}{4(N-3)}\,c\omega}
+\ =\ \kappa_N(L-1)\qquad(L\ge1),
+\]
+代入 \eqref{eq:Lstar} 得 $2-L\ge\kappa_N(L-1)$，即 $L\le\frac{2+\kappa_N}{1+\kappa_N}=L(N)$。
+AM--GM 取等当且仅当 $\frac32\omega=\frac{N-1}{2(N-3)}c$，解出
+$\omega^*=\frac{\kappa_N}{3(1+\kappa_N)}$、$c^*=\frac{(N-3)\kappa_N}{(N-1)(1+\kappa_N)}$
+（直接代入验证 $c^*\omega^*=(L(N)-1)^2$ 成立，故该点确实可行）。
+单调性与 $N\to\infty$ 极限由 $\kappa_N$ 关于 $N$ 严格减、$\kappa_N\to\sqrt3$ 得到；
+$L(3)$ 单独说明：$N=3$ 时 $g_i\equiv1$，故 $a_i+r_i=g_i(1-g_i)=0$，$Q=I_3$，$\rho=1$。$\square$
+\end{proof}
+
+
+\subsection{分数度障碍：$L(N)$ 对 $N\ge5$ 不可达；整数化阶梯}\label{sec:fracdeg}
+
+\begin{proposition}[分数度障碍与例外阶数集 $\mathcal E$，已证]\label{prop:fracdeg}
+在双均匀层中 $w_i=\sum_{j\in O(i)}\pi_j=n_i/N$，其中 $n_i:=|O(i)|\in\{0,1,\dots,N-1\}$ 是钝角图的度。
+定理~\ref{thm:LN} 的取等\textbf{强制}两件事：
+\begin{enumerate}[label=(\roman*),leftmargin=2.6em]
+\item 逐行的 Cauchy--Schwarz 与 AM--GM 全部取等，故 $r_i\equiv\varrho^*$、$w_i\equiv\omega^*$，
+从而钝角图 $A_O$ 是\emph{正则}的，度数必须是
+\begin{equation}\label{eq:nstar}
+n^*:=N\omega^*=\frac{N\kappa_N}{3(1+\kappa_N)};
+\end{equation}
+\item 四条 CS 同时取等，故 $Q$ 是\emph{两值}的：
+$Q=\frac3NI_N+m^+(J-I-A_O)-m^-A_O$，$m^\pm\ge0$（推导见第~\ref{sec:twovalue} 小节开头）。
+\end{enumerate}
+精确值：
+\[
+n^*(4)=1,\quad n^*(5)=2-\frac{\sqrt6}3,\quad n^*(6)=\frac{5-\sqrt5}2,\quad
+n^*(7)=3-\sqrt2,\quad n^*(8)=\frac72-\frac{\sqrt{105}}6,\quad n^*(9)=\mathbf{2},
+\]
+\[
+n^*(10)=\frac92-\frac{\sqrt{21}}2,\quad n^*(12)=\frac{11}2-\frac{\sqrt{33}}2,\quad
+n^*(28)=\mathbf{6},\quad n^*(99)=\mathbf{21}.
+\]
+于是 $n^*$ 必须是\textbf{整数}。而 $n^*\in\Z$ 当且仅当 $\kappa_N\in\Q$，
+即 $\frac{3(N-1)}{N-3}=\frac{p^2}{q^2}$（既约）。写成 $N-3=kq^2$ 后方程化为 $k(p^2-3q^2)=6$，
+故 $k\in\{1,2,3,6\}$，其中 $k=2,3$ 无解（模 $3$ 矛盾），只余两支 Pell 型方程：
+\begin{equation}\label{eq:pell}
+\mathcal E=\underbrace{\{\,3+q^2:\ q^2-3p'^2=-2\,\}}_{\text{A 支}}\ \cup\
+\underbrace{\{\,3+6q^2:\ p^2-3q^2=1\,\}}_{\text{B 支}}
+=\{4,9,28,99,364,1353,5044,18819,70228,262089,\dots\}.
+\end{equation}
+$\mathcal E$ 是\textbf{无穷集}（两支都是标准 Pell 方程）。
+\emph{结论}：对 $N\ge5$ 且 $N\notin\mathcal E$，$L(N)$ 在双均匀层内不可达；
+$\mathcal E$ 中的例外阶数需要另行处理（定理~\ref{thm:unattain}）。
+\end{proposition}
+
+\begin{proof}
+(i) 双均匀层里 \eqref{eq:f} 给 $\rho\le\frac3N+\sqrt{N a_iv_i}$，$a_i=\frac3N(1-\frac3N)-r_i$、$v_i=1-\frac1N-w_i$；
+对 $i$ 取最小值后，用 Cauchy--Schwarz 与 AM--GM 两次：
+\[
+\min_i\sqrt{a_iv_i}\le\frac1N\sum_i\sqrt{a_iv_i}\le\frac1N\sqrt{\Bigl(\sum_ia_i\Bigr)\Bigl(\sum_iv_i\Bigr)}
+=\frac1N\sqrt{\bigl(3-{\textstyle\frac9N}-c\bigr)N\bigl(1-{\textstyle1N}-\omega\bigr)},
+\]
+于是 $\rho\le\frac3N+\sqrt{(3-\frac9N-c)(1-\frac1N-\omega)}=A$，与定理~\ref{thm:LN} 的证明中的 $A$ 逐字相同
+——所以\textbf{不需要}预先假设 $r_i,w_i$ 均匀。取等要求两次放缩都取等：
+$\min=$ 均值 $\Rightarrow a_iv_i$ 全部相等；CS 取等 $\Rightarrow a_i\propto v_i$；两者合起来给 $r_i\equiv\varrho^*$、$w_i\equiv\omega^*$。
+再由 $w_i=n_i/N$ 得 $A_O$ 正则、度 $n^*=N\omega^*$，而 $\omega^*$ 由 AM--GM 取等条件唯一确定为
+$\frac{\kappa_N}{3(1+\kappa_N)}$，即 \eqref{eq:nstar}。(ii) 见第~\ref{sec:twovalue} 小节。
+
+$\frac{3(N-1)}{N-3}=\frac{p^2}{q^2}$（$\gcd(p,q)=1$）$\Rightarrow p^2(N-3)=q^2(3N-3)=q^2(3(N-3)+6)$。
+令 $N-3=kq^2$（$k\in\Z_{>0}$）得 $k(p^2-3q^2)=6$，故 $k\mid6$。
+$k=2$：$p^2-3q^2=3\Rightarrow3\mid p\Rightarrow3p'^2-q^2=1\Rightarrow q^2\equiv-1\pmod3$，无解；
+$k=3$：$p^2-3q^2=2\Rightarrow p^2\equiv2\pmod3$，无解。
+$k=1$：$p^2-3q^2=6$，模 $3$ 给 $3\mid p$，写 $p=3p'$ 得 $q^2-3p'^2=-2$，且 $N=3+q^2$（A 支）；
+$k=6$：$p^2-3q^2=1$（Pell），$N=3+6q^2$（B 支）。
+两支的基本解分别是 $(q,p')=(1,1)$、$(p,q)=(2,1)$，递推 $(q,p')\mapsto(2q+3p',q+2p')$、
+$(p,q)\mapsto(2p+3q,p+2q)$ 生成全部解，故 $\mathcal E$ 无穷。$n^*(4)=1$、$n^*(9)=2$、$n^*(28)=6$、$n^*(99)=21$
+由 \eqref{eq:nstar} 直接代入；$N=5,6,7,8,10,12$ 处 $\kappa_N$ 无理故 $n^*$ 无理。$\square$
+\end{proof}
+
+\begin{theorem}[例外阶数上 $L(N)$ 仍不可达：强正则图障碍，已证（$9\le N\le7.1\times10^8$）]\label{thm:unattain}
+设 $N\in\mathcal E$、$N\ge9$，$k:=n^*$。若 $L(N)$ 在双均匀层内可达，则钝角图 $A_O$ 必是
+$k$-正则且\textbf{恰有三个不同特征值}的图，从而只有两种可能：
+\begin{enumerate}[label=(\alph*),leftmargin=2.2em]
+\item $A_O$ 连通，于是是强正则图 $\mathrm{SRG}(N,k,\lambda,\mu)$，$\mu\ge1$；
+\item $A_O$ 不连通，于是 $A_O=mK_{k+1}$，$m(k+1)=N$。
+\end{enumerate}
+两种可能都被排除：
+\begin{itemize}
+\item[(b)] $(k+1)\mid N$ 在 $\mathcal E$ 中\textbf{只}发生于 $N=9$（$A_O=3K_3$）与 $N=28$（$A_O=4K_7$）
+（以及可达的 $N=4$，$A_O=2K_2$）。此时 $A_O$ 有特征值 $-1$、重数 $N-m\ge6$，
+对应的 $Q$-特征值是 $\frac3N+m^-$，它必须属于 $\{0,1\}$：
+$m^-=0$ 给 $\frac3N\notin\{0,1\}$；$m^-=1-\frac3N$ 给 $N-m\ge6>3$ 个特征值等于 $1$，与 $\rank Q=3$ 矛盾。
+\item[(a)] 由 $Q=\frac3NI+m^+(J-I-A_O)-m^-A_O$，在 $\one^\perp$ 上 $Q$ 的作用是 $\beta I-uA_O$，
+$\beta=\frac3N-m^+$、$u=m^++m^->0$。$Q$ 的特征值只能是 $0$ 或 $1$，而 $\theta\mapsto\beta-u\theta$ 是\emph{单射}，
+故 $A_O$ 在 $\one^\perp$ 上至多两个特征值，且「映射到 $1$」的那个特征值重数 $\le3$。
+用强正则图的重数公式
+$f,g=\frac12\bigl[(N-1)\mp\frac{2k+(N-1)(\lambda-\mu)}{\sqrt{\Delta}}\bigr]$，$\Delta=(\lambda-\mu)^2+4(k-\mu)$，
+以及参数关系 $\mu(N-k-1)=k(k-\lambda-1)$，对每个 $N\in\mathcal E$ 穷举 $\lambda\in[0,k)$：
+\[
+\begin{array}{c|cccccccccc}
+N&99&364&1353&5044&18819&70228&262089&978124&3650403&13623484\\
+k&21&77&286&1066&3977&14841&55386&206702&771421&2878981\\
+\hline
+N&50843529&189750628&708158979&&&&&&&\\
+k&10744502&40099026&149651601&&&&&&&
+\end{array}
+\]
+\textbf{没有一个} $(\lambda,\mu)$ 使 $\Delta$ 成为完全平方（故 $f,g$ 必为无理数，不可能是重数）。
+情形 (a) 因此不可能。
+\end{itemize}
+\emph{结论}：$L(N)$ 对 $\mathcal E$ 中一切 $9\le N\le7.1\times10^8$ 都不可达。
+合并命题~\ref{prop:fracdeg}：\textbf{$L(N)$ 对一切 $5\le N\le7.1\times10^8$ 不可达，$N=4$ 是唯一取等的阶数。}
+\end{theorem}
+
+\begin{remark}[对第六版一条陈述的自我修正]\label{rmk:fracdegfix}
+本条命题的第一版写的是「$n^*$ 对一切 $N\ge5$ 无理，故 $L(N)$ 对一切 $N\ge5$ 不可达」。
+\textbf{前半句是错的}：$n^*(9)=2$、$n^*(28)=6$、$n^*(99)=21$ 都是整数。
+错误是在证书脚本 \texttt{证书\_行方差松弛与天花板.py} 的第 (ii) 项被发现的——
+把「无理」的判定从 \texttt{sympy.is\_rational}（对根式返回 \texttt{None}）改成
+「$\frac{3(N-1)}{N-3}$ 是否为 $\Q$ 中的平方」的纯整数检验后，立刻扫出 $N=9$。
+这是本报告「所有『对一切 $N$』型陈述都必须附带可执行检验」这条纪律的又一次兑现。
+
+\medskip
+\noindent\textbf{诊断性读法（这条为什么是本轮最重要的结构性结论）。}
+它说明 $\Phi-\rho_0=0.027449$ 这个缺口\emph{不是}因为 Cauchy--Schwarz 太粗：
+四条 CS 在冠军处已经同时取等（注~\ref{rmk:quadtight}），把松弛做到「双均匀层内最优」也只能到 $\Phi$。
+缺口的真正来源是两条\emph{离散}约束——钝角度必须是整数、钝角图的谱必须是整数——
+它们在连续松弛 REL 里完全看不见。这也解释了为什么 \STW\ 的常数偏偏是 $\Phi=L(6)$：
+\STW\ 的证明同样没有用到度与谱的整性，它停在的正是行方差机制的连续天花板。
+$N=4$ 之所以精确，是因为 $n^*(4)=1$ 与 $A_O=2K_2$ 同时满足了这两条离散约束（注~\ref{rmk:n4exact}）。
+修正后的结论\emph{更强}：例外集 $\mathcal E$ 虽然无穷，但它稀疏到（前 $13$ 项就跨过 $7\times10^8$），
+而且在 $\mathcal E$ 上还有第二道、性质完全不同的障碍（强正则图的重数整性）。
+换句话说，「行方差机制在 $N\ge5$ 必然松」这个结论\textbf{成立}，但它的原因不止一个：
+$N\notin\mathcal E$ 时是度的整性，$N\in\mathcal E$ 时是谱的整性。
+\end{remark}
+
+\begin{proposition}[$N=6$ 的整数化阶梯，已证（精确闭式）]\label{prop:ladder6}
+在双均匀层（$g_i\equiv\frac12$、$\pi_i\equiv\frac16$）且钝角图正则、度为 $n$ 时，
+REL 给出 $\rho\le\Lambda_n$，其中
+\[
+\Lambda_0=1,\quad \Lambda_1=\frac{13}{10},\quad \Lambda_2=\frac{4+\sqrt6}5=1.289897949,\quad
+\Lambda_3=\frac7{10}+\frac{\sqrt6}5=1.189897949,\quad \Lambda_4=1,\quad \Lambda_5=\frac12 .
+\]
+取等要求 $\varrho^*=\frac{9}{100}$（$n=1$）、$\frac7{50}-\frac{\sqrt6}{25}$（$n=2$）、$\frac{11}{100}-\frac{\sqrt6}{25}$（$n=3$）。
+故双均匀层在 $N=6$ 满足 $\rho\le\frac{13}{10}=1.300000$，比 $L(6)=\Phi=1.309017$ 改进了 $9.0\times10^{-3}$。
+\end{proposition}
+
+\begin{proof}
+$\omega=n/6$ 固定后，$A=\frac12+\sqrt{(\frac32-c)\frac{5-n}6}$ 关于 $c$ 严格减、$B=1+\sqrt{cn/6}$ 严格增，
+故 $\max\min\{A,B\}$ 在 $A=B$ 处取得；这是关于 $\sqrt\varrho$ 的一元二次方程，
+$n=1$：$20\varrho+4\sqrt\varrho-3=0\Rightarrow\sqrt\varrho=\frac3{10}$；
+$n=2$：$5\varrho+\sqrt2\sqrt\varrho-\frac12=0$；$n=3$：$5\varrho+\sqrt3\sqrt\varrho-\frac14=0$，
+（一般地 $5\varrho+\sqrt{n\varrho}=(4-n)/4$，其中 $\varrho=c/6$；
+第三式旧版误作 $4.5\varrho+\sqrt3\sqrt\varrho-\frac18=0$，本版已更正，
+$\varrho^\ast$ 与 $\Lam_3$ 的数值原本就是对的。）逐个求解即得上述闭式。$n=0$ 给 $B=1$；$n=4,5$ 时 $A$ 与 $B$ 在可行域内不相交，
+上确界在 $c\to0$（$\Lambda_4=1$）或 $A$ 的端点（$\Lambda_5=\frac12$）处取得。$\square$
+\end{proof}
+
+\subsection{两值刚性：正则图案的两值秩三投影在 $N=6$ 只有 $\frac12(I_6-M)$}\label{sec:twovalue}
+
+若 REL 的 \eqref{eq:f} 在每一行都取等，则该行的全部\emph{锐角}元相等（因为 CS 取等要求
+$(q_{ij})_+\propto x_j$，而双均匀层里 $x_j$ 是常数）；同理 \eqref{eq:g}\eqref{eq:h1} 取等要求全部\emph{钝角}元相等。
+配合图案的连通性（锐角图或钝角图连通时，$q_{ij}=q_{ji}$ 把各行的常数粘在一起），
+极值点必须是\textbf{两值}的：$q_{ij}=m^+$（锐）或 $-m^-$（钝）。
+
+\begin{proposition}[两值情形的精确谱，已证（符号计算）]\label{prop:twovalue}
+令 $Q=\frac12I_6+m^+(J-I-A_O)-m^-A_O$，$A_O$ 为 $6$ 点正则图案。则：
+\begin{enumerate}[label=(\alph*),leftmargin=2.2em]
+\item $n=1$（完美匹配 $M$）：$\mathrm{spec}(Q)=\{\frac12-m^-+4m^+,\ \frac12-m^--2m^+,\ (\frac12+m^-)^{[3]}\}$。
+三重特征值 $\frac12+m^-$ 只能取 $1$（取 $0$ 会要求 $m^-=-\frac12<0$），故 $m^-=\frac12$；
+余下两个必须为 $0$，故 $m^+=0$。于是\textbf{唯一}可能是 $Q=\frac12(I_6-M)$，$Q_+=\frac12I_6$，$\rho=\frac12$。
+\item $n=2$（$C_6$ 或 $2C_3$）：\textbf{无解}。$C_6$ 用 Fourier 基得
+$\mathrm{spec}=\{\frac12+3m^+-2m^-,\ \frac12+m^++2m^-,\ (\frac12-2m^+-m^-)^{[2]},\ (\frac12+m^-)^{[2]}\}$，
+逐个讨论「三个 $1$ 三个 $0$」的所有分支均导出 $m^\pm<0$ 或矛盾；$2C_3$ 有四重特征值 $\frac12+m^-$，
+重数 $4>3$，无论取 $0$ 或 $1$ 都无法凑出 $(1,1,1,0,0,0)$。
+\item $n=3$（$K_{3,3}$ 或棱柱图）：\textbf{无解}。两者都含一个四重特征值（$K_{3,3}$：$\frac12-m^+$；棱柱：$\frac12-m^+$），同上排除。
+\item $n=0$ 与 $n=5$：\textbf{无解}（$n=0$ 给五重特征值 $\frac12-m^+$；$n=5$ 给五重 $\frac12+m^-$）。
+\end{enumerate}
+因此\textbf{双均匀层内不存在达到 $\Lambda_1=\frac{13}{10}$ 或 $\Lambda_2=\frac{4+\sqrt6}5$ 的秩三投影}。
+\end{proposition}
+
+\begin{remark}[$N=4$ 处同一套计算\textbf{成功}了]\label{rmk:n4exact}
+$N=4$ 的双均匀层是 $g_i\equiv\frac34$，正则图案只有完美匹配（$n=1=n^*$）。
+取 $Q=\frac34I_4+\frac14A(K_{2,2})-\frac14M$（即 $Q=I_4-vv^\top$，$v=(\frac12,\frac12,-\frac12,-\frac12)$）：
+\[
+\mathrm{spec}(Q)=\Bigl\{\underbrace{\tfrac34+\tfrac14}_{=1}\ (\text{二重：反对配对子空间}),\ \
+\tfrac34+2\cdot\tfrac14-\tfrac14=1,\ \ \tfrac34-2\cdot\tfrac14-\tfrac14=0\Bigr\}=\{1,1,1,0\},
+\]
+确是秩三投影；$Q_+=\frac34I_4+\frac14A(K_{2,2})$ 是正则矩阵，故 $x=\frac12\one$ 是 Perron 向量，
+$\rho=\frac34+\frac14\cdot2=\frac54=L(4)$。\textbf{行方差机制在 $N=4$ 精确取到 $\kappa_3(4)=\frac54$}，
+这是定理~\ref{thm:bipglobal} 的 $a=b=2$ 情形的一个\emph{独立}新证（证法完全不同：
+那里用的是秩二长期方程与根分布，这里用的是行能量瓜分与 AM--GM）。
+\end{remark}
+
+\subsection{$Z_5$-对称层：八个图案中六个被直接排除，冠军图案缺口 $3.2\times10^{-3}$}\label{sec:symlayer}
+
+冠军的对称群是 $Z_5$（枢纽 $+$ 正五边形锥）。$Z_5$-不变的钝角图案由两个数据决定：
+$b\in\{0,1\}$（枢纽--锥顶点是否为钝角）与 $m\subseteq\{1,2\}$（锥顶点之间哪些圆周距离类为钝角），共 $8$ 个。
+在这一层内，REL 只剩 $4$ 个自由参数（$g_{\rm hub},\pi_{\rm hub},r_{\rm hub},r_{\rm cone}$；
+$g_{\rm cone}=\frac{3-g_{\rm hub}}5$、$\pi_{\rm cone}=\frac{1-\pi_{\rm hub}}5$ 由两个求和约束定死，
+而 $w_{\rm hub}=5b\,\pi_{\rm cone}$、$w_{\rm cone}=b\,\pi_{\rm hub}+2|m|\,\pi_{\rm cone}$ 由图案\textbf{整性地}决定）。
+
+\begin{center}\small
+\begin{tabular}{clrl}
+\toprule
+$b$ & $m$ & REL 天花板 & 与 $\rho_0$ 之差\\
+\midrule
+0 & $\varnothing$ & $1.000000000000$ & $-0.281568$ \textbf{（排除）}\\
+1 & $\varnothing$ & $1.000000000000$（$g_{\rm hub}\to1$ 的极限） & $-0.281568$ \textbf{（排除）}\\
+1 & $\{1\}$ & $1.000000000000$（同上） & $-0.281568$ \textbf{（排除）}\\
+1 & $\{2\}$ & $1.000000000000$（同上） & $-0.281568$ \textbf{（排除）}\\
+0 & $\{1,2\}$ & $1.243046694070$ & $-0.038522$ \textbf{（排除）}\\
+1 & $\{1,2\}$ & $0.500000024835$ & $-0.781568$ \textbf{（排除）}\\
+0 & $\{1\}$ & $1.284780995477$ & $+0.003213$\\
+0 & $\{2\}$ & $1.284780995477$ & $+0.003213$ \textbf{（冠军所在类）}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+（\textbf{数值}标签：每格由差分进化全局搜索得到，$1200$ 代、种群 $24$、Sobol 初始化、内层用 \eqref{eq:inner} 闭式；
+$m=\{1\}$ 与 $m=\{2\}$ 给出同一数值，因为 $C_5$ 的两个圆周距离类互为同构（五边形 $\leftrightarrow$ 五角星），
+而冠军的钝角图恰是五角星。$b=1$ 的三格是 $g_{\rm hub}\to1$ 处的极限值，故写成 $1.000000$。）
+
+\begin{remark}[这张表读出的三件事]\label{rmk:symread}
+(i) \textbf{$8$ 个对称图案中 $6$ 个被 REL 单独否证}（天花板严格低于 $\rho_0$，最小余量 $0.0385$）。
+这是本项目第一次用\emph{同一条}解析不等式族把一批图案整类排除，而不是逐个跑 $F$ 的优化器。
+特别地，$b=1$（枢纽与锥顶点成钝角）整类被排除，$m=\{1,2\}$（锥顶点之间全钝）整类被排除：
+冠军的「枢纽全锐 $+$ 五角星钝」是\textbf{唯一存活}的对称图案。
+
+(ii) 存活类的天花板 $1.284780995477$ 与 $\rho_0$ 只差 $3.213\times10^{-3}$，
+其极大化点是 $(g_{\rm hub},\pi_{\rm hub},r_{\rm hub},r_{\rm cone})=(0.339344,0.200520,0,0.074883)$，
+与冠军的 $(0.331767,0.197272,0,0.072170)$ \textbf{很近但不相等}。
+也就是说：\textbf{主线缺口已经从 $2.7\times10^{-2}$（$\Phi-\rho_0$）压缩到 $3.2\times10^{-3}$}，
+而且剩下的缺口在一个 $4$ 维、图案已定死的显式优化问题里。
+
+(iii) 对照第~\ref{sec:conefamily} 小节（$Z_5$-锥族定理）：那里的解析计算给出\emph{同一层}的精确上确界就是 $\rho_0$。
+两者之差 $3.2\times10^{-3}$ 正是 REL 丢掉的秩三信息的价值——
+\textbf{这就是下一步要买回来的东西}（P1$'$）。
+\end{remark}
+
+\subsection{诊断：REL 缺的到底是什么，以及新的优先队列}\label{sec:diag}
+
+把本轮所有上界排成一条阶梯（$N=6$）：
+\begin{equation}\label{eq:ladder}
+\underbrace{1.366025}_{\text{Mohar }=\lim L(N)}\ >\
+\underbrace{1.309017}_{\Phi=L(6)=\text{REL 自由}}\ >\
+\underbrace{1.300000}_{\frac{13}{10}=\text{REL}+\text{度的整性}}\ >\
+\underbrace{1.284781}_{\text{REL}+Z_5\text{对称}+\text{整性}}\ >\
+\underbrace{1.281568}_{\rho_0=\text{目标}} .
+\end{equation}
+REL 丢掉的约束，按「买回来的难度 $\times$ 预计收益」排序如下：
+\begin{enumerate}[label=(\Alph*),leftmargin=2.2em]
+\item \textbf{图案的整性与对称性}（$w_i$ 必须是某个对称 $0$--$1$ 图案的 $\pi$-子集和；
+$r_i$ 与 $r_j$ 通过共享的钝角元 $q_{ij}$ 耦合，因为 $q_{ij}^2$ 同时计入 $r_i$ 与 $r_j$）。
+收益：$1.309017\to1.300000$（已兑现）。继续兑现的入口是把「子集和」写成对 $(\pi,w)$ 的显式不等式。
+\item \textbf{秩三}（\eqref{eq:tri} 的三角形恒等式、四点 Gram 行列式 $\det(q_{ij})_{i,j\in S}=0$（$|S|=4$）、
+以及等角线在 $\R^3$ 中至多 $6$ 条这一经典事实）。收益：预计是 $1.300\to\rho_0$ 的主要部分，
+因为命题~\ref{prop:twovalue} 已经显示「两值 $+$ 正则图案 $+$ 秩三」在 $N=6$ 几乎无解。
+\item \textbf{Perron 向量的二阶信息}：我们只用了行方程 $s_i=(\rho-g_i)x_i$。
+$Q_+$ 的\emph{全部}特征值（不只是最大的）与 $Q_+$ 的不可约性还没用。
+\item \textbf{自洽耦合} $\Sigma=1\{\Pi_3(D_p^{1/2}\Sigma D_p^{1/2})\ge0\}$：REL 完全没用，
+但注~\ref{rmk:chamberdead} 说明它才是 $N=6$ 那 $19$ 类的真正约束。
+\end{enumerate}
+
+\subsection{冠军的闭式导出：$Z_5$-等变秩三投影恰好是一条代数弧}\label{sec:conefamily}
+
+到目前为止，$\rho_0=\frac{9+\sqrt5+2\sqrt{35}}{18}$ 在报告里的地位是「一个被构造出来、并用高精度数值验证过的下界见证」：
+定理~\ref{thm:champ} 给出了它的构造，证书脚本核验了它的每一位数字，但\textbf{没有人解释它为什么是这几个根式}。
+本小节把这件事变成一个定理。结论是：
+
+\begin{quote}\small
+在 $N=6$ 的\emph{全部} $Z_5$-等变秩三投影上（这是一个一维代数弧，不是离散集合），
+$\lambda_{\max}(Q_+)$ 是一个显式的一元根式函数 $\rho(s)$，它在弧内部有唯一临界点 $s^*$，
+而 $\rho(s^*)$ \textbf{精确等于} $\rho_0$。冠军不是数值搜索的偶然产物，而是一个二次方程的根。
+\end{quote}
+
+更意外的是副产品：定理~\ref{thm:zonal} 的见证——正二十面体等角线系（ETF）——
+\textbf{就在同一条弧上}，位于 $s=\frac12$；它的值是 $\rho(\frac12)=\frac{5+\sqrt5+\sqrt{30}}{10}=1.271329355255$，
+正是第~\ref{sec:kappa} 节数值扫描里那个始终排在冠军之后的「亚军」。
+也就是说，本报告里两个最重要的六阶对象（$\Phi$ 的见证与 $\rho_0$ 的见证）是同一条代数弧上的两点，
+而 $\rho_0$ 是这条弧的最高点、ETF 是弧的中点。这个统一是我们之前完全没有预料到的。
+
+\subsubsection*{等变分解与分类}
+
+把六个点记作 $\{h\}\cup\{1,2,3,4,5\}$，$Z_5$ 平凡地作用在 $h$ 上、以 $j\mapsto j+1$ 循环作用在锥点上。
+一个 $Z_5$-等变的对称矩阵由五个实参数决定：
+\[
+g_h:=q_{hh},\quad g_c:=q_{jj},\quad A:=q_{hj},\quad d_1:=q_{jk}\ (|j-k|\equiv1),\quad
+d_2:=q_{jk}\ (|j-k|\equiv2).
+\]
+$\R^6$ 分解为三个不可约子空间：平凡分量 $T=\mathrm{span}\{e_h,\ \one_c/\sqrt5\}$（维 $2$），
+以及两个二维分量 $\psi_1$（特征标 $\chi_1,\chi_4$）、$\psi_2$（特征标 $\chi_2,\chi_3$）。
+等变矩阵在这三个分量上分别作用为
+\begin{equation}\label{eq:isoT}
+Q\big|_T=\begin{pmatrix} g_h & \sqrt5\,A\\[2pt] \sqrt5\,A & g_c+2d_1+2d_2\end{pmatrix},\qquad
+\mu_1=g_c+\tfrac{\sqrt5-1}2d_1-\tfrac{\sqrt5+1}2d_2,\qquad
+\mu_2=g_c-\tfrac{\sqrt5+1}2d_1+\tfrac{\sqrt5-1}2d_2 .
+\end{equation}
+
+\begin{lemma}[$Z_5$-等变秩三投影的完全分类，已证]\label{lem:z5class}
+$Q\in\mathcal P_3(6)$ 是 $Z_5$-等变的，当且仅当存在 $s\in[0,1]$ 与 $\varepsilon\in\{+1,-1\}$，使得
+\begin{equation}\label{eq:arc}
+g_h=1-s,\qquad g_c=\frac{s+2}5,\qquad A=\varepsilon\sqrt{\frac{s(1-s)}5},\qquad
+\{d_1,d_2\}=\Bigl\{\frac{2s-1+\sqrt5}{10},\ \frac{2s-1-\sqrt5}{10}\Bigr\},
+\end{equation}
+其中 $\{d_1,d_2\}$ 是\emph{无序}对：$d_1>d_2$ 与 $d_1<d_2$ 两种分配都出现，各占一支。
+每个这样的 $Q$ 的特征多项式恒等于 $L^3(L-1)^3$（对 $s$ 是恒等式，不是逐点数值事实）。
+\end{lemma}
+
+\begin{proof}
+$\mathrm{spec}(Q)=\mathrm{spec}(Q|_T)\cup\{\mu_1,\mu_1\}\cup\{\mu_2,\mu_2\}$，而投影的特征值只能是 $0$ 或 $1$，
+故 $\mu_1,\mu_2\in\{0,1\}$，且 $Q|_T$ 的特征值也在 $\{0,1\}$ 中。秩条件
+$3=\rank(Q|_T)+2\mu_1+2\mu_2$ 只有唯一解：$\rank(Q|_T)=1$，且 $\mu_1,\mu_2$ 恰有一个为 $1$、另一个为 $0$
+（$\rank(Q|_T)\le2$ 排除 $0$ 或 $2$ 之外的情形：$0+2+2=4$、$2+0+0=2$、$2+2+0=4$ 都不等于 $3$）。
+
+\textbf{支 I}（$\mu_2=0,\mu_1=1$）。两式相减给 $\mu_1-\mu_2=\sqrt5(d_1-d_2)=1$，即 $d_1-d_2=1/\sqrt5$；
+再把 $d_2=d_1-1/\sqrt5$ 代入 $\mu_1=1$：
+\[
+g_c+d_1\Bigl(\tfrac{\sqrt5-1}2-\tfrac{\sqrt5+1}2\Bigr)+\tfrac{\sqrt5+1}{2\sqrt5}=1
+\ \Longrightarrow\ d_1=g_c-\tfrac{5-\sqrt5}{10},\quad d_2=g_c-\tfrac{5+\sqrt5}{10}.
+\]
+$\rank(Q|_T)=1$ 意味着 $\tr(Q|_T)=1$ 与 $\det(Q|_T)=0$。前者给 $g_h+5g_c=3$（这正是 $\tr Q=3$），
+后者给 $5A^2=g_h(g_c+2d_1+2d_2)=(3-5g_c)(5g_c-2)$。令 $s:=5g_c-2$，
+则 $g_c=\frac{s+2}5$、$g_h=1-s$、$5A^2=s(1-s)$，代回 $d_1,d_2$ 得 \eqref{eq:arc} 中 $d_1>d_2$ 的那一支；
+$A^2\ge0$ 恰好等价于 $s\in[0,1]$。
+
+\textbf{支 II}（$\mu_1=0,\mu_2=1$）。完全平行地得到 $d_2-d_1=1/\sqrt5$，
+即 $d_1=g_c-\frac{5+\sqrt5}{10}$、$d_2=g_c-\frac{5-\sqrt5}{10}$，而 $g_h,g_c,A$ 与支 I 逐字相同。
+这就是 \eqref{eq:arc} 中 $d_1<d_2$ 的那一支。
+
+最后，特征多项式 $L^3(L-1)^3$ 的恒等式由符号计算直接验证（两支各自展开后所有 $s$ 的幂次相消），
+证书脚本 \texttt{证书\_行方差松弛与天花板.py} 的第 (iv) 项给出 \texttt{sympy.factor} 的输出。$\square$
+\end{proof}
+
+\begin{remark}[两支在正部意义下是同一条弧]\label{rmk:twobranch}
+支 I 满足 $d_1>0>d_2$（对一切 $s\in[0,1]$：$2s-1-\sqrt5\le2-1-\sqrt5<0$），
+支 II 满足 $d_2>0>d_1$。于是 $Q_+$ 的做法在两支上都是「保留那个正的锥--锥值、把负的那个抹成 $0$」。
+锥点上的置换 $j\mapsto 2j\pmod 5$（固定 $h$）把「距离 $1$」对换成「距离 $2$」对，
+因此它是一个置换矩阵 $P$，使 $Q_+^{\mathrm{II}}(s)=P\,Q_+^{\mathrm{I}}(s)\,P^\top$。
+\textbf{两支的 $\lambda_{\max}(Q_+)$ 逐点相等}，所以「$\lambda_{\max}(Q_+)$ 的等变弧」实际上只有一条，
+参数 $s\in[0,1]$，$\varepsilon$ 与支的选取都不影响它。这条观察把后面所有计算减半。
+\end{remark}
+
+\subsubsection*{弧上的 Perron 特征值}
+
+以下固定支 I（由注~\ref{rmk:twobranch} 无损失）。抹去 $d_2$ 之后，$Q_+$ 仍是 $Z_5$-等变的，
+它在 $\psi_1,\psi_2$ 上的标量是
+\begin{equation}\label{eq:psip}
+\mu_1(Q_+)=g_c+\tfrac{\sqrt5-1}2d_1=\frac{7-\sqrt5+(1+\sqrt5)s}{10},\qquad
+\mu_2(Q_+)=g_c-\tfrac{\sqrt5+1}2d_1=\frac{2-(\sqrt5-1)s}{10},
+\end{equation}
+而在平凡分量上是
+\[
+T_+(s)=\begin{pmatrix}1-s & \sqrt{s(1-s)}\\[2pt] \sqrt{s(1-s)} & \dfrac{3s+1+\sqrt5}{5}\end{pmatrix}
+\qquad(\text{右上元}=\sqrt5A=\sqrt{s(1-s)}).
+\]
+由 \eqref{eq:psip}，$\mu_1(Q_+)\le\frac{7-\sqrt5+1+\sqrt5}{10}=\frac8{10}<1$ 且
+\[
+T_+(s)_{22}-\mu_1(Q_+)=\frac{(5-\sqrt5)s+3\sqrt5-5}{10}\ \ge\ \frac{3\sqrt5-5}{10}=0.170820>0 ,
+\]
+故 $\lambda_{\max}(Q_+(s))=\lambda_{\max}(T_+(s))$ 对\emph{一切} $s\in[0,1]$ 成立（不需要任何数值验证）。
+
+\begin{theorem}[弧上的精确 Perron 谱与 $\rho_0$ 的闭式导出，已证]\label{thm:conefam}
+定义 $\rho(s):=\lambda_{\max}\bigl(Q_+(s)\bigr)$，$s\in[0,1]$。则
+\begin{equation}\label{eq:rhos}
+\rho(s)=\frac{6+\sqrt5-2s+\sqrt{P(s)}}{10},\qquad
+P(s):=21-8\sqrt5+(36+16\sqrt5)s-36s^2,
+\end{equation}
+并且：
+\begin{enumerate}[label=(\alph*),leftmargin=2.2em]
+\item $\rho'(s)=0$ 在 $[0,1]$ 内\textbf{恰有一个}解
+$s^*=\dfrac{9+4\sqrt5-\sqrt{35}}{18}=0.668232895938863$；
+另一个根 $\frac{9+4\sqrt5+\sqrt{35}}{18}=1.325575094$ 落在弧外。
+\item $\rho(s^*)=\dfrac{9+\sqrt5+2\sqrt{35}}{18}=\rho_0$，\textbf{精确相等，无任何数值误差}。
+\item 端点值 $\rho(0)=1$、$\rho(1)=\frac{4+\sqrt5}5=1.247213595$，都严格小于 $\rho_0$。
+\item 故 $\displaystyle\max_{s\in[0,1]}\lambda_{\max}(Q_+(s))=\rho_0$，且最大化点唯一。
+\item Perron 向量在弧的最高点处是 $x=(x_h,x_c,x_c,x_c,x_c,x_c)$，其平方权重\textbf{精确}为
+\begin{equation}\label{eq:perronw}
+\pi_h=x_h^2=\frac{91-25\sqrt7}{126}=0.197271565264962,\qquad
+\pi_c=x_c^2=\frac{7+5\sqrt7}{126}=0.160545686947008 .
+\end{equation}
+\item $s=\frac12$ 处（支 II）给出 $Q=\frac12I_6+\frac1{2\sqrt5}S$，其中 $S$ 是 $6$ 阶会议矩阵
+（$S^2=5I_6$，对角为 $0$、非对角为 $\pm1$），即\textbf{正二十面体等角线系}；
+其值为 $\rho(\frac12)=\frac{5+\sqrt5+\sqrt{30}}{10}=1.271329355255145$。
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(a) 由 $2\times2$ 公式，$\rho(s)=\frac12\bigl(1-s+\frac{3s+1+\sqrt5}5\bigr)+\frac12\sqrt{D(s)}$，
+$D(s)=\bigl(1-s-\frac{3s+1+\sqrt5}5\bigr)^2+4s(1-s)$。通分化简得
+$D(s)=P(s)/25$（$25D(s)$ 展开后与 $P(s)$ 逐项相同），于是 \eqref{eq:rhos} 成立。
+求导：$\rho'(s)=-\frac15+\frac{P'(s)}{20\sqrt{P(s)}}$，$P'(s)=36+16\sqrt5-72s$，故 $\rho'=0$ 等价于
+$P'(s)=4\sqrt{P(s)}$；两边平方（在 $[0,1]$ 上 $P'(s)\ge36+16\sqrt5-72=35.78>0$，故平方不引入伪根）得
+$P'(s)^2=16P(s)$，展开相消后是
+\[
+18s^2-(18+8\sqrt5)s+(7+4\sqrt5)=0,
+\]
+判别式 $(18+8\sqrt5)^2-72(7+4\sqrt5)=140$，故 $s=\frac{18+8\sqrt5\pm2\sqrt{35}}{36}=\frac{9+4\sqrt5\pm\sqrt{35}}{18}$，
+其中只有取 $-$ 的那个落在 $[0,1]$。
+
+(b) 在临界点上 $\sqrt{P(s^*)}=P'(s^*)/4=9+4\sqrt5-18s^*$，代回 \eqref{eq:rhos}：
+\[
+\rho(s^*)=\frac{6+\sqrt5-2s^*+9+4\sqrt5-18s^*}{10}=\frac{15+5\sqrt5}{10}-2s^*
+=\frac{3+\sqrt5}2-\frac{9+4\sqrt5-\sqrt{35}}9
+=\frac{9(3+\sqrt5)-2(9+4\sqrt5-\sqrt{35})}{18}=\frac{9+\sqrt5+2\sqrt{35}}{18}.
+\]
+
+(c) $P(0)=21-8\sqrt5=(4-\sqrt5)^2$、$P(1)=21+8\sqrt5=(4+\sqrt5)^2$，
+故 $\rho(0)=\frac{6+\sqrt5+4-\sqrt5}{10}=1$、$\rho(1)=\frac{4+\sqrt5}{10}+\frac{4+\sqrt5}{10}=\frac{4+\sqrt5}5$。
+两者都小于 $\rho_0=1.281568$。
+
+(d) 由 (a)(c) 与 $\rho$ 在 $[0,1]$ 上连续、在内部只有一个临界点。
+
+(e) $T_+(s^*)$ 的 Perron 向量满足 $(g_h-\rho)x_h+\sqrt5A\,x_c'=0$（这里 $x_c'$ 是 $\one_c/\sqrt5$ 方向的分量），
+即 $x_h/x_c=\sqrt5\cdot\frac{\sqrt5A}{\rho-g_h}=\frac{5A}{\rho(s^*)-g_h}$。
+用 $\rho(s^*)=\frac{3+\sqrt5}2-2s^*$、$g_h=1-s^*$、$5A=\sqrt{5s^*(1-s^*)}$ 化简得
+$x_h/x_c=1.1084925$，再由 $x_h^2+5x_c^2=1$ 得 $x_c^2=\frac1{(x_h/x_c)^2+5}$；
+符号计算给出 \eqref{eq:perronw} 的两个根式（证书脚本第 (v) 项逐位核验
+$\frac{91-25\sqrt7}{126}$、$\frac{7+5\sqrt7}{126}$ 与数值 Perron 向量之差为 $0$）。
+
+(f) $s=\frac12$ 代入 \eqref{eq:arc}：$g_h=g_c=\frac12$、$|A|=\frac1{2\sqrt5}$、
+$\{|d_1|,|d_2|\}=\{\frac1{2\sqrt5}\}$，即所有非对角元的绝对值都是 $\frac1{2\sqrt5}$，
+$Q=\frac12I_6+\frac1{2\sqrt5}S$，$S:=2\sqrt5(Q-\frac12I_6)$ 是 $\pm1$ 对称矩阵、零对角；
+符号计算给 $S^2=5I_6$，故 $S$ 是 $6$ 阶会议矩阵，$Q$ 是 $6$ 点在 $\R^3$ 中的等角紧标架（正二十面体的 $6$ 条对角轴）。
+$\rho(\frac12)=\frac{6+\sqrt5-1+\sqrt{30}}{10}$，其中 $P(\frac12)=21-8\sqrt5+18+8\sqrt5-9=30$。$\square$
+\end{proof}
+
+\begin{remark}[这条定理在主线上意味着什么]\label{rmk:coneread}
+(i) \textbf{$\rho_0$ 从「见证」升级为「极值」。}
+定理~\ref{thm:lower} 说 $\rho_0$ 可达；本小节说在整个 $Z_5$-等变层内它\emph{只有}这一个极大值点，
+并且这个极大值是二次方程 $18s^2-(18+8\sqrt5)s+(7+4\sqrt5)=0$ 的根的显式函数。
+根式 $\sqrt{35}$ 的来源至此清楚了：它是判别式 $140=4\cdot35$ 的平方根，
+而 $140$ 来自「弧的参数化」与「$2\times2$ Perron 公式」两次代换的合成，没有任何神秘之处。
+
+(ii) \textbf{它同时解释了 $\Phi$ 的见证与 $\rho_0$ 的见证为什么长得像。}
+定理~\ref{thm:zonal} 说 $\Phi$ 是「逐点主函数 $+$ 逐通道线性计费」这一\emph{方案族}的天花板，见证是 ETF；
+本小节说 ETF 是等变弧的中点，而弧的最高点比它高 $\rho_0-\frac{5+\sqrt5+\sqrt{30}}{10}=9.9\times10^{-3}$。
+换句话说，\STW\ 的 $\Phi$ 与我们的 $\rho_0$ 之间的差距，在等变层内\emph{不是}两个孤立常数的差距，
+而是同一条弧上「中点」与「顶点」的差距。
+
+(iii) \textbf{它与 REL 松弛的对照是量化的。}
+第~\ref{sec:symlayer} 小节的 $Z_5$-对称数值扫描给出五角星图案类的 REL 天花板 $1.284780995477$，
+比 $\rho_0$ 高 $3.2128\times10^{-3}$。本小节证明真正的等变秩三最大值是 $\rho_0$。
+所以\textbf{那 $3.2\times10^{-3}$ 完全来自 REL 丢掉的秩三信息}，而不是来自 Cauchy--Schwarz 的粗糙：
+REL 保留的是「逐行能量 $a_i+r_i=g_i(1-g_i)$」这一\emph{二次}信息，
+丢掉的是引理~\ref{lem:rowid}(iii) 的三角形恒等式 \eqref{eq:tri} 与四点 Gram 行列式。
+这正是第~\ref{sec:diag} 小节排在 (B) 位的缺失成分，也是新队首 P1 的靶心。
+
+(iv) \textbf{它给出一条可执行的改进路线。}
+弧是一条\emph{一维}对象，秩三约束在它上面是恒等式；要压缩那 $3.2\times10^{-3}$，
+必须允许 $Q$ 离开等变层（否则已经做完了）。
+最小的下一步是把对称性从 $Z_5$ 降到「hub $+$ 锥点上的一个二面角子群」，
+此时等变参数从 $1$ 维变成 $3$--$4$ 维，秩三约束（\eqref{eq:tri} 与 Gram 行列式）第一次成为\emph{非平凡}的方程，
+可以期望把 REL 的天花板往下压。这是 P1 的具体形态。
+\end{remark}
+
+\subsection{垂直二标架分解：把秩三拆成秩一 $+$ 秩二}\label{sec:perp2}
+
+冠军的 $x$ 不是 $Q$ 的特征向量（$\alpha=0.9766\ne1$），所以 $Qx$ 与 $x$ 之间有一个夹角。
+把这件事做成一个分解，就能把 $\mathcal P_3$ 上的问题改写成 $\mathcal P_2$ 上的问题——后者的几何要简单得多
+（$\R^3$ 中的 $2$-标架就是一个单位向量加一个正交方向）。
+
+\begin{lemma}[垂直二标架分解，已证]\label{lem:perp2}
+设 $Q\in\mathcal P_3(N)$、$x\ge0$、$\|x\|=1$、$\alpha=x^\top Qx>0$。令
+\[
+p:=\frac{Qx}{\sqrt\alpha},\qquad B:=Q-pp^\top,\qquad q:=p-\sqrt\alpha\,x .
+\]
+则：
+\begin{enumerate}[label=(\roman*),leftmargin=2.2em]
+\item $\|p\|=1$，且 $B\in\mathcal P_2(N)$（$B^2=B=B^\top$、$\tr B=2$、$B\succeq0$）；
+\item $Bp=0$、$Bx=0$；
+\item $\|q\|^2=1-\alpha$，且 $q\perp x$；
+\item $Q=pp^\top+B$，从而 $\Lam_3$ 的 Ky Fan 对偶量分裂为「秩一部分 $pp^\top$」与「垂直部分 $B$」之和。
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+$Q$ 是投影，故 $Qp=Q^2x/\sqrt\alpha=Qx/\sqrt\alpha=p$，$\|p\|^2=x^\top Q^2x/\alpha=\alpha/\alpha=1$。
+于是 $B^2=Q^2-Qpp^\top-pp^\top Q+pp^\top pp^\top=Q-pp^\top-pp^\top+pp^\top=B$，
+$\tr B=3-1=2$，$B=Q-pp^\top\succeq0$（因为 $p$ 在 $Q$ 的像空间内且 $\|p\|=1$，$pp^\top\preceq Q$）。
+$Bp=Qp-p=0$；$Bx=Qx-p(p^\top x)=\sqrt\alpha p-\sqrt\alpha p=0$（$p^\top x=x^\top Qx/\sqrt\alpha=\sqrt\alpha$）。
+$\|q\|^2=1-2\sqrt\alpha\,p^\top x+\alpha=1-2\alpha+\alpha=1-\alpha$，$q^\top x=p^\top x-\sqrt\alpha=0$。$\square$
+\end{proof}
+
+\begin{remark}[冠军处的分裂，精确/数值]\label{rmk:perp2read}
+冠军处 $\|q\|^2=1-\alpha=0.023404740944563$，
+恰好等于命题~\ref{prop:decouple} 里「投影能量损失」那一项——这不是巧合：
+$1-\alpha=\|q\|^2$ 就是 $x$ 偏离 $Q$ 的像空间的平方距离。
+垂直部分的能量 $E_\perp:=\tfrac12x^\top|B|x$ 满足 $x^\top B_+x=-x^\top B_-x=E_\perp$
+（因为 $Bx=0$ 使 $x^\top Bx=0$），冠军处 $E_\perp=0.519536756454917$（数值）。
+这个分解的价值在于：$B\in\mathcal P_2(N)$ 且 $Bx=0$，
+于是 $\kappa_3$ 可以改写成
+\[
+\kappa_3=\sup\Bigl\{x^\top\bigl(pp^\top+B\bigr)_+x:\ B\in\mathcal P_2(N),\ Bp=Bx=0,\ \|p\|=1,\ x\ge0,\ \|x\|=1\Bigr\},
+\]
+其中秩三条件被\emph{完全}吸收进了 $B\in\mathcal P_2$ 与两个正交约束里。
+$\mathcal P_2(N)$ 是 $\R^3$ 中的 $2$-标架空间，它的秩二结构（例如四点 Gram 行列式为零）
+比秩三情形的对应约束要\textbf{显式}得多。这是 P1 路线的第二种可能形态。
+\end{remark}
+
+\subsection{$\Phi(Q)=\lambda_{\max}(Q_+)$ 是凸的：谱盒归约定理}\label{sec:convex}
+
+这是本轮一个短小但\textbf{方向性很强}的定理。它说明「秩三」这个离散约束在求上确界时可以\emph{无损}丢掉，
+同时也说明为什么丢掉之后仍然做不出 $\rho_0$。
+
+\begin{theorem}[凸性与谱盒归约，已证]\label{thm:convex}
+记 $\mathcal S_N:=\{Q\in\R^{N\times N}_{\rm sym}:0\preceq Q\preceq I,\ \tr Q=3\}$（谱盒），
+$\Phi(Q):=\lambda_{\max}(Q_+)$。则
+\begin{enumerate}[label=(\alph*),leftmargin=2.2em]
+\item $\Phi$ 在\emph{全体}对称矩阵上是凸函数；
+\item $\operatorname{conv}\bigl(\mathcal P_3(N)\bigr)=\mathcal S_N$，且 $\mathcal S_N$ 的极点恰是 $\mathcal P_3(N)$；
+\item 因此 $\kappa_3(N)=\max_{Q\in\mathcal P_3(N)}\Phi(Q)=\max_{Q\in\mathcal S_N}\Phi(Q)$。
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(a) 因为 $Q_+\ge0$ 逐点非负，对任意单位向量 $y$ 有 $y^\top Q_+y\le|y|^\top Q_+|y|$，故
+\[
+\Phi(Q)=\max_{\substack{y\ge0\\ \|y\|=1}}y^\top Q_+y=\max_{\substack{y\ge0\\ \|y\|=1}}\sum_{i,j}(q_{ij})_+\,y_iy_j .
+\]
+固定 $y\ge0$ 时，每一项 $(q_{ij})_+y_iy_j$ 是 $q_{ij}$ 的函数 $t\mapsto c\,(t)_+$ 与 $c=y_iy_j\ge0$ 的复合，
+而 $c\,(t)_+$ 在 $c\ge0$ 时是凸函数（它是 $\max(ct,0)$）。有限个凸函数之和仍凸，
+故内层函数对 $Q$ 凸；$\Phi$ 是一族凸函数的逐点上确界，因此凸。
+
+(b) $\mathcal P_3(N)$ 是对角阵 $\mathrm{diag}(1,1,1,0,\dots,0)$ 的\emph{酉轨道}。
+酉轨道的凸包由 Schur--Horn 定理刻画为 $\{Q:\mathrm{spec}(Q)\prec(1,1,1,0,\dots,0)\}$，
+而这正是 $\mathcal S_N$（$0\preceq Q\preceq I$ 且 $\tr Q=3$ 等价于特征值落在 $[0,1]$ 且和为 $3$，
+即被 $(1,1,1,0,\dots)$ 优超）。凸紧集的极点：$Q\in\mathcal S_N$ 是极点当且仅当它不能写成两个不同点的中点，
+这在谱语言里等价于每个特征值都是 $0$ 或 $1$，即 $Q\in\mathcal P_3(N)$。
+
+(c) 凸函数在凸紧集上的最大值在极点取得，故 $\max_{\mathcal S_N}\Phi=\max_{\mathcal P_3(N)}\Phi$。$\square$
+\end{proof}
+
+\begin{remark}[这条定理的两副面孔]\label{rmk:convexread}
+(i) \textbf{好的一面}：$\kappa_3(N)$ 可以在谱盒 $\mathcal S_N$ 上计算，秩三约束是\emph{免费}的。
+这为「用半定/矩方法给 $\kappa_3$ 配上界」提供了合法性：任何在 $\mathcal S_N$ 上成立的 $\Phi$ 的上界，
+自动就是 $\kappa_3(N)$ 的上界，不需要额外论证极值点是投影。
+第~\ref{sec:relax} 小节的 REL 松弛与第~\ref{sec:conefamily} 小节的等变弧都落在这个框架里。
+
+(ii) \textbf{坏的一面}：$\Phi$ 是凸的，所以「在 $\mathcal S_N$ 上最大化 $\Phi$」是一个\emph{凸最大化}问题，
+不是半定规划；任何把它变成可解问题的做法都必须用一个\emph{凹的或线性的}函数从上方控制 $\Phi$，
+而这一步必然损失。两个已经量化过的例子：
+\begin{itemize}
+\item $\Phi(Q)\le\frac12\bigl(1+\lambda_{\max}(|Q|)\bigr)$（因为 $Q_+=\frac12(Q+|Q|)$）。
+右端在 $\mathcal S_N$ 上可以取到 $\Phi=\frac{3+\sqrt5}4$——见证正是 ETF（$\lambda_{\max}(|Q|)=\varphi$）；
+再用 $\lambda_{\max}(|Q|)\le\||Q|\|_F=\|Q\|_F=\sqrt3$ 就退化成 Mohar 的 $\frac{1+\sqrt3}2$。
+\item 完全丢掉自洽性 $A=1\{Q>0\}$ 之后，命题~\ref{prop:octnogo} 给出八面体测试集上的值 $4/3>\rho_0$。
+\end{itemize}
+所以凸化路线的\textbf{最好成绩恰好是 \STW\ 的 $\Phi$}——这与定理~\ref{thm:zonal} 的结论完全一致，
+而且是同一个现象的两个视角：$\Phi$ 是「线性/凹控制」的天花板，$\rho_0$ 需要非凸信息。
+\end{remark}
+
+\subsection{余秩一层：$\kappa_2(3)=\frac87$ 与 $\kappa_3(4)=\frac54$ 的自包含证明}\label{sec:corank1}
+
+$N$ 阶的秩 $N-1$ 投影恰好是 $\{I_N-vv^\top:\|v\|=1\}$，即「余秩一层」。
+定理~\ref{thm:convex} 在这一层把 $\kappa_{N-1}(N)$ 化成一个\textbf{球面上的}极值问题，
+而球面问题的符号分类是可以穷尽的。这一小节给出两个精确常数。
+
+\begin{proposition}[余秩一层的闭式，已证]\label{prop:corank1}
+设 $v\in\R^N$、$\|v\|=1$、$Q=I_N-vv^\top$（于是 $Q\in\mathcal P_{N-1}(N)$，即 $Q$ 在余秩一层）。
+\begin{enumerate}[label=(\alph*),leftmargin=2.2em]
+\item 若 $v$ 的非零坐标有 $m$ 个正、$1$ 个负（$N\ge m+1$），记 $v=(c\one_m,-d,0,\dots,0)$、$mc^2+d^2=1$。
+此时 $Q_+$ 在剩下的 $N-m-1$ 个坐标方向上是孤立的对角元 $1$，而在前 $m+1$ 个方向上给出
+\[
+\lambda_{\max}(Q_+)=\max\Bigl\{1,\ \tfrac12\bigl(1+(m-1)c^2\bigr)+\tfrac12\sqrt{(d^2-c^2)^2+4mc^2d^2}\Bigr\},
+\]
+其中第二项在 $c^2=\frac2{3m+1}$、$d^2=\frac{m+1}{3m+1}$ 处取最大值
+\begin{equation}\label{eq:fm1}
+f_{m,1}=\frac{4m}{3m+1}\qquad(m\ge2\ \text{时}\ f_{m,1}>1).
+\end{equation}
+\item 若 $v$ 有 $m$ 个正、$m$ 个负且两组内部分别相等（$N=2m$，$v=(c\one_m,-c\one_m)$、$c^2=\frac1{2m}$），则
+\begin{equation}\label{eq:fmm}
+\lambda_{\max}(Q_+)=f_{m,m}=1+\frac{m-1}{2m}=\frac{3m-1}{2m}.
+\end{equation}
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(a) $Q_+$ 的非对角正元恰是「正坐标 $\times$ 负坐标」的 $m$ 个交叉位置，值都是 $cd$；对角是 $1-c^2$（$m$ 个）与 $1-d^2$。
+由 $m$ 个正坐标的对称性，Perron 向量形如 $(y,y,\dots,y,z)$，于是问题化到二维子空间
+$\mathrm{span}\{\one_m/\sqrt m,\ e_{m+1}\}$ 上的矩阵
+$\begin{pmatrix}1-c^2&\sqrt m\,cd\\ \sqrt m\,cd&1-d^2\end{pmatrix}$，其特征值即所给公式。
+令 $z=c^2$、$d^2=1-mz$，被开方式成为 $1+(2m-2)z+(-3m^2+2m+1)z^2$，
+求导并整理得临界点方程 $z\bigl[4m(3m+1)z-8m\bigr]=0$，非零根 $z=\frac2{3m+1}$。
+代入后开方式\emph{恰好}等于 $1$（因为 $(m-1)^2+8m(m+1)=(3m+1)^2$），故
+$\lambda_{\max}=\frac12\cdot\frac{5m-1}{3m+1}+\frac12=\frac{4m}{3m+1}$。端点 $z=0$ 与 $z=1/m$ 都给 $1<\frac{4m}{3m+1}$。
+
+(b) $Q_+$ 是「对角 $1-\frac1{2m}$ $+$ $\frac1{2m}K_{m,m}$ 的邻接」，
+故 $\lambda_{\max}=1-\frac1{2m}+\frac1{2m}\cdot m=1+\frac{m-1}{2m}$。$\square$
+\end{proof}
+
+\begin{corollary}[$\kappa_2(3)=\frac87$，已证]\label{cor:k23}
+$\kappa_2(3)=\max_{\|v\|=1}\lambda_{\max}\bigl((I_3-vv^\top)_+\bigr)=\frac87$，
+极大化点 $v=\bigl(\sqrt{2/7},\sqrt{2/7},-\sqrt{3/7}\bigr)$，
+此时 $(I_3-vv^\top)_+$ 的特征多项式\textbf{精确}为 $\frac1{343}(7L-8)(7L-5)(7L-1)$。
+\end{corollary}
+
+\begin{proof}
+$\mathcal P_2(3)=\{I_3-vv^\top:\|v\|=1\}$（$3$ 维中秩二投影就是补一条直线），
+故不需要定理~\ref{thm:convex}，直接对 $v$ 的符号模式分类（三类）：
+\emph{三个坐标同号，或某个坐标为零且其余两个同号}时 $Q_+$ 的非对角元全部被抹成 $0$，于是它是对角阵，
+$\lambda_{\max}(Q_+)=\max_i(1-v_i^2)\le1<\frac87$；\emph{恰有一个坐标为零、另两个异号}时是 (a) 的 $m=1$ 情形，$f_{1,1}=1$；
+\emph{$2$ 正 $1$ 负}（或 $1$ 正 $2$ 负，由 $v\mapsto-v$ 对称）时正是命题~\ref{prop:corank1}(a) 的 $m=2$ 情形，
+最大值 $\frac{4\cdot2}{7}=\frac87$，$c^2=\frac27$、$d^2=\frac37$。
+特征多项式由符号计算直接展开。$\square$
+\end{proof}
+
+\begin{remark}\label{rmk:k23read}
+(i) 推论~\ref{cor:k23} 是 $k=2$ 情形常数 $c_2^\Sigma=\frac87$ 的一条\textbf{新的、三行的}证明；
+已知证明要走完全二部吹起的谱计算。这条副线值得单独写成一个小节（见第~\ref{sec:pq7} 小节的 P4）。
+(ii) $m=3$ 时 \eqref{eq:fm1} 给 $\frac65$，$m=2$ 时 \eqref{eq:fmm} 给 $\frac54$；
+两者都在 $N=4$ 的余秩一层内，而 $\frac54>\frac65$，所以 $\kappa_3(4)$ 的余秩一见证是\emph{平衡}的那一个：
+$v=(\frac12,\frac12,-\frac12,-\frac12)$，$\lambda_{\max}=\frac54$。这与注~\ref{rmk:n4exact} 的
+$Q=I_4-vv^\top$ 是\textbf{同一个}矩阵——于是 $\kappa_3(4)=\frac54$ 现在有了两条独立证明：
+行方差机制（定理~\ref{thm:LN} 在 $N=4$ 取等）与余秩一层穷举。
+(iii) $f_{m,m}=\frac{3m-1}{2m}\to\frac32$、$f_{m,1}=\frac{4m}{3m+1}\to\frac43$：
+余秩一层在 $N$ 大时给出的常数\emph{超过} $\rho_0$，
+这提醒我们 $Q=I_N-vv^\top$ 的秩是 $N-1$ 而不是 $3$，它只对 $\kappa_{N-1}(N)$ 有意义，
+不能拿来反驳 $\kappa_3\le\rho_0$。
+\end{remark}
+
+\subsection{斜率恒等式 $\rho=\frac{\alpha+\ell}2$、$\alpha=1$ 层与通道线性规划}\label{sec:slope1}
+
+\begin{lemma}[斜率恒等式，已证]\label{lem:slope1}
+在命题~\ref{prop:perronrig} 的记号下（$\alpha=x^\top Qx$、$\beta=x^\top Q_-x$、$\ell=x^\top|Q|x$、$\rho=\alpha+\beta$），
+恒有
+\begin{equation}\label{eq:slope1}
+\ell=\alpha+2\beta,\qquad\text{从而}\qquad \rho=\frac{\alpha+\ell}2 .
+\end{equation}
+于是主猜想 $\kappa_3\le\rho_0$ \textbf{逐字等价}于「第四条不等式」$\alpha+\ell\le2\rho_0$，
+并且冠军处取等（$\ell=1.586541134688899=2\rho_0-\alpha$，精确到 $10^{-15}$）。
+\end{lemma}
+
+\begin{proof}
+$|Q|=Q_++Q_-=Q+2Q_-$（逐点），故 $\ell=\alpha+2\beta$；$\rho=\alpha+\beta$ 是命题~\ref{prop:perronrig} 的 (b)。
+两式相加除以 $2$ 得 \eqref{eq:slope1} 的第二个式子。$\square$
+\end{proof}
+
+\begin{remark}\label{rmk:slope1read}
+(i) 引理~\ref{lem:slope1} 把注~\ref{rmk:rigiditylimit} 里那条「缺失的第四不等式」的\emph{形状}钉死了：
+它必须是 $\alpha+\ell$ 的线性界，斜率\textbf{只能}是 $1$（任何 $\alpha+c\ell\le C$ 形式在 $c\ne1$ 时
+都无法被冠军饱和，因为冠军同时给出 $\rho$ 与 $\alpha,\ell$ 的值）。
+(ii) 但它也说明这条路\textbf{没有提供新信息}：$\alpha+\ell\le2\rho_0$ 与 $\rho\le\rho_0$ 是同一句话。
+真正的杠杆在于 $\ell=x^\top|Q|x$ 是一个\emph{绝对值}量，
+而绝对值量有独立的工具（例如 $|Q|$ 的谱、$\|Q\|_1$、通道分解）。
+第~\ref{sec:nogo} 节的定理~\ref{thm:zonal} 正是把「对 $|Q|$ 做逐点主函数」这一整族方案封顶在 $\Phi$；
+所以剩下的可能性只有\textbf{耦合}通道（同时用到 $x$ 与 $Q$ 的联合结构）。
+\end{remark}
+
+\textbf{$\alpha=1$ 层（数值）。}若 $\alpha=1$，则 $Qx=x$，$x$ 落在 $Q$ 的像空间里，$\rho=1+\beta$。
+我们在这一层上做了全局搜索（差分进化 $+$ 多起点，$N=6$），得到 $\max\beta=0.258695<\tau=\rho_0-1=0.281568$，
+即 $\alpha=1$ 层给出 $\rho\le1.2587<\rho_0$。这说明\textbf{冠军不在 $\alpha=1$ 层的边界上}，
+「$\alpha$ 尽量大」与「$\beta$ 尽量大」之间存在真实的权衡；zonal 见证在这一层不可行。
+
+\textbf{通道线性规划（数值）。}把 $\ell=x^\top|Q|x$ 按「通道」（$q_{ij}$ 的符号与 $x_ix_j$ 的大小组合）拆成
+$8701$ 个构型，对每个构型写出线性约束并用 HiGHS 求解，得到：
+度 $2$ 通道的最优值 $z=2.7320505=1+\sqrt3$（与 Mohar 常数一致），
+度 $4,6,8,10$ 通道相对 $2\rho_0=2.563136$ 的缺口分别是 $+7.6\times10^{-3}$、$+5.2\times10^{-3}$、
+$+4.0\times10^{-5}$、$+1.1\times10^{-5}$。
+结论：\emph{单独}的 $x$-加权通道族并\textbf{不}被 $\Phi$ 封顶（度 $2$ 通道能到 $1+\sqrt3>2\Phi$），
+真正封顶的是\textbf{联合}通道界。这把第~\ref{sec:nogo} 节的否定性结论精确化了一层：
+损失不在单个通道，而在通道之间的耦合。
+
+\subsection{若干新的精确恒等式，以及一条被否证的充分性}\label{sec:miscid}
+
+\textbf{(1) $\|Q_-\|_F^2=\rho_0\tau$，精确。}冠军处
+\[
+\|Q_-\|_F^2=10d_2^2=\frac{16+5\sqrt7}{81}=0.360848846362012=\rho_0(\rho_0-1)=\rho_0\tau ,
+\]
+符号计算核验差为 $0$。这个值同时等于第~\ref{sec:fourcs} 小节的 $S_O=\sum_ir_i$（不等式 [g] 在冠军处取等），
+所以「负部的 Frobenius 能量」$=\rho_0\tau$ 是一个\emph{恒等式级别}的事实，不是近似。
+
+\textbf{(2) $Q_+$ 的完整谱，精确。}由 \eqref{eq:psip} 与定理~\ref{thm:conefam}，冠军的 $Q_+$ 的谱是
+\[
+\mathrm{spec}(Q_+)=\Bigl\{\rho_0,\ \mu_1^{[2]},\ \mu_2^{[2]},\ \lambda_-\Bigr\}
+=\{1.281568197,\ 0.692637910^{[2]},\ 0.117401872^{[2]},\ 0.098352240\},
+\]
+\[
+\mu_1=\tfrac{155-5\sqrt5-5\sqrt7-\sqrt{35}}{180},\quad
+\mu_2=\tfrac{25-5\sqrt5+5\sqrt7-\sqrt{35}}{180},\quad
+\lambda_-=\tfrac12+\tfrac{\sqrt5}{18}-\tfrac{4\sqrt{35}}{45}
+\]
+（与推论~\ref{cor:champclosed} 完全一致；此前版本此处误排为 $\{\rho_0,\mu_1^{[2]},\mu_2,0,0\}$，
+把 $\mu_2$ 写成单重并多出两个零，已于第 17 轮更正）。
+$Q_-$（即 $|Q|$ 的负部支撑）的谱是
+$\{0.379920437,\ 0.117401872^{[2]},\ 0,\ -0.307366^{[2]}\}=2g^\ast|s_2|\cdot\mathrm{spec}(A(C_5))$，
+其中 $0.117401872$ 与 $Q_+$ 的 $\mu_2$ \emph{相同}——这是 $Z_5$ 对称性的直接后果
+（同一个 $\psi_2$ 分量在 $Q$ 中是 $0$，在 $Q_+$ 与 $Q_-$ 中各留一份）。
+注意 $\nu_-(Q_-)=2$ 而 $\nu_-(Q_+)=0$，与 Weyl 型控制 $\nu_-(Q_+)\le\nu_-(Q_-)$ 一致。
+
+\textbf{(3) $|Q|$-路线的一行式与 Mohar 常数的第二次导出。}
+$Q_+=\frac12(Q+|Q|)$ 给
+\[
+\lambda_{\max}(Q_+)\le\tfrac12\bigl(\lambda_{\max}(Q)+\lambda_{\max}(|Q|)\bigr)\le\tfrac12\bigl(1+\|Q\|_F\bigr)=\tfrac{1+\sqrt3}2,
+\]
+最后一步用 $\lambda_{\max}(|Q|)\le\||Q|\|_F=\|Q\|_F=\sqrt3$。这就是 Mohar 的 $\frac{1+\sqrt3}2$，
+与定理~\ref{thm:LN} 的 $\lim_{N\to\infty}L(N)$ \textbf{完全相同}——
+「行方差机制的 $N\to\infty$ 极限」与「一次 Cauchy--Schwarz」给同一个常数，
+这不是偶然：定理~\ref{thm:LN} 的证明在双均匀层里退化成一次 CS。
+冠军处 $\lambda_{\max}(|Q|)=1.602533590389977<\varphi$，故这条路线给 $1.301267$，
+而 ETF 处 $\lambda_{\max}(|Q|)=\frac12+\frac{\sqrt5}2=\varphi$ 恰好给 $\frac{1+\varphi}2=\Phi$。
+\textbf{\STW\ 的 $\Phi$ 就是 $|Q|$-路线在 ETF 上的取值。}
+
+\textbf{(4) \STW\ 命题 6.1 的一行重导。}
+对图 $G$，令 $M=\Sigma\circ Q$（$\Sigma=1\{Q>0\}$ 为掩码，$Q$ 为 $\Lam_3$ 的 Ky Fan 对偶投影），
+则 $\Lam_3(G)=\tr(M\cdot A)$ 型的计算给出 $\Lam_3(G)\le n\cdot\lambda_{\max}(Q_+)-3$，
+所以 $\kappa_3:=\sup_N\max_{Q\in\mathcal P_3(N)}\lambda_{\max}(Q_+)$ 一旦 $\le\rho_0$ 就得到主定理。
+这条重导比 \STW\ 原文短得多，且把「$-3$」的来源讲清楚了（$\tr Q=3$）。
+
+\textbf{(5) KKT 对偶变量（已验证）。}极值问题的 KKT 条件给出一个对偶矩阵 $\Lambda$，
+冠军处 $\tr\Lambda=\lambda=\rho_0$ \emph{精确}，$\mathrm{spec}(\Lambda)=\{0.762031,\ 0.259768^{[2]}\}$。
+这条恒等式说明冠军的 KKT 乘子没有退化，局部刚性（定理~\ref{thm:champ} 附近的 Hess 认证）是\emph{严格}的局部极大，
+不是鞍点。
+
+\textbf{(6) 一条被否证的充分性（否证也是交付物）。}
+第~\ref{sec:fourcs} 小节的不等式 [g] $\beta\le\sqrt{S_OW_O}$ 在冠军处取等，
+因此很自然地会猜想「$[g]$ 取等 $+$ 秩三 $\Rightarrow$ 冠军」。这是\textbf{假的}：
+在 $N=4$ 上，$[g]$ 单独（配上秩三与 Perron 条件）允许 $\rho=1.4186>\rho_0$。
+所以 [g] 的取等只是冠军的\emph{必要}特征，不是刻画；四条 CS 同时取等（注~\ref{rmk:quadtight}）才是。
+这也再次说明：把不等式一条条加进 REL 时，必须\textbf{同时}检查它们能否被非冠军构型饱和。
+
+\subsection{更新后的方法优先队列（第七版）}\label{sec:pq7}
+
+第~\ref{sec:pq6} 小节的队列（第六版）在本轮之后需要大改：旧队首 P1 被命题~\ref{prop:chamberdead} 否证，
+旧 P6 被引理~\ref{lem:slope1} 吸收。新队列如下（完整版见 \texttt{研究方法优先级协议.md} 第七版）：
+
+\begin{center}\small
+\begin{tabular}{p{1.1cm}p{3.1cm}p{8.6cm}p{1.6cm}}
+\toprule
+位次 & 名称 & 内容与判据 & 现状\\
+\midrule
+\textbf{P1} & 全局：秩三约束 $\times$ REL &
+把引理~\ref{lem:rowid}(iii) 的三角形恒等式 \eqref{eq:tri}、四点 Gram 行列式 $\det G_4\ge0$、
+以及 $\R^3$ 中等角线 $\le6$ 的约束加进第~\ref{sec:relax} 小节的 REL，
+在 $Z_5$-对称五角星图案类内闭合 $3.2128\times10^{-3}$ 的缺口。
+判据：REL$^+$ 的天花板降到 $\rho_0$，或找到一个 $>\rho_0$ 的合法构型（后者同样是重大结果）。 & 主攻\\
+P2 & 整数化锐化（脱离 $Z_5$） &
+把命题~\ref{prop:ladder6} 的整数化阶梯推广到 $N=6$ 的一般图案（不正则的钝角图），
+特别是 $n=1$ 子层的精确上确界。判据：双均匀层的上界降到 $\le1.29$。 & 排队\\
+P3 & 证明 $\mathrm{REL}(N)=L(N)$ &
+定理~\ref{thm:LN} 只对双均匀层成立；REL 的自由上确界在 $N=5,6,7,8,10,12$ 数值上等于 $L(N)$（误差 $\le4\times10^{-6}$）。
+若对一切 $N$ 证明相等，则 $\kappa_3(N)\le L(N)$ 成为无条件定理（$N\le6$ 优于或等于 \STW）。 & 排队\\
+P4 & 副线：$\kappa_2=\frac87$ 对一切 $N$ &
+推论~\ref{cor:k23} 已给 $N=3$。若能把余秩一层 $+$ 定理~\ref{thm:convex} 的组合推到一般 $N$，
+就得到 $c_2^\Sigma=\frac87$ 的新证明。判据：$\mathcal P_2(N)$ 上的完整符号分类。 & 副线\\
+P5 & 旧队列降级项 &
+$k\ge3$ 断点定位、原子化、$\min(a,b)=1$ 族的 $\frac65$、范数改写：全部降为「有余力再做」。 & 降级\\
+\midrule
+弹出 & 旧 P1（腔掩码不存在性） & 命题~\ref{prop:chamberdead} 否证：$K_{2,2,2}$ 是腔掩码，$19/19$ 未闭合类都是腔掩码。 & 已否证\\
+吸收 & 旧 P6（联合 $\alpha+\ell$） & 引理~\ref{lem:slope1} 说明它与主猜想逐字等价，无独立内容。 & 已吸收\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{P1 的三种具体形态}（按我们的偏好排序，都是数学方法而非搜索）：
+\begin{enumerate}[label=(\alph*),leftmargin=2.2em]
+\item \textbf{三角形恒等式路线}。由 \eqref{eq:tri}，$\sum_{i<j<k}q_{ij}q_{jk}q_{ki}$ 被对角线单独决定。
+在 $Z_5$-对称层里这个和可以显式算出（只有三种三角形：$(h,j,j{+}1)$、$(h,j,j{+}2)$、$(j,j{+}1,j{+}2)$），
+于是 \eqref{eq:tri} 变成 $(g_h,g_c,d_1,d_2,A)$ 的一个\emph{方程}。第~\ref{sec:conefamily} 小节说明这个方程在等变层里是恒等式，
+所以必须\textbf{先降低对称性}（见 (c)）它才会咬人。
+\item \textbf{四点 Gram 路线}。$Q=VV^\top$、$V\in\mathrm{St}(N,3)$，故任意四行的 Gram 行列式 $\det G_4\ge0$，
+且在 $N\ge4$ 时四点必线性相关、$\det G_4=0$ 是\emph{等式}。冠军的六个向量在 $\R^3$ 中，
+所有 $\binom64=15$ 个四点行列式都为零，这是 $15$ 个方程——远比 REL 的四条不等式强。
+把它们写成 $(g,\pi,r,w)$ 语言的代理形式是 P1 的核心技术工作。
+\item \textbf{降对称路线}。把 $Z_5$ 降为 $Z_2$（hub $+$ 锥点上的一个对合），
+等变参数从 $1$ 维升到 $4$ 维，秩三约束第一次非平凡。
+此时第~\ref{sec:conefamily} 小节的技巧（分类 $\mu$ 特征值）仍然适用，只是分量的重数变了。
+\end{enumerate}
+
+\section{本轮新结果（第 13--14 轮）：调和恒等式、帧测度重构、二阶变分公式与「六原子归约」}\label{sec:harm}
+
+\subsection{为什么要换语言}\label{sec:harm:motiv}
+
+前十一轮的工作有一个共同的形状：固定 $N$，把 $\mathcal P_3(N)$ 按符号图案分类，逐类认证。
+这条路在 $N=5$ 上走通了（定理~\ref{thm:n5frame}），在 $N=6$ 上把 $22$ 类压到 $20$ 类，
+但每增加一个 $N$，类数按 $2^{\binom N2}$ 增长，而注~\ref{rmk:ladderinfo}(2) 已经告诉我们
+$N\ge7$ 的最大值点是\emph{退化}的——冠军加几个几乎零权的原子。
+也就是说，逐 $N$ 穷举在原理上就在做重复劳动。本轮我们换了两次语言，
+目的都是让 $N$ 从问题里消失：
+
+\begin{itemize}[leftmargin=2em]
+\item 第 13 轮：把 $Q=VV^\top$ 拆成「质量 $g_i$ $+$ 方向 $u_i\in S^2$」，
+得到一组精确恒等式，其中最重要的是\textbf{调和恒等式} $\rho H=3$（定理~\ref{thm:harmonic}）。
+它把主猜想 $\kappa_3\le\rho_0$ 改写成一个\emph{下界}问题：调和泛函 $H\ge 3/\rho_0$。
+同时 $N$ 消失了：$\kappa_3$ 变成球面上一类「紧框架测度」的二次型上确界（定理~\ref{thm:nfree}）。
+\item 第 14 轮：既然约束 $\sum g_i=3$、$\sum g_iu_iu_i^\top=I_3$ 对质量 $g$ 是\emph{线性}的，
+可行集就是一个弱$^*$紧凸集，而它的极端点只有 $\le6$ 个原子（命题~\ref{prop:extreme}，Carathéodory）。
+于是问题变成：目标 $\rho$ 沿这个凸集的直线是不是拟凸的？
+定理~\ref{thm:secondvar} 给出二阶变分的\emph{精确闭式}，
+它把拟凸性化归为 $Q_+$ 的谱符号这一件可计算的事情；
+定理~\ref{thm:atomreduce} 给出条件性的「六原子归约定理」，
+把全局猜想化归为 $N=6$ 的有限问题。
+\end{itemize}
+
+另外，定理~\ref{thm:Fn} 把冠军放进一个自然的对称族 $F_n$（枢纽 $+$ 正 $n$ 边形）里逐 $n$ 精确求解，
+结论是：这个族在 $n=5$（即 $N=6$）处取到唯一峰值，值恰好是 $\rho_0$，
+而且 $\rho_0$ 第一次有了一个不依赖数值搜索的解析来源。
+
+\subsection{记号与字典}\label{sec:harm:dict}
+
+设 $Q=VV^\top\in\mathcal P_3(N)$，$V\in\mathrm{St}(N,3)$，$Q_+$ 为逐元正部，
+$\rho=\lambda_{\max}(Q_+)$，$x\ge0$、$|x|=1$ 为 $Q_+$ 的 Perron 向量。
+记 $v_i\in\R^3$ 为 $V$ 的第 $i$ 行，$g_i=|v_i|^2=Q_{ii}$，$u_i=v_i/\sqrt{g_i}\in S^2$。
+因为 $V^\top V=I_3$，
+\begin{equation}\label{eq:frame}
+\sum_{i=1}^N g_i=\tr Q=3,\qquad
+\sum_{i=1}^N g_iu_iu_i^\top=\sum_{i=1}^N v_iv_i^\top=V^\top V=I_3 ,
+\end{equation}
+第二条即\textbf{紧框架条件}，等价于
+\begin{equation}\label{eq:framez}
+\sum_{i=1}^N\langle v_i,z\rangle^2=1\qquad\forall z\in S^2 .
+\end{equation}
+再定义
+\[
+c_i=\sqrt{g_i}\,x_i,\quad
+G_+=\bigl(\langle u_i,u_j\rangle_+\bigr)_{ij},\quad
+p=G_+c,\quad
+\omega_i=\frac{c_i}{p_i},\quad
+H=\sum_i\omega_i,\quad
+\Psi=\sum_ic_i ,
+\]
+\[
+\alpha=x^\top Qx=\Bigl|\sum_ic_iu_i\Bigr|^2,\quad
+\ell=x^\top|Q|x=\sum_{ij}c_ic_j|\langle u_i,u_j\rangle|,\quad
+\varphi(z)=\sum_ic_i|\langle u_i,z\rangle| .
+\]
+
+\begin{lemma}[字典]\label{lem:dict}
+在上述记号下：
+\begin{enumerate}[label=(\roman*),leftmargin=2.2em]
+\item $\rho x_i=\sqrt{g_i}\,p_i$，从而 $\rho=c^\top G_+c=\sum_ic_ip_i$；
+\item $g_i=\rho\,\omega_i$（\textbf{Perron$\leftrightarrow$框架字典}）；
+\item $\rho H=3$，即 $\rho=3/H$；
+\item $\sum_i\omega_iu_iu_i^\top=I_3/\rho$（\textbf{调和权的各向同性}）；
+\item $2\rho=\alpha+\ell$，且 $\alpha\le1$；
+\item $\varphi(z)\le1$ 对一切 $z\in S^2$（\textbf{带位势不等式}），
+从而 $p_i\le\varphi(u_i)\le1$、$\ell\le\Psi\le\sqrt3$。
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) $\rho x_i=(Q_+x)_i=\sum_j\bigl(\sqrt{g_ig_j}\langle u_i,u_j\rangle\bigr)_+x_j
+=\sqrt{g_i}\sum_j\langle u_i,u_j\rangle_+\sqrt{g_j}x_j=\sqrt{g_i}p_i$。
+两边乘 $x_i$ 求和：$\rho=\sum_i\sqrt{g_i}x_ip_i=\sum_ic_ip_i=c^\top G_+c$。
+
+(ii) 由 (i)，$p_i=\rho x_i/\sqrt{g_i}$，故 $\omega_i=c_i/p_i=\sqrt{g_i}x_i\cdot\sqrt{g_i}/(\rho x_i)=g_i/\rho$。
+
+(iii) $H=\sum_i\omega_i=\sum_ig_i/\rho=3/\rho$，用了 \eqref{eq:frame}。
+
+(iv) $\sum_i\omega_iu_iu_i^\top=\frac1\rho\sum_ig_iu_iu_i^\top=I_3/\rho$。
+
+(v) $(t)_+=\frac12(t+|t|)$ 逐元成立，故 $\rho=x^\top Q_+x=\frac12(\alpha+\ell)$；
+又 $Q\preceq I$（秩三正交投影），故 $\alpha=x^\top Qx\le|x|^2=1$；
+$\alpha=|V^\top x|^2=|\sum_ix_iv_i|^2=|\sum_ic_iu_i|^2$。
+
+(vi) 由 \eqref{eq:framez} 与 Cauchy--Schwarz，
+\[
+\varphi(z)^2=\Bigl(\sum_jx_j\cdot\sqrt{g_j}|\langle u_j,z\rangle|\Bigr)^2
+\le\Bigl(\sum_jx_j^2\Bigr)\Bigl(\sum_jg_j\langle u_j,z\rangle^2\Bigr)=1\cdot|z|^2=1 .
+\]
+于是 $p_i=\sum_jc_j\langle u_j,u_i\rangle_+\le\sum_jc_j|\langle u_j,u_i\rangle|=\varphi(u_i)\le1$，
+$\ell=\sum_ic_i\varphi(u_i)\le\sum_ic_i=\Psi$，
+最后 $\Psi=\sum_i\sqrt{g_i}x_i\le\sqrt{\sum_ig_i}\sqrt{\sum_ix_i^2}=\sqrt3$。
+\end{proof}
+
+引理~\ref{lem:dict} 的六条都是几行的计算，但它们把原来分散的量全部串起来了：
+$g$（质量）、$x$（Perron）、$u$（方向）、$p$（位势）、$\omega$（调和权）
+五个对象之间只有\emph{一个}自由度——字典 (ii) 说，知道 $\rho$ 与 $\omega$ 就知道 $g$。
+冠军处的数值（脚本 \texttt{\_n6.py}，全部残差 $\le4.4\times10^{-16}$）：
+\[
+\begin{aligned}
+&g=(0.331767104061,\ 0.533646579188^{[5]}),\quad
+c=(0.255828489269,\ 0.292702334536^{[5]}),\\
+&p=(0.988228343580,\ 0.702933397722^{[5]}),\quad
+\omega=(0.258875887269,\ 0.416401234433^{[5]}),\\
+&H=2.340882059435,\quad \Psi=1.719340161947,\quad
+\alpha=0.976595259055,\quad \ell=1.586541134689 .
+\end{aligned}
+\]
+
+\subsection{调和恒等式与主猜想的新形式}\label{sec:harm:H}
+
+\begin{theorem}[调和恒等式]\label{thm:harmonic}
+对任意 $Q\in\mathcal P_3(N)$，
+\[
+\Bigl(\sum_ic_ip_i\Bigr)\Bigl(\sum_i\frac{c_i}{p_i}\Bigr)=3,\qquad\text{即}\qquad \rho\cdot H=3,\quad \rho=\frac3H .
+\]
+特别地
+\[
+\frac3{\rho_0}=\frac{54}{9+\sqrt5+2\sqrt{35}}
+=\frac{15\sqrt7+9\sqrt{35}-18\sqrt5-48}{2}=2.340882059434595\ldots
+\]
+\end{theorem}
+
+\begin{proof}
+这就是引理~\ref{lem:dict}(i)$+$ (iii)：第一个因子是 $\rho$，第二个是 $H=3/\rho$。
+闭式由 $\rho_0=(9+\sqrt5+2\sqrt{35})/18$ 有理化得到（\texttt{sympy} 化简差为 $0$）。
+\end{proof}
+
+这条恒等式的价值不在它难（它是 Cauchy--Schwarz 取等缺陷的另一种写法，
+见定理~\ref{thm:psi}），而在于它\textbf{把上界问题翻成下界问题}：
+
+\begin{conjecture}[主猜想的新形式]\label{conj:Hform}
+对一切可行的 $(u,g)$（即满足 \eqref{eq:frame} 且 $x$ 为 $Q_+$ 的 Perron 向量），
+\[
+H=\sum_{i=1}^N\frac{c_i}{(G_+c)_i}\ \ge\ \frac3{\rho_0}=2.340882059434595 .
+\]
+等价地，在「调和权各向同性」$\sum_i\omega_iu_iu_i^\top=(H/3)I_3$
+（引理~\ref{lem:dict}(iv) 的改写）这一约束下极小化 $H$。
+冠军处取等：$\rho_0\cdot2.340882059434594=3$（残差 $4.4\times10^{-16}$）。
+\end{conjecture}
+
+\begin{remark}[为什么这个形式可能更好]\label{rmk:Hform}
+(i) 约束 $\sum_i\omega_iu_iu_i^\top=(H/3)I_3$ 是\emph{齐次}的：把 $\omega$ 整体缩放不改变它，
+所以 $H$ 的极小化只跟 $\omega$ 的\emph{比例}和方向 $u$ 有关，尺度由 $\rho=3/H$ 自动确定。
+(ii) $\omega_i=c_i/p_i$ 是「质量除以位势」，物理上像静电容量：
+$H$ 是总容量，而 $\rho=3/H$ 说\textbf{容量越大、谱半径越小}。
+(iii) 它给出一个立刻可用的\emph{反伪证判据}：任何松弛如果产出的极值点不满足 $\rho H=3$，
+就是伪的。第~\ref{sec:harm:fail} 小节里 REL2 的 $1.314006$ 正是这样被识破的。
+\end{remark}
+
+
+\subsection{$\Psi\le\sqrt3$ 的精确缺陷式，与 Mohar 界的两个新证明}\label{sec:harm:mohar}
+
+\begin{theorem}[$\Psi$ 的上界与精确缺陷]\label{thm:psi}
+$\Psi\le\sqrt3$，且缺陷有\emph{精确}表达式
+\begin{equation}\label{eq:psidef}
+3-\Psi^2=\sum_{i<j}\frac{c_ic_j(p_i-p_j)^2}{p_ip_j}\ \ge\ 0 .
+\end{equation}
+因此 $\Psi=\sqrt3$ 当且仅当 $p\equiv$ 常数；而 $p\equiv$ 常数与 $\rho=\frac12(\alpha+\ell)$、
+$\ell\le\Psi$ 联立会推出 Mohar 界取等，这在秩三情形不可能（定理~\ref{thm:projmohar}(b)）。
+冠军处 $3-\Psi^2=0.043869407516$，与 \eqref{eq:psidef} 右端之差 $1.9\times10^{-16}$。
+\end{theorem}
+
+\begin{proof}
+对 $a_i=\sqrt{c_ip_i}$、$b_i=\sqrt{c_i/p_i}$ 用 Cauchy--Schwarz：
+$\sum a_ib_i=\Psi$、$\sum a_i^2=\sum c_ip_i=\rho$、$\sum b_i^2=\sum c_i/p_i=H$，
+而标准的 CS 缺陷式给
+$\bigl(\sum a_i^2\bigr)\bigl(\sum b_i^2\bigr)-\bigl(\sum a_ib_i\bigr)^2=\sum_{i<j}(a_ib_j-a_jb_i)^2$，
+右端 $=\sum_{i<j}c_ic_j\bigl(\sqrt{p_i/p_j}-\sqrt{p_j/p_i}\bigr)^2=\sum_{i<j}c_ic_j(p_i-p_j)^2/(p_ip_j)$。
+左端由定理~\ref{thm:harmonic} 等于 $3-\Psi^2$。取等当且仅当 $a\propto b$，即 $p\equiv$ 常数。
+
+若 $p\equiv p_0$，则由引理~\ref{lem:dict}(i) 与 $x=\sqrt g\,^{-1}c$：
+$\rho x_i=\sqrt{g_i}p_0$，故 $x_i\propto\sqrt{g_i}$；结合 $|x|=1$ 与 $\sum g_i=3$ 得
+$x_i=\sqrt{g_i}/\sqrt3$、$c_i=g_i/\sqrt3$，于是 $\Psi=\sum g_i/\sqrt3=\sqrt3$。
+此时引理~\ref{lem:dict}(vi) 的两次 Cauchy--Schwarz 都必须取等：
+$\varphi(u_i)=1$ 对所有 $i$ 成立，其取等条件是
+$x_j/\sqrt{g_j}\propto|\langle u_j,u_i\rangle|$（对每个 $i$、一切 $j$），
+而 $x_j/\sqrt{g_j}=1/\sqrt3$ 为常数，故 $|\langle u_i,u_j\rangle|=s$（$i\ne j$）为常数，
+且 $g_i\equiv3/N$（等权紧框架）。这样的等角紧框架满足 $s^2=(N-3)/(3(N-1))$；
+另一方面 $\ell=c^2(N+s^2N(N-1))=3/N+3s^2(N-1)/N$，令其等于 $\sqrt3$ 得
+$s^2=(\sqrt3N-3)/(3(N-1))$，两式相减给 $N=\sqrt3N$，即 $N=0$，矛盾。
+\end{proof}
+
+\begin{corollary}[Mohar 界，三行新证]\label{cor:mohar3}
+$\rho\le\frac12(1+\sqrt3)=1.366025403784439$。
+\end{corollary}
+
+\begin{proof}
+$\rho=\frac12(\alpha+\ell)\le\frac12(1+\Psi)\le\frac12(1+\sqrt3)$，
+用了引理~\ref{lem:dict}(v)、(vi)。$\square$
+\end{proof}
+
+第二个证明完全不同，而且顺带给出「永不取等」的最短理由。它只用 $Q$ 是\emph{投影}这一事实。
+
+\begin{theorem}[投影子表述下的 Mohar 界]\label{thm:projmohar}
+设 $Q\in\mathcal P_3(N)$。则：
+\begin{enumerate}[label=(\alph*),leftmargin=2.2em]
+\item \textbf{行能量恒等式}：$\sum_jQ_{ij}^2=(Q^2)_{ii}=Q_{ii}=g_i$，从而 $\bigl\||Q|\bigr\|_F^2=\sum_{ij}Q_{ij}^2=\tr Q^2=3$；
+\item $\rho\le\frac12\bigl(1+\lambda_{\max}(|Q|)\bigr)\le\frac12(1+\sqrt3)$，且\textbf{第二个不等号永不取等}；
+\item \textbf{Perron 方程的对称形式}：$2\rho x=Qx+|Q|x$，且 $(|Q|x)_i\le\sqrt{g_i}$；
+\item 由此 $2\rho x_i\le\sqrt{g_i}(1+\sqrt\alpha)$，故 $\rho\le\frac{\sqrt3}2(1+\sqrt\alpha)$。
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(a) $Q^2=Q$（秩三正交投影）。(b) $Q_+=\frac12(Q+|Q|)$ 逐元，故
+$\rho=\lambda_{\max}(Q_+)\le\frac12\lambda_{\max}(Q)+\frac12\lambda_{\max}(|Q|)
+\le\frac12\cdot1+\frac12\bigl\||Q|\bigr\|_F=\frac12(1+\sqrt3)$。
+若取等，则 $\lambda_{\max}(|Q|)=\||Q|\|_F$，即 $|Q|$ 的其余特征值全为零，$|Q|=aa^\top$ 为秩一；
+比较对角元得 $a_i^2=g_i$，于是 $|\langle v_i,v_j\rangle|=\sqrt{g_ig_j}=|v_i||v_j|$，
+所有 $v_i$ 两两平行，$\rank Q=1\ne3$，矛盾。
+
+(c) 逐元 $(Q_+)_{ij}=\frac12(Q_{ij}+|Q_{ij}|)$ 作用在 $x$ 上即得。
+再由 (a) 与 Cauchy--Schwarz，$(|Q|x)_i=\sum_j|Q_{ij}|x_j\le\sqrt{\sum_jQ_{ij}^2}\sqrt{\sum_jx_j^2}=\sqrt{g_i}$。
+
+(d) $(Qx)_i=\langle v_i,w\rangle$，其中 $w=V^\top x$、$|w|^2=\alpha$，故
+$(Qx)_i\le|v_i||w|=\sqrt{g_i\alpha}$；代入 (c) 得
+$2\rho x_i\le\sqrt{g_i}(1+\sqrt\alpha)$。平方求和并用 $\sum g_i=3$：
+$4\rho^2\le3(1+\sqrt\alpha)^2$。
+\end{proof}
+
+\begin{remark}[哪一步松、松多少]\label{rmk:projmoharslack}
+冠军处 $\lambda_{\max}(|Q|)=1.602533590390$，于是 (b) 的第一段给
+$\rho\le\frac12(1+1.602534)=1.301266795195$——\textbf{已经优于} $\Phi=1.309017$，
+但仍比 $\rho_0$ 大 $1.97\times10^{-2}$。我们一开始以为「把 $\lambda_{\max}(|Q|)$ 直接压到
+$2\rho_0-1=1.563136393744$ 就行了」，但冠军本身就违反它（$1.602534>1.563136$），
+所以这条路\textbf{被否证}：$\lambda_{\max}(|Q|)$ 不是正确的中间量，
+必须回到「同一个 $x$ 下的 $\alpha$ 与 $\ell$ 的\emph{联合}约束」。
+(d) 更弱：$\alpha=0.976595$ 时它给 $\rho\le\frac{\sqrt3}2(1+0.988228)=1.721$，
+远不如 Mohar，只作为 (c) 的一个副产品记录在此。
+(c) 中 $(|Q|x)_i\le\sqrt{g_i}$ 在冠军处的最大余量是 $-6.78\times10^{-3}$，
+即这一条其实相当紧，但把 $N$ 条不等式直接平方相加会丢掉它们之间的相位关系。
+\end{remark}
+
+\subsection{方差族与 zonotope 读法}\label{sec:harm:var}
+
+\begin{theorem}[方差恒等式]\label{thm:variance}
+\[
+\langle p^2\rangle_\omega=\frac{\rho^2}3,\qquad
+\operatorname{Var}_\omega(p)=\frac{\rho^2(3-\Psi^2)}9,\qquad
+\sum_{ij}\omega_i\omega_j\langle u_i,u_j\rangle^2=\frac{H^2}3,\qquad
+\sum_ig_ip_i^2=\rho^2 .
+\]
+冠军处依次为 $0.547472347745$、$0.008005762509$、$1.826576272061$、$1.642417043234$
+（与闭式之差 $\le3.3\times10^{-16}$）。
+\end{theorem}
+
+\begin{proof}
+$\sum_i\omega_ip_i^2=\sum_ic_ip_i=\rho$，除以 $H=3/\rho$ 得第一条；
+$\langle p\rangle_\omega=\Psi/H=\Psi\rho/3$，代入即第二条。
+第三条：$\sum_{ij}\omega_i\omega_j\langle u_i,u_j\rangle^2
+=\tr\bigl(\sum_i\omega_iu_iu_i^\top\bigr)^2=\tr(I_3/\rho)^2=3/\rho^2=H^2/3$，
+用了引理~\ref{lem:dict}(iv)。第四条：$\sum_ig_ip_i^2=\rho\sum_i\omega_ip_i^2=\rho^2$。
+\end{proof}
+
+注意 $\operatorname{Var}_\omega(p)$ 与 $3-\Psi^2$ 成正比：\textbf{$p$ 越接近常数，$\Psi$ 越接近 $\sqrt3$}，
+而定理~\ref{thm:psi} 已证这不可能。所以方差恒等式其实是「Mohar 界不取等」的定量版本：
+冠军处 $\operatorname{Var}_\omega(p)=8.0\times10^{-3}\ne0$，$p$ 的两个值
+$0.988228$（枢纽）与 $0.702933$（五边形）差得很远。
+
+\begin{proposition}[zonotope 读法]\label{prop:zonotope}
+令 $Z=\sum_ic_i[-u_i,u_i]\subset\R^3$（三维 zonotope）。则引理~\ref{lem:dict}(vi) 恰好是
+$Z\subseteq B^3$；支撑函数 $h_Z(z)=\varphi(z)$，平均宽度 $w(Z)=\frac2\pi\cdot\pi\Psi$ 正比于 $\Psi\le\sqrt3$，
+且 $\ell=\sum_ic_ih_Z(u_i)$、$\rho=\frac12\bigl(|\sum_ic_iu_i|^2+\sum_ic_ih_Z(u_i)\bigr)$。
+\end{proposition}
+
+这条改写没有立即产出新不等式（我们试过用 $Z\subseteq B^3$ 的体积/宽度不等式，
+都被 $Z$ 的高度非均匀性抵消），但它把问题变成了一个\emph{凸体}的语言：
+「在单位球内的 zonotope 中，最大化 $\frac12(|$对角线$|^2+\sum c_ih_Z(u_i))$」，
+并且生成向量 $u_i$ 还带着质量约束 \eqref{eq:frame}。记在这里，作为可能的后续接口。
+
+\subsection{本轮两次未闭合的尝试（诚实记录）}\label{sec:harm:fail}
+
+\begin{proposition}[挫折界，未闭合]\label{prop:frustration}
+对任意符号染色 $\varepsilon\in\{\pm1\}^N$，令
+$\mathrm{FRU}_\varepsilon=\sum_{i<j:\ \varepsilon_i\varepsilon_j\langle u_i,u_j\rangle<0}c_ic_j|\langle u_i,u_j\rangle|$
+（被违反对的权重），$\mathrm{FRU}=\min_\varepsilon\mathrm{FRU}_\varepsilon$。则
+$\ell\le1+4\,\mathrm{FRU}$，从而 $\rho\le1+2\,\mathrm{FRU}$。
+冠军处 $\mathrm{FRU}=0.152486468908=\beta/2$（$\beta=x^\top Q_-x=0.304972937817$）（全 $+$ 染色最优，被违反的恰是五角星的五条边），
+故该界给 $\rho\le1.304972937817$；要闭合需要 $\mathrm{FRU}\le\tau/2=0.140784098436$，
+差 $1.17\times10^{-2}$，\textbf{未闭合}。
+\end{proposition}
+
+\begin{proof}
+$\ell-\alpha_\varepsilon=\sum_{ij}c_ic_j(|\langle u_i,u_j\rangle|-\varepsilon_i\varepsilon_j\langle u_i,u_j\rangle)
+=4\,\mathrm{FRU}_\varepsilon$（被违反对每对贡献 $2|\cdot|$，双向计两次），
+而 $\alpha_\varepsilon=|\sum c_i\varepsilon_iu_i|^2\le1$（引理~\ref{lem:dict}(v) 对 $\varepsilon_i v_i$ 同样成立）。
+\end{proof}
+
+第二条尝试是把带位势不等式逐点量化：由 $\sum_ig_i\langle u_i,z\rangle^2=1$ 与 CS 缺陷可得
+$p_i^2\le1-\rho O_i$，其中 $O_i=\sum_{j:\langle u_i,u_j\rangle<0}\omega_j\langle u_i,u_j\rangle^2$
+是「钝角方向上的调和占用」；求和得 $\rho^2(1+\sum_i\omega_iO_i)\le3$。
+冠军处左端 $=2.003265889596$，右端 $=3$，余量 $0.997$——\textbf{太粗，没有信息量}。
+我们记录它是因为它的形状是对的（占用越界、$\rho$ 越小），
+但系数 $\rho^2$ 前面的 $1$ 太弱，需要的是把 $\alpha$ 与 $\ell$ 的\emph{同一个} $x$ 关联起来，
+而不是分别估计。
+
+第三条是数值松弛 REL2（只保留 $\Psi\le\sqrt3$、$\sum c^2\le1$、$\varphi\le1$ 三族约束，
+丢掉各向同性）：它在二十面体 ETF 方向上给出 $1.314006274436$，
+质量 $(0.408211,0.264768^{[5]})$。这个值\textbf{是伪的}：
+在该点上 $\rho H=3.078911\ne3$，直接违反定理~\ref{thm:harmonic}。
+换句话说，调和恒等式是一个 REL2 看不见的约束，它一眼就识别出了松弛产物。
+（把 $H\ge3/\rho$ 加回去得到 REL4；REL4 的差分进化在 $N=4$ 只搜到 $1.249796<\frac54$，
+低于已知精确值，说明\emph{该松弛本身的数值求解不可靠}，我们据此放弃了这条数值路线，
+不再把它当作证据。）
+
+
+\subsection{$N$ 消失：帧测度重构}\label{sec:harm:nfree}
+
+\begin{definition}[帧测度]\label{def:framemeas}
+令 $\mathcal M$ 为所有形如 $\mu=\sum_{i=1}^Ng_i\delta_{u_i}$（$N$ 任意，$g_i>0$，$u_i\in S^2$）
+且满足
+\[
+\mu(S^2)=3,\qquad \int_{S^2}uu^\top\dd\mu(u)=I_3
+\]
+的测度全体。对 $\mu\in\mathcal M$，令 $T_\mu$ 为 $L^2(\mu)$ 上以 $(\langle u,u'\rangle)_+$ 为核的积分算子，
+$\rho(\mu)=\lambda_{\max}(T_\mu)$（核非负，故由 Perron--Frobenius 这就是谱半径，且特征函数可取非负）。
+\end{definition}
+
+\begin{theorem}[$N$-自由重构]\label{thm:nfree}
+\[
+\kappa_3=\sup_{\mu\in\mathcal M}\rho(\mu)
+=\sup\Bigl\{\iint(\langle u,u'\rangle)_+h(u)h(u')\dd\mu\dd\mu'\ :\ \mu\in\mathcal M,\ h\ge0,\ \int h^2\dd\mu=1\Bigr\}.
+\]
+\end{theorem}
+
+\begin{proof}
+给定 $V$，取 $g_i=Q_{ii}$、$u_i=v_i/\sqrt g_i$，则 $\mu=\sum g_i\delta_{u_i}\in\mathcal M$
+正是 \eqref{eq:frame}；取 $h_i=x_i/\sqrt{g_i}$，则 $\int h^2\dd\mu=\sum_ix_i^2=1$，且
+$\iint(\langle\rangle)_+hh'\dd\mu\dd\mu'=\sum_{ij}(\langle u_i,u_j\rangle)_+g_ig_jh_ih_j
+=\sum_{ij}(\langle u_i,u_j\rangle)_+c_ic_j=\rho$（引理~\ref{lem:dict}(i)）。
+反向：给定 $(\mu,h)$，令 $x_i=\sqrt{g_i}h_i$（则 $|x|=1$）、$V$ 的行为 $\sqrt{g_i}u_i^\top$；
+帧条件给 $V^\top V=I_3$，故 $Q=VV^\top\in\mathcal P_3(N)$，
+而 $x\ge0$ 的 Rayleigh 商正是上式，由 Perron--Frobenius 不超过 $\lambda_{\max}(Q_+)$。
+\end{proof}
+
+于是 $\kappa_3$ 是一个球面上的 Motzkin--Straus 型二次型的上确界，
+「图」被连续核 $(\langle u,u'\rangle)_+$ 取代，$N$ 只是 $\mu$ 的原子个数。
+
+\begin{proposition}[$\mathcal M$ 的凸性与极端点]\label{prop:extreme}
+$\mathcal M$ 在弱$^*$拓扑下的闭包 $\overline{\mathcal M}$ 是凸紧集，且其\textbf{极端点由至多 $6$ 个原子的测度构成}。
+\end{proposition}
+
+\begin{proof}
+约束对 $\mu$ 是线性的，故 $\overline{\mathcal M}$ 凸；总质量固定为 $3$、$S^2$ 紧，故弱$^*$紧。
+矩映射 $\phi(u)=(1,uu^\top)\in\R^7$ 的像落在 $5$ 维仿射子空间
+$\{t=1,\ \tr=1\}$ 中，目标 $(3,I_3)$ 也在其中。
+若极端点 $\mu$ 有 $\ge7$ 个原子，则这 $\ge7$ 个 $\phi(u_i)$ 在 $5$ 维仿射空间中仿射相关，
+存在 $a\ne0$ 使 $\sum_ia_i=0$、$\sum_ia_iu_iu_i^\top=0$；
+于是 $\mu\pm t\sum a_i\delta_{u_i}\in\overline{\mathcal M}$（$|t|$ 小），与极端性矛盾。
+\end{proof}
+
+命题~\ref{prop:extreme} 本身还不够：$\rho(\mu)$ 对 $\mu$ 既非凸也非凹
+（$Q_+$ 的元是 $\sqrt{g_ig_j}$，对 $g$ 是\emph{凹}的，而 $\lambda_{\max}$ 是凸的，两者复合方向不明）。
+所以需要下面的精确二阶计算。
+
+\subsection{矩核直线上的二阶变分公式}\label{sec:harm:secvar}
+
+固定方向 $u_1,\dots,u_N$，令 $K_{ij}=(\langle u_i,u_j\rangle)_+$、$b_i=\sqrt{g_i}$，则
+$Q_+(g)=\bigl(b_ib_jK_{ij}\bigr)_{ij}$。设 $M\in\R^{7\times N}$ 为矩矩阵
+（行 $1,u_1^2,u_2^2,u_3^2,u_1u_2,u_1u_3,u_2u_3$，$\rank M=6$）。
+若 $N\ge7$，则 $\ker M\ne\{0\}$；取 $a\in\ker M$，
+$g(t)=g+ta$ 保持矩约束，最大区间 $[t_-,t_+]$ 的端点处某个 $g_i$ 归零（原子被「杀掉」）。
+
+\begin{theorem}[二阶变分公式]\label{thm:secondvar}
+设 $\rho(t)=\lambda_{\max}(Q_+(g(t)))$ 在 $t$ 处为单特征值，$x(t)>0$、$|x(t)|=1$ 为对应 Perron 向量，
+$(\rho_k(t),y_k(t))_{k\ge2}$ 为其余特征对。记 $\hat a_i=a_i/g_i$、$q=\hat a\odot x$、
+$d_k=\langle q,y_k\rangle$。则
+\begin{equation}\label{eq:firstvar}
+\rho'(t)=\rho\sum_i\frac{a_i}{g_i}x_i^2=\rho\,\langle q,x\rangle,
+\end{equation}
+\begin{equation}\label{eq:secvar}
+\boxed{\ \rho''(t)=2\rho\sum_{k\ge2}\frac{\rho_k}{\rho-\rho_k}\,d_k^{\,2}\ }
+\qquad\text{等价地}\qquad
+\rho''(t)=2\rho\,a^\top\!\Bigl(\sum_{k\ge2}\frac{\rho_k}{\rho-\rho_k}w_kw_k^\top\Bigr)a ,
+\end{equation}
+其中 $w_k=(x_iy_{ki}/g_i)_{i=1}^N$（故 $d_k=\langle a,w_k\rangle$）。
+\end{theorem}
+
+\begin{proof}
+记 $A(t)=Q_+(g(t))$，$A_{ij}=b_ib_jK_{ij}$。由 $b_i'=a_i/(2b_i)$、$b_i''=-a_i^2/(4b_i^3)$，
+\[
+A'_{ij}=\tfrac12(\hat a_i+\hat a_j)A_{ij},\qquad
+A''_{ij}=\Bigl(\tfrac12\hat a_i\hat a_j-\tfrac14\hat a_i^2-\tfrac14\hat a_j^2\Bigr)A_{ij}.
+\]
+包络定理给 $\rho'=x^\top A'x=\sum_i\hat a_ix_i(Ax)_i=\rho\sum_i\hat a_ix_i^2$，即 \eqref{eq:firstvar}。
+二阶项用标准公式 $\rho''=x^\top A''x+2\sum_{k\ge2}\frac{|\langle y_k,A'x\rangle|^2}{\rho-\rho_k}$。
+第一段：
+\[
+x^\top A''x=\tfrac12q^\top Aq-\tfrac\rho2|q|^2
+=\tfrac12\Bigl(\rho\langle q,x\rangle^2+\sum_{k\ge2}\rho_kd_k^2\Bigr)-\tfrac\rho2\Bigl(\langle q,x\rangle^2+\sum_{k\ge2}d_k^2\Bigr)
+=\tfrac12\sum_{k\ge2}(\rho_k-\rho)d_k^2 ,
+\]
+其中用了 $q=\langle q,x\rangle x+\sum_{k\ge2}d_ky_k$。
+第二段：$\langle y_k,A'x\rangle=\frac12\bigl[\rho\langle \hat a\odot y_k,x\rangle+\langle \hat a\odot x,Ay_k\rangle\bigr]
+=\frac12(\rho+\rho_k)d_k$。合并：
+\[
+\rho''=\tfrac12\sum_{k\ge2}d_k^2\Bigl[(\rho_k-\rho)+\frac{(\rho+\rho_k)^2}{\rho-\rho_k}\Bigr]
+=\tfrac12\sum_{k\ge2}\frac{d_k^2}{\rho-\rho_k}\Bigl[(\rho+\rho_k)^2-(\rho-\rho_k)^2\Bigr]
+=2\rho\sum_{k\ge2}\frac{\rho_kd_k^2}{\rho-\rho_k}. \quad\square
+\]
+\end{proof}
+
+公式 \eqref{eq:secvar} 的结构值得停下来看一眼：
+$\sqrt{g_ig_j}$ 的凹性贡献（$x^\top A''x\le0$）与特征向量旋转的贡献
+（$2\sum\frac{|\langle y_k,A'x\rangle|^2}{\rho-\rho_k}\ge0$）\textbf{恰好合并}成一个单项和，
+每一项的符号只由 $\rho_k$ 的符号决定。这把一个看起来无望的凸性问题变成了一个\emph{谱符号}问题。
+
+\begin{corollary}[正部半定 $\Rightarrow$ 沿直线凸]\label{cor:psdconvex}
+若在区间 $[t_-,t_+]$ 上恒有 $Q_+(g(t))\succeq0$（即 $\rho_k\ge0$ 对一切 $k$），
+则 $\rho$ 在该区间上是凸函数，从而最大值在端点取得。
+\end{corollary}
+
+\begin{corollary}[一阶条件 $=$ 自洽场]\label{cor:scf}
+$\rho'(0)=0$ 对一切 $a\in\ker M$ 成立，当且仅当向量 $(x_i^2/g_i)_i$ 属于 $M$ 的行空间，
+即存在 $\lambda_0\in\R$ 与对称 $\Lambda\in\R^{3\times3}$ 使
+\begin{equation}\label{eq:scfnew}
+\frac{x_i^2}{g_i}=\lambda_0+u_i^\top\Lambda u_i\qquad(i=1,\dots,N),
+\end{equation}
+即 Perron 向量的平方除以质量是一个\emph{二次球面多项式}。
+这与第~\ref{sec:n6global} 节的自洽场方程是同一条件的两种写法，
+但这里是作为「沿矩核直线的一阶最优性」直接导出的，不涉及拉格朗日乘子的显式求解。
+\end{corollary}
+
+\begin{corollary}[内部极值的必要条件：负特征值个数]\label{cor:nuneg}
+设 $\mu\in\mathcal M$ 有 $N\ge7$ 个原子且 $g$ 是 $\rho$ 在仿射矩集
+$\{g':Mg'=(3,1,1,1,0,0,0)\}$ 内的局部最大值点（即一切 $g_i>0$ 的内部极值）。则
+\[
+\nu_-(Q_+)\ \ge\ N-6 ,
+\]
+其中 $\nu_-(\cdot)$ 计负特征值个数（含重数）。
+\end{corollary}
+
+\begin{proof}
+内部局部最大要求 \eqref{eq:secvar} 中的二次型 $\Sigma=\sum_{k\ge2}\frac{\rho_k}{\rho-\rho_k}w_kw_k^\top$
+在 $\ker M$（维数 $N-6$）上半负定，故 $N-6\le\nu_-(\Sigma|_{\ker M})\le\nu_-(\Sigma)$。
+写 $W=[w_2\ \cdots\ w_N]=D_g^{-1}\operatorname{diag}(x)Y$，$Y=[y_2\ \cdots\ y_N]$ 列正交归一，
+则 $\Sigma=D_g^{-1}\operatorname{diag}(x)\,YC Y^\top\operatorname{diag}(x)D_g^{-1}$，
+$C=\operatorname{diag}\bigl(\frac{\rho_k}{\rho-\rho_k}\bigr)_{k\ge2}$；
+由合同变换的惯性律 $\nu_-(\Sigma)\le\nu_-(C)=\#\{k\ge2:\rho_k<0\}=\nu_-(Q_+)$。
+\end{proof}
+
+\subsection{六原子归约：条件定理、猜想与数值证据}\label{sec:harm:reduce}
+
+\begin{theorem}[条件性归约]\label{thm:atomreduce}
+设 $\mu\in\mathcal M$ 有 $N\ge7$ 个原子，$a\in\ker M$，$[t_-,t_+]$ 为最大可行区间。
+若 $Q_+(g(t))\succeq0$ 对一切 $t\in[t_-,t_+]$，则
+$\rho(\mu)\le\max\{\rho(g(t_-)),\rho(g(t_+))\}$，
+且两个端点各自至少有一个原子质量为 $0$（即原子数 $\le N-1$）。
+\end{theorem}
+
+\begin{proof}
+推论~\ref{cor:psdconvex} 给凸性，凸函数在闭区间上的最大值在端点取得。
+端点处 $g_i(t_\pm)=0$ 对某个 $i$ 成立，该原子对 $Q_+$ 的贡献整行整列为零，删去后仍是帧测度。
+\end{proof}
+
+反复使用定理~\ref{thm:atomreduce}，只要每一步都能找到一条「全程 $Q_+\succeq0$」的矩核直线，
+就能把任意构型化约到 $\le6$ 个原子而不减小 $\rho$。于是：
+
+\begin{conjecture}[六原子归约]\label{conj:sixatom}
+\[
+\kappa_3=\max_{3\le N\le6}\kappa_3(N)=\rho_0 .
+\]
+\end{conjecture}
+
+\begin{remark}[为什么这是本轮最重要的一步]\label{rmk:reducepayoff}
+注~\ref{rmk:ladderinfo}(2) 早就指出「只需要证明 $N\ge7$ 的投影可化约到 $\le6$ 个有效原子」，
+但没有给出任何方法。猜想~\ref{conj:sixatom} 把这件事变成了一个\emph{可计算的判据}：
+沿矩核直线检查 $Q_+$ 是否保持半定。一旦成立，
+主猜想 $\kappa_3\le\rho_0$ 就\textbf{完全化归为} $\kappa_3(6)\le\rho_0$，
+即第~\ref{sec:n6global} 节剩下的那 $20$ 个符号类——一个有限问题。
+这是本项目第一次把「$N$ 任意」这个真正的困难从主线里移除。
+\end{remark}
+
+\textbf{数值证据}（脚本 \texttt{\_n2.py}、\texttt{\_n3.py}，输出 \texttt{\_n2\_out.txt}、\texttt{\_n3\_out.txt}）：
+\begin{enumerate}[label=(\alph*),leftmargin=2.2em]
+\item \textbf{二阶变分公式}：$N=7,8,9$ 各取随机帧测度与矩核方向，
+\eqref{eq:firstvar}\eqref{eq:secvar} 与中心差分之差 $\le3.9\times10^{-8}$（即差分精度本身），共 $45$ 组。
+\item \textbf{端点最大}：$N=7,8,9,10,12,14$ 共 $96$ 条完整矩核线段，
+$\rho$ 的最大值\textbf{$96/96$ 都在端点取得}（拟凸性），其中 $90$ 条全程凸、
+$6$ 条在某处轻微凹（最差二阶差分 $-4.5\times10^{-7}$）但最大值仍在端点。
+\item \textbf{杀原子链单调}：从 $N=8,10,12$ 的随机帧测度出发，每步选端点较优者，
+$6$ 条链\textbf{全部单调不减}，例如 $N=12$：$0.841622\to0.996704\to1.057454\to1.115438\to1.138190\to1.143178\to1.143313$。
+\item \textbf{冠军邻域}（最危险的测试）：给冠军的 $6$ 个原子加 $K=1,2,3,4,6$ 个随机方向原子，
+用最小二乘 $+$ 仿射投影把矩约束修回精确，得到 $N=7,8,9,10,12$ 的近极值构型；
+其 $\rho$ 分别为 $1.281544230485$、$1.281520032516$、$1.281493080203$、$1.281424228047$、$1.281424252153$，
+\textbf{全部严格小于} $\rho_0$；对它们执行杀原子归约，
+每一步单调上升，末值与 $\rho_0$ 之差 $\le2.2\times10^{-15}$，
+即归约\emph{精确地}把冠军恢复出来。
+\end{enumerate}
+
+\begin{remark}[必要条件 $\nu_-\ge N-6$ 有多强]\label{rmk:nunegstat}
+推论~\ref{cor:nuneg} 说明：任何 $N\ge7$ 的内部局部最大值点必须有相当多的负特征值。
+对 $500$ 个随机秩三投影统计（\texttt{\_n5.py}）：
+\[
+\begin{array}{c|cccccccc}
+N&6&7&8&9&10&12&16&20\\ \hline
+\nu_-(Q_+)\ \text{均值}&0.42&0.83&1.22&1.62&2.17&3.12&5.23&7.24\\
+\nu_-(Q_+)\ \text{最大}&2&2&3&3&4&5&7&9\\
+\#\{\nu_-\ge N-6\}/500&500&376&148&25&5&0&0&0\\
+\max\rho\ \text{(随机)}&1.238020&1.225943&1.219509&1.215660&1.202749&1.205608&1.174544&1.138442
+\end{array}
+\]
+即 $N\ge12$ 时随机构型\emph{从不}满足内部极值的必要条件，
+且随机构型的 $\rho$ 随 $N$ 单调下降。这与注~\ref{rmk:ladderinfo}(2) 的退化性观察一致：
+「多原子」不但不帮忙，反而系统性地压低 $\rho$。
+冠军本身 $\nu_-(Q_+)=0$（$\lambda_{\min}(Q_+)=0.098352>0$），
+落在推论~\ref{cor:psdconvex} 的凸性一侧——这是归约纲领能启动的原因。
+\end{remark}
+
+
+\subsection{族 $F_n$：枢纽 $+$ 正 $n$ 边形的精确解}\label{sec:harm:Fn}
+
+第~\ref{sec:ladder} 小节在 $C_{4v}$ Ansatz 下解出了 $\kappa_3(5)$。
+本轮我们把这个 Ansatz 推广成整个族，并\textbf{对每个 $n$ 精确求解}。
+结果不只是漂亮：它给出了 $\rho_0$ 的第一个不依赖数值搜索的解析来源。
+
+\begin{definition}[族 $F_n$]\label{def:Fn}
+$n\ge3$。取枢纽 $u_*=e_3$ 与正 $n$ 边形
+$u_k=(r\cos\frac{2\pi k}n,\ r\sin\frac{2\pi k}n,\ h)$，$k=0,\dots,n-1$；
+质量为 $g_*$（枢纽）与 $g$（$n$ 个多边形顶点）。
+帧条件 \eqref{eq:frame} 等价于
+\[
+\frac n2gr^2=1,\qquad ngh^2+g_*=1,\qquad g_*=3-ng ,
+\]
+故
+\[
+r^2=\frac2{ng},\qquad h^2=1-\frac2{ng},\qquad g\in\Bigl[\frac2n,\frac3n\Bigr],
+\]
+只有一个自由参数 $g$。Gram 元为 $\langle u_*,u_k\rangle=h$、
+$\langle u_k,u_{k+m}\rangle=r^2\cos\frac{2\pi m}n+h^2=1-\frac4{ng}\sin^2\frac{\pi m}n=:s_m$。
+\end{definition}
+
+记 $\gamma_m=\frac4n\sin^2\frac{\pi m}n$，则 $gs_m=g-\gamma_m$，
+于是多边形块是 circulant 矩阵，其元素为 $c_m=(g-\gamma_m)_+$（$m=1,\dots,n-1$），对角为 $g$。
+枢纽与所有多边形顶点的耦合相等（$w=\sqrt{g_*g}\,h$），故全 $1$ 向量是多边形块的特征向量，
+而枢纽只与它耦合。Fourier 分解立即给出：
+
+\begin{theorem}[$F_n$ 的精确谱]\label{thm:Fn}
+\[
+\mu_l=g+\sum_{m=1}^{n-1}c_m\cos\frac{2\pi lm}n\quad(l=0,\dots,n-1),\qquad
+\lambda_\pm=\frac{\mu_0+g_*\pm\sqrt{(\mu_0-g_*)^2+4g_*(ng-2)}}2 ,
+\]
+且
+\[
+\mathrm{spec}(Q_+(F_n))=\{\lambda_+,\lambda_-\}\cup\{\mu_l:l=1,\dots,n-1\},\qquad
+\rho(F_n(g))=\max\Bigl\{\lambda_+(g),\ \max_{l\ge1}\mu_l(g)\Bigr\}.
+\]
+其中 $4g_*(ng-2)$ 来自 $(\sqrt n\,w)^2=ng_*gh^2=g_*(ng-2)$。
+\end{theorem}
+
+在每一个符号图案不变的区间上，$\lambda_+(g)=\frac12[S(g)+\sqrt{D(g)}]$ 是两个多项式的组合，
+驻点方程 $4S'^2D=D'^2$ 是\emph{二次}的，故 $g^*$ 与 $\rho(F_n)$ 都有闭式。
+\texttt{sympy} 逐 $n$ 求解的结果（\texttt{\_n4.py}，输出 \texttt{\_n4\_out.txt}）：
+
+\[
+\begin{array}{c|c|c|c|c}
+n&N=n+1&\text{激活的 }m&g^*&\max_g\rho(F_n)\\ \hline
+3&4&\varnothing&\frac45&\frac65=1.200000000000\\
+4&5&\{1,3\}&\frac{24-\sqrt6}{30}&\frac{9+4\sqrt6}{15}=1.253197264742\\
+5&6&\{1,4\}&\frac{45+4\sqrt5-\sqrt{35}}{90}&\frac{9+\sqrt5+2\sqrt{35}}{18}=\rho_0=1.281568196872\\
+6&7&\{1,5\}&\frac{30-\sqrt{11}}{63}&\frac{13+4\sqrt{11}}{21}=1.250785674353
+\end{array}
+\]
+驻点多项式分别为 $-1920g^2+3456g-1536$、$-960g^2+1536g-608$、
+$-5760g^2+(5760+512\sqrt5)g-(1472+256\sqrt5)$、$-18144g^2+17280g-4064$；
+$n=5$ 时 $\lambda_+(g^*)-\rho_0$ 经 \texttt{simplify} 化简为 \textbf{0}（不是数值近似）。
+$n=7,\dots,14$ 的激活集随 $g$ 分段变化，我们只做数值最大化：
+\[
+1.240186898264,\ 1.260043241072,\ 1.254191504574,\ 1.238325394688,\
+1.252993053595,\ 1.253419542550,\ 1.245607856493,\ 1.249638553443 ,
+\]
+全部 $\le1.260044<\rho_0$。$n\to\infty$ 的极限（多边形变成连续圆环，总质量 $M=ng\in[2,3]$）为
+\[
+\max_M\ \tfrac12\Bigl[I(M)+3-M+\sqrt{(I(M)-3+M)^2+4(3-M)(M-2)}\Bigr]=1.248748900844\quad(M=2.635),
+\]
+其中 $I(M)=\int_0^1(M-4\sin^2\pi s)_+\dd s$；同样低于 $\rho_0$（差 $3.28\times10^{-2}$）。
+
+\begin{corollary}[族的峰值唯一在 $n=5$]\label{cor:Fnpeak}
+$\max_{n\ge3}\max_g\rho(F_n)=\rho_0$，且唯一的最大化对是 $(n,g)=(5,g^*)$，即 $N=6$。
+$n=3,4,5,6$ 为精确闭式，$n\ge7$ 与 $n\to\infty$ 为数值。
+\end{corollary}
+
+\begin{corollary}[冠军的闭式参数]\label{cor:champclosed}
+冠军 $=$ $F_5$ 在 $g^*=\frac{45+4\sqrt5-\sqrt{35}}{90}=0.533646579188$ 处，且
+\[
+g_*=\frac{9-4\sqrt5+\sqrt{35}}{18}=0.331767104061,\qquad
+h^2=1-\frac2{5g^*}=0.250440243412,\qquad
+r^2=\frac2{5g^*}=0.749559756588,
+\]
+\[
+\langle u_*,u_k\rangle=h=0.500440049768,
+\]
+\[
+\text{五边形边}\ s_1=0.482066946497,\qquad \text{五角星}\ s_2=-0.355966337967,
+\]
+\[
+\mathrm{spec}(Q_+)=\Bigl\{\rho_0,\ \mu_1^{[2]},\ \mu_2^{[2]},\ \lambda_-\Bigr\},\quad
+\mu_1=\frac{155-5\sqrt5-5\sqrt7-\sqrt{35}}{180}=0.692637909856,
+\]
+\[
+\mu_2=\frac{25-5\sqrt5+5\sqrt7-\sqrt{35}}{180}=0.117401871582,\qquad
+\lambda_-=\tfrac12+\tfrac{\sqrt5}{18}-\tfrac{4\sqrt{35}}{45}=0.098352240252 .
+\]
+与第~\ref{sec:ladder} 节数值冠军的差：$g$ 为 $8.9\times10^{-16}$，特征值为 $2.2\times10^{-16}$。
+\end{corollary}
+
+\begin{remark}[族读出的三条信息]\label{rmk:Fnread}
+(i) \textbf{$\rho_0$ 的来历}。$\rho_0$ 含 $\sqrt5$（来自正五边形的 $\cos72^\circ$）与
+$\sqrt{35}$（来自驻点方程的判别式 $\sqrt{(5760+512\sqrt5)^2-4\cdot5760(1472+256\sqrt5)}$ 化简），
+这解释了为什么这个常数「长得不像」$\Phi=\frac{1+\sqrt5}4\cdot$ 之类的量：
+它是\emph{五重对称 $+$ 二次驻点}的产物，而不是某个松弛的天花板。
+(ii) \textbf{$n$ 的方向}。$\rho(F_n)$ 在 $n=5$ 处达到峰值，$n=3$ 偏低
+（$F_3$ 的掩码是星形 $K_{1,3}$，只有 $1.2$，而 $\kappa_3(4)=\frac54$ 由 $K_{2,2}$ 取得，
+即 $N=4$ 时最优掩码\emph{不在}这个族里），$n\ge6$ 又因为
+$\gamma_m=\frac4n\sin^2\frac{\pi m}n$ 变密、正部掩掉的边变多而下降。
+「$6$ 个原子」因此不是偶然：它是这个自然族的全局峰。
+(iii) \textbf{与归约纲领的接口}。推论~\ref{cor:Fnpeak} 加上猜想~\ref{conj:sixatom}
+会把主猜想化归为「$N=6$ 的最优掩码是 $I+A(K_1\vee C_5)$」这一条有限断言；
+反过来，若 $N=6$ 的 $20$ 个未闭合符号类中有一类超过 $\rho_0$，
+它必然\emph{不在} $F_n$ 族里（族内已被精确排除），这本身就是一条结构信息。
+\end{remark}
+
+\subsection{数值：$\kappa_3(N)=\rho_0$ 推进到 $N=20$}\label{sec:harm:num}
+
+第~\ref{sec:ladder} 节的 $\kappa_3(N)=\rho_0$ 只验证到 $N=14$（且 $13,14$ 只有一套求解器）。
+本轮用帧测度参数化（方向 $+$ 质量，矩约束以罚函数施加）做独立的差分进化搜索
+（\texttt{\_m2.py}，输出 \texttt{\_m2\_out.txt}）：
+\[
+\begin{array}{c|ccccccccccc}
+N&4&5&6&7&8&9&10&12&14&16&20\\ \hline
+\kappa_3(N)\ge&1.250000000000&1.253197264742&\rho_0&\rho_0&\rho_0&\rho_0&\rho_0&\rho_0&\rho_0&\rho_0&\rho_0\\
+\text{与}\rho_0\text{之差}&-3.16\times10^{-2}&-2.84\times10^{-2}&\le2\times10^{-14}&\le6\times10^{-14}&\le2\times10^{-13}&\le2\times10^{-13}&\le2\times10^{-13}&\le3\times10^{-13}&\le5\times10^{-13}&\le7\times10^{-13}&\le6\times10^{-13}
+\end{array}
+\]
+$N=4,5$ 的搜索值与精确闭式 $\frac54$、$\frac{9+4\sqrt6}{15}$ 吻合到 $10^{-13}$
+（$\kappa_3(5)$ 的闭式由 \texttt{nsimplify} 独立重新发现，见 \texttt{\_m6\_out.txt}）。
+$N\ge6$ 一律停在 $\rho_0$，从未超过——与猜想~\ref{conj:sixatom} 一致，
+也与注~\ref{rmk:ladderinfo}(2) 的退化性一致。
+\textbf{标签：数值}（$N\ge6$ 只给下界 $\kappa_3(N)\ge\rho_0$，上界仍需第~\ref{sec:n6global} 节的分类）。
+
+\begin{remark}[$F_5$ 就是第 12 轮的 $Z_5$-等变弧]\label{rmk:F5arc}
+把 $F_n$ 的参数换成 $s=ng-2\in[0,1]$（即「轴向质量」），则 $F_5$ 的 $g^*=\frac{45+4\sqrt5-\sqrt{35}}{90}$
+对应 $s^*=5g^*-2=\frac{9+4\sqrt5-\sqrt{35}}{18}$，与引理~\ref{lem:z5class}、定理~\ref{thm:conefam}
+的弧参数与临界点\textbf{完全一致}。所以本轮在 $n=5$ 上没有重复劳动：
+贡献是把那条弧\emph{推广成整个族}并解出 $n=3,4,6$（以及 $n\ge7$ 的数值与 $n\to\infty$ 的极限），
+从而第一次说明\textbf{为什么是五边形}——它是族内的全局峰，而不是某条人为选取的弧的顶点。
+\end{remark}
+
+\begin{remark}[一次诊断实验：强制 $Q_+$ 奇异并不能压低 $\rho$]\label{rmk:rhosing}
+为了检验推论~\ref{cor:nuneg} 的补集一侧（$\nu_-(Q_+)\ge1$ 的构型能有多大 $\rho$），
+我们在 $\mathrm{St}(7,3)$ 上做了带罚项 $\max(0,\lambda_{\min}(Q_+))$ 的差分进化（\texttt{\_n5.py}，$470$ 秒）。
+结果是 $\rho=1.281568196116$（与 $\rho_0$ 差 $-7.6\times10^{-10}$）、$\lambda_{\min}(Q_+)=-1.8\times10^{-11}$，
+质量 $g=(0.081784,0.533618,0.533650,0.331751,0.451863,0.533680,0.533656)$：
+其中 $0.081784+0.451863=0.533647=g^*$，即\textbf{冠军的一个五边形原子被劈成两个}，
+$\lambda_{\min}=0$ 正来自这一对近重合原子。
+所以「$Q_+$ 奇异」这一侧的最大值仍是 $\rho_0$、且由\emph{退化}构型达到，
+它既不能否证也不能支持猜想~\ref{conj:sixatom}，只是说明该实验\textbf{没有信息量}，
+必须改成「$\nu_-(Q_+)\ge1$ 且各原子质量有下界」才有意义（下一轮 P1(b)）。
+\end{remark}
+
+\subsection{本轮状态、诚实标签与方法优先队列}\label{sec:harm:status}
+
+\textbf{已证（符号推导 $+$ 数值证书）}：
+引理~\ref{lem:dict}（字典六条）；定理~\ref{thm:harmonic}（$\rho H=3$ 与 $3/\rho_0$ 的闭式）；
+定理~\ref{thm:psi}（$\Psi\le\sqrt3$ 与精确缺陷式、Mohar 永不取等）；
+推论~\ref{cor:mohar3} 与定理~\ref{thm:projmohar}（Mohar 的两个新证明）；
+定理~\ref{thm:variance}（方差恒等式）；命题~\ref{prop:zonotope}；
+命题~\ref{prop:frustration}（挫折界，界本身已证、但不足以闭合）；
+定理~\ref{thm:nfree}（$N$-自由重构）；命题~\ref{prop:extreme}（Carathéodory，$\le6$ 原子极端点）；
+定理~\ref{thm:secondvar}（二阶变分公式）；推论~\ref{cor:psdconvex}、\ref{cor:scf}、\ref{cor:nuneg}；
+定理~\ref{thm:atomreduce}（条件性六原子归约）；
+定理~\ref{thm:Fn} 与推论~\ref{cor:Fnpeak}、\ref{cor:champclosed}（族 $F_n$ 的精确解，$n=3,4,5,6$ 闭式）。
+
+\textbf{数值（不作成果）}：$\kappa_3(N)=\rho_0$ 对 $N=6,\dots,20$；
+$n\ge7$ 的 $\rho(F_n)$；$n\to\infty$ 极限 $1.248748900844$；
+$96$ 条矩核线段的拟凸性；$18$ 条杀原子链的单调性；$\nu_-$ 统计表。
+
+\textbf{否证 / 未闭合（同样是成果）}：
+$\lambda_{\max}(|Q|)\le2\rho_0-1$ 在冠军处为假（注~\ref{rmk:projmoharslack}）；
+挫折界差 $1.17\times10^{-2}$（命题~\ref{prop:frustration}）；
+$p_i^2\le1-\rho O_i$ 求和后余量 $0.997$，无信息量；
+REL2 的 $1.314006274436$ 是伪值（$\rho H=3.078911\ne3$）；
+REL4 的数值求解不可靠（$N=4$ 只得 $1.249796<\frac54$），已放弃。
+
+\textbf{剩下的唯一缺口}：猜想~\ref{conj:sixatom} 的\emph{无条件}版本，
+即证明「每个 $N\ge7$ 的构型都存在一条全程 $Q_+\succeq0$ 的矩核直线」，
+或在 $\nu_-(Q_+)\ge N-6$ 的构型上直接证明 $\rho\le\rho_0$。
+这是下一轮的队首。
+
+
+\section{本轮新结果（第 15--17 轮）：Stiefel 刚性、能量分解与全局二分}\label{sec:r1517}
+
+本节记录第 15 至第 17 轮的工作。三轮之间有一条清晰的主线：
+第~\ref{sec:harm} 节把问题翻译成了「帧测度 $+$ 方向」的语言，并得到了一个\emph{条件性}的六原子归约
+（定理~\ref{thm:atomreduce}）。本轮做三件事：
+第一，把条件性归约所依赖的临界点方程组\textbf{完整解出}（\S\ref{sec:r17:erratum}--\S\ref{sec:r17:kkt}），
+其间修正了一处会导致整套刚性论证被误判为失效的\textbf{代码错误}；
+第二，找到主不等式的一个\textbf{最简等价形式}（\S\ref{sec:r17:tau}），它把「$\rho\le\rho_0$」压缩成
+一个单一的标量关系 $\tau=\beta-(1-\alpha)$，并配上一条精确的 Frobenius 恒等式（\S\ref{sec:r17:frob}）；
+第三，也是本轮的主定理：给出一个\textbf{无条件的全局二分定理}（定理~\ref{thm:dichotomy}），
+它把「$N\ge7$ 能否成为极大元」这件事压缩成两个各自良定的子问题，
+并且在数值上把这两个分支都\textbf{精确}地实现出来了（\S\ref{sec:r17:num}）。
+
+同时本轮有一条\textbf{否证}：上一轮准备的「第四不等式」候选 $\alpha+\sqrt{A_1A_2}\le\rho_0$
+虽然在冠军处尖锐取等，但\textbf{不是全局真命题}（命题~\ref{prop:fourthfalse}）。
+按既定规则，否证与正定理同等记录。
+
+\subsection{勘误：Stiefel 梯度公式的一次误报}\label{sec:r17:erratum}
+
+第 15 轮曾报告「解析 Stiefel 梯度与数值差分相差 $2.03$ 倍（随机构型最大相对误差 $10$）」，
+并据此把整条 $h_iW_i=\rho\Lam u_i$ 的刚性论证标为可疑。本轮查明：\textbf{这是脚本错误，不是数学错误}。
+
+\begin{proposition}[正部的环境梯度]\label{prop:gradformula}
+固定 $g>0$，令 $Q=VV^\top$、$V=U\operatorname{diag}(\sqrt g)$、$Q_+=K\circ Q$，
+其中 $K_{ij}=\mathbf 1\{\langle u_i,u_j\rangle>0\}$（$K_{ii}=1$）。
+设 $\lambda_{\max}(Q_+)$ 单重、Perron 向量 $x>0$、$\|x\|=1$，并记 $h_i=x_i/\sqrt{g_i}$、$c_i=g_ih_i=\sqrt{g_i}\,x_i$。
+只要没有 $\langle u_i,u_j\rangle=0$，$\rho(g,U)=\lambda_{\max}(Q_+)$ 在 $(u_i)$ 方向可微，且
+\begin{equation}\label{eq:gradu}
+\frac{\partial\rho}{\partial u_i}=2c_iW_i,\qquad
+W_i:=\sum_{j\in A(i)}c_ju_j,\qquad A(i):=\{j:\langle u_i,u_j\rangle>0\}\ \ (\text{含 }j=i).
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+单重特征值的包络定理给 $\mathrm d\rho=x^\top(\mathrm dQ_+)\,x$。
+在符号模式不变处 $\mathrm d(Q_+)_{ij}=K_{ij}\,\mathrm dQ_{ij}$，故
+$\mathrm d\rho=\sum_{ij}x_ix_jK_{ij}\,\mathrm dQ_{ij}=2\bigl\langle (xx^\top\!\circ K)V,\mathrm dV\bigr\rangle$。
+而 $\bigl((xx^\top\!\circ K)V\bigr)_i=x_i\sum_{j\in A(i)}x_j\sqrt{g_j}\,u_j=x_iW_i$，
+且 $\mathrm dv_i=\sqrt{g_i}\,\mathrm du_i$，代入即得 $\mathrm d\rho=2\sum_ic_i\langle W_i,\mathrm du_i\rangle$。
+\end{proof}
+
+\textbf{错误的根源}。脚本用 \texttt{np.maximum(K,0)} 去构造 $W_i$，
+即把\emph{截断余弦值} $(\langle u_i,u_j\rangle)_+$ 当成了\emph{指示函数} $\mathbf 1\{\langle u_i,u_j\rangle>0\}$。
+这两个矩阵\textbf{只在再与 $K$ 缩并一次时才相同}：
+$\sum_j(\langle u_i,u_j\rangle)_+c_j=\sum_{j\in A(i)}c_j\langle u_i,u_j\rangle=\langle u_i,W_i\rangle=p_i$，
+而 $\sum_j(\langle u_i,u_j\rangle)_+c_ju_j\ne W_i$。
+第~\ref{sec:harm} 节里所有用到 $p_i$ 的恒等式因此\textbf{不受影响}；受影响的只有把 $W_i$ 当向量使用的三处
+（梯度、KKT 拟合、椭球面恒等式）。
+
+\begin{center}\small
+\begin{tabular}{lcc}
+\hline
+公式 & 冠军处 $\max_i\lvert$数值$-$解析$\rvert$ & 随机构型 \\
+\hline
+\eqref{eq:gradu}（指示掩码，正确） & $4.65\times10^{-10}$ & 全部一致 \\
+截断余弦当掩码（错误） & $1.87\times10^{-1}$ & 相对误差最大 $10$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\noindent 数值列是环境坐标中心差分（步长 $10^{-6}$）与 \eqref{eq:gradu} 的逐分量比较；
+$4.65\times10^{-10}$ 正是该步长的截断误差量级。\textbf{结论：命题~\ref{prop:gradformula} 成立，
+第 15 轮的刚性结果全部有效。}
+
+\subsection{Stiefel KKT、椭球面恒等式与枢纽刚性}\label{sec:r17:kkt}
+
+把 \eqref{eq:gradu} 投影到 Stiefel 流形 $\{V:V^\top V=I_3\}$ 的法空间 $\{VS:S=S^\top\}$ 上，
+就得到临界点的完整方程组。
+
+\begin{theorem}[Stiefel KKT 与迹一刚性]\label{thm:stiefelkkt}
+设 $(U,g)$ 是 $\rho$ 在帧测度簇 $\mathcal M$（定义~\ref{def:framemeas}）上的临界点，
+$\lambda_{\max}(Q_+)$ 单重且符号模式非退化。令 $S:=2V^\top(xx^\top\!\circ K)V$。则
+\begin{equation}\label{eq:kkt}
+2h_iW_i=Su_i\quad(\forall i),\qquad \tr S=2\rho .
+\end{equation}
+特别地，取 $\Lam:=S/(2\rho)$ 有
+\begin{equation}\label{eq:trace1}
+h_iW_i=\rho\Lam u_i,\qquad \tr\Lam=1,\qquad h_i^2=u_i^\top\!\Lam u_i,\qquad
+\langle u_i,W_i\rangle=p_i=\rho h_i .
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+法空间投影：临界 $\Leftrightarrow$ 存在对称 $S$ 使 $\nabla_V\rho=VS$（逐行 $\nabla_{v_i}\rho=(Sv_i)^\top$）。
+由命题~\ref{prop:gradformula} 的证明，$\nabla_V\rho=2(xx^\top\!\circ K)V$，故 \eqref{eq:kkt} 的前一式；
+左乘 $V^\top$ 并用 $V^\top V=I_3$ 得 $S=2V^\top(xx^\top\!\circ K)V$。
+迹：$\tr S=2\sum_i v_i^\top(x_iW_i)=2\sum_ix_i\sqrt{g_i}\langle u_i,W_i\rangle=2\sum_ic_ip_i=2x^\top Q_+x=2\rho$。
+把 $2h_iW_i=Su_i=2\rho\Lam u_i$ 与 $u_i$ 作内积，并用 $\langle u_i,W_i\rangle=p_i$，
+得 $2h_ip_i=2\rho\,u_i^\top\!\Lam u_i$；代入 $p_i=\rho h_i$（由 \eqref{eq:kkt} 与 $\tr\Lam=1$ 亦可独立导出）
+即得 $h_i^2=u_i^\top\!\Lam u_i$。
+\end{proof}
+
+\begin{remark}[迹一归一化的几何意义]\label{rmk:trace1}
+$h_i^2=u_i^\top\!\Lam u_i$ 与 $\tr\Lam=1$ 合起来说：
+\textbf{Perron 向量的「相对振幅」$h_i$ 恰好是原子方向 $u_i$ 在一个固定迹一椭球 $\Lam$ 上的支撑函数}。
+冠军处 $\Lam$ 的谱是 $\{0.594608575866,\ 0.202695712067^{[2]},\ \}$，
+即一个\emph{旋转椭球}，长半轴 $1/\sqrt{0.2027}$ 沿枢纽方向；
+$\min_{S^2}u^\top\!\Lam u=0.2027>0$，故松弛「$\theta\ge0$ 在整个 $S^2$ 上」在冠军处是\textbf{紧}的。
+\end{remark}
+
+\begin{corollary}[椭球面恒等式]\label{cor:ellipsoid}
+记 $m:=\sum_ic_iu_i=V^\top x$（于是 $\alpha=|m|^2$），
+$S_i:=\sum_{j\in O(i)}c_ju_j$（钝部部分和，$O(i)=\{j:\langle u_i,u_j\rangle<0\}$），
+则 $W_i=m-S_i$，且在定理~\ref{thm:stiefelkkt} 的条件下
+\begin{equation}\label{eq:ellipsoid}
+(m-S_i)^\top\Lam^{-1}(m-S_i)=\rho^2\qquad\text{对一切 }i\text{ 成立},
+\end{equation}
+等价地 $S_i^\top\Lam^{-1}S_i-2\langle z,S_i\rangle=-D$ 与 $i$ 无关，其中 $z=\Lam^{-1}m$、$D=m^\top\Lam^{-1}m-\rho^2$。
+\end{corollary}
+
+\begin{proof}
+由 \eqref{eq:trace1}，$u_i=(h_i/\rho)\Lam^{-1}(m-S_i)$；代入 $h_i^2=u_i^\top\!\Lam u_i$ 得
+$h_i^2=(h_i^2/\rho^2)(m-S_i)^\top\Lam^{-1}(m-S_i)$，约去 $h_i^2>0$ 即得。
+\end{proof}
+
+\begin{remark}[几何读法]\label{rmk:ellipsoidread}
+\eqref{eq:ellipsoid} 说：\textbf{所有钝部部分和 $S_i$ 落在以 $m$ 为中心、以 $\Lam^{-1}$ 定形、
+半径 $\rho$ 的同一张椭球面上}。这是一个把「$N$ 个原子的组合信息」压缩成「一张二次曲面」的强约束：
+$N$ 越大，落在同一张椭球面上的点越多。这是 \S\ref{sec:r17:dichotomy} 全局二分的几何原型。
+\end{remark}
+
+\begin{corollary}[枢纽无关式与精确 Cauchy--Schwarz 缺陷]\label{cor:hubfree}
+在定理~\ref{thm:stiefelkkt} 的条件下：
+\begin{enumerate}\itemsep1pt
+\item 若存在\textbf{枢纽}（某 $i_0$ 使 $O(i_0)=\varnothing$，即 $S_{i_0}=0$），则
+\begin{equation}\label{eq:hubfree}
+\rho^2=m^\top\Lam^{-1}m,\qquad
+\tr(\Lam^{-1})-\rho^2=\sum_ig_i\bigl|\Lam^{-1/2}(u_i-h_im)\bigr|^2\ \ge0 ;
+\end{equation}
+\item $m=(\rho/h_{i_0})\Lam u_{i_0}$，从而 $u_{i_0}$ 是 $\Lam$ 的特征向量、$\lambda_{\max}(\Lam)=h_{i_0}^2$，且
+$\alpha=\rho^2h_{i_0}^2$。
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+(1) $S_{i_0}=0$ 代入 \eqref{eq:ellipsoid}。第二式是把 $\tr(\Lam^{-1})=\sum_ig_i\,u_i^\top\Lam^{-1}u_i$
+（帧条件 $\sum g_iu_iu_i^\top=I_3$）展开并配方。
+(2) 由 \eqref{eq:trace1} 在 $i=i_0$：$h_{i_0}m=\rho\Lam u_{i_0}$。
+再取 $u_{i_0}$ 与两边内积：$h_{i_0}\langle u_{i_0},m\rangle=\rho h_{i_0}^2$，
+即 $\langle u_{i_0},m\rangle=\rho h_{i_0}=p_{i_0}$；结合 $\Lam u_{i_0}=(h_{i_0}/\rho)m$ 知
+$m$ 与 $u_{i_0}$ 平行且 $\Lam u_{i_0}=h_{i_0}^2u_{i_0}$，于是 $\alpha=|m|^2=\rho^2h_{i_0}^2$。
+\end{proof}
+
+冠军处的数值（全部到机器精度）：
+\begin{center}\small
+\begin{tabular}{ll}
+\hline
+检验 & 残差 \\
+\hline
+$h_iW_i=\rho\Lam u_i$（\eqref{eq:trace1}） & $4.44\times10^{-16}$ \\
+$\tr\Lam-1$ & $0$（$\tr\Lam=1.000000000000000$） \\
+$h_i^2=u_i^\top\!\Lam u_i$（无常数项，$\lambda_0=0$） & $2.2\times10^{-16}$ \\
+$\rho^2-m^\top\Lam^{-1}m$ & $6.66\times10^{-16}$ \\
+$\tr(\Lam^{-1})-\rho^2-\sum g_i|\Lam^{-1/2}(u_i-h_im)|^2$ & $<10^{-11}$ \\
+$m-(\rho/h_0)\Lam u_0$ & $4.45\times10^{-16}$ \\
+$\kappa_{\rm ang}-1$（$u_0$ 是 $\Lam$ 特征向量） & $0$ \\
+$\alpha-\rho^2h_0^2$ & $<10^{-12}$ \\
+$m$ 与 $u_0$ 的夹角余弦 & $1.000000000000000$ \\
+\hline
+\end{tabular}
+\end{center}
+
+
+\subsection{主不等式的最简等价形式：$\tau=\beta-(1-\alpha)$}\label{sec:r17:tau}
+
+第~\ref{sec:harm} 节把问题写成 $\rho=\alpha+\beta\le\rho_0$，其中 $\alpha=x^\top Qx=|m|^2\le1$、
+$\beta=x^\top Q_-x\ge0$。本轮把它进一步压缩：\textbf{需要控制的其实只是一个标量差}。
+
+\begin{lemma}[$\tau$-形式]\label{lem:tauform}
+记 $\tau:=\rho-1$、$\tau_0:=\rho_0-1=\frac{\sqrt5+2\sqrt{35}-9}{18}=0.281568196872168$。则
+\begin{equation}\label{eq:tauform}
+Q_-x=\tau x+(I-Q)x,\qquad\text{从而}\qquad
+\boxed{\ \tau=\beta-(1-\alpha)=x^\top Q_-x-\|(I-Q)x\|^2\ } .
+\end{equation}
+于是\textbf{主猜想 $\kappa_3\le\rho_0$ 等价于：对一切 $N$ 与一切 Perron 对 $(Q_+,x)$，}
+\begin{equation}\label{eq:maincrux}
+x^\top Q_-x-\|(I-Q)x\|^2\ \le\ \tau_0 .
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+$Q_+=Q+Q_-$ 且 $Q_+x=\rho x$ 给 $Q_-x=\rho x-Qx=(\rho-1)x+(I-Q)x$。
+与 $x$ 作内积：$\beta=\tau+\|(I-Q)x\|^2$（用 $(I-Q)x\perp x$），
+而 $\|(I-Q)x\|^2=x^\top(I-Q)x=1-\alpha$（$Q$ 是秩三正交投影，$Q^2=Q$）。
+\end{proof}
+
+\begin{remark}[缺口在哪里]\label{rmk:taugap}
+\eqref{eq:maincrux} 的左端是两项之差：
+\emph{钝部能量} $x^\top Q_-x=\beta$ 减去 \emph{Perron 向量离开列空间的距离} $\|(I-Q)x\|^2=1-\alpha$。
+冠军处 $\beta=0.304972937817$、$1-\alpha=0.023404740945$，差恰为 $0.281568196872=\tau_0$
+（数值核对到 $1.22\times10^{-15}$）——\textbf{两项都不小，是它们的差在取等}。
+这解释了为什么过去所有「单独控制 $\beta$」的尝试（例如 $\beta\le\lambda_{\max}(Q_-)$）都注定松弛：
+冠军处 $\lambda_{\max}(Q_-)=0.379920437>\tau_0$，
+单独控制 $\beta$ 最好也只能给 $\rho\le1.37992$，比 Mohar 的 $1.36603$ 还差。
+\textbf{必须让 $(I-Q)x$ 这一项参与抵消。}
+\end{remark}
+
+\begin{corollary}[$1+\lambda_{\max}(Q_-)$ 界的一行新证]\label{cor:oneneg}
+$\rho\le1+\lambda_{\max}(Q_-)$。
+\end{corollary}
+
+\begin{proof}
+由 \eqref{eq:tauform}，$\tau=\beta-\|(I-Q)x\|^2\le\beta=x^\top Q_-x\le\lambda_{\max}(Q_-)$。
+\end{proof}
+
+\begin{lemma}[$Q_-x$ 的精确范数]\label{lem:normqmx}
+$\|Q_-x\|^2=(1-\alpha)(1+2\tau)+\tau^2=\beta^2+\alpha(1-\alpha)$，
+且 $(I-Q)Q_-x=\rho(I-Q)x$、$QQ_-x=\tau Qx$。
+\end{lemma}
+
+\begin{proof}
+第一式：把 \eqref{eq:tauform} 取范数平方，用 $(I-Q)x\perp x$。
+第二式：$(I-Q)$ 作用在 \eqref{eq:tauform} 两端（$(I-Q)Q=0$）。
+第三式：$Q$ 作用在两端（$Q(I-Q)=0$、$Qx=Qx$）。
+末一等式 $\|Q_-x\|^2=\beta^2+\alpha(1-\alpha)$ 就是第 15 轮的 $\sigma$-恒等式
+$\sum_ig_i\sigma_i^2=\beta^2+\alpha(1-\alpha)$（因 $(Q_-x)_i=\sqrt{g_i}\,\sigma_i$），
+两者在此互相印证。
+\end{proof}
+
+\subsection{精确 Frobenius 恒等式与一行式谱地板}\label{sec:r17:frob}
+
+\begin{lemma}[正部与负部的能量守恒]\label{lem:frob}
+记 $e:=\|Q_-\|_F^2$。则
+\begin{equation}\label{eq:frob}
+\langle Q,Q_-\rangle=-e,\qquad \|Q_+\|_F^2=3-e,\qquad \sum_k\lambda_k(Q_+)^2=3-e,\qquad \sum_k\lambda_k(Q_+)=3 .
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+$(Q_-)_{ij}>0$ 仅当 $Q_{ij}<0$，此时 $Q_{ij}=-(Q_-)_{ij}$，故
+$\langle Q,Q_-\rangle=\sum_{ij}Q_{ij}(Q_-)_{ij}=-\sum(Q_-)_{ij}^2=-e$（\emph{精确}等式，非数值）。
+$Q_+=Q+Q_-$ 给 $\|Q_+\|_F^2=\|Q\|_F^2+2\langle Q,Q_-\rangle+\|Q_-\|_F^2=3-2e+e=3-e$，
+其中 $\|Q\|_F^2=\tr Q^2=\tr Q=3$（$Q$ 是秩三正交投影，即 Welch 界取等）。
+迹：$\tr Q_+=\tfrac12(\tr Q+\tr|Q|)=\tfrac12(3+3)=3$，因 $\tr|Q|=\sum|Q_{ii}|=\sum g_i=3$。
+\end{proof}
+
+\begin{remark}[这条恒等式的价值]\label{rmk:frobval}
+\eqref{eq:frob} 把「正部的谱」与「负部的能量」用一个\textbf{等式}锁在一起：
+$\rho$ 想大，$e$ 就必须小；$e$ 小，则 $\|Q_+\|_F^2=3-e$ 大，正部的谱就必须更「铺开」。
+冠军处 $e=\rho_0\tau_0=\frac{16+5\sqrt7}{81}=0.360848846362012$，
+$\|Q_+\|_F^2=2.639151153638$，与 $\sum\lambda_k^2$ 直接计算吻合到 $1.3\times10^{-15}$。
+\end{remark}
+
+\begin{corollary}[一行式谱地板]\label{cor:floor2}
+$n_+(Q_+)\ge\dfrac{9}{3-e}$（$n_+$ $=$ 正特征值个数）。
+特别地，若 $e\le\rho_0\tau_0$ 则 $n_+(Q_+)\ge4$。
+\end{corollary}
+
+\begin{proof}
+$3-e=\sum\lambda_k^2\ge(\sum\lambda_k)^2/n_+=9/n_+$。第二个断言：$9/(3-0.360848846)=3.410\Rightarrow n_+\ge4$。
+\end{proof}
+
+\begin{remark}
+这与第 15 轮的谱地板 $n_+\ge1+(3-\rho)^2/(3-\rho^2)$（在 $\rho=\rho_0$ 处同为 $4$）结论一致，
+但证明只有一行，且\textbf{不需要} $\rho$ 的取值，只需要 $e$。两条地板互为对偶。
+\end{remark}
+
+\begin{proposition}[条件性重排上界，优于 \STW]\label{prop:majbound}
+若 $Q_+\succeq0$ 且 $n_+(Q_+)\le4$，则
+\begin{equation}\label{eq:majbound}
+\rho\ \le\ \frac{3+\sqrt{9-12e}}{4}\ \le\ \frac34+\frac{\sqrt{9-12\cdot0}}4=\frac32 ,
+\end{equation}
+且在冠军的 $e=\rho_0\tau_0$ 处右端 $=1.290244$，\textbf{严格小于 \STW\ 的 $\Phi=(3+\sqrt5)/4=1.309017$}。
+\end{proposition}
+
+\begin{proof}
+设 $Q_+$ 的正特征值为 $\rho=\lambda_1>\lambda_2,\lambda_3,\lambda_4\ge0$（其余为 $0$）。
+则 $\sum_{k=2}^4\lambda_k=3-\rho$、$\sum_{k=2}^4\lambda_k^2=3-e-\rho^2$，
+Cauchy--Schwarz 给 $3-e-\rho^2\ge(3-\rho)^2/3$，整理得 $4\rho^2-6\rho+3e\le0$，解出 \eqref{eq:majbound}。
+\end{proof}
+
+\begin{remark}[诚实标注]\label{rmk:majcond}
+命题~\ref{prop:majbound} 是\textbf{条件性}的：冠军自己 $n_+=6$，不满足 $n_+\le4$，
+所以 \eqref{eq:majbound} 在冠军处\textbf{不适用}（把 $n_+=6$ 代入同样的重排论证只得 $1.474$）。
+它的意义是：\textbf{如果}能把 $n_+$ 压到 $4$（推论~\ref{cor:floor2} 说 $4$ 是下界，所以 $n_+=4$ 是唯一可能的极值层），
+那么 $\rho\le1.290244$ 就已经\textbf{无条件地优于} \STW。这把「改进 \STW」与「压低 $n_+$」两件事
+精确地联系起来了，也给出了下一轮的一条明确路线（见 \S\ref{sec:r1517:status} 的 P2）。
+\end{remark}
+
+
+\subsection{第 16 轮：能量分解与双 Cauchy--Schwarz}\label{sec:r16:energy}
+
+本小节的对象是\textbf{每个原子}的能量分配。对原子 $i$ 令 $O(i)=\{j:\langle u_i,u_j\rangle<0\}$、
+$A(i)=\{j:\langle u_i,u_j\rangle>0\}$（含 $j=i$），并定义
+\begin{align}
+\eta_i&:=\sum_{j\in O(i)}g_j\langle u_i,u_j\rangle^2 &&\text{（$i$ 的\emph{钝部}方向能量）}\notag\\
+\zeta_i&:=\sum_{j\in A(i),\,j\ne i}g_j\langle u_i,u_j\rangle^2 &&\text{（$i$ 的\emph{锐部}离对角能量）}\notag\\
+\kappa_i&:=\sum_{j\in O(i)}g_jh_j^2=\sum_{j\in O(i)}x_j^2=1-\sum_{j\in A(i)}x_j^2 &&\text{（钝邻域的 Perron 质量）}\label{eq:energydef}\\
+\sigma_i&:=\sum_{j\in O(i)}c_j|\langle u_i,u_j\rangle|,\qquad
+p_i:=\langle u_i,W_i\rangle=\rho h_i,\qquad
+A_1:=\sum_ic_i\kappa_i,\quad A_2:=\sum_ic_i\eta_i .\notag
+\end{align}
+\eqref{eq:energydef} 中 $\kappa_i$ 的第二个等号用 $g_jh_j^2=x_j^2$，第三个用帧条件
+$\sum_jg_j\langle u_i,u_j\rangle^2=u_i^\top(\sum g_ju_ju_j^\top)u_i=1$ 与 $A(i)\cup O(i)$ 是全集。
+
+\begin{lemma}[能量分解]\label{lem:framesplit}
+$g_i+\eta_i+\zeta_i=1$ 对一切 $i$ 精确成立。特别地 $\|Q_-\|_F^2=e=\sum_ig_i\eta_i$。
+\end{lemma}
+
+\begin{proof}
+帧条件按 $j=i$、$j\in O(i)$、$j\in A(i)\setminus\{i\}$ 三段拆分，$j=i$ 段贡献 $g_i\cdot1$。
+第二个断言：$e=\sum_{ij}(Q_-)_{ij}^2=\sum_{ij}g_ig_j\langle u_i,u_j\rangle^2\mathbf 1\{ij\text{ 钝}\}=\sum_ig_i\eta_i$。
+\end{proof}
+
+\begin{lemma}[第一 Cauchy--Schwarz，冠军处取等]\label{lem:cs1}
+$\sigma_i^2\le\kappa_i\eta_i$，等号 $\Leftrightarrow$ 在 $O(i)$ 上 $h_j$ 与 $|\langle u_i,u_j\rangle|$ 成比例。
+\end{lemma}
+
+\begin{proof}
+$\sigma_i=\sum_{j\in O(i)}(\sqrt{g_j}h_j)(\sqrt{g_j}|\langle u_i,u_j\rangle)$，用 Cauchy--Schwarz。
+\end{proof}
+
+\begin{lemma}[第二 Cauchy--Schwarz]\label{lem:cs2}
+$p_i^2\le(1-\kappa_i)(1-\eta_i)$，且
+$\varphi(u_i):=\sum_jc_j|\langle u_i,u_j\rangle|\le\sqrt{(1-\kappa_i)(1-\eta_i)}+\sqrt{\kappa_i\eta_i}\le1$，
+右端第二个不等号取等 $\Leftrightarrow\kappa_i=\eta_i$。
+\end{lemma}
+
+\begin{proof}
+$p_i=\langle u_i,W_i\rangle$，把 $W_i$ 按 $A(i)$ 拆分并用引理~\ref{lem:framesplit}；
+最后一句是 $\sqrt{(1-a)(1-b)}+\sqrt{ab}\le1$（$a,b\in[0,1]$，两边平方后化简为 $(\sqrt{a(1-b)}-\sqrt{b(1-a)})^2\ge0$）。
+\end{proof}
+
+\begin{theorem}[乘积界 \textrm{thm:betaAA}]\label{thm:betaAA}
+对一切帧测度与一切 $N$：
+\begin{equation}\label{eq:betaAA}
+\beta^2\ \le\ A_1A_2 ,
+\end{equation}
+其中 $\beta=x^\top Q_-x$。冠军处取等：$\beta^2-A_1A_2=+1.39\times10^{-17}$。
+\end{theorem}
+
+\begin{proof}
+两步 Cauchy--Schwarz：
+\[
+\beta=\sum_ic_i\sigma_i\overset{\text{引理}\ref{lem:cs1}}{\le}\sum_ic_i\sqrt{\kappa_i\eta_i}
+\le\sqrt{\Bigl(\sum_ic_i\kappa_i\Bigr)\Bigl(\sum_ic_i\eta_i\Bigr)}=\sqrt{A_1A_2}.
+\]
+$c_i>0$ 保证第二步是真正的 Cauchy--Schwarz。取等数值核对：
+$\beta=0.304972937817$、$A_1=0.469920973690$、$A_2=0.197923689318$。
+\end{proof}
+
+\begin{proposition}[取等刻画]\label{prop:betaAAeq}
+\eqref{eq:betaAA} 取等 $\Leftrightarrow$ 同时满足
+\begin{enumerate}\itemsep1pt
+\item[(E1)] 每条钝边 $\{i,j\}$ 上 $h_i=h_j$；
+\item[(E2)] $(h_i+h_j)^2/|\langle u_i,u_j\rangle|$ 在全部钝边上是同一常数。
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+第一步取等要求在每个 $O(i)$ 上 $h_j\propto|\langle u_i,u_j\rangle|$；
+对两条共享端点的钝边比较比例常数即得 (E1)，回代即得 (E2)。
+\end{proof}
+
+冠军的钝边集是五芒星的五条边 $\{(1,3),(1,4),(2,4),(2,5),(3,5)\}$；
+(E1) 的最大偏离 $1.22\times10^{-15}$、(E2) 的比例散布 $3.28\times10^{-15}$。
+在 $300$ 个\textbf{人为破坏} (E2) 的随机构型中，$299$ 个给出严格不等式
+（余下 $1$ 个是钝图为空的退化情形，此时 $\beta=A_1=A_2=0$，两边同为 $0$）。
+
+\begin{remark}[为什么这条定理不够]\label{rmk:betaAAlimit}
+\eqref{eq:betaAA} 在冠军处\textbf{尖锐}，所以它本身没有损失。损失发生在下一步：
+要用它闭合主猜想，还需要 $\alpha+\sqrt{A_1A_2}\le\rho_0$，而这一条\textbf{是假的}
+（命题~\ref{prop:fourthfalse}）。这是本轮最重要的一次「否证」，见下节。
+\end{remark}
+
+\subsection{否证：全局「第四不等式」$\alpha+\sqrt{A_1A_2}\le\rho_0$}\label{sec:r16:refute}
+
+\begin{proposition}[否证]\label{prop:fourthfalse}
+不等式
+\begin{equation}\label{eq:fourth}
+\alpha+\sqrt{A_1A_2}\ \le\ \rho_0
+\end{equation}
+\textbf{不是}对所有帧测度成立的真命题。存在 $N=7$ 的构型使左端 $=1.287835562520>\rho_0=1.281568196872$，
+超出 $6.27\times10^{-3}$。
+\end{proposition}
+
+\begin{proof}[数值证据]
+在 $360$ 个随机构型（$N=4,\dots,14$，由 \texttt{random\_frame\_measure} 通过 LP 构造，保证帧条件精确成立）
+上扫描，最大值为上式。脚本 \texttt{\_o2.py} 第 (E) 段，输出文件 \texttt{\_o2\_out.txt}。
+\end{proof}
+
+\begin{remark}[否证的含义，以及它\textbf{不}否证什么]\label{rmk:fourthmean}
+\begin{enumerate}\itemsep2pt
+\item \eqref{eq:fourth} 在冠军处\textbf{取等}（残差 $-4.44\times10^{-16}$），
+所以它是一条「尖锐的候选」；被否证的是它的\textbf{全局有效性}，不是它的尖锐性。
+\item 它\textbf{不}否证主猜想 $\kappa_3\le\rho_0$：反例构型的真实 $\rho=\alpha+\beta$ 仍远小于 $\rho_0$，
+失效的只是 $\beta\le\sqrt{A_1A_2}$ 这一步的\textbf{松弛量}。
+\item 因此 \textbf{thm:betaAA} 这条路线只可能在\emph{临界点集合}上完成：
+在满足定理~\ref{thm:stiefelkkt} 全部方程的构型上，$\kappa_i,\eta_i$ 不再自由
+（它们被 $\Lam$、$h$、钝图三者共同锁定），\eqref{eq:fourth} 有可能在那里成立。
+这把问题从「$N$ 维不等式」缩小成「$6+1$ 个参数的刚性方程组上的不等式」，
+是\textbf{一次真实的降维}，但尚未完成。
+\item 反例出现在 $N=7$，正好是 $\dim\ker M\ge1$ 的第一个阶数。这提示
+\eqref{eq:fourth} 的失效与「矩核方向上 $\rho$ 不取极值」是同一现象的两面，
+应当与定理~\ref{thm:dichotomy} 合并使用。
+\end{enumerate}
+\end{remark}
+
+\textbf{仍然全局成立}（$360$ 个构型 $0$ 违背，最大超出如下）：
+\begin{center}\small
+\begin{tabular}{lcc}
+\hline
+不等式 / 恒等式 & 最大超出 & 冠军处 \\
+\hline
+$g_i+\eta_i+\zeta_i=1$（引理~\ref{lem:framesplit}） & $3.11\times10^{-15}$ & 恒等式 \\
+$\sigma_i^2\le\kappa_i\eta_i$（引理~\ref{lem:cs1}） & $+1.39\times10^{-17}$ & \textbf{取等} \\
+$p_i^2\le(1-\kappa_i)(1-\eta_i)$（引理~\ref{lem:cs2}） & $+8.40\times10^{-16}$ & 余量 $2.34\times10^{-2}$ \\
+$\varphi(u_i)\le\sqrt{(1-\kappa_i)(1-\eta_i)}+\sqrt{\kappa_i\eta_i}$ & $0$ & 余量 $1.18\times10^{-2}$ \\
+$\sqrt{(1-\kappa_i)(1-\eta_i)}+\sqrt{\kappa_i\eta_i}\le1$ & $0$ & 严格 \\
+$\beta^2\le A_1A_2$（定理~\ref{thm:betaAA}） & $0$ & \textbf{取等} \\
+$\rho^2\le\sum_ig_i(1-\kappa_i)(1-\eta_i)$ & $+3.33\times10^{-16}$ & 余量 $2.56\times10^{-1}$（约 $15\%$ 松） \\
+\hline
+\end{tabular}
+\end{center}
+
+
+\subsection{新全局定理：矩核二阶变分的符号二分}\label{sec:r17:dichotomy}
+
+这是本轮的主定理，也是对「先攻全局」这一指令的直接回应。
+它的目标是：\textbf{不依赖任何未证猜想}，说明 $N\ge7$ 的构型为什么不能成为极大元，
+并把残留的困难精确地分割成两个各自良定的分支。
+
+\paragraph{设定}
+固定方向组 $U=(u_1,\dots,u_N)\subset S^2$。帧测度簇
+$\mathcal G_U=\{g\in\R^N_{>0}:\sum_ig_iu_iu_i^\top=I_3\}$
+是一个开凸集内的仿射切片，其方向空间是
+$\ker M$，其中 $M$ 是 $7\times N$ 的\emph{矩矩阵}，
+行为 $\bigl(1,\ u_{i,0}^2,\ u_{i,1}^2,\ u_{i,2}^2,\ u_{i,0}u_{i,1},\ u_{i,0}u_{i,2},\ u_{i,1}u_{i,2}\bigr)_{i=1}^N$。
+因为 $u_{i,0}^2+u_{i,1}^2+u_{i,2}^2\equiv1$，$\rank M\le6$，故
+\begin{equation}\label{eq:kerdim}
+\dim\ker M=N-\rank M\ \ge\ N-6 ,
+\end{equation}
+\textbf{这正是「$N\ge7$ 才有矩核方向」的来源}，也是 $N=6$ 成为冠军的结构性原因：
+$N=6$ 时一般 $\dim\ker M=0$，质量 $g$ 被方向 $U$ 完全锁死，没有内部扰动可用。
+
+令 $\mathcal K:=\{\,q=D\,a:a\in\ker M\,\}$，$D=\operatorname{diag}(x_i/g_i)$，$\dim\mathcal K=\dim\ker M$。
+
+\begin{lemma}[一阶条件是无条件的]\label{lem:firstorder}
+若 $g$ 是 $\rho(\cdot,U)$ 在 $\mathcal G_U$ 上的局部极值点且 $\lambda_{\max}(Q_+)$ 单重，则
+$\langle a,h^2\rangle=0$ 对一切 $a\in\ker M$ 成立，即 $h^2=(h_i^2)_i\in\operatorname{rowspace}(M)$：
+存在对称 $\Lam$ 与常数 $\lambda_0$ 使 $h_i^2=u_i^\top\!\Lam u_i+\lambda_0$。
+\end{lemma}
+
+\begin{proof}
+$g+ta\in\mathcal G_U$ 对小 $|t|$ 成立（$g>0$），故 $\rho'(0)=0$。
+由定理~\ref{thm:secondvar} 的一阶部分 $\rho'(0)=\rho\sum_i(a_i/g_i)x_i^2=\rho\langle a,h^2\rangle$。
+\end{proof}
+
+\begin{theorem}[二阶变分的谱形式，复核]\label{thm:secondvar2}
+在引理~\ref{lem:firstorder} 的条件下，沿 $a\in\ker M$：
+\begin{equation}\label{eq:secondvar2}
+\rho''(0)=2\rho\,q^\top R\,q,\qquad q_i=\frac{a_ix_i}{g_i},\qquad
+R:=\sum_{k\ge2}\frac{\rho_k}{\rho-\rho_k}\,w_kw_k^\top ,
+\end{equation}
+其中 $\rho=\rho_1>\rho_2\ge\cdots$ 与 $w_k$ 是 $Q_+$ 的特征值与单位特征向量。
+\end{theorem}
+
+\begin{proof}[证明要点（本轮补全了此前缺失的抵消步骤）]
+$Q(t)_{ij}=\sqrt{(g_i+ta_i)(g_j+ta_j)}\,\langle u_i,u_j\rangle$，故
+$Q'(0)=\tfrac12(\hat AQ+Q\hat A)$、$Q''(0)_{ij}=-Q_{ij}(\hat a_i-\hat a_j)^2/4$，$\hat a_i=a_i/g_i$。
+符号掩码在 $t=0$ 附近不变，故 $\mathrm d(Q_+)_{ij}=K_{ij}\mathrm dQ_{ij}$，
+且 $K\circ Q'(0)$ 满足 $x^\top(K\circ Q')w_k=\tfrac12(\rho+\rho_k)(q^\top w_k)$。
+标准二阶摄动给
+$\rho''=2\sum_{k\ge2}\frac{|x^\top(K\circ Q')w_k|^2}{\rho-\rho_k}+x^\top(K\circ Q'')x$，
+其中 $x^\top(K\circ Q'')x=-\tfrac12\bigl[\rho|q|^2-\sum_k\rho_k(q^\top w_k)^2\bigr]$。
+由引理~\ref{lem:firstorder}，$q^\top x=\langle a,h^2\rangle=0$，故 $|q|^2=\sum_{k\ge2}(q^\top w_k)^2$；
+代入后 $\rho^2$ 与 $\rho_k^2$ 的项\textbf{精确抵消}，只剩 $2\rho\rho_k$ 项，得 \eqref{eq:secondvar2}。
+数值复核：$N=7,\dots,10$ 共 $12$ 个构型、每个取 $4$ 条矩核方向，
+$\max|\rho''_{\rm num}-\eqref{eq:secondvar2}|=5.86\times10^{-8}$（步长 $2\times10^{-4}$ 的中心二阶差分截断误差量级）。
+\end{proof}
+
+\begin{theorem}[全局二分定理（本轮主定理）]\label{thm:dichotomy}
+设 $N\ge7$，$g_i>0$ 对一切 $i$，$\lambda_{\max}(Q_+)$ 单重，且 $(U,g)$ 是 $\rho$ 在 $\mathcal G_U$ 上的局部极大点。则
+\begin{equation}\label{eq:Rneg}
+R\big|_{\mathcal K}\preceq0 ,
+\end{equation}
+从而：
+\begin{enumerate}\itemsep2pt
+\item[(i)] $n_+(Q_+)\le7$；
+\item[(ii)] \textbf{分支 I}：$\nu_-(Q_+)\ge1$；\quad\textbf{或}\quad
+\textbf{分支 II}：$Q_+\succeq0$ 且 $\mathcal K\subseteq\ker Q_+$（此时 $n_+(Q_+)\le6$）；
+\item[(iii)] 特别地，\textbf{若 $Q_+\succ0$ 则必有 $N\le6$}。
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+局部极大给 $\rho''(0)\le0$ 对一切 $a\in\ker M$，即 \eqref{eq:Rneg}。
+把 $\R^N$ 按 $Q_+$ 的谱分解为
+$\mathcal P=\operatorname{span}\{w_k:\rho_k>0,k\ge2\}$、
+$\mathcal Z=\ker Q_+$、$\mathcal N=\operatorname{span}\{w_k:\rho_k<0\}$，
+则 $R$ 在 $\mathcal P$ 上 $\succ0$、在 $\mathcal N$ 上 $\prec0$、在 $\mathcal Z\oplus\R x$ 上 $=0$。
+
+(i) 若 $0\ne q\in\mathcal K\cap\mathcal P$ 则 $q^\top Rq>0$，与 \eqref{eq:Rneg} 矛盾。故
+$\dim\mathcal K+\dim\mathcal P\le N$，即 $(N-6)+(n_+-1)\le N$，得 $n_+\le7$。
+
+(ii) 若 $\nu_-=0$ 则 $\mathcal N=\{0\}$，于是 $q^\top Rq=0\Leftrightarrow q\in\mathcal Z\oplus\R x$；
+又 $q\in\mathcal K$ 已蕴含 $q\perp x$，故 \eqref{eq:Rneg}（此时 $R\succeq0$）强制 $R|_{\mathcal K}\equiv0$，
+即 $\mathcal K\subseteq\mathcal Z=\ker Q_+$。此时 $\dim\ker Q_+=N-n_+\ge\dim\mathcal K=N-6$，得 $n_+\le6$。
+
+(iii) $Q_+\succ0$ 时 $\mathcal Z=\{0\}$、$\mathcal N=\{0\}$，(ii) 给 $\mathcal K=\{0\}$，
+故 $\dim\ker M=0$，与 \eqref{eq:kerdim} 及 $N\ge7$ 矛盾。
+\end{proof}
+
+\begin{remark}[与旧猜想的关系]\label{rmk:dichvsold}
+猜想~\ref{conj:sixatom} 要求「每个 $N\ge7$ 的构型都存在一条全程 $Q_+\succeq0$ 的矩核直线」。
+定理~\ref{thm:dichotomy} 把这句话\textbf{削弱并精确化}为：只需要排除分支 I 与分支 II 两种情形，
+而这两个分支都是\textbf{可以在有限维上陈述和检验}的条件，
+不再需要对「整条直线上的 $Q_+$ 半定性」这种全局性质作断言。这是实质性的进展。
+\end{remark}
+
+\begin{corollary}[分支 II 的球面二次曲线刚性]\label{cor:branch2rigid}
+在分支 II 中，令 $B=Q_+\operatorname{diag}(x_j/g_j)$，则 $B_{ij}=\sqrt{g_i}\,h_j(\langle u_i,u_j\rangle)_+$，
+且 $\mathcal K\subseteq\ker Q_+$ 等价于 $B\,a=0$ 对一切 $a\in\ker M$，即 $B$ 的\textbf{每一行属于} $\operatorname{rowspace}(M)$。
+写成几何形式：对每个 $i$ 存在常数 $\mu_i$ 与对称 $3\times3$ 矩阵 $\Gamma_i$，使
+\begin{equation}\label{eq:conic}
+h_j\,\bigl(\langle u_i,u_j\rangle\bigr)_+\ =\ \mu_i+u_j^\top\Gamma_iu_j\qquad(\forall j),
+\qquad\text{且}\qquad 3\mu_i+\tr\Gamma_i=\rho h_i .
+\end{equation}
+于是：二次函数 $u\mapsto\mu_i+u^\top\Gamma_iu$ 在球面上的零集（一条\textbf{球面二次曲线}）
+必须\textbf{恰好包含} $u_i$ 的全部钝伙伴；而在锐伙伴处它必须取值 $h_j\langle u_i,u_j\rangle>0$。
+\end{corollary}
+
+\begin{proof}
+$B\,a=0\ \forall a\in\ker M\Leftrightarrow$ 行空间条件。
+第二式：\eqref{eq:conic} 两端乘 $g_j$ 求和，左端 $\sum_jg_jh_j(\langle u_i,u_j\rangle)_+=p_i=\rho h_i$，
+右端 $3\mu_i+\tr\Gamma_i$（帧条件）。
+\end{proof}
+
+\begin{remark}[分支 II 就是「重合分裂」退化]\label{rmk:coincident}
+若两个原子\textbf{重合}（$u_i=u_j$），则 $a=e_i-e_j\in\ker M$，
+且 $\rho$ 沿之\textbf{恒等不变}——因为 $\rho$ 只依赖于测度 $\mu=\sum_ig_i\delta_{u_i}$
+（第 15 轮的合并/分裂等谱性：合并保 $\rho$ 精确、分裂添一个零特征值）。
+于是 $R|_{\mathcal K}$ 在这些方向上恰为 $0$，\textbf{分支 II 被精确实现}。
+反过来，\eqref{eq:conic} 说明分支 II 中 $h_j(\langle u_i,u_j\rangle)_+$ 作为 $u_j$ 的函数
+必须被一个二次多项式在原子集上插值；而 $\max(\langle u_i,u\rangle,0)$ 在 $\langle u_i,u\rangle=0$ 处有\textbf{折点}，
+$\sqrt{u^\top\Lam u}$ 又不是多项式——除非原子大量重合，否则这种插值刚性极难满足。
+\textbf{这给出了「分支 II 迫使原子重合」这条待证命题的精确形式}，是下一轮的队首之一。
+\end{remark}
+
+\subsection{数值：$N\ge7$ 极大元的精确结构}\label{sec:r17:num}
+
+用命题~\ref{prop:gradformula} 的解析梯度 $\nabla_V\rho=2(xx^\top\!\circ K)V$ 作 Stiefel 切向投影
+$G\leftarrow G-V\,\mathrm{sym}(V^\top G)$ 加 QR 收缩，从随机初值上升。结果：
+
+\begin{center}\small
+\begin{tabular}{cccccl}
+\hline
+$N$ & $\max\rho-\rho_0$ & $\min_ig_i$ & $\nu_-(Q_+)$ & $n_+(Q_+)$ & 极大元的质量分组 \\
+\hline
+5 & $-3.157\times10^{-2}$ & $2.04\times10^{-1}$ & 0 & 4 & （$\kappa_3(5)=\frac{9+4\sqrt6}{15}$） \\
+6 & $-2.693\times10^{-2}$ & $2.61\times10^{-1}$ & 0 & 6 & 局部吸引域（非全局） \\
+7 & $-3.678\times10^{-12}$ & $5.91\times10^{-11}$ & 0 & 6 & 冠军 $+$ 一个零质量行 \\
+8 & $+1.110\times10^{-15}$ & $1.52\times10^{-1}$ & 0 & 6 & 冠军，其中 $2$ 个原子各作重合二分裂 \\
+9 & $-5.400\times10^{-10}$ & $8.68\times10^{-9}$ & 1 & 6 & 冠军 $+$ 零质量行 $+$ 重合分裂 \\
+10 & $-1.345\times10^{-10}$ & $3.48\times10^{-10}$ & 0 & 6 & 同上 \\
+12 & $+8.882\times10^{-16}$ & $1.07\times10^{-2}$ & 0 & 6 & 冠军，$6$ 个方向作 $(3,3,2,1,2,1)$ 重合分裂 \\
+\hline
+\end{tabular}
+\end{center}
+
+$N=12$ 的分组是\textbf{精确}的（不是数值巧合）：
+\[
+\{0,3,7\},\ \{1,5,8\},\ \{2,6\},\ \{4\},\ \{11\}\ \text{各自}\ \textstyle\sum g=0.533646579188=g^\ast,
+\qquad \{9,10\}:\ \textstyle\sum g=0.331767104061=g_0^\ast .
+\]
+即 $12$ 个原子只占据 $6$ 个不同方向，正是冠军测度 $\mu^\ast=g_0^\ast\delta_{u_0}+g^\ast\sum_{k=0}^4\delta_{u_k}$。
+
+\textbf{分支 II 在这个极大元上被机器精度级地验证}：
+\[
+\max_{a\in\ker M\text{ 基}}|Ba|=3.91\times10^{-13},\qquad
+\operatorname{eig}\bigl(R|_{\mathcal K}\bigr)=\{-3.0\times10^{-15},\dots,+2.6\times10^{-15}\}\ (\text{全为 }0,\ \dim\mathcal K=6).
+\]
+$N=8$ 的情形同样给出 $4$ 个 $g^\ast$ 分组、一个二分裂 $\{4,6\}$（和 $=0.533646579186$）
+与一个 $g=4\times10^{-12}$ 的零质量行。
+
+\begin{remark}[数值结论的强度]\label{rmk:numstrength}
+以上\textbf{不是}「跑算法找极值」，而是用定理~\ref{thm:dichotomy} 预言的结构去\emph{检验}算法输出：
+预言是「$N\ge7$ 的极大元必在分支 II（$R|_{\mathcal K}=0$）且必为冠军测度的重合分裂」，
+检验结果是\textbf{完全吻合}，$g$ 的分组和精确到 $10^{-12}$。
+因此数值在这里的作用是\textbf{证伪探测器}：如果分支 II 只能由重合原子实现，
+那么 $\kappa_3(N)=\rho_0$（$N\ge6$）就与 $\kappa_3(6)=\rho_0$ 是同一件事，
+全局归约就归结为 $N=6$ 的 $20$ 个符号类（第~\ref{sec:n6global} 节）与推论~\ref{cor:branch2rigid} 的刚性。
+\end{remark}
+
+
+\subsection{对偶容量形式的修正与强对偶}\label{sec:r17:dual}
+
+把 $\kappa_3$ 写成「方向组 $U$ 固定、只对质量 $g$ 优化」的形式，会得到一个干净的对偶。
+
+\begin{lemma}[对偶容量]\label{lem:phid}
+对固定的 $U=(u_i)\subset S^2$ 与 $c\in\R^N$，令
+$\Phi_U(c):=\inf\bigl\{\sum_ic_i^2/g_i:\ g>0,\ \sum_ig_iu_iu_i^\top=I_3\bigr\}$。则
+\begin{equation}\label{eq:phid}
+\Phi_U(c)=\max_{M\,:\,u_i^\top Mu_i\ge0\ \forall i}\ \frac{\bigl(\sum_i|c_i|\sqrt{u_i^\top Mu_i}\bigr)^2}{\tr M},
+\end{equation}
+右端是\textbf{尺度不变}的（$M\to tM$ 不变），因而是紧集 $\{M\succeq0,\tr M=1\}$ 上的凹函数最大化。
+\end{lemma}
+
+\begin{proof}
+对任意满足 $u_i^\top Mu_i\ge0$ 的 $M$，令 $\psi_i=\sqrt{u_i^\top Mu_i}$。
+AM--GM 给 $c_i^2/g_i+g_i\psi_i^2\ge2|c_i|\psi_i$；对 $i$ 求和并用帧条件
+$\sum_ig_i\psi_i^2=\tr\bigl(M\sum_ig_iu_iu_i^\top\bigr)=\tr M$，得
+$\sum c_i^2/g_i\ge2\sum|c_i|\psi_i-\tr M$。
+对固定的方向 $M_0$ 再优化标度 $M=tM_0$（$2\sqrt tA-tB$ 的最大值是 $A^2/B$）即得 \eqref{eq:phid} 的「$\ge$」；
+「$\le$」由 KKT：最优 $g_i=|c_i|/\psi_i$ 使 AM--GM 逐点取等。
+\end{proof}
+
+\begin{corollary}[$\kappa_3$ 的容量表述]\label{cor:phikappa}
+$\kappa_3=\sup_{U,\,c\ne0}\dfrac{c^\top K_+(U)c}{\Phi_U(c)}$，其中 $K_+(U)_{ij}=(\langle u_i,u_j\rangle)_+$。
+故 $\kappa_3\le\rho_0$ 等价于：对一切 $U$ 与 $c$，$c^\top K_+(U)c\le\rho_0\,\Phi_U(c)$。
+\end{corollary}
+
+\begin{proof}
+$\lambda_{\max}(D_g^{1/2}K_+D_g^{1/2})=\max\{c^\top K_+c:\sum_ic_i^2/g_i=1\}$，再对 $g\in\mathcal G_U$ 取上确界。
+\end{proof}
+
+冠军处的数值：最优 $M=\Lam$（正是定理~\ref{thm:stiefelkkt} 的迹一乘子），$\tr M=1$，
+$\psi_i=\sqrt{u_i^\top\Lam u_i}=h_i$，$\Phi=1$，$c^\top K_+c=\rho_0$，
+\textbf{零对偶间隙}（primal $=0.999999978$，dual $=1.000000000$，差 $2.2\times10^{-8}$；
+由 $g_i=c_i/\sqrt{t\,u_i^\top Mu_i}$ 复原的质量与 primal 最优质量之差 $2.25\times10^{-8}$）。
+在 \texttt{random\_frame\_measure} 给出的可行构型（$N=5,\dots,8$）上，随机方向 $c$ 的强对偶相对差 $\le1.3\times10^{-4}$。
+
+\begin{remark}[一处必须记录的可行性陷阱]\label{rmk:phitrap}
+若 $U$ 的原子使 $I_3$ \textbf{不}在 $\{\sum_ig_iu_iu_i^\top:g\ge0\}$ 的内部（例如 $6$ 个随机方向），
+则 primal 不可行、$\Phi_U(c)=+\infty$，对偶 \eqref{eq:phid} 也发散到 $+\infty$
+（脚本上一度出现 $1.6\times10^{17}$）。这\textbf{不是}强对偶的反例，而是可行域为空。
+上一版脚本还把 primal 目标误写成 $\sum c_i^2g_i$（应为 $\sum c_i^2/g_i$），
+造成 $\Phi_{\rm primal}=0.2503$ 的假违背；两处均已修正，修正后 \S(F) 全绿。
+\end{remark}
+
+\subsection{钝图的团数与 Motzkin--Straus}\label{sec:r17:ms}
+
+\begin{lemma}[钝团数]\label{lem:obtuseclique}
+钝图 $G_-=(\{1,\dots,N\},\{\{i,j\}:\langle u_i,u_j\rangle<0\})$ 满足 $\omega(G_-)\le4$，且 $4$ 可达。
+\end{lemma}
+
+\begin{proof}
+$\R^3$ 中两两成钝角的单位向量至多 $4$ 个（若 $u_1,\dots,u_5$ 两两钝，
+则 Gram 矩阵 $G$ 满足 $G\mathbf 1$ 的各分量 $=1+\sum_{j\ne i}\langle u_i,u_j\rangle$，
+而 $\rank G\le3$ 使 $G$ 有一个零空间向量；标准论证给 $k\le d+1$）。
+可达性：数值扫描中确实出现 $\omega(G_-)=4$ 的构型（$360$ 个随机构型的最大值恰为 $4$）。
+\end{proof}
+
+\begin{corollary}[Motzkin--Straus 型界]\label{cor:ms}
+记 $\varpi:=\sum_{\{i,j\}\text{ 钝}}x_i^2x_j^2$（无序对求和的两倍，即 $\sum_{i\sim j}x_i^2x_j^2$）。则
+$\varpi\le\frac12\bigl(1-\frac1{\omega(G_-)}\bigr)\le\frac38$，且 $\beta\le\sqrt{e\,\varpi}\le\sqrt{3e/8}$。
+\end{corollary}
+
+\begin{proof}
+以 $y_i=x_i^2$（$\sum y_i=1$）代入 Motzkin--Straus 定理；
+$\beta^2\le e\varpi$ 是把 $\beta=\sum_{ij}(Q_-)_{ij}x_ix_j$ 与 $\|Q_-\|_F^2=e$、$\varpi$ 作 Cauchy--Schwarz。
+\end{proof}
+
+数值：$360$ 个构型上 $\max\varpi=0.359148483447<3/8=0.375$，$\beta^2-e\varpi\le0$ 无一违背。
+
+\begin{remark}[这条路线的定量天花板（诚实记录）]\label{rmk:mslimit}
+把 $\beta\le\sqrt{3e/8}$、$\rho^2\le\|Q_+\|_F^2=3-e$（引理~\ref{lem:frob}）与 $\tau\le\beta$ 联立：
+$\tau\le\sqrt{3(3-(1+\tau)^2)/8}$，解得 $\tau\le0.5146$、$\rho\le1.5146$，
+\textbf{比 Mohar 的 $1.36603$ 还差}。原因见注~\ref{rmk:taugap}：
+Motzkin--Straus 只控制 $\beta$，而\textbf{抵消项 $-(1-\alpha)$ 完全没有被用上}。
+本小节因此记为「已证但不足」，并作为「必须让 $(I-Q)x$ 参与」这一判断的定量佐证。
+\end{remark}
+
+\subsection{本轮状态、诚实标签与方法优先队列}\label{sec:r1517:status}
+
+\textbf{已证（符号推导 $+$ 数值证书）}：
+命题~\ref{prop:gradformula}（正部的环境梯度，勘误后重新确立）；
+定理~\ref{thm:stiefelkkt}（Stiefel KKT 与迹一刚性）；
+推论~\ref{cor:ellipsoid}（椭球面恒等式）、\ref{cor:hubfree}（枢纽无关式 $\rho^2=m^\top\Lam^{-1}m$ 与精确 CS 缺陷）；
+引理~\ref{lem:tauform}（$\tau$-形式）与推论~\ref{cor:oneneg}、引理~\ref{lem:normqmx}；
+引理~\ref{lem:frob}（能量守恒 $\|Q_+\|_F^2=3-e$，精确）、推论~\ref{cor:floor2}（一行式谱地板）；
+引理~\ref{lem:framesplit}、\ref{lem:cs1}、\ref{lem:cs2}、定理~\ref{thm:betaAA}、命题~\ref{prop:betaAAeq}；
+引理~\ref{lem:firstorder}、定理~\ref{thm:secondvar2}、\textbf{定理~\ref{thm:dichotomy}（全局二分）}、
+推论~\ref{cor:branch2rigid}（分支 II 的球面二次曲线刚性）；
+引理~\ref{lem:phid} 与推论~\ref{cor:phikappa}（对偶容量、强对偶）；
+引理~\ref{lem:obtuseclique} 与推论~\ref{cor:ms}（$\omega(G_-)\le4$、$\varpi\le3/8$、$\beta\le\sqrt{3e/8}$）。
+
+\textbf{条件性（已证但需附加假设）}：
+命题~\ref{prop:majbound}（$Q_+\succeq0$ 且 $n_+\le4$ 时 $\rho\le1.290244<\Phi$）；
+推论~\ref{cor:ellipsoid} 的 $\Lam\succ0$ 要求（冠军处成立：谱 $\{0.5946,0.2027^{[2]}\}>0$）。
+
+\textbf{否证（同样是成果）}：
+命题~\ref{prop:fourthfalse}——全局第四不等式 $\alpha+\sqrt{A_1A_2}\le\rho_0$ 为\textbf{假}，
+$N=7$ 反例超出 $6.27\times10^{-3}$；
+注~\ref{rmk:mslimit}——Motzkin--Straus 路线的定量天花板 $1.5146$，不足；
+注~\ref{rmk:majcond}——重排路线在 $n_+=6$（冠军的实际层）只给 $1.474$，不足。
+
+\textbf{数值（不作成果）}：
+$N=5,\dots,12$ 的 Stiefel 梯度上升极大元及其质量分组；
+分支 II 在 $N=12$ 极大元上的精确实现（$R|_{\mathcal K}=0$ 到 $3\times10^{-15}$）；
+$360$ 个随机构型上的能量不等式扫描。
+
+\textbf{方法优先队列（第七版，第 15--17 轮；已被第八版取代，见第~\ref{sec:r18:status}~节）}
+\begin{enumerate}\itemsep3pt
+\item \textbf{P1（队首，全局）——排除分支 II}：证明推论~\ref{cor:branch2rigid} 的插值刚性
+\eqref{eq:conic} 在原子两两不重合时不可能成立（$N\ge7$）。
+这是一道\textbf{有限维球面插值}题：一个二次多项式要在 $N$ 个点上等于
+$\sqrt{u^\top\Lam u}\cdot(\langle u_i,u\rangle)_+$，后者的折点结构是主要武器。
+\item \textbf{P2（全局）——压低 $n_+$ 到 $4$}：推论~\ref{cor:floor2} 说 $n_+\ge4$，
+定理~\ref{thm:dichotomy}(i) 说 $n_+\le7$，命题~\ref{prop:majbound} 说 $n_+=4$ 即可完成「优于 \STW」。
+缺口是 $n_+\in\{5,6,7\}$ 三层（冠军在 $n_+=6$）。
+\item \textbf{P3（局部）——分支 I}：在 $\nu_-(Q_+)\ge1$ 的构型上直接证 $\rho\le\rho_0$。
+可用 $\nu_-(Q_+)\le\nu_-(Q_-)$ 与 $\omega(G_-)\le4$（引理~\ref{lem:obtuseclique}）。
+\item \textbf{P4（$N=6$ 收尾）}：第~\ref{sec:n6global} 节余下的 $20$ 个符号类。
+\item \textbf{P5（副方向，下界）}：$\Lambda_3(G)\ge\rho_0n-3$ 的可达到性——冠军是 hub$+F_5$，
+对应的图族已由定理~\ref{thm:Fn} 给出闭式谱，下界一侧只差「无穷族的渐近」这一步。
+\end{enumerate}
+
+\textbf{本轮把「唯一缺口」重写为}：定理~\ref{thm:dichotomy} 的分支 I 与分支 II 二者之一必须被排除。
+分支 II 的形式已完全代数化（\eqref{eq:conic}），分支 I 的形式是一个负惯性指数条件。
+两者都不再需要「整条矩核直线上 $Q_+\succeq0$」这种难以处理的断言。
+
+
+
+
+\section{第 18 轮：钝性稀释恒等式与 $\Lam$-参数化（消去特征值的代数重构）}\label{sec:r18}
+
+\subsection{动机：换一个正交的方向}\label{sec:r18:motiv}
+
+第~\ref{sec:r1517}~节的全局二分定理~\ref{thm:dichotomy}~把缺口压缩为「排除分支 I 或分支 II」，
+两个分支都已经是有限维的。但这两个分支都仍然建立在同一个对象之上：
+$Q_+$ 的\textbf{谱}——$\lambda_{\max}(Q_+)$ 与它的 Perron 向量 $x$。
+谱对象天然带着两个技术麻烦：一是 $\lambda_{\max}$ 只在单重时才光滑，
+二是 Perron 向量由一个 $N$ 维特征方程隐式定义，$N$ 还不固定。
+
+本轮换一个与之\textbf{正交}的方向：不再研究 $Q_+$ 的谱，而是设法把 $\rho=\lambda_{\max}(Q_+)$
+本身改写成一个\textbf{不含特征值、不含 Perron 向量}的代数泛函，
+其自变量只有几何数据 $(g_i,u_i)$ 与一个 $3\times3$ 的半正定矩阵 $\Lam$。
+结果（定理~\ref{thm:lamparam}）是：主猜想等价于一族\textbf{五个额外参数}上的代数不等式，
+且这个代数泛函在 $\Lam$ 上是\textbf{一次正齐次}的，数值上还是\textbf{凹}的
+（命题~\ref{prop:concave}）。这使内层极大化成为一个凸规划，从而原则上可以给出
+\textbf{对偶证书}（推论~\ref{cor:dualcert}），而不是只能跑算法。
+
+沿路我们得到两个精确恒等式（引理~\ref{lem:deltautau}、引理~\ref{lem:dilution}）、
+一个 $u$-KKT 的闭式解（命题~\ref{prop:uktkt}）、一个初等的结构定理
+（定理~\ref{thm:transitive}，它解释了 $\rho_0$ 中为什么出现 $\sqrt5$），
+以及\textbf{两个否证}（命题~\ref{prop:refA}、命题~\ref{prop:refB}），
+它们精确指出「哪一步松弛一定会崩」。
+
+\subsection{记号}\label{sec:r18:not}
+
+沿用 \STW\ Theorem 4.1 的坐标并做如下固定记法。设 $N\ge3$，$g_i>0$，$u_i\in S^2$，
+\begin{equation}\label{eq:frame18}
+\sum_{i=1}^N g_iu_iu_i^\top=I_3\qquad(\text{从而 } \textstyle\sum_ig_i=3),
+\end{equation}
+记 $v_i:=\sqrt{g_i}\,u_i\in\R^3$，则 $\sum_iv_iv_i^\top=I_3$，$Q=VV^\top$ 的条目为
+$Q_{ij}=v_i^\top v_j=\sqrt{g_ig_j}\langle u_i,u_j\rangle$，且 $Q$ 是秩三正交投影。
+写
+\[
+(t)_+=\max(t,0),\qquad (t)_-=\max(-t,0),\qquad
+P_{ij}:=(\langle u_i,u_j\rangle)_-,\qquad K_{ij}:=(\langle u_i,u_j\rangle)_+ .
+\]
+$Q_+=(Q)_{ij}=(\sqrt{g_ig_j}\langle u_i,u_j\rangle)_+=\sqrt{g_ig_j}K_{ij}$，
+$Q_-=(Q_-)_{ij}=\sqrt{g_ig_j}P_{ij}$，$Q=Q_+-Q_-$，$Q_+=\tfrac12(Q+|Q|)$。
+设 $\rho=\lambda_{\max}(Q_+)$ 单重，$x\ge0$，$\|x\|=1$，$Q_+x=\rho x$，并令
+\begin{equation}\label{eq:hdef18}
+h_i:=\frac{x_i}{\sqrt{g_i}}>0\qquad\Bigl(\text{即 } x_i=\sqrt{g_i}h_i,\quad \sum_ig_ih_i^2=1\Bigr).
+\end{equation}
+于是 Perron 方程等价于
+\begin{equation}\label{eq:perron18}
+\rho h_i=\sum_jg_jh_jK_{ij}=\langle u_i,m\rangle+d_i ,
+\end{equation}
+其中我们引入两个核心量：
+\begin{equation}\label{eq:md18}
+m:=\sum_{i}g_ih_iu_i\in\R^3,\qquad d_i:=\sum_jg_jh_jP_{ij}\ge0 .
+\end{equation}
+$m$ 是\textbf{矩向量}，$d=(d_i)$ 是\textbf{钝场}。由第~\ref{sec:r1517}~节的 $\tau$-形式（引理~\ref{lem:tauform}）：
+\[
+\alpha:=\|m\|^2=x^\top Qx,\qquad \beta:=x^\top Q_-x=\sum_ig_ih_id_i,\qquad
+\rho=\alpha+\beta,\qquad \tau:=\rho-1=\beta-(1-\alpha).
+\]
+最后再引入一个\textbf{纯几何}量（不含 $h$）：
+\begin{equation}\label{eq:Didef}
+D_i:=\sum_jg_jP_{ij}=\sum_jg_j(\langle u_i,u_j\rangle)_-\ \ge0 ,
+\end{equation}
+它是原子 $i$ 处的「钝质量」。注意 $d_i$ 与 $D_i$ 的关系是 $d_i=\sum_jg_jh_jP_{ij}$：
+$d$ 是 $D$ 的 $h$-加权版本。相应的钝图记为 $G_-$：$i\sim j\Leftrightarrow\langle u_i,u_j\rangle<0$。
+
+\subsection{第一个精确恒等式：钝场向量恰为 $\tau m$}\label{sec:r18:delta}
+
+\begin{lemma}[钝场向量恒等式]\label{lem:deltautau}
+设 $\delta:=\sum_ig_id_iu_i$。则
+\begin{equation}\label{eq:deltatau}
+\boxed{\ \delta=\tau\,m\ }
+\end{equation}
+等价地，
+\begin{align}
+QQ_-x&=\tau\,Qx=\tau m, \label{eq:QQmx}\\
+(I-Q)Q_-x&=\rho\,(I-Q)x, \label{eq:orthQmx}\\
+\|Q_-x\|^2&=\tau^2\alpha+\rho^2(1-\alpha)=(1-\alpha)(1+2\tau)+\tau^2, \label{eq:normQmx2}\\
+\langle m,\delta\rangle&=\alpha\tau . \label{eq:mdelta}
+\end{align}
+\end{lemma}
+
+\begin{proof}
+$Q_-=Q_+-Q$，故 $Q_-x=\rho x-Qx$。用 $Q^2=Q$：
+$QQ_-x=\rho Qx-Qx=\tau Qx$，$(I-Q)Q_-x=\rho(I-Q)x-(I-Q)Qx=\rho(I-Q)x$，
+这就是 \eqref{eq:QQmx}\eqref{eq:orthQmx}。又 $Qx=V^\top Vx$ 而
+$(Vx)_k=\sum_i\sqrt{g_i}x_iu_{i,k}=m$ 的第 $k$ 分量乘以 $\sqrt{g_i}$ 的约定——直接算：
+$\sum_i\sqrt{g_i}(Qx)_iu_i=\sum_i\sqrt{g_i}\sum_j\sqrt{g_ig_j}\langle u_i,u_j\rangle x_ju_i
+=\sum_j x_j\sqrt{g_j}\sum_ig_i\langle u_i,u_j\rangle u_i=\sum_jx_j\sqrt{g_j}u_j=m$，
+另一方面 $\sum_i\sqrt{g_i}(Q_-x)_iu_i=\sum_ig_id_iu_i=\delta$，
+而 $\sum_i\sqrt{g_i}(Q_+x)_iu_i=\rho m$；由 $Q_-x=Q_+x-Qx$ 得 $\delta=\rho m-m=\tau m$，即 \eqref{eq:deltatau}。
+\eqref{eq:normQmx2}：$Q_-x$ 沿 $\operatorname{im}Q$ 与 $\ker Q$ 正交分解，
+由 \eqref{eq:QQmx}\eqref{eq:orthQmx} 得 $\|Q_-x\|^2=\tau^2\|Qx\|^2+\rho^2\|(I-Q)x\|^2$，
+而 $\|Qx\|^2=x^\top Qx=\alpha$、$\|(I-Q)x\|^2=1-\alpha$。
+展开 $\tau^2\alpha+\rho^2(1-\alpha)$ 并用 $\rho=1+\tau$ 即得引理~\ref{lem:normqmx}~的旧形式，
+故 \eqref{eq:normQmx2} 是它的\textbf{勾股细化}：它把 $\|Q_-x\|^2$ 分成了「行空间内」与「行空间外」两块。
+\eqref{eq:mdelta}~是 \eqref{eq:deltatau}~与 $\|m\|^2=\alpha$ 的直接推论。
+\end{proof}
+
+\begin{remark}[读法]\label{rmk:deltaread}
+\eqref{eq:deltatau}~的几何含义是：把每个原子的钝场 $d_i$ 以质量 $g_i$ 堆到方向 $u_i$ 上，
+得到的向量\textbf{必定}与矩向量 $m$ 平行，比例系数恰好是超出量 $\tau=\rho-1$。
+因此 $\tau$ 有了一个纯几何的读法：
+\begin{equation}\label{eq:tauread}
+\tau=\frac{\bigl\|\sum_ig_id_iu_i\bigr\|}{\bigl\|\sum_ig_ih_iu_i\bigr\|}\qquad(m\ne0),
+\end{equation}
+即「钝场向量长度 / 矩向量长度」。这把主猜想变成
+\[
+\Bigl\|\sum_ig_id_iu_i\Bigr\|\le\tau_0\Bigl\|\sum_ig_ih_iu_i\Bigr\|,
+\]
+两端都是 $\R^3$ 中的向量长度，而不再是矩阵的最大特征值。
+数值验证：冠军处 \eqref{eq:deltatau}~的残差为 $6.1\times10^{-16}$，
+在 $800$ 个随机帧构型上最大残差 $2.9\times10^{-14}$
+（\texttt{证书\_Lam参数化与稀释恒等式.py}~(A) 段）。
+\end{remark}
+
+\subsection{第二个精确恒等式：钝性稀释}\label{sec:r18:dil}
+
+\begin{lemma}[钝性稀释恒等式]\label{lem:dilution}
+定义
+\begin{equation}\label{eq:Dhdef}
+\mathcal D(h):=\sum_ig_ih_i^2D_i=\sum_{i\sim j}g_ig_j|\langle u_i,u_j\rangle|\,\frac{h_i^2+h_j^2}{2},
+\qquad
+\mathcal E_-(h):=\sum_{i\sim j}g_ig_j|\langle u_i,u_j\rangle|\,(h_i-h_j)^2 .
+\end{equation}
+则对\textbf{一切}构型与一切 $h\ge0$ 有精确等式
+\begin{equation}\label{eq:dilution}
+\boxed{\ \mathcal D(h)=\beta+\tfrac12\,\mathcal E_-(h)\ }\qquad\text{即}\qquad
+\beta=\mathcal D(h)-\tfrac12\mathcal E_-(h)\ge \mathcal D(h)-\tfrac12\mathcal E_-(h),
+\end{equation}
+且 $\mathcal E_-(h)\ge0$，$\mathcal E_-(h)=0\Leftrightarrow h$ 在钝图 $G_-$ 的每个连通支上取常值。
+特别地 $\beta\le\mathcal D(h)$（\textbf{钝性稀释不等式}），等号 $\Leftrightarrow\mathcal E_-=0$。
+\end{lemma}
+
+\begin{proof}
+对固定的无序钝对 $\{i,j\}$，$\frac{h_i^2+h_j^2}2-h_ih_j=\frac{(h_i-h_j)^2}2$；
+把这一等式乘以 $g_ig_j|\langle u_i,u_j\rangle|$ 并对所有钝对求和，
+左端给出 $\mathcal D(h)$（因为 $\sum_{j\sim i}g_j|\langle u_i,u_j\rangle|=D_i$），
+中项给出 $\beta=\sum_{i\sim j}g_ig_jh_ih_j|\langle u_i,u_j\rangle|$，右端给出 $\frac12\mathcal E_-(h)$。
+\end{proof}
+
+\begin{corollary}[$\tau$ 的势--能量分解]\label{cor:tauenergy}
+对一切构型，
+\begin{equation}\label{eq:tauenergy}
+\tau=\underbrace{\bigl[\mathcal D(h)-(1-\alpha)\bigr]}_{\text{势项 }\Phi}
+\;-\;\underbrace{\tfrac12\mathcal E_-(h)}_{\text{钝 Dirichlet 能量}} .
+\end{equation}
+\end{corollary}
+
+\begin{remark}[为什么这条分解是有信息的]\label{rmk:dilread}
+\eqref{eq:tauenergy}~把主猜想写成
+\begin{equation}\label{eq:star}
+\Phi=\mathcal D(h)-(1-\alpha)\ \le\ \tau_0+\tfrac12\mathcal E_-(h),
+\end{equation}
+左边是「势」：$\mathcal D(h)$ 对 $h^2$ 是\textbf{线性}的，$-(1-\alpha)$ 是 $-\|m\|^2+1$；
+右边是「能量」：$h$ 在钝图上的加权 Dirichlet 能量。
+这是一个 Poincar\'e 型不等式的形状，而不是谱不等式的形状。
+它的关键优点是：$\mathcal D(h)$ 只通过 $h^2$ 依赖 $h$，因此一旦用上
+$g$-KKT 的 $h_i^2=u_i^\top\tilde\Lam u_i$（第~\ref{sec:r1517}~节的 R15-2），
+$\mathcal D(h)$ 就变成 $\tr(\tilde\Lam\Xi)$，其中
+\begin{equation}\label{eq:Xidef}
+\Xi:=\sum_ig_iD_iu_iu_i^\top\succeq0
+\end{equation}
+是一个\textbf{只依赖几何}的 $3\times3$ 矩阵。于是势项完全落在 $3\times3$ 矩阵的世界里。
+冠军处：$\operatorname{eig}(\Xi)=\{0.379920,\,0.379920,\,0.253875\}$，$\tr\Xi=1.013716$，
+$\tr(\tilde\Lam\Xi)=0.304973=\beta$（因为 $\mathcal E_-=0$），$\Phi=\tau_0$ 精确取等。
+\end{remark}
+
+\begin{lemma}[$\mathcal E_-$ 的第二显式]\label{lem:Em2}
+设 $h$ 是 Perron 向量（即 \eqref{eq:perron18}~成立）。则
+\begin{equation}\label{eq:Em2}
+\mathcal E_-(h)=\frac1{\rho^2}\sum_{i\sim j}g_ig_j|\langle u_i,u_j\rangle|\,
+\zeta_{ij}^2,\qquad
+\zeta_{ij}:=\langle u_i-u_j,m\rangle+d_i-d_j .
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+由 \eqref{eq:perron18}，$\rho h_i=\langle u_i,m\rangle+d_i$，故 $\rho(h_i-h_j)=\zeta_{ij}$。
+\end{proof}
+
+\begin{remark}\label{rmk:Em2read}
+\eqref{eq:Em2}~的重要性在于：右端\textbf{不再显含} $h$，只含几何量 $u_i,g_i$ 与两个
+辅助量 $m,d$（而 $m,d$ 又由 $h$ 决定）。它把「需要多少 Dirichlet 能量来补偿」这个问题
+改写成了一个\textbf{显式的非负二次型}的下界问题，是下一轮 P1 的具体攻击目标。
+数值验证：\eqref{eq:Em2}~在冠军处残差 $<10^{-15}$，在 $1200$ 个随机构型上最大残差 $2.1\times10^{-15}$。
+\end{remark}
+
+\subsection{$u$-KKT 的闭式解}\label{sec:r18:ukkt}
+
+第~\ref{sec:r1517}~节以「R15-2 / R15-3」的形式记录了两个在冠军处数值成立的临界点关系。
+本轮把它们\textbf{解出来}：乘子不是「存在」，而是有闭式。
+
+\begin{proposition}[$u$-KKT 的显式形式]\label{prop:uktkt}
+设 $(U,g)$ 是 $\rho$ 在帧切片 \eqref{eq:frame18}~上的临界点，$g_i>0$，$\lambda_{\max}(Q_+)$ 单重。
+令 $W_i:=\sum_{j\in S_i^+}g_jh_ju_j$（$S_i^+=\{j:\langle u_i,u_j\rangle>0\}$）。
+设 Lagrange 函数为
+$\mathcal L=\rho-\langle\Lam,\sum_ig_iu_iu_i^\top-I_3\rangle-\sum_i\frac{\nu_i}2(\|u_i\|^2-1)$。
+则：
+\begin{enumerate}\itemsep2pt
+\item[(i)] \textbf{球面乘子恒为零}：$\nu_i\equiv0$；
+\item[(ii)] $\tilde\Lam u_i=\dfrac{h_i}{\rho}W_i$，其中 $\tilde\Lam:=\frac2\rho\Lam$；
+\item[(iii)] \textbf{闭式}：
+\begin{equation}\label{eq:lamclosed}
+\tilde\Lam=\frac1\rho\sum_{i}\sum_{j\in S_i^+}g_ig_jh_ih_j\,u_iu_j^\top
+=\frac1\rho\sum_{(i,j)\ \text{锐}}g_ig_jh_ih_j\,u_iu_j^\top ;
+\end{equation}
+\item[(iv)] \eqref{eq:lamclosed}~\textbf{自动对称}，$\tr\tilde\Lam=1$ 是恒等式（不依赖临界性），
+且 $h_i^2=u_i^\top\tilde\Lam u_i$。
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+$\partial\rho/\partial u_i=\sum_jx_ix_j\sqrt{g_ig_j}\,\one[\langle u_i,u_j\rangle>0]\,u_j
+=x_i\sqrt{g_i}W_i=g_ih_iW_i$，
+$\partial\mathcal L/\partial u_i=g_ih_iW_i-2g_i\Lam u_i-\nu_iu_i=0$，故
+$h_iW_i=2\Lam u_i+\hat\nu_iu_i=\rho\tilde\Lam u_i+\hat\nu_iu_i$（$\hat\nu_i=\nu_i/g_i$）。
+与 $u_i$ 作内积：左端 $h_i\langle u_i,W_i\rangle=h_i\sum_{j\in S_i^+}g_jh_j\langle u_i,u_j\rangle
+=h_i\sum_jg_jh_jK_{ij}=h_i\cdot\rho h_i$（用 \eqref{eq:perron18}），
+右端 $\rho u_i^\top\tilde\Lam u_i+\hat\nu_i$。而 $g$-KKT 给
+$\frac{\partial\rho}{\partial g_i}=\frac{\rho x_i^2}{2g_i}=\frac{\rho h_i^2}2=\langle u_i,\Lam u_i\rangle$，
+即 $u_i^\top\tilde\Lam u_i=h_i^2$。代入得 $\rho h_i^2=\rho h_i^2+\hat\nu_i$，故 $\hat\nu_i=0$，(i)(ii) 成立。
+(iii)：$\tilde\Lam=\tilde\Lam\cdot I_3=\sum_ig_i\tilde\Lam u_iu_i^\top=\frac1\rho\sum_ig_ih_iW_iu_i^\top$，展开 $W_i$ 即得。
+(iv)：\eqref{eq:lamclosed}~的和式在 $(i,j)$ 上的系数 $g_ig_jh_ih_j$ 对称，而「锐」关系本身对称，
+故转置后仍是同一个和；$\tr\tilde\Lam=\frac1\rho\sum_ig_ih_i\langle u_i,W_i\rangle
+=\frac1\rho\sum_ig_ih_i\cdot\rho h_i=\sum_ig_ih_i^2=1$；
+$u_i^\top\tilde\Lam u_i=\frac{h_i}{\rho}\langle u_i,W_i\rangle=h_i^2$。
+\end{proof}
+
+\begin{remark}\label{rmk:ukktread}
+$\nu_i\equiv0$ 是一个此前未记录的干净事实：\textbf{球面约束在临界点上是「松」的}，
+全部约束信息都来自帧条件。这一点在数值上同样成立：冠军处
+$|h_iW_i-\rho\tilde\Lam u_i|$ 的最大残差为 $7.2\times10^{-16}$，
+\eqref{eq:lamclosed}~与最小二乘拟合出的 $\tilde\Lam$ 相差 $5.0\times10^{-16}$，
+$\operatorname{eig}(\tilde\Lam)=\{0.594609,\,0.202696,\,0.202696\}$，$\lambda_{\min}=0.2027>0$。
+\end{remark}
+
+\subsection{主结果：$\Lam$-参数化}\label{sec:r18:main}
+
+\begin{definition}[$\Lam$-泛函]\label{def:lamfunc}
+对固定的几何 $(g,U)$ 满足 \eqref{eq:frame18}，与任意 $\Lam\succeq0$，令
+\begin{equation}\label{eq:hlam}
+h_i(\Lam):=\sqrt{u_i^\top\Lam u_i}=\|\Lam^{1/2}u_i\|,\qquad
+x_i(\Lam):=\sqrt{g_i}\,h_i(\Lambda),
+\end{equation}
+并定义
+\begin{equation}\label{eq:rholam}
+\rho(\Lam):=x(\Lam)^\top Q_+x(\Lam)
+=\Bigl\|\sum_ig_ih_i(\Lam)u_i\Bigr\|^2+\sum_{i,j}g_ig_jh_i(\Lam)h_j(\Lam)(\langle u_i,u_j\rangle)_- .
+\end{equation}
+\end{definition}
+
+\begin{theorem}[$\Lam$-参数化：消去特征值的等价重构]\label{thm:lamparam}
+\begin{enumerate}\itemsep3pt
+\item[(i)] $\|x(\Lam)\|^2=\sum_ig_ih_i(\Lam)^2=\tr\Lam$；
+$\rho(t\Lam)=t\,\rho(\Lam)$（\textbf{一次正齐次}）；
+且当 $\tr\Lam\le1$ 时 $\rho(\Lam)\le\lambda_{\max}(Q_+)$。
+\item[(ii)] 在任一临界点上（命题~\ref{prop:uktkt}），$\rho(\tilde\Lam)=\rho=\lambda_{\max}(Q_+)$，且
+\begin{equation}\label{eq:gradlam}
+\nabla_\Lam\rho(\Lam)\big|_{\Lam=\tilde\Lam}=\rho\,I_3 ,
+\end{equation}
+即 $\tilde\Lam$ 是 $\rho(\cdot)$ 在超平面 $\{\tr=1\}$ 上的\textbf{驻点}。
+更一般地，$\nabla_\Lam\rho(\Lam)=\sum_i\frac{g_i[\langle u_i,m(\Lam)\rangle+d_i(\Lam)]}{h_i(\Lam)}u_iu_i^\top$，
+故 \eqref{eq:gradlam}~成立当且仅当 $h(\Lam)$ 满足 Perron 方程 \eqref{eq:perron18}。
+\item[(iii)] \textbf{等价重构}：
+\begin{equation}\label{eq:kappalam}
+\kappa_3=\sup_{(g,U)}\ \max_{\substack{\Lam\succeq0\\ \tr\Lam=1}}\ \rho_{g,U}(\Lam) .
+\end{equation}
+因此 $\kappa_3\le\rho_0$（等价地 $\Lam_3(G)\le\rho_0n-3$ 对一切 $G$）由下面这一条
+\textbf{不含特征值、不含 Perron 向量}的代数不等式推出：
+\begin{equation}\label{eq:starmain}
+\Bigl\|\sum_ig_ih_iu_i\Bigr\|^2+\sum_{i,j}g_ig_jh_ih_j(\langle u_i,u_j\rangle)_-\ \le\ \rho_0 ,
+\qquad h_i=\sqrt{u_i^\top\Lam u_i},\ \Lam\succeq0,\ \tr\Lam=1 .
+\end{equation}
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(i) $\sum_ig_ih_i(\Lam)^2=\sum_ig_iu_i^\top\Lam u_i=\tr(\Lam\sum_ig_iu_iu_i^\top)=\tr\Lam$。
+$h(t\Lam)=\sqrt t\,h(\Lam)$，而 \eqref{eq:rholam}~的右端对 $h$ 是二次的，故一次正齐次。
+若 $\tr\Lam=1$ 则 $\|x(\Lam)\|=1$，于是 $\rho(\Lam)=x(\Lam)^\top Q_+x(\Lam)\le\lambda_{\max}(Q_+)$；
+$\tr\Lam<1$ 时用齐次性。
+(ii) 在临界点，$h_i(\tilde\Lam)^2=u_i^\top\tilde\Lam u_i=h_i^2$，故 $h(\tilde\Lam)=h$（两者皆正），
+从而 $\rho(\tilde\Lam)=x^\top Q_+x=\rho$。梯度：$\partial h_i/\partial\Lam=u_iu_i^\top/(2h_i)$，
+$\partial\rho(\Lam)/\partial h_i=2g_i\langle u_i,m(\Lam)\rangle+2\sum_jg_ig_jh_j(\Lam)P_{ij}
+=2g_i[\langle u_i,m(\Lam)\rangle+d_i(\Lam)]$，链式法则给出所断言的公式；
+在 $\Lam=\tilde\Lam$ 处方括号为 $\rho h_i$（\eqref{eq:perron18}），于是
+$\nabla_\Lam\rho=\rho\sum_ig_iu_iu_i^\top=\rho I_3$。
+(iii) 「$\le$」：由 (i)，对每个几何 $\max_{\tr\Lam=1}\rho(\Lam)\le\lambda_{\max}(Q_+)$，取上确界即得。
+「$\ge$」：在 $\rho$ 的极大点（$g_i>0$，$\lambda_{\max}$ 单重）由 (ii) 得
+$\max_\Lam\rho(\Lam)\ge\rho(\tilde\Lam)=\rho$；对 $g_i=0$ 或重根的退化情形，
+用第~\ref{sec:r1517}~节的合并/分裂等谱性化归到 $g_i>0$ 且 $\lambda_{\max}$ 单重的情形
+（合并保 $\rho$ 精确，分裂添一个零特征值），再用极限论证。
+\end{proof}
+
+\begin{remark}[这消除了什么]\label{rmk:lamparamread}
+\eqref{eq:starmain}~与原来的问题 $\lambda_{\max}((VV^\top)_+)\le\rho_0$ 相比：
+\begin{itemize}\itemsep2pt
+\item 不再有 $N\times N$ 矩阵的特征值，也不再有 Perron 向量（$h$ 由 $\Lam$ 显式给出）；
+\item 新增的自由度只有 $\Lam$ 的 $5$ 个（半正定、迹一）；
+\item 约束集 $\{(g,u,\Lam): g\ge0,\ \sum g_iu_iu_i^\top=I_3,\ \Lam\succeq0,\ \tr\Lam=1\}$
+是\textbf{半代数}的；把 $h_i\ge0$、$h_i^2=u_i^\top\Lam u_i$ 显式引入后，
+目标函数在固定符号模式（即固定钝图 $G_-$）下是\textbf{多项式}的。
+这为矩-SOS 层级或显式对偶证书留出了接口。
+\end{itemize}
+诚实标注：(iii) 中「$\ge$」一侧的退化情形化归沿用第~\ref{sec:r1517}~节的等谱性结论，
+其细节（$g_i\to0$ 的极限与重根的分歧）在本报告中仍按\textbf{条件性}处理。
+\end{remark}
+
+\begin{proposition}[凹性，数值]\label{prop:concave}
+对固定几何，$\rho(\Lam)$ 在 $\Lam$ 上是\textbf{凹}的：在冠军几何上，
+$600$ 组随机 $(\Lam_1,\Lam_2,s)$ 的最小凹性余量
+$\rho((1-s)\Lam_1+s\Lam_2)-[(1-s)\rho(\Lam_1)+s\rho(\Lam_2)]$ 为 $+1.99\times10^{-5}$；
+在 $10$ 个随机几何（$N=5,\dots,11$）上全局最小余量为 $+1.57\times10^{-5}$，无一为负。
+\end{proposition}
+
+\begin{remark}\label{rmk:concave}
+凹性尚未解析证明。注意它\textbf{不能}由 $\nabla^2\rho$ 的符号直接读出：
+\eqref{eq:gradlam}~只在 Perron 点成立，不能对 $\Lam$ 再求导。
+若凹性成立，则 $\rho(\Lam)$ 作为一次正齐次凹函数具有支撑超平面表示
+$\rho(\Lam)=\inf\{\langle\Lam,S\rangle:\ S\in\mathcal S\}$，
+其中 $\mathcal S=\{S\in\mathrm{Sym}_3:\ \langle\Lam,S\rangle\ge\rho(\Lam)\ \forall\Lam\succeq0\}$，
+于是由 Sion 极小极大定理：
+\begin{equation}\label{eq:dualcert}
+\max_{\substack{\Lam\succeq0\\\tr\Lam=1}}\rho(\Lam)=\min_{S\in\mathcal S}\ \lambda_{\max}(S).
+\end{equation}
+\end{remark}
+
+\begin{corollary}[对偶证书形式]\label{cor:dualcert}
+设 \eqref{eq:dualcert}~成立。则要证某几何满足 $\max_\Lam\rho(\Lam)\le\rho_0$，
+\textbf{只需给出一个} $S\in\mathrm{Sym}_3$ 使得
+\begin{equation}\label{eq:certcond}
+\lambda_{\max}(S)\le\rho_0\qquad\text{且}\qquad \rho(\Lam)\le\langle\Lam,S\rangle\quad\forall\Lam\succeq0 .
+\end{equation}
+在冠军几何上这个证书是\textbf{被强制的且是紧的}：由 $\rho(\tilde\Lam)=\rho_0$ 与 $\tr\tilde\Lam=1$，
+\eqref{eq:certcond}~给出 $\rho_0\le\langle\tilde\Lam,S\rangle\le\lambda_{\max}(S)\tr\tilde\Lam\le\rho_0$，
+故必须处处取等，即 $\lambda_{\max}(S)=\rho_0$ 且 $\tilde\Lam$ 的支撑落在 $S$ 的最高特征空间里。
+特别地 $S=\rho_0I_3$ 是唯一的「各向同性」候选，而它给出的条件
+$\rho(\Lam)\le\rho_0\tr\Lam$ 恰与 \eqref{eq:starmain}~等价。
+\end{corollary}
+
+\begin{remark}\label{rmk:certsearch}
+因此冠军几何上不存在「比切平面更好的」各向同性证书；要前进必须利用 $\tilde\Lam$ 的
+特征方向 $u_0$（枢纽方向，$\tilde\Lam$ 的最高特征向量）来构造\textbf{各向异性}的 $S$，
+形如 $S=\rho_0u_0u_0^\top+\kappa(I_3-u_0u_0^\top)$，$\kappa\le\rho_0$。
+这是下一轮 P1 的具体构造任务。
+\end{remark}
+
+\begin{proposition}[尖锐性与刚性，数值]\label{prop:r18sharp}
+\begin{enumerate}\itemsep2pt
+\item[(i)] 冠军几何上 $\max_{\Lam\succeq0,\tr\Lam=1}\rho(\Lam)=1.281568196872167$，
+与 $\rho_0=1.281568196872168$ 之差为 $-4.4\times10^{-16}$；
+$26$ 组多起点（L-BFGS-B 与 Nelder--Mead 各一次）的极大点全部收敛到
+$\operatorname{eig}=\{0.59460858,0.20269572,0.20269570\}$，与 $\tilde\Lam$ 的距离 $1.1\times10^{-8}$。
+\item[(ii)] 在 $25$ 个几何上（Stiefel 梯度上升极大元 $N=6,7,9,10,12$；
+$16$ 个随机帧构型 $N=5,\dots,12$；冠军的三档微扰 $\varepsilon=10^{-3},10^{-2},4\times10^{-2}$）
+全部满足 $\max_\Lam\rho(\Lam)\le\rho_0$，全局最大值 $1.281568196584$（出现在 $N=10$ 的极大元上，
+即冠军加零质量行）。
+\item[(iii)] 在临界点上 $\max_\Lam\rho(\Lam)=\rho$ 精确成立
+（$N=6$：两边同为 $-3.02\times10^{-2}$；$N=7$：同为 $-6.55\times10^{-2}$；
+$N=9,10,12$：一致到 $10^{-9}$），
+印证定理~\ref{thm:lamparam}(iii)~的「$\ge$」一侧。
+\end{enumerate}
+\end{proposition}
+
+\subsection{一个初等的结构定理：可传递符号模式}\label{sec:r18:trans}
+
+\begin{theorem}[可传递符号模式定理]\label{thm:transitive}
+设存在 $\sigma\in\{\pm1\}^N$ 使
+\begin{equation}\label{eq:transig}
+\sigma_i\sigma_j\langle u_i,u_j\rangle\ge0\qquad(\forall i,j).
+\end{equation}
+则 $\rho=\lambda_{\max}(Q_+)\le1$。
+逆否命题：\textbf{$\rho>1$ 蕴含符号模式不可传递}，
+等价地，钝图 $G_-$ \textbf{不是完全二部图}（在把 $\langle u_i,u_j\rangle=0$ 的对任意归部之后）。
+\end{theorem}
+
+\begin{proof}
+$x^\top|Q|x=\sum_{ij}x_ix_j|v_i^\top v_j|
+=\sum_{ij}x_ix_j\sigma_i\sigma_jv_i^\top v_j
+=\bigl\|\sum_i\sigma_ix_iv_i\bigr\|^2
+\le\lambda_{\max}\bigl(\sum_iv_iv_i^\top\bigr)\,\|\sigma\odot x\|^2=1\cdot1=1$，
+其中用到 $\sum_iv_iv_i^\top=I_3$ 与 $x\ge0$、$\|x\|=1$。
+另一方面 $\alpha=x^\top Qx=\|V^\top x\|^2\le\lambda_{\max}(VV^\top)\|x\|^2=1$。
+由 $Q_+=\tfrac12(Q+|Q|)$（逐项）得 $\rho=\tfrac12\alpha+\tfrac12x^\top|Q|x\le1$。
+\end{proof}
+
+\begin{remark}[为什么这解释了 $\sqrt5$]\label{rmk:transread}
+冠军的钝图是 $G_-=C_5\sqcup\{\text{枢纽}\}$：枢纽与所有原子成锐角（$D_0=0$），
+五个五边形原子之间恰有「次近邻」为钝，构成一个 $5$-圈。
+$C_5$ \textbf{不是}完全二部图，故定理~\ref{thm:transitive}~不适用，$\rho_0>1$ 得以发生；
+而且 $C_5$ 是\textbf{最小的}非二部钝图（$C_3$ 在 $S^2$ 上不可能全部两两成钝角，
+因为三个两两钝角的单位向量需要 $\sum g_iu_iu_i^\top$ 的秩结构与之相容——
+引理~\ref{lem:obtuseclique}~已给出 $\omega(G_-)\le4$，而 $C_5$ 的团数为 $2$）。
+这给出 $\rho_0=\frac{9+\sqrt5+2\sqrt{35}}{18}$ 中 $\sqrt5$ 的\textbf{结构解释}：
+它来自 $A(C_5)$ 的谱 $\{2,\frac{\sqrt5-1}2,\frac{\sqrt5-1}2,-\frac{\sqrt5+1}2,-\frac{\sqrt5+1}2\}$，
+第~\ref{sec:r1517}~节已验证 $\operatorname{spec}(Q_-)=2g^*|s_2|\cdot\operatorname{spec}(A(C_5))$。
+数值验证：$662\to193$ 个严格可传递构型上 $\max\rho=1+1.3\times10^{-10}$
+（超出量与帧残差 $6.9\times10^{-11}$ 同阶，即纯数值误差）；
+$2208$ 个 $\rho>1$ 的随机构型中可传递者 $0$ 个。
+\end{remark}
+
+\subsection{两个否证：哪一步松弛一定会崩}\label{sec:r18:ref}
+
+按本协议，否证也是成果。本轮我们试验了两条看起来最有希望的松弛，二者\textbf{都是假的}，
+而且失败方式恰好指明了正确路线。
+
+\begin{proposition}[否证 R18-A：自由 $\Lam$ 松弛失效]\label{prop:refA}
+考虑把 \eqref{eq:tauenergy}~中的 Dirichlet 项丢掉、并让 $\Lam$ 在整个
+$\{\Lam\succeq0,\tr\Lam=1\}$ 上自由变化的松弛
+\begin{equation}\label{eq:phifree}
+\Phi_{\mathrm{free}}(g,U):=\max_{\substack{\Lam\succeq0\\\tr\Lam=1}}
+\Bigl[\tr(\Lam\Xi)+\Bigl\|\sum_ig_ih_i(\Lam)u_i\Bigr\|^2-1\Bigr].
+\end{equation}
+则\textbf{即使在冠军几何上}也有
+\[
+\Phi_{\mathrm{free}}=0.302149011933>\tau_0=0.281568196872\qquad(\text{超出 }+2.058\times10^{-2}),
+\]
+极大元是\textbf{秩一}的（$\operatorname{eig}=\{1,1.7\times10^{-14},-1.4\times10^{-17}\}$）。
+因此「$\Lam$ 是 KKT 乘子」这一信息\textbf{不可省略}：
+只有把 $\Lam$ 限制到满足 $u$-KKT（命题~\ref{prop:uktkt}(ii)）的那一点，
+才能得到 $\Phi=\tau_0$。
+\end{proposition}
+
+\begin{proposition}[否证 R18-B：强稀释不等式失效]\label{prop:refB}
+不等式
+\begin{equation}\label{eq:strongdil}
+\alpha+\mathcal D(h)\le\rho_0\qquad(h=h_{\mathrm{Perron}})
+\end{equation}
+是\textbf{假}的。一个 $N=4$ 的帧构型给出 $\alpha+\mathcal D(h)=1.462928395681$，
+超出 $\rho_0$ 达 $+1.814\times10^{-1}$。但该构型的真实 $\rho=0.798522010308\ll\rho_0$，
+其补偿项为 $\tfrac12\mathcal E_-(h)=0.664406385373$，
+恰好把 $\alpha+\mathcal D(h)-\tfrac12\mathcal E_-$ 拉回 $0.798522=\rho$。
+因此\textbf{钝 Dirichlet 能量 $\mathcal E_-$ 是不可或缺的补偿项}，
+任何丢弃它的路线都注定失败——这与第~\ref{sec:r1517}~节「单独界 $\beta$ 的路线全部失败」
+是同一现象的两个侧面：$\mathcal E_-$ 与 $-(1-\alpha)$ 是主猜想中仅有的两个「负项」。
+\end{proposition}
+
+\begin{remark}\label{rmk:refsafe}
+两个反例的真实 $\rho$ 都远低于 $\rho_0$（分别为 $0.798522$ 与冠军几何上的 $\rho_0$ 本身），
+所以被否证的是\textbf{路线}，主猜想~\ref{conj:A1}~未受任何影响。
+它们的价值在于把「哪一项不能丢」变成了定理级的事实。
+\end{remark}
+
+\subsection{本轮状态、诚实标签与方法优先队列（第八版）}\label{sec:r18:status}
+
+\textbf{已证（解析，含完整证明）}：
+引理~\ref{lem:deltautau}（钝场向量 $=\tau m$ 及三个推论式）；
+引理~\ref{lem:dilution}（钝性稀释恒等式，含等号刻画）；
+推论~\ref{cor:tauenergy}（$\tau$ 的势--能量分解，精确）；
+引理~\ref{lem:Em2}（$\mathcal E_-$ 的第二显式）；
+命题~\ref{prop:uktkt}（$u$-KKT 闭式解、$\nu_i\equiv0$、$\tr\tilde\Lam=1$ 恒等）；
+定理~\ref{thm:lamparam}(i)(ii)（$\Lam$-泛函的齐次性、$\rho(\tilde\Lam)=\rho$、$\nabla\rho=\rho I_3$）；
+定理~\ref{thm:transitive}（可传递符号模式 $\Rightarrow\rho\le1$）。
+
+\textbf{条件性}：定理~\ref{thm:lamparam}(iii)~的「$\ge$」一侧对退化情形（$g_i=0$、重根）
+的化归；推论~\ref{cor:dualcert}~依赖命题~\ref{prop:concave}~的凹性。
+
+\textbf{数值（不作成果）}：
+命题~\ref{prop:concave}（凹性，冠军 $+$ $10$ 个随机几何）；
+命题~\ref{prop:r18sharp}（尖锐性、刚性、$25$ 个几何的扫描）；
+引理~\ref{lem:deltautau}\eqref{eq:dilution}\eqref{eq:Em2}~的随机验证
+（$800/1500/1200$ 个构型，残差 $\le2.9\times10^{-14}$）；
+定理~\ref{thm:transitive}~的 $193+2208$ 个构型检验。
+
+\textbf{否证}：命题~\ref{prop:refA}（自由 $\Lam$ 松弛在冠军几何上超出 $\tau_0$ 达 $2.06\times10^{-2}$）；
+命题~\ref{prop:refB}（强稀释不等式在 $N=4$ 上超出 $\rho_0$ 达 $1.81\times10^{-1}$）。
+
+\textbf{方法优先队列（第八版）}
+\begin{enumerate}\itemsep3pt
+\item \textbf{P1（队首，全局）——构造对偶证书 $S$}：由推论~\ref{cor:dualcert}，
+只需对每个几何给出 $S\in\mathrm{Sym}_3$ 满足 \eqref{eq:certcond}。
+由注~\ref{rmk:certsearch}，冠军处证书必须是紧的且 $\tilde\Lam$ 落在 $S$ 的最高特征空间，
+故候选族为 $S=\rho_0u_0u_0^\top+\kappa(I_3-u_0u_0^\top)$，$\kappa\le\rho_0$；
+第一步是确定 $\kappa$ 的可行区间（一个 $3\times3$ 的 LMI 问题），
+第二步是把 $\kappa$ 的表达式推广到一般几何（预期与 $\Xi$、$\tr\Xi$、$D_i$ 的分布有关）。
+这是\textbf{纯数学}任务，不需要对每阶图跑算法。
+\item \textbf{P2（全局）——解析证明 $\rho(\Lam)$ 的凹性}：
+$\rho(\Lam)=\sum_k\lambda_k(Q_+)\langle w_k,x(\Lam)\rangle^2$，
+而 $x_i(\Lam)=\sqrt{g_iu_i^\top\Lam u_i}$ 是线性函数的平方根（凹）。
+可尝试的路径：(a) 逐项证明 $\langle w,x(\Lam)\rangle^2$ 在 $w\ge0$ 时凹；
+(b) 用 \eqref{eq:dualcert}~的极小极大直接构造 $S$ 绕过凹性；
+(c) 计算 $\nabla^2\rho$ 在 $\tilde\Lam$ 处的显式并证明其在该点负半定（局部凹性）。
+\item \textbf{P3（全局）——$\mathcal E_-$ 的下界}：用引理~\ref{lem:Em2}~的显式
+$\zeta_{ij}=\langle u_i-u_j,m\rangle+d_i-d_j$，在 \eqref{eq:star}~中给出
+$\frac12\mathcal E_-\ge\Phi-\tau_0$ 的直接证明。这是把否证 R18-B 变正的路径。
+\item \textbf{P4（局部）——第~\ref{sec:r1517}~节遗留的分支 I / 分支 II}：
+分支 II 的排除（推论~\ref{cor:branch2rigid}~的插值刚性）；分支 I 经
+$\nu_-(Q_+)\le\nu_-(Q_-)$ 与 $\omega(G_-)\le4$（引理~\ref{lem:obtuseclique}）。
+注意定理~\ref{thm:transitive}~给出分支 I 的一个新入口：若 $\nu_-(Q_+)\ge1$ 则 $\rho$ 的
+符号结构必然不可传递，$G_-$ 不是完全二部。
+\item \textbf{P5（$N=6$ 收尾）}：第~\ref{sec:n6global}~节余下的 $20$ 个符号类。
+\item \textbf{P6（副方向，下界）}：$\Lam_3(G)\ge\rho_0n-3$ 的可达到性，
+冠军族已由定理~\ref{thm:Fn}~给出闭式谱，只差无穷族的渐近。
+\end{enumerate}
+
+\textbf{本轮把主线改写成}：定理~\ref{thm:lamparam}~的 \eqref{eq:starmain}。
+这是一个\textbf{五个额外参数}上的代数不等式，目标函数在固定钝图符号模式后是多项式的，
+约束集是半代数的，并且（数值上）对 $\Lam$ 凹。
+与第~\ref{sec:r1517}~节的二分定理相比，它\textbf{完全不含}「$N\times N$ 矩阵的谱」这一对象，
+因此更适合用凸对偶、SOS 或显式不等式来处理；而命题~\ref{prop:refA}\ref{prop:refB}
+已经排除了两条最自然的错误走法。
+
+
+\section{通道型主函数方案的精确天花板}\label{sec:nogo}
 
 \subsection{动机}
 
@@ -3451,7 +6513,23 @@ $K=4$ 的见证为 $q=(4,3,4,4)/15$、$\alpha_2=121/125$、$\langle Eu,Ew\rangle
 
 \subsection{主要障碍}
 
-\paragraph{障碍 0（第六版重写，现居首位）：$N=6$ 的 $19$ 个未闭合类，即一条几何不存在性陈述}
+\paragraph{障碍 0$''$（第 12 轮重写，现居首位）：$3.2128\times10^{-3}$ 的秩三缺口}
+第~\ref{sec:rowvar} 节把主线的形状再次改变。原来的首位障碍（下面这条「障碍 0」）已经\textbf{被否证}：
+命题~\ref{prop:chamberdead} 说明 $K_{2,2,2}$ 是腔掩码，数值扫描说明 $19/19$ 类都是腔掩码，
+所以「证不存在腔掩码」这条几何路线能关闭的类数是 $0$。
+现在的首位障碍是一条\emph{定量的}缺口：在 $Z_5$-对称、五角星图案的类内，
+REL 松弛（四条 Cauchy--Schwarz $+$ 行能量恒等式）的天花板是 $1.284780995477$，
+而定理~\ref{thm:conefam} 证明真正的秩三最大值是 $\rho_0=1.281568196872$，差 $3.2128\times10^{-3}$。
+这个差的来源已经被精确定位：REL 只保留了\emph{逐行二次}信息 $a_i+r_i=g_i(1-g_i)$，
+丢掉了引理~\ref{lem:rowid}(iii) 的三角形恒等式 \eqref{eq:tri}、四点 Gram 行列式 $\det G_4=0$
+（$\R^3$ 中任意四点线性相关）以及等角线 $\le6$ 的约束。
+它\emph{有利}的地方是：这些都是\textbf{等式}而非不等式，而且第~\ref{sec:conefamily} 小节已经证明
+它们在等变层里退化为恒等式，所以必须\emph{先降对称性}它们才会咬人——
+这给出一个明确的、可执行的第一步（第~\ref{sec:pq7} 小节的 P1(c)）。
+它\emph{不利}的地方是：四点 Gram 行列式是 $q_{ij}$ 的\emph{四次}多项式，
+而 REL 的变量是 $(g,\pi,r,w)$ 这些\emph{二次}量，把前者翻译成后者的语言没有现成办法。
+
+\paragraph{障碍 0（第六版，\textbf{已被否证}，保留以记录演化）：$N=6$ 的 $19$ 个未闭合类，即一条几何不存在性陈述}
 上一版把平面框架不等式 \eqref{eq:frame5} 列为首位障碍。定理~\ref{thm:bipglobal} 之后这条\textbf{不再是障碍}：
 它被绕开而不是被证明，$\kappa_3(5)\le\rho_0$ 已经无条件（推论~\ref{cor:n5uncond}），
 \eqref{eq:frame5} 与旧的 $(\ast_5)$ 一并降级为独立兴趣（注~\ref{rmk:bipvsframe}）。
@@ -3999,6 +7077,48 @@ A2$^\sharp$ 的唯一价值是指认了正确的对象（尾谱和而非负质�
 超出 $1$ 的解一律丢弃。由此得到本报告反复使用的一条原则：
 \textbf{任何违反已证不等式的数值「改进」都是伪影，不是发现。}
 
+\subsection{第 12 轮新增结论的证明状态标注}\label{sec:honest12}
+
+按第~\ref{sec:honest} 节的纪律，第~\ref{sec:rowvar} 节的结论逐条标注如下。
+
+\textbf{已证（含完整论证，且不依赖任何未证猜想）}：
+命题~\ref{prop:chamberdead}（$\Q$ 上精确，无浮点）；
+引理~\ref{lem:rowid} 的三条恒等式（含三角形恒等式 \eqref{eq:tri}）；
+命题~\ref{prop:fourcs} 的四条 Cauchy--Schwarz 不等式 $[f],[g],[h_1],[h_2]$；
+定义~\ref{def:rel} 的松弛 REL 与 $\kappa_3(N)\le\mathrm{REL}(N)$；
+定理~\ref{thm:LN}（$L(N)$ 闭式，含 AM--GM 取等点的可行性验证）；
+命题~\ref{prop:fracdeg}（$n^*$ 的整性刻画与 Pell 例外集 $\mathcal E$ 的显式两支递推）；
+定理~\ref{thm:unattain}（例外阶数上的强正则图障碍；(b) 支为符号谱计算，(a) 支为\emph{纯整数}判别式检验，
+覆盖 $N\le7.1\times10^8$ 的 $13$ 个例外阶数）；命题~\ref{prop:ladder6}（$N=6$ 整数化阶梯的六个闭式）；
+命题~\ref{prop:twovalue}（两值秩三投影的谱分类，全部由符号特征多项式给出）；
+引理~\ref{lem:z5class}（$Z_5$-等变秩三投影的完全分类，特征多项式恒等式 $L^3(L-1)^3$）；
+定理~\ref{thm:conefam}（$\rho(s)$ 闭式、唯一临界点、$\rho(s^*)=\rho_0$、精确 Perron 权重、ETF 识别）；
+定理~\ref{thm:convex}（$\Phi$ 的凸性与 $\operatorname{conv}(\mathcal P_3(N))=\mathcal S_N$）；
+引理~\ref{lem:perp2}（垂直二标架分解）；命题~\ref{prop:corank1} 与推论~\ref{cor:k23}（$\kappa_2(3)=\frac87$）；
+引理~\ref{lem:slope1}（$\rho=\frac{\alpha+\ell}2$）。
+
+\textbf{精确（数值等式已由符号计算判定为恒等，差化简后恰为 $0$）}：
+冠军处四条 CS 同时取等（残差 $0$，非 $10^{-16}$ 量级的近似）；
+$\|Q_-\|_F^2=\frac{16+5\sqrt7}{81}=\rho_0\tau$；
+$\lambda^*(\text{冠军数据})=\rho_0$；$L(4)=\frac54$ 且被 $Q=I_4-vv^\top$ 取到；
+$\rho(\frac12)=\frac{5+\sqrt5+\sqrt{30}}{10}$（ETF）；$\pi_h=\frac{91-25\sqrt7}{126}$、$\pi_c=\frac{7+5\sqrt7}{126}$；
+$\mathrm{spec}(Q_+)$ 与 $\mathrm{spec}(Q_-)$ 的四个根式；
+$\kappa_2(3)$ 见证的特征多项式 $\frac1{343}(7L-8)(7L-5)(7L-1)$；
+$6$ 阶会议矩阵的 $S^2=5I_6$。
+
+\textbf{数值（只有浮点证据，不得作为成果引用）}：
+$\mathrm{REL}(N)=L(N)$ 对 $N=5,6,7,8,10,12$（差分进化，吻合到 $\le4\times10^{-6}$；\emph{猜想}，非定理）；
+$Z_5$-对称层八个图案类的天花板（其中 $6/8$ 类被 REL 单独排除，冠军所在类为 $1.284780995477$）；
+$19/19$ 未闭合类都是腔掩码（符号违背量 $\le5\times10^{-19}$）；
+$\alpha=1$ 层的 $\max\beta=0.258695$；通道线性规划的 $8701$ 个构型与 HiGHS 解；
+$\Phi$ 的凸性在 $N=5,6,7$ 上共 $24000$ 对随机点无 Jensen 违背（\emph{注}：定理~\ref{thm:convex}(a) 本身已证，
+这条数值只是独立交叉核验）；
+$E_\perp=\frac12x^\top|B|x=0.519536756454917$（未找到闭式）。
+
+\textbf{否证}：命题~\ref{prop:chamberdead} 否证了 \eqref{eq:chamber6} 与第六版队首 P1；
+注~\ref{rmk:tab19read}(iv) 的「等价」降级为单向蕴含；
+不等式 $[g]$ 的取等\emph{不是}冠军的刻画（$N=4$ 上允许 $\rho=1.4186$，见第~\ref{sec:miscid} 小节 (6)）。
+
 \subsection{一句话总结}
 
 下界一侧已经完整：$\rho_0$ 是精确的，极值核心已闭式刻画，这部分可以立即写成毕业论文的独立章节。
@@ -4041,6 +7161,25 @@ $N=6,\dots,14$ 已数值认证为 $\rho_0$（$6\le N\le12$ 两套独立求解器
 冠军腔的全局最优性（定理~\ref{thm:champglobal}，原对偶半定证书）、
 以及完全二部掩码的全局闭合（定理~\ref{thm:bipglobal}，初等证明）；
 三者都不依赖任何未证猜想，且方法论互不重叠（团吹起 $+$ 根式恒等式 / 半定对偶 / 秩二长期方程 $+$ 初等不等式）。
+
+\medskip
+\noindent\textbf{（第七版增补）一句话总结的更新。}
+第六版把主线定为「对 $17$ 个符号模式逐个建立 \eqref{eq:chamber6}」。第 12 轮把这条路线\textbf{否证}了：
+$19/19$ 类都是腔掩码（命题~\ref{prop:chamberdead}，$K_{2,2,2}$ 有精确有理证书），
+所以「腔掩码不存在性」这条路能关闭的类数是 $0$，第六版增补中「唯一在列的路径」的说法作废。
+现在的状态是：\textbf{主线从「逐类排除」换成「一条不等式链的逐级收紧」}，
+链条是 $1.366025$（Mohar）$>1.309017$（$\Phi$，等于 REL 的自由上确界）$>1.300000$（$\frac{13}{10}$，加度的整性）
+$>1.284781$（加 $Z_5$ 对称）$>1.281568$（$\rho_0$，加秩三）。
+前两级已经\textbf{定理化}（定理~\ref{thm:LN} 与命题~\ref{prop:ladder6}），
+第三级是数值天花板，第四级由定理~\ref{thm:conefam} 精确闭合。
+于是「还差什么」第一次有了一个\emph{定量且定位清楚}的答案：差 REL 与秩三之间的 $3.2\times10^{-3}$，
+缺的原料是三角形恒等式 \eqref{eq:tri} 与四点 Gram 行列式（第~\ref{sec:diag} 小节的 (A)(B) 两项）。
+另外，$\rho_0$ 现在不再只是一个见证：它是 $Z_5$-等变秩三投影弧的唯一极大值（定理~\ref{thm:conefam}），
+$\sqrt{35}$ 来自判别式 $140$，$\sqrt7$ 来自 Perron 权重的二次方程——两个根式都有了出处。
+至于毕业论文的章节结构，第七版之后可以独立成章的结果增加到\textbf{五}个：
+上面三个，加上「行方差机制与天花板 $L(N)$」（定理~\ref{thm:LN}，含 Mohar 与 \STW\ 两个常数的统一重导），
+以及「$Z_5$-等变弧的完全分类与 $\rho_0$ 的闭式导出」（定理~\ref{thm:conefam}，含 ETF 的意外识别）。
+这两章都是纯数学的、自包含的、不需要任何数值验证即可宣读。
 
 \appendix
 \section{复现说明与产物清单}\label{app:repro}
