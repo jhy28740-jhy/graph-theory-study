@@ -192,36 +192,42 @@
 \contentsline {subsection}{\numberline {18.2}精确值猜想 P1$'$~及其后果}{172}{subsection.18.2}%
 \contentsline {subsection}{\numberline {18.3}全局障碍的精确定位}{173}{subsection.18.3}%
 \contentsline {subsection}{\numberline {18.4}本轮状态、诚实标签与方法优先队列（第十五版）}{173}{subsection.18.4}%
-\contentsline {section}{\numberline {19}通道型主函数方案的精确天花板}{174}{section.19}%
-\contentsline {subsection}{\numberline {19.1}动机}{174}{subsection.19.1}%
-\contentsline {subsection}{\numberline {19.2}方案族}{175}{subsection.19.2}%
-\contentsline {subsection}{\numberline {19.3}见证测度}{176}{subsection.19.3}%
-\contentsline {subsection}{\numberline {19.4}主定理}{177}{subsection.19.4}%
-\contentsline {subsection}{\numberline {19.5}独立的数值确认}{178}{subsection.19.5}%
-\contentsline {section}{\numberline {20}已经被排除的路线}{178}{section.20}%
-\contentsline {section}{\numberline {21}当前的障碍}{180}{section.21}%
-\contentsline {subsection}{\numberline {21.1}主要障碍}{180}{subsection.21.1}%
-\contentsline {paragraph}{障碍 0$''$（第 12 轮重写，现居首位）：$3.2128\times 10^{-3}$ 的秩三缺口}{180}{paragraph*.24}%
-\contentsline {paragraph}{障碍 0（第六版，\textbf {已被否证}，保留以记录演化）：$N=6$ 的 $19$ 个未闭合类，即一条几何不存在性陈述}{180}{paragraph*.25}%
-\contentsline {paragraph}{障碍 0$'$（新，第二优先）：$k\ge 3$ 时的尾和记账}{180}{paragraph*.26}%
-\contentsline {subsection}{\numberline {21.2}数值证据的边界（必须诚实交代）}{182}{subsection.21.2}%
-\contentsline {section}{\numberline {22}候选方法与其评估}{183}{section.22}%
-\contentsline {subsection}{\numberline {22.1}从定理~\ref {thm:zonal} 反推出的必要条件}{183}{subsection.22.1}%
-\contentsline {subsection}{\numberline {22.2}方向甲：自洽性 + 逐核精确 KKT}{183}{subsection.22.2}%
-\contentsline {subsection}{\numberline {22.3}方向乙：通道—分布的联合约束（本轮新提出）}{184}{subsection.22.3}%
-\contentsline {subsection}{\numberline {22.4}方向丙：三角 SOS / Fejér--Riesz}{185}{subsection.22.4}%
-\contentsline {subsection}{\numberline {22.5}方向丁：图极限—凸分析（KLMPT 架构的移植）}{185}{subsection.22.5}%
-\contentsline {subsection}{\numberline {22.6}其他考虑过但不推荐的想法}{185}{subsection.22.6}%
-\contentsline {subsection}{\numberline {22.7}优先级建议}{186}{subsection.22.7}%
-\contentsline {subsection}{\numberline {22.8}本轮新增的候选方向（庚、戊、己）}{186}{subsection.22.8}%
-\contentsline {section}{\numberline {23}诚实声明与结论状态}{187}{section.23}%
-\contentsline {subsection}{\numberline {23.1}可以引用的结果}{187}{subsection.23.1}%
-\contentsline {subsection}{\numberline {23.2}本报告没有主张的内容}{189}{subsection.23.2}%
-\contentsline {subsection}{\numberline {23.3}数值证据的使用纪律}{190}{subsection.23.3}%
-\contentsline {subsection}{\numberline {23.4}第 12 轮新增结论的证明状态标注}{190}{subsection.23.4}%
-\contentsline {subsection}{\numberline {23.5}一句话总结}{191}{subsection.23.5}%
-\contentsline {section}{\numberline {A}复现说明与产物清单}{192}{appendix.A}%
-\contentsline {subsection}{\numberline {A.1}运行环境}{192}{subsection.A.1}%
-\contentsline {subsection}{\numberline {A.2}随本报告分发的文件}{192}{subsection.A.2}%
-\contentsline {subsection}{\numberline {A.3}证书脚本核对了什么}{195}{subsection.A.3}%
-\contentsline {subsection}{\numberline {A.4}未随本报告分发的中间产物}{197}{subsection.A.4}%
+\contentsline {section}{\numberline {19}第 29 轮：Perron--钝角对齐恒等式、解耦路线的精确否证与矩对偶缺口的定位}{174}{section.19}%
+\contentsline {subsection}{\numberline {19.1}普适的 Perron--钝角对齐恒等式}{175}{subsection.19.1}%
+\contentsline {subsection}{\numberline {19.2}解耦型全局路线的精确否证}{176}{subsection.19.2}%
+\contentsline {subsection}{\numberline {19.3}P1$'$ 的矩对偶缺口：谱分解约束是关键}{177}{subsection.19.3}%
+\contentsline {subsection}{\numberline {19.4}全局上确界的独立数值再确认}{178}{subsection.19.4}%
+\contentsline {subsection}{\numberline {19.5}本轮状态、诚实标签与方法优先队列（第十六版）}{178}{subsection.19.5}%
+\contentsline {section}{\numberline {20}通道型主函数方案的精确天花板}{179}{section.20}%
+\contentsline {subsection}{\numberline {20.1}动机}{179}{subsection.20.1}%
+\contentsline {subsection}{\numberline {20.2}方案族}{179}{subsection.20.2}%
+\contentsline {subsection}{\numberline {20.3}见证测度}{180}{subsection.20.3}%
+\contentsline {subsection}{\numberline {20.4}主定理}{181}{subsection.20.4}%
+\contentsline {subsection}{\numberline {20.5}独立的数值确认}{182}{subsection.20.5}%
+\contentsline {section}{\numberline {21}已经被排除的路线}{183}{section.21}%
+\contentsline {section}{\numberline {22}当前的障碍}{184}{section.22}%
+\contentsline {subsection}{\numberline {22.1}主要障碍}{184}{subsection.22.1}%
+\contentsline {paragraph}{障碍 0$''$（第 12 轮重写，现居首位）：$3.2128\times 10^{-3}$ 的秩三缺口}{184}{paragraph*.24}%
+\contentsline {paragraph}{障碍 0（第六版，\textbf {已被否证}，保留以记录演化）：$N=6$ 的 $19$ 个未闭合类，即一条几何不存在性陈述}{185}{paragraph*.25}%
+\contentsline {paragraph}{障碍 0$'$（新，第二优先）：$k\ge 3$ 时的尾和记账}{185}{paragraph*.26}%
+\contentsline {subsection}{\numberline {22.2}数值证据的边界（必须诚实交代）}{187}{subsection.22.2}%
+\contentsline {section}{\numberline {23}候选方法与其评估}{187}{section.23}%
+\contentsline {subsection}{\numberline {23.1}从定理~\ref {thm:zonal} 反推出的必要条件}{187}{subsection.23.1}%
+\contentsline {subsection}{\numberline {23.2}方向甲：自洽性 + 逐核精确 KKT}{188}{subsection.23.2}%
+\contentsline {subsection}{\numberline {23.3}方向乙：通道—分布的联合约束（本轮新提出）}{189}{subsection.23.3}%
+\contentsline {subsection}{\numberline {23.4}方向丙：三角 SOS / Fejér--Riesz}{189}{subsection.23.4}%
+\contentsline {subsection}{\numberline {23.5}方向丁：图极限—凸分析（KLMPT 架构的移植）}{190}{subsection.23.5}%
+\contentsline {subsection}{\numberline {23.6}其他考虑过但不推荐的想法}{190}{subsection.23.6}%
+\contentsline {subsection}{\numberline {23.7}优先级建议}{190}{subsection.23.7}%
+\contentsline {subsection}{\numberline {23.8}本轮新增的候选方向（庚、戊、己）}{191}{subsection.23.8}%
+\contentsline {section}{\numberline {24}诚实声明与结论状态}{191}{section.24}%
+\contentsline {subsection}{\numberline {24.1}可以引用的结果}{192}{subsection.24.1}%
+\contentsline {subsection}{\numberline {24.2}本报告没有主张的内容}{194}{subsection.24.2}%
+\contentsline {subsection}{\numberline {24.3}数值证据的使用纪律}{195}{subsection.24.3}%
+\contentsline {subsection}{\numberline {24.4}第 12 轮新增结论的证明状态标注}{195}{subsection.24.4}%
+\contentsline {subsection}{\numberline {24.5}一句话总结}{196}{subsection.24.5}%
+\contentsline {section}{\numberline {A}复现说明与产物清单}{197}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}运行环境}{197}{subsection.A.1}%
+\contentsline {subsection}{\numberline {A.2}随本报告分发的文件}{197}{subsection.A.2}%
+\contentsline {subsection}{\numberline {A.3}证书脚本核对了什么}{200}{subsection.A.3}%
+\contentsline {subsection}{\numberline {A.4}未随本报告分发的中间产物}{202}{subsection.A.4}%

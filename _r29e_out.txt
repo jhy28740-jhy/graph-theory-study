@@ -1,0 +1,12 @@
+Universal Perron-obtuse identities on random rank-3 projections Q (N=5..12):
+  identity1: ||Q-x||^2 =? rho(1-rho)+Neg(2rho-1)
+  identity2: ||Q-x||^2 =? Neg^2 + A2(1-A2)
+  A2+Neg =? rho ; and rho<=1+Neg (Weyl)
+  max abs error over 400 random projections: 2.886579864025407e-15
+  rho range: 0.7540358671989447 .. 1.227630751947003
+  necessary cond Neg>=rho(rho-1)/(2rho-1) holds for all 257 cases with rho>1? True
+  min slack: 0.0019317091569421019
+
+Rank-1 specialization: if A2==1 then Q- x == Neg*x (shared eigenvector).
+  Test on champion-like single-axis: A2=0.976595259 (not 1) => spread=A2(1-A2)=2.285696e-02
+  For A2=1 exactly: spread=0 => Q-x=Neg x. (algebraic, see identity2)

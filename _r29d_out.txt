@@ -1,0 +1,22 @@
+=== beta-identity check ===
+rho= 1.281568196872168  Neg= 0.30497293781673096  A2= 0.9765952590554369  A2+Neg= 1.281568196872168
+||Q- x||^2 (beta) numeric = 0.11586545184644868
+rho(1-rho)+Neg(2rho-1)     = 0.11586545184644859
+match? True
+necessary cond: Neg >= rho(rho-1)/(2rho-1) = 0.2308492386244266   actual Neg= 0.30497293781673096
+=== Q- structure: is it w*A(C5) on rim, apex isolated? ===
+Q- =
+ [[0.      0.      0.      0.      0.      0.     ]
+ [0.      0.      0.      0.18996 0.18996 0.     ]
+ [0.      0.      0.      0.      0.18996 0.18996]
+ [0.      0.18996 0.      0.      0.      0.18996]
+ [0.      0.18996 0.18996 0.      0.      0.     ]
+ [0.      0.      0.18996 0.18996 0.      0.     ]]
+apex row of Q- (should be 0): [0. 0. 0. 0. 0. 0.]
+=== rho(|Q|) route ===
+rho(|Q|)= 1.6025335903899771  vs rho0= 1.281568196872168  |Q|>=Q+ so >=rho0?  True
+=== diag-split route: max g_i + rho(offdiag Q+) ===
+max g_i= 0.5336465791877727  rho(offdiag Q+)= 0.7937950739845894  sum= 1.327441653172362
+=== moment-dual gap diagnosis (P1') ===
+nu=2d_pi+2d_(pi/2): int K dnu= 2.0  nuhat2= 2.4492935982947064e-16
+true sup P=(3+sqrt5)/5= 1.047213595499958  => nu-LP relaxation loose by factor 1.9098300562505257

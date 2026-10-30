@@ -31,7 +31,7 @@
 \title{\bfseries 图的前三大特征值之和的精确上界\\[4pt]
 \large 阶段性进展报告与障碍分析}
 \author{}
-\date{2026 年 10 月 30 日（第十二版，在第十一版基础上再增一节（\S\ref{sec:r28}，第 28 轮）。\S\ref{sec:r25}（第 25 轮）：对\emph{任意}三元组 $(g,U,\Lam)$ 建立五项亏格恒等式 $2\rho_0-J_w=\Phi-\delta_0/3$，其中 $\Phi=\sin^2\theta+3c_W\sin^2\theta_1+\frac{c_S}2\widetilde E+|c_Z|Z_4+D_w$ 五项均非负，于是主猜想 $\kappa_3\le\rho_0$ 等价于单条不等式 $\Phi\ge\delta_0/3$（定理~\ref{thm:r25main}）；冠军 $W_6=K_1\vee C_5$ 恰好取等且五项全部严格为正（预算表~\ref{tab:r25budget}），故该判据是\textbf{紧}的；配套给出偶极子余项 $A_w=1-\frac E2\le1$（引理~\ref{lem:r25dipole}）、\textbf{窗口定理}（定理~\ref{thm:r25window}：$W_c=1.666928$、$\theta_{1,c}=15.7614^\circ$，冠军 $\theta_1=6.9456^\circ$ 落在窗口内部）、秩一刚性 $A_w\equiv1$（命题~\ref{prop:r25rank1}）、常纬度归约（命题~\ref{prop:r25lat}）与双尺度归约（命题~\ref{prop:r25twoscale}）。\S\ref{sec:r26}（第 26 轮）：把 $(t)_+=\frac12(t+|t|)$ 中的 $|t|$-部分按最优符号模式精确劈分，引入\textbf{负 Gram 质量} $\mathrm{Neg}^*$，得到恒等式 $L_w=A_w^2+2\mathrm{Neg}^*$ 与 $\kappa_3=\sup(A_w^2+\mathrm{Neg}^*)$（定理~\ref{thm:r26neg}），主猜想等价于单标量不等式 $\mathrm{Neg}^*\le(\rho_0-1)+\sin^2\theta$；\STW\ 的差距被精确改写为 $\frac{\varphi-1}2-(\rho_0-1)=\frac{\delta_0}6=\Phi-\rho_0=0.027448797503$（推论~\ref{cor:r26stw}）；秩一截面经半球翻转化为 $L_w=1+2\mathrm{Neg}$（命题~\ref{prop:r26rank1}），锥族上得到闭式 $L_w(s,n)$（命题~\ref{prop:r26conecl}）并求出四个\emph{精确}极大值 $\frac43,\frac32,\frac{13+\sqrt5}{10},\frac{13}9$（$n=3,4,5,6$），从而 $\sup_{\text{锥帧}}L_w=\frac{13+\sqrt5}{10}=\frac{6+\varphi}5=1.523607<2\rho_0-1$（定理~\ref{thm:r26cone}），秩一锥族闭合于 $\rho\le\frac{23+\sqrt5}{20}=1.261803<\rho_0$（推论~\ref{cor:r26rank1cone}）；环族引理 $T_n\le\frac{3n}2$（等号仅 $n=4$）给出等纬度环上 $L_w\le\frac32$（命题~\ref{prop:r26ring}），并发现秩一截面的第二个精确极值点 $\rho=\frac54$（$n=4$ 环）。两条线最终都归约到同一个未解问题——\textbf{锥最优性}（注~\ref{rem:r26one}）。\S\ref{sec:r27}（第 27 轮）：在秩一截面上用「Young 不等式 $+$ 刚性恒等式 $\sum_{ij}\rho_i\rho_jc_{ij}^2=\|I_2\|_F^2=2$ $+$ 圆上 Fourier」的链条，\textbf{无条件}证明 $\mathrm{Neg}\le\frac5{6\pi}=0.265258$，从而 $\kappa_3(\text{秩一})\le1+\frac5{6\pi}=1.265258<\rho_0$（定理~\ref{thm:r27main}），把第 26 轮\emph{条件性}的 $\frac{11+\varphi}{10}=1.261803$~升级为\emph{无条件}结果、并较 \STW\ 的 $\Phi=1.309017$~改进 $4.38\times10^{-2}$；关键机制是二维各向同性 $\sum\rho_ie^{2i\varphi_i}=0$~自动消灭钝角余弦平方核 $K(u)=(\cos u)_-^2$~的第二 Fourier 系数 $\widehat K_2=\frac18$（除常数项外最大的正系数），使 $P\le\frac{10}{3\pi}$（定理~\ref{thm:r27P}；闭式 $S=\frac5{24}-\frac\pi{16}$，引理~\ref{lem:r27S}）；另附秩一刚性 $A_w\equiv1$~的一行新证明（$\|Z_S\|^2\le\sigma_S$，引理~\ref{lem:r27zs}、命题~\ref{prop:r27aw}），并指出本轮 Fourier 机器为秩一\emph{专属}、一般 $\Lam$~的 Young 余项权重 $g_ih_ib_i^2/a_i\ne\rho_i$~使刚性恒等式失效，故全局闭合仍须锥最优性（注~\ref{rem:r27global}）。\S\ref{sec:r28}（第 28 轮）：确认第 27 轮链条中唯一的松弛在 $P_{\text{champ}}=\frac{3+\sqrt5}5<\frac{10}{3\pi}$；用 SLSQP 数值证实 $\sup P=\frac{3+\sqrt5}5$（$N=3..16$，$5$-环最优），并\textbf{证明}环族极值 $\max_nP(n)=P(5)=\frac{3+\sqrt5}5$（命题~\ref{prop:r28ring}）与刚性 $|\widehat\mu(5)|=2\Rightarrow|\widehat\mu(5m)|=2$（引理~\ref{lem:r28rigid5}，解释了冠军值的机制来源）；提出精确值猜想~\ref{conj:r28P}（$\sup P=\frac{3+\sqrt5}5$），其后果是 $\kappa_3(\text{秩一})=\frac{11+\varphi}{10}=1.261803$~精确无条件（推论~\ref{cor:r28exact}），但严格证明是符号不定的矩问题、本轮未解；同时\textbf{精确定位}全局障碍——增稠因子 $\kappa_i=h_i/\sqrt{s_i}>1$~使刚性恒等式 $\sum\rho\rho c^2=2$~失效，只能覆盖单轴薄层 $a\in[0.876,1]$、够不到冠军 $a^*=0.5946$，故 $\kappa_3\le\rho_0$~的唯一剩余缺口是锥最优性 P1（注~\ref{rem:r28path}）。第十版原有的 \S\ref{sec:r25}、\S\ref{sec:r26} 与第九版的 \S\ref{sec:r24} 内容全部保留。）}
+\date{2026 年 10 月 30 日（第十三版，在第十二版基础上再增一节（\S\ref{sec:r29}，第 29 轮）。\S\ref{sec:r25}（第 25 轮）：对\emph{任意}三元组 $(g,U,\Lam)$ 建立五项亏格恒等式 $2\rho_0-J_w=\Phi-\delta_0/3$，其中 $\Phi=\sin^2\theta+3c_W\sin^2\theta_1+\frac{c_S}2\widetilde E+|c_Z|Z_4+D_w$ 五项均非负，于是主猜想 $\kappa_3\le\rho_0$ 等价于单条不等式 $\Phi\ge\delta_0/3$（定理~\ref{thm:r25main}）；冠军 $W_6=K_1\vee C_5$ 恰好取等且五项全部严格为正（预算表~\ref{tab:r25budget}），故该判据是\textbf{紧}的；配套给出偶极子余项 $A_w=1-\frac E2\le1$（引理~\ref{lem:r25dipole}）、\textbf{窗口定理}（定理~\ref{thm:r25window}：$W_c=1.666928$、$\theta_{1,c}=15.7614^\circ$，冠军 $\theta_1=6.9456^\circ$ 落在窗口内部）、秩一刚性 $A_w\equiv1$（命题~\ref{prop:r25rank1}）、常纬度归约（命题~\ref{prop:r25lat}）与双尺度归约（命题~\ref{prop:r25twoscale}）。\S\ref{sec:r26}（第 26 轮）：把 $(t)_+=\frac12(t+|t|)$ 中的 $|t|$-部分按最优符号模式精确劈分，引入\textbf{负 Gram 质量} $\mathrm{Neg}^*$，得到恒等式 $L_w=A_w^2+2\mathrm{Neg}^*$ 与 $\kappa_3=\sup(A_w^2+\mathrm{Neg}^*)$（定理~\ref{thm:r26neg}），主猜想等价于单标量不等式 $\mathrm{Neg}^*\le(\rho_0-1)+\sin^2\theta$；\STW\ 的差距被精确改写为 $\frac{\varphi-1}2-(\rho_0-1)=\frac{\delta_0}6=\Phi-\rho_0=0.027448797503$（推论~\ref{cor:r26stw}）；秩一截面经半球翻转化为 $L_w=1+2\mathrm{Neg}$（命题~\ref{prop:r26rank1}），锥族上得到闭式 $L_w(s,n)$（命题~\ref{prop:r26conecl}）并求出四个\emph{精确}极大值 $\frac43,\frac32,\frac{13+\sqrt5}{10},\frac{13}9$（$n=3,4,5,6$），从而 $\sup_{\text{锥帧}}L_w=\frac{13+\sqrt5}{10}=\frac{6+\varphi}5=1.523607<2\rho_0-1$（定理~\ref{thm:r26cone}），秩一锥族闭合于 $\rho\le\frac{23+\sqrt5}{20}=1.261803<\rho_0$（推论~\ref{cor:r26rank1cone}）；环族引理 $T_n\le\frac{3n}2$（等号仅 $n=4$）给出等纬度环上 $L_w\le\frac32$（命题~\ref{prop:r26ring}），并发现秩一截面的第二个精确极值点 $\rho=\frac54$（$n=4$ 环）。两条线最终都归约到同一个未解问题——\textbf{锥最优性}（注~\ref{rem:r26one}）。\S\ref{sec:r27}（第 27 轮）：在秩一截面上用「Young 不等式 $+$ 刚性恒等式 $\sum_{ij}\rho_i\rho_jc_{ij}^2=\|I_2\|_F^2=2$ $+$ 圆上 Fourier」的链条，\textbf{无条件}证明 $\mathrm{Neg}\le\frac5{6\pi}=0.265258$，从而 $\kappa_3(\text{秩一})\le1+\frac5{6\pi}=1.265258<\rho_0$（定理~\ref{thm:r27main}），把第 26 轮\emph{条件性}的 $\frac{11+\varphi}{10}=1.261803$~升级为\emph{无条件}结果、并较 \STW\ 的 $\Phi=1.309017$~改进 $4.38\times10^{-2}$；关键机制是二维各向同性 $\sum\rho_ie^{2i\varphi_i}=0$~自动消灭钝角余弦平方核 $K(u)=(\cos u)_-^2$~的第二 Fourier 系数 $\widehat K_2=\frac18$（除常数项外最大的正系数），使 $P\le\frac{10}{3\pi}$（定理~\ref{thm:r27P}；闭式 $S=\frac5{24}-\frac\pi{16}$，引理~\ref{lem:r27S}）；另附秩一刚性 $A_w\equiv1$~的一行新证明（$\|Z_S\|^2\le\sigma_S$，引理~\ref{lem:r27zs}、命题~\ref{prop:r27aw}），并指出本轮 Fourier 机器为秩一\emph{专属}、一般 $\Lam$~的 Young 余项权重 $g_ih_ib_i^2/a_i\ne\rho_i$~使刚性恒等式失效，故全局闭合仍须锥最优性（注~\ref{rem:r27global}）。\S\ref{sec:r28}（第 28 轮）：确认第 27 轮链条中唯一的松弛在 $P_{\text{champ}}=\frac{3+\sqrt5}5<\frac{10}{3\pi}$；用 SLSQP 数值证实 $\sup P=\frac{3+\sqrt5}5$（$N=3..16$，$5$-环最优），并\textbf{证明}环族极值 $\max_nP(n)=P(5)=\frac{3+\sqrt5}5$（命题~\ref{prop:r28ring}）与刚性 $|\widehat\mu(5)|=2\Rightarrow|\widehat\mu(5m)|=2$（引理~\ref{lem:r28rigid5}，解释了冠军值的机制来源）；提出精确值猜想~\ref{conj:r28P}（$\sup P=\frac{3+\sqrt5}5$），其后果是 $\kappa_3(\text{秩一})=\frac{11+\varphi}{10}=1.261803$~精确无条件（推论~\ref{cor:r28exact}），但严格证明是符号不定的矩问题、本轮未解；同时\textbf{精确定位}全局障碍——增稠因子 $\kappa_i=h_i/\sqrt{s_i}>1$~使刚性恒等式 $\sum\rho\rho c^2=2$~失效，只能覆盖单轴薄层 $a\in[0.876,1]$、够不到冠军 $a^*=0.5946$，故 $\kappa_3\le\rho_0$~的唯一剩余缺口是锥最优性 P1（注~\ref{rem:r28path}）。\S\ref{sec:r29}（第 29 轮）：导出对\emph{任意}秩三投影成立的 \textbf{Perron--钝角对齐恒等式} $\|Q_-x\|^2=\rho(1-\rho)+\mathrm{Neg}(2\rho-1)=\mathrm{Neg}^2+\mathcal A(1-\mathcal A)$（定理~\ref{thm:r29align}），给出近极值元必要条件 $\mathrm{Neg}\ge\frac{\rho(\rho-1)}{2\rho-1}$（推论~\ref{cor:r29nec}）与秩一截面的共享特征向量刚性 $Q_-x=\mathrm{Neg}\,x$（推论~\ref{cor:r29rank1}）；\textbf{精确否证}三条解耦型全局路线——Weyl 界 $1+\lambda_{\max}(Q_-)$（冠军钝角图 $=C_5$、$\lambda_{\max}(Q_-)=2w=0.379920$，超 $\rho_0$ 达 $0.098352$，命题~\ref{prop:r29weyl}）、绝对值 Gram $\rho(|Q|)=1.602534$、对角分裂 $1.327442$（命题~\ref{prop:r29other}）——证明全局闭合\emph{必须}经由共享 Perron 耦合；并\textbf{精确定位} P1$'$ 的矩对偶缺口（点态支配迫使 $\alpha\ge\frac12$、自相关松弛 $\ge2$，命题~\ref{prop:r29pointwise}--\ref{prop:r29gap}），把 P1$'$ 收窄到唯一的 Toeplitz--PSD/Fejér--Riesz 路线；另用投影梯度独立再确认 $\kappa_3=\rho_0$、极值帧为 $6$ 原子 $5$-锥（$N=4..9$）。第十版原有的 \S\ref{sec:r25}、\S\ref{sec:r26} 与第九版的 \S\ref{sec:r24} 内容全部保留。）}
 
 \begin{document}
 \maketitle
@@ -10485,6 +10485,268 @@ $\kappa_3(\text{秩一})=\frac{11+\varphi}{10}$~精确 & \textbf{条件于猜想
 \texttt{\_r28b.py}（环族 $P(n)$~的精确值与数值，$n=3..24$，\texttt{sympy}~判定 $P(5)=\frac{3+\sqrt5}5$；
 输出 \texttt{\_r28b\_out.txt}）。本轮无新增独立证书脚本（结论或为已证的环族/刚性，或为标注清楚的数值/猜想）。
 
+
+\section{第 29 轮：Perron--钝角对齐恒等式、解耦路线的精确否证与矩对偶缺口的定位}\label{sec:r29}
+
+\textbf{本轮定位。}第 28 轮已把全局主猜想 $\kappa_3\le\rho_0$ 的唯一剩余缺口压缩到锥最优性 P1
+（注~\ref{rem:r28path}）。本轮不直接硬攻单轴内部，而是先系统地\emph{检验并否证}若干条「看起来自然」的
+解耦型全局路线（Weyl 分解、绝对值 Gram、对角分裂），把它们在冠军处的\textbf{精确}超额量逐一算出；
+在此过程中导出一组关于 Perron 向量与钝角质量之间关系的\textbf{普适恒等式}（对\emph{任意}秩三投影成立，
+定理~\ref{thm:r29align}），给出近极值元必须携带足够钝角质量的\textbf{必要条件}（推论~\ref{cor:r29nec}）
+与秩一截面的\textbf{共享特征向量刚性}（推论~\ref{cor:r29rank1}）；最后\textbf{精确定位}第 28 轮猜想
+P1$'$（秩一精确值 $\sup P=\frac{3+\sqrt5}5$）之所以\emph{不能}用点态/LP 对偶证明的根本原因——
+自相关松弛 $\nu=\mu*\widetilde\mu\mapsto\nu\ge0$ 丢失了谱分解约束 $\widehat\nu=|\widehat\mu|^2$，
+使对偶值退化到 $2$（真值的 $1.91$ 倍，命题~\ref{prop:r29gap}）。全部结论或为\textbf{已证（精确）}、
+或为\textbf{数值}、或为\textbf{否证}，逐条标注。复现脚本：\texttt{\_r29a.py}--\texttt{\_r29e.py}。
+
+\subsection{普适的 Perron--钝角对齐恒等式}\label{sec:r29:ident}
+
+设 $Q\in\mathcal P_3(N)$ 为秩三正交投影，$Q=Q_+-Q_-$（逐元素正部/负部），$x\ge0$、$\|x\|=1$
+为 $Q_+$ 的 Perron 向量。记
+\begin{equation}\label{eq:r29defs}
+\rho:=\rho(Q_+)=x^\top Q_+x,\qquad
+\mathcal A:=x^\top Qx\ \bigl(\le\lambda_{\max}(Q)=1\bigr),\qquad
+\mathrm{Neg}:=x^\top Q_-x\ \bigl(\ge0\bigr).
+\end{equation}
+这里 $\mathcal A$、$\mathrm{Neg}$ 正是第 26 轮的 $A_w^2$、$\mathrm{Neg}^*$（定理~\ref{thm:r26neg}）
+在给定投影上的取值，$\rho=\mathcal A+\mathrm{Neg}$ 即 $\kappa_3=\sup(A_w^2+\mathrm{Neg}^*)$ 的逐点版本。
+
+\begin{lemma}[基本分解，已证]\label{lem:r29basic}
+$\rho=\mathcal A+\mathrm{Neg}$，$\mathcal A=\|Qx\|^2$，且 $Qx=\rho x-Q_-x$。
+\end{lemma}
+\begin{proof}
+$Q=Q_+-Q_-$ 给 $x^\top Qx=x^\top Q_+x-x^\top Q_-x$，即 $\mathcal A=\rho-\mathrm{Neg}$。
+$Q^2=Q$ 给 $\|Qx\|^2=x^\top Q^2x=x^\top Qx=\mathcal A$。$Q_+x=\rho x$ 给
+$Qx=Q_+x-Q_-x=\rho x-Q_-x$。
+\end{proof}
+
+\begin{theorem}[Perron--钝角对齐恒等式，本轮核心，已证]\label{thm:r29align}
+对任意 $Q\in\mathcal P_3(N)$ 与 $Q_+$ 的 Perron 向量 $x$，
+\begin{equation}\label{eq:r29beta}
+\boxed{\ \|Q_-x\|^2=\rho(1-\rho)+\mathrm{Neg}\,(2\rho-1)=\mathrm{Neg}^2+\mathcal A\,(1-\mathcal A)\ }.
+\end{equation}
+\end{theorem}
+\begin{proof}
+\emph{第一式。}由引理~\ref{lem:r29basic}，$\mathcal A=\|Qx\|^2=\|\rho x-Q_-x\|^2
+=\rho^2-2\rho\,\mathrm{Neg}+\|Q_-x\|^2$，又 $\mathcal A=\rho-\mathrm{Neg}$，相减得
+$\|Q_-x\|^2=\rho-\mathrm{Neg}-\rho^2+2\rho\,\mathrm{Neg}=\rho(1-\rho)+\mathrm{Neg}(2\rho-1)$。
+\emph{第二式。}把 $Q_-x$ 沿 $x$ 与 $x^\perp$ 分解，$\|Q_-x\|^2=\mathrm{Neg}^2+\|(I-xx^\top)Q_-x\|^2$。
+而 $(I-xx^\top)Q_-x=(I-xx^\top)(\rho x-Qx)=-(Qx-\mathcal A\,x)$，故
+$\|(I-xx^\top)Q_-x\|^2=\|Qx\|^2-2\mathcal A\,x^\top Qx+\mathcal A^2
+=\mathcal A-2\mathcal A^2+\mathcal A^2=\mathcal A(1-\mathcal A)$。
+\end{proof}
+
+\begin{remark}[恒等式的读法]\label{rem:r29read}
+第二式 $\|Q_-x\|^2-\mathrm{Neg}^2=\mathcal A(1-\mathcal A)$ 的左端是 $Q_-x$ \emph{偏离} $x$-方向的
+「扩散量」（Cauchy--Schwarz 亏损 $\|Q_-x\|^2-(x^\top Q_-x)^2$），右端 $\mathcal A(1-\mathcal A)$
+恰是\textbf{偶极子亏损}（$1-\mathcal A=\sin^2\theta$，第 25 轮偶极子余项）乘 $\mathcal A$。
+二者精确相等说明：\emph{钝角质量 $Q_-x$ 相对 Perron 方向的错位，被偶极子的非饱和程度完全量度}。
+秩一截面 $\mathcal A\equiv1$（命题~\ref{prop:r27aw}）时右端为 $0$，即 Cauchy--Schwarz 取等，见推论~\ref{cor:r29rank1}。
+\end{remark}
+
+\begin{corollary}[近极值元的必要条件，已证]\label{cor:r29nec}
+若 $\rho>1$，则 $\mathrm{Neg}\ge\dfrac{\rho(\rho-1)}{2\rho-1}$；特别地 $\rho=\rho_0$ 时
+$\mathrm{Neg}\ge\dfrac{\rho_0(\rho_0-1)}{2\rho_0-1}=0.2308492386\ldots$。
+\end{corollary}
+\begin{proof}
+$\|Q_-x\|^2\ge0$ 与第一式给 $\rho(1-\rho)+\mathrm{Neg}(2\rho-1)\ge0$；$\rho>1$ 时 $\rho(1-\rho)<0$、$2\rho-1>0$，移项即得。
+\end{proof}
+\begin{remark}
+推论~\ref{cor:r29nec}~是一条\textbf{下界}：它排除「几乎全正」的投影成为近极值元——
+凡 $\rho$ 接近 $\rho_0$，钝角质量 $\mathrm{Neg}$ 必须至少 $0.2308$。结合 $\mathcal A\le1$（即 $\mathrm{Neg}\ge\rho-1$），
+冠军处 $\mathrm{Neg}=0.304973$（下表）落在 $[\rho_0-1,\ \lambda_{\max}(Q_-)]= [0.281568,\,0.379920]$ 内。
+此条件不闭合上界，但为「极值元搜索」划定了一个\textbf{精确的可行带}。
+\end{remark}
+
+\begin{corollary}[秩一截面的共享特征向量刚性，已证]\label{cor:r29rank1}
+若 $\mathcal A=1$（秩一截面恒成立，命题~\ref{prop:r25rank1}、\ref{prop:r27aw}），则 $Q_-x=\mathrm{Neg}\cdot x$，
+即 $x$ 同时是 $Q$（特征值 $1$）、$Q_-$（特征值 $\mathrm{Neg}$）、$Q_+$（特征值 $\rho=1+\mathrm{Neg}$）的特征向量；
+三者在 $x$ 上\textbf{可交换对齐}。
+\end{corollary}
+\begin{proof}
+$\mathcal A=1=\lambda_{\max}(Q)\|x\|^2$ 迫使 $Qx=x$。定理~\ref{thm:r29align}~第二式给
+$\|Q_-x\|^2=\mathrm{Neg}^2+1\cdot0=\mathrm{Neg}^2=(x^\top Q_-x)^2$，Cauchy--Schwarz 取等，故 $Q_-x=\mathrm{Neg}\,x$。
+于是 $Q_+x=Qx+Q_-x=(1+\mathrm{Neg})x$。
+\end{proof}
+\begin{remark}
+推论~\ref{cor:r29rank1}~把秩一截面的极值问题\textbf{线性化}：不再需要「$x$ 是 $Q_+$ 的 Perron 向量」
+这一自洽条件，而是 $Q_-x=\mathrm{Neg}\cdot x$ 与 $Qx=x$ 两条\emph{特征向量}方程。这为第 27--28 轮的
+秩一 Fourier 机器提供了一个\textbf{新的、无需对称化}的入口（$x$ 落在 $Q$ 的 $1$-特征空间 $\cap$ $Q_-$ 的某特征空间）。
+\end{remark}
+
+\begin{center}\small
+\begin{tabular}{lccc}
+\toprule
+冠军 $W_6$（$5$-锥，$z^*=0.500440$）& 值 & 恒等式核对 & 出处\\
+\midrule
+$\rho=\rho(Q_+)$ & $1.281568196872$ & $=\rho_0$（差 $1.3\times10^{-15}$）& 定理~\ref{thm:r23uni}\\
+$\mathcal A=x^\top Qx$ & $0.976595259055$ & $\le1$，亏损 $\sin^2\theta=0.023405$ & \S\ref{sec:r29:ident}\\
+$\mathrm{Neg}=x^\top Q_-x$ & $0.304972937817$ & $=(\rho_0-1)+\sin^2\theta$（紧）& 定理~\ref{thm:r26neg}\\
+$\mathcal A+\mathrm{Neg}$ & $1.281568196872$ & $=\rho$ ✓ & 引理~\ref{lem:r29basic}\\
+$\|Q_-x\|^2$ & $0.115865451846$ & $=\mathrm{Neg}^2+\mathcal A(1-\mathcal A)$ ✓（差 $9\times10^{-17}$）& 定理~\ref{thm:r29align}\\
+$\lambda_{\max}(Q_-)$ & $0.379920437124$ & $=2w$，见 \S\ref{sec:r29:weyl} & 命题~\ref{prop:r29weyl}\\
+\bottomrule
+\end{tabular}
+\end{center}
+（数值取自 \texttt{\_r29a.py}、\texttt{\_r29d.py}；恒等式在 $400$ 个随机秩三投影 $N=5..12$ 上的最大偏差
+$2.9\times10^{-15}$，\texttt{\_r29e.py}。）
+
+\subsection{解耦型全局路线的精确否证}\label{sec:r29:weyl}
+
+主猜想 $\kappa_3\le\rho_0$ 若能用\emph{不依赖共享 Perron 向量}的解耦特征值界证明，将极大简化问题。
+本小节证明三条最自然的解耦路线\textbf{都在冠军处失效}，并给出精确超额量。
+
+\begin{proposition}[Weyl 路线被否证，已证（精确）]\label{prop:r29weyl}
+$Q_+=Q+Q_-$ 与 Weyl 不等式给 $\rho(Q_+)\le\lambda_{\max}(Q)+\lambda_{\max}(Q_-)=1+\lambda_{\max}(Q_-)$。
+冠军的钝角图 $G_-$ 恰为轮缘上的 $5$-圈（五角星 $=$ $C_5$）、极点孤立，且 $Q_-=w\,A(C_5)$，其中
+\begin{equation}\label{eq:r29w}
+w=g_{\rm cone}\Bigl[(1-z^{*2})\tfrac{1+\sqrt5}4-z^{*2}\Bigr]=0.189960218562\ldots,\qquad
+\lambda_{\max}(Q_-)=2w=\frac{z^{*2}(5+\sqrt5)-(1+\sqrt5)}{5\,(z^{*2}-1)}=0.379920437124\ldots
+\end{equation}
+于是 Weyl 界在冠军处为 $1+\lambda_{\max}(Q_-)=1.379920437124$，\textbf{超过} $\rho_0$ 达
+\begin{equation}\label{eq:r29over}
+\bigl(1+\lambda_{\max}(Q_-)\bigr)-\rho_0=0.098352240252\ldots>0 .
+\end{equation}
+故 $\kappa_3\le1+\sup\lambda_{\max}(Q_-)$ \textbf{不能}推出 $\kappa_3\le\rho_0$。
+\end{proposition}
+\begin{proof}
+冠军轮缘--轮缘内积为 $(1-z^2)\cos\frac{2\pi d}5+z^2$；仅 $d=2$（相隔两点，$\cos\frac{4\pi}5=-\frac{1+\sqrt5}4$）为负，
+$d=1$ 为正，极点--轮缘 $=z>0$ 为正。故 $(Q_-)_{ij}>0$ 当且仅当 $i,j$ 为轮缘上相隔两点的对，
+这恰是 $C_5$ 的边集（五角星仍为 $5$-圈），权 $w=g_{\rm cone}\,|(1-z^2)\cos\frac{4\pi}5+z^2|$，极点行全零。
+$\lambda_{\max}(A(C_5))=2$ 给 $\lambda_{\max}(Q_-)=2w$；代入 $g_{\rm cone}=\frac2{5(1-z^2)}$ 化简得 \eqref{eq:r29w}。
+数值与符号见 \texttt{\_r29b.py}、\texttt{\_r29d.py}。
+\end{proof}
+
+\begin{proposition}[另两条解耦路线亦被否证，已证（数值精确到 $10^{-12}$）]\label{prop:r29other}
+在冠军处：
+\begin{enumerate}[label=(\alph*),itemsep=1pt]
+\item \textbf{绝对值 Gram}：$Q_+\le|Q|$ 逐元素，故 $\rho(Q_+)\le\rho(|Q|)$；但 $\rho(|Q|)=1.602533590390>\rho_0$。
+\item \textbf{对角分裂}：$Q_+=\operatorname{diag}(g)+Q_+^{\rm off}$ 与非负矩阵谱半径次可加性给
+$\rho(Q_+)\le\max_i g_i+\rho(Q_+^{\rm off})$；冠军处 $=0.533647+0.793795=1.327441653172>\rho_0$。
+\end{enumerate}
+\end{proposition}
+\begin{remark}[为什么解耦必然失败]\label{rem:r29whydec}
+命题~\ref{prop:r29weyl}--\ref{prop:r29other}~说明：冠军处 $\rho(Q_+)=\rho_0$ \emph{严格小于}
+上述三条解耦界，差额分别为 $0.098$、$0.321$、$0.046$。根源是——
+$\rho(Q_+)=\mathcal A+\mathrm{Neg}$ 中 $\mathcal A$ 与 $\mathrm{Neg}$ 由\textbf{同一个} Perron 向量 $x$ 评估，
+而 Weyl/绝对值/对角分裂都允许「$Q$ 的顶特征向量」与「$Q_-$ 的顶特征向量」\emph{各取各的}，
+从而高估。定理~\ref{thm:r29align}~的扩散量 $\mathcal A(1-\mathcal A)$ 正是这种错位的精确度量：
+冠军处 $\|Q_-x\|^2-\mathrm{Neg}^2=0.022857>0$，即 $Q_-$ 的 Perron 方向与 $x$ 不重合。
+\textbf{结论：任何全局证明都必须使用共享 Perron 向量的耦合结构}（第 26 轮的 $\kappa_3=\sup(\mathcal A+\mathrm{Neg})$
+正是这种耦合），解耦特征值界无望。此为本轮对障碍图的\textbf{新增否证}。
+\end{remark}
+
+\subsection{P1$'$ 的矩对偶缺口：谱分解约束是关键}\label{sec:r29:dual}
+
+第 28 轮猜想~\ref{conj:r28P}（$\sup P=\frac{3+\sqrt5}5$）的入口 (a) 是「找一张在 $5$-环取等的对偶证书」。
+本小节\textbf{精确说明}为何点态/LP/测度型对偶\emph{不可能}给出紧界。
+
+回顾 $P=I_K(\mu)=\iint K(\varphi-\varphi')\,\dd\mu\,\dd\mu'$，$K(u)=(\cos u)_-^2$，
+约束 $\mu\ge0$、$\widehat\mu(0)=\int\dd\mu=2$、$\widehat\mu(2)=0$（二维各向同性）。
+
+\begin{proposition}[点态支配对偶的缺口，已证]\label{prop:r29pointwise}
+若用两段三角多项式 $\Lambda(\theta)=\alpha+2\operatorname{Re}(\beta e^{2i\theta})$ 点态支配 $K$
+（即 $\Lambda\ge K$），则 $P\le4\alpha$，且可行性迫使 $\alpha\ge\frac12$，从而 $P\le2$。
+\end{proposition}
+\begin{proof}
+$\iint\Lambda\,\dd\mu\dd\mu=\alpha(\int\dd\mu)^2+2\operatorname{Re}\bigl(\beta|\widehat\mu(2)|^2\bigr)=4\alpha$（用 $\widehat\mu(2)=0$）。
+点态条件在 $\theta=\pi$：$\alpha+2\operatorname{Re}\beta\ge K(\pi)=1$；在 $\theta=\frac\pi2$：$\alpha-2\operatorname{Re}\beta\ge K(\frac\pi2)=0$。
+两式相加得 $2\alpha\ge1$。
+\end{proof}
+
+\begin{proposition}[自相关松弛的缺口，已证（构造）]\label{prop:r29gap}
+把 $P=\sum_k\widehat K_k|\widehat\mu(k)|^2=\sum_k\widehat K_k\widehat\nu(k)=\int K\,\dd\nu$ 写成
+自相关测度 $\nu=\mu*\widetilde\mu$ 的能量，并\emph{丢弃}「$\widehat\nu=|\widehat\mu|^2$ 且 $\widehat\mu$ 正定」
+这一谱分解约束、只保留 $\nu\ge0$、$\widehat\nu(0)=4$、$\widehat\nu(2)=0$，则松弛问题的上确界 $\ge2$：
+取 $\nu=2\delta_\pi+2\delta_{\pi/2}$，有 $\widehat\nu(2)=2e^{2i\pi}+2e^{i\pi}=2-2=0$、$\int K\,\dd\nu=2K(\pi)+2K(\tfrac\pi2)=2\cdot1+0=2$。
+真值 $\frac{3+\sqrt5}5=1.047214$，故松弛\textbf{松了 $1.91$ 倍}。
+\end{proposition}
+\begin{remark}[根本原因]\label{rem:r29rootcause}
+命题~\ref{prop:r29pointwise}--\ref{prop:r29gap}~共同说明：$K=(\cos)_-^2$ 是\textbf{符号不定}核
+（$\widehat K_k$ 对奇 $k$ 变号），其在 $\theta=\pi$ 处取到峰值 $1$、在 $\theta=\frac\pi2$ 处为 $0$ 的
+「尖峰--深谷」形状，使任何\emph{点态}或\emph{仅用 $\nu\ge0$} 的对偶都被 $\pi$ 与 $\frac\pi2$ 两点夹死在 $\alpha\ge\frac12$。
+真正压制 $P$ 到 $\frac{3+\sqrt5}5$ 的，是\textbf{谱分解约束} $\widehat\nu(k)=|\widehat\mu(k)|^2$ 连同 $\widehat\mu$ 的正定性
+（Fejér--Riesz）：它把 $\nu$ 限制成「某个正测度自相关」，而 $2\delta_\pi+2\delta_{\pi/2}$ \emph{不是}任何 $\mu\ge0$ 的自相关
+（否则 $\mu$ 需同时集中于 $\pm$ 某两点并满足 $\widehat\mu(2)=0$，与 $\nu$ 的两点结构矛盾）。
+\textbf{故 P1$'$ 必须走完整的 Toeplitz--PSD 矩/Fejér--Riesz 路线（入口 (b)），点态与 LP 对偶已被否证。}
+这独立地证实并\emph{ sharpen }了注~\ref{rem:r28hard}(b)(c)。
+\end{remark}
+
+\subsection{全局上确界的独立数值再确认}\label{sec:r29:num}
+
+用与第 22 轮不同的优化器（Stiefel 流形上的\textbf{投影梯度上升}：目标 $\rho((VV^\top)_+)$，
+梯度 $2\,(\mathrm{Mask}\odot xx^\top)V$（$\mathrm{Mask}=\mathbf 1\{Q>0\}$），极分解投影回 $\mathrm{St}(N,3)$，
+每 $N$ 取 $40$ 个随机起点），对 $N=4,\dots,9$ 重新求全局上确界（\texttt{\_r29c.py}，输出 \texttt{\_r29c\_out.txt}）：
+\begin{center}\small
+\begin{tabular}{c|cccccc}
+\toprule
+$N$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$\\
+\midrule
+$\max\rho(Q_+)$（$40$ 起点）& $1.250000$ & $1.251351$ & $\mathbf{1.281568}$ & $1.281568$ & $1.281568$ & $1.281568$\\
+与 $\rho_0$ 之差 & $-3.16\times10^{-2}$ & $-3.02\times10^{-2}$ & $+1.3\times10^{-15}$ & $+1.6\times10^{-15}$ & $+1.8\times10^{-15}$ & $+1.3\times10^{-15}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+无一例超过 $\rho_0$。$N=6$ 的最优元质量为 $(0.533647\times5,\ 0.331767)$，纬度 $|z|$ 呈「一个极点 $+$ 五个等纬轮缘」，
+即\textbf{恰为 $5$-锥}（与定理~\ref{thm:r23uni}~的 $g_{\rm cone},g_{\rm hub}$ 逐位一致）；$N=7,8,9$ 的最优元中
+新增原子的质量坍缩到 $\approx0$（分别 $0.062,0.060,0.050$），主干仍是 $6$ 原子 $5$-锥。
+\textbf{数值}上支持 P1（极值帧为锥、支撑为 $6$ 原子），但按协议\textbf{数值}$\ne$\textbf{结果}，不作为证明入账。
+
+\subsection{本轮状态、诚实标签与方法优先队列（第十六版）}\label{sec:r29:status}
+
+\begin{center}\small
+\begin{tabular}{p{0.52\textwidth}p{0.24\textwidth}p{0.16\textwidth}}
+\toprule
+命题 & 状态 & 出处\\
+\midrule
+$\|Q_-x\|^2=\rho(1-\rho)+\mathrm{Neg}(2\rho-1)=\mathrm{Neg}^2+\mathcal A(1-\mathcal A)$（任意秩三投影） & \textbf{已证（精确）} & 定理~\ref{thm:r29align}\\
+近极值元必要条件 $\mathrm{Neg}\ge\frac{\rho(\rho-1)}{2\rho-1}$ & \textbf{已证（精确）} & 推论~\ref{cor:r29nec}\\
+秩一截面 $Q_-x=\mathrm{Neg}\,x$（共享特征向量刚性） & \textbf{已证（精确）} & 推论~\ref{cor:r29rank1}\\
+冠军钝角图 $=C_5$、$Q_-=wA(C_5)$、$\lambda_{\max}(Q_-)=2w=0.379920$ & \textbf{已证（精确）} & 命题~\ref{prop:r29weyl}\\
+Weyl 路线 $1+\lambda_{\max}(Q_-)$ 超 $\rho_0$ 达 $0.098352$ & \textbf{否证（精确）} & 命题~\ref{prop:r29weyl}\\
+绝对值 Gram $\rho(|Q|)=1.602534$、对角分裂 $1.327442$ 均超 $\rho_0$ & \textbf{否证（数值精确）} & 命题~\ref{prop:r29other}\\
+P1$'$ 的点态/LP/测度对偶缺口（$\alpha\ge\frac12$、松弛 $\ge2$） & \textbf{已证（否证对偶可行性）} & 命题~\ref{prop:r29pointwise}--\ref{prop:r29gap}\\
+$\kappa_3=\rho_0$、极值帧为 $6$ 原子 $5$-锥 & \textbf{数值}（$N=4..9$，投影梯度，独立再确认）& \S\ref{sec:r29:num}\\
+\textbf{全局 $\kappa_3\le\rho_0$} & \textbf{未证}（唯一缺口 $=$ 锥最优性 P1 $+$ 一般 $\Lam$ 归约）& 注~\ref{rem:r28path}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{方法优先队列（第十六版，数学优先；每次只推进队首，队首连续两次无进展则查文献并入队移植候选）}：
+\begin{itemize}[label={},leftmargin=1.4em,itemsep=2pt]
+\item[\textbf{P1}]\textbf{（全局唯一关键路径，最高优先级）锥最优性 $+$ 一般 $\Lam$ 归约}。
+\emph{本轮新增硬约束}：任何新工具必须同时满足 (i) 在冠军 $W_6$ 取等；(ii) 兼容共享 Perron 耦合
+（解耦界已被命题~\ref{prop:r29weyl}--\ref{prop:r29other}~否证）；(iii) 尊重近极值元必要条件
+$\mathrm{Neg}\in[\rho-1,\lambda_{\max}(Q_-)]$（推论~\ref{cor:r29nec}）。入口按优先级：
+(1a) 利用推论~\ref{cor:r29rank1}~的共享特征向量结构，把单轴一阶条件写成 $Q_-x=\mathrm{Neg}\,x+(\text{扩散})$，
+证扩散量 $\mathcal A(1-\mathcal A)$ 在极值处被锥结构锁定；
+(1b) \textbf{钝角图两图分类}（\emph{新}，未尝试）：冠军 $G_-=C_5$（三角形自由、极点孤立）。
+在 $\R^3$ 中钝角集 $\le4$（clique 数 $\le4$），枚举可行的 $G_-$（两图 switching 类）并对每类用
+定理~\ref{thm:r29align}~界 $\mathrm{Neg}$；
+(1c) 一阶条件 $\lambda_k=\sigma_k/\rho_k$ 至多取两值（沿用第十五版）。
+\item[\textbf{P1$'$}]\textbf{（秩一精确值，可独立发表）证 $\sup P=\frac{3+\sqrt5}5$}。
+\emph{本轮已否证}点态/LP/测度对偶（命题~\ref{prop:r29pointwise}--\ref{prop:r29gap}），
+\textbf{唯一剩余入口}是完整 Toeplitz--PSD 矩 SDP $+$ Fejér--Riesz：以 $\widehat\mu$ 的正定 Toeplitz 矩阵为变量，
+截断到 $|k|\le K$，解对偶 SDP 并抽取有理 SOS 证书，验证对偶值 $\to\frac{3+\sqrt5}5$。
+\item[\textbf{P2}]\textbf{（增稠薄层，已知只覆盖 $a\in[0.876,1]$，够不到冠军，低优先级）}。
+\item[\textbf{副（下界）}]$n=4$ 等纬度环给 $\rho=\frac54$ 精确构造点。
+\item[\textbf{已弹出（累积，禁止再试）}]第九至十五版全部，另加本轮\textbf{三条}：
+(i) Weyl/解耦特征值界 $\kappa_3\le1+\sup\lambda_{\max}(Q_-)$（命题~\ref{prop:r29weyl}）；
+(ii) 绝对值 Gram $\rho(|Q|)$ 与对角分裂 $\max g_i+\rho(Q_+^{\rm off})$（命题~\ref{prop:r29other}）；
+(iii) P1$'$ 的点态/LP/测度对偶（命题~\ref{prop:r29pointwise}--\ref{prop:r29gap}）。
+\end{itemize}
+
+\textbf{本轮对主方向的净贡献}：把「解耦型全局界」这一整类方法\textbf{精确否证}（附冠军处超额量），
+证明全局闭合\emph{必须}经由共享 Perron 耦合；导出对任意秩三投影成立的 Perron--钝角对齐恒等式
+（定理~\ref{thm:r29align}）及其两条推论（必要条件、秩一共享特征向量刚性）；并把 P1$'$ 的对偶路线收窄到
+\emph{唯一}可行的 Toeplitz--PSD/Fejér--Riesz 方向。全局 $\kappa_3\le\rho_0$ 仍未证，缺口 $=$ 锥最优性 P1，
+但障碍地图显著收窄、且新增三条可复用的精确结构约束。
+
+复现：仓库根目录 \texttt{\_r29a.py}（冠军重构、$\rho(Q_+)=\rho_0$、Perron 分解、Weyl 检验）、
+\texttt{\_r29b.py}（$\lambda_{\max}(Q_-)$ 的符号闭式）、\texttt{\_r29c.py}（$N=4..9$ 投影梯度全局上确界，输出 \texttt{\_r29c\_out.txt}）、
+\texttt{\_r29d.py}（$\beta$-恒等式、$Q_-=wA(C_5)$、$\rho(|Q|)$、对角分裂、矩对偶缺口构造）、
+\texttt{\_r29e.py}（$400$ 随机投影上恒等式与必要条件的普适核验）。本轮结论或为已证（恒等式/否证/刚性），
+或为标注清楚的数值，故\textbf{无新增独立证书脚本}。
 
 \section{通道型主函数方案的精确天花板}\label{sec:nogo}
 
