@@ -1,0 +1,14 @@
+rho0 = 1.281568196872168
+Direct P1 test: single-axis section, max over GENERAL frames vs CONE family
+ a      F_cone(a)      F_gen(N=6..8)   diff(gen-cone)   cone argmax(n,z)
+ 0.340000  1.266772509976  1.249999489631   -1.677e-02     n=5,z=0.5187
+ 0.400000  1.272984942851  1.249923097426   -2.306e-02     n=5,z=0.5101
+ 0.500000  1.279616800538  1.249921648338   -2.970e-02     n=5,z=0.5022
+ 0.594609  1.281568099669  1.245293217908   -3.627e-02     n=5,z=0.5006
+ 0.700000  1.279497559468  1.247898944493   -3.160e-02     n=5,z=0.5047
+ 0.800000  1.274592083119  1.238650770982   -3.594e-02     n=5,z=0.5134
+ 0.900000  1.268261038986  1.248089053209   -2.017e-02     n=5,z=0.5245
+
+=== dichotomy: Neg=lambda_max(Q-) => A2 in {0,1}. Check on randoms: A2 in (0,1) => Neg<lam_max(Q-) strictly ===
+violations (Neg>lam_max(Q-) with A2 in (0,1)): 0  min(lam_max(Q-)-Neg) over A2 in(0,1): 0.018541124599698533
+=> whenever 0<A2<1, x is NOT the top eigenvector of Q- (strict misalignment), confirming dichotomy contrapositive
