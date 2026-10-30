@@ -177,36 +177,46 @@
 \contentsline {subsection}{\numberline {16.4}等纬度环的精确上界 $\frac 32$}{160}{subsection.16.4}%
 \contentsline {subsection}{\numberline {16.5}数值证据}{161}{subsection.16.5}%
 \contentsline {subsection}{\numberline {16.6}本轮状态、诚实标签与方法优先队列（第十三版）}{162}{subsection.16.6}%
-\contentsline {section}{\numberline {17}通道型主函数方案的精确天花板}{163}{section.17}%
-\contentsline {subsection}{\numberline {17.1}动机}{163}{subsection.17.1}%
-\contentsline {subsection}{\numberline {17.2}方案族}{164}{subsection.17.2}%
-\contentsline {subsection}{\numberline {17.3}见证测度}{165}{subsection.17.3}%
-\contentsline {subsection}{\numberline {17.4}主定理}{166}{subsection.17.4}%
-\contentsline {subsection}{\numberline {17.5}独立的数值确认}{167}{subsection.17.5}%
-\contentsline {section}{\numberline {18}已经被排除的路线}{167}{section.18}%
-\contentsline {section}{\numberline {19}当前的障碍}{169}{section.19}%
-\contentsline {subsection}{\numberline {19.1}主要障碍}{169}{subsection.19.1}%
-\contentsline {paragraph}{障碍 0$''$（第 12 轮重写，现居首位）：$3.2128\times 10^{-3}$ 的秩三缺口}{169}{paragraph*.24}%
-\contentsline {paragraph}{障碍 0（第六版，\textbf {已被否证}，保留以记录演化）：$N=6$ 的 $19$ 个未闭合类，即一条几何不存在性陈述}{169}{paragraph*.25}%
-\contentsline {paragraph}{障碍 0$'$（新，第二优先）：$k\ge 3$ 时的尾和记账}{169}{paragraph*.26}%
-\contentsline {subsection}{\numberline {19.2}数值证据的边界（必须诚实交代）}{171}{subsection.19.2}%
-\contentsline {section}{\numberline {20}候选方法与其评估}{172}{section.20}%
-\contentsline {subsection}{\numberline {20.1}从定理~\ref {thm:zonal} 反推出的必要条件}{172}{subsection.20.1}%
-\contentsline {subsection}{\numberline {20.2}方向甲：自洽性 + 逐核精确 KKT}{172}{subsection.20.2}%
-\contentsline {subsection}{\numberline {20.3}方向乙：通道—分布的联合约束（本轮新提出）}{173}{subsection.20.3}%
-\contentsline {subsection}{\numberline {20.4}方向丙：三角 SOS / Fejér--Riesz}{174}{subsection.20.4}%
-\contentsline {subsection}{\numberline {20.5}方向丁：图极限—凸分析（KLMPT 架构的移植）}{174}{subsection.20.5}%
-\contentsline {subsection}{\numberline {20.6}其他考虑过但不推荐的想法}{174}{subsection.20.6}%
-\contentsline {subsection}{\numberline {20.7}优先级建议}{175}{subsection.20.7}%
-\contentsline {subsection}{\numberline {20.8}本轮新增的候选方向（庚、戊、己）}{175}{subsection.20.8}%
-\contentsline {section}{\numberline {21}诚实声明与结论状态}{176}{section.21}%
-\contentsline {subsection}{\numberline {21.1}可以引用的结果}{176}{subsection.21.1}%
-\contentsline {subsection}{\numberline {21.2}本报告没有主张的内容}{178}{subsection.21.2}%
-\contentsline {subsection}{\numberline {21.3}数值证据的使用纪律}{179}{subsection.21.3}%
-\contentsline {subsection}{\numberline {21.4}第 12 轮新增结论的证明状态标注}{179}{subsection.21.4}%
-\contentsline {subsection}{\numberline {21.5}一句话总结}{180}{subsection.21.5}%
-\contentsline {section}{\numberline {A}复现说明与产物清单}{181}{appendix.A}%
-\contentsline {subsection}{\numberline {A.1}运行环境}{181}{subsection.A.1}%
-\contentsline {subsection}{\numberline {A.2}随本报告分发的文件}{181}{subsection.A.2}%
-\contentsline {subsection}{\numberline {A.3}证书脚本核对了什么}{184}{subsection.A.3}%
-\contentsline {subsection}{\numberline {A.4}未随本报告分发的中间产物}{186}{subsection.A.4}%
+\contentsline {section}{\numberline {17}第 27 轮：秩一截面的 Fourier 闭合——无条件 $\mathrm {Neg}\le \dfrac 5{6\pi }$ 与 $\kappa _3(\text {秩一})<\rho _0$}{163}{section.17}%
+\contentsline {subsection}{\numberline {17.1}秩一截面的双权重坐标}{164}{subsection.17.1}%
+\contentsline {subsection}{\numberline {17.2}Young 不等式与 $\kappa -2$ 亏格恒等式}{165}{subsection.17.2}%
+\contentsline {subsection}{\numberline {17.3}刚性恒等式}{165}{subsection.17.3}%
+\contentsline {subsection}{\numberline {17.4}$P$ 的 Fourier 上界}{166}{subsection.17.4}%
+\contentsline {subsection}{\numberline {17.5}主定理：秩一截面的无条件闭合}{167}{subsection.17.5}%
+\contentsline {subsection}{\numberline {17.6}秩一刚性的新证明：$\|Z_S\|^2\le \sigma _S$}{167}{subsection.17.6}%
+\contentsline {subsection}{\numberline {17.7}紧性讨论：冠军与 $P$~的真实上确界}{168}{subsection.17.7}%
+\contentsline {subsection}{\numberline {17.8}勘误}{169}{subsection.17.8}%
+\contentsline {subsection}{\numberline {17.9}本轮状态、诚实标签与方法优先队列（第十四版）}{169}{subsection.17.9}%
+\contentsline {section}{\numberline {18}通道型主函数方案的精确天花板}{170}{section.18}%
+\contentsline {subsection}{\numberline {18.1}动机}{170}{subsection.18.1}%
+\contentsline {subsection}{\numberline {18.2}方案族}{170}{subsection.18.2}%
+\contentsline {subsection}{\numberline {18.3}见证测度}{171}{subsection.18.3}%
+\contentsline {subsection}{\numberline {18.4}主定理}{172}{subsection.18.4}%
+\contentsline {subsection}{\numberline {18.5}独立的数值确认}{173}{subsection.18.5}%
+\contentsline {section}{\numberline {19}已经被排除的路线}{173}{section.19}%
+\contentsline {section}{\numberline {20}当前的障碍}{175}{section.20}%
+\contentsline {subsection}{\numberline {20.1}主要障碍}{175}{subsection.20.1}%
+\contentsline {paragraph}{障碍 0$''$（第 12 轮重写，现居首位）：$3.2128\times 10^{-3}$ 的秩三缺口}{175}{paragraph*.24}%
+\contentsline {paragraph}{障碍 0（第六版，\textbf {已被否证}，保留以记录演化）：$N=6$ 的 $19$ 个未闭合类，即一条几何不存在性陈述}{175}{paragraph*.25}%
+\contentsline {paragraph}{障碍 0$'$（新，第二优先）：$k\ge 3$ 时的尾和记账}{176}{paragraph*.26}%
+\contentsline {subsection}{\numberline {20.2}数值证据的边界（必须诚实交代）}{177}{subsection.20.2}%
+\contentsline {section}{\numberline {21}候选方法与其评估}{178}{section.21}%
+\contentsline {subsection}{\numberline {21.1}从定理~\ref {thm:zonal} 反推出的必要条件}{178}{subsection.21.1}%
+\contentsline {subsection}{\numberline {21.2}方向甲：自洽性 + 逐核精确 KKT}{178}{subsection.21.2}%
+\contentsline {subsection}{\numberline {21.3}方向乙：通道—分布的联合约束（本轮新提出）}{179}{subsection.21.3}%
+\contentsline {subsection}{\numberline {21.4}方向丙：三角 SOS / Fejér--Riesz}{180}{subsection.21.4}%
+\contentsline {subsection}{\numberline {21.5}方向丁：图极限—凸分析（KLMPT 架构的移植）}{180}{subsection.21.5}%
+\contentsline {subsection}{\numberline {21.6}其他考虑过但不推荐的想法}{181}{subsection.21.6}%
+\contentsline {subsection}{\numberline {21.7}优先级建议}{181}{subsection.21.7}%
+\contentsline {subsection}{\numberline {21.8}本轮新增的候选方向（庚、戊、己）}{181}{subsection.21.8}%
+\contentsline {section}{\numberline {22}诚实声明与结论状态}{182}{section.22}%
+\contentsline {subsection}{\numberline {22.1}可以引用的结果}{182}{subsection.22.1}%
+\contentsline {subsection}{\numberline {22.2}本报告没有主张的内容}{184}{subsection.22.2}%
+\contentsline {subsection}{\numberline {22.3}数值证据的使用纪律}{185}{subsection.22.3}%
+\contentsline {subsection}{\numberline {22.4}第 12 轮新增结论的证明状态标注}{186}{subsection.22.4}%
+\contentsline {subsection}{\numberline {22.5}一句话总结}{186}{subsection.22.5}%
+\contentsline {section}{\numberline {A}复现说明与产物清单}{187}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}运行环境}{187}{subsection.A.1}%
+\contentsline {subsection}{\numberline {A.2}随本报告分发的文件}{188}{subsection.A.2}%
+\contentsline {subsection}{\numberline {A.3}证书脚本核对了什么}{190}{subsection.A.3}%
+\contentsline {subsection}{\numberline {A.4}未随本报告分发的中间产物}{193}{subsection.A.4}%

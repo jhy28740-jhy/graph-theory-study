@@ -1,0 +1,15 @@
+math: 第 27 轮——秩一截面被无条件闭合，kappa_3(秩一)<=1+5/(6pi)=1.265258<rho_0
+
+绕开锥最优性，用「Young + 刚性恒等式 + 圆上 Fourier」链条直接证明 Neg<=5/(6pi)：
+- Young 逐点 -t_ij<=rho_i rho_j c_ij^2/4（等号 iff kappa=2），精确亏格恒等式
+  Neg=Theta/4-(1/4)sum_N sigma_i sigma_j(kappa_ij-2)^2；Theta<=P（N subset {c<0}）。
+- 刚性恒等式（二维各向同性 sum rho_i p_i p_i^T=I_2）：sum_ij rho_i rho_j c_ij^2=||I_2||_F^2=2。
+- Fourier：K(u)=(cos u)_-^2，P=sum_k Khat_k|muhat(k)|^2；各向同性 muhat(2)=0 自动消灭
+  Khat_2=1/8（除常数项外最大正系数）；|muhat(k)|<=2 + 丢负系数 => P<=1+(16/pi)S。
+- 闭式 S=5/24-pi/16（digamma，psi(1/4)-psi(3/4)=-pi）=> P<=10/(3pi)=1.061033。
+- 故 Neg<=P/4<=5/(6pi)=0.265258<rho_0-1=0.281568，余量 1.63e-2（严格：只需 pi>2.9596）。
+把第 26 轮条件性的 (11+phi)/10=1.261803 升级为无条件 1.265258；较 STW Phi=1.309017 改进 4.38e-2。
+附：秩一刚性 A_w=1 的一行新证明（||Z_S||^2<=sigma_S，只用子帧 Gram<=I + Cauchy-Schwarz）。
+注 r27global 指出本轮机器为秩一专属（一般 Lam 的 Young 余项权重 g_i h_i b_i^2/a_i != rho_i），
+全局闭合仍须锥最优性；新队列 P1'（sup P=(3+sqrt5)/5，Toeplitz 矩对偶）。
+报告 188->194 页（xelatex 三遍 exit 0，无未定义引用），新证书 32 项全绿；协议第十五版。
