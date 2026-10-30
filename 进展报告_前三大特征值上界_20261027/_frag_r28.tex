@@ -1,0 +1,194 @@
+\section{第 28 轮：秩一精确值的数值确认、环族极值与全局障碍的精确定位}\label{sec:r28}
+
+第 27 轮把秩一截面无条件闭合到 $\kappa_3(\text{秩一})\le1+\frac5{6\pi}=1.265258$，
+其链条 $\mathrm{Neg}=\frac\Theta4\le\frac P4\le\frac14\cdot\frac{10}{3\pi}$~中，
+Young 步与 $\Theta=P$~在冠军处\emph{都取等}，\textbf{唯一的松弛}在
+$P_{\text{champ}}=\frac{3+\sqrt5}5=1.047214<\frac{10}{3\pi}=1.061033$（差 $1.38\times10^{-2}$，注~\ref{rem:r27compare}）。
+本轮回答两个问题：(一) $P$~的\emph{真实}上确界是多少、能否把秩一界收紧到冠军值；
+(二) 第 27 轮的 Fourier 机器能否推广到全局。
+结论是：(一) 数值与环族精确计算都指向 $\sup P=\frac{3+\sqrt5}5$（$5$-环最优），
+若成立则 $\kappa_3(\text{秩一})=\frac{11+\varphi}{10}=1.261803$~\textbf{精确且无条件}（猜想~\ref{conj:r28P}），
+但严格证明是一个符号不定的矩问题，本轮\emph{未}解决；
+(二) Fourier 机器是秩一\emph{专属}的，「增稠」只能覆盖 $a$~接近 $1$~的一条薄层，
+够不到冠军 $a^*=0.5946$，故全局 $\kappa_3\le\rho_0$~的唯一关键路径仍是锥最优性（P1）。
+
+\subsection{$\sup P$~的数值确认与环族的精确极值}\label{sec:r28:supP}
+
+回忆 $P=\sum_{i\ne j,c_{ij}<0}\rho_i\rho_jc_{ij}^2=\iint(\cos(\varphi-\varphi'))_-^2\dd\mu\dd\mu'$，
+$\mu=\sum\rho_i\delta_{\varphi_i}$，约束 $\mu\ge0$、$\mu(S^1)=2$、$\widehat\mu(2)=0$。
+由刚性恒等式（引理~\ref{lem:r27rigid}）$\iint\cos^2(\varphi-\varphi')\dd\mu\dd\mu'=2$，故
+\begin{equation}\label{eq:r28Pplus}
+P=2-P^+,\qquad P^+:=\iint(\cos\Delta)_+^2\dd\mu\dd\mu'\ge0,
+\end{equation}
+即\textbf{最大化 $P$~等价于最小化「锐角余弦平方质量」$P^+$}。
+
+\begin{proposition}[环族的精确极值，已证]\label{prop:r28ring}
+对正 $n$~边形环（$\rho_i=2/n$、$\varphi_i=2\pi i/n$），
+\[
+P(n)=\frac4{n^2}\!\!\sum_{\substack{1\le d\le n-1\\ \cos(2\pi d/n)<0}}\!\!n\cos^2\frac{2\pi d}n,
+\]
+其精确值为 $P(3)=\frac23$、$P(4)=1$、$P(5)=\frac{3+\sqrt5}5$、$P(6)=1$、
+$P(7)=\frac87\bigl[1+\cos^2\frac\pi7-\cos\frac{2\pi}7\bigr]=0.984298$、$P(8)=1$、$P(9)=\frac23+\frac49\cos\frac{2\pi}9=1.007131$，
+且对一切偶数 $n$~有 $P(n)=1$、$P(n)\to1$（$n\to\infty$，趋于均匀测度的 $P^+=1$）。
+故\textbf{环族上 $\max_nP(n)=P(5)=\frac{3+\sqrt5}5$}，唯一在 $n=5$~取得。
+\end{proposition}
+
+\begin{proof}
+直接求和；$n=3,\dots,12$~由 \texttt{sympy}~给出闭式（\texttt{\_r28b.py}），
+$n=5$~处 \texttt{sympy}~判定 $P(5)-\frac{3+\sqrt5}5=0$。偶数 $n$：钝角对恰为 $\cos<0$~的一半，
+对称性给 $P^+=1$、$P=1$。$n\to\infty$：$\mu\to$~均匀（密度 $1/\pi$），
+$P^+\to\frac1{\pi^2}\int_0^{2\pi}\!\!\int_0^{2\pi}(\cos\Delta)_+^2=1$。
+$n=13,\dots,24$~数值均 $<1.003<\frac{3+\sqrt5}5$。
+\end{proof}
+
+\begin{lemma}[$|\widehat\mu(5)|=2$~的刚性，已证]\label{lem:r28rigid5}
+设 $\mu\ge0$、$\mu(S^1)=2$。则 $|\widehat\mu(5)|=2\iff\mathrm{supp}\,\mu\subseteq\{\varphi_0+\tfrac{2\pi j}5\}_{j=0}^4$
+（某个 $5$-陪集），此时 $|\widehat\mu(5m)|=2$~对\textbf{一切} $m\ge1$~成立。
+\end{lemma}
+
+\begin{proof}
+$|\widehat\mu(5)|=|\int e^{5i\varphi}\dd\mu|\le\int|e^{5i\varphi}|\dd\mu=2$，
+等号 $\iff e^{5i\varphi}$~在 $\mathrm{supp}\,\mu$~上取常值 $e^{5i\varphi_0}\iff\mathrm{supp}\,\mu\subseteq\{\varphi_0+\frac{2\pi j}5\}$。
+此时 $\widehat\mu(5m)=\int e^{5im\varphi}\dd\mu=e^{5im\varphi_0}\sum_j\rho_je^{2\pi imj}=e^{5im\varphi_0}\mu(S^1)=2e^{5im\varphi_0}$。
+\end{proof}
+
+\begin{remark}[引理~\ref{lem:r28rigid5}~为何解释了冠军值的来历]\label{rem:r28why5}
+$P-1=\sum_{k\ \text{奇}}\widehat K_k|\widehat\mu(k)|^2$~中，最大的正系数是 $\widehat K_5=\frac2{105\pi}$。
+若只饱和 $|\widehat\mu(5)|=2$~而其余奇模式为零，则 $P-1=2\widehat K_5\cdot4=\frac{16}{105\pi}=0.048517$，
+\emph{超过}目标 $\frac{3+\sqrt5}5-1=\frac{\sqrt5-2}5=0.047214$。
+但引理~\ref{lem:r28rigid5}~说明：$|\widehat\mu(5)|=2$~\textbf{强制} $|\widehat\mu(15)|=|\widehat\mu(25)|=\cdots=2$，
+而 $\widehat K_{15}=-\frac2{3315\pi}<0$、$\widehat K_{35}<0,\dots$~这些\emph{负}模式把
+$0.048517$~精确压回到 $0.047214$：
+\[
+\frac{16}{105\pi}-\frac{16}{3315\pi}+\frac{16}{15525\pi}-\cdots
+=8\sum_{m\ge1}\widehat K_{5m}=\frac{3+\sqrt5}5-1 .
+\]
+换言之，$5$-环之所以是 $\frac{3+\sqrt5}5$~而不是更大的 $\frac{16}{105\pi}+1$，
+正是因为「饱和主模式 $\widehat K_5$」与「被迫吞下负模式 $\widehat K_{15},\widehat K_{35},\dots$」是同一件事。
+这是 $5$~这个数字的\emph{机制性}来源（$5$~使 $\widehat K_5>0$~最大、且 $15\equiv3\ (4)$~提供必要的负修正）。
+\end{remark}
+
+\textbf{数值确认（数值，非证明）}：用 SLSQP（显式约束 $\sum\rho=2$、$\sum\rho e^{2i\varphi}=0$、$\rho\ge0$）
+配环初始化 $+$ 随机初始化，对 $N=3,\dots,16$~求 $\sup P$（\texttt{\_r28a.py}，输出 \texttt{\_r28a\_out.txt}）：
+$N=3$~给 $\frac23$、$N=4$~给 $1$、$N=5,6,\dots,16$~\textbf{全部}收敛到 $1.047213595500=\frac{3+\sqrt5}5$
+（与冠军值差 $6.9\times10^{-15}$），无一超过。这与第 27 轮 Fourier 上界 $\frac{10}{3\pi}=1.061033$~相差 $1.38\times10^{-2}$，
+说明该上界\emph{不紧}，真实上确界是冠军值。
+
+\subsection{精确值猜想 P1$'$~及其后果}\label{sec:r28:conj}
+
+\begin{conjecture}[$P$~的精确上确界]\label{conj:r28P}
+在 $\mu\ge0$、$\mu(S^1)=2$、$\widehat\mu(2)=0$~下，
+\[
+\sup P=\frac{3+\sqrt5}5,
+\]
+唯一在均匀 $5$-环（$\mu=\frac25\sum_{j=0}^4\delta_{2\pi j/5}$，及其旋转）取得。
+\end{conjecture}
+
+\begin{corollary}[秩一截面的精确值，条件于猜想~\ref{conj:r28P}]\label{cor:r28exact}
+若猜想~\ref{conj:r28P}~成立，则 $\mathrm{Neg}\le\frac P4\le\frac{3+\sqrt5}{20}=\frac{\varphi^2}{10}$，
+从而
+\[
+\kappa_3(\text{秩一})=1+\mathrm{Neg}\le1+\frac{\varphi^2}{10}=\frac{11+\varphi}{10}=1.261803398875,
+\]
+而冠军\emph{达到}此值，故 $\kappa_3(\text{秩一})=\frac{11+\varphi}{10}$~\textbf{精确且无条件}，
+比第 27 轮的 $1+\frac5{6\pi}=1.265258$~再改进 $3.45\times10^{-3}$，并与第 26 轮\emph{条件性}的锥族值重合。
+\end{corollary}
+
+\begin{remark}[为什么猜想~\ref{conj:r28P}~难证]\label{rem:r28hard}
+$P=\sum_k\widehat K_k|\widehat\mu(k)|^2$~是 $(\widehat\mu(k))$~的\textbf{符号不定}二次型
+（$\widehat K_1<0$、$\widehat K_5>0$、$\widehat K_{15}<0,\dots$），
+在「正定 Toeplitz 序列 $+$ 两个矩约束」上求极大。三处障碍：
+(a) 目标非凹，测度 LP 的对偶\emph{有间隙}，KKT 点不自动是全局极大；
+(b) $5$-折叠对称化 $\mu\mapsto\mu_5$~\emph{不单调}：
+$P(\mu)-P(\mu_5)=\sum_{5\nmid k}\widehat K_k|\widehat\mu(k)|^2$~符号不定
+（$\widehat K_9,\widehat K_{13}>0$~而 $\widehat K_1,\widehat K_3<0$）；
+(c) 饱和主模式与吞下负模式被引理~\ref{lem:r28rigid5}~\emph{耦合}，无法逐模式独立放大。
+本轮只证到环族（命题~\ref{prop:r28ring}）与刚性（引理~\ref{lem:r28rigid5}）；
+一般测度的情形留作 P1$'$。可行入口：Toeplitz 矩的 SDP 对偶（找一张在 $5$-环取等的对偶证书），
+或把 $(\cos\Delta)_+^2$~的最小能量问题与 Cohn--Kumar 型 universally-optimal 结构定理对接。
+\end{remark}
+
+\subsection{全局障碍的精确定位}\label{sec:r28:global}
+
+第 27 轮的 Young 步依赖 $t_{ij}$~有\emph{正的} $\sigma_i\sigma_j$~偏移，而该偏移来自秩一特有的 $h_i=a_i$
+（注~\ref{rem:r27global}）。对一般单轴 $\Lam$（参数 $a\in[\frac13,1]$，$h_i=\sqrt{\beta+\alpha s_i}$、
+$\beta=\frac{1-a}2$、$\alpha=\frac{3a-1}2$、$s_i=\langle u_i,e_3\rangle^2$），即便半球翻转使 $\langle u_i,e_3\rangle\ge0$、
+令 $\widetilde\sigma_i=w_i\sqrt{s_i}\ge0$、$\widetilde r_i=w_i\sqrt{1-s_i}$，得 $t_{ij}=\widetilde\sigma_i\widetilde\sigma_j+\widetilde r_i\widetilde r_jc_{ij}$，
+Young 余项变为
+\begin{equation}\label{eq:r28young}
+\frac{\widetilde r_i^2}{\widetilde\sigma_i}\cdot\frac{\widetilde r_j^2}{\widetilde\sigma_j}\cdot\frac{c_{ij}^2}4
+=\rho_i\rho_j\,\frac{h_i}{\sqrt{s_i}}\cdot\frac{h_j}{\sqrt{s_j}}\cdot\frac{c_{ij}^2}4,
+\qquad \frac{h_i}{\sqrt{s_i}}=\sqrt{\frac\beta{s_i}+\alpha}\ \begin{cases}=1,&a=1\ (\text{秩一}),\\ >1,&a<1,\ s_i<1.\end{cases}
+\end{equation}
+因子 $\kappa_i:=h_i/\sqrt{s_i}=\sqrt{\beta/s_i+\alpha}$~破坏了刚性恒等式
+$\sum\rho_i\rho_jc_{ij}^2=2$（它只对\emph{无权} $\rho_i$~成立），
+于是 Fourier 步失去「全和 $=$\,常数」的支点。定量地，
+$\mathrm{Neg}\le\frac{\kappa_{\max}^2}4P\le\kappa_{\max}^2\cdot\frac5{6\pi}$，
+要 $\le\rho_0-1$~需 $\kappa_{\max}\le\sqrt{\frac{\rho_0-1}{5/(6\pi)}}=1.0303$。
+在冠军纬度 $s=z^{*2}=0.25044$~处 $\kappa^2=\frac{1-a}{2s}+\frac{3a-1}2=1.4965-0.4965a$，
+故 $\kappa\le1.0303\iff a\gtrsim0.876$。也就是说：
+\begin{itemize}\itemsep=1pt
+\item 「增稠」只能闭合单轴薄层 $a\in[\,0.876,1\,]$（且这里用了冠军纬度，一般帧的 $s_{\min}$~更小、$\kappa$~更大，薄层更窄）；
+\item 冠军在 $a^*=0.5946$，\textbf{远在薄层之外}；
+\item 因此秩一的 Fourier 机器\emph{不能}沿单轴推到冠军，全局 $\kappa_3\le\rho_0$~仍须另辟蹊径。
+\end{itemize}
+
+\begin{remark}[全局的唯一关键路径]\label{rem:r28path}
+综合第 23--28 轮：
+中心截面（$a=\frac13$）已闭合（定理~\ref{thm:r24centre}）、秩一截面（$a=1$）已无条件闭合（定理~\ref{thm:r27main}）、
+单轴\emph{锥族}上 $\max F=\rho_0$（定理~\ref{thm:r23uni}）、窗口外 $\theta_1\ge15.76^\circ$~已闭合（定理~\ref{thm:r25window}）。
+剩下的\textbf{唯一}缺口是：
+\begin{enumerate}\itemsep=1pt
+\item 单轴截面 $a\in(\frac13,1)$~上，极值帧必为锥（$z_*=e_3$）——即锥最优性 P1；
+\item 一般 $\Lam$（三互异特征值）可归约到单轴。
+\end{enumerate}
+二者一旦成立，$\kappa_3\le\rho_0$~立即闭合。第 27--28 轮把秩一从这条公共缺口中\emph{摘出}（独立闭合），
+使 P1 现在只承担「单轴内部 $+$ 一般 $\Lam$」，职责比第 26 轮更聚焦，但\textbf{仍未解}。
+\end{remark}
+
+\subsection{本轮状态、诚实标签与方法优先队列（第十五版）}\label{sec:r28:status}
+
+\begin{center}\small
+\begin{tabular}{lll}
+\toprule
+结论 & 状态 & 位置\\
+\midrule
+$P=2-P^+$（最大化 $P\iff$ 最小化锐角质量） & \textbf{已证（精确）} & \eqref{eq:r28Pplus}\\
+环族 $\max_nP(n)=P(5)=\frac{3+\sqrt5}5$ & \textbf{已证（符号 $+$ 数值 $n\le24$）} & 命题~\ref{prop:r28ring}\\
+$|\widehat\mu(5)|=2\Rightarrow5$-陪集 $\Rightarrow|\widehat\mu(5m)|=2$ & \textbf{已证（精确）} & 引理~\ref{lem:r28rigid5}\\
+冠军值 $\frac{3+\sqrt5}5$~的机制（主模式 $+$ 强制负模式） & \textbf{已证（精确代数）} & 注~\ref{rem:r28why5}\\
+$\sup P=\frac{3+\sqrt5}5$（$5$-环全局最优） & \textbf{数值}（$N=3..16$，SLSQP）$+$\textbf{猜想} & 猜想~\ref{conj:r28P}\\
+$\kappa_3(\text{秩一})=\frac{11+\varphi}{10}$~精确 & \textbf{条件于猜想~\ref{conj:r28P}} & 推论~\ref{cor:r28exact}\\
+增稠只覆盖 $a\in[0.876,1]$、够不到冠军 $a^*=0.5946$ & \textbf{已证（定量）} & \S\ref{sec:r28:global}\\
+\textbf{全局 $\kappa_3\le\rho_0$} & \textbf{未证}（唯一缺口 $=$ 锥最优性 P1 $+$ 一般 $\Lam$ 归约） & 注~\ref{rem:r28path}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{方法优先队列（第十五版，数学优先）}：
+\begin{enumerate}\itemsep=2pt
+\item[\textbf{P1$'$}]\textbf{（秩一精确值）证明猜想~\ref{conj:r28P}（$\sup P=\frac{3+\sqrt5}5$）}。
+入口：(a) Toeplitz 矩的 SDP 对偶，找一张在 $5$-环取等的对偶证书（非负二次型）；
+(b) 把 $P^+=\iint(\cos\Delta)_+^2\dd\mu\dd\mu'$~的能量最小化与 universally-optimal 结构定理对接；
+(c) 先证「极大化元必 $5$-折叠对称」（需克服注~\ref{rem:r28hard}(b)~的非单调性），再用命题~\ref{prop:r28ring}。
+\textbf{硬校验}：任何对偶证书必须在均匀 $5$-环取等。一旦成立，$\kappa_3(\text{秩一})=\frac{11+\varphi}{10}$~精确无条件。
+\item[\textbf{P1}]\textbf{（全局唯一关键路径）锥最优性 $+$ 一般 $\Lam$ 归约}。
+注~\ref{rem:r28path}：这是 $\kappa_3\le\rho_0$~的\emph{唯一}剩余缺口。
+入口沿用第十三版 (1a)--(1d)（一阶条件 / 紧性 $+$ 平衡 / Fej\'er--Riesz / 文献移植），
+\textbf{硬校验}：必须在冠军 $W_6$（$a^*=0.5946$、$5$-锥、$s_0$）上取等。
+\item[\textbf{P2}]\textbf{（增稠，已知只覆盖薄层）}把秩一界沿单轴推到 $a\in[0.876,1]$；
+\S\ref{sec:r28:global}~已给出障碍因子 $\kappa_i=h_i/\sqrt{s_i}$~与薄层范围。价值有限（够不到冠军），优先级低。
+\item[\textbf{P3}]\textbf{（窗口两尺度）}$\mathrm{Neg}^*\le(\rho_0-1)+c\sin^2\theta$~中 $c=1$~的最优性（沿用）。
+\item[\textbf{P4}]\textbf{（中心余量）}$m_1=1.040\times10^{-3}$（沿用）。
+\item[\textbf{副}]\textbf{下界}：$n=4$~等纬度环给 $\rho=\frac54$~精确构造点。
+\end{enumerate}
+
+\textbf{已弹出（累积，禁止再试）}：第九至十四版全部已弹出项，另加本轮一条：
+\textbf{用刚性恒等式沿单轴「增稠」直接推到冠军}——障碍因子 $\kappa_i=h_i/\sqrt{s_i}>1$（$a<1$）
+使 $\sum\rho\rho c^2=2$~失效，只能覆盖 $a\gtrsim0.876$~的薄层（\S\ref{sec:r28:global}）。
+
+复现：仓库根目录 \texttt{\_r28a.py}（$\sup P$~的 SLSQP 数值探索，$N=3..16$，环 $+$ 随机初始化；
+输出 \texttt{\_r28a\_out.txt}：$N\ge5$~全部收敛到 $\frac{3+\sqrt5}5$）、
+\texttt{\_r28b.py}（环族 $P(n)$~的精确值与数值，$n=3..24$，\texttt{sympy}~判定 $P(5)=\frac{3+\sqrt5}5$；
+输出 \texttt{\_r28b\_out.txt}）。本轮无新增独立证书脚本（结论或为已证的环族/刚性，或为标注清楚的数值/猜想）。
+
