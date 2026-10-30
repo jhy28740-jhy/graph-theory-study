@@ -1,0 +1,22 @@
+target delta0/3 = 0.054897595005559
+
+=== 1) 大规模随机扫描 (一般帧 x 一般 Lambda) ===
+  N= 4  min Phi over 1200 = 0.123430421079  (diff to target +6.853e-02)
+  N= 5  min Phi over 1200 = 0.151261747420  (diff to target +9.636e-02)
+  N= 6  min Phi over 1200 = 0.124152955653  (diff to target +6.926e-02)
+  N= 7  min Phi over 1200 = 0.148893383598  (diff to target +9.400e-02)
+  N= 8  min Phi over 1200 = 0.154382617249  (diff to target +9.949e-02)
+  N= 9  min Phi over 1200 = 0.134429930977  (diff to target +7.953e-02)
+  N=10  min Phi over 1200 = 0.147617651680  (diff to target +9.272e-02)
+  N=11  min Phi over 1200 = 0.163051940821  (diff to target +1.082e-01)
+  N=12  min Phi over 1200 = 0.163068404610  (diff to target +1.082e-01)
+  总计 10800 个随机构型, 全局最小 Phi = 0.123430421079 (diff +6.853e-02)
+
+=== 2) 局部极小化 (Powell on Stiefel x Lambda谱), 从冠军与随机点出发 ===
+  N=5 最好局部极小 Phi = 0.115331854953  (diff +6.043e-02)
+  N=6 最好局部极小 Phi = 0.056476851266  (diff +1.579e-03)
+  N=7 最好局部极小 Phi = 0.054897595006  (diff +2.151e-15)
+  N=8 最好局部极小 Phi = 0.054897595006  (diff +1.846e-15)
+  全局最好 = 0.054897595005561  at N=8 trial=6
+   谱 = [0.59460857 0.20269572 0.20269571]
+   该点 J_w/2 = 1.247611474266 (rho0=1.281568196872)

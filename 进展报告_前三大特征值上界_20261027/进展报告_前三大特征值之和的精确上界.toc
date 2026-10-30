@@ -1,196 +1,212 @@
-\contentsline {section}{\numberline {1}问题、记号与已知结果}{11}{section.1}%
-\contentsline {subsection}{\numberline {1.1}问题}{11}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}三条已发表的上界}{11}{subsection.1.2}%
-\contentsline {subsection}{\numberline {1.3}一个值得注意的定量平行现象}{12}{subsection.1.3}%
-\contentsline {subsection}{\numberline {1.4}记号约定（必须钉死，否则会与 \textup {[STW26]}\ 冲突）}{12}{subsection.1.4}%
-\contentsline {section}{\numberline {2}\textup {[STW26]}\ 证明的解剖}{12}{section.2}%
-\contentsline {subsection}{\numberline {2.1}第一步：Ky Fan 对偶与掩码（完全形式化，无损失）}{12}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}第二步：拆成两项，分别封顶（信息损失发生在这里）}{13}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}第三步：$\|Q\|_1\le \gamma (3)n$ 是怎么证的（这才是 \textup {[STW26]}\ 的数学内容）}{13}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}\textup {[STW26]}\ 自己留下的两个缺口}{14}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}方法论上的一个澄清}{15}{subsection.2.5}%
-\contentsline {section}{\numberline {3}已经严格建立的结果}{15}{section.3}%
-\contentsline {subsection}{\numberline {3.1}归约链：把「对一切 $n$、一切图」变成一个有限维问题}{15}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}精确下界与极值核心}{16}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Case A / Case B 二分}{17}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}负行挤压恒等式组：掩码刚性的定量发动机}{17}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}冠军的局部刚性：近段稳定性常数}{18}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}三阶余项与完整的近段稳定性不等式（W3）}{19}{subsection.3.6}%
-\contentsline {paragraph}{方法}{19}{paragraph*.3}%
-\contentsline {subsection}{\numberline {3.7}腔面与邻腔的数值定位（W1 第一步）}{20}{subsection.3.7}%
-\contentsline {subsection}{\numberline {3.8}腔面的局部认证与双条目模式扫描（W1 的加固）}{21}{subsection.3.8}%
-\contentsline {paragraph}{单条目类的局部认证（已证）}{21}{paragraph*.4}%
-\contentsline {paragraph}{双条目模式扫描（数值）}{21}{paragraph*.5}%
-\contentsline {subsection}{\numberline {3.9}W1-全局的结构归约与认证缺口}{22}{subsection.3.9}%
-\contentsline {paragraph}{数值确认与否证扫描}{22}{paragraph*.6}%
-\contentsline {subsection}{\numberline {3.10}远腔反例扫描：对猜想 A1$'$ 的否证性体检}{23}{subsection.3.10}%
-\contentsline {subsection}{\numberline {3.11}逻辑装配：覆盖引理与条件性主定理（W4/W5）}{23}{subsection.3.11}%
-\contentsline {subsection}{\numberline {3.12}本轮突破：优占对偶与冠军腔的精确全局上界}{25}{subsection.3.12}%
-\contentsline {subsubsection}{\numberline {3.12.1}A2 被否证：一个精确的七原子反例，以及它的失效机制}{30}{subsubsection.3.12.1}%
-\contentsline {subsubsection}{\numberline {3.12.2}穷举筛选：$N\le 7$ 的全部掩码}{33}{subsubsection.3.12.2}%
-\contentsline {subsection}{\numberline {3.13}本轮突破：三阶问题的全局重构 $\kappa _3$、Perron 刚性与极值阶梯}{33}{subsection.3.13}%
-\contentsline {subsubsection}{\numberline {3.13.1}一个必须先交代的错误：softmax 梯度写错，以及它的影响范围}{34}{subsubsection.3.13.1}%
-\contentsline {subsubsection}{\numberline {3.13.2}全局重构：常数 $\kappa _3$}{34}{subsubsection.3.13.2}%
-\contentsline {subsubsection}{\numberline {3.13.3}Perron 刚性：精确恒等式组}{36}{subsubsection.3.13.3}%
-\contentsline {subsubsection}{\numberline {3.13.4}极值阶梯：$\kappa _3(N)$ 的精确值}{38}{subsubsection.3.13.4}%
-\contentsline {subsubsection}{\numberline {3.13.5}两条闭式一阶条件：自洽场方程与 Stiefel KKT}{39}{subsubsection.3.13.5}%
-\contentsline {paragraph}{自洽场（SCF）}{39}{paragraph*.12}%
-\contentsline {paragraph}{Stiefel KKT}{39}{paragraph*.13}%
-\contentsline {subsubsection}{\numberline {3.13.6}Collatz 包络：为什么 $\ell _1$/行和型上界不可能到 $\rho _0$}{39}{subsubsection.3.13.6}%
-\contentsline {subsubsection}{\numberline {3.13.7}本轮对主线的净影响，与下一步的优先队列}{39}{subsubsection.3.13.7}%
-\contentsline {section}{\numberline {4}本轮主线：$N\le 6$ 的全局精确认证，与 $N=5$ 唯一缺口的二维归约}{40}{section.4}%
-\contentsline {subsection}{\numberline {4.1}三处程序缺陷与三条被否证的旧结论}{40}{subsection.4.1}%
-\contentsline {paragraph}{缺陷 1：\texttt {nx.canonical\_graph} 在 $N=6$ 段崩溃}{41}{paragraph*.14}%
-\contentsline {paragraph}{缺陷 2：E 段把 $-0.0$ 读成违例}{41}{paragraph*.15}%
-\contentsline {paragraph}{缺陷 3：双轴正对照用例的符号规格自相矛盾}{41}{paragraph*.16}%
-\contentsline {paragraph}{否证 1（重要）：旧 \texttt {lem:planar}「$K_{2,3}$ 不是腔掩码」是\textbf {错的}}{41}{paragraph*.17}%
-\contentsline {paragraph}{否证 2：上一轮「两个内部临界点是特征值排序 bug 的假象」也是错的}{41}{paragraph*.18}%
-\contentsline {paragraph}{否证 3：翻转链路线不能认证 $N=6$ 的 $21$ 个例外}{42}{paragraph*.19}%
-\contentsline {subsection}{\numberline {4.2}修正后的平面二分法}{42}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}$N\le 6$ 全部同构类的精确有理认证}{43}{subsection.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.1}$N=6$ 的 $21$ 个例外：翻转链路线及其否证}{44}{subsubsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.4}$K_{2,3}$ 类的精确结构}{44}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Grassmannian 恒等式：把 $F$ 从单纯形搬到投影簇}{46}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}双轴框架处的精确取等证书}{47}{subsection.4.6}%
-\contentsline {subsection}{\numberline {4.7}双轴支的完整处理：$120$ 个等分构型的精确穷举}{48}{subsection.4.7}%
-\contentsline {subsection}{\numberline {4.8}一条覆盖 $99.83\%$ 帧的 Schur 补充分条件}{49}{subsection.4.8}%
-\contentsline {subsection}{\numberline {4.9}本轮被定量否证的候选上界}{49}{subsection.4.9}%
-\contentsline {subsection}{\numberline {4.10}本轮突破：完全二部掩码的全局闭合}{50}{subsection.4.10}%
-\contentsline {subsection}{\numberline {4.11}装配}{58}{subsection.4.11}%
-\contentsline {subsection}{\numberline {4.12}更新后的优先队列（第六版，\textbf {已被第~\ref {sec:pq7} 小节取代}）}{59}{subsection.4.12}%
-\contentsline {section}{\numberline {5}本轮新结果（第 12 轮）：正部的行方差机制、天花板 $L(N)$，与 $Z_5$-等变弧的完全分类}{60}{section.5}%
-\contentsline {subsection}{\numberline {5.1}旧队首 P1 被否证：$K_{2,2,2}$ 是腔掩码（精确有理证书）}{60}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}本节记号与三条新恒等式}{61}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}四条 Cauchy--Schwarz 不等式，与冠军的「四重取等」}{62}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}行方差松弛 REL 与天花板 $L(N)$：Mohar 与 \textup {[STW26]}\ 常数的统一重导}{63}{subsection.5.4}%
-\contentsline {subsection}{\numberline {5.5}分数度障碍：$L(N)$ 对 $N\ge 5$ 不可达；整数化阶梯}{65}{subsection.5.5}%
-\contentsline {subsection}{\numberline {5.6}两值刚性：正则图案的两值秩三投影在 $N=6$ 只有 $\frac 12(I_6-M)$}{67}{subsection.5.6}%
-\contentsline {subsection}{\numberline {5.7}$Z_5$-对称层：八个图案中六个被直接排除，冠军图案缺口 $3.2\times 10^{-3}$}{68}{subsection.5.7}%
-\contentsline {subsection}{\numberline {5.8}诊断：REL 缺的到底是什么，以及新的优先队列}{69}{subsection.5.8}%
-\contentsline {subsection}{\numberline {5.9}冠军的闭式导出：$Z_5$-等变秩三投影恰好是一条代数弧}{69}{subsection.5.9}%
-\contentsline {subsection}{\numberline {5.10}垂直二标架分解：把秩三拆成秩一 $+$ 秩二}{73}{subsection.5.10}%
-\contentsline {subsection}{\numberline {5.11}$\Phi (Q)=\lambda _{\max }(Q_+)$ 是凸的：谱盒归约定理}{74}{subsection.5.11}%
-\contentsline {subsection}{\numberline {5.12}余秩一层：$\kappa _2(3)=\frac 87$ 与 $\kappa _3(4)=\frac 54$ 的自包含证明}{75}{subsection.5.12}%
-\contentsline {subsection}{\numberline {5.13}斜率恒等式 $\rho =\frac {\alpha +\ell }2$、$\alpha =1$ 层与通道线性规划}{76}{subsection.5.13}%
-\contentsline {subsection}{\numberline {5.14}若干新的精确恒等式，以及一条被否证的充分性}{76}{subsection.5.14}%
-\contentsline {subsection}{\numberline {5.15}更新后的方法优先队列（第七版）}{77}{subsection.5.15}%
-\contentsline {section}{\numberline {6}本轮新结果（第 13--14 轮）：调和恒等式、帧测度重构、二阶变分公式与「六原子归约」}{79}{section.6}%
-\contentsline {subsection}{\numberline {6.1}为什么要换语言}{79}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}记号与字典}{79}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}调和恒等式与主猜想的新形式}{80}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}$\Psi \le \sqrt 3$ 的精确缺陷式，与 Mohar 界的两个新证明}{81}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}方差族与 zonotope 读法}{82}{subsection.6.5}%
-\contentsline {subsection}{\numberline {6.6}本轮两次未闭合的尝试（诚实记录）}{83}{subsection.6.6}%
-\contentsline {subsection}{\numberline {6.7}$N$ 消失：帧测度重构}{83}{subsection.6.7}%
-\contentsline {subsection}{\numberline {6.8}矩核直线上的二阶变分公式}{84}{subsection.6.8}%
-\contentsline {subsection}{\numberline {6.9}六原子归约：条件定理、猜想与数值证据}{85}{subsection.6.9}%
-\contentsline {subsection}{\numberline {6.10}族 $F_n$：枢纽 $+$ 正 $n$ 边形的精确解}{86}{subsection.6.10}%
-\contentsline {subsection}{\numberline {6.11}数值：$\kappa _3(N)=\rho _0$ 推进到 $N=20$}{88}{subsection.6.11}%
-\contentsline {subsection}{\numberline {6.12}本轮状态、诚实标签与方法优先队列}{89}{subsection.6.12}%
-\contentsline {section}{\numberline {7}本轮新结果（第 15--17 轮）：Stiefel 刚性、能量分解与全局二分}{89}{section.7}%
-\contentsline {subsection}{\numberline {7.1}勘误：Stiefel 梯度公式的一次误报}{89}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Stiefel KKT、椭球面恒等式与枢纽刚性}{90}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}主不等式的最简等价形式：$\tau =\beta -(1-\alpha )$}{91}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}精确 Frobenius 恒等式与一行式谱地板}{92}{subsection.7.4}%
-\contentsline {subsection}{\numberline {7.5}第 16 轮：能量分解与双 Cauchy--Schwarz}{93}{subsection.7.5}%
-\contentsline {subsection}{\numberline {7.6}否证：全局「第四不等式」$\alpha +\sqrt {A_1A_2}\le \rho _0$}{94}{subsection.7.6}%
-\contentsline {subsection}{\numberline {7.7}新全局定理：矩核二阶变分的符号二分}{95}{subsection.7.7}%
-\contentsline {paragraph}{设定}{95}{paragraph*.23}%
-\contentsline {subsection}{\numberline {7.8}数值：$N\ge 7$ 极大元的精确结构}{97}{subsection.7.8}%
-\contentsline {subsection}{\numberline {7.9}对偶容量形式的修正与强对偶}{98}{subsection.7.9}%
-\contentsline {subsection}{\numberline {7.10}钝图的团数与 Motzkin--Straus}{98}{subsection.7.10}%
-\contentsline {subsection}{\numberline {7.11}本轮状态、诚实标签与方法优先队列}{99}{subsection.7.11}%
-\contentsline {section}{\numberline {8}第 18 轮：钝性稀释恒等式与 $\Lambda $-参数化（消去特征值的代数重构）}{100}{section.8}%
-\contentsline {subsection}{\numberline {8.1}动机：换一个正交的方向}{100}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}记号}{100}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}第一个精确恒等式：钝场向量恰为 $\tau m$}{101}{subsection.8.3}%
-\contentsline {subsection}{\numberline {8.4}第二个精确恒等式：钝性稀释}{102}{subsection.8.4}%
-\contentsline {subsection}{\numberline {8.5}$u$-KKT 的闭式解}{103}{subsection.8.5}%
-\contentsline {subsection}{\numberline {8.6}主结果：$\Lambda $-参数化}{103}{subsection.8.6}%
-\contentsline {subsection}{\numberline {8.7}一个初等的结构定理：可传递符号模式}{105}{subsection.8.7}%
-\contentsline {subsection}{\numberline {8.8}两个否证：哪一步松弛一定会崩}{106}{subsection.8.8}%
-\contentsline {subsection}{\numberline {8.9}本轮状态、诚实标签与方法优先队列（第八版）}{106}{subsection.8.9}%
-\contentsline {section}{\numberline {9}第 19 轮：精确对偶、对偶证书的不可能性，与 Bloch 截面分解}{108}{section.9}%
-\contentsline {subsection}{\numberline {9.1}本轮要交代的三件事}{108}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}凹性的解析证明与闭式梯度}{108}{subsection.9.2}%
-\contentsline {subsection}{\numberline {9.3}精确对偶：$\Lambda $-参数化没有松弛间隙，最优证书恒为各向同性}{109}{subsection.9.3}%
-\contentsline {subsection}{\numberline {9.4}各向异性对偶证书不存在：P1 被否证}{110}{subsection.9.4}%
-\contentsline {subsection}{\numberline {9.5}两条被定量否证的放缩族}{111}{subsection.9.5}%
-\contentsline {subsection}{\numberline {9.6}Bloch 截面分解：主线的新形状}{112}{subsection.9.6}%
-\contentsline {subsection}{\numberline {9.7}本轮状态、诚实标签与方法优先队列（第九版）}{114}{subsection.9.7}%
-\contentsline {section}{\numberline {10}第 20 轮：图形式的双向等价、小阶穷举与轮族的解析解}{115}{section.10}%
-\contentsline {subsection}{\numberline {10.1}本轮的定位}{115}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}双向等价：$\kappa _3=\sup _G\Theta (G)$}{116}{subsection.10.2}%
-\contentsline {subsection}{\numberline {10.3}小阶穷举}{117}{subsection.10.3}%
-\contentsline {subsection}{\numberline {10.4}轮族的解析解}{117}{subsection.10.4}%
-\contentsline {subsection}{\numberline {10.5}$N=4$ 的一条无框架证明路线}{119}{subsection.10.5}%
-\contentsline {subsection}{\numberline {10.6}本轮否证的两条路线}{119}{subsection.10.6}%
-\contentsline {subsection}{\numberline {10.7}本轮状态与诚实标签}{120}{subsection.10.7}%
-\contentsline {section}{\numberline {11}第 21 轮：Legendre--Catalan 谱表示与中心截面的矩层级}{120}{section.11}%
-\contentsline {subsection}{\numberline {11.1}为什么要换到调和分析}{120}{subsection.11.1}%
-\contentsline {subsection}{\numberline {11.2}$(t)_+$ 的 Legendre 展开：精确系数}{120}{subsection.11.2}%
-\contentsline {subsection}{\numberline {11.3}谱表示 $\rho =\DOTSB \sum@ \slimits@ _\ell c_\ell W_\ell $}{121}{subsection.11.3}%
-\contentsline {subsection}{\numberline {11.4}偶极子界的精确证书}{122}{subsection.11.4}%
-\contentsline {subsection}{\numberline {11.5}zonal 矩层级：独立重现 $\Phi $，并封顶在 $\Phi $}{122}{subsection.11.5}%
-\contentsline {subsection}{\numberline {11.6}符号盲路线的否证}{123}{subsection.11.6}%
-\contentsline {subsection}{\numberline {11.7}本轮状态与诚实标签}{124}{subsection.11.7}%
-\contentsline {section}{\numberline {12}第 22 轮：中心截面的精确恒等式、$L\le 3\varphi $ 锐界与 $m_4$-归约}{124}{section.12}%
-\contentsline {subsection}{\numberline {12.1}中心截面其实是一个 $\mathbf {RP^2}$ 上的测度问题}{124}{subsection.12.1}%
-\contentsline {subsection}{\numberline {12.2}两个立刻可用的精确工具}{125}{subsection.12.2}%
-\contentsline {subsection}{\numberline {12.3}锐界 $L\le 3\varphi $ 及其多项式证书}{126}{subsection.12.3}%
-\contentsline {subsection}{\numberline {12.4}圆上的 Fourier：等纬度情形的完全化简}{127}{subsection.12.4}%
-\contentsline {subsection}{\numberline {12.5}解耦否证与 $m_4$-归约}{127}{subsection.12.5}%
-\contentsline {subsection}{\numberline {12.6}数值上确界：$5$-锥}{128}{subsection.12.6}%
-\contentsline {subsection}{\numberline {12.7}本轮状态与诚实标签}{129}{subsection.12.7}%
-\contentsline {section}{\numberline {13}第 23 轮：锥族闭式、单轴主定理 $\max F=\rho _0$、调和分解与耦合不等式的进展}{129}{section.13}%
-\contentsline {subsection}{\numberline {13.1}本轮的三件事}{129}{subsection.13.1}%
-\contentsline {subsection}{\numberline {13.2}锥族：定义与各向同性的精确验证}{129}{subsection.13.2}%
-\contentsline {subsection}{\numberline {13.3}中心截面：精确的 $z^*$ 与四次方程}{130}{subsection.13.3}%
-\contentsline {subsection}{\numberline {13.4}单轴截面：主定理 $\max F=\rho _0$}{131}{subsection.13.4}%
-\contentsline {subsection}{\numberline {13.5}四阶矩的调和分解}{133}{subsection.13.5}%
-\contentsline {subsection}{\numberline {13.6}等纬度圆：两个精确引理，右端点闭合}{133}{subsection.13.6}%
-\contentsline {subsection}{\numberline {13.7}耦合不等式：决定性实验}{134}{subsection.13.7}%
-\contentsline {subsection}{\numberline {13.8}本轮状态、诚实标签与方法优先队列（第十版）}{135}{subsection.13.8}%
-\contentsline {section}{\numberline {14}第 24 轮：圆柱分块分解、$\sigma _u^2$--$V$ 桥接与中心截面的闭合}{136}{section.14}%
-\contentsline {subsection}{\numberline {14.1}本轮的目标、方法与主定理}{136}{subsection.14.1}%
-\contentsline {subsection}{\numberline {14.2}设置：最优轴坐标系与纬度方差}{137}{subsection.14.2}%
-\contentsline {subsection}{\numberline {14.3}四阶矩张量的圆柱分块恒等式}{137}{subsection.14.3}%
-\contentsline {subsection}{\numberline {14.4}两个块的精确松弛恒等式}{138}{subsection.14.4}%
-\contentsline {subsection}{\numberline {14.5}主插值定理}{139}{subsection.14.5}%
-\contentsline {subsection}{\numberline {14.6}$\sigma _u^2$--$V$ 桥接引理}{140}{subsection.14.6}%
-\contentsline {subsection}{\numberline {14.7}中心截面闭合}{141}{subsection.14.7}%
-\contentsline {subsection}{\numberline {14.8}任意截面的精确恒等式与推广的真实障碍}{143}{subsection.14.8}%
-\contentsline {subsection}{\numberline {14.9}本轮状态、诚实标签与方法优先队列（第十一版）}{144}{subsection.14.9}%
-\contentsline {section}{\numberline {15}通道型主函数方案的精确天花板}{145}{section.15}%
-\contentsline {subsection}{\numberline {15.1}动机}{145}{subsection.15.1}%
-\contentsline {subsection}{\numberline {15.2}方案族}{145}{subsection.15.2}%
-\contentsline {subsection}{\numberline {15.3}见证测度}{146}{subsection.15.3}%
-\contentsline {subsection}{\numberline {15.4}主定理}{147}{subsection.15.4}%
-\contentsline {subsection}{\numberline {15.5}独立的数值确认}{148}{subsection.15.5}%
-\contentsline {section}{\numberline {16}已经被排除的路线}{148}{section.16}%
-\contentsline {section}{\numberline {17}当前的障碍}{150}{section.17}%
-\contentsline {subsection}{\numberline {17.1}主要障碍}{150}{subsection.17.1}%
-\contentsline {paragraph}{障碍 0$''$（第 12 轮重写，现居首位）：$3.2128\times 10^{-3}$ 的秩三缺口}{150}{paragraph*.24}%
-\contentsline {paragraph}{障碍 0（第六版，\textbf {已被否证}，保留以记录演化）：$N=6$ 的 $19$ 个未闭合类，即一条几何不存在性陈述}{150}{paragraph*.25}%
-\contentsline {paragraph}{障碍 0$'$（新，第二优先）：$k\ge 3$ 时的尾和记账}{151}{paragraph*.26}%
-\contentsline {subsection}{\numberline {17.2}数值证据的边界（必须诚实交代）}{152}{subsection.17.2}%
-\contentsline {section}{\numberline {18}候选方法与其评估}{153}{section.18}%
-\contentsline {subsection}{\numberline {18.1}从定理~\ref {thm:zonal} 反推出的必要条件}{153}{subsection.18.1}%
-\contentsline {subsection}{\numberline {18.2}方向甲：自洽性 + 逐核精确 KKT}{153}{subsection.18.2}%
-\contentsline {subsection}{\numberline {18.3}方向乙：通道—分布的联合约束（本轮新提出）}{154}{subsection.18.3}%
-\contentsline {subsection}{\numberline {18.4}方向丙：三角 SOS / Fejér--Riesz}{155}{subsection.18.4}%
-\contentsline {subsection}{\numberline {18.5}方向丁：图极限—凸分析（KLMPT 架构的移植）}{155}{subsection.18.5}%
-\contentsline {subsection}{\numberline {18.6}其他考虑过但不推荐的想法}{156}{subsection.18.6}%
-\contentsline {subsection}{\numberline {18.7}优先级建议}{156}{subsection.18.7}%
-\contentsline {subsection}{\numberline {18.8}本轮新增的候选方向（庚、戊、己）}{156}{subsection.18.8}%
-\contentsline {section}{\numberline {19}诚实声明与结论状态}{157}{section.19}%
-\contentsline {subsection}{\numberline {19.1}可以引用的结果}{157}{subsection.19.1}%
-\contentsline {subsection}{\numberline {19.2}本报告没有主张的内容}{159}{subsection.19.2}%
-\contentsline {subsection}{\numberline {19.3}数值证据的使用纪律}{160}{subsection.19.3}%
-\contentsline {subsection}{\numberline {19.4}第 12 轮新增结论的证明状态标注}{161}{subsection.19.4}%
-\contentsline {subsection}{\numberline {19.5}一句话总结}{161}{subsection.19.5}%
-\contentsline {section}{\numberline {A}复现说明与产物清单}{162}{appendix.A}%
-\contentsline {subsection}{\numberline {A.1}运行环境}{162}{subsection.A.1}%
-\contentsline {subsection}{\numberline {A.2}随本报告分发的文件}{163}{subsection.A.2}%
-\contentsline {subsection}{\numberline {A.3}证书脚本核对了什么}{165}{subsection.A.3}%
-\contentsline {subsection}{\numberline {A.4}未随本报告分发的中间产物}{168}{subsection.A.4}%
+\contentsline {section}{\numberline {1}问题、记号与已知结果}{12}{section.1}%
+\contentsline {subsection}{\numberline {1.1}问题}{12}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}三条已发表的上界}{12}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}一个值得注意的定量平行现象}{13}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}记号约定（必须钉死，否则会与 \textup {[STW26]}\ 冲突）}{13}{subsection.1.4}%
+\contentsline {section}{\numberline {2}\textup {[STW26]}\ 证明的解剖}{13}{section.2}%
+\contentsline {subsection}{\numberline {2.1}第一步：Ky Fan 对偶与掩码（完全形式化，无损失）}{13}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}第二步：拆成两项，分别封顶（信息损失发生在这里）}{14}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}第三步：$\|Q\|_1\le \gamma (3)n$ 是怎么证的（这才是 \textup {[STW26]}\ 的数学内容）}{14}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}\textup {[STW26]}\ 自己留下的两个缺口}{15}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}方法论上的一个澄清}{16}{subsection.2.5}%
+\contentsline {section}{\numberline {3}已经严格建立的结果}{16}{section.3}%
+\contentsline {subsection}{\numberline {3.1}归约链：把「对一切 $n$、一切图」变成一个有限维问题}{16}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}精确下界与极值核心}{17}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Case A / Case B 二分}{18}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}负行挤压恒等式组：掩码刚性的定量发动机}{18}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}冠军的局部刚性：近段稳定性常数}{19}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}三阶余项与完整的近段稳定性不等式（W3）}{20}{subsection.3.6}%
+\contentsline {paragraph}{方法}{20}{paragraph*.3}%
+\contentsline {subsection}{\numberline {3.7}腔面与邻腔的数值定位（W1 第一步）}{21}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}腔面的局部认证与双条目模式扫描（W1 的加固）}{22}{subsection.3.8}%
+\contentsline {paragraph}{单条目类的局部认证（已证）}{22}{paragraph*.4}%
+\contentsline {paragraph}{双条目模式扫描（数值）}{22}{paragraph*.5}%
+\contentsline {subsection}{\numberline {3.9}W1-全局的结构归约与认证缺口}{23}{subsection.3.9}%
+\contentsline {paragraph}{数值确认与否证扫描}{23}{paragraph*.6}%
+\contentsline {subsection}{\numberline {3.10}远腔反例扫描：对猜想 A1$'$ 的否证性体检}{24}{subsection.3.10}%
+\contentsline {subsection}{\numberline {3.11}逻辑装配：覆盖引理与条件性主定理（W4/W5）}{24}{subsection.3.11}%
+\contentsline {subsection}{\numberline {3.12}本轮突破：优占对偶与冠军腔的精确全局上界}{26}{subsection.3.12}%
+\contentsline {subsubsection}{\numberline {3.12.1}A2 被否证：一个精确的七原子反例，以及它的失效机制}{31}{subsubsection.3.12.1}%
+\contentsline {subsubsection}{\numberline {3.12.2}穷举筛选：$N\le 7$ 的全部掩码}{34}{subsubsection.3.12.2}%
+\contentsline {subsection}{\numberline {3.13}本轮突破：三阶问题的全局重构 $\kappa _3$、Perron 刚性与极值阶梯}{34}{subsection.3.13}%
+\contentsline {subsubsection}{\numberline {3.13.1}一个必须先交代的错误：softmax 梯度写错，以及它的影响范围}{35}{subsubsection.3.13.1}%
+\contentsline {subsubsection}{\numberline {3.13.2}全局重构：常数 $\kappa _3$}{35}{subsubsection.3.13.2}%
+\contentsline {subsubsection}{\numberline {3.13.3}Perron 刚性：精确恒等式组}{37}{subsubsection.3.13.3}%
+\contentsline {subsubsection}{\numberline {3.13.4}极值阶梯：$\kappa _3(N)$ 的精确值}{39}{subsubsection.3.13.4}%
+\contentsline {subsubsection}{\numberline {3.13.5}两条闭式一阶条件：自洽场方程与 Stiefel KKT}{40}{subsubsection.3.13.5}%
+\contentsline {paragraph}{自洽场（SCF）}{40}{paragraph*.12}%
+\contentsline {paragraph}{Stiefel KKT}{40}{paragraph*.13}%
+\contentsline {subsubsection}{\numberline {3.13.6}Collatz 包络：为什么 $\ell _1$/行和型上界不可能到 $\rho _0$}{40}{subsubsection.3.13.6}%
+\contentsline {subsubsection}{\numberline {3.13.7}本轮对主线的净影响，与下一步的优先队列}{40}{subsubsection.3.13.7}%
+\contentsline {section}{\numberline {4}本轮主线：$N\le 6$ 的全局精确认证，与 $N=5$ 唯一缺口的二维归约}{41}{section.4}%
+\contentsline {subsection}{\numberline {4.1}三处程序缺陷与三条被否证的旧结论}{41}{subsection.4.1}%
+\contentsline {paragraph}{缺陷 1：\texttt {nx.canonical\_graph} 在 $N=6$ 段崩溃}{42}{paragraph*.14}%
+\contentsline {paragraph}{缺陷 2：E 段把 $-0.0$ 读成违例}{42}{paragraph*.15}%
+\contentsline {paragraph}{缺陷 3：双轴正对照用例的符号规格自相矛盾}{42}{paragraph*.16}%
+\contentsline {paragraph}{否证 1（重要）：旧 \texttt {lem:planar}「$K_{2,3}$ 不是腔掩码」是\textbf {错的}}{42}{paragraph*.17}%
+\contentsline {paragraph}{否证 2：上一轮「两个内部临界点是特征值排序 bug 的假象」也是错的}{42}{paragraph*.18}%
+\contentsline {paragraph}{否证 3：翻转链路线不能认证 $N=6$ 的 $21$ 个例外}{43}{paragraph*.19}%
+\contentsline {subsection}{\numberline {4.2}修正后的平面二分法}{43}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}$N\le 6$ 全部同构类的精确有理认证}{44}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}$N=6$ 的 $21$ 个例外：翻转链路线及其否证}{45}{subsubsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.4}$K_{2,3}$ 类的精确结构}{45}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Grassmannian 恒等式：把 $F$ 从单纯形搬到投影簇}{47}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}双轴框架处的精确取等证书}{48}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}双轴支的完整处理：$120$ 个等分构型的精确穷举}{49}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8}一条覆盖 $99.83\%$ 帧的 Schur 补充分条件}{50}{subsection.4.8}%
+\contentsline {subsection}{\numberline {4.9}本轮被定量否证的候选上界}{50}{subsection.4.9}%
+\contentsline {subsection}{\numberline {4.10}本轮突破：完全二部掩码的全局闭合}{51}{subsection.4.10}%
+\contentsline {subsection}{\numberline {4.11}装配}{59}{subsection.4.11}%
+\contentsline {subsection}{\numberline {4.12}更新后的优先队列（第六版，\textbf {已被第~\ref {sec:pq7} 小节取代}）}{60}{subsection.4.12}%
+\contentsline {section}{\numberline {5}本轮新结果（第 12 轮）：正部的行方差机制、天花板 $L(N)$，与 $Z_5$-等变弧的完全分类}{61}{section.5}%
+\contentsline {subsection}{\numberline {5.1}旧队首 P1 被否证：$K_{2,2,2}$ 是腔掩码（精确有理证书）}{61}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}本节记号与三条新恒等式}{62}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}四条 Cauchy--Schwarz 不等式，与冠军的「四重取等」}{63}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}行方差松弛 REL 与天花板 $L(N)$：Mohar 与 \textup {[STW26]}\ 常数的统一重导}{64}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}分数度障碍：$L(N)$ 对 $N\ge 5$ 不可达；整数化阶梯}{66}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}两值刚性：正则图案的两值秩三投影在 $N=6$ 只有 $\frac 12(I_6-M)$}{68}{subsection.5.6}%
+\contentsline {subsection}{\numberline {5.7}$Z_5$-对称层：八个图案中六个被直接排除，冠军图案缺口 $3.2\times 10^{-3}$}{69}{subsection.5.7}%
+\contentsline {subsection}{\numberline {5.8}诊断：REL 缺的到底是什么，以及新的优先队列}{70}{subsection.5.8}%
+\contentsline {subsection}{\numberline {5.9}冠军的闭式导出：$Z_5$-等变秩三投影恰好是一条代数弧}{70}{subsection.5.9}%
+\contentsline {subsection}{\numberline {5.10}垂直二标架分解：把秩三拆成秩一 $+$ 秩二}{74}{subsection.5.10}%
+\contentsline {subsection}{\numberline {5.11}$\Phi (Q)=\lambda _{\max }(Q_+)$ 是凸的：谱盒归约定理}{75}{subsection.5.11}%
+\contentsline {subsection}{\numberline {5.12}余秩一层：$\kappa _2(3)=\frac 87$ 与 $\kappa _3(4)=\frac 54$ 的自包含证明}{76}{subsection.5.12}%
+\contentsline {subsection}{\numberline {5.13}斜率恒等式 $\rho =\frac {\alpha +\ell }2$、$\alpha =1$ 层与通道线性规划}{77}{subsection.5.13}%
+\contentsline {subsection}{\numberline {5.14}若干新的精确恒等式，以及一条被否证的充分性}{77}{subsection.5.14}%
+\contentsline {subsection}{\numberline {5.15}更新后的方法优先队列（第七版）}{78}{subsection.5.15}%
+\contentsline {section}{\numberline {6}本轮新结果（第 13--14 轮）：调和恒等式、帧测度重构、二阶变分公式与「六原子归约」}{80}{section.6}%
+\contentsline {subsection}{\numberline {6.1}为什么要换语言}{80}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}记号与字典}{80}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}调和恒等式与主猜想的新形式}{81}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}$\Psi \le \sqrt 3$ 的精确缺陷式，与 Mohar 界的两个新证明}{82}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}方差族与 zonotope 读法}{83}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}本轮两次未闭合的尝试（诚实记录）}{84}{subsection.6.6}%
+\contentsline {subsection}{\numberline {6.7}$N$ 消失：帧测度重构}{84}{subsection.6.7}%
+\contentsline {subsection}{\numberline {6.8}矩核直线上的二阶变分公式}{85}{subsection.6.8}%
+\contentsline {subsection}{\numberline {6.9}六原子归约：条件定理、猜想与数值证据}{86}{subsection.6.9}%
+\contentsline {subsection}{\numberline {6.10}族 $F_n$：枢纽 $+$ 正 $n$ 边形的精确解}{87}{subsection.6.10}%
+\contentsline {subsection}{\numberline {6.11}数值：$\kappa _3(N)=\rho _0$ 推进到 $N=20$}{89}{subsection.6.11}%
+\contentsline {subsection}{\numberline {6.12}本轮状态、诚实标签与方法优先队列}{90}{subsection.6.12}%
+\contentsline {section}{\numberline {7}本轮新结果（第 15--17 轮）：Stiefel 刚性、能量分解与全局二分}{90}{section.7}%
+\contentsline {subsection}{\numberline {7.1}勘误：Stiefel 梯度公式的一次误报}{90}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Stiefel KKT、椭球面恒等式与枢纽刚性}{91}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}主不等式的最简等价形式：$\tau =\beta -(1-\alpha )$}{92}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}精确 Frobenius 恒等式与一行式谱地板}{93}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}第 16 轮：能量分解与双 Cauchy--Schwarz}{94}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}否证：全局「第四不等式」$\alpha +\sqrt {A_1A_2}\le \rho _0$}{95}{subsection.7.6}%
+\contentsline {subsection}{\numberline {7.7}新全局定理：矩核二阶变分的符号二分}{96}{subsection.7.7}%
+\contentsline {paragraph}{设定}{96}{paragraph*.23}%
+\contentsline {subsection}{\numberline {7.8}数值：$N\ge 7$ 极大元的精确结构}{98}{subsection.7.8}%
+\contentsline {subsection}{\numberline {7.9}对偶容量形式的修正与强对偶}{99}{subsection.7.9}%
+\contentsline {subsection}{\numberline {7.10}钝图的团数与 Motzkin--Straus}{99}{subsection.7.10}%
+\contentsline {subsection}{\numberline {7.11}本轮状态、诚实标签与方法优先队列}{100}{subsection.7.11}%
+\contentsline {section}{\numberline {8}第 18 轮：钝性稀释恒等式与 $\Lambda $-参数化（消去特征值的代数重构）}{101}{section.8}%
+\contentsline {subsection}{\numberline {8.1}动机：换一个正交的方向}{101}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}记号}{101}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}第一个精确恒等式：钝场向量恰为 $\tau m$}{102}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}第二个精确恒等式：钝性稀释}{103}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}$u$-KKT 的闭式解}{104}{subsection.8.5}%
+\contentsline {subsection}{\numberline {8.6}主结果：$\Lambda $-参数化}{104}{subsection.8.6}%
+\contentsline {subsection}{\numberline {8.7}一个初等的结构定理：可传递符号模式}{106}{subsection.8.7}%
+\contentsline {subsection}{\numberline {8.8}两个否证：哪一步松弛一定会崩}{107}{subsection.8.8}%
+\contentsline {subsection}{\numberline {8.9}本轮状态、诚实标签与方法优先队列（第八版）}{107}{subsection.8.9}%
+\contentsline {section}{\numberline {9}第 19 轮：精确对偶、对偶证书的不可能性，与 Bloch 截面分解}{109}{section.9}%
+\contentsline {subsection}{\numberline {9.1}本轮要交代的三件事}{109}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}凹性的解析证明与闭式梯度}{109}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}精确对偶：$\Lambda $-参数化没有松弛间隙，最优证书恒为各向同性}{110}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}各向异性对偶证书不存在：P1 被否证}{111}{subsection.9.4}%
+\contentsline {subsection}{\numberline {9.5}两条被定量否证的放缩族}{112}{subsection.9.5}%
+\contentsline {subsection}{\numberline {9.6}Bloch 截面分解：主线的新形状}{113}{subsection.9.6}%
+\contentsline {subsection}{\numberline {9.7}本轮状态、诚实标签与方法优先队列（第九版）}{115}{subsection.9.7}%
+\contentsline {section}{\numberline {10}第 20 轮：图形式的双向等价、小阶穷举与轮族的解析解}{116}{section.10}%
+\contentsline {subsection}{\numberline {10.1}本轮的定位}{116}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}双向等价：$\kappa _3=\sup _G\Theta (G)$}{117}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}小阶穷举}{118}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.4}轮族的解析解}{118}{subsection.10.4}%
+\contentsline {subsection}{\numberline {10.5}$N=4$ 的一条无框架证明路线}{120}{subsection.10.5}%
+\contentsline {subsection}{\numberline {10.6}本轮否证的两条路线}{120}{subsection.10.6}%
+\contentsline {subsection}{\numberline {10.7}本轮状态与诚实标签}{121}{subsection.10.7}%
+\contentsline {section}{\numberline {11}第 21 轮：Legendre--Catalan 谱表示与中心截面的矩层级}{121}{section.11}%
+\contentsline {subsection}{\numberline {11.1}为什么要换到调和分析}{121}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}$(t)_+$ 的 Legendre 展开：精确系数}{121}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}谱表示 $\rho =\DOTSB \sum@ \slimits@ _\ell c_\ell W_\ell $}{122}{subsection.11.3}%
+\contentsline {subsection}{\numberline {11.4}偶极子界的精确证书}{123}{subsection.11.4}%
+\contentsline {subsection}{\numberline {11.5}zonal 矩层级：独立重现 $\Phi $，并封顶在 $\Phi $}{123}{subsection.11.5}%
+\contentsline {subsection}{\numberline {11.6}符号盲路线的否证}{124}{subsection.11.6}%
+\contentsline {subsection}{\numberline {11.7}本轮状态与诚实标签}{125}{subsection.11.7}%
+\contentsline {section}{\numberline {12}第 22 轮：中心截面的精确恒等式、$L\le 3\varphi $ 锐界与 $m_4$-归约}{125}{section.12}%
+\contentsline {subsection}{\numberline {12.1}中心截面其实是一个 $\mathbf {RP^2}$ 上的测度问题}{125}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.2}两个立刻可用的精确工具}{126}{subsection.12.2}%
+\contentsline {subsection}{\numberline {12.3}锐界 $L\le 3\varphi $ 及其多项式证书}{127}{subsection.12.3}%
+\contentsline {subsection}{\numberline {12.4}圆上的 Fourier：等纬度情形的完全化简}{128}{subsection.12.4}%
+\contentsline {subsection}{\numberline {12.5}解耦否证与 $m_4$-归约}{128}{subsection.12.5}%
+\contentsline {subsection}{\numberline {12.6}数值上确界：$5$-锥}{129}{subsection.12.6}%
+\contentsline {subsection}{\numberline {12.7}本轮状态与诚实标签}{130}{subsection.12.7}%
+\contentsline {section}{\numberline {13}第 23 轮：锥族闭式、单轴主定理 $\max F=\rho _0$、调和分解与耦合不等式的进展}{130}{section.13}%
+\contentsline {subsection}{\numberline {13.1}本轮的三件事}{130}{subsection.13.1}%
+\contentsline {subsection}{\numberline {13.2}锥族：定义与各向同性的精确验证}{130}{subsection.13.2}%
+\contentsline {subsection}{\numberline {13.3}中心截面：精确的 $z^*$ 与四次方程}{131}{subsection.13.3}%
+\contentsline {subsection}{\numberline {13.4}单轴截面：主定理 $\max F=\rho _0$}{132}{subsection.13.4}%
+\contentsline {subsection}{\numberline {13.5}四阶矩的调和分解}{134}{subsection.13.5}%
+\contentsline {subsection}{\numberline {13.6}等纬度圆：两个精确引理，右端点闭合}{134}{subsection.13.6}%
+\contentsline {subsection}{\numberline {13.7}耦合不等式：决定性实验}{135}{subsection.13.7}%
+\contentsline {subsection}{\numberline {13.8}本轮状态、诚实标签与方法优先队列（第十版）}{136}{subsection.13.8}%
+\contentsline {section}{\numberline {14}第 24 轮：圆柱分块分解、$\sigma _u^2$--$V$ 桥接与中心截面的闭合}{137}{section.14}%
+\contentsline {subsection}{\numberline {14.1}本轮的目标、方法与主定理}{137}{subsection.14.1}%
+\contentsline {subsection}{\numberline {14.2}设置：最优轴坐标系与纬度方差}{138}{subsection.14.2}%
+\contentsline {subsection}{\numberline {14.3}四阶矩张量的圆柱分块恒等式}{138}{subsection.14.3}%
+\contentsline {subsection}{\numberline {14.4}两个块的精确松弛恒等式}{139}{subsection.14.4}%
+\contentsline {subsection}{\numberline {14.5}主插值定理}{140}{subsection.14.5}%
+\contentsline {subsection}{\numberline {14.6}$\sigma _u^2$--$V$ 桥接引理}{141}{subsection.14.6}%
+\contentsline {subsection}{\numberline {14.7}中心截面闭合}{142}{subsection.14.7}%
+\contentsline {subsection}{\numberline {14.8}任意截面的精确恒等式与推广的真实障碍}{144}{subsection.14.8}%
+\contentsline {subsection}{\numberline {14.9}本轮状态、诚实标签与方法优先队列（第十一版）}{145}{subsection.14.9}%
+\contentsline {section}{\numberline {15}第 25 轮：五项亏格恒等式、偶极子的余弦形式与全局窗口归约}{146}{section.15}%
+\contentsline {subsection}{\numberline {15.1}记号与 $L^2(\nu )$ 视角}{147}{subsection.15.1}%
+\contentsline {subsection}{\numberline {15.2}四个预备引理}{147}{subsection.15.2}%
+\contentsline {subsection}{\numberline {15.3}主恒等式与全局归约}{150}{subsection.15.3}%
+\contentsline {subsection}{\numberline {15.4}无条件窗口定理}{151}{subsection.15.4}%
+\contentsline {subsection}{\numberline {15.5}秩一刚性与常纬度归约}{152}{subsection.15.5}%
+\contentsline {subsection}{\numberline {15.6}单轴截面的两尺度结构}{153}{subsection.15.6}%
+\contentsline {subsection}{\numberline {15.7}数值证据}{153}{subsection.15.7}%
+\contentsline {subsection}{\numberline {15.8}本轮状态、诚实标签与方法优先队列（第十二版）}{154}{subsection.15.8}%
+\contentsline {section}{\numberline {16}第 26 轮：负 Gram 质量恒等式、主猜想的单标量归约与秩一截面的锥族闭式}{155}{section.16}%
+\contentsline {subsection}{\numberline {16.1}符号模式的有限分解与负 Gram 质量}{156}{subsection.16.1}%
+\contentsline {subsection}{\numberline {16.2}秩一截面：半球翻转与 $L_w=1+2\mathrm {Neg}$}{157}{subsection.16.2}%
+\contentsline {subsection}{\numberline {16.3}锥族的显式闭式与精确极大值}{158}{subsection.16.3}%
+\contentsline {subsection}{\numberline {16.4}等纬度环的精确上界 $\frac 32$}{160}{subsection.16.4}%
+\contentsline {subsection}{\numberline {16.5}数值证据}{161}{subsection.16.5}%
+\contentsline {subsection}{\numberline {16.6}本轮状态、诚实标签与方法优先队列（第十三版）}{162}{subsection.16.6}%
+\contentsline {section}{\numberline {17}通道型主函数方案的精确天花板}{163}{section.17}%
+\contentsline {subsection}{\numberline {17.1}动机}{163}{subsection.17.1}%
+\contentsline {subsection}{\numberline {17.2}方案族}{164}{subsection.17.2}%
+\contentsline {subsection}{\numberline {17.3}见证测度}{165}{subsection.17.3}%
+\contentsline {subsection}{\numberline {17.4}主定理}{166}{subsection.17.4}%
+\contentsline {subsection}{\numberline {17.5}独立的数值确认}{167}{subsection.17.5}%
+\contentsline {section}{\numberline {18}已经被排除的路线}{167}{section.18}%
+\contentsline {section}{\numberline {19}当前的障碍}{169}{section.19}%
+\contentsline {subsection}{\numberline {19.1}主要障碍}{169}{subsection.19.1}%
+\contentsline {paragraph}{障碍 0$''$（第 12 轮重写，现居首位）：$3.2128\times 10^{-3}$ 的秩三缺口}{169}{paragraph*.24}%
+\contentsline {paragraph}{障碍 0（第六版，\textbf {已被否证}，保留以记录演化）：$N=6$ 的 $19$ 个未闭合类，即一条几何不存在性陈述}{169}{paragraph*.25}%
+\contentsline {paragraph}{障碍 0$'$（新，第二优先）：$k\ge 3$ 时的尾和记账}{169}{paragraph*.26}%
+\contentsline {subsection}{\numberline {19.2}数值证据的边界（必须诚实交代）}{171}{subsection.19.2}%
+\contentsline {section}{\numberline {20}候选方法与其评估}{172}{section.20}%
+\contentsline {subsection}{\numberline {20.1}从定理~\ref {thm:zonal} 反推出的必要条件}{172}{subsection.20.1}%
+\contentsline {subsection}{\numberline {20.2}方向甲：自洽性 + 逐核精确 KKT}{172}{subsection.20.2}%
+\contentsline {subsection}{\numberline {20.3}方向乙：通道—分布的联合约束（本轮新提出）}{173}{subsection.20.3}%
+\contentsline {subsection}{\numberline {20.4}方向丙：三角 SOS / Fejér--Riesz}{174}{subsection.20.4}%
+\contentsline {subsection}{\numberline {20.5}方向丁：图极限—凸分析（KLMPT 架构的移植）}{174}{subsection.20.5}%
+\contentsline {subsection}{\numberline {20.6}其他考虑过但不推荐的想法}{174}{subsection.20.6}%
+\contentsline {subsection}{\numberline {20.7}优先级建议}{175}{subsection.20.7}%
+\contentsline {subsection}{\numberline {20.8}本轮新增的候选方向（庚、戊、己）}{175}{subsection.20.8}%
+\contentsline {section}{\numberline {21}诚实声明与结论状态}{176}{section.21}%
+\contentsline {subsection}{\numberline {21.1}可以引用的结果}{176}{subsection.21.1}%
+\contentsline {subsection}{\numberline {21.2}本报告没有主张的内容}{178}{subsection.21.2}%
+\contentsline {subsection}{\numberline {21.3}数值证据的使用纪律}{179}{subsection.21.3}%
+\contentsline {subsection}{\numberline {21.4}第 12 轮新增结论的证明状态标注}{179}{subsection.21.4}%
+\contentsline {subsection}{\numberline {21.5}一句话总结}{180}{subsection.21.5}%
+\contentsline {section}{\numberline {A}复现说明与产物清单}{181}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}运行环境}{181}{subsection.A.1}%
+\contentsline {subsection}{\numberline {A.2}随本报告分发的文件}{181}{subsection.A.2}%
+\contentsline {subsection}{\numberline {A.3}证书脚本核对了什么}{184}{subsection.A.3}%
+\contentsline {subsection}{\numberline {A.4}未随本报告分发的中间产物}{186}{subsection.A.4}%

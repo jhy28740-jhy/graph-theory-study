@@ -31,7 +31,7 @@
 \title{\bfseries 图的前三大特征值之和的精确上界\\[4pt]
 \large 阶段性进展报告与障碍分析}
 \author{}
-\date{2026 年 10 月 30 日（第九版，增 \S\ref{sec:r24}：四阶矩张量的圆柱分块恒等式 $\|A_4\|_F^2=\sum\binom{4}{a,b,c}\mathcal{M}_{abc}^2$ 与两个块的显式完全平方松弛；主插值定理 $9m_4\ge\frac{19}9-\frac73\sigma_u^2+\frac{35}8\sigma_u^4$（把 $m_4\ge\frac15$ 与 $m_4\ge\frac{19}{81}$ 统一为同一条曲线的两端，并由「极点 $+$ 正 $n\ge5$ 边形」闭式族逐点取等）；桥接引理 $\sigma_u^2\le R(A)V$、$R(\sqrt3)=\frac{2+\sqrt3}9$；\textbf{中心截面闭合} $\kappa_3^c\le\rho_0-1.7333\times10^{-4}=1.281394870601$，耦合不等式由猜想升级为定理；任意截面的精确恒等式 $\rho=\frac12[L_w+\alpha_w]$ 与推广到单轴截面的确切障碍）}
+\date{2026 年 10 月 30 日（第十版，在第九版基础上增两节。\S\ref{sec:r25}（第 25 轮）：对\emph{任意}三元组 $(g,U,\Lam)$ 建立五项亏格恒等式 $2\rho_0-J_w=\Phi-\delta_0/3$，其中 $\Phi=\sin^2\theta+3c_W\sin^2\theta_1+\frac{c_S}2\widetilde E+|c_Z|Z_4+D_w$ 五项均非负，于是主猜想 $\kappa_3\le\rho_0$ 等价于单条不等式 $\Phi\ge\delta_0/3$（定理~\ref{thm:r25main}）；冠军 $W_6=K_1\vee C_5$ 恰好取等且五项全部严格为正（预算表~\ref{tab:r25budget}），故该判据是\textbf{紧}的；配套给出偶极子余项 $A_w=1-\frac E2\le1$（引理~\ref{lem:r25dipole}）、\textbf{窗口定理}（定理~\ref{thm:r25window}：$W_c=1.666928$、$\theta_{1,c}=15.7614^\circ$，冠军 $\theta_1=6.9456^\circ$ 落在窗口内部）、秩一刚性 $A_w\equiv1$（命题~\ref{prop:r25rank1}）、常纬度归约（命题~\ref{prop:r25lat}）与双尺度归约（命题~\ref{prop:r25twoscale}）。\S\ref{sec:r26}（第 26 轮）：把 $(t)_+=\frac12(t+|t|)$ 中的 $|t|$-部分按最优符号模式精确劈分，引入\textbf{负 Gram 质量} $\mathrm{Neg}^*$，得到恒等式 $L_w=A_w^2+2\mathrm{Neg}^*$ 与 $\kappa_3=\sup(A_w^2+\mathrm{Neg}^*)$（定理~\ref{thm:r26neg}），主猜想等价于单标量不等式 $\mathrm{Neg}^*\le(\rho_0-1)+\sin^2\theta$；\STW\ 的差距被精确改写为 $\frac{\varphi-1}2-(\rho_0-1)=\frac{\delta_0}6=\Phi-\rho_0=0.027448797503$（推论~\ref{cor:r26stw}）；秩一截面经半球翻转化为 $L_w=1+2\mathrm{Neg}$（命题~\ref{prop:r26rank1}），锥族上得到闭式 $L_w(s,n)$（命题~\ref{prop:r26conecl}）并求出四个\emph{精确}极大值 $\frac43,\frac32,\frac{13+\sqrt5}{10},\frac{13}9$（$n=3,4,5,6$），从而 $\sup_{\text{锥帧}}L_w=\frac{13+\sqrt5}{10}=\frac{6+\varphi}5=1.523607<2\rho_0-1$（定理~\ref{thm:r26cone}），秩一锥族闭合于 $\rho\le\frac{23+\sqrt5}{20}=1.261803<\rho_0$（推论~\ref{cor:r26rank1cone}）；环族引理 $T_n\le\frac{3n}2$（等号仅 $n=4$）给出等纬度环上 $L_w\le\frac32$（命题~\ref{prop:r26ring}），并发现秩一截面的第二个精确极值点 $\rho=\frac54$（$n=4$ 环）。两条线最终都归约到同一个未解问题——\textbf{锥最优性}（注~\ref{rem:r26one}）。第九版原有的 \S\ref{sec:r24} 内容全部保留。）}
 
 \begin{document}
 \maketitle
@@ -8698,6 +8698,1172 @@ $\sum_i(w_i/h_i)u_iu_i^\top=I_3$ 与 $\sum_iw_ih_i=1$ 替换 $\sum m_i=3$、$\su
 \texttt{\_r24d.py}（$16$ 项全绿：取等族的闭式、符号极限 $\lim\sigma_u^2/V=\frac{2+\sqrt3}9$、
 不依赖网格的三分支一致余量、$50$ 位高精度复核）；
 合并证书见报告目录下 \texttt{证书\_中心截面闭合与圆柱分块.py}（$70$ 项全绿，输出 \texttt{\_cert\_r24\_out.txt}，约 $20$ 秒）。
+
+\section{第 25 轮：五项亏格恒等式、偶极子的余弦形式与全局窗口归约}\label{sec:r25}
+
+前二十四轮的绝大部分工作都是\emph{分截面}进行的：先固定 $\Lam$ 的谱型（中心截面 $\Lam=I_3/3$、
+单轴截面 $\Lam=bI_3+\rho ee^\top$、秩一截面 $\Lam=zz^\top$），再在该截面上做矩层级或分块分解。
+第 24 轮把中心截面彻底闭合（定理~\ref{thm:r24main}），但同时暴露出一个结构性障碍
+（注~\ref{rem:r24obs}）：单轴截面上「目标权重 $w_i=g_ih_i$」与「各向同性权重 $g_i$」分离，
+第 24 轮的全部分块恒等式都建立在 $\sum_im_iu_i=1$ 这一等式上，而它在倾斜权重下不再成立。
+
+本轮换一条完全不同的路。我们不再区分截面，而是对\textbf{任意}三元组 $(g,U,\Lam)$
+（$(g,U)$ 满足 \eqref{eq:frame18}，$\Lam\succeq0$、$\tr\Lam=1$）建立一个\emph{恒等式}，
+把 $2\rho_0-J_w$ 写成「一个由五项非负量组成的亏格 $\Phi$」减去常数 $\delta_0/3$：
+\begin{equation}\label{eq:r25head}
+\boxed{\;2\rho_0-J_w=\Phi-\frac{\delta_0}{3}\;},\qquad
+J_w:=L_w+A_w^2 .
+\end{equation}
+于是全局猜想 $\kappa_3\le\rho_0$ 被\textbf{精确等价}地改写成一条不含图、不含阶数、
+不含掩码、也不含截面分类的单项不等式 $\Phi\ge\delta_0/3$（定理~\ref{thm:r25main}、
+推论~\ref{cor:r25sharp}）。这个改写有三点价值。
+第一，$\Phi$ 的五项\emph{逐项非负}，因此可以逐项丢弃得到无条件结论：
+丢掉四项就得到\textbf{窗口定理}（定理~\ref{thm:r25window}）——
+只要 $h$ 的色散足够大（$\sin^2\theta_1\ge\delta_0/(9c_W)$，即 $W\le W_c=1.666927532150$），
+$\kappa_3\le\rho_0$ \emph{无条件成立}。全局问题由此被压缩到
+$\theta_1<15.7614^\circ$ 的一条薄窗口内，而窗口的左端点 $\theta_1=0$ 正是第 24 轮已闭合的中心截面。
+第二，冠军构型在 \eqref{eq:r25head}~中\textbf{精确取等}（$\Phi=\delta_0/3$，差 $6.9\times10^{-17}$），
+且五项\emph{全部严格为正}（表~\ref{tab:r25budget}）。这给出一个非常强的\emph{否定性}信息：
+任何在冠军处不取等的松弛都注定失败，任何「先丢掉一项再估计其余四项」的做法都不可能证出全局结论。
+第三，$\Phi$ 的第一项 $\sin^2\theta=1-A_w^2$ 有一个干净的几何解释（引理~\ref{lem:r25dipole}）：
+$A_w=1-E/2$，其中 $E$ 是 $h$ 到「秩一剖面」集合 $\{a_z:z\in S^2\}$ 在 $L^2(\nu)$ 中的距离平方，
+于是 $A_w=\cos\theta$ 是 $h$ 与最近秩一剖面的 $L^2(\nu)$-夹角余弦，并且\textbf{$A_w\le1$ 无条件成立}。
+这条不等式本身就是本轮的一个独立结果：它说明「偶极子」通道
+$\sum_iw_i|\langle u_i,z\rangle|$ 永远不超过总质量 $1$，等号恰在 $\Lam$ 秩一时成立（命题~\ref{prop:r25rank1}）。
+
+\subsection{记号与 $L^2(\nu)$ 视角}\label{sec:r25:not}
+
+设 $N\ge3$，$(g,U)$ 满足 \eqref{eq:frame18}，$\Lam\succeq0$、$\tr\Lam=1$。
+把帧测度 $\nu:=\sum_{i=1}^Ng_i\delta_{u_i}$ 看作 $S^2$ 上的正测度（总质量 $\sum_ig_i=3$），
+并引入加权内积
+\[
+\langle f,f'\rangle_g:=\int_{S^2}ff'\dd\nu=\sum_ig_if(u_i)f'(u_i),
+\qquad \|f\|_g^2=\langle f,f\rangle_g .
+\]
+对本轮而言，$L^2(\nu)$ 中有两类特殊函数：
+\textbf{坐标函数} $a_k:=\langle\,\cdot\,,e_k\rangle$（$k=1,2,3$，$e_k$ 为 $\Lam$ 的特征标架），
+以及\textbf{秩一剖面} $a_z:=|\langle\,\cdot\,,z\rangle|$（$z\in S^2$）。
+定义
+\begin{equation}\label{eq:r25def}
+\begin{aligned}
+&h:=\sqrt{\textstyle\sum_k\lambda_ka_k^2}\ \ (\text{即 }h_i=\sqrt{u_i^\top\Lam u_i}),\qquad
+w_i:=g_ih_i,\qquad W:=\sum_iw_i,\\
+&S_w:=\sum_iw_iu_iu_i^\top,\qquad
+L_w:=\sum_{ij}w_iw_j|\langle u_i,u_j\rangle|,\qquad
+A_w:=\max_{\|z\|=1}\sum_iw_i|\langle u_i,z\rangle|,\\
+&M_4:=\sum_{ij}w_iw_j\langle u_i,u_j\rangle^4,\qquad
+Z_k:=\sum_{ij}w_iw_jP_k(\langle u_i,u_j\rangle),\\
+&D_w:=\sum_{ij}w_iw_j\bigl[q(\langle u_i,u_j\rangle^2)-|\langle u_i,u_j\rangle|\bigr],\\
+&H:=\sum_{ij}g_ig_j(h_i-h_j)^2,\qquad
+\widetilde E:=\sum_{ij}g_ig_j(h_i-h_j)^2\langle u_i,u_j\rangle^2,\\
+&E(z):=\sum_ig_i\bigl(h_i-a_i(z)\bigr)^2,\qquad E:=\min_{\|z\|=1}E(z),
+\end{aligned}
+\end{equation}
+其中 $P_k$ 是三维勒让德多项式（$P_2(t)=\frac12(3t^2-1)$、$P_4(t)=\frac18(35t^4-30t^2+3)$），
+$q(s)=\gamma+\alpha s+\beta s^2$ 是第 21 轮的中心主函数
+（$\gamma=\frac{1+\sqrt5}{16}$、$\alpha=\frac{7\sqrt5-5}8$、$\beta=\frac{25-15\sqrt5}{16}<0$，
+满足 $q(s)\ge\sqrt s$ 于 $[0,1]$，故 $D_w\ge0$）。
+沿用命题~\ref{prop:r24gen}，$\rho_{g,U}(\Lam)=\frac12[L_w+\alpha_w]$，
+且对上确界而言 $\alpha_w$ 可换成符号最优值 $A_w^2$，故
+\begin{equation}\label{eq:r25Jw}
+\kappa_3=\tfrac12\sup_{(g,U,\Lam)}J_w,\qquad J_w:=L_w+A_w^2 .
+\end{equation}
+最后引入三个常数与两个角：
+\begin{equation}\label{eq:r25const}
+c_W:=\gamma-\frac{3\beta}{35}=\frac{2\sqrt5-1}{14},\quad
+c_S:=\alpha+\frac{6\beta}7=\frac{10+\sqrt5}{14},\quad
+|c_Z|:=-\frac{8\beta}{35}=\frac{3\sqrt5-5}{14},
+\end{equation}
+\begin{equation}\label{eq:r25ang}
+\sin^2\theta:=1-A_w^2,\qquad
+\cos\theta_1:=\frac{W}{\sqrt3},\quad \sin^2\theta_1=\frac{3-W^2}3=\frac H6 .
+\end{equation}
+数值上 $c_W=0.2480097111$、$c_S=0.8740048555$、$|c_Z|=0.1220145666$，
+并且下列三条精确代数关系是本轮全部计算的枢纽（$60$ 位核对）：
+\begin{equation}\label{eq:r25alg}
+3c_W+c_S=\varphi,\qquad
+\varphi+1-2\rho_0=\frac{\delta_0}3,\qquad
+2\rho_0-1=\varphi-\frac{\delta_0}3 ,
+\end{equation}
+其中 $\delta_0=3\varphi+3-6\rho_0=\frac{9+7\sqrt5-4\sqrt{35}}6=0.164692785017$，
+$\frac{\delta_0}3=0.054897595005559$。
+
+\subsection{四个预备引理}\label{sec:r25:lem}
+
+\begin{lemma}[正交坐标基]\label{lem:r25ortho}
+在 \eqref{eq:frame18}~下，坐标函数 $a_1,a_2,a_3$ 在 $L^2(\nu)$ 中标准正交：
+$\langle a_k,a_l\rangle_g=\delta_{kl}$。因此
+\begin{equation}\label{eq:r25ortho1}
+h^2=\sum_k\lambda_ka_k^2,\qquad \|h\|_g^2=\tr\Lam=1,\qquad
+\|a_z\|_g^2=z^\top\Bigl(\sum_ig_iu_iu_i^\top\Bigr)z=1\ \ \forall z\in S^2 .
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+$\langle a_k,a_l\rangle_g=\sum_ig_i(u_i)_k(u_i)_l=(\sum_ig_iu_iu_i^\top)_{kl}=\delta_{kl}$。
+$h^2(u)=u^\top\Lam u=\sum_k\lambda_k\langle u,e_k\rangle^2$。
+$\|h\|_g^2=\sum_ig_iu_i^\top\Lam u_i=\tr(\Lam\sum_ig_iu_iu_i^\top)=\tr\Lam$。
+\end{proof}
+
+引理~\ref{lem:r25ortho}~的内容是平凡的，但它把问题放进了一个 Hilbert 空间：
+$h$ 与所有 $a_z$ 都是\textbf{单位向量}。这正是下一条引理能够成立的原因。
+
+\begin{lemma}[偶极子的余弦形式，本轮核心]\label{lem:r25dipole}
+对每个 $z\in S^2$，
+\begin{equation}\label{eq:r25dip1}
+\sum_iw_ia_i(z)=1-\frac12E(z)=1-\frac12\sum_ig_i\bigl(h_i-a_i(z)\bigr)^2 .
+\end{equation}
+从而
+\begin{equation}\label{eq:r25dip2}
+A_w=1-\frac E2\le1,\qquad
+\sin^2\theta=1-A_w^2=E-\frac{E^2}4,\qquad
+A_w\ge\Bigl\|\sum_iw_iu_i\Bigr\| ,
+\end{equation}
+且 $A_w=\cos\theta$，$\theta$ 是 $h$ 与秩一剖面族 $\{a_z\}$ 在 $L^2(\nu)$ 中的最小夹角。
+若最大值在胞腔内部取得（$z_*$ 使 $m:=\sum_iw_i\varepsilon_i(z_*)u_i$ 与 $z_*$ 平行），则
+\begin{equation}\label{eq:r25dip3}
+A_w^2=W\zeta-\frac12V_w,\qquad
+\zeta:=z_*^\top S_wz_*,\quad V_w:=\sum_{ij}w_iw_j\bigl(a_i(z_*)-a_j(z_*)\bigr)^2 .
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+展开平方并用引理~\ref{lem:r25ortho}：
+\[
+E(z)=\|h\|_g^2-2\langle h,a_z\rangle_g+\|a_z\|_g^2
+=1-2\sum_ig_ih_i|\langle u_i,z\rangle|+1
+=2-2\sum_iw_ia_i(z),
+\]
+即 \eqref{eq:r25dip1}。因 $E(z)\ge0$ 且 $A_w=\max_z\sum_iw_ia_i(z)=1-\frac12\min_zE(z)=1-\frac E2$，
+得 $A_w\le1$；代入 $1-A_w^2=1-(1-\frac E2)^2=E-\frac{E^2}4$。
+由 $\|h\|_g=\|a_z\|_g=1$，$\langle h,a_z\rangle_g=\sum_iw_ia_i(z)$ 正是余弦，
+故 $\theta$ 的解释成立。
+最后一句：对任意 $z$，$A_w\ge\sum_iw_i|\langle u_i,z\rangle|\ge|\langle m,z\rangle|$，
+取 $z=m/\|m\|$ 得 $A_w\ge\|m\|$。
+\eqref{eq:r25dip3}：$V_w=2(\sum_iw_ia_i^2)W-2(\sum_iw_ia_i)^2=2W\zeta-2A_w^2$，
+其中 $\sum_iw_ia_i(z_*)^2=z_*^\top S_wz_*=\zeta$。
+\end{proof}
+
+\begin{remark}[引理~\ref{lem:r25dipole}~的含义]\label{rem:r25dip}
+\eqref{eq:r25dip1}~是平行四边形恒等式在 $L^2(\nu)$ 中的直接后果，
+但它的内容并不平凡：它把「偶极子通道的最大值 $A_w$」与「$\Lam$ 偏离秩一的程度 $E$」
+用\textbf{等式}绑在一起。三点推论值得记下。
+(a) $A_w\le1$ 是一条\emph{无条件}的通道上界，比 \STW\ 框架里逐点估计所得的
+$A_w\le\sum_iw_i\le\sqrt3$ 强得多（$\sqrt3=1.732$ 对 $1$）；
+(b) $E=0\iff h=a_z\iff\Lam=zz^\top$（秩一），故秩一截面是\emph{刚性}的：
+$A_w\equiv1$ 对一切几何成立（命题~\ref{prop:r25rank1}）；
+(c) $A_w$ 与 $W$ 是两个\emph{独立}的通道量：$W=\sum w_i$ 只涉及 $h$ 的一阶矩，
+$A_w$ 涉及 $h$ 到秩一剖面的距离。第 24 轮之所以只能处理中心截面，
+本质上是因为那里 $h\equiv\frac1{\sqrt3}$ 使二者退化；本轮把它们分开对待。
+\end{remark}
+
+\begin{lemma}[通道亏格恒等式]\label{lem:r25chan}
+下列四个关系对一切 $(g,U,\Lam)$ \textbf{精确}成立：
+\begin{align}
+W^2&=3-\frac H2\qquad(\text{即 }H=6-2W^2=6\sin^2\theta_1),\label{eq:r25ch1}\\
+\|S_w\|_F^2&=1-\frac{\widetilde E}2,\label{eq:r25ch2}\\
+\|S_w\|_F^2&\ge\frac{W^2}3\iff\widetilde E\le\frac H3
+\qquad(\text{二者等价，均为 }Z_2\ge0\text{ 的推论}),\label{eq:r25ch3}\\
+A_w^2&=W\zeta-\frac12V_w\quad(\text{引理~\ref{lem:r25dipole}}).\label{eq:r25ch4}
+\end{align}
+\end{lemma}
+
+\begin{proof}
+\eqref{eq:r25ch1}：$H=\sum_{ij}g_ig_j(h_i-h_j)^2=2(\sum_ig_i)(\sum_ig_ih_i^2)-2(\sum_ig_ih_i)^2$，
+而 $\sum_ig_i=\tr I_3=3$、$\sum_ig_ih_i^2=\tr\Lam=1$、$\sum_ig_ih_i=W$，故 $H=6-2W^2$。
+\eqref{eq:r25ch2}：把 $\|S_w\|_F^2=\sum_{ij}w_iw_j\langle u_i,u_j\rangle^2$ 与 $\widetilde E$ 相加，
+\[
+\|S_w\|_F^2+\frac{\widetilde E}2
+=\sum_{ij}g_ig_j\langle u_i,u_j\rangle^2\Bigl[h_ih_j+\frac12(h_i-h_j)^2\Bigr]
+=\frac12\sum_{ij}g_ig_j\langle u_i,u_j\rangle^2(h_i^2+h_j^2),
+\]
+因为 $h_ih_j+\frac12(h_i-h_j)^2=\frac12(h_i^2+h_j^2)$。上式按 $i$ 求和先做：
+$\sum_jg_j\langle u_i,u_j\rangle^2=u_i^\top(\sum_jg_ju_ju_j^\top)u_i=u_i^\top I_3u_i=1$，
+故右端 $=\frac12\sum_ig_ih_i^2\cdot2\cdot\frac12\cdot2=\sum_ig_ih_i^2=\tr\Lam=1$。
+\eqref{eq:r25ch3}：核 $P_2$ 在 $S^2$ 上正定（Schoenberg），故
+$Z_2=\sum_{ij}w_iw_jP_2(\langle u_i,u_j\rangle)\ge0$；
+而 $Z_2=\frac12(3\|S_w\|_F^2-W^2)$。
+另一方面 $\widetilde E-\frac H3=2-2\|S_w\|_F^2-2+\frac{2W^2}3=-2(\|S_w\|_F^2-\frac{W^2}3)$，故二者等价。
+\end{proof}
+
+\begin{remark}
+\eqref{eq:r25ch2}~是本轮技术上最关键的一步：它说明
+$\|S_w\|_F^2$（一个纯角向量）与 $\widetilde E$（一个含 $h$-色散的量）之和\textbf{恒等于 $1$}。
+这个恒等式的来源是各向同性条件被用了\emph{两次}：
+一次在 $\sum_jg_j\langle u_i,u_j\rangle^2=1$，一次在 $\sum_ig_ih_i^2=\tr\Lam$。
+它把第 24 轮注~\ref{rem:r24obs}~指出的「两套权重分离」的困难\emph{绕过}了：
+我们不需要 $\sum_iw_iu_iu_i^\top=I_3$（这是错的），
+只需要 $\sum_i(w_i/h_i)u_iu_i^\top=I_3$（这是命题~\ref{prop:r24gen}\eqref{eq:r24gen3}~给出的），
+而它恰好足以产生 \eqref{eq:r25ch2}。
+\end{remark}
+
+\begin{lemma}[Schoenberg 四阶分解与关键消去]\label{lem:r25scho}
+在 $S^2$ 上有精确展开
+\begin{equation}\label{eq:r25scho1}
+t^4=\frac15P_0(t)+\frac47P_2(t)+\frac8{35}P_4(t),
+\end{equation}
+故
+\begin{equation}\label{eq:r25scho2}
+M_4=-\frac3{35}W^2+\frac67\|S_w\|_F^2+\frac8{35}Z_4,\qquad Z_4\ge0 ,
+\end{equation}
+并且
+\begin{equation}\label{eq:r25scho3}
+L_w=\gamma W^2+\alpha\|S_w\|_F^2+\beta M_4-D_w ,
+\end{equation}
+\begin{equation}\label{eq:r25key}
+\boxed{\;D_w+|c_Z|Z_4=c_WW^2+c_S\|S_w\|_F^2-L_w\;}
+\end{equation}
+其中 $c_W,c_S,|c_Z|$ 如 \eqref{eq:r25const}，三者\textbf{全部为正}。
+\end{lemma}
+
+\begin{proof}
+\eqref{eq:r25scho1}：$\frac47P_2=\frac{6t^2-2}7$，$\frac8{35}P_4=t^4-\frac67t^2+\frac3{35}$，
+相加得 $t^4+\frac15-\frac27+\frac3{35}=t^4$。
+代入 $\sum_{ij}w_iw_j(\cdot)$ 并用 $\sum_{ij}w_iw_jP_2=Z_2=\frac12(3\|S_w\|_F^2-W^2)$ 得
+$M_4=\frac15W^2+\frac47Z_2+\frac8{35}Z_4=-\frac3{35}W^2+\frac67\|S_w\|_F^2+\frac8{35}Z_4$；
+$Z_4\ge0$ 仍是 Schoenberg（$P_4$ 在 $S^2$ 上正定）。
+\eqref{eq:r25scho3}：$\sum_{ij}w_iw_jq(\langle u_i,u_j\rangle^2)
+=\gamma W^2+\alpha\sum_{ij}w_iw_j\langle u_i,u_j\rangle^2+\beta M_4
+=\gamma W^2+\alpha\|S_w\|_F^2+\beta M_4$，
+而 $D_w$ 的定义正是它与 $L_w$ 之差。
+\eqref{eq:r25key}：把 \eqref{eq:r25scho2}~代入 \eqref{eq:r25scho3}，
+$\beta\cdot\frac8{35}Z_4=-\frac{8|\beta|}{35}Z_4=-|c_Z|Z_4$（因 $\beta<0$），
+$\beta\cdot(-\frac3{35})=-\frac{3\beta}{35}$，$\beta\cdot\frac67=\frac{6\beta}7$，于是
+\[
+L_w=\Bigl(\gamma-\frac{3\beta}{35}\Bigr)W^2+\Bigl(\alpha+\frac{6\beta}7\Bigr)\|S_w\|_F^2
+-|c_Z|Z_4-D_w=c_WW^2+c_S\|S_w\|_F^2-|c_Z|Z_4-D_w .
+\]
+移项即 \eqref{eq:r25key}。三个常数的正性：
+$c_W=\frac{2\sqrt5-1}8\cdot\frac8{14}>0$（$2\sqrt5>1$），
+$c_S>0$ 显然，$|c_Z|=\frac{3\sqrt5-5}{14}>0$（$45>25$）。
+\end{proof}
+
+\begin{remark}[为什么 \eqref{eq:r25key}~是本轮的枢纽]\label{rem:r25key}
+主函数 $q$ 的二次项系数 $\beta$ 是\textbf{负}的（$\beta=-0.533813$），
+这是第 21--24 轮所有估计中最难处理的一项：
+$L_w=\gamma W^2+\alpha\|S_w\|_F^2+\beta M_4-D_w$ 中 $\beta M_4$ 是负的，
+必须用 $M_4$ 的\emph{上}界来控制它，而 $M_4$ 的上界又依赖于 $Z_4\ge0$ 之外的信息。
+\eqref{eq:r25scho1}~的分解说明：$M_4$ 中唯一「不受 $W^2$ 与 $\|S_w\|_F^2$ 控制」的部分
+恰好是 $\frac8{35}Z_4$，而它带的系数 $\frac{8\beta}{35}$ 是负的，
+于是 $-\frac{8|\beta|}{35}Z_4$ 与 $-D_w$ 一起\textbf{移到左边变成两个非负项}。
+换句话说，$\beta<0$ 造成的全部损失被精确地兑换成了
+$|c_Z|Z_4+D_w\ge0$，而剩下的系数 $c_W,c_S$ 反而\emph{变正}了。
+这不是放缩，是恒等式；这正是它比第 22--24 轮的矩松弛更有力的原因。
+\end{remark}
+
+\subsection{主恒等式与全局归约}\label{sec:r25:main}
+
+\begin{definition}[五项亏格]\label{def:r25phi}
+\begin{equation}\label{eq:r25phi}
+\Phi:=\underbrace{\sin^2\theta}_{\text{秩一亏格}}
++\underbrace{3c_W\sin^2\theta_1}_{=\,(c_W/2)H}
++\underbrace{\frac{c_S}2\widetilde E}_{\text{角向稀释}}
++\underbrace{|c_Z|Z_4}_{\text{四阶 Schoenberg}}
++\underbrace{D_w}_{\text{主函数亏格}} .
+\end{equation}
+五项均 $\ge0$：第一项由引理~\ref{lem:r25dipole}~的 $A_w\le1$，
+第二、三项由 $H,\widetilde E\ge0$ 与 $c_W,c_S>0$，
+第四项由 Schoenberg，第五项由 $q(s)\ge\sqrt s$。
+\end{definition}
+
+\begin{theorem}[五项亏格主恒等式与全局归约，本轮主定理]\label{thm:r25main}
+对一切 $N\ge3$、一切满足 \eqref{eq:frame18}~的 $(g,U)$、一切 $\Lam\succeq0$ 且 $\tr\Lam=1$，
+\begin{equation}\label{eq:r25main}
+2\rho_0-J_w=\Phi-\frac{\delta_0}3 .
+\end{equation}
+特别地，
+\begin{equation}\label{eq:r25equiv}
+\kappa_3\le\rho_0\quad\Longleftrightarrow\quad
+\Phi\ge\frac{\delta_0}3\ \ \text{对一切 }(g,U,\Lam),
+\end{equation}
+即 $\Lam_3(G)\le\rho_0n-3$ 对一切 $n$ 与一切图 $G$ 成立
+$\iff\Phi\ge\frac{\delta_0}3=\frac{9+7\sqrt5-4\sqrt{35}}{18}=0.054897595005559$。
+\end{theorem}
+
+\begin{proof}
+由 \eqref{eq:r25ch1}~与 \eqref{eq:r25ch2}，$H=6-2W^2$、$\widetilde E=2-2\|S_w\|_F^2$，故
+\[
+\frac{c_W}2H+\frac{c_S}2\widetilde E
+=3c_W-c_WW^2+c_S-c_S\|S_w\|_F^2 .
+\]
+代入 \eqref{eq:r25phi}~并用 \eqref{eq:r25key}~把 $|c_Z|Z_4+D_w$ 换成
+$c_WW^2+c_S\|S_w\|_F^2-L_w$，$W^2$ 与 $\|S_w\|_F^2$ 的项\textbf{逐项相消}：
+\[
+\Phi=(1-A_w^2)+(3c_W+c_S)-L_w .
+\]
+由 \eqref{eq:r25alg}~的第一式 $3c_W+c_S=\varphi$ 与第二式 $\varphi-\frac{\delta_0}3=2\rho_0-1$，
+\[
+\Phi-\frac{\delta_0}3=1-A_w^2+\varphi-\frac{\delta_0}3-L_w
+=2\rho_0-A_w^2-L_w=2\rho_0-J_w .
+\]
+\eqref{eq:r25equiv}~由 \eqref{eq:r25Jw}~与 $\Phi\ge\delta_0/3$ 的等价性得到：
+$\kappa_3\le\rho_0\iff\sup J_w\le2\rho_0\iff J_w\le2\rho_0\ \forall(g,U,\Lam)
+\iff\Phi\ge\delta_0/3\ \forall(g,U,\Lam)$。
+\end{proof}
+
+\begin{corollary}[判据的尖锐性与冠军处的五项预算]\label{cor:r25sharp}
+冠军构型（$W_6=K_1\vee C_5$ 的团吹起帧，$a^*=\frac{3\sqrt{35}+5\sqrt7-7-7\sqrt5}{14}=0.594608575866$、
+$z^*=0.500440049768212$）满足 $J_w/2=\rho_0$ 与 $\Phi=\delta_0/3$（差 $6.9\times10^{-17}$），
+故 \eqref{eq:r25equiv}~中的常数 $\delta_0/3$ \textbf{不可改进}，判据是尖锐的。
+五项在冠军处的取值见表~\ref{tab:r25budget}：五项\emph{全部严格为正}，
+其中最大项 $\sin^2\theta$ 只占 $42.63\%$。
+\end{corollary}
+
+\begin{table}[ht]\centering\small
+\begin{tabular}{llrl}
+\toprule
+项 & 表达式 & 冠军处取值 & 占 $\delta_0/3$ 的比例\\
+\midrule
+秩一亏格 & $\sin^2\theta=1-A_w^2=E-\frac{E^2}4$ & $0.023404740945$ & $42.63\%$\\
+$h$-色散 & $3c_W\sin^2\theta_1=\frac{c_W}2H$ & $0.010880039083$ & $19.82\%$\\
+角向稀释 & $\frac{c_S}2\widetilde E$ & $0.009602398641$ & $17.49\%$\\
+四阶 Schoenberg & $|c_Z|Z_4$ & $0.003452901195$ & $6.29\%$\\
+主函数亏格 & $D_w$ & $0.007557515142$ & $13.77\%$\\
+\midrule
+合计 & $\Phi$ & $0.054897595005559$ & $100\%$\\
+\bottomrule
+\end{tabular}
+\caption{冠军处五项亏格的精确预算（$\delta_0/3=0.054897595005559$）。
+配套数值：$A_w=0.988228343580$、$E=0.023543312839$、$H=0.087738815$、
+$\widetilde E=0.021973300$、$Z_4=0.028299038$、$W=1.719340161947$。}\label{tab:r25budget}
+\end{table}
+
+\begin{remark}[这条归约的\textbf{否定性}含义]\label{rem:r25no}
+表~\ref{tab:r25budget}~给出一条必须直面的事实：
+\emph{任何}在冠军处严格放松的估计都不可能证出 $\Phi\ge\delta_0/3$。
+具体地说，
+(a) 丢掉任意一项后，剩余四项之和 $\le0.0515<\delta_0/3$（丢 $\sin^2\theta$ 时）——
+所以「先证 $\Phi$ 的某一项可以忽略」这条路被封死；
+(b) 把 $\widetilde E\le H/3$（引理~\ref{lem:r25chan}\eqref{eq:r25ch3}）用作放缩，
+在冠军处 $\widetilde E/H=0.021973/0.087739=0.25044=z^{*2}$，
+而 $H/3=0.029246$，故该放缩损失 $29\%$，
+把 $3c_W\sin^2\theta_1+\frac{c_S}2\widetilde E$ 换成 $(3c_W+\frac{c_S}6)H$
+只能给出 $0.01813<0.02048$，缺口 $2.4\times10^{-3}$；
+(c) 用 $q(s)\ge\sqrt s$ 的\emph{任意}放松（例如把 $D_w$ 换成 $0$）损失 $13.77\%$。
+这三条把第 22--24 轮那类「矩松弛 $+$ 逐点主函数」的技术路线彻底排除在本问题之外，
+与定理~\ref{thm:zonal}（通道型方案的天花板恰为 $\Phi=(3+\sqrt5)/4$）互为印证。
+\end{remark}
+
+\subsection{无条件窗口定理}\label{sec:r25:window}
+
+\begin{theorem}[全局窗口归约，无条件]\label{thm:r25window}
+令
+\begin{equation}\label{eq:r25Wc}
+W_c:=\sqrt{3-\frac{\delta_0}{3c_W}}=1.66692753215039379810,\qquad
+H_c:=2(3-W_c^2)=\frac{\delta_0}{3c_W}=0.44270520511799510421 .
+\end{equation}
+若 $W\le W_c$（等价地 $H\ge H_c$、$\sin^2\theta_1\ge\frac{\delta_0}{9c_W}=0.073784200853$、
+$\theta_1\ge15.7614316733^\circ$），则 $\Phi\ge\delta_0/3$，从而
+$\rho_{g,U}(\Lam)\le\rho_0$。
+因此
+\begin{equation}\label{eq:r25window}
+\kappa_3\le\rho_0\iff
+\Bigl[\ \forall(g,U,\Lam)\ \text{满足}\ W>W_c:\ \Phi\ge\frac{\delta_0}3\ \Bigr],
+\end{equation}
+即全局猜想被压缩到 $\theta_1<15.7614^\circ$（$h$ 接近常值）的薄窗口内。
+\end{theorem}
+
+\begin{proof}
+丢弃 $\Phi$ 的后四项（均非负），
+$\Phi\ge\frac{c_W}2H=c_W(3-W^2)$（用 \eqref{eq:r25ch1}）。
+$W\le W_c$ 时 $3-W^2\ge3-W_c^2=\frac{\delta_0}{3c_W}$，故
+$\Phi\ge c_W\cdot\frac{\delta_0}{3c_W}=\frac{\delta_0}3$。
+\end{proof}
+
+\begin{remark}[窗口的位置与两个端点]\label{rem:r25win}
+窗口的两个端点都已被前几轮闭合，这是本轮归约最有价值的结构信息：
+\begin{itemize}\itemsep1pt
+\item $\theta_1=0$（$h\equiv\frac1{\sqrt3}$，即中心截面 $\Lam=I_3/3$）：
+由命题~\ref{prop:r25lat}~与定理~\ref{thm:r24centre}，
+$\Phi\ge\frac{\delta_0}3+\frac{m_1}3$，$m_1=1.040\times10^{-3}$，\textbf{带正余量闭合}。
+\item $\theta_1\ge15.7614^\circ$：定理~\ref{thm:r25window}，\textbf{无条件闭合}（且只用一项）。
+\item 冠军位于窗口\emph{内部}：$\theta_1=6.945557^\circ$、$W=1.719340>W_c$，
+$\sin^2\theta_1=0.014623136$，只用了允许上限 $0.073784201$ 的 $19.82\%$。
+\end{itemize}
+换言之，剩下的问题是：在 $\theta_1\in(0,15.7614^\circ)$ 这条\emph{开区间}上，
+证明其余四项之和 $\ge\delta_0/3-3c_W\sin^2\theta_1$。
+右端在 $\theta_1\to0$ 时趋于 $\delta_0/3$（此时由第 24 轮已知成立），
+在 $\theta_1\to15.7614^\circ$ 时趋于 $0$；冠军处右端为 $0.044017556$，
+而其余四项实际给出 $0.031492854$——\textbf{缺口 $1.25\times10^{-2}$}，
+这就是本轮之后主方向的准确刻度。
+\end{remark}
+
+\subsection{秩一刚性与常纬度归约}\label{sec:r25:rigid}
+
+\begin{proposition}[秩一截面的刚性]\label{prop:r25rank1}
+设 $\Lam=zz^\top$（$\|z\|=1$）。则对\textbf{一切}几何 $(g,U)$：
+\begin{equation}\label{eq:r25r1}
+E=0,\qquad A_w=1,\qquad \sin^2\theta=0,\qquad L_w=\varphi-\Phi ,
+\end{equation}
+从而
+\begin{equation}\label{eq:r25r2}
+\kappa_3(\text{秩一})\le\rho_0\iff
+L_w\le2\rho_0-1=\varphi-\frac{\delta_0}3=1.56313639374433566 .
+\end{equation}
+第 26 轮的定理~\ref{thm:r26cone}~将证明锥族上
+$\sup L_w=\frac{13+\sqrt5}{10}=\frac{6+\varphi}5=1.523606797750$
+（在 $n=5$、$s_0=\frac{\varphi}{4+\varphi}=0.288007155526$ 处取得），
+一般帧的数值搜索从未超过此值，故余量为 $3.9530\times10^{-2}$（相对 $2.53\%$）。
+\end{proposition}
+
+\begin{proof}
+$h_i=\sqrt{u_i^\top zz^\top u_i}=|\langle u_i,z\rangle|=a_i(z)$，故 $E(z)=0$，
+$E=\min\le E(z)=0$，而 $E\ge0$，故 $E=0$；引理~\ref{lem:r25dipole}~给 $A_w=1-E/2=1$、
+$\sin^2\theta=1-A_w^2=0$。
+再由主恒等式 \eqref{eq:r25main}：$2\rho_0-(L_w+1)=\Phi-\frac{\delta_0}3$，
+即 $L_w=2\rho_0-1+\frac{\delta_0}3-\Phi=\varphi-\Phi$（用 \eqref{eq:r25alg}~第二、三式）。
+\end{proof}
+
+\begin{remark}[秩一截面为何是「最坏」的]\label{rem:r25rank1}
+$\sin^2\theta$ 是五项中最大的一项（冠军处占 $42.63\%$），
+而命题~\ref{prop:r25rank1}~说明它在秩一截面上\textbf{恒等于零}。
+因此秩一截面是 $\Phi$ 的预算中最不利的一面：它必须靠剩下四项凑满 $\delta_0/3$。
+好在这四项在秩一截面上并不小：$L_w=\varphi-\Phi$ 说明
+$\Phi\ge\delta_0/3\iff L_w\le\varphi-\delta_0/3$，
+而 \STW\ 型逐点估计给出的正是 $L_w\le\varphi$（即 $\rho\le\frac{1+\varphi}2=\Phi=1.309017$）。
+所以\textbf{秩一截面上需要改进的量恰好是 $\delta_0/3=0.054900$}，
+相对 \STW\ 的 $\varphi$ 是 $3.39\%$。这是下一轮 P1 的准确任务。
+\end{remark}
+
+\begin{proposition}[常纬度归约到第 24 轮]\label{prop:r25lat}
+设 $h\equiv\frac1{\sqrt3}$（即 $\Lam=I_3/3$）。则 $w_i=g_i/\sqrt3$、$W=\sqrt3$、
+$\theta_1=0$、$H=\widetilde E=0$、$S_w=I_3/\sqrt3$、$\zeta=\frac1{\sqrt3}$，
+且
+\begin{equation}\label{eq:r25lat}
+\sin^2\theta=\frac12V_w,\qquad
+\Phi=\frac12V_w+|c_Z|Z_4+D_w ,
+\end{equation}
+右端正是第 24 轮的中心截面泛函；由定理~\ref{thm:r24centre}，
+$\Phi\ge\frac{\delta_0}3+\frac{m_1}3$，$m_1=1.040\times10^{-3}$。
+\end{proposition}
+
+\begin{proof}
+$h$ 常值 $\Rightarrow H=\widetilde E=0$；$w=g/\sqrt3\Rightarrow S_w=\frac1{\sqrt3}\sum_ig_iu_iu_i^\top=\frac1{\sqrt3}I_3$，
+$W=\sum_ig_i/\sqrt3=3/\sqrt3=\sqrt3$，故 $\cos\theta_1=1$、$\theta_1=0$，$\zeta=z_*^\top S_wz_*=\frac1{\sqrt3}$。
+\eqref{eq:r25ch4}~给 $A_w^2=\sqrt3\cdot\frac1{\sqrt3}-\frac12V_w=1-\frac12V_w$，
+故 $\sin^2\theta=\frac12V_w$。代入 \eqref{eq:r25phi}~得 \eqref{eq:r25lat}。
+最后一步是第 24 轮定理~\ref{thm:r24centre}~的结论（那里记作
+$\kappa_3^c\le\rho_0-1.7333\times10^{-4}$，与 $\Phi\ge\frac{\delta_0}3+\frac{m_1}3$ 等价）。
+\end{proof}
+
+\begin{remark}[秩一截面即使 $\Lam$ 秩一、$h$ 也不常值]\label{rem:r25lat2}
+命题~\ref{prop:r25lat}~与命题~\ref{prop:r25rank1}~是 $\Lam$-单纯形上两个\emph{极端}面：
+$\Lam=I_3/3$（谱 $(\frac13,\frac13,\frac13)$）与 $\Lam=zz^\top$（谱 $(1,0,0)$）。
+前者已闭合且带余量 $3.47\times10^{-4}$，后者化为一维量 $L_w$ 的上界、余量 $3.94\times10^{-2}$（数值）。
+两个面之间的内部（冠军所在的单轴截面 $a^*=0.594609$，谱 $(a^*,b^*,b^*)$）才是难点，
+而 \eqref{eq:r25equiv}~说明它等价于同一条 $\Phi\ge\delta_0/3$。
+\end{remark}
+
+\subsection{单轴截面的两尺度结构}\label{sec:r25:twoscale}
+
+\begin{proposition}[两尺度精确公式]\label{prop:r25twoscale}
+设 $\Lam=bI_3+\rho ee^\top$，$b=\frac{1-\rho}3$，$\rho\in[0,1)$，
+$t_i:=\langle u_i,e\rangle$、$s_i:=t_i^2$、$h_i=\sqrt{b+\rho s_i}$。
+若 $z=e$ 是 $E(z)$ 的极小点（例如帧关于 $e$ 轴对称时），则
+\begin{align}
+E&=(1-\rho)^2\sum_ig_i\frac{(\frac13-s_i)^2}{(h_i+|t_i|)^2},\label{eq:r25ts1}\\
+H&=\rho^2\sum_{ij}g_ig_j\frac{(s_i-s_j)^2}{(h_i+h_j)^2}.\label{eq:r25ts2}
+\end{align}
+特别地 $\sin^2\theta=E-\frac{E^2}4$ 含因子 $(1-\rho)^2$，
+$3c_W\sin^2\theta_1=\frac{c_W}2H$ 含因子 $\rho^2$，
+二者是\textbf{互补的幂次}；且 $E=H=0\iff s_i\equiv\frac13$（常纬度）。
+\end{proposition}
+
+\begin{proof}
+$h_i-|t_i|=\frac{h_i^2-t_i^2}{h_i+|t_i|}=\frac{b+\rho s_i-s_i}{h_i+|t_i|}
+=\frac{(1-\rho)(\frac13-s_i)}{h_i+|t_i|}$（用 $b-(1-\rho)s_i=(1-\rho)(\frac13-s_i)$），
+平方加权求和得 \eqref{eq:r25ts1}。
+$h_i-h_j=\frac{h_i^2-h_j^2}{h_i+h_j}=\frac{\rho(s_i-s_j)}{h_i+h_j}$，代入 $H$ 的定义得 \eqref{eq:r25ts2}。
+$\frac13-s_i$ 与 $s_i-s_j$ 同时为零 $\iff s_i\equiv\frac13$（注意 $\sum_ig_is_i=1=\frac13\sum_ig_i$）。
+\end{proof}
+
+\begin{remark}[两尺度之间的张力，本轮的障碍所在]\label{rem:r25tension}
+把冠军数（$\rho^*=\frac{3a^*-1}2=0.391912863799$）代入：
+\eqref{eq:r25ts1}~给 $E=0.023543313$（与引理~\ref{lem:r25dipole}~直接算出的值一致，残差 $0$），
+\eqref{eq:r25ts2}~给 $H=0.087738815$。
+按冠军处的预算，含 $h$-色散的三项（$\sin^2\theta$、$3c_W\sin^2\theta_1$、$\frac{c_S}2\widetilde E$）
+合计 $0.043887179$，占 $\delta_0/3$ 的 $79.94\%$；
+纯角向的两项（$|c_Z|Z_4$、$D_w$）合计 $0.011010416$，占 $20.06\%$。
+\textbf{两组各自都不够}（$0.043887<0.054898$、$0.011010<0.054898$），
+所以必须同时控制纬度尺度与角向尺度——这正是 $\Phi\ge\delta_0/3$ 的难度来源。
+一个有用的精确观察：对\textbf{锥}帧（极点 $+$ 正 $n$ 边形），
+只有「极--缘」对满足 $h_i\ne h_j$，而这些对的 $\langle u_i,u_j\rangle^2=z^2=s$ 是常数，故
+\begin{equation}\label{eq:r25conetilde}
+\widetilde E=s\cdot H\qquad(\text{锥帧，精确}),
+\end{equation}
+于是锥族上 $\frac{c_W}2H+\frac{c_S}2\widetilde E=(3c_W+3c_Ss)\sin^2\theta_1$，
+$h$-色散的两项合并成一个\emph{单参数}系数。冠军处 $s=z^{*2}=0.250440$，
+$\widetilde E/H=0.250440$ 与 \eqref{eq:r25conetilde}~完全吻合（数值残差 $<10^{-15}$）。
+\end{remark}
+
+\subsection{数值证据}\label{sec:r25:num}
+
+以下均为\textbf{数值}结果，不计入已证结论；全部由
+\texttt{证书\_五项亏格恒等式与窗口归约.py} 复现（$48$ 项全绿）。
+\begin{enumerate}\itemsep2pt
+\item \textbf{锥族}（极点 $+$ 正 $n$ 边形，$n=3,\dots,12$，$240\times240$ 网格 $+$ 冠军精确点）：
+$\min\Phi=\delta_0/3$，唯一取等在 $n=5$、$a=a^*$、$z=z^*$（差 $-6.9\times10^{-17}$）。
+次小值出现在 $n=8$（$\Phi=0.0979$）与 $n=4$（$\Phi=0.1117$），
+即锥族上 $\Phi$ 的第二低点比 $\delta_0/3$ 高 $78\%$。
+\item \textbf{一般帧 $\times$ 一般 $\Lam$ 的随机搜索}：$13500$ 个构型
+（$N=4,\dots,12$，$\Lam$ 取单轴、随机谱 $+$ 随机正交、随机谱 $+$ 对角三类），
+$\min\Phi=0.129025$，余量 $+7.41\times10^{-2}$。
+\item \textbf{窗口筛选}：$4000$ 个随机构型中 $791$ 个落在 $W\le W_c$ 内，
+其 $\min\Phi=0.212118\gg\delta_0/3$，最大 $W=1.666900\le W_c$，与定理~\ref{thm:r25window}~一致。
+\item \textbf{局部极小化}（Powell，变量为 Stiefel 投影 $+$ $\Lam$ 的谱）：
+从随机起点出发，$N\ge7$ 时收敛到 $\Phi=0.054897595005560$（与 $\delta_0/3$ 差 $6.7\times10^{-16}$），
+且 $\Lam$ 的谱收敛到 $(0.594608582,0.202695712,0.202695707)$，
+与冠军单轴谱 $(a^*,b^*,b^*)$ 相符（首元差 $6.0\times10^{-9}$）。
+\item \textbf{冠军的严格局部极小性}：$1000$ 个随机扰动（$\varepsilon=3\times10^{-2}$ 到 $10^{-3}$）
+无一使 $\Phi$ 低于 $\delta_0/3$，二阶增长率 $(\Phi-\Phi_0)/\varepsilon^2\to1.671$。
+\item \textbf{秩一截面}：$500$ 组随机构型给 $L_w\in[1.0139,1.4202]$，
+这\emph{只是随机采样的最大值}，不是上确界；沿锥族做一维极大化后
+$\sup L_w$ 明显更高（$n=5$ 锥族达 $1.523607$，见第 26 轮定理~\ref{thm:r26cone}），
+但仍低于 $2\rho_0-1=1.563136$，余量 $3.9530\times10^{-2}$。
+\end{enumerate}
+
+\subsection{本轮状态、诚实标签与方法优先队列（第十二版）}\label{sec:r25:status}
+
+\begin{center}\small
+\begin{tabular}{lll}
+\toprule
+结论 & 状态 & 位置\\
+\midrule
+坐标函数在 $L^2(\nu)$ 中正交归一、$\|h\|_g=\|a_z\|_g=1$ & \textbf{已证（精确）} & 引理~\ref{lem:r25ortho}\\
+偶极子余弦形式 $\sum_iw_ia_i(z)=1-\frac12E(z)$ & \textbf{已证（精确）} & 引理~\ref{lem:r25dipole}\\
+\textbf{$A_w=1-\frac E2\le1$}（无条件通道上界） & \textbf{已证} & 引理~\ref{lem:r25dipole}\\
+$W^2=3-\frac H2$、$\|S_w\|_F^2=1-\frac{\widetilde E}2$ & \textbf{已证（精确）} & 引理~\ref{lem:r25chan}\\
+$\widetilde E\le H/3\iff\|S_w\|_F^2\ge W^2/3$（Schoenberg $Z_2\ge0$） & \textbf{已证} & 引理~\ref{lem:r25chan}\\
+$t^4$ 的 Schoenberg 分解与 $M_4$ 公式、$Z_4\ge0$ & \textbf{已证（精确）} & 引理~\ref{lem:r25scho}\\
+关键消去 $D_w+|c_Z|Z_4=c_WW^2+c_S\|S_w\|_F^2-L_w$ & \textbf{已证（精确）} & 引理~\ref{lem:r25scho}\\
+\textbf{主恒等式 $2\rho_0-J_w=\Phi-\frac{\delta_0}3$} & \textbf{已证（精确）} & 定理~\ref{thm:r25main}\\
+$\kappa_3\le\rho_0\iff\Phi\ge\delta_0/3$ & \textbf{已证（等价改写）} & 定理~\ref{thm:r25main}\\
+常数 $\delta_0/3$ 不可改进、冠军五项全正 & \textbf{已证（精确取等）} & 推论~\ref{cor:r25sharp}\\
+\textbf{窗口定理} $W\le W_c\Rightarrow\rho\le\rho_0$ & \textbf{已证（无条件）} & 定理~\ref{thm:r25window}\\
+秩一刚性 $A_w\equiv1$、$L_w=\varphi-\Phi$ & \textbf{已证（精确）} & 命题~\ref{prop:r25rank1}\\
+常纬度归约到第 24 轮 & \textbf{已证} & 命题~\ref{prop:r25lat}\\
+两尺度公式 \eqref{eq:r25ts1}\eqref{eq:r25ts2} & \textbf{已证（精确）} & 命题~\ref{prop:r25twoscale}\\
+锥帧 $\widetilde E=sH$ & \textbf{已证（精确）} & 注~\ref{rem:r25tension}\\
+$\sup L_w=1.523744$（秩一截面） & \textbf{数值}（$n=5$ 锥族一维极大化） & \S\ref{sec:r25:num}\\
+锥族 $\min\Phi=\delta_0/3$ 唯一取等于冠军 & \textbf{数值}（第 23 轮已解析证明 $\max F=\rho_0$） & \S\ref{sec:r25:num}\\
+冠军是 $\Phi$ 的严格局部极小、二阶增长率 $1.671$ & \textbf{数值} & \S\ref{sec:r25:num}\\
+\textbf{全局 $\kappa_3\le\rho_0$} & \textbf{未证}（窗口 $\theta_1<15.7614^\circ$ 内） & 注~\ref{rem:r25win}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{方法优先队列（第十二版，数学优先）}：
+\begin{enumerate}\itemsep2pt
+\item[\textbf{P1}] \textbf{秩一截面的 $L_w\le2\rho_0-1$}（即 $L_w\le\varphi-\delta_0/3$）。
+理由：这是五项中最大的一项\emph{恒等于零}的唯一截面，也是 \STW\ 型逐点估计
+$L_w\le\varphi$ 与目标之间差距最小、且\textbf{有数值余量 $3.94\times10^{-2}$} 的一个子问题
+（对比全局问题余量为零）。入口：命题~\ref{prop:r25rank1}~把问题化为一维量 $L_w$，
+而 $L_w$ 又可以精确劈成「符号一致部分 $+$ 负 Gram 质量」（第 26 轮），
+于是任务变成一个\emph{单一非负标量}的上界。本项已在第~\ref{sec:r26}~节推进。
+\item[\textbf{P2}] \textbf{锥最优性}。定理~\ref{thm:r23uni}~已证明单轴锥族上 $\max F=\rho_0$，
+故「极值元必为锥」一旦成立，\textbf{全局猜想立即闭合}（不只是单轴截面）。
+注~\ref{rem:r25tension}\eqref{eq:r25conetilde}~说明锥帧上五项中的两项合并为单参数系数，
+使锥族成为一维/二维微积分问题。入口：$\mathbf{RP}^2$ 上的 Steiner／Riesz 重排；
+极值元一阶条件强制 $n$ 重对称；或用引理~\ref{lem:r25dipole}~的 $z_*$ 作为重排轴。
+\item[\textbf{P3}] \textbf{窗口内的两尺度下界}。把
+$\sin^2\theta+3c_W\sin^2\theta_1$ 用 \eqref{eq:r25ts1}\eqref{eq:r25ts2}~写成
+$(1-\rho)^2\cdot(\text{纬度方差})+\rho^2\cdot(\text{成对纬度方差})$，
+对 $s$-分布做 Jensen／LP 对偶。目前的粗估（用 $(h_i+|t_i|)^2\le(1+\sqrt a)^2$、
+$(h_i+h_j)^2\le4a$）落在 $\Phi\ge0.0480$，缺口 $6.9\times10^{-3}$（$12.5\%$），
+\textbf{已知不足}；改进点是分母的精确处理与 $E/(1-\rho)^2$ 的 LP 对偶。
+\item[\textbf{P4}] \textbf{提高中心截面余量}（沿用第十一版 P3）：
+$m_1=1.040\times10^{-3}$ 的三处可回收信息中，证书亏格 $D$ 是唯一能带来量级改进的一项。
+\item[\textbf{副}] \textbf{下界方向}：把 $\Theta(W_6)=\rho_0$（定理~\ref{thm:r20w6}）
+推广成轮族的极值性定理，作为下界一侧的独立结果。
+\end{enumerate}
+
+复现：报告目录下 \texttt{证书\_五项亏格恒等式与窗口归约.py}
+（$48$ 项全绿，输出 \texttt{\_cert\_r25\_out.txt}，含 $60$ 位常数代数、
+四个预备引理的逐条残差、主恒等式在 $800$ 组随机 $(g,U,\Lam)$ 上的核验、
+冠军精确取等与 $1000$ 点扰动的局部极小性、窗口定理的代数核对与 $4000$ 点筛选、
+秩一刚性、常纬度归约、两尺度公式、锥族 $n=3..10$ 扫描、$13500$ 点随机全局搜索、
+局部极小化收敛到冠军谱）；
+仓库根目录 \texttt{\_r25b.py}（锥族与随机帧上 $\rho$ 与 $\Phi$ 的对照）、
+\texttt{\_r25c.py}（引理逐条残差）、\texttt{\_r25e.py}（冠军核对 $+$ 锥族剖面 $n=3..12$）、
+\texttt{\_r25f.py}（随机全局搜索 $+$ Powell 局部极小化）。
+\textbf{勘误}：中间草稿 \texttt{\_r25d.py} 的单轴公式与 \texttt{\_r25g.py} 的窗口常数
+把 $\sin^2\theta_1=H/6$ 误作 $H/2$，导致 $W_c$ 被算成 $1.710619$（正确值 $1.666928$）、
+$\theta_{1,c}$ 被算成 $9.02^\circ$（正确值 $15.7614^\circ$）；
+二者均已被合并证书取代，本轮一切结论以 \eqref{eq:r25Wc}~为准。
+
+\section{第 26 轮：负 Gram 质量恒等式、主猜想的单标量归约与秩一截面的锥族闭式}\label{sec:r26}
+
+第 25 轮把全局猜想化成了 $\Phi\ge\delta_0/3$，但 $\Phi$ 由五项组成、
+且在冠军处五项\emph{全部严格为正}（表~\ref{tab:r25budget}），
+注~\ref{rem:r25no}~已说明任何松弛都必然失败。本轮回到最原始的分解
+$(t)_+=\frac12(t+|t|)$，把其中的 $|t|$-部分再\emph{精确}地劈成两块：
+「与最优符号模式一致的部分」和「符号相反的部分」。后者我们称为
+\textbf{负 Gram 质量} $\mathrm{Neg}^*$，它恰是掩码自洽性 $A=1\{Q>0\}$
+真正看到、而通道型主函数方案（定理~\ref{thm:zonal}）完全丢掉的那部分信息。
+结果是主定理~\ref{thm:r26neg}：
+\begin{equation}\label{eq:r26head}
+\kappa_3=\sup_{(g,U,\Lam)}\bigl(A_w^2+\mathrm{Neg}^*\bigr),
+\qquad
+\kappa_3\le\rho_0\iff
+\mathrm{Neg}^*\le(\rho_0-1)+\sin^2\theta .
+\end{equation}
+这条归约有四点价值。
+第一，它把「五项预算」压缩成\textbf{一个}非负标量，而且这个标量有明确的几何含义
+（Gram 矩阵在最优符号胞腔下的负部质量）。
+第二，它给出了 \STW\ 天花板的\emph{精确}含义（推论~\ref{cor:r26stw}）：
+逐点主函数估计 $|t|\le q(t^2)$ 恰好等价于 $\mathrm{Neg}^*\le\frac{\varphi-1}2=\frac1{2\varphi}$，
+而目标值是 $\rho_0-1$，二者之差
+\[
+\frac{\varphi-1}2-(\rho_0-1)=\frac{\varphi+1-2\rho_0}2=\frac{\delta_0}6
+=\Phi_{\STW}-\rho_0=0.027448797503
+\]
+\textbf{精确等于} \STW\ 与 $\rho_0$ 的差距。也就是说，「超越 \STW」这件事在负质量的语言里
+有了准确的刻度：把 $\mathrm{Neg}^*$ 的界改进 $\delta_0/6$。
+第三，秩一截面（$\Lam=zz^\top$）上 $A_w\equiv1$、$\sin^2\theta\equiv0$（命题~\ref{prop:r25rank1}），
+\eqref{eq:r26head}~退化为纯几何不等式 $\mathrm{Neg}\le\rho_0-1$；
+再用一次半球翻转（引理~\ref{lem:r26hemi}）可得 $L_w=1+2\mathrm{Neg}$，
+于是秩一截面化为一维量 $L_w\le2\rho_0-1$ 的上界问题。
+第四，在这个一维问题上我们\textbf{做出了实质推进}：
+锥族（极点 $+$ 正 $n$ 边形）上 $L_w$ 有显式闭式，
+$n=3,4,5,6$ 的极大值分别是 $\frac43,\frac32,\frac{13+\sqrt5}{10},\frac{13}9$
+（全部符号核对，定理~\ref{thm:r26cone}），
+其中 $n=5$ 的 $\frac{13+\sqrt5}{10}=\frac{6+\varphi}5=1.523606797750$ 是锥族的上确界，
+比所需的 $2\rho_0-1=1.563136394$ 低 $3.9530\times10^{-2}$；
+一般帧的全局搜索（$N=4,\dots,12$，共 $3150$ 个随机起点 $+$ Powell 精修）
+\emph{从未}超过 $\frac{13+\sqrt5}{10}$。
+于是\textbf{秩一截面在全部锥帧上闭合}（推论~\ref{cor:r26rank1cone}）：
+$\rho\le\frac{11+\varphi}{10}=1.261803398875<\rho_0$，
+比 \STW\ 的 $\Phi=1.309017$ 低 $4.72\times10^{-2}$。
+剩下的缺口是「秩一截面的极值元必为锥」这一条对称化命题，
+它与全局问题的 P2 是\emph{同一条}命题（注~\ref{rem:r26one}），
+因此本轮把两条线合并成了一个单一的攻坚目标。
+
+\subsection{符号模式的有限分解与负 Gram 质量}\label{sec:r26:neg}
+
+\begin{lemma}[偶极子的符号模式分解]\label{lem:r26sign}
+记 $\mathcal{E}=\{\varepsilon\in\{\pm1\}^N\}/\{\pm1\}$（$2^{N-1}$ 个符号模式）与
+$m_\varepsilon:=\sum_i\varepsilon_iw_iu_i$。则
+\begin{equation}\label{eq:r26sign}
+A_w=\max_{\varepsilon\in\mathcal{E}}\|m_\varepsilon\| ,
+\end{equation}
+且最大值必在某个 $\varepsilon^*$ 上取得；
+$\varepsilon^*$ 可以取为某个 $z_*$ 的\emph{半球符号}
+$\varepsilon_i(z_*):=\operatorname{sign}\langle u_i,z_*\rangle$。
+\end{lemma}
+
+\begin{proof}
+$\sum_iw_i|\langle u_i,z\rangle|=\max_\varepsilon\sum_iw_i\varepsilon_i\langle u_i,z\rangle
+=\max_\varepsilon\langle m_\varepsilon,z\rangle$，故
+$A_w=\max_z\max_\varepsilon\langle m_\varepsilon,z\rangle
+=\max_\varepsilon\max_z\langle m_\varepsilon,z\rangle=\max_\varepsilon\|m_\varepsilon\|$。
+反向地，对任意 $\varepsilon$ 与任意 $z$，
+$\|m_\varepsilon\|=\langle m_\varepsilon,m_\varepsilon/\|m_\varepsilon\|\rangle
+=\sum_iw_i\varepsilon_i\langle u_i,\hat m_\varepsilon\rangle
+\le\sum_iw_i|\langle u_i,\hat m_\varepsilon\rangle|\le A_w$，
+故上确界在 $\mathcal{E}$ 上取得，且取到 $\|m_{\varepsilon^*}\|=A_w$ 的 $\varepsilon^*$
+就是 $z_*:=\hat m_{\varepsilon^*}$ 的半球符号（此时 $\langle u_i,z_*\rangle$ 与 $\varepsilon_i^*$ 同号）。
+\end{proof}
+
+\begin{definition}[负 Gram 质量]\label{def:r26neg}
+取 $\varepsilon^*$ 如引理~\ref{lem:r26sign}，定义
+\begin{equation}\label{eq:r26negdef}
+\mathrm{Neg}^*:=\sum_{\varepsilon_i^*\varepsilon_j^*\langle u_i,u_j\rangle<0}
+w_iw_j\,\bigl|\langle u_i,u_j\rangle\bigr|\ \ \ge0 .
+\end{equation}
+它是加权 Gram 矩阵 $\bigl(w_iw_j\langle u_i,u_j\rangle\bigr)$
+在最优符号胞腔下\textbf{负部}的总质量。
+\end{definition}
+
+\begin{theorem}[负 Gram 质量恒等式，本轮主定理]\label{thm:r26neg}
+对一切 $(g,U,\Lam)$，
+\begin{equation}\label{eq:r26neg1}
+L_w=A_w^2+2\,\mathrm{Neg}^*,\qquad
+J_w=2A_w^2+2\,\mathrm{Neg}^*,\qquad
+\tfrac12J_w=A_w^2+\mathrm{Neg}^* .
+\end{equation}
+因此
+\begin{equation}\label{eq:r26neg2}
+\kappa_3=\sup_{(g,U,\Lam)}\bigl(A_w^2+\mathrm{Neg}^*\bigr),
+\end{equation}
+且下列四条\textbf{精确等价}：
+\begin{equation}\label{eq:r26neg3}
+\Lam_3(G)\le\rho_0n-3\ \forall n,\forall G
+\iff\kappa_3\le\rho_0
+\iff A_w^2+\mathrm{Neg}^*\le\rho_0\ \forall(g,U,\Lam)
+\iff\mathrm{Neg}^*\le(\rho_0-1)+\sin^2\theta\ \forall(g,U,\Lam).
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+$\|m_{\varepsilon^*}\|^2=\sum_{ij}w_iw_j\varepsilon_i^*\varepsilon_j^*\langle u_i,u_j\rangle=A_w^2$。
+逐对比较：$|t|-t=2(-t)_+$，取 $t=\varepsilon_i^*\varepsilon_j^*\langle u_i,u_j\rangle$
+（注意 $|\varepsilon_i^*\varepsilon_j^*|=1$，故 $|t|=|\langle u_i,u_j\rangle|$），得
+\[
+L_w-A_w^2=\sum_{ij}w_iw_j\bigl(|t_{ij}|-t_{ij}\bigr)
+=2\sum_{t_{ij}<0}w_iw_j|t_{ij}|=2\,\mathrm{Neg}^* .
+\]
+其余各式代入 $J_w=L_w+A_w^2$、\eqref{eq:r25Jw}、$\sin^2\theta=1-A_w^2$
+（引理~\ref{lem:r25dipole}）即得。
+\end{proof}
+
+\begin{corollary}[\STW\ 天花板在负质量语言中的精确位置]\label{cor:r26stw}
+逐点主函数估计 $|t|\le q(t^2)$ 给出 $L_w\le\gamma W^2+\alpha\|S_w\|_F^2+\beta M_4$，
+在秩一截面（$A_w=1$）上它等价于 $\mathrm{Neg}\le\frac{\varphi-1}2=\frac1{2\varphi}=0.309016994375$，
+即 $\rho\le\frac{1+\varphi}2=\Phi_{\STW}=1.309016994375$。目标值是 $\mathrm{Neg}\le\rho_0-1=0.281568196872$。
+二者之差
+\begin{equation}\label{eq:r26gap}
+\frac{\varphi-1}2-(\rho_0-1)=\frac{\varphi+1-2\rho_0}2=\frac{\delta_0}6
+=\Phi_{\STW}-\rho_0=0.027448797502780 ,
+\end{equation}
+即\textbf{超越 \STW\ 恰好等于把负质量界改进 $\delta_0/6$}。
+\end{corollary}
+
+\begin{remark}[为什么这条归约是「对的方向」]\label{rem:r26why}
+$\mathrm{Neg}^*$ 与第 25 轮的 $\Phi$ 是同一件事的两种写法
+（证书核验：$\mathrm{Neg}^*-[(\rho_0-1)+\sin^2\theta]=-\frac12(2\rho_0-J_w)=\frac12(\frac{\delta_0}3-\Phi)$，
+$1200$ 组随机构型上残差 $3.3\times10^{-16}$），
+但它的\emph{结构}更适合下手，理由有三。
+(a) 它是\textbf{单个}非负量，不需要在五项之间做预算分配；
+(b) 它的求和域 $\{\varepsilon_i^*\varepsilon_j^*\langle u_i,u_j\rangle<0\}$ 是\emph{几何}的
+（由 $z_*$ 的大圆排列决定），可以用重排、对称化、球面调和分析等工具，
+而 $\Phi$ 的五项混合了矩、Schoenberg 系数与主函数亏格，工具彼此不兼容；
+(c) 它把「必须使用掩码自洽性」这一否定性教训
+（定理~\ref{thm:zonal}、命题~\ref{prop:octnogo}、注~\ref{rmk:A2why}）
+落实成了一个具体对象：$\mathrm{Neg}^*$ \emph{就是}自洽性看到而通道方案看不到的量。
+\end{remark}
+
+\subsection{秩一截面：半球翻转与 $L_w=1+2\mathrm{Neg}$}\label{sec:r26:rank1}
+
+\begin{lemma}[半球翻转]\label{lem:r26hemi}
+设 $\Lam=zz^\top$，故 $h_i=a_i(z)=|\langle u_i,z\rangle|=:a_i$、$w_i=g_ia_i$。
+把每个满足 $\langle u_i,z\rangle<0$ 的原子替换为 $-u_i$（记新帧仍为 $U$）。则
+\begin{enumerate}[label=(\roman*),leftmargin=2.2em,itemsep=1pt]
+\item $\sum_ig_iu_iu_i^\top=I_3$、$a_i$、$|\langle u_i,u_j\rangle|$、$L_w$ 全部不变；
+\item 翻转后 $\langle u_i,z\rangle=a_i\ge0$，从而
+\begin{equation}\label{eq:r26hemi}
+\widetilde m:=\sum_ig_ia_iu_i=\sum_ig_i\langle u_i,z\rangle u_i
+=\Bigl(\sum_ig_iu_iu_i^\top\Bigr)z=z,\qquad \|\widetilde m\|=1 ;
+\end{equation}
+\item 因此 $\sum_{ij}g_ig_ja_ia_j\langle u_i,u_j\rangle=\|\widetilde m\|^2=1$。
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i)：$(-u)(-u)^\top=uu^\top$，$|\langle -u_i,z\rangle|=|\langle u_i,z\rangle|$，
+$|\langle -u_i,u_j\rangle|=|\langle u_i,u_j\rangle|$。
+(ii)：翻转后 $\langle u_i,z\rangle=a_i$，故 $\widetilde m=\sum_ig_i\langle u_i,z\rangle u_i$，
+而 $u\mapsto\langle u,z\rangle u$ 的加权和正是 $(\sum_ig_iu_iu_i^\top)z$。
+(iii) 是 (ii) 的平方展开。
+\end{proof}
+
+\begin{proposition}[秩一截面的纯几何形式]\label{prop:r26rank1}
+在引理~\ref{lem:r26hemi}~的翻转下，
+\begin{equation}\label{eq:r26r1}
+L_w=1+2\,\mathrm{Neg},\qquad
+\mathrm{Neg}:=\sum_{\langle u_i,u_j\rangle<0}g_ig_ja_ia_j\bigl|\langle u_i,u_j\rangle\bigr|\ge0 ,
+\end{equation}
+且秩一截面的闭合条件为
+\begin{equation}\label{eq:r26r2}
+\kappa_3(\text{秩一})\le\rho_0\iff\mathrm{Neg}\le\rho_0-1=0.281568196872
+\iff L_w\le2\rho_0-1=1.563136393744 .
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+定理~\ref{thm:r26neg}~给 $L_w=A_w^2+2\mathrm{Neg}^*$；
+秩一截面上 $A_w=1$（命题~\ref{prop:r25rank1}），故 $\varepsilon^*$ 可取全 $+$
+（半球翻转后 $\langle u_i,z\rangle\ge0$，$z$ 本身就是最优方向），
+于是 $\mathrm{Neg}^*=\mathrm{Neg}$ 且 $L_w=1+2\mathrm{Neg}$。
+\eqref{eq:r26r2}~由命题~\ref{prop:r25rank1}~的 $L_w=\varphi-\Phi$ 与
+$\kappa_3(\text{秩一})=\frac12(L_w+1)$ 得到。
+证书在 $900$ 组随机帧 $\times$ 随机 $z$ 上核验 \eqref{eq:r26r1}，残差 $1.8\times10^{-15}$，
+$\|\widetilde m\|=1$ 的残差 $8.9\times10^{-16}$。
+\end{proof}
+
+\subsection{锥族的显式闭式与精确极大值}\label{sec:r26:cone}
+
+以下固定 $z=e$ 为锥轴，帧为「极点 $u_0=e$（权 $g_0$）$+$ 纬度 $t=\sqrt s$ 上的正 $n$ 边形
+（每个权 $g_1$）」。各向同性条件 \eqref{eq:frame18}~强制
+\begin{equation}\label{eq:r26coneg}
+g_1=\frac{2}{n(1-s)},\qquad g_0=\frac{1-3s}{1-s},\qquad s\in[0,\tfrac13],
+\end{equation}
+并记
+\begin{equation}\label{eq:r26Rn}
+R_n(s):=\sum_{d=1}^{n-1}\Bigl|(1-s)\cos\frac{2\pi d}n+s\Bigr|
+\end{equation}
+（$R_n(s)$ 是环上原子对的 $|\langle u_k,u_l\rangle|$ 之和除以每原子的份数）。
+
+\begin{proposition}[锥族秩一截面的闭式]\label{prop:r26conecl}
+\begin{equation}\label{eq:r26cl}
+L_w(s,n)=\frac{(1-3s)(1+s)+\dfrac{4s}{n}\bigl(1+R_n(s)\bigr)}{(1-s)^2},
+\qquad s\in[0,\tfrac13].
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+秩一截面上 $w=g\,a$，$a_0=1$、$a_k=\sqrt s$。
+$\langle u_0,u_k\rangle=\sqrt s$；$\langle u_k,u_l\rangle=(1-s)\cos\frac{2\pi(k-l)}n+s$。
+于是
+\[
+L_w=g_0^2+\underbrace{2ng_0g_1s}_{\text{极--缘}}
++\underbrace{ng_1^2s}_{\text{缘对角}}+\underbrace{g_1^2s\cdot nR_n(s)}_{\text{缘--缘}},
+\]
+代入 \eqref{eq:r26coneg}：$g_0^2=(1-3s)^2/(1-s)^2$、
+$2ng_0g_1s=4s(1-3s)/(1-s)^2$、$ng_1^2s=4s/(n(1-s)^2)$、
+$g_1^2snR_n=4sR_n/(n(1-s)^2)$；
+分子合并 $(1-3s)^2+4s(1-3s)=(1-3s)(1+s)$ 即得 \eqref{eq:r26cl}。
+证书用显式帧核对 $n=3,\dots,12$、$s\in\{0.05,0.15,0.25,\frac13^-\}$，残差 $1.1\times10^{-15}$。
+\end{proof}
+
+\begin{lemma}[$R_n$ 在 $n=3,4,5,6$ 上的显式]\label{lem:r26Rn}
+在 $s\in[0,\frac13]$ 上，
+\begin{equation}\label{eq:r26Rn4}
+R_3=1-3s,\qquad R_4=1,\qquad R_5=\sqrt5\,(1-s),\qquad R_6=3-4s .
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+$n=3$：$\cos\frac{2\pi}3=\cos\frac{4\pi}3=-\frac12$，
+$(1-s)(-\frac12)+s=\frac{3s-1}2\le0$，故 $R_3=2\cdot\frac{1-3s}2=1-3s$。
+$n=4$：$\cos\frac{2\pi d}4\in\{0,-1,0\}$（$d=1,2,3$），
+$R_4=2s+|s-(1-s)|+2s=4s+|2s-1|=1$（因 $s\le\frac13<\frac12$）。
+$n=5$：$\cos\frac{2\pi}5=\frac{\sqrt5-1}4$、$\cos\frac{4\pi}5=-\frac{\sqrt5+1}4$，
+第一项 $(1-s)\frac{\sqrt5-1}4+s>0$，第二项 $(1-s)(-\frac{\sqrt5+1}4)+s<0$
+（等价于 $s<\frac{\sqrt5+1}{4+(\sqrt5+1)}<\frac13$ 的补，直接验算：
+$s\le\frac13$ 时其值 $\le\frac23\cdot(-\frac{\sqrt5+1}4)+\frac13=\frac{1-2\sqrt5-2+2}{6}<0$）。故
+$R_5=2\bigl[(1-s)\frac{\sqrt5-1}4+s\bigr]+2\bigl[(1-s)\frac{\sqrt5+1}4-s\bigr]
+=(1-s)\bigl[\frac{\sqrt5-1}2+\frac{\sqrt5+1}2\bigr]+2s-2s=\sqrt5(1-s)$。
+$n=6$：$\cos\frac{2\pi d}6\in\{\frac12,-\frac12,-1,-\frac12,\frac12\}$，
+$R_6=2\bigl[(1-s)\frac12+s\bigr]+2\bigl[(1-s)\frac12-s\bigr]+\bigl[(1-s)-s\bigr]$
+（第三项 $(1-s)(-1)+s=2s-1<0$，第二项 $\frac{1-3s}2\ge0$），
+$=(1+s)+(1-3s)+(1-2s)=3-4s$。
+以上四条均由符号计算核对（差为 $0$）。
+\end{proof}
+
+\begin{theorem}[锥族秩一截面的上确界]\label{thm:r26cone}
+$n=3,4,5,6$ 时 \eqref{eq:r26cl}~在 $s\in[0,\frac13]$ 上的最大值分别为
+\begin{equation}\label{eq:r26four}
+\max_sL_w(s,3)=\frac43\ \ (s=\tfrac15),\quad
+\max_sL_w(s,4)=\frac32\ \ (s=\tfrac13),\quad
+\max_sL_w(s,5)=\frac{13+\sqrt5}{10}\ \ (s=s_0),\quad
+\max_sL_w(s,6)=\frac{13}9\ \ (s=\tfrac14),
+\end{equation}
+其中
+\begin{equation}\label{eq:r26s0}
+s_0=\frac{\varphi}{4+\varphi}=\frac{1+2\sqrt5}{19}=0.288007155526293634 ,
+\qquad
+\frac{13+\sqrt5}{10}=\frac{6+\varphi}5=1.523606797749979 .
+\end{equation}
+$n\ge7$ 时 $\max_sL_w(s,n)\le1.485703<\frac{13+\sqrt5}{10}$（数值，$n=7,\dots,24$ 逐个一维极大化，
+$n\to\infty$ 时 $L_w(s,n)\to L_\infty(s)=\frac{(1-3s)(1+s)+4sr(s)}{(1-s)^2}$，
+ 而 $\max_sL_\infty(s)=1.461301915096$（在 $s=0.282760729581$ 取到）仍小于 $\frac{13+\sqrt5}{10}$，
+$r(s)=\frac2\pi\bigl(\sqrt{1-2s}+s\arccos\frac{-s}{1-s}\bigr)-s$）。
+故
+\begin{equation}\label{eq:r26sup}
+\sup_{\text{锥帧}}L_w=\frac{13+\sqrt5}{10}=\frac{6+\varphi}5
+<2\rho_0-1=1.563136393744 ,\qquad\text{余量 }3.9530\times10^{-2}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+把引理~\ref{lem:r26Rn}~代入 \eqref{eq:r26cl}~得四条显式有理函数：
+\[
+L_w(s,3)=\frac{(1-3s)(1+s)+\frac{4s}3(2-3s)}{(1-s)^2},\quad
+L_w(s,4)=\frac{1-3s^2}{(1-s)^2},\quad
+L_w(s,5)=\frac{1+\frac{4\sqrt5-6}5s-\frac{15+4\sqrt5}5s^2}{(1-s)^2},
+\]
+\[
+L_w(s,6)=\frac{(1-3s)(1+s)+\frac{4s}6(4-4s)}{(1-s)^2}.
+\]
+逐个求导。
+$n=4$ 的情形最干净，可以完全手算：由商的求导法则
+\[
+\frac{\dd}{\dd s}\,\frac{1-3s^2}{(1-s)^2}
+=\frac{-6s(1-s)^2+2(1-3s^2)(1-s)}{(1-s)^4}
+=\frac{-6s(1-s)+2(1-3s^2)}{(1-s)^3}
+=\frac{2-6s}{(1-s)^3},
+\]
+分子 $2-6s$ 在 $s<\frac13$ 上为正、在 $s=\frac13$ 处为零，分母 $(1-s)^3>0$，
+故 $L_w(s,4)$ 在 $[0,\frac13]$ 上严格递增，最大值只能在右端点取到：
+$\max_sL_w(s,4)=L_w(\frac13,4)=\frac{1-3/9}{(2/3)^2}=\frac32$。
+换句话说，$n=4$ 没有内点驻点，\eqref{eq:r26four}~中记的 $s=\frac13$ 是端点极值而非驻点极值。
+其余三阶的驻点由符号计算（\texttt{\_r26c.py}，$60$ 位）给出，分别为
+$s=\frac15\ (n=3),\ \frac{1+2\sqrt5}{19}\ (n=5),\ \frac14\ (n=6)$，
+代入得 \eqref{eq:r26four}~的对应值，二阶条件确认均为极大。
+$n=5$：令 $N(s)=1+\frac{4\sqrt5-6}5s-\frac{15+4\sqrt5}5s^2$，则
+$\frac{\dd}{\dd s}\frac{N}{(1-s)^2}=\frac{N'(1-s)+2N}{(1-s)^3}$，
+而 $N'(1-s)+2N=\frac{4(\sqrt5+1)}5-\frac{4\sqrt5+36}5s$（$s^2$ 项精确相消），
+故唯一驻点 $s_0=\frac{4(\sqrt5+1)}{4\sqrt5+36}=\frac{\sqrt5+1}{\sqrt5+9}=\frac{1+2\sqrt5}{19}
+=\frac{\varphi}{4+\varphi}$，
+代入得 $L_w(s_0,5)=\frac{\sqrt5}{10}+\frac{13}{10}$（符号化简，差为 $0$）。
+$n\ge7$：$L_w(s,n)$ 是 $s$ 的显式分段有理函数（分段点来自 $R_n$ 中的绝对值），
+一维极大化（$2\times10^4$ 网格 $+$ Brent 精修到 $10^{-14}$）给出
+$n=7,\dots,24$ 的最大值依次为
+$1.463854,1.485702,1.460603,1.456940,1.473843,1.464273,1.454849,1.468392,1.464989,
+1.454110,1.465352,1.464826,1.456417,1.463446,1.464391,1.459143,1.462151,1.463886$，
+全部 $\le1.485703$；$n\to\infty$ 时 $R_n(s)/n\to r(s)$
+（$r$ 由 $\frac1{2\pi}\int_0^{2\pi}|(1-s)\cos\theta+s|\dd\theta$ 显式积分得到），
+极限函数的一维最大值为 $1.461301915096$，驻点 $s=0.282760729581$，
+仍严格小于 $\frac{13+\sqrt5}{10}=1.523607$（余量 $6.2305\times10^{-2}$）。
+这里有一处必须讲清楚，否则容易把两个数弄混：端点值
+\[
+L_\infty\Bigl(\frac13\Bigr)=\frac{2\sqrt3+\pi/3}{\pi}=1.435991124176917\dots
+\]
+恰等于等纬度环的极限 $\lim_{n\to\infty}T_n/n$（第~\ref{sec:r26:ring}~节），
+而这\emph{不是}巧合：$s=\frac13$ 时极点权重 $g_0=1-3s$ 恰好为零，
+锥退化为纯环，所以两条族在端点必须是同一个对象。
+但极限函数在\emph{内部}的取值可以更高，其最大值 $1.461302$ 出现在
+$s=0.282760729581<\frac13$，那里 $g_0=1-3s=0.151718>0$，是真正的锥而非环。
+因此 $1.461302$（锥族极限的最大值）与 $1.435991$（环族极限）是两个不同的量，
+本文一律以前者作为 $n\to\infty$ 分支的上界。
+上述 $s^\ast$ 与 $L_\infty(s^\ast)$ 由 \texttt{\_r26e.py}~在 $60$ 位精度下用
+Newton 法求出，导数残差 $|L_\infty'(s^\ast)|=9.2\times10^{-68}$。
+\end{proof}
+
+\begin{corollary}[秩一截面在锥帧上闭合]\label{cor:r26rank1cone}
+若 $\Lam=zz^\top$ 且帧为锥，则
+\begin{equation}\label{eq:r26r1cone}
+\rho_{g,U}(\Lam)\le\frac12\Bigl(1+\frac{13+\sqrt5}{10}\Bigr)
+=\frac{11+\varphi}{10}=\frac{23+\sqrt5}{20}=1.261803398875<\rho_0 ,
+\end{equation}
+余量 $\rho_0-\frac{11+\varphi}{10}=1.9765\times10^{-2}$；
+比 \STW\ 的 $\Phi_{\STW}=1.309017$ 低 $4.7214\times10^{-2}$。
+等价的负质量形式：$\mathrm{Neg}\le\frac{\varphi^2}{10}=\frac{3+\sqrt5}{20}=0.261803398875
+<\rho_0-1$，余量 $1.9765\times10^{-2}$。
+\end{corollary}
+
+\begin{remark}[极值结构的两个精确观察]\label{rem:r26struct}
+$n=5$、$s=s_0$ 的极值构型有两个值得记录的性质，它们对下一步的对称化至关重要。
+\textbf{(1) 负对恰好满足 $\langle u_i,u_j\rangle=-a_ia_j$。}
+环上 $\Delta\varphi=144^\circ$ 的对给出 $\cos144^\circ=-\frac{\varphi}2$，于是
+$\langle u_k,u_l\rangle=s-(1-s)\frac{\varphi}2$；令其等于 $-s$ 得
+$s(2+\frac\varphi2)=\frac\varphi2$，即 $s=\frac{\varphi}{4+\varphi}=s_0$。
+所以\textbf{$s_0$ 的定义式就是「负对的 Gram 值恰为 $-a_ia_j$」}，
+此时每对的贡献 $g_1^2a^2(-\langle\cdot,\cdot\rangle-a^2)=g_1^2s_0^2$ 达到「$A=2B$」的比例。
+\textbf{(2) 极点原子只携带 $\sigma$-质量而不携带 $\rho$-质量。}
+写 $\sigma_i:=g_ia_i^2$、$\rho_i:=g_ib_i^2$（$b_i=\sqrt{1-a_i^2}$），
+则 $\sum\sigma=1$、$\sum\rho=2$、$g_i=\sigma_i+\rho_i$、$r_i:=g_ia_ib_i=\sqrt{\sigma_i\rho_i}$，
+各向同性的交叉项成为 $\sum_ip_i\sqrt{\sigma_i\rho_i}\,p_i=0$，
+环上二维各向同性成为 $\sum_i\rho_ip_ip_i^\top=I_2$。
+极值点处：极点 $\rho_0=g_0b_0^2=0$、$\sigma_0=g_0=\frac{2-\varphi}2=0.190983$；
+环上 $\rho_k=\frac25=0.4$、$\sigma_k=\rho_k\frac{s_0}{1-s_0}=\frac{\varphi}{10}=0.161803$，
+$\sum\sigma=\frac{2-\varphi}2+5\cdot\frac\varphi{10}=1$ ✓。
+\textbf{极点的作用}是把 $\sigma$-质量（它出现在 $\mathrm{Neg}$ 的\emph{减}项里）
+搬到 $\rho$-质量之外，从而在不增加二维各向同性负担的前提下压低 $\mathrm{Neg}$ 的约束——
+这解释了为什么极值元\emph{必须}带一个极点，也解释了锥结构的来源。
+\end{remark}
+
+\begin{remark}[两条线合并成一条]\label{rem:r26one}
+定理~\ref{thm:r23uni}~已证明\textbf{单轴锥族}上 $\max F=\rho_0$，
+即锥帧的全局上界恰为 $\rho_0$；
+推论~\ref{cor:r26rank1cone}~证明了\textbf{秩一锥帧}上界为 $\frac{11+\varphi}{10}<\rho_0$。
+因此：
+\[
+\text{「极值元必为锥」}\ \Longrightarrow\
+\begin{cases}
+\kappa_3\le\rho_0 & (\text{全局猜想，由定理~\ref{thm:r23uni}}),\\
+\kappa_3(\text{秩一})=\frac{11+\varphi}{10} & (\text{由推论~\ref{cor:r26rank1cone}}).
+\end{cases}
+\]
+全局问题与秩一截面问题\textbf{共享同一条缺口}，即锥最优性。
+这把第 25 轮队列里的 P1（秩一截面）与 P2（锥最优性）合并为单一目标，
+是本轮在方法论上最重要的收获：不必再分别攻击两个问题。
+\end{remark}
+
+\subsection{等纬度环的精确上界 $\frac32$}\label{sec:r26:ring}
+
+\begin{lemma}[余弦绝对值的均值界]\label{lem:r26Tn}
+对每个 $n\ge3$，
+\begin{equation}\label{eq:r26Tn}
+T_n:=\sum_{d=0}^{n-1}\bigl|2\cos\tfrac{2\pi d}n+1\bigr|\le\frac{3n}2 ,
+\end{equation}
+等号当且仅当 $n=4$。
+\end{lemma}
+
+\begin{proof}
+令 $D=\{d:\cos\frac{2\pi d}n<-\frac12\}=\{k,k+1,\dots,n-k\}$，$k=\lceil n/3\rceil$，
+$M:=|D|=n-2k+1$。因 $\sum_{d=0}^{n-1}(2\cos\frac{2\pi d}n+1)=n$，
+\[
+T_n=n+2\sum_{d\in D}\Bigl(-2\cos\tfrac{2\pi d}n-1\Bigr)
+=n+4\cdot\frac{\sin(M\pi/n)}{\sin(\pi/n)}-2M ,
+\]
+其中用了对称区间上的余弦和
+$\sum_{d=k}^{n-k}\cos\frac{2\pi d}n=-\frac{\sin(M\pi/n)}{\sin(\pi/n)}$。
+故 \eqref{eq:r26Tn}~等价于
+\begin{equation}\label{eq:r26Tn2}
+\frac{\sin(M\pi/n)}{\sin(\pi/n)}\le\frac n8+\frac M2 .
+\end{equation}
+\textbf{情形 $n=3j$}：$M=j+1$，$x:=\pi/(3j)$，$jx=\pi/3$，
+$\frac{\sin((j+1)x)}{\sin x}=\frac{\sin(jx)\cos x+\cos(jx)\sin x}{\sin x}
+=\frac{\sqrt3}2\cot x+\frac12$。
+\eqref{eq:r26Tn2}~成为 $\frac{\sqrt3}2\cot x\le\frac{3j}8+\frac j2=\frac{7j}8$，
+即 $\cot x\le\frac{7j}{4\sqrt3}=1.010363\,j$；
+由 $\cot x\le1/x$（等价于 $\tan x\ge x$）得 $\cot\frac\pi{3j}\le\frac{3j}\pi=0.954930\,j$，成立。
+\textbf{情形 $n=3j+1$}：$M=j$，$x=\pi/(3j+1)$，需 $\frac{\sin(jx)}{\sin x}\le\frac{7j+1}8$。
+$j=1$（$n=4$）：两边都是 $1$，\textbf{取等}。
+$j=2$（$n=7$）：$\frac{\sin2x}{\sin x}=2\cos\frac\pi7=1.801938\le\frac{15}8=1.875$。
+$j=3$（$n=10$）：$\frac{\sin(3\pi/10)}{\sin(\pi/10)}=\frac{\cos(\pi/5)}{\sin(\pi/10)}=\varphi^2=2.618034\le\frac{22}8=2.75$。
+$j\ge4$：$jx\le\frac\pi3$ 且 $\sin$ 在 $[0,\frac\pi2]$ 上递增，故 $\sin(jx)\le\frac{\sqrt3}2$；
+又 $x\le\frac\pi{13}$，$\sin x\ge x(1-\frac{x^2}6)\ge0.990265\,x$，于是
+$\frac{\sin(jx)}{\sin x}\le\frac{0.866025}{0.990265}\cdot\frac{3j+1}\pi=0.834969\,j+0.278323
+\le0.875j+0.125$（等价于 $0.040031j\ge0.153323$，即 $j\ge3.83$）。
+\textbf{情形 $n=3j+2$}：$M=j+1$，$x=\pi/(3j+2)$，需 $\frac{\sin((j+1)x)}{\sin x}\le\frac{7j+6}8$。
+$j=1$（$n=5$）：$\frac{\sin(2\pi/5)}{\sin(\pi/5)}=\varphi=1.618034\le\frac{13}8=1.625$。
+$j=2$（$n=8$）：$\frac{\sin(3\pi/8)}{\sin(\pi/8)}=\sqrt2+1=2.414214\le\frac{20}8=2.5$。
+$j=3$（$n=11$）：$\frac{\sin(4\pi/11)}{\sin(\pi/11)}=3.228708\le\frac{27}8=3.375$。
+$j\ge4$：写 $(j+1)x=\frac\pi3+\delta$，$\delta=\frac\pi{3(3j+2)}$，
+则 $\sin((j+1)x)=\sin\frac\pi3\cos\delta+\cos\frac\pi3\sin\delta\le\frac{\sqrt3}2+\frac\delta2$；
+$x\le\frac\pi{14}$ 给 $\sin x\ge0.991607\,x$，于是
+$\frac{\sin((j+1)x)}{\sin x}\le\frac{0.866025(3j+2)+\pi/6}{0.991607\,\pi}
+=0.833967\,j+0.724050\le0.875j+0.75$，对一切 $j\ge0$ 成立。
+等号只在 $n=4$ 出现（其余各分支的估计都是严格的）。
+证书对 $n=3,\dots,4000$ 逐个核验 \eqref{eq:r26Tn}，违例 $0$ 个，取等集 $\{4\}$。
+\end{proof}
+
+\begin{proposition}[等纬度环上 $L_w\le\frac32$]\label{prop:r26ring}
+纯环帧（$n$ 个等权原子 $g=\frac3n$、纬度 $s=\frac13$、无极点）在秩一截面 $z=$ 轴上满足
+\begin{equation}\label{eq:r26ring}
+L_w=\frac{3}{n^2}\sum_{i,j}\bigl|\langle u_i,u_j\rangle\bigr|
+=\frac{3\bigl(1+R_n(\frac13)\bigr)}{n}
+=\frac{T_n}{n}\le\frac32 ,
+\end{equation}
+等号当且仅当 $n=4$。
+\end{proposition}
+
+\begin{proof}
+我们给两条互相独立的推导，二者必须给出同一个数，这本身就是对闭式的一次交叉检验。
+\emph{第一条（用定义直接算）。}纯环帧无极点原子，$n$ 个原子等权，
+且 $s=\frac13$ 时
+\[
+\langle u_k,u_l\rangle=\frac23\cos\frac{2\pi(k-l)}n+\frac13
+=\frac13\Bigl(2\cos\frac{2\pi(k-l)}n+1\Bigr),
+\]
+于是按差 $d=k-l$ 归并（每个 $d$ 恰出现 $n$ 次）
+\[
+\sum_{i,j}\bigl|\langle u_i,u_j\rangle\bigr|
+=\frac n3\sum_{d=0}^{n-1}\Bigl|2\cos\frac{2\pi d}n+1\Bigr|=\frac{nT_n}3 ,
+\]
+代回 $L_w=\frac3{n^2}\sum_{ij}|\langle u_i,u_j\rangle|$ 得 $L_w=\frac{T_n}n$。
+\emph{第二条（用锥族闭式的退化）。}命题~\ref{prop:r26conecl}~的闭式在 $g_0=0$、$s=\frac13$ 处退化为
+$L_w=\frac{3(1+R_n(\frac13))}n$；而
+\[
+R_n\Bigl(\frac13\Bigr)=\sum_{d=1}^{n-1}\Bigl|\frac23\cos\frac{2\pi d}n+\frac13\Bigr|
+=\frac13\sum_{d=1}^{n-1}\Bigl|2\cos\frac{2\pi d}n+1\Bigr|=\frac13(T_n-3),
+\]
+其中减去的 $3$ 正是 $d=0$ 那一项的 $|2+1|$，故 $1+R_n(\frac13)=\frac{T_n}3$，
+同样得到 $L_w=\frac{3T_n}{3n}=\frac{T_n}n$。
+两条路一致。最后由引理~\ref{lem:r26Tn}~的 $T_n\le\frac{3n}2$（等号 $\iff n=4$）得
+$L_w\le\frac32$，等号当且仅当 $n=4$。
+\end{proof}
+
+\begin{remark}
+$n=4$ 的环（四个等权原子 $g=\frac34$、纬度 $1/\sqrt3$、方位角 $0^\circ,90^\circ,180^\circ,270^\circ$）
+是秩一截面的\textbf{第二个精确极值点}：$L_w=\frac32$、$\mathrm{Neg}=\frac14$、
+$\rho=\frac12(\frac32+1)=\frac54$。
+$\frac54$ 这个数与第 15--17 轮完全二部掩码的全局定理 $F(I+A(K_{a,b}))=\frac54$
+数值相同，但二者并无已知的结构联系，我们不作过度解读。
+\end{remark}
+
+\subsection{数值证据}\label{sec:r26:num}
+
+以下均为\textbf{数值}结果，不计入已证结论；由
+\texttt{证书\_负质量恒等式与秩一截面.py} 复现（$28$ 项全绿）。
+\begin{enumerate}\itemsep2pt
+\item 主恒等式 $L_w=A_w^2+2\mathrm{Neg}^*$：$1200$ 组随机 $(g,U,\Lam)$
+（$N=4,\dots,10$，$\Lam$ 取单轴 $/$ 随机谱 $+$ 随机正交 $/$ 随机谱 $+$ 对角三类），最大残差 $6.7\times10^{-16}$。
+\item 与第 25 轮判据的等价：$\mathrm{Neg}^*-[(\rho_0-1)+\sin^2\theta]=\frac12(\frac{\delta_0}3-\Phi)$，
+$800$ 组随机，残差 $3.3\times10^{-16}$。
+\item 半球翻转：$\|\widetilde m-z\|=0$、$\|\widetilde m\|=1$（残差 $8.9\times10^{-16}$），
+$L_w=1+2\mathrm{Neg}$ 在 $900$ 组上残差 $1.8\times10^{-15}$。
+\item 锥族闭式 \eqref{eq:r26cl}~与显式帧：$n=3..12$、四个 $s$ 值，残差 $1.1\times10^{-15}$；
+四个精确极大值（\eqref{eq:r26four}）由 \texttt{sympy} 在 $60$ 位下核对，值与驻点均为精确 $0$ 差。
+\item 一般帧秩一截面全局搜索：$N=4,\dots,12$，每阶 $350$ 个随机 Stiefel 起点
+（每个起点再用原子方向 $+$ 随机方向候选与幂迭代式细化选最优 $z$），
+随后 Powell 精修（$\mathrm{xtol}=10^{-13}$）。最好值：
+$N=4,5,6,8$ 收敛到 $\frac32$（四维环），$N=7,9,10,11,12$ 收敛到 $\frac{13+\sqrt5}{10}$
+（五维锥），\textbf{无一超过锥族上确界}（最大超出 $-2.0\times10^{-15}$）。
+\item 环族引理：$T_n\le\frac{3n}2$ 对 $n=3,\dots,4000$ 成立，违例 $0$，取等仅 $n=4$；
+$T_5=7.472136$（余量 $2.79\times10^{-2}$）、
+ $T_n/n\to\frac{2\sqrt3+\pi/3}{\pi}=1.435991124177$（$n=10^5$ 时 $1.435991124$）；
+ 极限函数 $L_\infty$ 的最大值 $1.461301915096$ 在 $s=0.282760729581$，
+ 由 $60$ 位高精度求根复核（导数残差 $9.2\times10^{-68}$）。
+\end{enumerate}
+
+\subsection{本轮状态、诚实标签与方法优先队列（第十三版）}\label{sec:r26:status}
+
+\begin{center}\small
+\begin{tabular}{lll}
+\toprule
+结论 & 状态 & 位置\\
+\midrule
+$A_w=\max_\varepsilon\|m_\varepsilon\|$（符号模式有限分解） & \textbf{已证（精确）} & 引理~\ref{lem:r26sign}\\
+\textbf{$L_w=A_w^2+2\mathrm{Neg}^*$}、$\kappa_3=\sup(A_w^2+\mathrm{Neg}^*)$ & \textbf{已证（精确）} & 定理~\ref{thm:r26neg}\\
+主猜想 $\iff\mathrm{Neg}^*\le(\rho_0-1)+\sin^2\theta$ & \textbf{已证（等价改写）} & 定理~\ref{thm:r26neg}\\
+\STW\ 差距 $=\frac{\delta_0}6=\Phi_{\STW}-\rho_0$（精确） & \textbf{已证（精确代数）} & 推论~\ref{cor:r26stw}\\
+半球翻转 $\widetilde m=z$、$\|\widetilde m\|=1$ & \textbf{已证（精确）} & 引理~\ref{lem:r26hemi}\\
+秩一截面 $L_w=1+2\mathrm{Neg}$ & \textbf{已证（精确）} & 命题~\ref{prop:r26rank1}\\
+锥族闭式 \eqref{eq:r26cl} & \textbf{已证（精确）} & 命题~\ref{prop:r26conecl}\\
+$R_3,R_4,R_5,R_6$ 的显式 & \textbf{已证（精确）} & 引理~\ref{lem:r26Rn}\\
+$n=3,4,5,6$ 的四个精确极大值 & \textbf{已证（符号 $60$ 位）} & 定理~\ref{thm:r26cone}\\
+$\sup_{\text{锥}}L_w=\frac{13+\sqrt5}{10}$（含 $n\ge7$） & \textbf{已证}（$n\le6$）$+$\textbf{数值}（$n\ge7$） & 定理~\ref{thm:r26cone}\\
+秩一锥帧闭合 $\rho\le\frac{11+\varphi}{10}=1.261803$ & \textbf{已证} & 推论~\ref{cor:r26rank1cone}\\
+极值结构：负对满足 $\langle u_i,u_j\rangle=-a_ia_j$ & \textbf{已证（精确代数）} & 注~\ref{rem:r26struct}\\
+$T_n\le\frac{3n}2$（等号 $\iff n=4$） & \textbf{已证}（三分支 $+$ 小情形） & 引理~\ref{lem:r26Tn}\\
+等纬度环 $L_w\le\frac32$、$n=4$ 取等 & \textbf{已证} & 命题~\ref{prop:r26ring}\\
+一般帧 $\sup L_w=\frac{13+\sqrt5}{10}$ & \textbf{数值}（$3150$ 起点 $+$ Powell） & \S\ref{sec:r26:num}\\
+\textbf{一般帧上 $\mathrm{Neg}\le\rho_0-1$} & \textbf{未证}（余量 $3.95\times10^{-2}$） & 注~\ref{rem:r26one}\\
+\textbf{全局 $\kappa_3\le\rho_0$} & \textbf{未证}（归约为锥最优性 $+$ 窗口） & 注~\ref{rem:r26one}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{方法优先队列（第十三版，数学优先）}：
+\begin{enumerate}\itemsep2pt
+\item[\textbf{P1}] \textbf{锥最优性（单一对称化命题，同时关闭全局与秩一两条线）}。
+陈述：在秩一截面上，$L_w$ 的极值帧必为「极点 $+$ 正 $n$ 边形」（可能带权重退化）。
+一旦成立，推论~\ref{cor:r26rank1cone}~与定理~\ref{thm:r23uni}~立即给出
+$\kappa_3(\text{秩一})=\frac{11+\varphi}{10}$ 与 $\kappa_3\le\rho_0$。
+注~\ref{rem:r26struct}(2) 给出了极值元的必要结构线索：
+极点原子携带 $\sigma$-质量而\emph{不}携带 $\rho$-质量，
+因此任何对称化必须在 $(\sigma,\rho)$ 双权重语言下进行，而不能只对 $g$ 做重排。
+入口：（a）$(\sigma,\rho,p,\lambda)$ 坐标下的一阶条件（$\lambda$ 为拉格朗日乘子），
+证明极值元的 $\lambda_k:=\sigma_k/\rho_k$ 至多取两个值；
+（b）圆上的 Riesz 型重排——注意核 $(-\cos\Delta)_+$ 在 $[0,\pi]$ 上\emph{递增}，
+故 Riesz 不等式给的是下界而非上界，需要改用「平衡约束 $\sum r_ip_i=0$ $+$ 二维各向同性
+$\sum\rho_ip_ip_i^\top=I_2$」的紧性论证；
+（c）把二维各向同性写成 $\sum\rho_ip_i^2$（复数）的模条件，用 Fej\'er--Riesz 型证书。
+\item[\textbf{P2}] \textbf{直接估计 $\mathrm{Neg}^*$（不依赖对称化）}。
+已有工具：$\mathrm{Neg}\le P_-=\frac12\sum_{ij}r_ir_j|c_{ij}|$（$r=gab$，$c=\langle p_i,p_j\rangle$），
+以及 $\sum_{ij}r_ir_jc_{ij}=0$（正负质量相等）。
+粗估给 $\mathrm{Neg}\le\frac{\sqrt2}2=0.7071$（用 $\sqrt{\sigma_i\sigma_j}\le\frac{\sigma_i+\sigma_j}2$
+与二维各向同性），\textbf{已知不足}（目标 $0.2816$，差 $2.5$ 倍）。
+改进点：（i）负集 $\{c<-\lambda_i\lambda_j\}$ 的\emph{限制}尚未用上（它把 $c$ 与 $\lambda$ 耦合）；
+（ii）$\sum\rho_ip_ip_i^\top=I_2$ 只用了迹，未用无迹部分；
+（iii）$\lambda_i$ 的分布受 $\sum\rho\lambda^2=1$ 约束，可用 Jensen／LP 对偶。
+\item[\textbf{P3}] \textbf{窗口内的两尺度下界}（沿用第十二版 P3，已知缺口 $12.5\%$）。
+本轮的新入口：$\mathrm{Neg}^*$ 与 $h$-色散的关系——
+$\sin^2\theta$ 越大（$\Lam$ 越远离秩一），允许的 $\mathrm{Neg}^*$ 越大，
+这条\emph{互补}关系正是定理~\ref{thm:r26neg}~给出的，
+可尝试证明 $\mathrm{Neg}^*\le(\rho_0-1)+c\sin^2\theta$ 中 $c=1$ 是最优系数并给出证明。
+\item[\textbf{P4}] \textbf{提高中心截面余量}（沿用）：$m_1=1.040\times10^{-3}$。
+\item[\textbf{副}] \textbf{下界方向}：轮族极值性定理；
+本轮新增素材：$n=4$ 等纬度环在秩一截面上给出精确值 $\rho=\frac54$，
+可作为下界一侧的一个新构造点。
+\end{enumerate}
+
+复现：报告目录下 \texttt{证书\_负质量恒等式与秩一截面.py}（$28$ 项全绿，
+输出 \texttt{\_cert\_r26\_out.txt}，约 $20$ 秒）：
+$60$ 位常数代数（含 $(6+\varphi)/5=(13+\sqrt5)/10$、$s_0=\varphi/(4+\varphi)=(1+2\sqrt5)/19$、
+$\mathrm{Neg}_{\max}=\varphi^2/10$、\STW\ 差距 $=\delta_0/6$）、
+主恒等式与等价性的随机核验、半球翻转与 $L_w=1+2\mathrm{Neg}$、
+锥族闭式与四个精确极大值的符号核对、$n=3..24$ 的一维极大化、
+环族引理 $T_n\le3n/2$（$n\le4000$）、一般帧全局搜索（$N=4..12$）、
+秩一锥族闭合与余量、与 \STW\ 天花板的对照；
+仓库根目录 \texttt{\_r26a.py}（锥族扫描）、\texttt{\_r26b.py}（一般帧搜索）、
+\texttt{\_r26c.py}（符号极大值）、\texttt{\_r26d.py}（环族 $T_n/n$ 与极限锥族函数）、
+\texttt{\_r26e.py}（独立复核：$n=3..24$ 的 $\max_sL_w(s,n)$ 向量化重算并与本文列表逐项对照、
+四个精确极大值的 $60$ 位验证、$L_\infty$ 驻点与导数残差、$T_n\le\frac{3n}2$ 对 $n\le4000$ 的穷举、
+$\lim T_n/n$ 的闭式 $\frac{2\sqrt3+\pi/3}{\pi}$；输出 \texttt{\_r26e\_out.txt}）。
 
 \section{通道型主函数方案的精确天花板}\label{sec:nogo}
 

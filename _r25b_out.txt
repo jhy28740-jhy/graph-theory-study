@@ -1,0 +1,24 @@
+=== 1) 锥族 (极点 + 正 n 边形) 扫描 ===
+  n= 3  max=1.166665313363  at a=0.999999 z=0.446789   (rho0=1.281568196872, diff=-1.149e-01)
+  n= 4  max=1.249999364937  at a=0.999999 z=-0.577312   (rho0=1.281568196872, diff=-3.157e-02)
+  n= 5  max=1.261801118349  at a=0.999999 z=0.537151   (rho0=1.281568196872, diff=-1.977e-02)
+  n= 6  max=1.222165254027  at a=0.999999 z=-0.496990   (rho0=1.281568196872, diff=-5.940e-02)
+  n= 7  max=1.231926500362  at a=0.999999 z=-0.557231   (rho0=1.281568196872, diff=-4.964e-02)
+  n= 8  max=1.242835458155  at a=0.999999 z=0.537151   (rho0=1.281568196872, diff=-3.873e-02)
+  n= 9  max=1.230256551292  at a=0.999999 z=-0.517070   (rho0=1.281568196872, diff=-5.131e-02)
+  n=10  max=1.228373271371  at a=0.999999 z=-0.547191   (rho0=1.281568196872, diff=-5.319e-02)
+  n=11  max=1.236915509428  at a=0.999999 z=-0.537151   (rho0=1.281568196872, diff=-4.465e-02)
+  n=12  max=1.232022064797  at a=0.999999 z=0.517070   (rho0=1.281568196872, diff=-4.955e-02)
+  锥族总最大 = 1.261801118349485 ; 与 rho0 之差 = -1.977e-02
+
+=== 2) 随机帧: max over rho ===
+  N= 4  best over 40 random frames: 1.140491764030 at rho=1.0000  (diff to rho0 = -1.411e-01)
+  N= 5  best over 40 random frames: 1.162431028755 at rho=1.0000  (diff to rho0 = -1.191e-01)
+  N= 6  best over 40 random frames: 1.188290521376 at rho=1.0000  (diff to rho0 = -9.328e-02)
+  N= 7  best over 40 random frames: 1.160779994837 at rho=1.0000  (diff to rho0 = -1.208e-01)
+  N= 8  best over 40 random frames: 1.178620082455 at rho=1.0000  (diff to rho0 = -1.029e-01)
+  N= 9  best over 40 random frames: 1.176065046068 at rho=1.0000  (diff to rho0 = -1.055e-01)
+  N=10  best over 40 random frames: 1.172149969549 at rho=1.0000  (diff to rho0 = -1.094e-01)
+  N=12  best over 40 random frames: 1.171275071807 at rho=1.0000  (diff to rho0 = -1.103e-01)
+  N=14  best over 40 random frames: 1.138307527593 at rho=0.9965  (diff to rho0 = -1.433e-01)
+  随机帧全局最好 = 1.188290521375631
