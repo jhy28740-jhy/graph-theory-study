@@ -5,7 +5,7 @@
 \usepackage{lmodern,microtype}
 \usepackage{amsmath,amssymb,amsthm,mathtools}
 \usepackage[hidelinks]{hyperref}
-\hypersetup{pdftitle={A joint moment bound for the three largest graph eigenvalues},pdfauthor={}}
+\hypersetup{pdftitle={A joint moment bound for the three largest graph eigenvalues},pdfauthor={Haoyang Ji}}
 \usepackage{enumitem}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}[theorem]{Lemma}
@@ -24,8 +24,8 @@
 \allowdisplaybreaks[1]
 \numberwithin{equation}{section}
 \title{A joint moment bound for the three largest graph eigenvalues}
-\author{}
-\date{}
+\author{Haoyang Ji}
+\date{November 2, 2026}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -110,10 +110,12 @@ kernel $W:[0,1]^2\to[0,1]$, let
        \iint W(x,y)F(x)\cdot F(y)\,dx\,dy,
  \qquad \mathcal M=\sup_W\Sigma_3(W).
 \end{equation}
-The supremum is over real orthonormal $k$-frames. Since $T_W$ is compact
-and self-adjoint on an infinite-dimensional space, $\Sigma_k$ is the sum
-of the first $k$ positive eigenvalues, padded by zero if necessary. This
-convention applies only to graphons, not to $\Lambda_3(G)$.
+The supremum is over real orthonormal $k$-frames. Since $W\in L^2([0,1]^2)$,
+the operator $T_W$ is Hilbert--Schmidt and therefore compact; it is also
+self-adjoint, so its spectrum is real and accumulates only at zero, and
+$\Sigma_k$ is the sum of the first $k$ positive eigenvalues, padded by zero
+if there are fewer than $k$ of them. This convention applies only to
+graphons, not to $\Lambda_3(G)$.
 The maximum $\mathcal M$ is attained. For a maximizing graphon, choose an
 orthonormal top-three eigenframe $F=(f_1,f_2,f_3)^T$, with $f_1\ge0$,
 and call $F_\#dx$ its canonical law.

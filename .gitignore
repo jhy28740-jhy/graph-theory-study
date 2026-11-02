@@ -1,4 +1,4 @@
-﻿# ---- 中间产物 / 临时脚本（不入库）----
+# ---- 中间产物 / 临时脚本（不入库）----
 _pdfbuild/
 _chapters/
 _clean/
@@ -12,3 +12,12 @@ _extracted.txt
 *.log
 Thumbs.db
 _*.ps1
+
+# ---- 2026-11-02 分类整理：体量大的工作目录默认不入库 ----
+# archive/ 约 1.73 GB，thesis_spectral_extremes/ 约 1.88 GB，切勿 git add -A
+/scripts/
+/data/
+/tex_fragments/
+/assets/
+/archive/
+/thesis_spectral_extremes/
