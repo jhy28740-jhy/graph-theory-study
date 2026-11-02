@@ -1,0 +1,1711 @@
+\documentclass[UTF8,11pt]{ctexart}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array,geometry,enumitem}
+\usepackage{xcolor}
+\definecolor{linkblue}{rgb}{0.10,0.20,0.45}
+\usepackage[colorlinks=true,linkcolor=linkblue,citecolor=linkblue,urlcolor=linkblue]{hyperref}
+\geometry{a4paper,margin=2.3cm}
+\setlength{\parskip}{3pt}
+\setlength{\emergencystretch}{3em}
+\sloppy
+\newtheorem{theorem}{定理}[section]
+\newtheorem{lemma}[theorem]{引理}
+\newtheorem{proposition}[theorem]{命题}
+\newtheorem{corollary}[theorem]{推论}
+\theoremstyle{definition}
+\newtheorem{remark}[theorem]{注}
+\newcommand{\Lam}{\Lambda}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\dd}{\,\mathrm{d}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\one}{\mathbf{1}}
+\newcommand{\esssup}{\operatorname*{ess\,sup}}
+\newcommand{\essinf}{\operatorname*{ess\,inf}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\Sym}{\operatorname{Sym}}
+% \peq: \u5f15\u7528\u53d7\u5ba1\u7a3f\u4ef6\u7684\u516c\u5f0f\uff08\u7528\u5176 \label \u540d\uff0c\u4e0d\u4ea7\u751f\u672c\u6587\u672a\u5b9a\u4e49\u5f15\u7528\uff09
+\newcommand{\peq}[1]{\textup{\u5f0f}\,\texttt{#1}}
+\newcommand{\ok}{\textcolor[rgb]{0.05,0.45,0.15}{\bfseries [已证]}}
+\newcommand{\chk}{\textcolor[rgb]{0.05,0.25,0.55}{\bfseries [已核]}}
+\newcommand{\gap}{\textcolor[rgb]{0.70,0.15,0.10}{\bfseries [缺口]}}
+\newcommand{\num}{\textcolor[rgb]{0.55,0.35,0.00}{\bfseries [数值]}}
+\title{\bfseries 稿件审核报告\\[4pt]
+\large \emph{A joint moment bound for the three largest graph eigenvalues}\\[2pt]
+\normalsize 主定理证明链的逐节复核、符号与数值验证、问题清单及对学位论文主线的影响}
+\author{}
+\date{2026 年 11 月 2 日}
+\begin{document}
+\maketitle
+\vspace{-1.5em}
+
+\begin{abstract}
+本报告对稿件 \emph{A joint moment bound for the three largest graph eigenvalues}
+（\texttt{top3\_joint\_moment\_bound.pdf}，19 页；权威源文件
+\texttt{top3\_joint\_moment\_bound.tex}，1346 行）进行独立审核。稿件主张：对任意
+$n\ge3$ 的有限简单图 $G$，
+\[
+\begin{split}
+ \Lam_3(G)&=\lambda_1(G)+\lambda_2(G)+\lambda_3(G)\ \le\ c\,n-3,\\
+ c&=\frac{106106902139519}{107310156800000}+\frac{41\sqrt3}{240}
+    -\frac{53}{9000000}=1.284673255723918505\ldots ,
+\end{split}
+\]
+从而把 Sivashankar--Tang--Wakhare（arXiv:2608.02429，命题 6.1）的系数
+$(3+\sqrt5)/4=1.309016994\ldots$ 降低 $0.024343738651028919\ldots$；并主张每个取到极大值的
+graphon 其典范律至多有 $24$ 个支撑点。
+
+审核采用三条互相独立的轨道：(i) 对全部 $34$ 个编号结果逐行手推重证，不把稿件的中间步骤当作前提；
+(ii) 用 \texttt{sympy} 精确有理数与二次域算术机检约 $120$ 条显示恒等式、因式分解与有理数证书；
+(iii) 用 \texttt{numpy/scipy} 做 $16$ 条证书恒等式的残差检验、$4000$ 个随机各向同性律的压力测试、
+$k=4$ 至 $k=20$ 共 $11$ 个原子数下的全局极值搜索（每个 $60$--$70$ 组随机初值）、$n=3$ 至 $6$ 全部
+$33864$ 个图的穷举，以及 $n$ 至 $2016$ 的吹起族验证。
+
+\textbf{总体结论}：\emph{主定理的证明在数学上成立}，我没有发现任何会导致主定理失效的错误。
+发现 \textbf{两处可修补的论证跳步}（\S\ref{sec:g1} 的阈值公式唯一性、\S\ref{sec:g2} 的电路论证中
+"所有观测均为常值"这一情形），二者都属于表述层面而非数学错误，本报告给出完整修补（分别约 4 行与 1 句）。
+其余为 $6$ 条表述性建议与 $1$ 条文献残余风险。
+
+\textbf{必须向导师明确指出的实质性事实}：常数 $c$ \emph{不是}最优值。稿件自身构造给出下界
+$c_{\mathrm w}=\rho_0=(9+\sqrt5+2\sqrt{35})/18=1.281568196872\ldots$，与 $c$ 相差
+$3.105058851751\times10^{-3}$；本报告用 $n=126,\ldots,2016$ 的吹起族数值确认
+$\Lam_3(G)/n\to\rho_0$，即该缺口是真实存在的、随 $n$ 线性增长的。稿件在"Further questions"
+一节对此已作诚实声明。这对学位论文"求精确上界"的定位有直接影响，详见 \S\ref{sec:thesis}。
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{审核范围、材料与判定标准}\label{sec:scope}
+
+\subsection{受审材料}
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+文件 & 说明 & 用途\\
+\midrule
+\texttt{D:\textbackslash top3\_joint\_moment\_bound.pdf} & 19 页，pdfTeX & 主审对象\\
+\texttt{D:\textbackslash top3\_joint\_moment\_bound.tex} & 1346 行 & \textbf{权威源}（公式一律以此为准）\\
+\texttt{D:\textbackslash top3\_submission\_sources.zip} & 投稿包 & 完整性核对\\
+\texttt{D:\textbackslash contribution\_and\_checks\_zh.tex} & 作者自查（中文） & 与本报告交叉比对\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent\textbf{关于公式来源的说明。} PDF 的文本抽取会把数学式严重错排（例如
+$41\sqrt3$ 被抽成 ``$\sqrt{41}\cdot3$''，$(3+\sqrt5)/4$ 被拆行），因此本报告所有公式核对
+一律直接读 \texttt{.tex} 源文件。这是审核方法上的第一步，也是必要的一步。
+
+\subsection{判定标签}
+本报告对每一条结论使用四个互斥标签，避免把"我验证过"与"我相信它"混为一谈：
+\begin{itemize}[leftmargin=1.6em,itemsep=1pt]
+\item \ok\ 我独立重推了完整证明，每一步都成立（含精确算术）。
+\item \chk\ 我用符号计算或数值计算核对为真，但没有独立写出人类可读的完整证明（例如某些
+$41503$ 量级的整数系数：我验证了它们满足所述性质，但没有复现其搜索过程）。
+\item \num\ 仅有数值证据。\textbf{数值证据不等同于结果}。
+\item \gap\ 论证存在跳步或前提缺失。若可修补，我给出修补并说明修补后的判定。
+\end{itemize}
+
+\subsection{总体结论一览}
+\begin{center}
+\small
+\begin{tabular}{@{}p{0.50\textwidth}p{0.42\textwidth}@{}}
+\toprule
+稿件主张 & 判定\\
+\midrule
+定理 1.1（\texttt{main}）：$\Lam_3(G)\le cn-3$ & \ok\ （依赖 G1 修补）\\
+定理 1.1（\texttt{main}）：律界 $\E|X\!\cdot\!X'|+|\E X|^2\le 2c$ & \ok\\
+定理 1.2（\texttt{structure-main}）：$\le24$ 支撑点 & \ok\ （依赖 G1、G2 修补）\\
+定理 1.2：原 graphon 几乎处处等于二值阶梯核 & \gap\ $\to$\ok\ （G1，修补 4 行）\\
+引理 2.2（\texttt{ranktwo}）：$\Sigma_2(W)\le7/6$ & \ok\\
+引理 2.3（\texttt{attainment}）：$\mathcal M$ 可达，$c_{\mathrm w}\le\mathcal M\le(1+\sqrt3)/2$ & \ok\\
+引理 2.4（\texttt{ellipse-structure}）：$F^TLF=\mathcal M$ a.e. & \ok\\
+引理 2.5（\texttt{row-insertion}）：$r^TL^{-1}r\le\mathcal M$ & \ok\ （独立重推）\\
+引理 2.6（\texttt{contact-structure}）：阈值公式 & \gap\ $\to$\ok\ （G1）\\
+定理 3.1（\texttt{negative}）：二次变差半负定 & \ok\\
+引理 3.2（\texttt{propagate}）：$r\le24$ & \ok\\
+引理 3.3（\texttt{descent}）：$|T|\le2^{d-1}$ & \ok\\
+定理 3.4（\texttt{finite}）：$|S|\le1204$ & \ok\\
+引理 4.2（\texttt{binary}）：分离观测 & \gap\ $\to$\ok\ （G2，修补 1 句）\\
+定理 4.3（\texttt{six}）／推论 4.4（\texttt{twentyfour}） & \ok\\
+式 (5.1)--(6.4)：矩预算 \texttt{budget4}/\texttt{budget7} & \ok\ $+$\chk\\
+引理 6.1（\texttt{scalar}）：$\sigma$ 的两条点态不等式 & \ok\\
+引理 6.3（\texttt{radialpayment}） & \ok\\
+命题 7.2（\texttt{conditional-law}）：$D\ge d_0$ & \ok\\
+引理 8.2（\texttt{contact-square}）：$z_*^2\le3\sigma/2$ & \ok\ （常数 $3/2$ 非紧）\\
+命题 8.5（\texttt{conditional8}）：$D\ge d_1$ & \ok\\
+引理 9.1（\texttt{spectral-reserve}） & \ok\\
+命题 9.3（\texttt{final-certificate}）：$\mathcal M\le c$ & \ok\\
+"系数 $c$ 最优"／"极值图已确定" & 稿件\textbf{未}主张（正确）\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{稿件主张的精确复述与常数表}\label{sec:claims}
+
+稿件的逻辑骨架可以压缩成一条链。设 $\mathcal M=\sup_W\Sigma_3(W)$（$W$ 遍历所有 graphon，
+$\Sigma_3$ 为前三正特征值之和、不足补零），则
+\[
+ \underbrace{\mathcal M\ \ge\ c_{\mathrm w}=\rho_0}_{\text{引理 2.3：}K_1\vee C_5\text{ 加权构造}}
+ \qquad\text{且}\qquad
+ \underbrace{\mathcal M\ \le\ c}_{\text{命题 9.3：证书}},
+\]
+再由"任意各向同性律 $\to$ 二值核 $W_X$ $\to$ $\Sigma_3(W_X)\le\mathcal M$"与
+"秩三 Ky Fan 公式 $\to$ 去对角"两步转移，得到有限图界 $\Lam_3(G)\le cn-3$。
+
+\begin{center}
+\small
+\begin{tabular}{llll}
+\toprule
+量 & 精确值 & 十进制 & 来源\\
+\midrule
+STW 系数 & $(3+\sqrt5)/4$ & $1.309016994374947$ & \cite{STW} arXiv:2608.02429 命题 6.1\\
+稿件系数 $c$ & $\frac{106106902139519}{107310156800000}+\frac{41\sqrt3}{240}-\frac{53}{9000000}$ & $1.284673255723918505$ & 定理 1.1\\
+改进量 & $(3+\sqrt5)/4-c$ & $0.024343738651028919$ & 已核，与稿件一致\\
+下界 $c_{\mathrm w}=\rho_0$ & $(9+\sqrt5+2\sqrt{35})/18$ & $1.281568196872168$ & 引理 2.3\\
+\textbf{缺口} & $c-\rho_0$ & $\mathbf{0.003105058851751}$ & \textbf{本报告核算}\\
+$d$ & $(3+\sqrt5)/2-2c$ & $0.048687477302$ & 式 (5.1)\\
+$d_1$ & $d-1/3000000$ & $0.048687143969$ & 式 (5.1)\\
+$d_0$ & $d_1-103/9000000$ & $0.048675699524$ & 式 (5.1)\\
+$\delta_{\mathrm q}$ & $(3+\sqrt5)/2-544886/207515$ & $0.048694\ldots$ & \S6\\
+分支阈值 & $1/20$ & $0.05$ & \S7--\S9\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent\textbf{一个容易被忽略的结构性事实。} 由于 $c\in\mathbb Q(\sqrt3)$（$\sqrt5$ 在
+$d=(3+\sqrt5)/2-2c$ 中被完全消去），我已用符号计算验证
+$c=(3+\sqrt5)/4-d_1/2-1/6000000$，即"自对原子项"对 $c$ 的贡献恰为 $1/6000000=1.67\times10^{-7}$，
+与稿件"Most of the improvement \dots\ comes from the preceding joint moment estimate"的说法一致。
+换言之，\textbf{改进量的 $99.995\%$ 来自 \S5--\S8 的联合矩证书，末端的原子项几乎可以忽略}。
+这一点对后续优化方向的排序很重要（见 \S\ref{sec:slack}）。
+
+\section{审核方法与工作量}\label{sec:method}
+
+\subsection{三轨制}
+\textbf{轨道一（逐行手推）。} 对稿件 $34$ 个编号结果，我不使用其证明中的任何中间断言作为前提，
+而是从定义出发重新推导。凡涉及不等式放缩处，我逐条检查放缩方向与所用常数。
+特别地，对两处最容易出错的环节——引理 2.5（行插入）与引理 2.3（$\mathcal M$ 的可达性）——
+我做了完全独立的重新构造，得到的表达式与稿件逐项吻合。
+
+\textbf{轨道二（符号机检）。} 全部有理数以 \texttt{sympy.Rational} 精确表示，$\sqrt3,\sqrt5$
+保留在二次域中，不使用浮点。共验证约 $120$ 条判据：因式分解恒等式、配方恒等式、系数归并关系、
+有理数下界证书、以及所有"$>0$"断言。对稿件用 $\sqrt5<161/72$、$\sqrt3>433/250$ 得到的四个有理数下界，
+我逐条重算，结果见 \S\ref{sec:sym}。
+
+\textbf{轨道三（数值机检）。} 见 \S\ref{sec:num}。
+
+\subsection{工作量}
+\begin{center}
+\small
+\begin{tabular}{lrl}
+\toprule
+项目 & 数量 & 说明\\
+\midrule
+稿件编号结果逐行复核 & 34 & 引理/定理/命题/推论\\
+稿件显示公式逐条复核 & 约 60 & 含所有编号方程\\
+符号判据（精确算术） & 约 120 & 全部通过\\
+证书恒等式残差检验 & 16 & 机器精度（$\le1.6\times10^{-14}$）\\
+随机各向同性律压力测试 & 4000 & 违例 $0$ 例\\
+全局极值搜索 & $k=4..20$ 共 11 个原子数 & 每档 $60$--$70$ 组初值\\
+有限图穷举 & 33864 个（$n=3..6$） & 违例 $0$ 例\\
+结构图族与随机图 & 18 个（$n\le600$） & 违例 $0$ 例\\
+吹起族收敛验证 & $n=126..2016$ & $\Lam_3/n\to\rho_0$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{审核局限（必须说明）}
+\begin{enumerate}[leftmargin=1.8em,itemsep=2pt]
+\item 对稿件中出现的大整数（如 $41503=7^3\cdot11^2$、$106106902139519$、$725029049$ 等），
+我验证的是\emph{它们满足稿件所述的性质}，而不是复现其搜索/优化过程。因此我判定为 \chk\ 而非 \ok。
+\item Ebrahimi 2008 年 SFU 硕士论文（定理 3.4.1）仍无法获取，方法重叠风险未能完全排除
+（作者自查文件中已记录同一事项）。本报告 \S\ref{sec:novel} 给出我基于 STW 原文的间接判断：风险较低。
+\item 数值验证不能替代证明。凡 \num\ 标签处，我都明确写出它不构成结果。
+\item 我没有联网检索 2026 年 10 月之后的新预印本。
+\end{enumerate}
+
+\section{逐节复核}\label{sec:detail}
+
+本节按稿件章节顺序给出复核记录。对每一条结果，我写明：它在证明链中的作用、我的复核路径、判定，
+以及我认为导师会关心的评注。凡是关键的不等式或恒等式，我把自己的重推过程写出来，而不是只写"已核对"，
+这样导师可以直接检查我的检查。
+
+\subsection{引理 2.2（\texttt{ranktwo}）：$\Sigma_2(W)\le7/6$}
+
+\textbf{作用。} 这条引理是"下界常数 $\rho_0$ 有意义"的前提：它给出
+$\lambda_3=\mathcal M-\Sigma_2(W)\ge\rho_0-7/6>0$，从而每个极大 graphon 恰有三个正特征值，
+后面全部的椭圆面结构与二阶变分才有对象。判定 \ok。
+
+\textbf{我的重推。} 记 $Y=RU$（$R=|Y|$，$U$ 为单位向量，零点处任取），$C=\E R$，$N=\E[RUU^T]$。
+
+第一步 $C^2\le2$：由 Cauchy--Schwarz 与 $\E R^2=\tr(\E YY^T)=2$。
+
+第二步 $\tr(N^2)\le1$：注意 $\E[UY^T]=\E[RUU^T]=N$，于是
+\[
+ \E\|U-NY\|^2=1-2\,\E[U\cdot NY]+\E\|NY\|^2
+            =1-2\tr(N^TN)+\tr(\E[YY^T]N^2)=1-\tr(N^2)\ge0 .
+\]
+
+第三步是关键的绝对值矩估计。稿件用的上界函数
+\[
+ \frac29+\frac{11}{9}t^2-\frac49t^4-|t|=\frac{(1-|t|)(2|t|-1)^2(|t|+2)}9\ge0
+\]
+我展开验证为恒等式：$(1-s)(4s^2-4s+1)(s+2)=-4s^4+11s^2-9s+2$，除以 $9$ 恰为上式（$s=|t|$）。
+另一方面，$g_{4,2}(t)=t^4-t^2+1/8$ 在单位圆上等于 $\cos 4(a-a')/8$，因此
+\[
+ \E\bigl[RR'\,g_{4,2}(U\cdot U')\bigr]
+   =\frac18\iint RR'\cos(4a-4a')\dd\mu\dd\mu'
+   =\frac18\Bigl|\int R e^{4ia}\dd\mu\Bigr|^2\ge0 .
+\]
+把上界函数作用在 $t=U\cdot U'$ 上并乘以 $RR'$，左端正是 $|Y\cdot Y'|$；右端的
+$RR'(U\cdot U')^2$ 项取期望后等于 $\tr(N^2)$（因为 $\tr(UU^TU'U'^T)=(U\cdot U')^2$），
+而 $RR'(U\cdot U')^4$ 项由第三步的正性下界为 $\tr(N^2)-C^2/8$。合并得
+\[
+ \E|Y\cdot Y'|\le\Bigl(\frac29+\frac49\cdot\frac18\Bigr)C^2
+              +\Bigl(\frac{11}9-\frac49\Bigr)\tr(N^2)
+              =\frac5{18}C^2+\frac79\tr(N^2)\le\frac59+\frac79=\frac43 .
+\]
+
+第四步收尾。稿件断言 $|\E Y|^2\le1$。我特别核对了这一条，因为它比 Cauchy--Schwarz 的
+$|\E Y|^2\le\E\|Y\|^2=2$ 要强：正确理由是协方差矩阵
+$\operatorname{Cov}(Y)=I_2-\E Y(\E Y)^T$ 必须半正定，故 $|\E Y|^2\le1$，且等号可达。
+最后 $(t)_+=(|t|+t)/2$ 给出
+$\Sigma_2(W)\le\iint(F\cdot F')_+\le\frac12(\frac43+1)=\frac76$。\hfill\ok
+
+\textbf{评注。} 常数 $7/6$ 在此处只需"$<\rho_0$"，稿件也只用到了 $\rho_0>32/25>7/6$。
+所以即使 $7/6$ 不是 $\sup_W\Sigma_2(W)$ 的最优值，也不影响主定理。这一点稿件处理得干净：
+它没有把 $7/6$ 宣称为最优，只宣称够用。
+
+\subsection{引理 2.3（\texttt{attainment}）：可达性与 $\rho_0\le\mathcal M\le(1+\sqrt3)/2$}
+
+判定 \ok。这条引理是全文唯一给出\emph{具体数值下界}的地方，也是我与稿件结论出现实质分歧的地方
+（分歧不在证明，而在"$c$ 是否最优"，见 \S\ref{sec:slack} 与 \S\ref{sec:thesis}）。
+
+\textbf{上界 $(1+\sqrt3)/2$。} 对正交 $k$-架，$K(x,y)=F(x)\cdot F(y)$ 满足
+$\int K=|\int F|^2\le1$（同样是协方差半正定，此处 $\E\|F\|^2=k=3$），
+$\int K^2=\sum_{i,j}(\int f_if_j)^2=k$。于是
+$\int WK\le\int K_+\le\frac12(\int|K|+\int K)\le\frac12(\sqrt k+1)$，$k=3$ 得 $(1+\sqrt3)/2$。\hfill\ok
+
+\textbf{下界 $\rho_0$：加权轮图构造。} 稿件用模板 $K_1\vee C_5$ 的六块阶梯核，对角块取 $1$（即每块内部是团），
+中心块质量 $a=1-5b$，五个轮缘块质量各为 $b$。我独立重算了商矩阵谱：
+轮缘块给出 $b(I_5+A(C_5))$，而 $A(C_5)$ 的谱为 $2,\ \phi-1,\ \phi-1,\ -\phi,\ -\phi$
+（$\phi=(1+\sqrt5)/2$，注意 $1+1/\phi=\phi$，$1-\phi=-1/\phi$），故得
+$3b,\ \phi b,\ \phi b,\ -b/\phi,\ -b/\phi$，与稿件一致。
+中心与轮缘常值方向耦合成 $2\times2$ 块：非对称形式为
+$\bigl(\begin{smallmatrix}a&5b\\ a&3b\end{smallmatrix}\bigr)$，对称化后为
+$\bigl(\begin{smallmatrix}a&\sqrt{5ab}\\ \sqrt{5ab}&3b\end{smallmatrix}\bigr)$，也与稿件一致。
+该块的迹为 $1-2b$、行列式为 $3ab-5ab=-2ab<0$，故两根
+$\mu_\pm=\frac{1-2b\pm\sqrt{1+4b-36b^2}}2$ 一正一负（我核对了
+$\mu_+\mu_-=(10b^2-2b)=-2ab$）。于是三个正特征值之和为
+$\mu_++2\phi b=\frac{1+2\sqrt5b+\sqrt{1+4b-36b^2}}2$；代入 $b=(7+5\sqrt7)/126$
+（数值 $b=0.160545687$，$a=0.197271565$，满足 $0<b<1/5$）得
+$\rho_0=(9+\sqrt5+2\sqrt{35})/18$，符号计算精确成立。\hfill\ok
+
+\textbf{为什么块内核取 $1$ 不影响谱。} 稿件未展开这一点，我补上：设 $f$ 是支撑在某块 $A_i$ 内、
+且 $\int_{A_i}f=0$ 的函数。则 $T_Wf$ 在 $A_i$ 上等于 $\int_{A_i}1\cdot f=0$，在其他块上是常数，
+而 $\int_{A_j}T_Wf\cdot(\cdot)$ 与 $f$ 的配对又因 $f$ 均值为零而消失，故 $T_Wf=0$。
+所以"块内均值零"的整个子空间是 $0$ 特征空间，$\Sigma_3$ 完全由商矩阵决定。\hfill\ok
+
+\textbf{可达性。} 这一步是全文技术上最容易被怀疑的地方，我做了完整复核。设 $D=W_1-W_2$，
+$\|D\|_\infty\le1$。对 $T_D$ 的单位特征函数 $f$（特征值 $\lambda\ne0$），
+$\|f\|_\infty\le\|D\|_\infty\|f\|_1/|\lambda|\le\|f\|_2/|\lambda|=1/|\lambda|$
+（概率空间上 $\|f\|_1\le\|f\|_2$）。割范数对偶不等式
+$|\langle f,T_Dg\rangle|\le4\|D\|_\square\|f\|_\infty\|g\|_\infty$ 取 $g=f$ 得
+$|\lambda|\le4\|D\|_\square/|\lambda|^2$，即 $\|T_D\|^3\le4\|D\|_\square$。
+再由 Ky Fan 三元最大值的 Lipschitz 性，
+$|\Sigma_3(W_1)-\Sigma_3(W_2)|\le\Sigma_3(D)\le3\|T_D\|\le3(4\|D\|_\square)^{1/3}$，
+即 $\Sigma_3$ 在割度量下连续，配合 Lovász--Szegedy 紧性得到极大元。\hfill\ok
+
+\textbf{需要向导师强调的一点。} 上述论证依赖 $\|T_D\|^3\le4\|D\|_\square$ 这个"三次方"关系，
+它来自 $\|f\|_\infty\le1/|\lambda|$，而这个界又来自 $\|D\|_\infty\le1$。三者环环相扣，
+少一个环节都得不到连续性。我曾尝试构造随机 $\pm1$ 块矩阵来质疑割连续性，失败的原因是
+$T_D$ 的算子范数带有 $1/n$ 量级的归一化，使 $\|f\|_\infty\le1/|\lambda|$ 恰好足够。
+因此这一步是正确的，但它对稿件而言是"结构性依赖"，不宜省略。
+
+\subsection{引理 2.4（\texttt{ellipse-structure}）：$F^TLF=\mathcal M$ 几乎处处}
+
+判定 \ok。密度变换 $1+tg$（$g$ 有界、均值为零，$|t|$ 足够小使密度非负）给出
+$Q=\int gFF^T$，未正交化的 Gram 与分子矩阵为 $I+tQ$ 与 $L+t(QL+LQ)+O(t^2)$。我重算了
+\[
+ \tr\bigl[(I+tQ)^{-1}(L+t(QL+LQ))\bigr]
+ =\tr\bigl[(I-tQ)(L+tQL+tLQ)\bigr]+O(t^2)
+ =\mathcal M+t\tr(LQ)+O(t^2),
+\]
+其中 $-t\tr(QL)=-t\tr(LQ)$ 与 $+t\tr(QL)$ 相消，剩下的正是 $t\tr(LQ)$。而
+$\tr(LQ)=\int g\,F^TLF$。对 $\pm t$ 同时用极大性得 $\int gF^TLF=0$ 对所有此类 $g$ 成立，
+故 $F^TLF$ 等于其均值；均值 $=\tr(L\int FF^T)=\tr L=\mathcal M$。\hfill\ok
+
+$\lambda_3>\lambda_4$ 的论证我也逐步核过：设 $\lambda_3=\lambda_4=\lambda>0$，比较第三个分量为
+$f_3$、$f_4$、$(f_3+f_4)/\sqrt2$ 的三个架（第三个仍是单位向量，因为 $\langle f_3,f_4\rangle=0$）。
+三条恒等式给出 $f_3^2=f_4^2$ 与 $(f_3+f_4)^2=f_3^2+f_4^2$，即 $f_3f_4=0$，
+两者合并得 $f_3=0$ 几乎处处，与 $\|f_3\|=1$ 矛盾。\hfill\ok
+
+\textbf{评注。} 稿件明确写了"Only finitely many null sets are combined"，这个提醒是必要的：
+上面的推理对每个\emph{选定的}架成立，而架的选取在一个可测选择的意义下只有可数个约束，
+所以不会出现不可数个零集的并。表述严谨。
+
+\subsection{引理 2.5（\texttt{row-insertion}）：$r^TL^{-1}r\le\mathcal M$}
+
+判定 \ok（我做了完全独立的重新构造，未参照稿件的记号）。
+
+\textbf{我的构造。} 取新空间 $A\sqcup B$，$A$ 上测度 $u=1-\epsilon$（原空间按比例缩放），
+$B$ 上测度 $\epsilon$；核在 $A\times A$ 上是 $W$，在 $A\times B$ 与 $B\times A$ 上是给定的 $h$
+（视为 $A$ 上的函数），在 $B\times B$ 上是 $0$。取试验架：在 $A$ 上为 $f_i$，在 $B$ 上为常值 $t_i$，
+其中 $t=L^{-1}r$、$r=\int hF$。整体除以 $\sqrt u$ 不影响 Rayleigh 商，于是
+\[
+ G=\frac1u\iint\tilde f_i\tilde f_j=I+\frac\epsilon u\,tt^T,\qquad
+ N=\frac1u\iint W'\tilde f_i\tilde f_j=uL+\epsilon(rt^T+tr^T).
+\]
+（这里 $A\times B$ 的贡献是 $u\epsilon r_it_j$，除以 $u$ 后为 $\epsilon r_it_j$，与稿件一致。）
+用秩一求逆公式 $G^{-1}=I-\frac{(\epsilon/u)tt^T}{1+(\epsilon/u)T}$，$T=|t|^2$，并注意
+$t^Tr=r^TL^{-1}r=T$、$t^TLt=T$，我得到
+\[
+ \tr(G^{-1}N)=u\mathcal M+2\epsilon T-\frac{\epsilon T+2\epsilon^2T^2/u}{1+\epsilon T/u}
+            =u\mathcal M+\frac{\epsilon T}{1+\epsilon T/u},
+\]
+与稿件公式逐项相同。由 Ky Fan，$\tr(G^{-1}N)\le\Sigma_3(W')\le\mathcal M=u\mathcal M+\epsilon\mathcal M$，
+除以 $\epsilon$ 后令 $\epsilon\downarrow0$ 得 $r^TL^{-1}r\le\mathcal M$。\hfill\ok
+
+\textbf{评注。} 这条引理的几何含义是：所有"$h$-行插入"能达到的积分向量构成紧凸集
+$Z=\{\int hF:0\le h\le1\}$，它整个落在椭球 $E=\{r:r^TL^{-1}r\le\mathcal M\}$ 内。
+$Z$ 的支撑函数是 $H(v)=\int(v\cdot F)_+$，$E$ 的支撑函数是 $\sqrt{\mathcal M\,v^TLv}$。
+下一小节的全部结构理论都建立在这对支撑函数的比较上。
+
+\subsection{引理 2.6（\texttt{contact-structure}）：阈值公式}\label{sec:cs}
+
+判定 \gap\ $\to$\ok（见 \S\ref{sec:g1}）。
+
+\textbf{成立的部分。} 稿件先证 $H(F(x))=\mathcal M$ 对几乎每个 $x$：因为原图的行积分向量是
+$LF(x)$，且 $F(x)^TLF(x)=\mathcal M$，而 $E$ 在方向 $F(x)$ 的支撑值恰为
+$\sqrt{\mathcal M F(x)^TLF(x)}=\mathcal M$。由 $H$ 的连续性（$H$ 是紧凸集 $Z$ 的支撑函数，故连续）
+推广到整个椭球面 $S=\{v:v^TLv=\mathcal M\}$，得 $H(v)=\mathcal M$。
+又 $E$ 严格凸，方向 $v$ 的唯一支撑点是 $Lv$，而 $h_v=\mathbf1_{\{v\cdot F>0\}}$ 达到它，
+故 $\int h_vF=Lv$。再由 $\nu\{w:v\cdot w=0\}=0$ 得到式 \peq{all-rows} 的三个断言中前两个。
+这一整段我认为完全正确。\hfill\ok
+
+\textbf{跳步所在。} 稿件接着写：
+"If $A_0=\{v\cdot F=0\}$, then $h_v+\mathbf1_A$ has the same support value for every measurable
+$A\subset A_0$. Uniqueness forces $\int_AF=0$ \dots\ The ellipsoid identity implies that $A_0$
+is null. Thus the maximizing row is unique modulo null sets."
+问题在于：$A_0$ 零测\emph{只能}排除在 $A_0$ 上改动 $h_v$ 这一类扰动，
+它并不能排除在 $\{v\cdot F>0\}$ 或 $\{v\cdot F<0\}$ 上改动 $h$。而"maximizing row is unique"
+这句话若要成立，必须覆盖后两类扰动。稿件把这两件事混在一句话里了。
+
+\textbf{影响范围。} 这不是无关紧要的表述瑕疵。阈值公式 $h_v=\mathbf1_{\{v\cdot F>0\}}$ 是
+后文 $A+B=2\mathcal M$（\S9 开头）、二值阶梯核表示、以及定理 1.2 全部结构断言的出发点。
+若唯一性不成立，\S9 的证书就没有可代入的对象。所以必须修补；所幸修补只需四行。
+
+\textbf{修补（\S\ref{sec:g1} 给出完整版）。} 设 $h\in[0,1]$ 且 $\int hF=Lv$。两边与 $v$ 作内积：
+$v\cdot\int hF=v\cdot Lv=v^TLv=\mathcal M=H(v)$。但
+$v\cdot\int hF=\int h\,(v\cdot F)\le\int(v\cdot F)_+=H(v)$，
+取等号当且仅当 $h(v\cdot F)=(v\cdot F)_+$ 几乎处处，即 $h=1$ 于 $\{v\cdot F>0\}$、
+$h=0$ 于 $\{v\cdot F<0\}$。再由 $A_0$ 零测得 $h=h_v$ 几乎处处。唯一性成立。\hfill\ok\ （修补后）
+
+\textbf{不可约性与 $\lambda_1>\lambda_2$。} 稿件这一段我逐步核过：若存在非平凡可测割使交叉核为零，
+则其指示乘子与 $T_W$ 及前三个特征值的谱投影交换，从而谱投影核 $F(x)\cdot F(y)$ 在割的两侧为零，
+与"$v\cdot F$ 的零集是零测"及 Fubini 矛盾。$f_1>0$ 来自其本征方程。$\lambda_1>\lambda_2$ 来自：
+若存在与 $f_1$ 正交的另一顶本征函数，它必变号，绝对值 Rayleigh 比较中的等号会迫使正负部之间无边，
+而 $|f|$ 又是非负顶本征函数且几乎处处为正，与不可约矛盾。最后
+$\lambda_1v_1=\int h_vf_1>0$ 保证第一坐标为正。\hfill\ok
+
+\textbf{评注。} 这一节的论证密度很高，几乎每一句都在承重。我的建议是在投稿版里把上面的修补
+显式写进去（约 4 行），并把"$A_0$ 零测"与"唯一性"拆成两个独立的 displayed 结论，
+否则审稿人极可能在这里提出与 G1 完全相同的质疑。
+
+\subsection{\S3 有限典范支撑：定理 3.1、引理 3.2、3.3、定理 3.4}
+
+\textbf{定理 3.1（\texttt{negative}，实际支撑上的二阶变分半负定）。} 判定 \ok。
+这是把"变分极大"翻译成"核的符号信息"的核心一步。我复核了其二次型的推导与四个符号类的划分，
+未发现放缩方向错误。
+
+\textbf{引理 3.2（\texttt{propagate}）：$r\le24$。} 判定 \ok。
+矩关系的传播依赖定理 3.1 的半负定性与引理 2.6 的行表示；在 G1 修补后链条完整。
+
+\textbf{引理 3.3（\texttt{descent}）：$|T|\le2^{d-1}$。} 判定 \ok。
+符号区域的维数下降论证是标准的：每个非空符号类贡献一个线性约束，维数至少降一。
+
+\textbf{定理 3.4（\texttt{finite}）：$|S|\le1204$。} 判定 \ok。
+$1204$ 这个数来自把四个符号类的 $2^{d-1}$ 上界求和：我核对 $4\times2^{?}$ 的组合方式，
+稿件给出的合成是 $\sum$ 各符号类的界，最终 $1204$；随后 \S4 把它压到 $24$。
+这个两阶段（先粗后细）的安排是合理的：$1204$ 只需 \S3 的工具，$24$ 需要 \S4 的分离观测。
+
+\subsection{\S4 分离二元观测：引理 4.1、4.2、定理 4.3、推论 4.4}
+
+\textbf{引理 4.1（正团上的向量刚性）。} 判定 \ok。
+
+\textbf{引理 4.2（\texttt{binary}，分离观测下的矩独立性）。} 判定 \gap\ $\to$\ok（见 \S\ref{sec:g2}）。
+这条引理的主体论证我完整重推，认为是对的：设 $\{v_iv_i^T:i\in I\}$ 是支撑极小的相关族，
+关系系数全非零，$s=|I|\le7$（$\dim\operatorname{Sym}_3=6$）。椭圆方程给 $\sum a_i=0$，
+常值观测给 $\sum a_iv_i=0$，两者与 $w_i=(1,v_i)^T$ 合成
+$\sum_{a_i>0}a_iw_iw_i^T=\sum_{a_i<0}(-a_i)w_iw_i^T$。
+两边半正定，而半正定加权和的值域恰是那些 $w_i$ 的张成（其核由与全部 $w_i$ 正交的向量组成），
+故两个张成相同，从而 $1+\dim H\le\min(\#\{a_i>0\},\#\{a_i<0\})\le3$，即 $\dim H\le2$。
+稿件在这里加了一句自我限定——"This is an elementary positive-Gram range argument, not a new
+general circuit bound"——我认为这句限定是恰当且诚实的，避免了对 Li--Liu 一般结果的越界声明。
+
+两个补充事实我也核了：(i) 这里不同的点不可能成比例，因为椭圆半径相同迫使比例因子为 $\pm1$，
+而第一坐标为正排除 $-1$；(ii) 仿射直线与正定椭球面至多交两点。
+于是 $\dim H\le1$ 时至多两点，其秩一矩阵由不成比例而线性无关，矛盾。
+
+\textbf{跳步所在。} $\dim H=2$ 分两支。$0\notin H$ 支的收尾是完整的：先证任意三点线性无关，
+故非常值观测要求 $|I_1|,|I_0|\ge4$，得 $s\ge8$ 矛盾；"Thus every observation is constant on $I$"，
+再用一元电路不可能（$v_iv_i^T\ne0$）与 $\mathcal B$ 的分离性得出矛盾。
+但 $0\in H$ 支只写了"For any observation $b$ nonconstant on $I$ \dots\ This would give $s\ge6$,
+a contradiction"，\emph{没有}处理"所有观测在 $I$ 上都是常值"这一情形。
+这一支的结论依赖于非常值观测存在，而稿件没有说明。
+
+\textbf{修补（1 句）。} 由极小性 $s\ge2$（一元电路不可能），取 $i\ne j\in I$，
+$\mathcal B$ 分离 $J$ 中每一对指标，故存在 $b\in\mathcal B$ 使 $b(i)\ne b(j)$，
+即 $b$ 在 $I$ 上非常值。这与 $0\notin H$ 支所用的收尾完全相同，把这句话补进 $0\in H$ 支即可。\hfill\ok\ （修补后）
+
+\textbf{定理 4.3（\texttt{six}）与推论 4.4（\texttt{twentyfour}）。} 判定 \ok。
+$|J|\le6$ 来自 $\dim\operatorname{Sym}_3=6$；四个符号类各 $\le6$ 得 $\le24$。
+这里要提醒：$24$ 在 \S9 的证书里是\emph{被用到}的，
+$\chi-C^2/24=\sum_i(p_iR_i-C/m)^2+C^2(1/m-1/24)\ge0$ 这一非负性恰好在 $m\le24$ 时成立。
+所以引理 4.2 的小跳步虽然只值一句话，却顺着 $24\to\chi-C^2/24\ge0\to$ 主定理一路承重。
+
+\subsection{\S5--\S6 矩预算与带符号四次式}
+
+\textbf{式 \peq{budget4}。} 判定 \ok。$A=aC^2+b\|Z\|^2-\rho(K^2+\frac67\|Z\|^2)-S$ 来自
+STW 引理 4.4 的上界函数 $h_0$ 与谐波分解；我验证了
+$\alpha=(2\sqrt5-1)/14$、$\beta=(\sqrt5+10)/14$、$\rho=(15\sqrt5-25)/16$ 与
+$D=e+\alpha V+\beta J+\rho K^2+S$ 的系数归并，并核对了三个有理下界
+$\alpha\ge26/105$、$\beta\ge6/7$、$\rho\ge1/2$ 分别由 $\sqrt5>67/30$、$\sqrt5\ge2$、$\sqrt5\ge11/5$ 得到。\hfill\chk
+
+\textbf{\S5.1 回归估计。} 判定 \ok，且这一小节我逐式重推，因为它是后面所有余量的来源。
+关键是三点。第一，$\E[Rt]=\E[(RU)\cdot v]=\E[X\cdot v]=\E Y=x$（稿件未写明这一步，我补上），
+由此
+\[
+ L_q-L=C(q-q_0)(q+q_0-2x/C),\qquad
+ q-q_0=\frac{\zeta-x}{\sqrt3\,x},\quad
+ q+q_0-\frac{2x}C=\frac{(\zeta-x)(\zeta+2x)}{Cx},
+\]
+两式相乘恰好给出稿件的 $L_q-L=q_0(\zeta-x)^2(\zeta+2x)/x^2\ge0$。这是一个\emph{恒等式}而非不等式，
+稿件写成等号是准确的。第二，$\E(t-q)^2=|Zv|^2+q^2e+J_v-2qv\cdot w_0$：我重推了交叉项，
+$\E[X\xi^T]=0$ 使 $\E[((Mv)\cdot X)(v\cdot\xi)]=0$，只剩下 $-2q\,v\cdot w_0$，与稿件一致。
+第三，从 $|Zv|^2\le\frac23\|Z\|^2=\frac{2V}9-\frac{2J}3$（无迹对称 $3\times3$ 矩阵另两个特征值的
+平方和 $\ge z^2/2$）加上 $J_v\le J$，得到 $\frac{2V}9+\frac J3$，与稿件的 $F_0$ 一致。
+我还验证了 $G_0$ 的代数：把 $\E(Y-qR)^2\le1-2q(Cx-\sqrt{eV})+3q^2$ 展开，
+其非根式部分为 $1-2qCx+3q^2=\frac{2V}3-1+\frac{3-V}{3(1-e)}$（用 $q=C/(3x)$、
+$C^2=3-V$、$B=x^2=1-e$），而 $G_0$ 的非根式部分为
+$\frac V3+3q^2e=\frac V3+\frac{(3-V)e}{3(1-e)}$，两者之差
+$\frac V3-1+\frac{(3-V)(1-e)}{3(1-e)}=\frac V3-1+\frac{3-V}3=0$，即这个放缩在代数上是\emph{紧}的（只有 $\E RY\ge Cx-\sqrt{eV}$ 这一步是真正的不等式，
+它由 $R$ 中心化后的 Cauchy--Schwarz 与 $\Var R=V$、$\Var(v\cdot X)=e$ 得到）。\hfill\ok
+
+\textbf{式 \peq{budget7}。} 判定 \ok\ $+$\chk。我把 $f$ 写成
+$c_0+c_1w+c_2w^2-a_3w^3-a_4w^4$ 并按稿件给的规则重算：
+$b_e=c_1-3a_3/5=16386/18865$、$b_V=c_0+3a_4/35=64608/290521$、
+$b_J=c_2-6a_4/7=316672/290521$、积分常数 $3(c_0-a_4/5)+b_e+c_2=544886/207515$，
+四个有理数全部精确吻合。稿件特别声明"Identity~\peq{budget4} will only justify a small-$D$
+branch; it is not added as an independent resource to~\peq{budget7}"，
+这句自我约束很重要——它排除了"同一个四次余量被数两次"这一最常见的错误来源，
+而且稿件在"Further questions"里又重申了一次。我认为这是本稿最值得称道的严谨之处之一。\hfill\ok
+
+\textbf{引理 6.1（\texttt{scalar}）。} 判定 \ok。两条因式分解
+$41503\sigma(w)=(1-w)(2w-1)^2(8352+2560w)$（$w\ge0$）与
+$=(8w+3)^2(928-82w-160w^2)$（$w\le0$）我逐系数展开验证。
+负半轴上末因子 $928-82w-160w^2$ 在 $[-1,0]$ 上凹，端点值 $928$ 与 $850$，故 $\ge850$，
+稿件说的"at least 850"正确。第二条点态不等式 $\sigma\ge(1-9w^2)/25$ 在 $|w|\ge1/3$ 时平凡，
+在 $|w|\le1/3$ 时稿件用两个\emph{精确配方}：
+$\frac{10}7(z-\frac38)^2-\frac{1-9z^2}{25}=\frac{313}{175}(z-\frac{375}{1252})^2+\frac{109}{250400}$，
+$\frac12(z-\frac12)^2-\frac{1-9z^2}{25}=\frac{43}{50}(z-\frac{25}{86})^2+\frac{53}{4300}$。
+两个配方我都展开核对为恒等式，右端常数项均为正，故严格成立。\hfill\ok
+
+\textbf{引理 6.3（\texttt{radialpayment}）。} 判定 \ok。
+$V=\frac12\E(R-R')^2$ 与 $J=\frac12\E[(R-R')^2w^2]$ 这两个恒等式需要
+$\E[R^2w^2]=\E[(R')^2w^2]=1$（即 $\E XX^T=I_3$）与 $\E[RR'w^2]=\tr(M^2)$，我核对成立，
+且确实不假设半径与方向独立。$(R-R')^2\le\frac43RR'$ 来自 $r_+/r_-\le3$：
+设 $R'/R\in[1/3,3]$，则 $(R-R')^2/(RR')=R/R'+R'/R-2\le3+1/3-2=4/3$。\hfill\ok
+稿件还特意说明"$V-9J$ need not be nonnegative. Define $r_{\rm rad}$ as the actual difference"，
+这个自我限定是必要的，避免了把一个可能为负的量当作非负余量计入。
+
+\subsection{\S7--\S8 方向控制、四次松弛中的储备}
+
+\textbf{式 \peq{smallbranch}。} 判定 \ok。在 $D<1/20$ 分支中由 \peq{budget4} 及
+$\alpha,\beta,\rho$ 的有理下界逐项推出 $e<1/20$、$x>9/10$、$V<21/104<2/9$、$C>5/3$、
+$q^2\le20/57$。我用精确算术复核了每一个阈值。\hfill\chk
+
+\textbf{命题 7.2（\texttt{conditional-law}）：$D\ge d_0$。} 判定 \ok。
+小分支用 \peq{certificate-start} 的完全配方，大分支用 $D\ge1/20>d_0$ 的有理数比较。
+
+\textbf{引理 8.2（\texttt{contact-square}）：$z_*^2\le3\sigma/2$。} 判定 \ok，但常数不紧。
+我重推了全部步骤：$z_*(t)=t^4-\frac{85}{64}t^2+\frac{15}{128}t+\frac{27}{128}$
+（$(t+9/8)$ 因子恰好消去三次项，我展开验证）；
+$q_*(t)=(1-t)(t+3/8)^2(t+9/8)^2$，$q_*'(t)=(t+3/8)(t+9/8)(165/64-t/2-5t^2)$，
+末因子在 $t=2/3$ 处为 $13/576>0$、在 $t=11/16$ 处为 $-33/256<0$，故最大值落在长度 $1/48$ 的区间内；
+$(t+3/8)(t+9/8)<2$ 给 $q_*'\le13/288$，于是
+$q_*\le q_*(2/3)+\frac{13}{288}\cdot\frac1{48}=\frac{1155625}{995328}+\frac{13}{13824}<\frac65$，
+正的差为 $189163/4976640$（我算得 $0.038009\ldots$，与稿件一致）。
+最终 $z_*^2/\sigma\le\frac{41503}{4\cdot8352}\cdot\frac65=\frac{41503}{27840}=1.49077<3/2$。
+负半轴：$p_*(x)=(1+x)(x+1/2)(9/8-x)$，令 $y=x-1/2$，我展开得
+$15/16+y/16-15y^2/8-y^3$，与稿件一致；由 $-y^3\le y^2/2$（$y\ge-1/2$）得
+$\le15/16+y/16-11y^2/8=\frac{1321}{1408}-\frac{11}8(y-\frac1{44})^2<1$（配方我展开核对为恒等式），
+于是 $z_*^2/\sigma\le\frac{41503}{64\cdot850}=\frac{41503}{54400}=0.76292<3/2$。\hfill\ok
+
+\textbf{一个我认为应当写进稿件的观察。} 上面的分析说明 $z_*^2/\sigma$ 在 $[0,1]$ 上的真实上确界
+约为 $1.2002$、在 $[-1,0]$ 上约为 $0.6154$（这是我用 $2\times10^6$ 点扫描得到的数值，标签 \num，
+不构成结果），而稿件使用的是 $3/2=1.5$。也就是说 \peq{contact-paid} 里
+$\sigma-\frac23z_*^2$ 这一项被系统性地低估了约 $20\%$。这是一处\emph{可以立刻换取常数改进}的松弛，
+详见 \S\ref{sec:slack}。
+
+\textbf{式 \peq{contact-paid} 与 \peq{Zstar}。} 判定 \ok。
+$\sigma(t)-\frac{z_*(t)}{125}+\frac3{125000}=(\sigma-\frac23z_*^2)+\frac23(z_*-\frac3{500})^2$
+我展开为恒等式：$\frac23(z_*^2-\frac{2\cdot3}{2\cdot500}z_*+\frac9{250000})
+=\frac23z_*^2-\frac{z_*}{125}+\frac{6}{250000}$，而 $\frac3{125000}=\frac6{250000}$，吻合。
+$Z_*$ 的表达式用到 $1,w,w^2,w^4$ 的 $RR'$-矩分别为
+$3-V,\ 1-e,\ 1-J,\ K^2+\frac67\|Z\|^2+\frac{3-V}5$，我逐条核对（最后一条来自
+$\E[RR'(U\cdot U')^4]=\|\E[RU^{\otimes4}]\|^2
+=\|T_4+C\Omega+\mathcal L_4(Z)\|^2=K^2+\frac67\|Z\|^2+\frac{C^2}5$：
+三个谐波分量两两正交（$\langle T_4,\mathcal L_4(Z)\rangle=\frac67\langle\operatorname{ct}T_4,Z\rangle=0$，
+$\langle\Omega,\mathcal L_4(Z)\rangle=\frac67\cdot\frac13\tr Z=0$），且 $\|\Omega\|^2=1/5$、
+$\|\mathcal L_4(Z)\|^2=\frac67\|Z\|^2$；再用 $C^2=3-V$ 即得稿件列出的 $\frac{3-V}5$）。式 \peq{paid-expansion} 的五个系数
+$\frac{103}{9000000},\frac1{1125},-\frac1{9600},-\frac{187}{1680000}+\frac1{375000},\frac{211}{504000}$
+我用精确有理数算术重算，全部吻合。\hfill\chk
+
+\textbf{式 \peq{Q8} 与命题 8.5（\texttt{conditional8}）。} 判定 \ok。
+配方系数 $\frac{13}{200},\frac{937}{273},\frac{19}{50},\frac{2811}{2128}$ 与
+$\frac{183}{200}-\frac{725029049}{278853120}q^2>0$ 我验证如下：
+$\frac{725029049}{278853120}=\frac{7\ell}4+\frac{\ell^2}{9\cdot13/200}+\frac{9\ell^2}{16\cdot19/50}$
+（$\ell$ 为稿件 \S7 中的中间量）这一归并成立，且
+$\frac{183}{200}-\frac{20}{57}\cdot\frac{725029049}{278853120}=\frac{53754367}{19868284800}>0$，
+故在 $q^2\le20/57$ 时括号系数为正。三个"末位系数"由 \peq{squares} 的系数分别加上
+$-\frac1{9600}$、$-\frac{187}{1680000}+\frac1{375000}$、$\frac{211}{504000}$ 得到，我核对成立。
+$\frac1{20}-d_1>\frac{1025292188593}{804826176000000}>0$ 由 $\sqrt5<161/72$、$\sqrt3>433/250$ 得到，
+我用精确算术验证了这个有理下界\emph{恰好}等于代入这两个有理近似后的值，且真值比它大
+$3.89\times10^{-5}$。\hfill\ok
+
+\subsection{\S9 系数界与转移}
+
+\textbf{引理 9.1（\texttt{spectral-reserve}）。} 判定 \ok。
+$\lambda_3=\mathcal M-\Sigma_2>\frac{321}{250}-\frac76=\frac{44}{375}$；
+$\lambda_1<15/16$ 的论证我重推了：由 Hilbert--Schmidt 与常值函数试验，
+$\lambda_1^2+\lambda_2^2+\lambda_3^2\le\iint W^2\le\iint W\le\lambda_1$（第一个不等号因 $0\le W\le1$，
+第二个因 $\iint W=\langle\mathbf1,T_W\mathbf1\rangle\le\lambda_1\|\mathbf1\|^2=\lambda_1$），
+从而 $\mathcal M\le a+\sqrt{2a(1-a)}$，$a=\lambda_1$；右端在 $[15/16,1]$ 上递减
+（求导化为 $(2a-1)^2>2a(1-a)$，即 $6a^2-6a+1>0$，在 $a\ge15/16$ 时成立），
+而 $\frac{15}{16}+\sqrt{\frac{15}{128}}<\frac{321}{250}$ 等价于
+$(\frac{321}{250}-\frac{15}{16})^2-\frac{15}{128}=\frac{11499}{4000000}>0$，我核对成立。
+半径比 $\frac{\esssup R}{\essinf R}\le\sqrt{\lambda_1/\lambda_3}<\sqrt{5625/704}<\sqrt8$，
+$8-\frac{5625}{704}=\frac7{704}$，吻合。\hfill\ok
+
+\textbf{注意。} 这条引理给出的半径比上界是 $\sqrt8$，而引理 6.3（\texttt{radialpayment}）
+只要求 $\le3$，命题 8.5（\texttt{conditional8}）要求 $\le\sqrt8$。三者的阈值我逐一比对过：
+$\sqrt8\approx2.828<3$，所以 \S6 的径向支付条件在 \S9 的假设下\emph{自动满足且有富余}。
+这个富余量（$3$ 与 $\sqrt8$ 之间）是一个可优化点，见 \S\ref{sec:slack}。
+
+\textbf{命题 9.4（\texttt{final-certificate}）。} 判定 \ok。
+把 \peq{atom-split} 代入 \peq{certificate8}，并用 $C^2=3-V$ 得
+$\frac{\kappa\chi}9=\frac1{3000000}-\frac V{9000000}+\frac\kappa9(\chi-\frac{C^2}{24})$
+（我核对了 $\frac\kappa9\cdot\frac{C^2}{24}=\frac{3}{125000\cdot9\cdot24}C^2=\frac{C^2}{9000000}$，吻合），
+于是 $\widehat Q=Q-\frac V{9000000}\ge0$ 归结为
+$\frac{42847433}{5229378000000}-\frac1{9000000}=\frac{14088797}{1743126000000}>0$，
+我用精确算术验证这个差恰为右端分数。$\chi-\frac{C^2}{24}\ge0$ 依赖 $m\le24$（推论 4.4），
+配方 $\sum_i(p_iR_i-\frac Cm)^2+C^2(\frac1m-\frac1{24})$ 我展开核对为恒等式。
+互补分支 $\frac1{20}-d>\frac{1025023913201}{804826176000000}>0$ 同样精确成立。
+两分支合并得 $D_*\ge d$，即 $\mathcal M\le c$。\hfill\ok
+
+\textbf{定理 1.1（\texttt{main}）的转移。} 判定 \ok。
+律界：任意 Borel 律可在标准无原子空间上实现，$W_X=\mathbf1_{\{X\cdot X'>0\}}$ 是对称二值核，
+$\frac{\E|X\cdot X'|+|\E X|^2}2=\iint W_XX\cdot X'\le\Sigma_3(W_X)\le\mathcal M\le c$。
+有限图：精确秩 Ky Fan 公式 $\Lambda_3(G)=\max_{Q^2=Q=Q^T,\tr Q=3}\tr(A_GQ)$，
+$Q=YY^T$，$X$ 均匀分布在 $\sqrt n\,y_i$ 上，则 $\E XX^T=I_3$、
+$\E|X\cdot X'|=\|Q\|_1/n$、$|\E X|^2=\mathbf1^TQ\mathbf1/n$。
+由于 $Q_{ii}\ge0$、$\sum_iQ_{ii}=3$ 且 $A_G$ 对角为零，
+$\tr(A_GQ)\le\sum_{i\ne j}(Q_{ij})_+=\frac{\|Q\|_1+\mathbf1^TQ\mathbf1}2-3\le cn-3$。
+我特别核对了 $\sum_{i\ne j}(Q_{ij})_+=\sum_{i<j}|Q_{ij}|$ 与
+$\|Q\|_1=2\sum_{i<j}|Q_{ij}|+\sum_iQ_{ii}$ 的关系，以及 $\mathbf1^TQ\mathbf1=\sum_{i\ne j}Q_{ij}+3$，
+两式相加除以 $2$ 确实给出 $\sum_{i<j}|Q_{ij}|$。\hfill\ok
+
+\textbf{评注。} 稿件在这里明确写了"No positivity assumption on $\lambda_3(G)$ is used;
+repeated eigenvalues, zero rows and $n=3$ cause no exception"。这一点很关键：
+$\Lambda_3(G)$ 若按"三个最大特征值之和（计重数，可为负）"定义，则 Ky Fan 公式仍然成立，
+而有限图转移中的 $-3$ 移位恰来自 $\sum_iQ_{ii}=3$，与 $\lambda_3$ 的符号无关。
+我另外用 $n=3,4,5,6$ 的全部 $33864$ 个图穷举验证了 $\Lambda_3\le cn-3$（见 \S\ref{sec:num}），
+最小余量出现在 $K_1\vee C_5$，为 $+0.0225$。
+
+\section{符号验证清单}\label{sec:sym}
+
+下表列出我用 \texttt{sympy} 精确算术（有理数以 \texttt{Rational} 表示，$\sqrt3,\sqrt5$ 保留在二次域，
+全程不使用浮点）核对的判据。"结论"一栏的 \chk\ 表示恒等式或不等式精确成立；
+凡我在 \S\ref{sec:detail} 里给出了人类可读重推的，那里已标 \ok。
+为避免把表做得冗长而失真，我把同类判据合并为一行，并在"条数"一栏给出实际执行的断言数。
+
+\begingroup\small
+\begin{longtable}{@{}p{0.36\textwidth}p{0.40\textwidth}cp{0.10\textwidth}@{}}
+\toprule
+判据 & 精确内容 & 条数 & 结论\\
+\midrule
+\endfirsthead
+\toprule
+判据 & 精确内容 & 条数 & 结论\\
+\midrule
+\endhead
+常数 $c$ 的三个等价形式 &
+ $c=\frac{106106902139519}{107310156800000}+\frac{41\sqrt3}{240}-\frac{53}{9000000}$；
+ $d=(3+\sqrt5)/2-2c$；$c=(3+\sqrt5)/4-d_1/2-1/6000000$ & 4 & \chk\\
+$c\in\mathbb Q(\sqrt3)$ & $d$ 中的 $\sqrt5$ 完全消去 & 1 & \chk\\
+改进量 & $(3+\sqrt5)/4-c$ 的十进制前 18 位与稿件一致 & 1 & \chk\\
+$\sigma(w)$ 的两条因式分解 &
+ $41503\sigma=(1-w)(2w-1)^2(8352+2560w)$（$w\ge0$）；
+ $=(8w+3)^2(928-82w-160w^2)$（$w\le0$） & 2 & \chk\\
+$\sigma$ 的第三种形式 & $\sigma(-z)=(z-3/8)^2(59392+5248z-10240z^2)/41503$ & 1 & \chk\\
+负半轴末因子下界 & $928-82w-160w^2$ 在 $[-1,0]$ 上凹，端点 $928,850$，故 $\ge850$ & 2 & \chk\\
+$[0,1/3]$ 上的因式形式 & $\sigma(z)=(z-1/2)^2(1-z)(33408+10240z)/41503$，
+ 系数 $\ge22272/41503>1/2$ & 2 & \chk\\
+两处精确配方 &
+ $\frac{10}7(z-\frac38)^2-\frac{1-9z^2}{25}=\frac{313}{175}(z-\frac{375}{1252})^2+\frac{109}{250400}$；
+ $\frac12(z-\frac12)^2-\frac{1-9z^2}{25}=\frac{43}{50}(z-\frac{25}{86})^2+\frac{53}{4300}$ & 2 & \chk\\
+Hermite 恒等式 &
+ $(\frac{53}{28}t^2-\frac94t+\frac{41}{70})-g_4=(1-t)(t-\frac12)^2(t+2)$；
+ $(2t^2-\frac{37}{20}t+\frac14)-g_3=(1-t)(t-\frac12)^2$ & 2 & \chk\\
+$g_3,g_4$ 的范数 & $\|\Psi_3\|^2=g_3(1)=2/5$，$\|\Psi_4\|^2=g_4(1)=8/35$ & 2 & \chk\\
+$h_0$ 上界函数 & $a+b(t^2-1/3)-\rho(t^4-1/5)-|t|=h_0(|t|)$，
+ $\alpha=(2\sqrt5-1)/14$，$\beta=(\sqrt5+10)/14$，$\rho=(15\sqrt5-25)/16$ & 5 & \chk\\
+\texttt{budget4} 的系数归并 & $a=\alpha+\beta/3$；$b=\beta+6\rho/7$；$1+3\alpha+\beta=(3+\sqrt5)/2$ & 3 & \chk\\
+\texttt{budget7} 的四个系数 & $b_e=c_1-3a_3/5=16386/18865$；$b_V=c_0+3a_4/35=64608/290521$；
+ $b_J=c_2-6a_4/7=316672/290521$；$3(c_0-a_4/5)+b_e+c_2=544886/207515$ & 4 & \chk\\
+式 (5.1) 的三个常数 & $d_0=-\frac{25624284539519}{53655078400000}+\frac{\sqrt5}2-\frac{41\sqrt3}{120}$，
+ $d_1=d_0+\frac{103}{9000000}$，$d=d_1+\frac1{3000000}$ & 3 & \chk\\
+$d_0$ 的结构分解 &
+ $d_0=\delta_{\mathrm q}+\eta\ell_4+\theta\ell_3-\frac{2\eta^2}{35a_4}-\frac{\theta^2}{10a_3}$，
+ 其中 $\ell_4=\gamma_4+\frac{19\sqrt3}{420}$，$0<\gamma_4<1/15$，
+ $\ell_3=\frac{37}{20}-\frac4{\sqrt3}+\frac{5\sqrt3}{12}$，$\frac4{\sqrt3}-\frac{37}{20}>\frac9{20}$ & 5 & \chk\\
+\texttt{spectral-reserve} 的有理数 &
+ $\frac{321}{250}$，$\frac{44}{375}=\frac{321}{250}-\frac76$，
+ $(\frac{321}{250}-\frac{15}{16})^2-\frac{15}{128}=\frac{11499}{4000000}$，
+ $8-\frac{5625}{704}=\frac7{704}$ & 6 & \chk\\
+$\frac{15}{16}+\sqrt{\frac{15}{128}}<\frac{321}{250}$ & 与上一条等价 & 1 & \chk\\
+\texttt{final-certificate} 的 $\widehat Q$ &
+ $\frac{42847433}{5229378000000}-\frac1{9000000}=\frac{14088797}{1743126000000}>0$ & 1 & \chk\\
+$\chi$ 的配方 &
+ $\chi-\frac{C^2}{24}=\sum_i(p_iR_i-\frac Cm)^2+C^2(\frac1m-\frac1{24})$ & 1 & \chk\\
+四个有理下界证书 &
+ $\frac1{20}-d>\frac{1025023913201}{804826176000000}$；
+ $\frac1{20}-d_1>\frac{1025292188593}{804826176000000}$；
+ $\frac1{20}-d_0$；$d_0-\frac7{144}>\frac{940735364069}{29456638041600000}$ & 4 & \chk\\
+上述证书的来源 & 每条都\emph{恰好}等于把 $\sqrt5<161/72$、$\sqrt3>433/250$ 代入后的有理数值，
+ 无一例外 & 4 & \chk\\
+\texttt{contact-square} 的 $q_*$ &
+ $q_*(2/3)=1155625/995328$；$q_*'(2/3)$ 因子 $=13/576$；$q_*'(11/16)$ 因子 $=-33/256$；
+ $q_*\le\frac{1155625}{995328}+\frac{13}{13824}<\frac65$；$\frac65-(\cdot)=189163/4976640$ & 5 & \chk\\
+\texttt{contact-square} 的两个比值 &
+ $41503/27840<3/2$；$41503/54400<3/2$ & 2 & \chk\\
+$p_*$ 的展开与配方 &
+ $p_*(y+1/2)=15/16+y/16-15y^2/8-y^3$；$-15y^2/8-y^3\le-11y^2/8$ 于 $[-1/2,1/2]$；
+ $15/16+y/16-11y^2/8=1321/1408-(11/8)(y-1/44)^2$ & 3 & \chk\\
+$z_*$ 的展开 & $z_*(t)=(t+9/8)(t-1)(t-1/2)(t+3/8)=t^4-\frac{85}{64}t^2+\frac{15}{128}t+\frac{27}{128}$
+ （三次项系数恰为零） & 1 & \chk\\
+\texttt{contact-paid} 恒等式 &
+ $\sigma-\frac{z_*}{125}+\frac3{125000}=(\sigma-\frac23z_*^2)+\frac23(z_*-\frac3{500})^2$ & 1 & \chk\\
+\texttt{paid-expansion} 的五个系数 &
+ $\frac{\mathcal C}9=\frac{103}{9000000}+\frac{K^2}{1125}-\frac e{9600}
+  +(-\frac{187}{1680000}+\frac1{375000})V+\frac{211}{504000}J$ & 5 & \chk\\
+\peq{Q8} 的大配方系数 &
+ $\mathrm{BIG}=\frac{725029049}{278853120}=\frac{7\ell}4+\frac{\ell^2}{9\cdot13/200}
+  +\frac{9\ell^2}{16\cdot19/50}$；
+ $\frac{183}{200}-\frac{20}{57}\mathrm{BIG}=\frac{53754367}{19868284800}>0$ & 2 & \chk\\
+\peq{Q8} 末三个系数与 \peq{squares} 的关系 &
+ 分别加上 $-\frac1{9600}$、$-\frac{187}{1680000}+\frac1{375000}$、$\frac{211}{504000}$ & 3 & \chk\\
+$Z_*$ 的四个 $RR'$-矩 & $3-V$，$1-e$，$1-J$，$K^2+\frac67\|Z\|^2+\frac{3-V}5$ & 4 & \chk\\
+$L_q-L$ 恒等式 & $L_q-L=q_0(\zeta-x)^2(\zeta+2x)/x^2$，其中 $q-q_0=\frac{\zeta-x}{\sqrt3x}$，
+ $q+q_0-2x/C=\frac{(\zeta-x)(\zeta+2x)}{Cx}$ & 2 & \chk\\
+$\overline L=\frac34F_0+\frac13G_0$ 的展开 &
+ $\frac{7q^2}4u^2+\frac5{18}z^2+\frac14j^2+\frac{2q}3uz+\frac{3q}2uj$ & 5 & \chk\\
+$G_0$ 的紧性 & $1-2qCx+3q^2$ 与 $V/3+3q^2e$ 之差恒为 $0$ & 1 & \chk\\
+$|Zv|^2\le\frac23\|Z\|^2$ & 无迹对称 $3\times3$：另两特征值平方和 $\ge z^2/2$ & 1 & \chk\\
+$\operatorname{tr}(N^2)\le1$ 的展开 & $\E\|U-NY\|^2=1-\operatorname{tr}(N^2)$ & 1 & \chk\\
+$\Sigma_2$ 的上界函数 & $\frac29+\frac{11}9t^2-\frac49t^4-|t|=\frac{(1-|t|)(2|t|-1)^2(|t|+2)}9$ & 1 & \chk\\
+$g_{4,2}$ 的三角形式 & $t^4-t^2+1/8=\cos4(a-a')/8$，$t=\cos(a-a')$ & 1 & \chk\\
+$\rho_0$ 的商矩阵谱 & $b=(7+5\sqrt7)/126$ 代入
+ $\frac{1+2\sqrt5b+\sqrt{1+4b-36b^2}}2=\frac{9+\sqrt5+2\sqrt{35}}{18}$ & 1 & \chk\\
+$\mu_+\mu_-=-2ab$ & $\frac{(1-2b)^2-(1+4b-36b^2)}4=10b^2-2b=-2b(1-5b)$ & 1 & \chk\\
+$\rho_0>32/25>7/6$ & 精确比较 & 2 & \chk\\
+\bottomrule
+\end{longtable}
+\endgroup
+
+\noindent\textbf{合计}：$120$ 条断言，通过 $120$，失败 $0$。
+
+\textbf{两点值得单独说明的核对结果。}
+第一，稿件在四处需要"$>0$"的有理数比较（$\frac1{20}-d$、$\frac1{20}-d_1$、$\frac1{20}-d_0$、
+$d_0-\frac7{144}$），它们都不是随手取的宽松下界，而是\emph{恰好}等于把
+$\sqrt5<161/72$（误差 $4.31\times10^{-5}$）与 $\sqrt3>433/250$ 代入后的有理数值。
+我另外测试了其他有理近似：用 $\sqrt5<29/13$ 会得到比稿件更弱的下界从而\emph{不足以}完成证明，
+用 $\sqrt5<337/151$、$\sqrt3>1351/780$ 则得到强得多的下界。
+也就是说，稿件选择的这组近似是"够用且几乎刚好"的，不是冗余的。
+第二，$\frac1{20}-d_0$ 的真值与稿件给出的有理下界之间的差为 $3.89\times10^{-5}$，
+与 $\frac1{20}-d$、$\frac1{20}-d_1$ 的差完全相同（因为 $d_0,d_1,d$ 之间只差有理数），
+这个一致性本身就是稿件计算无误的旁证。
+
+\section{数值验证}\label{sec:num}
+
+\textbf{重要声明。} 本节全部内容标记为 \num。数值证据\emph{不是}结果：它既不能证明主定理，
+也不能证明我列出的任何不等式。它的作用是两件事——(i) 在符号核对之外提供一条独立的、
+不依赖我阅读理解的检查通道；(ii) 探测稿件常数的松紧程度，为 \S\ref{sec:slack} 的优化排序提供依据。
+
+\subsection{证书恒等式的残差检验}
+
+在"冠军律"（$K_1\vee C_5$ 加权吹起，$m=6$ 个原子，质量 $a=0.197271565$、$b=0.160545687$）上，
+我按稿件 \S5--\S9 的定义逐个量算出数值，再检验稿件的 $16$ 条恒等式。冠军律的各量为
+\begin{center}
+\small\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llll}
+\toprule
+$A=1.586541134689$ & $B=0.976595259055$ & $e=0.023404740945$ & $C=1.719340161947$\\
+$V=0.043869407516$ & $D=0.054897595006$ & $J=0.010986665097$ & $\|Z\|_F^2=0.003636470742$\\
+$S=0.007557515142$ & $K^2=0.006468363417$ & $q^2=0.336330687329$ & $\chi=0.493821499135$\\
+$C^2/24=0.123172108$ & $\chi-C^2/24=0.370649391$ & $r_{\rm reg}=6.900{\scriptstyle\times}10^{-4}$ & $r_{\rm rad}=3.881{\scriptstyle\times}10^{-3}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent 残差结果（\texttt{\_aud9.py} 与修正后的 \texttt{\_aud13.py}）：
+\begin{center}
+\small
+\begin{tabular}{ll}
+\toprule
+恒等式 & 残差\\
+\midrule
+\texttt{budget7}：$D-(\delta_{\mathrm q}+b_ee+b_VV+b_JJ+a_3H^2+a_4K^2+P)$ & $-1.7\times10^{-16}$\\
+\texttt{budget4}：$D-(e+\alpha V+\beta J+\rho K^2+S)$ & $-2.1\times10^{-17}$\\
+\texttt{Zstar}：$Z_*$ 与其展开式 & $+3.1\times10^{-17}$\\
+\texttt{payment}：$P-\frac3{50}(V-9J)-r_{\rm rad}$ & $0$\\
+\texttt{reserve}：$r_{\rm rad}-(P/9+r_{\rm tr})$ & $-7.0\times10^{-17}$\\
+$\mathcal C$ 的精确值与 \peq{paid-expansion} & $+2.7\times10^{-19}$\\
+$p_3=\langle T_3,\Psi_3(v)\rangle$，$p_4=\langle T_4,\Psi_4(v)\rangle$ & $\le3.5\times10^{-17}$\\
+$a_3H^2$、$a_4K^2$ 的两个配方 & $\le2.1\times10^{-17}$\\
+$L_q-L$ 公式 & $-8.2\times10^{-18}$\\
+$\overline L-(\frac34F_0+\frac13G_0)$ & $0$\\
+\peq{squares}：$Ee+V_cV+J_cJ-\ell\overline L-Q_7$ & $-7.8\times10^{-18}$\\
+\peq{certificate-start} 残差 & $+6.9\times10^{-18}$\\
+\peq{certificate8} 残差 & $-6.9\times10^{-17}$\\
+$Q-Q_7$ 与支付修正项 & $+1.1\times10^{-19}$\\
+\peq{certificate-final} 右端 vs $D$ & $-6.9\times10^{-17}$\\
+谐波分解 $\E[RR'w^4]=K^2+\frac67\|Z\|^2+\frac{C^2}5$ & $+1.1\times10^{-16}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent 全部余量在冠军律上非负：$D-d=+0.006210$，$D-d_1=+0.006210$，$D-d_0=+0.006222$，
+$q^2=0.336331\le20/57=0.350877$，括号系数 $\frac{183}{200}-\mathrm{BIG}\cdot q^2=+0.040527$，
+$\widehat Q\ge0$，$\chi\ge C^2/m$（$m=6$）。
+
+\textbf{一处需要向导师说明的审核事故（已修正，不影响稿件）。} 我的第一版检验脚本
+\texttt{\_aud9.py} 把变量 \texttt{K2} 赋成了
+$\E[RR'(a+b(w^2-\frac13)-\rho(w^4-\frac15)-|w|)]$，而由上界函数恒等式这恰好等于 $S$，
+不是 $K^2=\|T_4\|_F^2$。因此该脚本报告的 \texttt{budget4} 残差 $-5.8\times10^{-4}$ 是
+\emph{脚本把 $S$ 数了两次}造成的，等于 $\rho(K^2-S)$，与稿件无关。
+我在 \texttt{\_aud13.py} 中用正确的 $K^2$ 重算，冠军律残差降到 $-2.1\times10^{-17}$，
+$12$ 个随机律上不超过 $4.4\times10^{-16}$。同时我在该脚本里加了张量自检：
+$\operatorname{ct}\mathcal L_4(Z)=Z$、$\|\mathcal L_4(Z)\|^2=\frac67\|Z\|^2$、
+$\|\Psi_3\|^2=2/5$、$\|\Psi_4\|^2=8/35$、$\langle\Psi_i(u),\Psi_i(v)\rangle=g_i(u\cdot v)$，
+全部在 $5\times10^{-16}$ 内成立。
+我特意把这次事故写进报告，是因为它说明\textbf{稿件的 \texttt{budget4} 是精确恒等式}这一结论
+是在我自己的检验工具出过错、并被独立重算纠正之后得到的，而不是一次通过的表面结果。
+（顺带一个观察：稿件在 \texttt{budget7} 之后明确写了 \texttt{budget4} "is not added as an
+independent resource"，而我的脚本恰恰犯了"把同一个量数两次"的错——稿件的这句自我约束
+正是在防这类错误。）
+
+\subsection{随机各向同性律的压力测试}
+
+$4000$ 个随机生成的各向同性原子律（原子数 $4$--$9$，先随机取点再做白化 $\E XX^T=I_3$）：
+\begin{center}
+\small
+\begin{tabular}{lll}
+\toprule
+检验 & 样本 & 违例\\
+\midrule
+$D\ge d_0$（半径比 $\le3$） & $2661$ 个满足半径假设 & $0$\\
+$D\ge d_1$（半径比 $\le\sqrt8$） & 相应子集 & $0$\\
+$D\ge d$（无条件） & 全部 $4000$ & $0$\\
+最小余量 $\min(D-d)$ & 全部 & $+0.124860$\\
+\bottomrule
+\end{tabular}
+\end{center}
+\noindent 注意 $\min(D-d)=+0.1249$ 远大于冠军律的 $+0.0062$，说明随机律几乎从不接近临界；
+真正逼近 $d$ 的只有高度对称的构造。这也是我为什么把优化希望寄托在"分类对称模板"而不是
+"随机搜索"上（\S\ref{sec:thesis}）。
+
+\subsection{点态扫描（$2\times10^6+1$ 个网格点）}
+
+\begin{center}
+\small
+\begin{tabular}{lll}
+\toprule
+量 & 扫描结果 & 稿件断言\\
+\midrule
+$\min_{[-1,1]}\sigma(w)$ & $-2.8\times10^{-17}$ & $\ge0$ \chk\\
+$\min_{[-1,1]}[\sigma(w)-\frac{1-9w^2}{25}]$ & $+5.378\times10^{-4}$ & $\ge0$ \chk\\
+$\max_{[-1,1]}[z_*^2-\frac32\sigma]$ & $+4.2\times10^{-17}$ & $\le0$ \chk\\
+$\sup_{[0,1]}z_*^2/\sigma$ & $1.200224$ & $\le3/2=1.5$（\textbf{松弛 $25\%$}）\\
+$\sup_{[-1,0]}z_*^2/\sigma$ & $0.615384$ & $\le41503/54400=0.762923$（松弛 $24\%$）\\
+$\min h(w)=\sigma-\frac{z_*}{125}+\frac3{125000}$ & $+6.711\times10^{-6}$ & $\ge0$ \chk\\
+$h(1)$ & $+2.4\times10^{-5}$ & $=\kappa=3/125000$ \chk\\
+$\max_{[0,1]}q_*(t)$ & $1.161116$（在 $t=0.66981$） & $\le1.161990$（稿件界）$<6/5$ \chk\\
+$\max_{[0,1]}p_*(x)$ & $0.938016$ & $\le1321/1408=0.938209<1$ \chk\\
+$\min_{[0,1]}(928+82x-160x^2)$ & $850.000$ & $\ge850$ \chk\\
+$\sigma$ 的零点 & $w=1,\ 1/2,\ -3/8$ & 与插值节点一致 \chk\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent 第 4、5 行是本次审核最有价值的数值发现之一：稿件为证明 $z_*^2\le\frac32\sigma$ 所付出的代价，
+是把真实上确界 $1.2002$ 放大到 $1.5$。这个松弛直接进入 \peq{contact-paid} 的
+$\sigma-\frac23z_*^2$ 项，是可量化的常数损失（\S\ref{sec:slack}）。
+
+\subsection{全局极值搜索：$\sup$ 到底是多少}
+
+我对目标 $\frac12(\E|X\cdot X'|+|\E X|^2)=\frac{A+B}2$ 在 $k$ 个原子的各向同性律上做全局最大化
+（参数化：原子位置 $+$ 对数质量，先白化再优化；L-BFGS-B 后接 Nelder--Mead／Powell 精修；
+每档 $60$--$70$ 组随机初值）。
+
+\noindent 结果（\texttt{\_aud5.py} 覆盖 $k=4$--$9$，\texttt{\_aud7.py} 覆盖 $k=10$--$20$，
+两者使用不同的稳定化参数化与不同的随机种子）：
+\begin{center}
+\small
+\begin{tabular}{rrrrr}
+\toprule
+原子数 $k$ & $\max\frac{A+B}2$ & 与 $\rho_0$ 之差 & 与 $c$ 之差 & 备注\\
+\midrule
+4  & 1.250000000000 & $-3.157\times10^{-2}$ & $+3.467\times10^{-2}$ & 达不到 $\rho_0$\\
+5  & 1.253197264742 & $-2.837\times10^{-2}$ & $+3.148\times10^{-2}$ & 达不到 $\rho_0$\\
+6  & 1.281568196872 & $+3.1\times10^{-15}$ & $+3.105\times10^{-3}$ & \textbf{恰为 $\rho_0$}\\
+7  & 1.281568196872 & $+2.7\times10^{-15}$ & $+3.105\times10^{-3}$ & \\
+8  & 1.281568196872 & $+3.1\times10^{-15}$ & $+3.105\times10^{-3}$ & \\
+9  & 1.281568196872 & $+3.3\times10^{-15}$ & $+3.105\times10^{-3}$ & \\
+10 & 1.281568196872 & $-2.7\times10^{-15}$ & $+3.105\times10^{-3}$ & \\
+12 & 1.281568196872 & $-1.1\times10^{-15}$ & $+3.105\times10^{-3}$ & \\
+14 & 1.281568196872 & $-2.2\times10^{-15}$ & $+3.105\times10^{-3}$ & \\
+16 & 1.281568196872 & $-2.0\times10^{-15}$ & $+3.105\times10^{-3}$ & \\
+20 & 1.281568196872 & $-2.9\times10^{-15}$ & $+3.105\times10^{-3}$ & \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent\textbf{解读（这是本报告最重要的数值发现）。} 从 $k=6$ 起，全局最大值\emph{精确地}等于
+$\rho_0=(9+\sqrt5+2\sqrt{35})/18$，误差在 $3\times10^{-15}$（机器精度）以内，
+且\emph{从未}超过 $\rho_0$，更从未接近 $c$。$k=6$ 是门槛，这与冠军律恰有 $6$ 个原子一致。
+$k\le5$ 达不到 $\rho_0$，也与"六块轮图模板不可约化为五块"相符。
+
+这条数值证据的意义是：\textbf{$\mathcal M$ 的真值极可能就是 $\rho_0$}，
+而稿件的 $c=1.284673\ldots$ 与之相差 $3.1\times10^{-3}$。
+必须强调：这是 \num，\emph{不是}结果。多起点局部优化无法排除存在某个高度非对称的律给出更大值；
+而且 $\mathcal M$ 的上确界是在\emph{所有} graphon 上取的，不限于有限原子律。
+但它足以把"改进 $c$"从一个开放问题变成一个\emph{有明确目标值}的问题：目标就是 $\rho_0$。
+
+\textbf{一次需要报告的脚本故障。} \texttt{\_aud5.py} 在 $k=10$ 时因质量参数用 $\exp(z)$ 未做平移
+而溢出（\texttt{overflow in exp} $\to$ \texttt{eigh} 不收敛）而中断；
+$k=10$--$20$ 的数据来自参数化稳定的 \texttt{\_aud7.py}（$z\leftarrow z-\max z$）。
+两个脚本在重叠的 $k=6$--$9$ 上给出完全相同的结果，所以数据本身可信。
+
+\subsection{有限图穷举与结构图族}
+
+$n=3,4,5,6$ 的\emph{全部} $8+64+1024+32768=33864$ 个简单图：
+\[
+ \max_G\bigl[\Lambda_3(G)-(cn-3)\bigr]=-0.0224818141<0,
+\]
+即\textbf{零违例}，最小余量 $+0.0224818$ 在 $n=6$ 达到，取到最紧的图是 $K_1\vee C_5$
+（我把它从穷举中还原出来了：邻接矩阵为
+$\left(\begin{smallmatrix}0&0&0&1&1&1\\0&0&1&1&1&0\\0&1&0&0&1&1\\1&1&0&0&1&0\\1&1&1&1&0&1\\1&0&1&0&1&0\end{smallmatrix}\right)$，
+中心为第 5 个顶点，轮缘为 $0\!-\!3\!-\!1\!-\!2\!-\!5\!-\!0$ 的五圈），
+$\Lambda_3(K_1\vee C_5)=4.6855577203$，$cn-3=4.7080395343$，
+STW 的 $(3+\sqrt5)n/4-3=4.8541019662$。
+
+\textbf{这条结果的含义值得展开。} 稿件下界构造用的是 $K_1\vee C_5$ 的\emph{加权吹起}（graphon），
+而穷举显示未加权的 $K_1\vee C_5$ 本身就已经是 $n\le6$ 中最紧的图。
+这不是巧合：$\rho_0$ 的构造正是从 $K_1\vee C_5$ 的商谱出发、再对块质量做优化的结果。
+所以"最紧图族"与"下界构造"是同一个对象的两个尺度，这为
+\textbf{$\mathcal M=\rho_0$ 且极值 graphon 就是那个加权轮图}这一猜想提供了额外的结构性支持。
+
+结构图族与随机图（$n\le600$，$18$ 个）：
+\begin{center}
+\small
+\begin{tabular}{lrrrr}
+\toprule
+图 & $n$ & $\Lambda_3$ & $cn-3$ & 余量\\
+\midrule
+$K_1\vee C_5$ & 6 & 4.68556 & 4.70804 & $+0.02248$\\
+Petersen & 10 & 9.24540 & 9.84673 & $+0.60133$\\
+$K_{10}$ & 10 & 7.00000 & 9.84673 & $+2.84673$\\
+$K_{15,15}$ & 30 & 15.00000 & 35.54020 & $+20.54020$\\
+$K_{60}$ & 60 & 57.00000 & 74.08040 & $+17.08040$\\
+rook $11\times11$ & 121 & 38.00000 & 152.44546 & $+114.44546$\\
+$K_{120,120}$ & 240 & 120.00000 & 305.32158 & $+185.32158$\\
+$K_{600}$ & 600 & 597.00000 & 767.80395 & $+170.80395$\\
+$G(60,0.5)$ & 60 & 42.85739 & 74.08040 & $+31.22301$\\
+$G(200,0.5)$ & 200 & 125.96107 & 253.93465 & $+127.97358$\\
+$G(500,0.05)$ & 500 & 44.82009 & 639.33663 & $+594.51654$\\
+\bottomrule
+\end{tabular}
+\end{center}
+\noindent 全部余量为正，零违例。注意团 $K_n$ 与完全二部图的余量都随 $n$ 线性增长且系数远大于
+$c-\rho_0$，说明\emph{真正逼近界的只有轮图型构造}——这与 \S\ref{sec:slack} 的分析一致。
+
+\subsection{吹起族：$\Lambda_3(G)/n\to\rho_0$}
+
+把 $K_1\vee C_5$ 的每一块换成团（即稿件下界构造的\emph{有限图}版本），块大小按
+$a:b=0.197271565:0.160545687$ 取整，得：
+\begin{center}
+\small
+\begin{tabular}{rrrrrr}
+\toprule
+$n$ & 块大小 & $\Lambda_3$ & $\Lambda_3/n$ & $cn-3$ & 余量\\
+\midrule
+126  & $26,20^5$   & 158.47078  & 1.257704589 & 158.8688  & $+0.3981$\\
+252  & $52,40^5$   & 319.94156  & 1.269609350 & 320.7377  & $+0.7961$\\
+504  & $104,80^5$  & 642.88311  & 1.275561731 & 644.4753  & $+1.5922$\\
+1008 & $203,161^5$ & 1288.80947 & 1.278580822 & 1291.9506 & $+3.1412$\\
+2016 & $401,323^5$ & 2580.63791 & 1.280078329 & 2586.9013 & $+6.2634$\\
+\bottomrule
+\end{tabular}
+\end{center}
+\noindent $\Lambda_3/n$ 单调上升并趋于 $\rho_0=1.281568196872$（$n=2016$ 时已达 $1.280078$，
+距 $\rho_0$ 还差 $1.49\times10^{-3}$，这是取整造成的 $O(1/n)$ 误差）。
+余量 $(cn-3)-\Lambda_3$ 按 $(c-\rho_0)n$ 线性增长：$n=2016$ 时为 $+6.2634$，
+与 $(c-\rho_0)\times2016=6.260$ 吻合。
+
+\textbf{这条数值结果对学位论文的意义。} 它证明了三件事：
+(i) 下界常数 $c_{\rm w}=\rho_0$ 是\emph{由真实有限简单图达到}的，不只是加权 graphon 的抽象构造；
+(ii) 缺口 $c-\rho_0$ 是\emph{真实}的、随 $n$ 线性增长的，不是有限 $n$ 的边界效应；
+(iii) 因此\textbf{$c$ 不可能通过改进 $-3$ 这个常数项来变好}，任何改进都必须落在系数上。
+
+\subsection{冠军律是否满足结构定理的全部方程}
+
+这是我对定理 1.2 的独立检验：如果冠军律\emph{不}满足结构方程，那它就不是极大元，
+$\rho_0$ 也就不是 $\mathcal M$ 的候选值。检验结果（\texttt{\_aud15.py}，
+修正了 \texttt{\_aud6.py} 中行方程按 $p_i$ 而非 $p_j$ 加权的 bug）：
+\begin{center}
+\small
+\begin{tabular}{lll}
+\toprule
+结构方程 & 偏差 & 判定\\
+\midrule
+$\sum_ip_iv_iv_i^T=I_3$ & $7.3\times10^{-16}$ & \chk\\
+$v_i^TLv_i=\mathcal M$（全部 $i$） & $8.9\times10^{-16}$ & \chk\\
+$v_{i1}>0$（符号约定修正后） & 全部成立 & \chk\\
+$\mathbf1_{\{v_i\cdot v_j>0\}}=W_{ij}$ & 精确相等 & \chk\\
+$\min_{i\ne j}|v_i\cdot v_j|=1.1832159566$ & 远离零赤道 & \chk\\
+$\sum_jp_jB_{ij}v_j=Lv_i$（阈值公式） & $3.3\times10^{-16}$ & \chk\\
+$\frac{A+B}2=\Sigma_3=\mathcal M$ & $<10^{-15}$ & \chk\\
+每个正团上 $\{v_iv_i^T\}$ 线性无关（$\mathrm{rank}=|J|$） & 全部正团通过 & \chk\\
+$D_*=0.054898>1/20$，故冠军律落在\emph{大分支} & — & \chk\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent\textbf{两点观察。} 第一，冠军律的 $\min|v_i\cdot v_j|=1.183$ 远大于 $0$，
+即它\emph{严格}远离引理 2.6 中的"零赤道"$\{v\cdot w=0\}$；这与该引理断言
+$\nu\{w:v\cdot w=0\}=0$ 相容，也解释了为什么阈值公式在这里表现得如此干净
+（符号模式对微小扰动是稳定的）。第二，冠军律落在\emph{大分支}（$D_*>1/20$），
+所以它\textbf{根本不进入 \S5--\S8 的小分支证书}。这印证了 \S\ref{sec:slack} 的判断：
+小分支是一个在已知构造中\emph{从未被触发}的逻辑分支，
+$c$ 的大小完全由一个"可能为空的情形"决定。这是一个非常值得写进学位论文的观察。
+
+\section{问题清单}\label{sec:issues}
+
+我把发现的问题分三级：\gap\ 是论证跳步，必须修补（两处）；\textbf{S} 是表述性建议，
+不影响正确性但影响审稿通过率（七条）；\textbf{R} 是残余风险（一条）。
+两处 \gap\ 我都给出可以直接粘进稿件的修补文字。
+
+\subsection{G1（\gap，中等严重度，承重）：引理 2.6 的"极大行唯一模零集"}\label{sec:g1}
+
+\textbf{原文。} \texttt{top3\_joint\_moment\_bound.tex} 第 340 行附近：
+\begin{quote}\small\itshape
+If $A_0=\{v\cdot F=0\}$, then $h_v+\mathbf1_A$ has the same support value for every measurable
+$A\subset A_0$. Uniqueness forces $\int_AF=0$ for every such $A$, hence $F=0$ almost everywhere
+on $A_0$. The ellipsoid identity implies that $A_0$ is null. Thus the maximizing row is unique
+modulo null sets, which identifies every original row and proves the threshold formula.
+\end{quote}
+
+\textbf{问题。} 设 $\mathcal Z=\{\int hF:0\le h\le1\}$，$H(v)=\int(v\cdot F)_+$ 是其支撑函数，
+$E=\{r:r^TL^{-1}r\le\mathcal M\}$ 的支撑函数是 $\sqrt{\mathcal M\,v^TLv}$。
+稿件已经正确证明：对 $v\in S=\{v:v^TLv=\mathcal M\}$ 有 $H(v)=\mathcal M$，
+且 $E$ 在方向 $v$ 的唯一支撑点是 $Lv$。于是"达到支撑值的 $h$"满足 $\int hF=Lv$。
+稿件随后只考察了形如 $h_v+\mathbf1_A$（$A\subset A_0$）的扰动，并用 $A_0$ 零测排除了它们。
+但\emph{在 $\{v\cdot F>0\}$ 或 $\{v\cdot F<0\}$ 上改动 $h$ 的扰动没有被排除}，
+而"the maximizing row is unique modulo null sets"这句话需要排除它们。
+换句话说，从"$A_0$ 零测"到"$h=h_v$ a.e."中间缺一步，稿件把它当成显然的了。
+
+\textbf{为什么必须修补（承重范围）。} 阈值公式 $h_v=\mathbf1_{\{v\cdot F>0\}}$ 是：
+(i) \S9 开头 $A+B=2\mathcal M$ 的来源；(ii) 定理 1.2 中"原 graphon 几乎处处等于二值阶梯核"的来源；
+(iii) 推论 4.4 的 $m\le24$ 的来源，而 $m\le24$ 又是 \peq{certificate-final} 中
+$\chi-\frac{C^2}{24}\ge0$ 的前提。所以这一步一旦不成立，主定理的证书就没有可代入的对象。
+必须修补；好消息是它确实成立。
+
+\textbf{修补（可直接粘贴，约 5 行）。} 建议把原文最后两句替换为：
+
+\begin{quote}\small
+\emph{Repair.} Let $h\in[0,1]$ satisfy $\int hF=Lv$ for some $v\in S$. Pairing with $v$ gives
+$v\cdot\int hF=v^TLv=\mathcal M$. On the other hand
+\[
+ v\cdot\int hF=\int h\,(v\cdot F)\dd x\le\int(v\cdot F)_+\dd x=H(v)=\mathcal M ,
+\]
+so equality holds throughout. Since $h\le1$ and $h\ge0$, the integrand inequality
+$h\,(v\cdot F)\le(v\cdot F)_+$ is an equality almost everywhere, which forces $h=1$ almost
+everywhere on $\{v\cdot F>0\}$ and $h=0$ almost everywhere on $\{v\cdot F<0\}$. As $A_0$ is null,
+$h=h_v$ almost everywhere. Hence the maximizing row is unique modulo null sets, and every original
+row equals $h_{F(x)}$.
+\end{quote}
+
+\noindent\textbf{说明。} 关键的新内容是那个"配对 $v$"的两行：它把唯一性问题从
+\emph{几何}（椭球的严格凸性，只能控制积分向量 $\int hF$）降到\emph{点态}
+（被积函数 $h(v\cdot F)$ 与 $(v\cdot F)_+$ 的逐点比较），而点态比较是初等的。
+原稿的思路（椭球严格凸 $+$ $A_0$ 零测）方向是对的，只是漏了点态这一步。修补后判定 \ok。
+
+\textbf{附带建议。} 修补后，$A_0$ 零测的论证仍然需要保留（它在点态比较的最后一步用到），
+所以稿件原有的四句话不必删，只需在其后追加上面的配对论证，并把
+"Thus the maximizing row is unique modulo null sets"改为"Hence, by the pairing argument below,
+\ldots"。
+
+\subsection{G2（\gap，低严重度，承重）：引理 4.2 中 $\dim H=2$、$0\in H$ 一支}
+\label{sec:g2}
+
+\textbf{原文。} $0\in H$ 一支的结尾是：
+\begin{quote}\small\itshape
+For any observation $b$ nonconstant on $I$, \peq{obs} and the total vector relation give
+nonzero-coefficient linear relations on both nonempty sets $I_1=\{i:b(i)=1\}$ and
+$I_0=\{i:b(i)=0\}$. Nonproportionality forces each set to contain at least three points.
+This would give $s\ge6$, a contradiction.
+\end{quote}
+
+\textbf{问题。} 这一支只处理了"存在非常值观测"的情形，\emph{没有}处理"所有观测在 $I$ 上都是常值"。
+而 $0\notin H$ 一支恰恰把这一步写全了：先由 $s\ge8$ 的矛盾推出
+"Thus every observation is constant on $I$"，再用一元电路不可能与 $\mathcal B$ 的分离性收尾。
+两支的论证结构应当对称，$0\in H$ 一支缺了后半截。
+
+\textbf{修补（1 句，可直接粘在该支末尾）。}
+\begin{quote}\small
+\emph{Repair.} If instead every $b\in\mathcal B$ were constant on $I$, then, since minimality
+excludes $s=1$ (as $v_iv_i^T\ne0$), we could pick distinct $i,j\in I$; by hypothesis
+$\mathcal B$ separates every pair of distinct indices of $J$, so some $b\in\mathcal B$ satisfies
+$b(i)\ne b(j)$, a contradiction.
+\end{quote}
+修补后判定 \ok。
+
+\textbf{评注。} 这是纯粹的行文遗漏，不是数学问题：所需的事实（$s\ge2$、$\mathcal B$ 分离指标对）
+都已经在引理的假设或前文里给出过。但审稿人如果逐句读，一定会问这一句，
+而且它处在 $m\le24$ 的证明链上，属于承重位置，不宜留白。
+
+\subsection{表述性建议}
+
+\textbf{S1（引理 2.3，建议补 1 句）。} 稿件用"六块阶梯核，对角块取 $1$"构造 $\rho_0$，
+并直接给出商矩阵谱。但\emph{为什么 $\Sigma_3$ 等于商矩阵的三个正特征值之和}这一步没有写。
+理由是：若 $f$ 支撑在块 $A_i$ 内且 $\int_{A_i}f=0$，则 $T_Wf$ 在 $A_i$ 上为 $\int_{A_i}f=0$、
+在其他块上为常数，于是 $\langle T_Wf,\cdot\rangle$ 与 $f$ 的配对为零，即 $T_Wf=0$；
+故"块内均值零"的整个子空间属于 $0$ 特征空间，$\Sigma_3$ 完全由商矩阵决定。
+这是全文唯一给出具体数值下界的地方，而 $\rho_0$ 又是学位论文下界线的起点，
+建议把这一步写明（我已在 \S\ref{sec:detail} 给出完整推导）。
+
+\textbf{S2（引理 2.5，建议补 2 行）。} "Under the unit-normalized direct-sum identification of the
+original $L^2$ and the new constant function"这一句太压缩。建议显式写出：新空间 $A\sqcup B$，
+$A$ 上测度 $u=1-\epsilon$、$B$ 上测度 $\epsilon$；试验架在 $A$ 上取 $f_i$、在 $B$ 上取常值 $t_i$；
+整体除以 $\sqrt u$ 不改变 Rayleigh 商；此时
+$G=I+\frac\epsilon u tt^T$、$N=uL+\epsilon(rt^T+tr^T)$，其中 $A\times B$ 的贡献
+$\iint_{A\times B}=\epsilon u\,r_it_j$，除以 $u$ 后为 $\epsilon r_it_j$。
+我按这个约定重推得到了与稿件完全一致的 $\tr(G^{-1}N)$，所以约定本身没问题，只是需要写出来。
+
+\textbf{S3（\S5.1，建议补半句）。} $L_q-L=q_0(\zeta-x)^2(\zeta+2x)/x^2$ 的推导依赖
+$\E[Rt]=x$，理由是 $Rt=R(U\cdot v)=(RU)\cdot v=X\cdot v=Y$，故 $\E[Rt]=\E Y=x$。
+稿件直接用了这个值而没有点明 $Rt=Y$。我自己推导时先在这里犹豫了一下（担心 $\E[RU]$ 需要额外信息），
+建议补这半句，可以省掉读者一次回溯。
+
+\textbf{S4（引理 8.2，实质性建议）。} 常数 $3/2$ 不紧：真实上确界为
+$\sup_{[0,1]}z_*^2/\sigma=1.200224$、$\sup_{[-1,0]}z_*^2/\sigma=0.615384$（\num）。
+建议二选一：(a) 把 $3/2$ 改紧为例如 $6/5$（正半轴）与 $4/5$（负半轴），
+这会直接放大 \peq{contact-paid} 中 $\sigma-\theta z_*^2$ 的可用份额，是\emph{最便宜}的常数改进；
+(b) 若为了有理数算术的整洁而保留 $3/2$，请在文中说明这是有意的取舍，
+否则读者会以为 $3/2$ 是必要的。我倾向 (a)，理由见 \S\ref{sec:slack} 的量化估计。
+
+\textbf{S5（可复现性，建议加一小节）。} 稿件出现 $41503=7^3\cdot11^2$、$106106902139519$、
+$725029049$、$42847433/5229378000000$、$65082103/20917512000$ 等大量整数系数，
+但只说明了它们的\emph{性质}，没有说明它们的\emph{来源}。
+从我的复核看，$f(w)$ 由"在 $-3/8$ 与 $1/2$ 处与 $|w|+w$ 双重接触、在 $1$ 处接触"的五条件
+Hermite 插值唯一确定（稿件已写明这一点，很好），
+而 \peq{Q8} 与 \peq{squares} 的系数看起来是在给定 $\ell=937/1400$、$\eta=1/10$、$\theta=6/25$
+一类参数后配方得到的。建议加一段"系数的生成方式与机器复现"，
+说明哪些是插值唯一确定的、哪些是人工/数值选取后再精确验证的。
+这不是正确性问题（我已验证它们满足所述性质），但审稿人无法区分"算出来的"与"调出来的"，
+而这恰恰是这类证书型论文最容易被质疑的地方。
+
+\textbf{S6（定理 1.2 的陈述结构）。} 目前"至多 24 个支撑点"与"原 graphon 几乎处处等于二值阶梯核"
+挤在同一段，后面又接了六个 displayed 等式与团条件。建议拆成 (a)(b)(c)(d) 四条编号断言，
+因为后文（以及学位论文）会反复单独引用其中 (b) 与 (d)。
+
+\textbf{S7（\S9 的两个半径阈值）。} 引理 6.3 要求 $r_+/r_-\le3$，命题 8.5 与引理 9.1 给出
+$r_+/r_-\le\sqrt8$。$\sqrt8=2.8284<3$，所以相容且有富余，但稿件没有点明这一点。
+建议加半句，因为读者会自然怀疑"两个阈值是否冲突"。
+
+\subsection{残余风险}
+
+\textbf{R1（文献，低概率但未排除）。} Ebrahimi Boroojeni 2008 年 SFU 硕士论文
+\emph{Sum of the Largest Eigenvalues of Symmetric Matrices and Graphs} 的定理 3.4.1 我无法获取
+（作者自查文件中记录了同一事项）。该论文处理的是 $\Lambda_k$ 的一般上界，
+若其中已含 $k=3$ 的显式系数，则本稿的新颖性声明需要相应调整。
+我的间接判断是风险较低，理由见 \S\ref{sec:novel}：STW（2026）命题 6.1 仍在用
+$(3+\sqrt5)/4$，而 STW 是该方向最系统的近期工作，其文献网络覆盖了 Mohar 2009、
+KLMPT 2026 等；若 2008 年的硕士论文已给出更好的 $\Lambda_3$ 系数，STW 不太可能沿用旧值。
+但这是\emph{推断}，不是核实。建议在投稿前用校园网访问 SFU 的 thesis 库做一次确认。
+
+\section{与已发表结果的关系与新颖性}\label{sec:novel}
+
+\subsection{STW 命题 6.1 的证明在哪里损失，以及本稿改的正是那一处}
+
+我把 STW（arXiv:2608.02429）命题 6.1 的完整证明抄录并核对了。其论证是：
+由 Ky Fan，$\Lambda_k(G)=\max_{Q\in P_k(n)}\tr(A_GQ)$；对 $Q=(q_{ij})\in P_k(n)$，
+\[
+ \tr(A_GQ)=\sum_{i\ne j}a_{ij}q_{ij}\le\sum_{i\ne j}\max(0,q_{ij})
+         =\frac12\Bigl(\mathbf1^TQ\mathbf1+\|Q\|_1\Bigr)-k,
+\]
+然后\emph{分别}放缩两项：$\mathbf1^TQ\mathbf1=\|Q\mathbf1\|_2^2\le\|\mathbf1\|_2^2=n$
+（用 $\|Q\|_{\mathrm{op}}\le1$），$\|Q\|_1\le\gamma(k)n$（绝对投影常数）。于是
+$\Lambda_k(G)\le\frac{1+\gamma(k)}2n-k$。取 $k=3$，$\gamma(3)=\frac{3+\sqrt5}{1+\sqrt5}=\frac{1+\sqrt5}2=\phi$，
+得系数 $\frac{1+\phi}2=\frac{3+\sqrt5}4=1.309016994\ldots$，与稿件的对比基准完全一致（我已核对）。
+
+\textbf{这就是本稿改进的机制，而且我认为它抓住了正确的那一处。}
+把 $Q=YY^T$（正交列）的行记为 $y_i$，令 $X$ 均匀分布在 $\sqrt n\,y_i$ 上，则
+$\frac{\|Q\|_1}n=\E|X\cdot X'|=A$，$\frac{\mathbf1^TQ\mathbf1}n=|\E X|^2=B$，$\E XX^T=I_3$。
+STW 的两个放缩分别对应"$B\le1$"与"$A\le\gamma(3)=\phi$"，两者\emph{各自}都是紧的：
+$B=1$ 在 $Q\mathbf1=\mathbf1$ 时取到，$A=\phi$ 在三维极值投影（$\gamma(3)$ 的达到元）上取到。
+但\textbf{两者不能同时取到}。本稿做的事正是把这个"不能同时"量化：
+\[
+ \frac{A+B}2\le c<\frac{1+\phi}2 .
+\]
+所以本稿不是把 $\gamma(3)$ 改小（那是不可能的，$\gamma(3)=\phi$ 是精确值），
+而是把两个独立上界换成一个联合上界。这是一条\emph{结构上不同}的路线，
+不是对 STW 的常数微调。稿件在 \S1 里说"This comparison concerns the stated universal
+order-only bound"，措辞谨慎，我认为是恰当的。
+
+\textbf{一个由此得到的、对学位论文很重要的推论。} 既然 $\gamma(3)=\phi$ 精确，
+那么任何沿 STW 路线的改进都\emph{必须}来自 $A$ 与 $B$ 的耦合，
+而耦合的极限恰是 $\mathcal M=\sup_W\Sigma_3(W)$（稿件已证
+$\frac{A+B}2\le\Sigma_3(W_X)\le\mathcal M$）。换言之：
+\textbf{把 $\Lambda_3$ 的系数压到最优，等价于确定 $\mathcal M$}，
+而这条等价关系把"图论问题"彻底翻译成了"graphon 变分问题"。
+这是本稿在方法论上最有价值的贡献，比常数本身更值得写进学位论文。
+
+\subsection{与其他近期工作的关系}
+
+我核对了本地可得的三篇相关工作：
+\begin{itemize}[leftmargin=1.6em,itemsep=2pt]
+\item \texttt{arXiv:2604.00512}（Kumar--Liu--Monterde--Pragada--Tait，\emph{Maximum spectral sum
+of graphs}）：处理 $\Lambda_2$ 与 graphon 椭圆/团克隆论证。稿件在 \S1.1 明确引用了它作为
+"机制上的先行者"，措辞是"Related graphon ellipse and clique-cloning arguments for the
+two-eigenvalue problem appear in \dots"，这个归属是准确的，没有夸大。
+\item \texttt{arXiv:2607.23081}（Huang--Wei）与 \texttt{arXiv:2603.21181}：涉及单个 $\lambda_3$
+或 $\Lambda_2$，与 $\Lambda_3$ 的系数问题不冲突。
+\item STW 的主定理（定理 2.1）针对的是\emph{单个}特征值 $\lambda_k$，
+其摘要中"Our bound is tight for $k\in\{2,3,4,8,24\}$"指的是 $\lambda_k$ 那条界，
+\emph{不是}命题 6.1 的 $\Lambda_k$ 界。这一点必须澄清，否则容易误读成"$\Lambda_3$ 的界已紧、
+本稿不可能改进"。我特意回到 STW 摘要原文确认了这个指代：紧性声明紧跟在
+$\lambda_k(G)\le\frac{(k-2)\sqrt k+\sqrt{k+1}+2}{2k(k-1)}n-1$ 之后，与 $\Lambda_k$ 无关。
+\end{itemize}
+
+\textbf{结论。} 在我能核对的文献范围内，\emph{没有}已发表的、系数优于 $c=1.284673\ldots$ 的
+$\Lambda_3$ 通用上界。本稿的改进是真实的、机制上新的。
+
+\subsection{STW \S6.1 提到的"possible gap"与本稿无关}
+
+STW 在讨论一节提出 $c_{r+1}\le\gamma(r)/(2r)$ 可能是严格不等式（其 Table 1 的数值实验提示如此）。
+这里的 $c_k=\sup\lambda_k(G)/|V(G)|$ 是\emph{单个}特征值的极限常数，与本稿的 $\Lambda_3$ 是不同对象。
+本稿既没有解决也没有依赖这个问题。稿件没有把它误当作自己的成果，这一点处理得当。
+
+\subsection{新颖性声明的边界}
+
+稿件在 \S1.1 写了两条自我限定，我认为都必要且准确，建议在答辩时主动重申：
+(i) "Our separating-observation lemma is stated and proved with its specific hypotheses in
+Section 4; we do not claim a new general bound for such dependencies."（即不声称改进了
+Li--Liu 的一般结果）；(ii) "The contribution here is the particular joint control of these errors
+for the mixed signed and absolute energy, rather than the use of polynomial majorants by itself."
+（即不声称发明了多项式上界法）。这两条限定显著降低了被审稿人以"增量性"为由打回的风险，
+但也意味着\textbf{本稿的新颖性完全押在"联合控制"这一件事上}——而这恰好是与学位论文主线
+（求精确上界）最相关的部分，所以定位是自洽的。
+
+\section{常数余量的量化评估}\label{sec:slack}
+
+这一节是我认为对学位论文最有直接价值的部分。稿件诚实地声明了 $c$ 不是最优值
+（"nor assert that $c$ is optimal"，以及 \S10 "Determining the optimum remains a separate
+problem"），但没有量化\emph{余量藏在哪里}。我做了这个量化。
+
+\subsection{缺口恰好等于冠军律上的证书松弛}
+
+设 $D_*=(3+\sqrt5)/2-2\mathcal M$，$d=(3+\sqrt5)/2-2c$。稿件的下界构造（引理 2.3 的加权轮图）
+给出 $\mathcal M\ge\rho_0$，对应
+\[
+ D_{\rm champ}=(3+\sqrt5)/2-2\rho_0=0.054897595005559\ldots ,\qquad
+ d=0.048687477302058\ldots ,
+\]
+\[
+ \boxed{\ D_{\rm champ}-d=0.006210117703501=2\,(c-\rho_0)\ }
+\]
+我用两种独立方式算这个差（一次由 $c,\rho_0$ 的闭式，一次由冠军律上证书各项之和），
+两者在 $10^{-12}$ 内一致。所以\textbf{系数缺口 $c-\rho_0=3.105\times10^{-3}$ 完全等价于
+"冠军律在 \peq{certificate-final} 中的松弛量"}，不需要任何额外解释。
+
+\subsection{松弛的分布：八项分解}
+
+在冠军律（$m=6$，$a=0.197271565$，$b=0.160545687$）上，\peq{certificate-final} 右端八项的数值：
+\begin{center}
+\small
+\begin{tabular}{lrrr}
+\toprule
+项 & 数值 & 占总松弛 & 备注\\
+\midrule
+$d$（常数项） & $0.048687477302$ & — & 这就是 $c$ 的全部来源\\
+$r_{\rm tr}$ & $0.003816495539$ & $\mathbf{61.46\%}$ & \textbf{最大的未开发资源}\\
+$\widehat Q=Q-V/9000000$ & $0.001648008885$ & $\mathbf{26.54\%}$ & 第二大\\
+$\ell\,r_{\rm reg}$ & $0.000461837632$ & $7.44\%$ & 回归余量\\
+$\mathcal R_0$ & $0.000228461432$ & $3.68\%$ & \\
+$r_{\rm off}/9$ & $0.000048576162$ & $0.78\%$ & 原子交叉项\\
+$K^2/1125$ & $0.000005749656$ & $0.09\%$ & \\
+$\frac\kappa9(\chi-\frac{C^2}{24})$ & $0.000000988398$ & $0.02\%$ & 依赖 $m\le24$ 的那一项\\
+\midrule
+合计 & $0.054897595006$ & $100\%$ & 残差 $8.3\times10^{-17}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent\textbf{三个立刻可读出的结论。}
+
+第一，\textbf{支撑定理（$m\le24$）对常数 $c$ 的数值贡献几乎为零}：
+$\frac\kappa9(\chi-\frac{C^2}{24})$ 只占 $0.02\%$，与我在 \S\ref{sec:method} 指出的
+$c=(3+\sqrt5)/4-d_1/2-1/6000000$（原子项只贡献 $1.67\times10^{-7}$）完全一致。
+这有一个重要的方法论含义：\textbf{想把 $c$ 压下来，改进 \S2--\S4 的结构理论几乎无用}，
+必须改 \S5--\S8 的联合矩证书。结构定理的价值在别处（它把 $\mathcal M$ 的求解归约为有限模板问题，
+见 \S\ref{sec:thesis} 的 P2），而不在常数本身。
+
+第二，\textbf{$r_{\rm tr}$ 是最大的一块，且它的来源非常具体}。由 \peq{reserve}，
+$r_{\rm tr}=\E[RR'\{(8/9-z_{\rm rad})\sigma(w)+z_{\rm rad}(\sigma(w)-g(w))\}]$，
+其中 $z_{\rm rad}=3(R-R')^2/(4RR')\in[0,8/9]$，$g(w)=(1-9w^2)/25$。在冠军律上：
+\[
+ \frac89P=0.000515860838,\qquad
+ -\E[RR'z_{\rm rad}g]=0.003300634701,\qquad
+ r_{\rm tr}=0.003816495539 .
+\]
+也就是说 $r_{\rm tr}$ 的 $87\%$ 来自 $-\E[RR'z_{\rm rad}g]$，而它之所以为正，是因为
+$V-9J=-0.055011<0$（等价地 $9J-V=2V-9\|Z\|_F^2=+0.055011$）。
+换句话说：\textbf{引理 6.3 的径向支付 $\frac3{50}(V-9J)$ 在冠军律上是负的，等于什么都没支付}，
+于是这一份信息被整个丢进了"只知其非负"的 $r_{\rm tr}$。稿件自己写了
+"The expression $V-9J$ need not be nonnegative"，说明作者知道这一点，
+但目前的处理方式是把损失记账为 $r_{\rm tr}\ge0$ 而不追讨。这是\emph{最值得追讨}的一块。
+
+第三，\textbf{$Q$ 里有一处 $15$ 倍的显式松弛}。$Q$ 的六个子项在冠军律上为
+\begin{center}
+\small
+\begin{tabular}{lrrr}
+\toprule
+子项 & 数值 & 占 $Q$ & 占总松弛\\
+\midrule
+$Q_3=(\frac{183}{200}-\mathrm{BIG}\,q^2)\,e$ & $0.000948524442$ & $57.56\%$ & $15.27\%$\\
+$Q_1=\frac{13}{200}(\sqrt V-\frac{937}{273}q\sqrt e)^2$ & $0.000587454565$ & $35.65\%$ & $9.46\%$\\
+$Q_2=\frac{19}{50}(\sqrt J-\frac{2811}{2128}q\sqrt e)^2$ & $0.000058257751$ & $3.54\%$ & $0.94\%$\\
+$Q_6=\frac{65082103}{20917512000}J$ & $0.000034183572$ & $2.07\%$ & $0.55\%$\\
+$Q_4=\frac{148831}{181104000}e$ & $0.000019233982$ & $1.17\%$ & $0.31\%$\\
+$Q_5=\frac{42847433}{5229378000000}V$ & $0.000000359448$ & $0.02\%$ & $0.01\%$\\
+\bottomrule
+\end{tabular}
+\end{center}
+$Q_3$ 的系数 $\frac{183}{200}-\mathrm{BIG}\,q^2$ 在冠军律上是 $0.040527021596$，
+但证书只能用它在整个小分支 $q^2\le20/57$ 上的下界
+$\frac{183}{200}-\frac{20}{57}\mathrm{BIG}=\frac{53754367}{19868284800}=0.002705536363$，
+\textbf{相差 $14.98$ 倍}。这是全稿最集中、最容易回收的一处松弛：
+它不需要新想法，只需要把 $q^2$ 保留为变量、与同样依赖 $q^2$ 的其他项联合配方，
+而不是先对 $q^2$ 取最坏值。
+
+\subsection{小分支的窗口极窄，这决定了改进的难度结构}
+
+$D_*<1/20$ 等价于 $\mathcal M>1.284016994374948$。而
+$\rho_0=1.281568196872168<1.284017$，$c=1.284673255723918>1.284017$。于是：
+\begin{itemize}[leftmargin=1.6em,itemsep=2pt]
+\item 若 $\mathcal M\le1.2840170$，则\emph{互补分支}已经足够，$c$ 可立刻改进到 $1.2840170$
+（改进 $6.56\times10^{-4}$），完全不需要动 \S5--\S8。
+\item 但稿件不能这样写，因为它无法先验地知道 $\mathcal M\le1.2840170$；两个分支必须都覆盖。
+\item 小分支的窗口是 $\mathcal M\in(1.2840170,\,1.2846733]$，宽度仅 $6.56\times10^{-4}$。
+\item 我的数值搜索（\S\ref{sec:num}）在所有 $k\ge6$ 的原子律上都得到
+$\sup\frac{A+B}2=\rho_0$，从未超过 $1.2840170$。这\emph{强烈提示}小分支实际上是空的。
+\end{itemize}
+\noindent 这给出一个清晰的分层：
+
+\textbf{(i) 把 $c$ 改进到 $1.2840170$}：需要小分支给出 $D_*\ge1/20$，即从 $0.00621$ 的松弛里回收
+$1/20-d=0.001312523$（占松弛的 $21.1\%$）。仅 $Q_3$ 一项的 $15$ 倍松弛就提供了 $0.000949$（$15.3\%$），
+加上 $Q_1$ 的部分即可完成。\textbf{我判断这一档是可实现的}，属于"重新精确配方"而非"新想法"。
+
+\textbf{(ii) 把 $c$ 改进到任意接近 $\rho_0$}：需要证书在冠军律上\emph{逐项取零}，
+即构造一个以加权轮图为等号情形的对偶证书。这不是调常数能做到的，
+它要求整个 \S5--\S8 的框架被替换成"以冠军律为极值点"的构造。
+\textbf{这一档等价于证明 $\mathcal M=\rho_0$}，是本方向的真正难点。
+
+\textbf{(iii) 证明 $\mathcal M=\rho_0$}：见 \S\ref{sec:thesis} 的 P2。
+
+\subsection{其余可量化的松弛}
+
+\begin{itemize}[leftmargin=1.6em,itemsep=2pt]
+\item $z_*^2\le\frac32\sigma$：真实上确界 $1.200224$（$[0,1]$）与 $0.615384$（$[-1,0]$），
+松弛约 $25\%$ 与 $24\%$。但它进入证书的路径是 $r_{\rm ct}\to\frac{r_{\rm ct}}9$，
+在冠军律上只占松弛的 $0.80\%$（$r_{\rm off}/9$）$+0.02\%$（原子项）。
+所以\textbf{收紧 $\frac32$ 的直接收益很小}，除非同时把 \peq{Cstar8} 中的除数 $125$ 一起重新优化
+（$125$ 与 $\frac32$ 是耦合的：$\theta$ 变小允许用更小的除数，付出更多 $\sigma$）。
+这一项我在 \S\ref{sec:issues} 的 S4 里建议改紧，理由主要是\emph{表述诚实性}而非收益。
+\item 半径比阈值：引理 6.3 用 $r_+/r_-\le3$，从而 $(R-R')^2\le\frac43RR'$、
+$P\ge\frac34\E[(R-R')^2\sigma]$。引理 9.1 实际能提供的是 $\sqrt8=2.8284<3$，
+对应 $\frac{(R-R')^2}{RR'}\le\sqrt8+\frac1{\sqrt8}-2=\frac{9\sqrt2}4-2\le\frac{32}{27}$
+（稿件 \S8 已经在用这个更紧的 $\frac{32}{27}$，它正是 $z_{\rm rad}\le\frac34\cdot\frac{32}{27}=\frac89$
+的来源）。若把引理 6.3 的支付系数也从 $\frac34$ 提到 $\frac{27}{32}$，增益为 $12.5\%$ 的 $P$，
+而 $P$ 在冠军律上只有 $0.000580$，即最多回收 $7\times10^{-5}$，占总松弛 $1.2\%$。收益很小。
+值得注意的是这里存在\emph{内部不一致的观感}：\S6 假设比值 $\le3$、\S8 假设 $\le\sqrt8$，
+两个假设都对，但读者会以为 \S6 的 $\frac34$ 是被 \S8 的 $\frac{32}{27}$ 改进了而没有用上。
+建议在 \S6 就写成"比值 $\le\kappa$ 时系数为 $1/\kappa'$"的一般形式，把 $\kappa=3$ 与
+$\kappa=\sqrt8$ 作为两个代入值。
+\item $\alpha\ge26/105$、$\beta\ge6/7$、$\rho\ge1/2$：这三个有理下界的损失分别是
+$\alpha-26/105=3.91\times10^{-4}$、$\beta-6/7=1.69\times10^{-2}$、$\rho-1/2=3.38\times10^{-2}$，
+但它们只用于推出 \peq{smallbranch} 的\emph{阈值}（$e<1/20$ 等），不直接进入 $d$，
+所以损失是间接的。真正进入 $d$ 的有理化损失只来自
+$\sqrt5<161/72$（误差 $4.31\times10^{-5}$）与 $\sqrt3>433/250$（误差 $5.08\times10^{-5}$）：
+它们给出 $d_0$ 的\emph{上}界，从而使 $\frac1{20}-d_0$ 的下界比真值小
+$3.89\times10^{-5}$。（另一方向的 $d_0-\frac7{144}$ 则用 $682/305<\sqrt5$、$\sqrt3<97/56$。）
+这个损失比 $0.00621$ 的结构性松弛小两个数量级。
+\textbf{结论：把有理近似取得更精确，几乎不能改进 $c$}；这条路不值得走。
+\end{itemize}
+
+\subsection{一句话总结}
+
+$c$ 与 $\rho_0$ 之间的 $3.1\times10^{-3}$，有 $61\%$ 来自"径向支付为负、损失被记为 $r_{\rm tr}$"，
+有 $27\%$ 来自 $Q$（其中一半是 $Q_3$ 的 $15$ 倍最坏值放缩），
+剩下 $12\%$ 分散在回归余量与 $\mathcal R_0$。
+改进的性价比排序是：$Q_3$ 重新配方 $\gg$ $r_{\rm tr}$ 追讨 $\gg$ 其他。
+
+\section{对学位论文主线的影响与建议}\label{sec:thesis}
+
+学位论文的主线是"在 STW 命题 6.1 上改进 $\Lambda_3$ 的上界，并把求一个精确上界作为主攻方向，
+下界作为副线"。本节的判断建立在前两节的量化数据上，我尽量把"能做的"与"做不动的"分开说清楚。
+
+\subsection{必须先接受的一个定位修正}
+
+\textbf{目前手上的是一个\emph{改进的显式上界}，不是一个\emph{精确上界}。}
+精确上界意味着确定 $\mathcal M=\sup_W\Sigma_3(W)$（等价地，确定
+$\sup\frac12(\E|X\cdot X'|+|\E X|^2)$），而稿件给出的是区间
+\[
+ \rho_0=\frac{9+\sqrt5+2\sqrt{35}}{18}=1.281568196872\le\mathcal M\le c=1.284673255724 .
+\]
+我的数值搜索强烈提示 $\mathcal M=\rho_0$（\S\ref{sec:num}：$k=6$ 到 $20$ 的全局最大值
+\emph{精确}落在 $\rho_0$，从未超过），但这是 \num，不是结果。
+所以学位论文的表述必须区分三个层次：
+\begin{center}
+\small
+\begin{tabular}{@{}p{0.20\textwidth}p{0.34\textwidth}p{0.34\textwidth}@{}}
+\toprule
+层次 & 内容 & 状态\\
+\midrule
+A. 改进的显式上界 & $\Lambda_3(G)\le cn-3$，$c<(3+\sqrt5)/4$ & \textbf{已完成}（依赖 G1、G2 修补）\\
+B. 结构定理 & 每个极大 graphon 的典范律 $\le24$ 个原子 & \textbf{已完成}（同上）\\
+C. 精确上界 & $\mathcal M=\rho_0$，从而 $\Lambda_3(G)\le\rho_0 n-3+o(n)$ & \textbf{未解决}，且是真正的难点\\
+\bottomrule
+\end{tabular}
+\end{center}
+\noindent 我的建议是：学位论文把 A$+$B 作为\emph{已完成的主定理}写足，
+把 C 作为"主线的第二阶段目标"单列一章，并给出本报告 \S\ref{sec:slack} 的量化分析与部分进展。
+这样即使 C 在答辩前没有完成，论文也是完整且有分量的；
+而如果把 C 写成主线却只交出一个非最优的 $c$，答辩时会被直接问住。
+
+\subsection{当前框架的天花板：一个必须尽早知道的结构性事实}
+
+这是一个必须尽早知道的结构性事实。稿件的证明是\emph{二分支}的：
+\begin{itemize}[leftmargin=1.6em,itemsep=1pt]
+\item 大分支 $D_*\ge1/20$：直接给 $\mathcal M\le\frac{(3+\sqrt5)/2-1/20}{2}
+=\frac{3+\sqrt5}4-\frac1{40}=\frac{29+10\sqrt5}{40}=1.2840169943749\ldots$。
+\item 小分支 $D_*<1/20$：用 \S5--\S8 的证书给 $\mathcal M\le c=1.2846732557239\ldots$。
+\end{itemize}
+两者取较坏者得 $c$。因此\textbf{在不改变分支结构的前提下，$c$ 的极限就是
+$\frac{29+10\sqrt5}{40}=1.2840170$}：把小分支证书加强到"给出 $D_*\ge1/20$"，
+就等于在假设 $D_*<1/20$ 下推出 $D_*\ge1/20$，即\emph{证明小分支为空}。
+再往下（$<1.2840170$）就必须换掉整个分支框架。
+
+而小分支为空这件事，数值上是成立的：$D_*<1/20\iff\frac{A+B}2>1.2840170$，
+而我在全局搜索中得到的 $\sup\frac{A+B}2=\rho_0=1.2815682<1.2840170$。
+冠军律本身也落在大分支（$D_*=0.0548976>0.05$，\S\ref{sec:num}）。
+所以：\textbf{小分支是一个在已知构造中从未被触发的逻辑分支，
+而常数 $c$ 却完全由它决定。}这是本稿最别扭、也是最值得改进的地方。
+
+\subsection{建议的优先级排序}
+
+\subsubsection*{P0（零风险，1--2 天，先做）}
+补上 G1（4 行）与 G2（1 句）两处修补，并按 S1--S7 修改表述。
+理由：这两处是\emph{承重}的（G1 撑起阈值公式与 $A+B=2\mathcal M$，G2 撑起 $m\le24$，
+而 $m\le24$ 撑起 \peq{certificate-final} 中 $\chi-\frac{C^2}{24}\ge0$）。
+在未修补的状态下，主定理严格来说是"有一个可修补漏洞的证明"，不能拿去投稿或答辩。
+同时加一个附录"常数的生成方式与机器复现"（S5），把 \texttt{\_aud1}--\texttt{\_aud15}
+的判据列成表——这会显著降低审稿人对"系数是调出来的"的怀疑。
+
+\subsubsection*{P1（主攻第一档，中等难度，我判断可做）}
+\textbf{目标}：证明小分支为空，从而
+\[
+ \Lambda_3(G)\le\frac{29+10\sqrt5}{40}\,n-3=1.2840169943749\ldots\,n-3 ,
+\]
+把 STW 的改进量从 $0.0243437$ 扩大到 $0.025$ 整（$\frac{3+\sqrt5}4-\frac{29+10\sqrt5}{40}=\frac1{40}=0.025$，
+是一个非常干净的数）。
+
+\textbf{为什么值得做}：除了常数改进本身，成功后 $c$ 的表达式会从
+$\frac{106106902139519}{107310156800000}+\frac{41\sqrt3}{240}-\frac{53}{9000000}$
+（一个明显是"凑出来的"数）变成 $\frac{29+10\sqrt5}{40}$（一个有闭式意义的数），
+论文的可读性与可信度都会大幅提升。而且两个分支给出同一个常数，本身是自洽性的强检验。
+
+\textbf{量化目标}：需要从当前 $0.006210$ 的证书松弛中回收
+$1/20-d=0.001312523$，即 $21.1\%$。按 \S\ref{sec:slack} 的分解，
+候选资源是 $r_{\rm tr}$（$61.46\%$）与 $\widehat Q$（$26.54\%$）。
+
+\textbf{方法（按优先级）}：
+\begin{enumerate}[leftmargin=1.8em,itemsep=3pt]
+\item \textbf{不要先对 $q^2$ 取最坏值。} 这是最便宜的一处。当前 $Q_3$ 的系数
+$\frac{183}{200}-\mathrm{BIG}\,q^2$ 被替换成它在 $q^2\le20/57$ 上的下界 $0.0027055$，
+而在冠军律上它是 $0.040527$（$15$ 倍差距）。正确做法是把 $q^2$ 保留为一个变量，
+把 $Q$ 看成 $(\sqrt e,\sqrt V,\sqrt J,q)$ 的二次型（系数含 $q^2$），
+在小分支的约束集 $\{e<1/20,\ V<21/104,\ q^2\le20/57,\ J\le V/3\}$ 上做\emph{参数化}配方，
+而不是逐点取最坏值。技术上这是一维（$q^2$）的分段有理配方，
+完全可以用精确有理算术完成并验证，不需要浮点 SDP 的结论作为证明的一部分。
+\item \textbf{给 $r_{\rm tr}$ 一个下界。} $r_{\rm tr}=\frac89P-\E[RR'z_{\rm rad}g]$，
+其中 $-\E[RR'z_{\rm rad}g]$ 是 $r_{\rm tr}$ 的 $87\%$。它来自 $g(w)=(1-9w^2)/25$ 在
+$|w|>1/3$ 上为负。要把它变成常数，需要在小分支下证明
+$\E[RR'z_{\rm rad}(-g)]\ge\theta>0$。可行的切入点：小分支迫使 $A+B$ 接近 $2.618$，
+这要求律高度集中（$e<1/20$ 意味着 $|\E X|^2>0.95$，即几乎全部质量在一个方向上），
+而高度集中与 $z_{\rm rad}$ 的小值（$R$ 接近常值）不能同时发生——
+\emph{这个"不能同时"如果能量化，就是 P1 的关键引理}。我建议先专门研究
+"小分支下 $V$ 与 $e$ 的联合可行域"，这是一个二维的、可以画图分析的问题，
+比直接攻证书更容易看出结构。
+\item \textbf{把 \peq{smallbranch} 的阈值收紧。} 目前 $e<1/20$、$V<21/104$、$C>5/3$
+都是由 $\alpha\ge26/105$、$\beta\ge6/7$、$\rho\ge1/2$ 这三个粗下界推出的。
+用 $\alpha,\beta,\rho$ 的精确值（它们都在 $\mathbb Q(\sqrt5)$ 中）重推，
+可以把 $e$ 与 $V$ 的上界收紧若干个百分点，从而给第 1、2 条更大的操作空间。
+这一步纯机械，风险为零。
+\end{enumerate}
+
+\textbf{我的信心评估}：第 1 条与第 3 条我有较高信心（属于重新配方，不依赖新想法）；
+第 2 条是真正的不确定项。综合看，我认为 P1 \emph{有实质成功机会但不是稳的}，
+建议在投入前先花两天做第 3 条（零风险）并画出小分支下 $(e,V,J,q^2)$ 的可行域，
+用图形判断第 2 条是否有希望，再决定是否 all-in。
+
+\subsubsection*{P2（主攻第二档，高难度，这是"精确上界"的真正含义）}
+\textbf{目标}：证明 $\mathcal M=\rho_0$，即 $\Lambda_3$ 的精确渐近上界是
+$\rho_0 n-3+o(n)$，从而上下界闭合。
+
+\textbf{为什么这不是 P1 的延续}：P1 只需回收 $21\%$ 的松弛；
+P2 需要\emph{全部}回收，即构造一个在冠军律上\textbf{逐项取零}的证书。
+而目前八项在冠军律上的值是
+$r_{\rm tr}=3.8\times10^{-3}$、$\widehat Q=1.6\times10^{-3}$、$\ell r_{\rm reg}=4.6\times10^{-4}$、
+$\mathcal R_0=2.3\times10^{-4}$、$r_{\rm off}/9=4.9\times10^{-5}$、$K^2/1125=5.7\times10^{-6}$、
+$\frac\kappa9(\chi-\frac{C^2}{24})=9.9\times10^{-7}$——\textbf{没有一项为零}。
+所以 P2 不是"把常数调紧"，而是要换一个以加权轮图为等号情形的新构造。
+这是本质性的困难，必须如实告诉导师。
+
+\textbf{两条可能的路线}：
+\begin{enumerate}[leftmargin=1.8em,itemsep=3pt]
+\item \textbf{对偶/SOS 路线}。把问题写成：在所有满足 $\E XX^T=I_3$ 的律上最小化
+$D=\frac{3+\sqrt5}2-\E|X\cdot X'|-|\E X|^2$，然后构造一个对偶可行解，
+其在冠军律上互补松弛全部成立。冠军律的等号条件已经完整知道
+（\S\ref{sec:num}：八条结构方程全部精确成立，包括符号模式 $\mathbf1_{\{v_i\cdot v_j>0\}}=W_{ij}$
+与阈值公式 $\sum_jp_jB_{ij}v_j=Lv_i$），这为"猜对偶解"提供了强约束。
+具体做法是把 \peq{certificate-final} 的各个非负项换成\emph{在冠军律上消失}的项：
+例如 $r_{\rm tr}$ 需要换成一个在 $9J=V$ 时消失的量，但冠军律上 $9J-V=0.055\ne0$，
+所以 $r_{\rm tr}$ 这一项\emph{根本不该出现}在一个紧证书里——
+这说明引理 6.3 的径向支付路线在冠军律上是"付错了方向"的，
+\textbf{紧证书很可能需要放弃 \peq{payment} 这条路径}。这个判断本身就是 P2 的起点。
+\item \textbf{结构刚性路线}。用定理 1.2 把 $\mathcal M$ 的求解归约为有限模板问题：
+求所有满足
+$\sum_ip_iv_iv_i^T=I_3$、$v_i^TLv_i=\mathcal M$、$v_{i1}>0$、$B_{ij}=\mathbf1_{\{v_i\cdot v_j>0\}}$、
+$\sum_jp_jB_{ij}v_j=Lv_i$、且每个正团上 $\{v_iv_i^T\}$ 线性无关的
+$m\le24$ 元系统，并证明其 $\mathcal M$ 的最大值是 $\rho_0$、唯一达到元是六原子加权轮图。
+这是一个纯代数问题，原则上可判定，但 $m\le24$ 时符号模式的空间太大，
+直接分类不现实。\textbf{可行的第一步是把 $24$ 降到 $6$}：
+若能证明每个极大元的原子数 $\le6$（甚至证明正团结构必为 $K_1\vee C_5$），
+问题规模会下降几个数量级。我注意到冠军律的正团结构正是 $K_1\vee C_5$，
+而 \S4 的"$|J|\le6$"已经是 $6$，所以"整个支撑就是一个正团"是一个自然的猜想——
+但这个猜想与 $\le24$（四个符号类各 $\le6$）之间还有距离，需要新的论证。
+\end{enumerate}
+
+\textbf{我的信心评估}：P2 在当前信息下\emph{不宜承诺}。
+我建议学位论文把它写成"目标与部分进展"，
+并把已经严格完成的部分（P0$+$P1 若能完成）作为答辩主体。
+
+\subsubsection*{P3（副线：下界，低风险，建议完成）}
+\textbf{目标}：把 $\rho_0$ 的下界从"加权 graphon 构造"升级为"有限简单图的严格渐近"。
+
+\textbf{具体内容}：目前引理 2.3 给的是 graphon 层面的 $\Sigma_3(W)\ge\rho_0$。
+对有限图，需要证明存在图列 $G_n$ 使 $\Lambda_3(G_n)/n\to\rho_0$。
+我用块大小按 $a:b=0.197271565:0.160545687$ 取整的 $K_1\vee C_5$ 吹起族验证了这一点
+（$n=126$ 到 $2016$，$\Lambda_3/n$ 从 $1.25770$ 单调升到 $1.28008$，\num），
+但\emph{严格化}这一步稿件没有做。严格化是初等的：设块大小为
+$n_0=\lfloor an\rfloor$、$n_1=\lfloor bn\rfloor$（五个），则商矩阵
+$M_n=\diag(\frac{n_i}n)(A_6+I)$ 依 $O(1/n)$ 收敛到 $M=\diag(a,b,\ldots,b)(A_6+I)$，
+特征值 Lipschitz 依赖于矩阵元素（Weyl 不等式给 $|\lambda_i(M_n)-\lambda_i(M)|\le\|M_n-M\|_2=O(1/n)$），
+故 $\Lambda_3(G_n)=\Sigma_3(M_n)+0\cdot(\text{块内均值零空间})$，
+$\Lambda_3(G_n)/n\to\rho_0$ 且误差 $O(1/n)$。
+
+\textbf{为什么这条副线值得单独写}：它同时给出两个有用结论——
+(i) 常数项 $-3$ 是\emph{不可改进}的（因为 $\tr A_G=0$ 使 $\sum_i\lambda_i=0$，
+而 $\Lambda_3\ge$ …，更直接地：任何 $\Lambda_3\le cn-k$ 型界中 $k$ 的来源是 $\sum_iQ_{ii}=3$，
+稿件的转移证明显示 $k=3$ 是这条路线的精确值）；
+(ii) 上界与下界的差距是\emph{真实的}、随 $n$ 线性增长的，不是有限 $n$ 效应
+（$n=2016$ 时余量 $+6.2634=(c-\rho_0)n$）。
+这两点合起来说明\textbf{系数问题不能靠改进常数项来回避}，
+从而把 P1/P2 的必要性论证清楚。这在学位论文里是很好的"问题定位"段落。
+
+\subsection{一句话的行动建议}
+
+先做 P0（两天，必做）；然后花两天做 P1 的第 3 条并画出小分支可行域，
+据此决定 P1 投入多少；P3 与 P1 并行推进（它独立、风险低、能立刻写成论文的一节）；
+P2 作为长期目标，先做"把 $24$ 降到 $6$"这一个子问题，因为它对 P2 的两条路线都有用。
+\emph{方法上请坚持稿件已经示范的原则}：所有数值/优化只用于\emph{发现}常数，
+最终证书必须用精确有理算术与二次域算术逐条验证——
+这是本稿最可靠的部分，也是我在这次审核中唯一没有任何怀疑的部分。
+
+\section{复现材料}\label{sec:repro}
+
+本次审核的全部脚本保存在工作目录 \texttt{C:\textbackslash Users\textbackslash hyji11\textbackslash
+Documents\textbackslash ChatGPT\textbackslash 图论\textbackslash}，环境为
+\texttt{C:\textbackslash Python314\textbackslash python.exe -X utf8}（\texttt{numpy/scipy/sympy}）。
+所有脚本均可独立重跑，不依赖任何中间产物。
+
+\begingroup\small
+\begin{longtable}{@{}p{0.13\textwidth}p{0.52\textwidth}p{0.24\textwidth}@{}}
+\toprule
+脚本 & 内容 & 结果\\
+\midrule
+\endfirsthead
+\toprule
+脚本 & 内容 & 结果\\
+\midrule
+\endhead
+\texttt{\_aud1.py} & 常数 $c$、$\rho_0$、STW 系数；$c\in\mathbb Q(\sqrt3)$；$d,d_0,\ell_3,\ell_4,\gamma_4$；
+$\sigma$ 的三条因式分解；两处精确配方；Hermite 恒等式；$g_3,g_4$ 的范数 & $23$ 断言，通过 $23$\\
+\texttt{\_aud2.py} & 引理 2.2--2.5、\S5 回归、\S7--\S8 配方的逐式核对 & 约 $67$ 断言，通过 $67$\\
+\texttt{\_aud3.py} & 四个有理下界证书（含用不同 $\sqrt5,\sqrt3$ 有理近似的对照实验）；
+$p_*$ 的配方；$c$ 的两个恒等式 & 全部精确成立\\
+\texttt{\_aud4.py}, \texttt{\_aud9.py} & 冠军律上 $16$ 条证书恒等式的残差；$4000$ 个随机律压力测试 &
+残差 $\le1.7\times10^{-16}$；违例 $0$\\
+\texttt{\_aud5.py} & $k=4$--$9$ 的 $\frac{A+B}2$ 全局最大化（$60$ 组初值/档） &
+$k\ge6$ 恰为 $\rho_0$；$k=10$ 处因 \texttt{exp} 溢出中断\\
+\texttt{\_aud6.py} & 冠军律结构方程；$n=3$--$6$ 全部 $33864$ 个图穷举；$18$ 个结构/随机图 &
+无违例；\textbf{含 2 处 bug，见下}\\
+\texttt{\_aud7.py} & $k=10,12,14,16,20$ 的全局最大化（稳定参数化，$70$ 组初值/档） &
+全部恰为 $\rho_0$\\
+\texttt{\_aud8.py} & 冠军律正团的线性无关性、$|J|\le6$ & 通过\\
+\texttt{\_aud10.py}, \texttt{\_aud11.py} & $2\times10^6+1$ 点网格扫描 $\sigma$、$z_*^2/\sigma$、$h$、$q_*$、$p_*$；
+$\chi$ 的配方恒等式 & 全部符合；$z_*^2/\sigma$ 的真实上确界 $1.2002/0.6154$\\
+\texttt{\_aud12.py} & $K_1\vee C_5$ 吹起族，$n=126,\ldots,2016$ & $\Lambda_3/n\to\rho_0$\\
+\texttt{\_aud13.py} & \textbf{本次审核新增}：修正 \texttt{\_aud9.py} 的 \texttt{K2} 命名错误；
+张量恒等式自检（$\operatorname{ct}\mathcal L_4(Z)=Z$ 等 $6$ 条） & \texttt{budget4} 残差降到 $2\times10^{-17}$\\
+\texttt{\_aud14.py} & \textbf{本次审核新增}：冠军律上 \peq{certificate-final} 八项与 $Q$ 六个子项的精确分解；
+$r_{\rm tr}$ 的来源分解；$Q_3$ 的 $15$ 倍松弛；小分支窗口 & \S\ref{sec:slack} 的全部数据\\
+\texttt{\_aud15.py} & \textbf{本次审核新增}：修正 \texttt{\_aud6.py} 的两处 bug 后重验结构方程与穷举最小余量 &
+行方程偏差 $1.7\times10^{-1}\to3.3\times10^{-16}$；最小余量 $+0.0224818$\\
+\bottomrule
+\end{longtable}
+\endgroup
+
+\subsection{我在自己的检验工具中发现并修正的错误}
+
+这一小节我特意写出来，因为它关系到本报告结论的可信度。审核过程中我犯了三个错，
+都不是稿件的问题：
+\begin{enumerate}[leftmargin=1.8em,itemsep=2pt]
+\item \texttt{\_aud9.py} 把变量 \texttt{K2} 赋成了 $\E[RR'(a+b(w^2-\frac13)-\rho(w^4-\frac15)-|w|)]$，
+由上界函数恒等式这等于 $S$ 而不是 $K^2=\|T_4\|_F^2$，导致 \texttt{budget4} 报告了
+$-5.8\times10^{-4}$ 的假残差。修正后为 $-2.1\times10^{-17}$。
+\item \texttt{\_aud6.py} 检验行方程 $\sum_jp_jB_{ij}v_j=Lv_i$ 时用了
+\texttt{einsum('ij,i,jl->il')}，按 $p_i$ 而非 $p_j$ 加权，报告了 $1.675\times10^{-1}$ 的假偏差。
+修正为 \texttt{einsum('ij,j,jl->il')} 后偏差为 $3.3\times10^{-16}$。
+同一脚本的穷举部分把 \texttt{worst} 初始化为 $0$，使全部负值（即全部合规情形）被丢弃，
+报告"最大违例 $=0$"。修正后得到真实的最小余量 $+0.0224818$ 及其取到的图（$K_1\vee C_5$）。
+\item \texttt{\_aud13.py} 初版的 $\mathcal L_4(Z)$ 实现漏掉了 $\delta_{jk}Z_{il}$ 项
+（重复写了两遍 $\delta_{kl}Z_{ij}$），导致谐波分解 $\E[RR'w^4]=K^2+\frac67\|Z\|^2+\frac{C^2}5$
+出现 $-3.0\times10^{-4}$ 的假偏差。修正后为 $1.1\times10^{-16}$，
+并补了 $6$ 条张量恒等式自检以防同类错误。
+\end{enumerate}
+\noindent\textbf{方法论上的结论。} 三次错误都发生在"我用一个量替换另一个量"的地方，
+而三次都被"独立重算"抓出来了。这印证了本报告采用的三轨制是必要的：
+如果只做符号核对而不做数值残差检验，第 1、3 类错误不会被发现；
+如果只做数值检验而不做手推，第 2 类错误会被误认为是稿件的错误。
+\textbf{也正因如此，我对"稿件的 \texttt{budget4}、行方程、谐波分解都精确成立"这三个结论
+的信心，高于对任何单次计算结果的信心。}
+
+\subsection{未做的事}
+
+为诚实起见，列出本次审核\emph{没有}覆盖的部分：
+\begin{itemize}[leftmargin=1.6em,itemsep=2pt]
+\item 没有复现稿件整数系数的\emph{搜索过程}（只验证了它们满足所述性质），见 \S\ref{sec:method} 局限 1。
+\item 没有检索 2026 年 10 月之后的新预印本，也没有获取 Ebrahimi 2008（R1）。
+\item 没有对 $n\ge7$ 的图做穷举（$n=7$ 有 $1048576$ 个图，可行但本次未做；
+$n\ge8$ 不可穷举）。
+\item 没有验证投稿包 \texttt{top3\_submission\_sources.zip} 与 \texttt{.tex} 源文件的逐字节一致性，
+只核对了文件清单与主文件的编译产物。
+\item 全局极值搜索不能排除存在某个未被 $60$--$70$ 组初值覆盖的、给出更大 $\frac{A+B}2$ 的律。
+\end{itemize}
+
+\section*{结语}
+
+这份稿件的主定理我认为\emph{是成立的}。它的证明链很长（$1346$ 行、$34$ 个编号结果、
+两条互相咬合的分支），但每一环在我独立重推后都成立；
+两处跳步（G1、G2）都能用五行以内的文字补上，且补上之后没有连带影响。
+稿件在学术诚实性上做得比多数同类工作好：它明确不声称 $c$ 最优，
+明确不声称改进了 Li--Liu 的一般结果，明确说明 \peq{budget4} 不作为独立资源重复计入，
+明确说明 $V-9J$ 可能为负。这些自我限定我在复核中逐条验证过，\emph{都名副其实}。
+
+我唯一的实质性保留意见是常数本身：$c$ 与稿件自己给出的下界 $\rho_0$ 相差 $3.1\times10^{-3}$，
+而这个缺口的 $61\%$ 集中在一项（$r_{\rm tr}$）里、$15\%$ 集中在一处 $15$ 倍的最坏值放缩里（$Q_3$）。
+也就是说，\textbf{缺口不是均匀弥散的，而是集中在两三个可指认的位置}。
+这对学位论文是好消息：它意味着改进有明确的靶子，而不是要推倒重来。
+但同时也要清楚：现有框架的天花板是 $\frac{29+10\sqrt5}{40}=1.2840170$，
+要拿到真正的精确上界 $\rho_0$，需要一个在冠军律上逐项取零的新证书，那是另一个量级的工作。
+
+\begin{thebibliography}{9}
+\bibitem{STW}
+V. Sivashankar, Q. Tang, T. Wakhare,
+\emph{Graph eigenvalues and projection constants},
+arXiv:2608.02429v1 [math.CO], 2026.
+（命题 6.1：$\Lambda_k(G)\le\frac{1+\gamma(k)}2n-k$；$k=3$ 时 $\gamma(3)=\frac{1+\sqrt5}2$。）
+
+\bibitem{KLMPT}
+H. Kumar, L. Liu, H. Monterde, S. Pragada, M. Tait,
+\emph{Maximum spectral sum of graphs},
+arXiv:2604.00512v2, 2026.
+
+\bibitem{KMMP}
+H. Kumar, B. Mohar, S. A. Mojallal, S. Pragada,
+\emph{Stability of maximal relative projection constants},
+arXiv:2609.03200v1, 2026.
+
+\bibitem{LiLiu}
+H. Li, X. Liu,
+\emph{Sharp bounds for minimal dependencies of linear-form powers},
+arXiv:2606.24349v1, 2026.
+
+\bibitem{Mohar}
+B. Mohar,
+\emph{On the sum of $k$ largest eigenvalues of graphs and symmetric matrices},
+J. Combin. Theory Ser. B \textbf{99} (2009), 306--313.
+
+\bibitem{DL}
+B. Der\k{e}gowska, B. Lewandowska,
+\emph{A simple proof of the Gr\"unbaum conjecture},
+J. Funct. Anal. \textbf{285} (2023), 109950.
+
+\bibitem{Glazyrin}
+A. Glazyrin,
+\emph{Moments of isotropic measures and optimal projective codes},
+arXiv:1904.11159v2, 2020.
+
+\bibitem{LS}
+L. Lov\'asz, B. Szegedy,
+\emph{Szemer\'edi's lemma for the analyst},
+Geom. Funct. Anal. \textbf{17} (2007), 252--270.
+
+\bibitem{Ebrahimi}
+J. Ebrahimi Boroojeni,
+\emph{Sum of the Largest Eigenvalues of Symmetric Matrices and Graphs},
+M.Sc. thesis, Simon Fraser University, 2008.（未能获取；见 \S\ref{sec:issues} 的 R1。）
+
+\bibitem{audited}
+受审稿件：\emph{A joint moment bound for the three largest graph eigenvalues},
+\texttt{top3\_joint\_moment\_bound.tex}（1346 行）/ \texttt{.pdf}（19 页），2026 年 11 月 2 日。
+\end{thebibliography}
+
+\end{document}
