@@ -21,3 +21,11 @@ _*.ps1
 /assets/
 /archive/
 /thesis_spectral_extremes/
+
+# ---- LaTeX 中间产物与缓存（任意层级）----
+*.aux
+*.toc
+*.out
+__pycache__/
+*.bak_*
+/paper/literature/.tmp_lit/
