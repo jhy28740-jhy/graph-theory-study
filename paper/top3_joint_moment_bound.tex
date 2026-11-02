@@ -1,0 +1,1439 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=28mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={A joint moment bound for the three largest graph eigenvalues},pdfauthor={}}
+\usepackage{enumitem}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+\newcommand{\cstar}{c_{\mathrm{w}}}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\esssup}{ess\,sup}
+\DeclareMathOperator{\essinf}{ess\,inf}
+\allowdisplaybreaks[1]
+\numberwithin{equation}{section}
+\title{A joint moment bound for the three largest graph eigenvalues}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+Let $\lambda_1(G)\ge\lambda_2(G)\ge\cdots$ be the adjacency eigenvalues
+of a finite simple graph. We prove
+$\lambda_1(G)+\lambda_2(G)+\lambda_3(G)\le cn-3$ for every graph of order
+$n\ge3$, where $c=1.284673255723918505\ldots$ is an explicit algebraic
+constant. This improves the coefficient $(3+\sqrt5)/4$ in the universal
+bound of Sivashankar, Tang and Wakhare. The proof controls the signed
+mean and the absolute Gram energy of a single isotropic law by a joint
+third- and fourth-order moment identity. Radial and directional errors
+are retained in the same identity. We also prove that the canonical
+eigenfunction law of every maximizing graphon has at most 24 support
+points. The structural argument uses moment-preserving variations and
+a separating family of binary observations to rule out minimal
+second-moment dependencies on positive cliques. A small final improvement
+comes from positive-mass self-pairs. Neither the optimal coefficient nor
+the extremal graphs are determined.
+\end{abstract}
+
+\noindent\textbf{Keywords.} Adjacency eigenvalues; spectral sums; graphons;
+isotropic measures; projection constants.
+
+\section{Introduction}
+For a finite simple undirected graph $G$ of order $n\ge3$, put
+\[
+ \Lambda_3(G)=\lambda_1(G)+\lambda_2(G)+\lambda_3(G),
+\]
+where the adjacency eigenvalues are ordered algebraically. The signs in
+this sum are retained. The extremal problem asks how large $\Lambda_3(G)$
+can be when only $n$ is prescribed. The spectral-sum problem appears in Ebrahimi's thesis~\cite{Ebrahimi};
+general bounds for sums of leading eigenvalues were developed by
+Mohar~\cite{Mohar}. More recently,
+Sivashankar, Tang and Wakhare~\cite[Proposition 6.1]{STW} proved
+\begin{equation}\label{stw-bound}
+ \Lambda_3(G)\le\frac{3+\sqrt5}{4}n-3.
+\end{equation}
+Their argument uses the rank-three absolute projection constant
+$\gamma(3)=(1+\sqrt5)/2$; a proof of the requisite projection bound is
+provided by Der\k{e}gowska and Lewandowska~\cite{DL}.
+
+The two quantities in that reduction are naturally coupled. If
+$X\in\R^3$ satisfies $\E XX^T=I_3$ and $X'$ is an independent copy, they are
+\[
+ A=\E|X\cdot X'|,\qquad B=|\E X|^2.
+\]
+The separate estimates $A\le(1+\sqrt5)/2$ and $B\le1$ give
+\eqref{stw-bound}. A better graph bound therefore requires a quantitative
+restriction on their simultaneous size. The mixed projection constant
+expressing this question was already introduced in~\cite[Section 6.2]{STW}.
+We work directly with its isotropic-law formulation.
+
+Define
+\begin{equation}\label{main-constant}
+ c=\frac{106106902139519}{107310156800000}
+       +\frac{41\sqrt3}{240}-\frac{53}{9000000}
+   =1.284673255723918505\ldots.
+\end{equation}
+\begin{theorem}\label{main}
+Every finite simple unweighted graph $G$ on $n\ge3$ vertices satisfies
+\begin{equation}\label{main-bound}
+ \Lambda_3(G)\le cn-3.
+\end{equation}
+Moreover, every Borel probability law on $\R^3$ satisfying
+$\E XX^T=I_3$ obeys
+\begin{equation}\label{law-bound}
+ \E|X\cdot X'|+|\E X|^2\le2c.
+\end{equation}
+Only a finite second moment is assumed; zero vectors and unbounded radii
+are allowed.
+\end{theorem}
+The coefficient decrease from~\eqref{stw-bound} is
+$0.024343738651028919\ldots$, with the constant term $-3$ unchanged.
+This comparison concerns the stated universal order-only bound. It does
+not compare all estimates involving additional graph parameters, nor
+assert that $c$ is optimal.
+
+We use graphons to pass to an attained maximum. For a symmetric measurable
+kernel $W:[0,1]^2\to[0,1]$, let
+\begin{equation}\label{sig-definition}
+ \Sigma_k(W)=\sup_{\E FF^T=I_k}
+       \iint W(x,y)F(x)\cdot F(y)\,dx\,dy,
+ \qquad \mathcal M=\sup_W\Sigma_3(W).
+\end{equation}
+The supremum is over real orthonormal $k$-frames. Since $T_W$ is compact
+and self-adjoint on an infinite-dimensional space, $\Sigma_k$ is the sum
+of the first $k$ positive eigenvalues, padded by zero if necessary. This
+convention applies only to graphons, not to $\Lambda_3(G)$.
+The maximum $\mathcal M$ is attained. For a maximizing graphon, choose an
+orthonormal top-three eigenframe $F=(f_1,f_2,f_3)^T$, with $f_1\ge0$,
+and call $F_\#dx$ its canonical law.
+
+\begin{theorem}\label{structure-main}
+Let $W$ attain $\mathcal M$, let $\sum_i p_i\delta_{v_i}$ ($p_i>0$) be its
+canonical law, and let $L$ be the diagonal matrix of the three leading
+eigenvalues of $W$. Then:
+\begin{enumerate}[leftmargin=2.2em,itemsep=2pt]
+\item[(a)] the support has at most $24$ points;
+\item[(b)] $W$ agrees almost everywhere with the binary step kernel
+$\mathbf1_{\{v_i\cdot v_j>0\}}$ on the corresponding positive-measure
+fibers;
+\item[(c)] the support points satisfy
+\begin{gather*}
+ \sum_i p_iv_iv_i^T=I_3,\qquad v_i^TLv_i=\mathcal M,\qquad v_{i1}>0,\\
+ v_i\cdot v_j\ne0,\qquad
+ B_{ij}=\mathbf1_{\{v_i\cdot v_j>0\}},\qquad
+ \sum_jp_jB_{ij}v_j=Lv_i;
+\end{gather*}
+\item[(d)] for every positive-dot clique $J$ in the support, the matrices
+$\{v_iv_i^T:i\in J\}$ are linearly independent; in particular $|J|\le6$.
+\end{enumerate}
+\end{theorem}
+This assertion concerns every original maximizer, not merely the
+existence of a maximizer with small support.
+
+\subsection{Method and relation to earlier work}
+The proof has two parts. First, second variation on the actual probability
+space gives a negative semidefinite kernel. On each of four sign classes,
+this controls the rank of the positive-part Gram kernel and forces finite
+canonical support. Moment-preserving variations then imply vector
+relations against every binary row of the maximizing kernel. Those rows
+separate distinct support points. A minimal-dependency argument shows
+that no second-moment relation can survive on a positive clique.
+
+The variation, cloning, and orthant-reduction mechanisms have close
+antecedents in Kumar, Mohar, Mojallal and Pragada~\cite{KMMP}. Related graphon
+ellipse and clique-cloning arguments for the two-eigenvalue problem
+appear in Kumar, Liu, Monterde, Pragada and Tait~\cite{KLMPT}. General
+bounds for minimal dependencies of powers of linear forms are due to
+Li and Liu~\cite{LiLiu}. Our separating-observation lemma is stated and
+proved with its specific hypotheses in Section~\ref{sec-separation};
+we do not claim a new general bound for such dependencies.
+
+Second, for one isotropic law we retain the mean deficit, radial variance,
+regression error, and weighted harmonic moments of degrees three and four.
+A signed quartic majorant couples them in one exact identity. Directional
+Hermite inequalities and a radial comparison lead to an explicit sum of
+nonnegative terms. Harmonic moment and polynomial-majorant methods are
+classical; see Glazyrin~\cite{Glazyrin}, Der\k{e}gowska and
+Lewandowska~\cite{DL,DL-SW}, and Sivashankar, Tang and Wakhare~\cite{STW}.
+The contribution here is the particular joint control of these errors
+for the mixed signed and absolute energy, rather than the use of
+polynomial majorants by itself. The support theorem supplies a small
+additional term through self-pairs of actual atoms. Diagonal removal and
+effective-cardinality estimates are standard weighted-energy devices;
+see~\cite{Weighted}.
+
+Sections~\ref{sec-variational}--\ref{sec-separation} prove the structural
+result. Sections~\ref{sec-moments}--\ref{sec-reserve} give the joint
+moment certificate. Section~\ref{sec-conclusion} applies it to a genuine
+maximizer and transfers the bound to all isotropic laws and finite graphs.
+
+\section{Variational structure of a maximizing graphon}\label{sec-variational}
+We may work on any standard nonatomic probability space. All changes of
+measure below can be realized on such a space.
+\begin{lemma}\label{ranktwo}
+Every $[0,1]$-valued graphon satisfies $\Sigma_2(W)\le7/6$.
+\end{lemma}
+\begin{proof}
+We give the elementary argument for the rank-two absolute-energy
+bound needed below.
+Take any $\R^2$-valued law $\E YY^T=I_2$, write $Y=RU$ with a unit
+choice at zero, $C=\E R$, and $N=\E[R UU^T]$.
+Then $C^2\le2$ and
+$\tr(N^2)\le1$, the latter from
+$\E\|U-NY\|^2=1-\tr(N^2)\ge0$.
+On the circle,
+$g_{4,2}(t)=t^4-t^2+1/8$ is a positive kernel: if
+$U=(\cos a,\sin a)$, it is $\cos(4(a-a'))/8$.
+Hence its $RR'$-weighted integral is nonnegative.
+The exact majorant
+\[
+ \frac29+\frac{11}{9}t^2-\frac49t^4-|t|
+     =\frac{(1-|t|)(2|t|-1)^2(|t|+2)}9\ge0
+\]
+therefore gives
+\[
+ \E|Y\cdot Y'|\le\frac5{18}C^2+\frac79\tr(N^2)\le\frac43.
+\]
+Also $|\E Y|^2\le1$. For any orthonormal two-frame in a graphon,
+$W(Y\cdot Y')\le(Y\cdot Y')_+$ pointwise, so its trace is at most
+$(4/3+1)/2=7/6$. Taking the supremum proves the lemma.
+The absolute-energy estimate is classical; see~\cite[Theorems 2 and 4]{Glazyrin}.
+\end{proof}
+
+
+\begin{lemma}\label{attainment}
+The supremum $\mathcal M$ is attained, and
+\[
+ \cstar:=\frac{9+\sqrt5+2\sqrt{35}}{18}\le\mathcal M
+       \le\frac{1+\sqrt3}{2}.
+\]
+Every maximizing graphon has three positive leading eigenvalues.
+\end{lemma}
+\begin{proof}
+For an orthonormal $k$-frame, $K(x,y)=F(x)\cdot F(y)$ satisfies
+$\int K=|\int F|^2\le1$ and $\int K^2=k$. Hence
+$\int WK\le\int K_+\le(1+\sqrt k)/2$.
+For the lower bound, use a six-part kernel with template $K_1\vee C_5$
+and diagonal blocks equal to one. Give the center mass $a=1-5b$ and each
+rim part mass $b$, where $0<b<1/5$. Put $\phi=(1+\sqrt5)/2$.
+Its quotient spectrum is
+\[
+ \frac{1-2b\pm\sqrt{1+4b-36b^2}}2,
+ \quad\phi b,\ \phi b,\ -b/\phi,\ -b/\phi.
+\]
+Indeed the four nonconstant Fourier modes on the pentagon give the last
+four values; the remaining block is
+$\left(\begin{smallmatrix}a&\sqrt{5ab}\\\sqrt{5ab}&3b\end{smallmatrix}\right)$.
+Its positive eigenvalue exceeds $3b$, and its determinant is $-2ab<0$.
+Consequently the sum of its three positive eigenvalues is
+\[
+ \frac{1+2\sqrt5 b+\sqrt{1+4b-36b^2}}2.
+\]
+Substitution of $b=(7+5\sqrt7)/126$ gives $\cstar$.
+This is the usual quotient calculation for a join construction;
+see~\cite{Hjoin}. In particular $\cstar>32/25>7/6$.
+
+For completeness we record why $\Sigma_3$ of this step kernel is exactly the
+sum of the three positive quotient eigenvalues. If $f$ is supported in one
+part $A_i$ and $\int_{A_i}f=0$, then for $x\in A_i$ one has
+$(T_Wf)(x)=\int_{A_i}f=0$, while for $x$ in any other part $A_j$ one has
+$(T_Wf)(x)=W_{ji}\int_{A_i}f=0$; hence $T_Wf=0$. The whole block-mean-zero
+subspace therefore lies in the zero eigenspace, and $\Sigma_3$ is governed
+by the quotient matrix alone.
+
+For attainment, let $D=W_1-W_2$. If $\lambda\ne0$ is an eigenvalue of
+$T_D$ with unit eigenfunction $f$, then $|D|\le1$ gives
+$\|f\|_\infty\le1/|\lambda|$. The cut-norm dual estimate yields
+\[
+ |\lambda|=|\langle f,T_Df\rangle|
+ \le4\|D\|_\square\|f\|_\infty^2,
+ \qquad \|T_D\|_{2\to2}^3\le4\|D\|_\square.
+\]
+The assertion is trivial when $T_D=0$; otherwise compactness supplies an
+eigenvalue of modulus $\|T_D\|$. By the variational definition,
+$|\Sigma_3(W_1)-\Sigma_3(W_2)|\le3\|T_D\|$. This also holds after
+relabeling. Cut-metric compactness~\cite{LS} therefore gives a maximizer.
+Finally Lemma~\ref{ranktwo} implies
+$\lambda_3\ge\cstar-7/6>0$ at each maximizer.
+\end{proof}
+
+Fix a maximizing $W$ and a top-three orthonormal eigenframe $F$, taking
+$f_1\ge0$. Write $L=\diag(\lambda_1,\lambda_2,\lambda_3)$.
+Taking the absolute value of a top Rayleigh maximizer supplies the
+nonnegative choice of $f_1$. We do not initially assume any eigenvalue simplicity.
+\begin{lemma}\label{ellipse-structure}
+Almost everywhere, $F^TLF=\mathcal M$. Moreover
+$\lambda_3>\lambda_4$, where the fourth positive eigenvalue is zero if
+absent. The canonical support $S=\supp(F_\#dx)$ is compact, lies on the
+ellipsoid $v^TLv=\mathcal M$, and avoids the origin.
+\end{lemma}
+\begin{proof}
+For a bounded real $g$ of mean zero, change density to $1+tg$ for both
+signs of sufficiently small $t$. Set $Q=\int gFF^T$. The unchanged frame
+has complete Gram matrix $I+tQ$ and numerator matrix
+$L+t(QL+LQ)+O(t^2)$. After a common orthonormalization its trace is
+\[
+ \tr\bigl[(I+tQ)^{-1}\{L+t(QL+LQ)+O(t^2)\}\bigr]
+   =\mathcal M+t\tr(LQ)+O(t^2).
+\]
+Maximality gives $\int gF^TLF=0$. Since every bounded mean-zero $g$ is
+allowed, $F^TLF$ equals its mean $\mathcal M$ almost everywhere.
+This applies to every active eigenframe. If
+$\lambda_3=\lambda_4=\lambda>0$, compare the frames with third entries
+$f_3$, $f_4$ and $(f_3+f_4)/\sqrt2$, keeping $f_1,f_2$ fixed.
+The three identities imply $f_3^2=f_4^2$ and $f_3f_4=0$ almost everywhere,
+a contradiction. Only finitely many null sets are combined.
+Since $L\succ0$, the ellipsoid is compact and excludes zero. It contains
+the full support, not just almost every frame value.
+\end{proof}
+
+\begin{lemma}\label{row-insertion}
+For every measurable $h:[0,1]\to[0,1]$, the vector $r=\int hF$ satisfies
+$r^TL^{-1}r\le\mathcal M$.
+\end{lemma}
+\begin{proof}
+Give the original space $A$ mass $u=1-\epsilon$ and a new independent part
+$B$ mass $\epsilon$; the kernel is $W$ on $A\times A$, equals the prescribed
+cross-row $h$ (a function on $A$) on $A\times B$ and $B\times A$, and is zero
+on $B\times B$. Put $t=L^{-1}r$ and $T=|t|^2$. For the trial frame take $f_i$
+on $A$ and the constant $t_i$ on $B$; then the $A\times B$ and $B\times A$
+contributions to the numerator are $\epsilon u\,r_it_j$ and its transpose.
+Dividing the entire frame by $\sqrt u$ leaves every Rayleigh quotient
+unchanged, and the resulting Gram and numerator matrices are
+\[
+ G=I+(\epsilon/u)tt^T,\qquad
+ N=uL+\epsilon(rt^T+tr^T).
+\]
+The rank-one inverse formula gives the exact trial trace
+\[
+ \tr(G^{-1}N)=u\mathcal M+
+       \frac{\epsilon r^TL^{-1}r}{1+\epsilon T/u}.
+\]
+This cannot exceed $\mathcal M$. Divide by $\epsilon$ and let
+$\epsilon\downarrow0$.
+\end{proof}
+
+\begin{lemma}\label{contact-structure}
+For $\nu=F_\#dx$ and every $v\in S$,
+\begin{equation}\label{all-rows}
+ \nu\{w:v\cdot w=0\}=0,\qquad
+ \int_{v\cdot w>0}w\,d\nu(w)=Lv,\qquad v_1>0.
+\end{equation}
+The original kernel is $\mathbf1_{\{F(x)\cdot F(y)>0\}}$ almost
+everywhere. It is irreducible, and $\lambda_1>\lambda_2$.
+\end{lemma}
+\begin{proof}
+Let $Z=\{\int hF:0\le h\le1\}$ and
+$E=\{r:r^TL^{-1}r\le\mathcal M\}$. The set $Z$ is compact by weak-star
+compactness and is contained in $E$ by Lemma~\ref{row-insertion}.
+Its support function is $H(v)=\int(v\cdot F)_+$.
+For almost every $x$, the original row has integral vector $LF(x)$,
+and $F(x)^TLF(x)=\mathcal M$. Since the support function of $E$ is
+$\sqrt{\mathcal M v^TLv}$, it follows that $H(F(x))=\mathcal M$.
+Continuity then gives $H(v)=\mathcal M$ for every $v\in S$.
+
+For such $v$, the unique support point of the strictly convex ellipsoid
+$E$ in direction $v$ is $Lv$. The row $h_v=\mathbf1_{\{v\cdot F>0\}}$
+attains this support value, so $\int h_vF=Lv$. If
+$A_0=\{v\cdot F=0\}$, then $h_v+\mathbf1_A$ has the same support value
+for every measurable $A\subset A_0$. Uniqueness forces $\int_A F=0$
+for every such $A$, hence $F=0$ almost everywhere on $A_0$.
+The ellipsoid identity implies that $A_0$ is null.
+
+It remains to identify every maximizing row, not merely those obtained by
+perturbing $h_v$ on $A_0$. Let $h\in[0,1]$ satisfy $\int hF=Lv$ for some
+$v\in S$. Pairing with $v$ and using $v^TLv=\mathcal M$ gives
+$v\cdot\int hF=\mathcal M$, while on the other hand
+\[
+ v\cdot\int hF=\int h\,(v\cdot F)\,dx\le\int(v\cdot F)_+\,dx=H(v)=\mathcal M .
+\]
+Hence equality holds throughout. Since $0\le h\le1$, the pointwise bound
+$h\,(v\cdot F)\le(v\cdot F)_+$ is therefore an equality almost everywhere,
+which forces $h=1$ almost everywhere on $\{v\cdot F>0\}$ and $h=0$ almost
+everywhere on $\{v\cdot F<0\}$. As $A_0$ is null, $h=h_v$ almost
+everywhere. Thus the maximizing row is unique modulo null sets, which
+identifies every original row and proves the threshold formula.
+
+If a nontrivial measurable cut had zero cross-kernel, its indicator
+multiplier would commute with $T_W$ and with the isolated top-three
+spectral projection. The kernel $F(x)\cdot F(y)$ of that projection
+would vanish across the cut, contradicting the zero-equator assertion
+and Fubini. Thus $W$ is irreducible. The zero set of the nonnegative
+$f_1$ would also give a zero cut by its eigen-equation, so $f_1>0$ almost
+everywhere. If another top eigenfunction orthogonal to $f_1$ existed,
+it would change sign. Equality in the absolute-value Rayleigh comparison
+would force zero edges between its positive and negative sets; its
+absolute value is a nonnegative top eigenfunction and is positive almost
+everywhere. This contradicts irreducibility, proving simplicity.
+Finally, for every $v\in S$, $\lambda_1v_1=\int h_vf_1>0$:
+otherwise $h_v=0$ almost everywhere and hence $Lv=0$, which is impossible.
+\end{proof}
+\section{Finite canonical support}\label{sec-finite}
+Continue with the maximizing graphon and canonical law of the previous
+section, and write $h_v(w)=\mathbf1_{\{v\cdot w>0\}}$. Define continuous symmetric kernels on $S\times S$ by
+\[
+ A(v,w)=(v\cdot w)_+,\qquad
+ D(v,w)=(v\cdot w)(v^TLw),\qquad K=A-D.
+\]
+\begin{theorem}[Second variation on the actual support]\label{negative}
+For every finite list $v_1,\ldots,v_s\in S$ and every real list $a_1,\ldots,a_s$,
+\begin{equation}
+ \sum_{i,j}a_i a_j K(v_i,v_j)\le0. \label{nsd}
+\end{equation}
+The assertion concerns only the actual canonical support.
+\end{theorem}
+\begin{proof}
+For any bounded measurable real $g$ on $S$ with $\int g\,d\nu=0$, use the legitimate density
+$1+tg(F(x))$ for both signs of sufficiently small $t$.
+Set
+\[
+ Q=\int g(v)vv^T\,d\nu(v),\qquad
+ R=\iint h_v(w)vw^Tg(v)g(w)\,d\nu(v)d\nu(w).
+\]
+The unchanged three coordinate functions have the complete Gram $G_t=I+tQ$
+and numerator matrix $N_t=L+t(QL+LQ)+t^2R$ in this changed measure.
+For small $t$, $G_t$ is positive definite; multiplying the frame by $G_t^{-1/2}$
+is a genuine common orthonormalization. Since
+$N_t=G_tLG_t+t^2(R-QLQ)$ and $\tr(LQ)=\mathcal M\int g=0$, its exact trace is
+\begin{equation}
+ \tr(G_t^{-1}N_t)=\mathcal M+t^2\tr\bigl(G_t^{-1}(R-QLQ)\bigr)\le \mathcal M. \label{density}
+\end{equation}
+Letting $t\to0$ gives $\iint K(v,w)g(v)g(w)\,d\nu(v)d\nu(w)\le0$.
+There is no discarded remainder or varying-scheme constant in this calculation.
+By Lemma~\ref{ellipse-structure} and~\eqref{all-rows}, $\int K(v,w)d\nu(w)=\mathcal M-\mathcal M=0$ for every $v\in S$.
+Subtracting the mean therefore proves the same inequality for every bounded $g$.
+To obtain \eqref{nsd}, combine repeated points and take disjoint shrinking
+neighborhoods of the remaining points. Each has positive $\nu$-mass by full support.
+Use $g=\sum_i a_i1_{U_i}/\nu(U_i)$, separately for each neighborhood size.
+This auxiliary $g$ is bounded but need not have mean zero. The legal probability
+density direction is $g-\int g\,d\nu$; centering leaves the $K$ quadratic form unchanged.
+Its bound need not be uniform across neighborhood sizes.
+Continuity of $K$ on compact $S\times S$ gives \eqref{nsd} in the limit.
+This limiting step needs no uniform permissible size of $t$.
+No eigenvalue differentiation is used, including when $\lambda_2=\lambda_3$.
+\end{proof}
+
+\subsection{Propagation of moment relations}
+\begin{lemma}\label{propagate}
+If $v_i\in S$ have $v_i\cdot v_j>0$ for all $i,j$, then
+\[
+ \sum_i a_i v_iv_i^T=0
+ \quad\Longrightarrow\quad
+ \sum_i a_i v_i=0\quad\hbox{and}\quad
+ \sum_i a_i A(v_i,w)=0\quad\hbox{for every }w\in S.
+\]
+Consequently the vector space spanned by the functions $A(v,\cdot)$, $v\in S$,
+has dimension $r\le24$ and admits a basis $A(z_j,\cdot)$ with actual $z_j\in S$.
+\end{lemma}
+\begin{proof}
+Write $Q_a=\sum a_i v_iv_i^T$ and $b_a=\sum a_i v_i$.
+The quadratic form in \eqref{nsd} is $|b_a|^2-\tr(LQ_a^2)$ on this positive-dot set.
+For $Q_a=0$ it is nonnegative, hence zero and $b_a=0$.
+A null vector of a negative semidefinite quadratic form has zero cross terms:
+apply \eqref{nsd} also to this list with $w$ appended and coefficient $s\in\R$.
+The resulting polynomial $2s\sum_i a_iK(v_i,w)+s^2K(w,w)$ is nonpositive for all $s$,
+so its linear coefficient vanishes. The $D$ sum vanishes because $Q_a=0$;
+therefore the $A$ sum vanishes for every $w$.
+Partition $S$ by the signs of coordinates 2 and 3, assigning zero to the positive sign.
+Within each of the four disjoint sets, every dot product is strictly positive,
+since coordinate 1 is positive and the other two coordinate products are nonnegative.
+In each nonempty set choose a basis, of size at most 6, of its matrices $vv^T$
+in the six-dimensional space of symmetric $3$ by $3$ matrices.
+The implication just proved expresses every corresponding $A$ row in the span
+of those basis-point rows. Combine the four lists and discard dependent rows.
+This proves $r\le24$. These are spanning witnesses, not a replacement vertex measure.
+This bounds the row space, not yet the cardinality of the support.
+\end{proof}
+
+\subsection{Sign regions and finite support}
+\begin{lemma}[Sign-region dimension descent]\label{descent}
+Let $T\subset S$ have linear span of dimension $d\ge1$.
+Suppose for every $w\in S$ there is a vector $b_w\in\R^3$ such that
+$A(v,w)=v\cdot b_w$ for all $v\in T$. Then $|T|\le2^{d-1}$.
+\end{lemma}
+\begin{proof}
+If $d=1$, the positive first coordinate and $v^TLv=\mathcal M$ make $T$ a singleton.
+For general $d$, if no $w\in S$ has strictly positive dot product with one member
+of $T$ and strictly negative dot product with another, any two members have the
+same threshold row outside the union of their two zero equators.
+Equation \eqref{all-rows} then makes the members equal.
+Otherwise choose such a $w$, with witnesses $v_+,v_-$, and split
+$T_+=\{v\in T:v\cdot w\ge0\}$ and $T_-=\{v\in T:v\cdot w<0\}$.
+On $T_+$, $v\cdot(b_w-w)=0$; on $T_-$, $v\cdot b_w=0$.
+Both are proper hyperplanes of $\operatorname{span}T$: evaluate $b_w-w$ at $v_-$
+and $b_w$ at $v_+$. Thus both children have span dimension at most $d-1$.
+They inherit the linearization for every $w'\in S$.
+Induction gives at most $2^{d-2}$ points in each child, proving the bound.
+Zeros were included in $T_+$, so none are lost in the dimension descent.
+\end{proof}
+
+\begin{theorem}[Finite support of every maximizer]\label{finite}
+For every global maximizer of $\Sigma_3$, its actual canonical support satisfies
+\begin{equation}
+ |S|\le 4\bigl(1+r(r+1)/2\bigr)\le1204=:N_*. \label{bound}
+\end{equation}
+The original graphon agrees almost everywhere with a binary step graphon
+on these actual fibers, with
+positive masses, diagonal blocks 1, and no equal rows. For this particular
+maximizer $\min_{v,w\in S}|v\cdot w|>0$.
+\end{theorem}
+\begin{proof}
+Take the actual anchors $z_1,\ldots,z_r$ from Lemma~\ref{propagate}.
+Symmetry gives, for each $w\in S$, coefficients $c_j(w)$ with
+$A(v,w)=\sum_j c_j(w)A(v,z_j)$ for every $v\in S$.
+The union of the finitely many anchor equators has $\nu$-measure zero by \eqref{all-rows}.
+On any fixed strict sign region of these anchors,
+$A(v,z_j)$ is either $v\cdot z_j$ or zero. Thus $A(v,w)$ is linear in $v$
+there, for every $w$, with coefficients determined by that region.
+Because $v_1>0$, use coordinates $(v_2/v_1,v_3/v_1)$.
+Each anchor equator becomes an affine line, or is empty if its last two coordinates vanish.
+At most $r$ lines have at most $1+r(r+1)/2$ complementary regions: the $j$-th
+line has at most $j-1$ distinct previous intersection points and adds at most $j$ regions.
+Coincident or parallel lines only lower this count. A strict sign pattern is an
+intersection of open half-planes, hence connected whenever nonempty.
+Apply Lemma~\ref{descent} to $T=S$ intersected with each such sign region;
+its span dimension is at most 3, so it contains at most four points.
+We have therefore placed full $\nu$-measure in a finite set of size bounded by \eqref{bound}.
+Its closure is the same finite set, so full support of $\nu$ implies that all of $S$
+is contained in it, including any previously excluded boundary candidates.
+Every support point is now an atom of positive mass. The individual zero-equator
+statements in \eqref{all-rows} imply $v\cdot w\ne0$ for every pair of support atoms.
+Taking a minimum over this finite set proves the asserted margin.
+The actual fibers $F^{-1}(v)$ provide the partition, and \eqref{all-rows} identifies its rows.
+\end{proof}
+The margin asserted here may depend on the maximizer.
+
+\section{Separating binary observations}\label{sec-separation}
+By the preceding section, write $S=\{v_1,\ldots,v_m\}$ with actual masses
+$p_i>0$. Put $V=(v_i^T)_{i=1}^m$, $P_0=\diag(p_i)$ and
+$B_{ij}=\mathbf1_{\{v_i\cdot v_j>0\}}$. Then
+\begin{equation}\label{finite-rows}
+ BP_0V=VL,\qquad \sum_i p_iv_iv_i^T=I_3,\qquad
+ v_i^TLv_i=\mathcal M.
+\end{equation}
+The full rows of $B$ are distinct: equal rows would imply equal $v_i$
+by invertibility of $L$. A positive clique $J$ means a subset of this actual support with $B_{ij}=1$
+for every $i,j\in J$. Extend vectors indexed by $J$ by zero outside $J$.
+\begin{lemma}[Vector rigidity on a positive clique]
+For every real $a$ supported on a positive clique, if
+$Q_a=\sum_i a_i v_iv_i^T=0$, then
+\begin{equation}
+ \sum_i a_i=0,\quad b_a:=\sum_i a_iv_i=0,\quad
+ \sum_i B_{ki}a_iv_i=0\quad\hbox{for every row }k. \label{rigid}
+\end{equation}
+\end{lemma}
+\begin{proof}
+Taking the trace against $L$ gives $\mathcal M\sum a_i=0$.
+For both signs of sufficiently small nonzero $t$, all $p_i+ta_i$ are positive.
+These are legitimate new fiber measures for the same binary template, realizable
+on an atomless space. They are not independent choices of moment data.
+The original coordinate functions have Gram matrix $I+tQ_a=I$ and compression
+\[
+ N(t)=L+t(Q_aL+LQ_a)+t^2b_ab_a^T=L+t^2b_ab_a^T.
+\]
+The last term uses the clique assumption, and both cross terms use \eqref{finite-rows}.
+Their trace cannot exceed the global maximum $\mathcal M$; hence $b_a=0$ and $N(t)=L$.
+Equality of this trial trace with the maximum forces its three-dimensional
+space to be invariant. Explicitly, rotate one orthonormal coordinate into any
+unit perpendicular function; the first derivative of the trace gives zero
+off-space matrix element. This argument does not differentiate ordered eigenvalues.
+The compression $L$ then gives the eigenfunction equations at the perturbed measure.
+All fibers still have positive mass, so for every $k$,
+$\sum_i(p_i+ta_i)B_{ki}v_i=Lv_k$.
+Subtract \eqref{finite-rows} and divide by $t$ to obtain \eqref{rigid}.
+\end{proof}
+Moment-preserving cloning and the Ky Fan equality argument follow the
+mechanism in~\cite[Claims 2.2--2.5]{KMMP}. The permissible size of $t$
+may depend on the maximizer and the chosen direction.
+
+\subsection{A separating observation lemma}
+Minimal dependencies of rank-one powers have a broader theory; see
+Li and Liu~\cite{LiLiu}. The following lemma uses the additional binary
+separation hypothesis. Its elementary proof is included.
+\begin{lemma}[Moment independence from separating binary observations]\label{binary}
+Let $T=\{v_i:i\in J\}$ be a finite set of distinct points in $\R^3$ with
+$v_{i1}>0$ and $v_i^TLv_i=\mathcal M>0$, where $L$ is positive definite.
+Let $\mathcal B$ be a family of functions $b:J\to\{0,1\}$ containing the
+constant-one function and separating every pair of distinct indices.
+Suppose, for every real $a$ with $\sum_{i\in J}a_iv_iv_i^T=0$, that
+\begin{equation}
+ \sum_{i\in J}a_i b(i)v_i=0\quad\hbox{for every }b\in\mathcal B. \label{obs}
+\end{equation}
+Then the matrices $\{v_iv_i^T:i\in J\}$ are linearly independent.
+\end{lemma}
+\begin{proof}
+Suppose instead that $I\subseteq J$ is a support-minimal dependent family
+of these matrices, with relation $a_i\ne0$ for all $i\in I$.
+Write $s=|I|$. Since $\dim\operatorname{Sym}_3=6$, minimality gives $s\le7$.
+The ellipse equation gives $\sum_{I}a_i=0$, while the constant observation
+in \eqref{obs} gives $\sum_I a_iv_i=0$.
+With $w_i=(1,v_i)^T\in\R^4$, all three identities combine to give
+\[
+ \sum_{a_i>0}a_iw_iw_i^T=\sum_{a_i<0}(-a_i)w_iw_i^T.
+\]
+Both sides are positive semidefinite. The range of a positive weighted sum
+of $w_iw_i^T$ is precisely the span of those $w_i$:
+its kernel consists of vectors perpendicular to every such $w_i$.
+Consequently the two spans coincide, and the affine hull $H$ of all $v_i$
+in the circuit satisfies
+\[
+ 1+\dim H=\dim\operatorname{span}\{w_i:i\in I\}
+ \le\min(|\{a_i>0\}|,|\{a_i<0\}|)\le3.
+\]
+This is an elementary positive-Gram range argument, not a new general circuit bound.
+Distinct points here cannot be proportional: equal ellipse radius forces
+the proportionality factor to be $\pm1$, and the positive first coordinate
+excludes minus one. Also an affine line meets this positive-definite ellipsoid
+in at most two points, by its strictly quadratic restriction to the line.
+If $\dim H\le1$, there are at most two points, whose rank-one matrices
+are independent by nonproportionality, a contradiction.
+It remains that $\dim H=2$.
+
+If $0\in H$, this is a two-dimensional linear plane. Its rank-one matrices
+span a space of dimension at most three, so minimality now gives $s\le4$.
+For any observation $b$ nonconstant on $I$, \eqref{obs} and the total vector
+relation give nonzero-coefficient linear relations on both nonempty sets
+$I_1=\{i:b(i)=1\}$ and $I_0=\{i:b(i)=0\}$.
+Nonproportionality forces each set to contain at least three points.
+This would give $s\ge6$, a contradiction. If instead every observation in
+$\mathcal B$ were constant on $I$, then minimality excludes $s=1$ (a
+one-element circuit is impossible because $v_iv_i^T\ne0$), so we may choose
+distinct $i,j\in I$; since $\mathcal B$ separates every pair of distinct
+indices of $J$, some $b\in\mathcal B$ satisfies $b(i)\ne b(j)$,
+contradicting constancy on $I$.
+
+If $0\notin H$, write $H=\{v:c\cdot v=1\}$.
+Any three distinct points of $H$ on the ellipsoid are linearly independent:
+a linear relation has coefficient sum zero after applying $c$, hence would
+make the three points affinely collinear, which the line-intersection fact forbids.
+A nonconstant observation would therefore require at least four points
+on each of $I_1,I_0$, yielding $s\ge8$, again a contradiction.
+Thus every observation is constant on $I$. A one-element circuit is impossible
+because $v_iv_i^T\ne0$; separation of any two indices in $I$ is contradicted.
+\end{proof}
+
+\begin{theorem}[Every actual positive clique has at most six types]\label{six}
+For every actual maximizer, and every positive
+clique $J$ of its full support, the map
+$a\mapsto\sum_{i\in J}a_iv_iv_i^T$ is injective. In particular $|J|\le6$.
+If $\{v_i:i\in J\}$ lies in a linear plane, then $|J|\le3$.
+If it lies in an affine plane not containing zero, then $|J|\le5$.
+\end{theorem}
+\begin{proof}
+Use the actual observations $b_k(i)=B_{ki}$, for all rows $k$.
+For nonempty $J$, a row $k\in J$ supplies the constant-one observation.
+They separate indices: $B$ is symmetric and has distinct full rows.
+Lemma \ref{binary} now applies by \eqref{rigid}.
+The linear-plane refinement follows from $\dim\operatorname{Sym}_2=3$.
+For an affine plane $c\cdot v=1$, the nonzero symmetric matrix
+$L-\mathcal M cc^T$ is orthogonal to every $v_iv_i^T$. It is nonzero because $L$
+has rank three while $\mathcal M cc^T$ has rank at most one. This leaves dimension at most five.
+Empty cliques require no argument.
+\end{proof}
+
+\begin{corollary}[Proof of Theorem~\ref{structure-main}]\label{twentyfour}
+Every maximizer has at most 24 distinct canonical support points.
+\end{corollary}
+\begin{proof}
+Partition its full support by the signs of coordinates two and three,
+assigning a zero coordinate to the positive sign. There are at most four parts.
+Within each part, the last two coordinate products are nonnegative and the
+first-coordinate product is strictly positive. Each part is a positive clique.
+Theorem \ref{six} gives $m\le4\cdot6=24$ on its original support. This proves Theorem~\ref{structure-main}.
+\end{proof}
+
+\section{Moments and regression for one isotropic law}\label{sec-moments}
+We now turn to the numerical estimate. Throughout this section the law
+is arbitrary and isotropic. Bounded positive radii will be imposed only
+when a radial comparison requires them. For later bookkeeping define
+\begin{equation}\label{constants}
+ d_0=-\frac{25624284539519}{53655078400000}
+                  +\frac{\sqrt5}{2}-\frac{41\sqrt3}{120},\qquad
+ d_1=d_0+\frac{103}{9000000},\qquad
+ d=d_1+\frac1{3000000}.
+\end{equation}
+Then $d=(3+\sqrt5)/2-2c$, with $c$ as in~\eqref{main-constant}.
+The intermediate constants separate the joint moment estimate from
+the final atomic term.
+Fix $\E XX^T=I_3$, let $R=|X|$, and put $U=X/R$ when $R>0$.
+At $R=0$ choose any fixed unit vector for $U$. Define
+\[
+ \begin{gathered}
+ C=\E R,\quad V=3-C^2,\quad \mathbf m=\E X,\quad B=|\mathbf m|^2,\quad e=1-B,\\
+ A=\E|X\cdot X'|,\qquad D=\frac{3+\sqrt5}{2}-A-B.
+ \end{gathered}
+\]
+Here $V,e\ge0$: $\E R^2=3$ and Cauchy--Schwarz gives
+$(v\cdot \mathbf m)^2\le\E(v\cdot X)^2=1$ for every unit $v$.
+All pair expectations below are over independent copies of this same law.
+Set
+\[
+ M=\E[R UU^T]=\frac C3I_3+Z,\qquad
+ J=1-\tr(M^2)=\frac V3-\|Z\|_F^2.
+\]
+The regression vector $\xi=U-MX$ satisfies
+\begin{equation}\label{regression}
+ \E[X\xi^T]=0,\quad \E\|\xi\|^2=J\ge0,\quad
+ \E UU^T=M^2+\E[\xi\xi^T].
+\end{equation}
+In particular $J$ is an actual regression error, not a freely chosen moment.
+
+Here are the harmonic normalizations used throughout. All tensor inner
+products sum over all ordered indices. Put
+\[
+ \Omega_{ijkl}=\frac{\delta_{ij}\delta_{kl}+\delta_{ik}\delta_{jl}
+                           +\delta_{il}\delta_{jk}}{15},
+ \qquad
+ ({\cal L}_3(y))_{ijk}
+       =\frac{y_i\delta_{jk}+y_j\delta_{ik}+y_k\delta_{ij}}5.
+\]
+For symmetric traceless $Z$, put
+\[
+ ({\cal L}_4(Z))_{ijkl}=\frac17(\delta_{ij}Z_{kl}+\delta_{ik}Z_{jl}
+ +\delta_{il}Z_{jk}+\delta_{jk}Z_{il}+\delta_{jl}Z_{ik}+\delta_{kl}Z_{ij}).
+\]
+For unit $u$, set
+\[
+ \begin{gathered}
+ \Psi_3(u)=u^{\otimes3}-{\cal L}_3(u),\qquad
+ \Psi_4(u)=u^{\otimes4}-\Omega-{\cal L}_4(uu^T-I_3/3),\\
+ T_i=\E[R\Psi_i(U)],\qquad H=\|T_3\|_F,\qquad K=\|T_4\|_F.
+ \end{gathered}
+\]
+Contraction in two indices gives the orthogonal decompositions
+\[
+ \E[R U^{\otimes3}]=T_3+{\cal L}_3(\mathbf m),\qquad
+ \E[R U^{\otimes4}]=T_4+C\Omega+{\cal L}_4(Z).
+\]
+Indeed $\operatorname{ct}\Omega=I_3/3$, $\|\Omega\|^2=1/5$,
+$\operatorname{ct}{\cal L}_4(Z)=Z$, and
+$\langle T,{\cal L}_4(Z)\rangle=(6/7)\langle\operatorname{ct}T,Z\rangle$.
+Also $\operatorname{ct}{\cal L}_3(y)=y$ and
+$\langle N,{\cal L}_3(y)\rangle=(3/5)\operatorname{ct}N\cdot y$.
+It follows directly that
+\begin{align}\label{harmonics}
+ \langle\Psi_3(u),\Psi_3(v)\rangle&=g_3(u\cdot v),&
+ g_3(t)&=t^3-3t/5,&\|\Psi_3(v)\|^2&=2/5,\notag\\
+ \langle\Psi_4(u),\Psi_4(v)\rangle&=g_4(u\cdot v),&
+ g_4(t)&=t^4-6t^2/7+3/35,&\|\Psi_4(v)\|^2&=8/35.
+\end{align}
+The tensor moments involve $R$, not $R^3$ or $R^4$, and are integrable
+under $\E R^2=3$.
+
+Write $s=\sqrt5$ and define the scalar absolute-value majorant and its slack by
+\[
+ a=\frac{1+s}{6},\quad b=\frac{7s-5}{8},\quad\rho=\frac{15s-25}{16},
+ \qquad h_0(z)=\frac{(1-z)(sz-1)^2(sz+s+2)}{2(s+1)^2}.
+\]
+Expansion gives, for $|t|\le1$,
+\[
+ a+b(t^2-1/3)-\rho(t^4-1/5)-|t|=h_0(|t|)\ge0.
+\]
+This majorant is from~\cite[Lemma 4.4]{STW}.
+Let $S=\E[RR'h_0(|U\cdot U'|)]$. The decompositions above give
+\[
+ A=aC^2+b\|Z\|^2-\rho\left(K^2+\frac67\|Z\|^2\right)-S.
+\]
+Consequently
+\begin{equation}\label{budget4}
+ D=e+\alpha V+\beta J+\rho K^2+S,
+ \qquad \alpha=\frac{2s-1}{14},\quad\beta=\frac{s+10}{14}.
+\end{equation}
+Useful rational bounds are $\alpha\ge26/105$, $\beta\ge6/7$,
+and $\rho\ge1/2$, using $s>67/30$, $s\ge2$, and $s\ge11/5$.
+
+\subsection{A regression estimate}
+Suppose $B>0$. Put
+\[
+ x=\sqrt B,\quad v=\mathbf m/x,\quad t=U\cdot v,\quad Y=Rt,\quad
+ q_0=1/\sqrt3,\quad q=C/(3x),\quad L=\E[R(t-q_0)^2].
+\]
+Then $\E Y=x$, $\E Y^2=1$, $\operatorname{Var}Y=e$.
+If $w_0=\E\xi$, \eqref{regression} gives
+$w_0=\E[(1-\mathbf m\cdot X)\xi]$, hence $|w_0|^2\le eJ$.
+For traceless symmetric $3$ by $3$ matrices,
+$|Zv|^2\le(2/3)\|Z\|^2$; the other two eigenvalues accompanying an
+eigenvalue $z$ have squared sum at least $z^2/2$.
+Writing $J_v=\E(v\cdot\xi)^2\le J$, we obtain
+\begin{align*}
+ \E(t-q)^2
+ &=|Mv-q\mathbf m|^2+q^2e+J_v-2qv\cdot w_0\\
+ &\le 2V/9+J/3+q^2e+2q\sqrt{eJ}=:F_0,\\
+ \E(Y-qR)^2&\le V/3+3q^2e+2q\sqrt{eV}=:G_0.
+\end{align*}
+Here $Mv-q\mathbf m=Zv$ and $\E RY\ge Cx-\sqrt{eV}$.
+Cauchy--Schwarz gives $L_q:=\E[R(t-q)^2]\le\sqrt{F_0G_0}$.
+Note that $Rt=R(U\cdot v)=(RU)\cdot v=X\cdot v=Y$, so $\E[Rt]=\E Y=x$;
+this is the only place at which the regression vector enters the exact
+identity below. With $\zeta=C/\sqrt3$,
+\[
+ L_q-L=q_0(\zeta-x)^2(\zeta+2x)/x^2\ge0.
+\]
+Thus, writing $u=\sqrt e$, $z=\sqrt V$, $j=\sqrt J$,
+\begin{equation}\label{Lbar}
+ L\le\overline L:=\frac34F_0+\frac13G_0
+ =\frac{7q^2}{4}u^2+\frac5{18}z^2+\frac14j^2
+                       +\frac{2q}{3}uz+\frac{3q}{2}uj.
+\end{equation}
+Set $r_{\rm reg}=\overline L-L\ge0$. This remainder will be kept
+in the joint identity. No lower radius bound has been used here.
+
+\section{A signed quartic and a joint defect identity}\label{sec-quartic}
+Define
+\[
+ f(w)=\frac{8352+43806w+54016w^2-12928w^3-10240w^4}{41503},
+ \qquad \sigma(w)=f(w)-|w|-w.
+\]
+The polynomial is the degree-at-most-four Hermite interpolant with double
+contacts to $|w|+w$ at $-3/8$ and $1/2$, and a contact at $1$.
+Uniqueness follows because a difference of two such polynomials would have
+five zeros counted with multiplicity. The following explicit identities prove
+the needed inequalities; interpolation alone is not a majorant proof.
+\begin{lemma}\label{scalar}
+For every $w\in[-1,1]$,
+\begin{equation}\label{sigmapoint}
+ \sigma(w)\ge0,\qquad \sigma(w)\ge\frac{1-9w^2}{25}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Direct expansion gives
+\[
+ 41503\sigma(w)=
+ \begin{cases}
+ (1-w)(2w-1)^2(8352+2560w),&0\le w\le1,\\
+ (8w+3)^2(928-82w-160w^2),&-1\le w\le0.
+ \end{cases}
+\]
+The final factor on the negative interval is concave and at least $850$.
+This proves nonnegativity, including the join at $0$ and both endpoints.
+The second assertion follows immediately when $|w|\ge1/3$.
+For $w=-z$, $0\le z\le1/3$, write
+\[
+ \sigma(-z)=(z-3/8)^2
+          \frac{59392+5248z-10240z^2}{41503}
+       \ge\frac{10}{7}(z-3/8)^2.
+\]
+Indeed $z(5248-10240z)\ge0$ on this interval and
+$59392/41503>10/7$. The remaining comparison is the exact square
+\[
+ \frac{10}{7}(z-3/8)^2-\frac{1-9z^2}{25}
+  =\frac{313}{175}\left(z-\frac{375}{1252}\right)^2
+                         +\frac{109}{250400}>0.
+\]
+For $w=z$, $0\le z\le1/3$, the positive-interval factorization gives
+\[
+ \sigma(z)=(z-1/2)^2\frac{(1-z)(33408+10240z)}{41503}
+              \ge\frac12(z-1/2)^2,
+\]
+because the coefficient is at least $22272/41503>1/2$. Now use
+\[
+ \frac12(z-1/2)^2-\frac{1-9z^2}{25}
+   =\frac{43}{50}\left(z-\frac{25}{86}\right)^2+\frac{53}{4300}>0.
+\]
+These intervals exhaust $[-1,1]$.
+\end{proof}
+
+Put $P=\E[RR'\sigma(U\cdot U')]$ for the same actual law as before, and set
+\[
+ \begin{gathered}
+ a_3=\frac{12928}{41503},\quad a_4=\frac{10240}{41503},\quad
+ b_e=\frac{16386}{18865},\\
+ b_V=\frac{64608}{290521},\quad b_J=\frac{316672}{290521},\quad
+ \delta_{\mathrm q}=\frac{3+\sqrt5}{2}-\frac{544886}{207515}.
+ \end{gathered}
+\]
+Integration of the expanded $f$, using \eqref{harmonics}, gives the single
+exact joint budget
+\begin{equation}\label{budget7}
+ D=\delta_{\mathrm q}+b_e e+b_V V+b_J J+a_3H^2+a_4K^2+P.
+\end{equation}
+For example, writing $f=c_0+c_1w+c_2w^2-a_3w^3-a_4w^4$,
+the coefficients are $b_e=c_1-3a_3/5$, $b_V=c_0+3a_4/35$,
+$b_J=c_2-6a_4/7$, and the integrated constant is
+$3(c_0-a_4/5)+b_e+c_2=544886/207515$.
+All tensors are $R$-weighted and $\sigma$ is bounded, so this equality
+uses no radial moment beyond the second one. Identity~\eqref{budget4} will only justify a small-$D$ branch; it is
+not added as an independent resource to~\eqref{budget7}.
+
+\begin{lemma}\label{radialpayment}
+Suppose $0<r_-\le R\le r_+<\infty$ almost surely and $r_+/r_-\le3$.
+Then
+\begin{equation}\label{payment}
+ P=\frac3{50}(V-9J)+r_{\rm rad},\qquad r_{\rm rad}\ge0.
+\end{equation}
+\end{lemma}
+\begin{proof}
+For $w=U\cdot U'$, the exact pair identities from the full Gram are
+\[
+ V=\frac12\E(R-R')^2,\qquad
+ J=\frac12\E[(R-R')^2w^2].
+\]
+The latter uses $\E[R^2w^2]=\E[(R')^2w^2]=1$ and
+$\E[RR'w^2]=\tr(M^2)$; it assumes no independence of radius and direction.
+The ratio bound gives $(R-R')^2\le(4/3)RR'$. Use the two conclusions
+of Lemma~\ref{scalar} in this order:
+\[
+ P\ge\frac34\E[(R-R')^2\sigma(w)]
+   \ge\frac3{100}\E[(R-R')^2(1-9w^2)]
+    =\frac3{50}(V-9J).
+\]
+The expression $V-9J$ need not be nonnegative. Define $r_{\rm rad}$
+as the actual difference; only this difference is claimed nonnegative.
+\end{proof}
+
+\section{Directional and radial control}\label{sec-directional}
+Throughout this section assume $0<r_-\le R\le r_+<\infty$ almost surely,
+with $r_+/r_-\le3$, and work in the branch $D<1/20$.
+Equation~\eqref{budget4} implies
+\begin{equation}\label{smallbranch}
+ e<1/20,\quad x>9/10,\quad V<21/104<2/9,\quad C>5/3,
+ \qquad q^2=\frac{3-V}{9(1-e)}\le\frac{20}{57}.
+\end{equation}
+In particular $\mathbf m\ne0$. Put $p_i=\langle T_i,\Psi_i(v)\rangle
+=\E[Rg_i(t)]$. The elementary Hermite identities
+\begin{align}\label{Hermite}
+ \left(\frac{53}{28}t^2-\frac94t+\frac{41}{70}\right)-g_4(t)
+       &=(1-t)(t-1/2)^2(t+2)\ge0,\notag\\
+ (2t^2-37t/20+1/4)-g_3(t)
+       &=(1-t)(t-1/2)^2\ge0
+\end{align}
+hold on $[-1,1]$. Define
+\[
+ \gamma_4=9/4-53\sqrt3/42,\quad
+ \ell_4=9/4-511\sqrt3/420,\quad
+ \ell_3=37/20-11\sqrt3/12.
+\]
+Here $0<\gamma_4<1/15$ (square the positive rational comparisons).
+Since $\E Rt=x$, $\E Rt^2=L+2x/\sqrt3-C/3$, the first identity gives
+\[
+ -p_4\ge\gamma_4x+19C/420-53L/28
+       \ge\ell_4-e/15-19V/1400-53L/28.
+\]
+We used $x\ge1-e$ and $C\ge\sqrt3-3V/10$; the latter follows from
+$V=(\sqrt3-C)(\sqrt3+C)$ and $C>5/3$.
+The second identity gives
+\[
+ -p_3\ge(37/20-4/\sqrt3)x+5C/12-2L
+       \ge\ell_3+9e/40-V/8-2L.
+\]
+Here $4/\sqrt3-37/20>9/20$ and $x\le1-e/2$.
+Define the nonnegative differences in these last two inequalities by
+\begin{align*}
+ r_4&=-p_4-\ell_4+e/15+19V/1400+53L/28,\\
+ r_3&=-p_3-\ell_3-9e/40+V/8+2L.
+\end{align*}
+The polynomial identities, rather than a fixed sphere assumption,
+justify these directional estimates for the actual weighted moments.
+
+Set $\eta=1/10$, $\theta=6/25$, and
+$\ell=53\eta/28+2\theta=937/1400$. Define the tensor squares
+\[
+ {\cal R}_4=a_4\left\|T_4+\frac{\eta}{2a_4}\Psi_4(v)\right\|^2,\qquad
+ {\cal R}_3=a_3\left\|T_3+\frac{\theta}{2a_3}\Psi_3(v)\right\|^2.
+\]
+Their exact expansions give
+\[
+ a_4K^2=-\eta p_4-\frac{2\eta^2}{35a_4}+{\cal R}_4,\qquad
+ a_3H^2=-\theta p_3-\frac{\theta^2}{10a_3}+{\cal R}_3.
+\]
+Define
+\[
+ E=\frac{5183683}{5659500},\quad
+ V_c=\frac{145858703}{581042000},\quad
+ J_c=\frac{7989533}{14526050},\quad
+ {\cal R}_0={\cal R}_3+{\cal R}_4+\eta r_4+\theta r_3\ge0.
+\]
+Substituting the directional identities and \eqref{payment} into
+\eqref{budget7}, then writing $L=\overline L-r_{\rm reg}$, gives the exact identity
+\begin{equation}\label{certificate-start}
+ D=d_0+E e+V_c V+J_c J-\ell\overline L
+             +{\cal R}_0+r_{\rm rad}+\ell r_{\rm reg}.
+\end{equation}
+Here
+\[
+ d_0=\delta_{\mathrm q}+\eta\ell_4+\theta\ell_3
+                 -\frac{2\eta^2}{35a_4}-\frac{\theta^2}{10a_3},
+\]
+which simplifies to \eqref{constants}. The coefficient checks are
+\[
+ E=b_e-\eta/15+9\theta/40,\quad
+ V_c=b_V-19\eta/1400-\theta/8+3/50,\quad J_c=b_J-27/50.
+\]
+All the remainders in this identity refer to the same probability law.
+
+Put $B_c=V_c-5\ell/18$ and $C_c=J_c-\ell/4$. The exact rational values are
+\[
+ B_c=\frac{42565069}{653672250},\qquad
+ C_c=\frac{88944217}{232416800}.
+\]
+For $u=\sqrt e$, $z=\sqrt V$, and $j=\sqrt J$, the remaining quadratic has
+the explicit completion
+\begin{align}\label{squares}
+ E e+V_c V+J_c J-\ell\overline L
+ &=\frac{13}{200}\left(z-\frac{937}{273}qu\right)^2
+   +\frac{19}{50}\left(j-\frac{2811}{2128}qu\right)^2\notag\\
+ &\quad+\left(\frac{183}{200}-\frac{725029049}{278853120}q^2\right)e\notag\\
+ &\quad+\frac{10481}{11319000}e
+        +\frac{305491}{2614689000}V+\frac{625833}{232416800}J.
+\end{align}
+Indeed the last three fractions are $E-183/200$, $B_c-13/200$,
+and $C_c-19/50$. Also
+\[
+ \frac{725029049}{278853120}
+  =\frac{7\ell}{4}+\frac{\ell^2}{9(13/200)}
+                          +\frac{9\ell^2}{16(19/50)}.
+\]
+By \eqref{smallbranch}, the coefficient of $e$ in parentheses is at least
+\[
+ \frac{183}{200}-\frac{20}{57}\frac{725029049}{278853120}
+                         =\frac{53754367}{19868284800}>0.
+\]
+Thus every term on the right of \eqref{certificate-start} after $d_0$
+is nonnegative. The displayed squares give an explicit certificate for the remaining
+quadratic form.
+
+\begin{proposition}\label{conditional-law}
+Every isotropic law on $\R^3$ whose radii lie almost surely in a positive
+interval of endpoint ratio at most $3$ satisfies $D\ge d_0$.
+In the branch $D<1/20$, \eqref{certificate-start}--\eqref{squares}
+give the full common-remainder certificate.
+\end{proposition}
+\begin{proof}
+The small branch was proved above. Otherwise $D\ge1/20>d_0$.
+For explicit exact comparisons use
+$682/305<\sqrt5<161/72$ and $433/250<\sqrt3<97/56$,
+each verified by squaring. They yield
+\[
+ d_0-7/144>\frac{940735364069}{29456638041600000}>0,\qquad
+ 1/20-d_0>\frac{620701786231}{482895705600000}>0.
+\]
+No $B=0$ division occurs: it is excluded by $e<1/20$ in the small branch.
+\end{proof}
+
+\section{A reserve in the quartic slack}\label{sec-reserve}
+Throughout this section assume $0<r_-\le R\le r_+<\infty$ almost surely,
+with $r_+/r_-\le\sqrt8$. Write $g(w)=(1-9w^2)/25$. Then
+\[
+ \frac{(R-R')^2}{RR'}\le\sqrt8+\frac1{\sqrt8}-2
+    =\frac{9\sqrt2}{4}-2\le\frac{32}{27}.
+\]
+For the last inequality, $\sqrt2<344/243$ follows by squaring, with
+$(344/243)^2-2=238/59049>0$. Put
+$z_{\rm rad}=3(R-R')^2/(4RR')$, so $0\le z_{\rm rad}\le8/9$.
+The actual remainder in \eqref{payment} now has the exact decomposition
+\begin{equation}\label{reserve}
+ r_{\rm rad}=\frac P9+r_{\rm tr},\qquad
+ r_{\rm tr}=\E\!\left[RR'\left\{(8/9-z_{\rm rad})\sigma(w)
+                    +z_{\rm rad}(\sigma(w)-g(w))\right\}\right]\ge0.
+\end{equation}
+This uses both pointwise inequalities of Lemma~\ref{scalar}, including
+where $g<0$. It is not a second independent budget or a new copy of $P$.
+
+\subsection{A contact polynomial without a cubic term}
+Using the same interpolation nodes and tensor weights, set
+\[
+ h_*(t)=(t-1)(t-1/2)(t+3/8),\qquad
+ z_*(t)=(t+9/8)h_*(t)
+       =t^4-\frac{85}{64}t^2+\frac{15}{128}t+\frac{27}{128}.
+\]
+The factor $t+9/8$ cancels the cubic term. We need the following elementary
+bound, for which we give an explicit proof.
+\begin{lemma}\label{contact-square}
+For $-1\le t\le1$, $z_*(t)^2\le3\sigma(t)/2$.
+\end{lemma}
+\begin{proof}
+For $0\le t\le1$, cancel common factors away from their zeros to obtain
+\[
+ \frac{z_*(t)^2}{\sigma(t)}
+  =\frac{41503}{4(8352+2560t)}q_*(t),\qquad
+ q_*(t)=(1-t)(t+3/8)^2(t+9/8)^2.
+\]
+The cancelled expressions extend continuously at the zeros. Its derivative is
+\[
+ q_*'(t)=(t+3/8)(t+9/8)(165/64-t/2-5t^2).
+\]
+The last factor decreases on $[0,1]$, equals $13/576>0$ at $2/3$,
+and equals $-33/256<0$ at $11/16$. Thus the maximum is within
+$[2/3,11/16]$. On that interval $(t+3/8)(t+9/8)<2$ and
+$q_*'(t)\le13/288$. The interval has length $1/48$, so
+\[
+ q_*(t)\le\frac{1155625}{995328}+\frac{13}{13824}<\frac65;
+\]
+the final positive difference is $189163/4976640$.
+Consequently $z_*^2/\sigma\le41503/27840<3/2$ on this half interval.
+For $t=-x$, $0\le x\le1$, the other factorization gives
+\[
+ \frac{z_*(-x)^2}{\sigma(-x)}
+ =\frac{41503\,p_*(x)^2}{64(928+82x-160x^2)},\qquad
+ p_*(x)=(1+x)(x+1/2)(9/8-x)\ge0.
+\]
+The quadratic denominator factor is at least $850$, by concavity and its
+endpoint values. With $y=x-1/2\in[-1/2,1/2]$,
+\[
+ p_*(x)=15/16+y/16-15y^2/8-y^3
+ \le15/16+y/16-11y^2/8
+ =\frac{1321}{1408}-\frac{11}{8}(y-1/44)^2<1.
+\]
+It follows that $z_*^2/\sigma\le41503/54400<3/2$ here.
+At every cancelled zero the claimed inequality follows directly or by
+continuity. These two intervals cover the domain.
+\end{proof}
+
+\begin{remark}\label{rem-theta}
+The constant $3/2$ is not sharp: a dense grid scan gives
+$\sup_{[0,1]}z_*^2/\sigma=1.200224\ldots$ and
+$\sup_{[-1,0]}z_*^2/\sigma=0.615384\ldots$. We keep $3/2$ because it keeps
+every subsequent coefficient rational and hand-verifiable. The loss enters
+the certificate only through $r_{\rm ct}$ and through the divisor $125$ in
+\eqref{Cstar8}; both are quantified in Appendix~\ref{sec-appendix}.
+\end{remark}
+
+In particular the following displayed square proves a useful linear payment:
+\begin{equation}\label{contact-paid}
+ \sigma(t)-\frac{z_*(t)}{125}+\frac3{125000}
+   =\left(\sigma(t)-\frac23z_*(t)^2\right)
+       +\frac23\left(z_*(t)-\frac3{500}\right)^2\ge0.
+\end{equation}
+All these functions are bounded on $[-1,1]$. Integrating against the actual
+nonnegative weight $RR'$ uses only $\E R<\infty$, not a fourth or eighth
+radial moment. The actual contact moment is
+\begin{align}\label{Zstar}
+ Z_*:=\E[RR'z_*(U\cdot U')]
+   &=K^2+\frac7{320}-\frac{15}{128}e
+                    -\frac{561}{4480}V+\frac{211}{448}J.
+\end{align}
+Indeed the $RR'$ moments of $1,w,w^2,w^4$ are respectively
+$3-V,1-e,1-J,K^2+6\|Z\|^2/7+(3-V)/5$, all for this same law.
+Define
+\begin{equation}\label{Cstar8}
+ {\cal C}=Z_*/125-3C^2/125000,\qquad
+ r_{\rm ct}=P-{\cal C}\ge0.
+\end{equation}
+The scalar ${\cal C}$ need not itself be nonnegative. Its exact contribution is
+\begin{equation}\label{paid-expansion}
+ \frac{{\cal C}}{9}=\frac{103}{9000000}+\frac{K^2}{1125}
+ -\frac e{9600}+\left(-\frac{187}{1680000}+\frac1{375000}\right)V
+                       +\frac{211}{504000}J.
+\end{equation}
+
+\subsection{The full joint certificate}
+For $D<1/20$ define the explicitly nonnegative quadratic expression
+\begin{align}\label{Q8}
+ Q={}&\frac{13}{200}\left(\sqrt V-\frac{937}{273}q\sqrt e\right)^2
+       +\frac{19}{50}\left(\sqrt J-\frac{2811}{2128}q\sqrt e\right)^2\notag\\
+ &+\left(\frac{183}{200}-\frac{725029049}{278853120}q^2\right)e\notag\\
+ &+\frac{148831}{181104000}e
+       +\frac{42847433}{5229378000000}V+\frac{65082103}{20917512000}J.
+\end{align}
+The parenthetical coefficient is positive by \eqref{smallbranch} and the
+same exact lower bound following \eqref{squares}. The last coefficients are
+obtained from those in \eqref{squares}, respectively by adding
+$-1/9600$, $-187/1680000+1/375000$, and $211/504000$.
+Substitution of \eqref{reserve}--\eqref{paid-expansion} into \eqref{certificate-start} yields the exact identity
+\begin{equation}\label{certificate8}
+ D=d_1+Q+{\cal R}_0+\ell r_{\rm reg}
+          +\frac{K^2}{1125}+r_{\rm tr}+\frac{r_{\rm ct}}9.
+\end{equation}
+Every remainder is defined from the same $X$, its independent copy and its
+complete Gram matrix.
+\begin{proposition}\label{conditional8}
+Every isotropic law whose radii lie almost surely in a positive bounded
+interval of endpoint ratio at most $\sqrt8$ satisfies $D\ge d_1$.
+In the branch $D<1/20$, \eqref{certificate8} retains all displayed remainders.
+\end{proposition}
+\begin{proof}
+In the small branch all terms after $d_1$ are nonnegative. In the other
+branch $D\ge1/20>d_1$. To verify the last comparison entirely by rationals,
+use $\sqrt5<161/72$ and $\sqrt3>433/250$ in \eqref{constants}; they give
+\[
+ \frac1{20}-d_1>\frac{1025292188593}{804826176000000}>0.
+\]
+No division by $B=0$ occurs in the small branch, and the other branch
+requires none. The radial hypothesis will be verified for a maximizing law in
+Section~\ref{sec-conclusion}, rather than imposed on every isotropic law.
+\end{proof}
+
+\section{The coefficient bound and its transfer}\label{sec-conclusion}
+We return to a maximizing graphon. Put
+\[
+ D_*=(3+\sqrt5)/2-2\mathcal M.
+\]
+By the threshold identity in Lemma~\ref{contact-structure}, its canonical
+law $X=F$ satisfies $A+B=2\mathcal M$, so the deficit $D$ of the preceding
+sections equals $D_*$.
+\begin{lemma}\label{spectral-reserve}
+If $W$ is an actual maximizer and $D_*=(3+\sqrt5)/2-2{\cal M}<1/20$,
+then $\lambda_3>44/375$, $\lambda_1<15/16$, and the canonical frame
+has positive bounded radii of endpoint ratio less than $\sqrt8$.
+\end{lemma}
+\begin{proof}
+The small branch and $\sqrt5>682/305>559/250$ give
+\[
+ {\cal M}>\frac{3+\sqrt5}{4}-\frac1{40}>\frac{321}{250}.
+\]
+Lemma~\ref{ranktwo} gives
+$\lambda_3={\cal M}-\Sigma_2(W)>321/250-7/6=44/375$.
+For $a=\lambda_1$, the Hilbert--Schmidt trace and the constant-function trial give
+\[
+ \lambda_1^2+\lambda_2^2+\lambda_3^2\le\iint W^2\le\iint W\le\lambda_1,
+ \qquad {\cal M}\le a+\sqrt{2a(1-a)},\quad 0<a\le1.
+\]
+The function on the right is decreasing on $[15/16,1]$; differentiation
+on the interior reduces this to $(2a-1)^2>2a(1-a)$ there.
+Moreover
+\[
+ \frac{15}{16}+\sqrt{\frac{15}{128}}<\frac{321}{250},\qquad
+ \left(\frac{321}{250}-\frac{15}{16}\right)^2-\frac{15}{128}
+       =\frac{11499}{4000000}>0.
+\]
+Thus $a<15/16$. By the actual ellipsoid identity,
+\[
+ \sqrt{{\cal M}/\lambda_1}\le R\le\sqrt{{\cal M}/\lambda_3},\qquad
+ \frac{\esssup R}{\essinf R}
+ \le\sqrt{\lambda_1/\lambda_3}<\sqrt{5625/704}<\sqrt8,
+\]
+where $8-5625/704=7/704$. No simplicity assumption was made on
+the positive eigenvalues; the argument uses the whole orthonormal frame.
+\end{proof}
+
+\begin{remark}\label{rem-radii}
+Lemma~\ref{radialpayment} is stated with endpoint ratio $3$, whereas the
+present lemma supplies $\sqrt8<3$ for an actual maximizer; the two
+hypotheses are therefore compatible, with slack. Using $\sqrt8$ in
+Lemma~\ref{radialpayment} would replace the factor $4/3$ in \eqref{payment}
+by $32/27$, a $12.5\%$ gain on $P$, which is not needed here.
+\end{remark}
+
+\subsection{Positive-mass self-pairs}
+By Theorem~\ref{structure-main}, write the canonical law as
+$\sum_{i=1}^m p_i\delta_{v_i}$ with $m\le24$ and all $p_i>0$.
+Set $R_i=|v_i|$, $u_i=v_i/R_i$, $w_{ij}=u_i\cdot u_j$, and
+\[
+ \kappa=\frac3{125000},\qquad
+ h(t)=\sigma(t)-\frac{z_*(t)}{125}+\kappa,
+ \qquad \chi=\sum_i p_i^2R_i^2.
+\]
+Equation~\eqref{contact-paid} gives $h\ge0$ and $h(1)=\kappa$.
+The same contact remainder in~\eqref{Cstar8} therefore has the exact split
+\begin{equation}\label{atom-split}
+ r_{\rm ct}=\kappa\chi+r_{\rm off},\qquad
+ r_{\rm off}=\sum_{i\ne j}p_ip_jR_iR_jh(w_{ij})\ge0.
+\end{equation}
+These self-pairs have positive product mass. They are not values assigned
+to the null diagonal $x=y$ of the underlying nonatomic space.
+The estimate $\chi\ge C^2/m$ is the usual Cauchy--Schwarz
+cardinality bound. For related weighted-energy arguments,
+see~\cite[Theorem 2.1 and the subsequent discussion]{Weighted}.
+
+In the branch $D_*<1/20$, let
+\[
+ \widehat Q=Q-\frac{V}{9000000}.
+\]
+It is nonnegative: in~\eqref{Q8} only the last separate $V$ coefficient
+changes, to
+\[
+ \frac{42847433}{5229378000000}-\frac1{9000000}
+       =\frac{14088797}{1743126000000}>0.
+\]
+\begin{proposition}\label{final-certificate}
+For every maximizing graphon with $D_*<1/20$,
+\begin{align}\label{certificate-final}
+ D_*={}&d+\widehat Q+{\cal R}_0+\ell r_{\rm reg}
+       +\frac{K^2}{1125}+r_{\rm tr}\notag\\
+ &+\frac{\kappa}{9}\left(\chi-\frac{C^2}{24}\right)
+       +\frac{r_{\rm off}}9.
+\end{align}
+Every term after $d$ is nonnegative. Consequently $\mathcal M\le c$.
+\end{proposition}
+\begin{proof}
+Lemma~\ref{spectral-reserve} verifies the radial hypothesis of
+Proposition~\ref{conditional8}. Substitute~\eqref{atom-split} once into
+\eqref{certificate8}. Since $C^2=3-V$,
+\[
+ \frac{\kappa\chi}{9}
+ =\frac1{3000000}-\frac{V}{9000000}
+       +\frac{\kappa}{9}\left(\chi-\frac{C^2}{24}\right).
+\]
+This gives~\eqref{certificate-final}. Moreover
+\[
+ \chi-\frac{C^2}{24}
+ =\sum_i\left(p_iR_i-\frac Cm\right)^2
+       +C^2\left(\frac1m-\frac1{24}\right)\ge0.
+\]
+No lower bound on an individual mass is needed. The complementary branch
+also gives $D_*\ge d$, since the rational estimates used above imply
+\[
+ \frac1{20}-d>
+       \frac{1025023913201}{804826176000000}>0.
+\]
+Thus $D_*\ge d$ in both branches, or equivalently $\mathcal M\le c$.
+\end{proof}
+The atomic term changes the coefficient by $1/6000000$ relative to
+$(3+\sqrt5)/4-d_1/2$. Most of the improvement in Theorem~\ref{main}
+comes from the preceding joint moment estimate, not from this last term.
+
+\subsection{All isotropic laws and the exact finite shift}
+\begin{proof}[Proof of Theorem~\ref{main}]
+Any Borel law on $\R^3$ can be realized on a standard nonatomic probability
+space, by adjoining an independent uniform variable if necessary.
+For its isotropic $X$, the coordinates are an orthonormal three-frame and
+$W_X=\mathbf1_{\{X\cdot X'>0\}}$ is a measurable symmetric binary kernel.
+Therefore
+\[
+ \frac{\E|X\cdot X'|+|\E X|^2}{2}
+   =\iint W_X X\cdot X'
+   \le\Sigma_3(W_X)\le\mathcal M\le c.
+\]
+This proves~\eqref{law-bound}, including zero vectors and unbounded radii.
+The radial restriction was used only for a maximizing canonical law.
+
+For a finite graph, the exact-rank Ky Fan formula reads
+\[
+ \Lambda_3(G)=\max_{Q=Q^T=Q^2,\ \tr Q=3}\tr(A_GQ).
+\]
+Factor $Q=YY^T$ with orthonormal columns, let $y_i$ be its rows, and let
+$X$ be uniform on $\sqrt n\,y_1,\ldots,\sqrt n\,y_n$. Then
+\[
+ \E XX^T=I_3,\qquad
+ \E|X\cdot X'|=\|Q\|_1/n,\qquad
+ |\E X|^2=\boldsymbol1^TQ\boldsymbol1/n,
+\]
+where $\|Q\|_1$ denotes the entrywise absolute sum.
+Since $Q_{ii}\ge0$ and $\sum_iQ_{ii}=3$, the zero adjacency diagonal gives
+\[
+ \tr(A_GQ)\le\sum_{i\ne j}(Q_{ij})_+
+ =\frac{\|Q\|_1+\boldsymbol1^TQ\boldsymbol1}{2}-3
+ \le cn-3.
+\]
+Taking the maximum proves~\eqref{main-bound}. No positivity assumption on
+$\lambda_3(G)$ is used; repeated eigenvalues, zero rows and $n=3$ cause
+no exception.
+\end{proof}
+
+\section{Further questions}
+The explicit construction in Lemma~\ref{attainment} leaves the interval
+\[
+ \frac{9+\sqrt5+2\sqrt{35}}{18}\le\mathcal M
+       \le1.284673255723918505\ldots.
+\]
+The lower endpoint comes from a weighted wheel, but its global optimality
+is not established here. The support bound reduces the structure of every
+maximizer to finitely many positive-mass types without classifying the
+possible templates. It does not imply that the binary matrix $B$ is
+nonsingular, that every maximizer has six types, or that individual masses
+are uniformly bounded away from zero. Determining the optimum remains
+a separate problem.
+
+The exact identity~\eqref{certificate-final} also distinguishes a
+quantitative certificate from a qualitative equality obstruction. Any
+further decrease obtained from this certificate must bound a remaining term from below
+under the same constraints, without counting the same quartic remainder
+twice. The present argument does not use an unquantified stability gap.
+
+\appendix
+\section{Constants: provenance and machine verification}\label{sec-appendix}
+
+A reader cannot tell from the statements alone which of the many integer
+coefficients in this paper are forced by an interpolation problem and which
+were chosen and then verified. We record the distinction.
+
+\textbf{Uniquely determined.}
+(i)~The polynomial $f$ of \S6 is the unique polynomial of degree at most
+four with double contact to $|w|+w$ at $w=-3/8$ and at $w=1/2$ and a contact
+at $w=1$; five conditions determine five coefficients, so once the nodes are
+fixed the integers in $f$ (including $41503=7^3\cdot11^2$) are forced.
+(ii)~$z_*$ of \S8 is determined by the same nodes together with the
+requirement that the cubic term vanish, i.e.\ by the factor $(t+9/8)$.
+(iii)~$\cstar$ of Lemma~\ref{attainment} is the value of an explicit
+one-variable function at the critical point $b=(7+5\sqrt7)/126$.
+(iv)~The four rational certificates of \S7 and \S9 are obtained by
+substituting the stated rational bounds for $\sqrt5$ and $\sqrt3$ into
+$d_0,d_1,d$; no search is involved.
+
+\textbf{Chosen, then verified exactly.}
+(i)~The nodes $-3/8,\,1/2,\,1$ themselves, and the majorant $h_0$ taken
+from~\cite[Lemma 4.4]{STW}.
+(ii)~The parameters $\ell=937/1400$, $\eta=1/10$, $\theta=6/25$ of \S7 and
+the square coefficients of \eqref{squares} and \eqref{Q8}; these were
+selected so that all residual coefficients remain positive, and every
+positivity claim is then checked by exact rational arithmetic.
+(iii)~The divisor $125$ and $\kappa=3/125000$ of \eqref{Cstar8}, and the
+constant $3/2$ of Lemma~\ref{contact-square}; the quantified loss is
+discussed in Remark~\ref{rem-theta}.
+
+\textbf{Verification protocol.} Every displayed identity, factorization,
+completion of squares and ``$>0$'' assertion was re-checked in exact
+arithmetic: rationals as exact fractions and $\sqrt3,\sqrt5$ in the
+quadratic fields $\mathbb Q(\sqrt3)$, $\mathbb Q(\sqrt5)$, never in floating
+point. Pointwise inequalities were additionally scanned on a
+$2\times10^6+1$ point grid, and the finite-graph transfer was checked on all
+$33864$ graphs of order $3\le n\le6$. The verification scripts are listed in
+the accompanying audit report of 2 November 2026.
+
+\begin{thebibliography}{99}
+\raggedright
+\bibitem{Weighted}
+S. V. Borodachov, P. G. Boyvalenkov, P. D. Dragnev, D. P. Hardin,
+E. B. Saff and M. M. Stoyanova,
+Energy bounds for weighted spherical codes and designs via linear programming,
+\emph{Analysis and Mathematical Physics} \textbf{15} (2025), article 19.
+\href{https://doi.org/10.1007/s13324-024-01009-7}{doi:10.1007/s13324-024-01009-7}.
+\bibitem{Hjoin}
+D. M. Cardoso, H. Gomes and S. J. Pinheiro,
+The $H$-join of arbitrary families of graphs,
+\href{https://arxiv.org/abs/2101.08383v3}{arXiv:2101.08383v3} (2021).
+\bibitem{DL}
+B. Der\k{e}gowska and B. Lewandowska,
+A simple proof of the Gr\"unbaum conjecture,
+\emph{Journal of Functional Analysis} \textbf{285} (2023), 109950.
+\href{https://doi.org/10.1016/j.jfa.2023.109950}{doi:10.1016/j.jfa.2023.109950}.
+\bibitem{DL-SW}
+B. Der\k{e}gowska and B. Lewandowska,
+From Sidelnikov--Welch bounds to projection constants,
+\href{https://arxiv.org/abs/2609.29422v1}{arXiv:2609.29422v1} (2026).
+\bibitem{Ebrahimi}
+J. Ebrahimi Boroojeni,
+\emph{Sum of the Largest Eigenvalues of Symmetric Matrices and Graphs},
+M.Sc. thesis, Simon Fraser University, 2008.
+\bibitem{Glazyrin}
+A. Glazyrin,
+Moments of isotropic measures and optimal projective codes,
+\href{https://arxiv.org/abs/1904.11159v2}{arXiv:1904.11159v2} (2020).
+\bibitem{KLMPT}
+H. Kumar, L. Liu, H. Monterde, S. Pragada and M. Tait,
+Maximum spectral sum of graphs,
+\href{https://arxiv.org/abs/2604.00512v2}{arXiv:2604.00512v2} (2026).
+\bibitem{KMMP}
+H. Kumar, B. Mohar, S. A. Mojallal and S. Pragada,
+Stability of maximal relative projection constants,
+\href{https://arxiv.org/abs/2609.03200v1}{arXiv:2609.03200v1} (2026).
+\bibitem{LiLiu}
+H. Li and X. Liu,
+Sharp bounds for minimal dependencies of linear-form powers,
+\href{https://arxiv.org/abs/2606.24349v1}{arXiv:2606.24349v1} (2026).
+\bibitem{LS}
+L. Lov\'asz and B. Szegedy,
+Szemer\'edi's lemma for the analyst,
+\emph{Geometric and Functional Analysis} \textbf{17} (2007), 252--270.
+\bibitem{Mohar}
+B. Mohar,
+On the sum of $k$ largest eigenvalues of graphs and symmetric matrices,
+\emph{Journal of Combinatorial Theory, Series B} \textbf{99} (2009), 306--313.
+\href{https://doi.org/10.1016/j.jctb.2008.07.001}{doi:10.1016/j.jctb.2008.07.001}.
+\bibitem{STW}
+V. Sivashankar, Q. Tang and T. Wakhare,
+Graph eigenvalues and projection constants,
+\href{https://arxiv.org/abs/2608.02429v1}{arXiv:2608.02429v1} (2026).
+\end{thebibliography}
+\end{document}
