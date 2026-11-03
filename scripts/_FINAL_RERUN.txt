@@ -1,0 +1,130 @@
+FINAL AUDIT RE-RUN  2026-11-02  (after the four robustness fixes; all 15 cited scripts)
+=======================================================================================
+
+[OK ] _aud1.py     rc=0    1.1s
+      PASS 22272/41503 > 1/2
+      PASS exact square: (1/2)(z-1/2)^2-(1-9z^2)/25 == (43/50)(z-25/86)^2+53/4300
+      PASS Hermite4: (53/28 t^2-9/4 t+41/70)-g4 == (1-t)(t-1/2)^2(t+2)
+      PASS Hermite3: (2t^2-37t/20+1/4)-g3 == (1-t)(t-1/2)^2
+      PASS |Psi3|^2=2/5, |Psi4|^2=8/35 (via g3(1),g4(1))
+      PASS: 23  FAIL: 0 []
+
+[OK ] _aud2.py     rc=0    1.1s
+      PASS 9sqrt2/4-2 <= 32/27 [with sqrt2<344/243]
+      PASS 3/4*32/27 == 8/9
+      PASS kappa/9 == 1/375000 and kappa*C^2/(9*24)==C^2/9000000
+      PASS 1/3000000 == 3/9000000 (V+C^2=3 absorption)
+      PASS c == (3+sqrt5)/4 - d/2 and shift 1/6000000
+      PASS: 73  FAIL: 0 []
+
+[OK ] _aud3.py     rc=0    0.8s
+        paper's rational= 0.00003193627741022077467683  (claim: true > rational)
+        claim correct?   True    margin = 3.265213576e-5
+      p_* completion: 15/16+y/16-11y^2/8 == 1321/1408-(11/8)(y-1/44)^2 ? True
+      -15y^2/8 - y^3 <= -11y^2/8 on [-1/2,1/2] ?  <=> -y^3 <= y^2/2, check endpoints/critical: True
+      c == (3+sqrt5)/4 - d/2 ? True
+      c-w shift: c == (3+sqrt5)/4 - d1/2 - 1/6000000 ? True
+
+[OK ] _aud4.py     rc=0    1.0s
+        max |residual| cert8 residual                                       = 1.577e-14
+        max |residual| Q - Q7 - (paid corr)                                 = 6.148e-15
+        minima over sample: r_reg=1.260e-01 r4=2.288e-02 r3=8.584e-03 R0=6.902e-02
+                           r_rad=9.307e-02 r_tr=8.646e-02 r_ct=5.870e-02 Q=-8.555e+01
+        min(D-d) = 0.389741   (d=0.0486874773)   max radius ratio seen=1.613
+        c = 1.284673255723918   d0= 0.048675699524  d1= 0.048687143969  d= 0.048687477302
+
+[OK ] _aud6.py     rc=0    1.3s
+        K_{30,30}                    n=  60 Lambda_3=  30.00000  c n-3=  74.08040  margin=+44.08040   STW margin=+45.54102
+        K_{60,60}                    n= 120 Lambda_3=  60.00000  c n-3= 151.16079  margin=+91.16079   STW margin=+94.08204
+        K_{120,120}                  n= 240 Lambda_3= 120.00000  c n-3= 305.32158  margin=+185.32158   STW margin=+191.16408
+        Petersen                     n=  10 Lambda_3=   9.24540  c n-3=   9.84673  margin= +0.60133   STW margin= +0.84477
+        overall worst margin over tested graphs = +2.248181e-02  (>=0 means bound never violated)
+        is c n - 3 ever tight? min margin = 0.022482
+
+[OK ] _aud8.py     rc=0    0.3s
+       A+B == 2M ? dev = 0.000e+00
+       D_* = 0.054897595006 ; 1/20 = 0.05 -> branch = LARGE (trivial) ; d = 0.048687477302 ; D_*>=d: True
+       radius ratio = 1.40586341   (need < sqrt8 = 2.828427)
+       lambda_3 = 0.25976838 > 44/375 = 0.11733333 ? True
+       lambda_1 = 0.76203144 < 15/16 = 0.93750000 ? True
+       sqrt(lam1/lam3) = 1.71274735 < sqrt(5625/704) = 2.82666886 ? True
+
+[OK ] _aud9.py     rc=0    5.1s
+         min (D - d)  over ALL      = +0.124859667
+         min (D - d0) over ratio<=3 = +0.124871445
+         min (D - d1) over ratio<=sqrt8 = +0.124860000
+         VIOLATIONS of Prop conditional-law/conditional8: 0
+      C:\Users\hyji11\Documents\ChatGPT\图论\scripts\_aud9.py:102: RuntimeWarning: invalid value encountered in sqrt
+        q=o['q']; u_=np.sqrt(e); z_=np.sqrt(V); j_=np.sqrt(max(J,0))
+
+[OK ] _aud10.py    rc=0    1.9s
+        min h(w)=sigma - z_*/125 + 3/125000 = +6.711137e-06   h(1) = +2.400000e-05 (=kappa=2.400000e-05)
+      === chi - C^2/24 identity (symbolic, m atoms) ===
+        chi - C^2/24 == sum(p_iR_i - C/m)^2 + C^2(1/m-1/24) at m=6 ? True
+        (paper writes C^2/24 with m<=24; general form uses C^2/m then +C^2(1/m-1/24))
+        chi - C^2/m == sum(p_iR_i - C/m)^2 ? True
+        => chi >= C^2/m >= C^2/24 for m<=24 : True
+
+[OK ] _aud11.py    rc=0    1.7s
+        41503/(4*8352)*max q_* = 1.442462501847  vs 41503/27840 = 1.490768678161  vs 3/2
+        max p_*(x) on [0,1] = 0.938016294 < 1 ? True
+        min 928+82x-160x^2 on [0,1] = 850.000 (>=850)
+      === chi identity ===
+        chi - C^2/m == sum(p_iR_i - C/m)^2 (m=6) ? True
+        chi - C^2/24 == sum(p_iR_i - C/m)^2 + C^2(1/m-1/24) (m=6) ? True
+
+[OK ] _aud12.py    rc=0    1.2s
+        504  [np.int64(104), np.int64(80), np.int64(80), np.int64(80), np.int64(80), np.int64(80)]   642.88311   1.275561731    644.4753    +1.5922   +13.8615
+       1008  [np.int64(203), np.int64(161), np.int64(161), np.int64(161), np.int64(161), np.int64(161)]  1288.80947   1.278580822   1291.9506    +3.1412   +27.6797
+       2016  [np.int64(401), np.int64(323), np.int64(323), np.int64(323), np.int64(323), np.int64(323)]  2580.63791   1.280078329   2586.9013    +6.2634   +55.3403
+       c_w = 1.281568196872   c = 1.284673255724   c - c_w = 0.003105059
+       => Lambda_3/n -> c_w, so the paper's coefficient c exceeds the true asymptotic value by 0.003105
+       => margin (c n - 3) - Lambda_3 grows like (c-c_w)*n = 6.260 at n=2016
+
+[OK ] _aud13.py    rc=0    0.3s
+        max |E[RR'w^4] - (K^2+6||Z||^2/7+C^2/5)| = 4.441e-16
+      === 工具错误 (c) 的复现：L4 漏写一项（正文用完整六项）===
+        漏项时 谐波分解残差 m4-m4_pred   = -2.226e-04   (正确口径为 +1.110e-16)
+        漏项时 |Psi4(u)|^2-8/35 最大偏差 = +4.082e-02
+        漏项时 ||L4(Z)||^2-(6/7)|Z|^2    = -8.164e-04
+        六项中漏任意一项所得残差相同（对称性），故只列 drop=0。
+
+[OK ] _aud14.py    rc=0    0.3s
+        松弛倍数                              = 14.98x
+      === 小分支窗口 ===
+        D*<1/20  <=>  M > 1.284016994374948
+        rho_0 = 1.281568196872168 < 1.284016994 ?  True   => 若 M=rho_0, 小分支为空
+        c     = 1.284673255723918 > 1.284016994 ?  True
+        小分支窗口宽度 = c - 1.284016994 = 0.000656261349
+
+[OK ] _aud15.py    rc=0    1.0s
+       [0 1 0 0 1 1]
+       [1 1 0 0 1 0]
+       [1 1 1 1 0 1]
+       [1 0 1 0 1 0]]
+        该图 Lambda_3 = 4.6855577203 ,  c*n-3 = 4.7080395343 ,  STW: (3+sqrt5)/4*n-3 = 4.8541019662
+        相对 STW 的额外余量 = 0.1460624319
+
+[OK ] _aud5.py     (completed earlier this session, output below)
+      c=1.284673255723918  c_w=1.281568196872168  STW=1.309016994374947
+      d=0.048687477302  2c=2.569346511448
+        k=  4  max (A+B)/2 = 1.250000000000   (gap to c = +3.467e-02, to c_w = -3.157e-02)
+        k=  5  max (A+B)/2 = 1.253197264742   (gap to c = +3.148e-02, to c_w = -2.837e-02)
+        k=  6  max (A+B)/2 = 1.281568196872   (gap to c = +3.105e-03, to c_w = +2.665e-15)
+        k=  7  max (A+B)/2 = 1.281568196872   (gap to c = +3.105e-03, to c_w = +2.665e-15)
+        k=  8  max (A+B)/2 = 1.281568196872   (gap to c = +3.105e-03, to c_w = +2.220e-15)
+        k=  9  max (A+B)/2 = 1.281568196872   (gap to c = +3.105e-03, to c_w = +3.109e-15)
+        k= 10  max (A+B)/2 = 1.281568196872   (gap to c = +3.105e-03, to c_w = +1.776e-15)
+        k= 12  max (A+B)/2 = 1.281568196872   (gap to c = +3.105e-03, to c_w = +2.220e-15)
+        k= 14  max (A+B)/2 = 1.281568196872   (gap to c = +3.105e-03, to c_w = +1.332e-15)
+      
+      BEST over k: 1.281568196872   vs c=1.284673255724  vs c_w=1.281568196872
+        best <= c ?  True    best <= c_w+1e-9 ?  True
+
+[OK ] _aud7.py     (completed earlier this session, rc=0, 1104.2s; output below)
+      k= 10  max (A+B)/2 = 1.281568196872   gap to c_w = -2.665e-15   gap to c = +3.105e-03
+      k= 12  max (A+B)/2 = 1.281568196872   gap to c_w = -1.110e-15   gap to c = +3.105e-03
+      k= 14  max (A+B)/2 = 1.281568196872   gap to c_w = -2.220e-15   gap to c = +3.105e-03
+      k= 16  max (A+B)/2 = 1.281568196872   gap to c_w = -1.998e-15   gap to c = +3.105e-03
+      k= 20  max (A+B)/2 = 1.281568196872   gap to c_w = -2.887e-15   gap to c = +3.105e-03
+      c_w = 1.281568196872168    c = 1.284673255723918

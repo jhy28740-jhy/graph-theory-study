@@ -29,13 +29,14 @@
 
 | 路径 | 说明 |
 |---|---|
-| `top3_joint_moment_bound.tex` | 论文源码，1442 行 |
+| `top3_joint_moment_bound.tex` | 论文源码，1447 行 |
 | `top3_joint_moment_bound.pdf` | 论文成品，20 页 |
 | `参考文献链接.md` | **全部链接清单**：12 条参考文献 + 已下载未引用文献 + 汇报材料 + 待办 R1 |
-| `literature/` | arXiv 原文 PDF 与检索工作区（STW、KLMPT、Tang λ₃、Huang–Wei 谱和等） |
+| `literature/` | arXiv 原文 PDF 与纯文本抽取（STW、KLMPT、Tang λ₃、Huang–Wei 谱和、Paulin、Ebrahimi 2008 等），共 18 个文件 |
+| `literature/weighted_spectral_literature_audit/` | 加权谱极值的查新审计报告（tex + pdf + 4 张复核截图 + 3 篇笔记 + 检索脚本） |
 | `reports/汇报_前三大特征值上界_20261102/` | 24 页自编译汇报 PPT（pptx + pdf）、16 页讲稿与排版建议（tex + pdf）、PPT 生成脚本与图表资源 |
 | `reports/审核报告_top3_joint_moment_bound_20261102/` | 33 页详细审核报告（tex + pdf）：逐节复核、符号验证、数值验证、问题清单 G1/G2、表述建议 S1–S7、松弛量八项分解、天花板分析、优先级排序 |
-| `reports/进展报告_前三大特征值上界_20261027/` | 早期进展报告与其工作脚本 |
+| `reports/进展报告_前三大特征值上界_20261027/` | 早期进展报告（tex + pdf）与 24 个 `证书_*.py` 可复现证书脚本 |
 
 ## 重新编译
 
@@ -57,8 +58,9 @@
    改为「W ∈ L²([0,1]²) ⇒ T_W 为 Hilbert–Schmidt 故紧；又自伴，谱为实且仅在 0 处聚集」
 3. 上一轮审核的 G1、G2、S1–S7 共 9 项已全部落实（落实位置见审核报告与本文件末节）
 
-SHA256(tex) = `df8e1ac03c8ee9024b2182b977b1edc76ab03513335a83bfc3d7796806621e08`
-SHA256(pdf) = `34CD29471CE520E6BF148F80D2A8274515508F34822D56EC4C7C3760DEAF2280`
+SHA256(tex) = `DF8E1AC03C8EE9024B2182B977B1EDC76AB03513335A83BFC3D7796806621E08`
+SHA256(pdf) = `A8579BE83ED85D76B66DED5F3A559B590E5D6D8D3152C77F3AF17ABD4DD0D1F3`
+（PDF 构建于 2026-11-03 09:39，20 页，首页已含 `Haoyang Ji` 与 `November 2, 2026`。）
 
 ## R1 已解决（2026-11-03）
 
@@ -67,3 +69,21 @@ Ebrahimi 2008 SFU 硕士论文已直接下载（Summit 为开放获取，无需�
 τ₃ ≤ 3/√5 = 1.341640786… < 1.3417，**弱于** (3+√5)/4，
 故本论文新颖性不受影响。显式系数链：3/√5 > (3+√5)/4 > c。
 详见 `参考文献链接.md` 第五节。
+
+## 本文件夹的整理状态（2026-11-03 第二次收尾）
+
+`paper/` 现在是 **85 个文件 / 13.3 MB**，只含论文本体、参考文献、汇报材料、审核报告四类内容。
+第一次整理（2026-11-02）只归了根目录，本文件夹内部仍混着三类东西，本次已全部移出到
+`archive/_cleanup_20261103/`（**只移动，未删除**，逐条明细见该目录下的 `_move_log.txt`）：
+
+1. **已弃用的 dashi PPT 产物** `_dashi_弃用/`（209 个文件、11.24 MB，含整套模板运行时、
+   woff2 字体、vendor JS）。汇报 PPT 已改用自编译的 python-pptx 版式引擎，dashi 不再使用。
+2. **查新检索的原始抓取数据** `weighted_spectral_literature_audit/raw/` 与
+   `search_log.json`、`forward_log.json`（72 个文件、7.3 MB 的 openalex / crossref /
+   arXiv / bing / 万方 / CNKI 原始响应）。审计报告本体（tex + pdf）保留在 `literature/`。
+3. **LaTeX 构建垃圾与一次性脚本**：51 个 `.aux` / `.log` / `.out` / `.toc`，
+   进展报告目录下 128 个 `_*.py`、`_frag_*.tex`、`*.bak_*`、`_cert_*.txt`，
+   以及 `literature/.tmp_lit/`、`_paulin.html`、与 `.txt` 重复的 `*.lay.txt` / `*.pdftxt`。
+
+另删除了一份与 `literature/_2608.02429.pdf` 字节完全相同的重复 STW PDF（SHA256 一致，
+已移至 archive 留存）。
