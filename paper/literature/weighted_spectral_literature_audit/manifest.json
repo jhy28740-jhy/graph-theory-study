@@ -1,0 +1,20 @@
+{
+  "retrieved_date": "2026-10-14",
+  "tex": "weighted_spectral_literature_audit.tex",
+  "pdf": "weighted_spectral_literature_audit.pdf",
+  "pages": 4,
+  "tex_sha256": "66f9e43cbb54eb3129361999d912c6b6dcee6d46a8df06faf25857b8cac53799",
+  "pdf_sha256": "78012afd4175d69987f5741d291f4f22388cbd981a452747b89d344b2a328bc6",
+  "pdf_bytes": 175125,
+  "text_chars": 5331,
+  "visual_review": [
+    "review-1.png",
+    "review-2.png",
+    "review-3.png",
+    "review-4.png"
+  ],
+  "shell_compile": "XeLaTeX MiKTeX 25.12, two passes successful",
+  "built_in_compile": "attempted; unavailable standard-directory diagnostic, source preserved",
+  "raw_search_dir": "raw",
+  "forward_log": "forward_log.json"
+}

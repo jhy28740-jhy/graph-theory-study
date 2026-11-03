@@ -1,0 +1,276 @@
+ 
+ Skip to main content 
+ Report GitHub Issue 
+ × 
+ Title: 
+ Content selection saved. Describe the issue below: 
+ Description: 
+ Submit without GitHub 
+ Submit in GitHub 
+ Why HTML? 
+ Report Issue 
+ Back to Abstract 
+ Download PDF 
+ Contents 
+ Reading mode 
+ Colour theme 
+ Abstract. 
+ 1 Introduction 
+ 2 A rank-two projection bound 
+ 3 Deduction of the graph-theoretic theorem 
+ References 
+ License: arXiv.org perpetual non-exclusive license
+arXiv:2603.21181v1 [math.CO] 22 Mar 2026 
+ A sharp upper bound on the third adjacency eigenvalue of a graph 
+ Quanyu Tang
+ Address:  School of Mathematics and Statistics, Xi’an Jiaotong University, Xi’an 710049, P. R. China
+ Email address: tang_quanyu@163.com 
+ Abstract. 
+ For a graph \1 of order \1 , let 
+ \1 
+ be the eigenvalues of its adjacency matrix. We prove that every graph \1 on \1 vertices satisfies 
+ \1 
+ thereby solving a problem of Nikiforov. The bound is best possible whenever \1 . Our proof is derived from a more general matrix result: if \1 is a real symmetric matrix of order \1 with \1 for all off-diagonal entries and \1 for all \1 , then 
+ \1 
+ This in particular confirms a conjecture of Leonida and Li. 
+ Key words and phrases:  adjacency eigenvalues, third eigenvalue, spectral graph theory, symmetric matrices
+ 2020 Mathematics Subject Classification Primary 05C50; Secondary 15A18, 15A42
+ 1. Introduction 
+ Throughout, all graphs are finite, simple, and undirected. For a graph \1 of order \1 , let \1 denote its adjacency matrix and let 
+ \1 
+ be the eigenvalues of \1 . Order-only bounds for adjacency eigenvalues have a long history; see, for example,
+Hong  [ 1 , 2 ] , Powers  [ 9 ] , and Nikiforov  [ 8 ] . 
+ In  [ 9 ] , Powers proposed, for connected graphs, the order-only bound 
+ \1 
+ As pointed out later by Nikiforov  [ 8 ] , the original proof is flawed. Nevertheless, the bound is valid for \1 : the case \1 is trivial, and Hong proved the stronger estimate \1 for every graph of order \1   [ 1 ] . By contrast, Nikiforov’s constructions show that Powers’s bound fails for every \1   [ 8 ] , while Linz  [ 6 ] ruled out the case \1 by constructing graphs with \1 . Since connectivity plays no role for \1 , the only remaining positive case may be stated as follows; see also [ 7 , Problem 10] and [ 8 , Question 2.11] . 
+ Problem 1.1 (Nikiforov  [ 8 ] ) . 
+ Let \1 be a graph of order \1 . Is it true that 
+ \1 
+ Recently, Leonida and Li  [ 4 , Theorem 1.6] verified Problem  1.1 for several important classes of graphs, including strongly regular graphs, regular line graphs, and Cayley graphs on abelian groups. See also Li  [ 5 ] for a related asymptotic improvement on Nikiforov’s bound. 
+ In order to attack Problem  1.1 , Leonida and Li  [ 4 , Conjecture 4.2] formulated a weighted analogue. Let \1 denote the set of real symmetric \1 matrices with entries in \1 . 
+ Conjecture 1.2 (Leonida–Li  [ 4 ] ) . 
+ One has 
+ \1 
+ The main result of this paper is a complete solution to Conjecture  1.2 . In fact, we prove a slightly stronger statement, allowing arbitrary nonnegative diagonal entries. 
+ Theorem 1.3 . 
+ Let \1 , and let \1 be a real symmetric matrix of order \1 with eigenvalues 
+ \1 
+ Assume that 
+ \1 
+ Then 
+ \1 
+ In particular, \1 . 
+ Combining Theorem  1.3 with the identity \1 and Weyl’s inequality, we obtain the following graph-theoretic consequence. In particular, it yields a stronger conclusion than Problem  1.1 . 
+ Theorem 1.4 . 
+ Let \1 be a graph on \1 vertices. Then 
+ \1 
+ Remark 1.5 . 
+ The bound in Theorem  1.4 is sharp whenever \1 . Indeed, 
+ \1 
+ More generally, Leonida and Li  [ 4 , Theorem 2.2] constructed a family of graphs \1 of order \1 satisfying 
+ \1 
+ These provide nonregular equality examples, and the closed blow-ups of this family still have third-eigenvalue proportion tending to \1 . 
+ The paper is organised as follows. In Section  2 we prove Theorem  1.3 . In Section  3 we deduce Theorem  1.4 . 
+ 2. A rank-two projection bound 
+ The proof begins with a simple trigonometric majorant. 
+ Lemma 2.1 . 
+ For every real number \1 , 
+ \1 
+ Proof. 
+ Set \1 . Then 
+ \1 
+ Hence 
+ \1 
+ \1 
+ \1 
+ This proves the claim.
+∎ 
+ Proof of Theorem  1.3 . 
+ Let 
+ \1 
+ be the set of orthogonal projections of rank \1 . By Ky Fan’s minimum principle (see, e.g.,  [ 3 , Corollary 4.3.39] ), 
+ \1 
+ (2.1) 
+ Thus it suffices to prove that 
+ \1 
+ for every \1 . 
+ Fix \1 . Write 
+ \1 
+ Let the \1 th row of \1 be \1 , and write \1 . Set \1 . If \1 , choose \1 such that \1 , and if \1 , choose \1 arbitrarily. Then 
+ \1 
+ (2.2) 
+ Define complex numbers 
+ \1 
+ Since \1 , we have 
+ \1 
+ Therefore, 
+ \1 
+ (2.3) 
+ We now bound the entrywise \1 -norm of \1 . Set 
+ \1 
+ By ( 2.2 ) and Lemma  2.1 , 
+ \1 
+ \1 
+ \1 
+ (2.4) 
+ But 
+ \1 
+ which is real, so 
+ \1 
+ Similarly, 
+ \1 
+ Hence ( 2.4 ) becomes 
+ \1 
+ (2.5) 
+ To estimate \1 , define \1 by declaring its \1 th row to be 
+ \1 
+ Let \1 denote the conjugate transpose of \1 . Using ( 2.3 ), we obtain 
+ \1 
+ Hence, for every \1 , where \1 denotes the
+Euclidean norm on complex vectors, we have 
+ \1 
+ Therefore \1 , where \1 denotes the usual Loewner
+order on Hermitian matrices. Let \1 be
+the all-ones vector. Then 
+ \1 
+ On the other hand, 
+ \1 
+ so 
+ \1 
+ (2.6) 
+ Combining ( 2.5 ) with ( 2.6 ), we get 
+ \1 
+ \1 
+ \1 
+ \1 
+ (2.7) 
+ Since \1 is a projection of rank \1 , we have \1 and \1 for all \1 . Thus 
+ \1 
+ (2.8) 
+ Also, 
+ \1 
+ Thus 
+ \1 
+ (2.9) 
+ Hence 
+ \1 
+ \1 
+ \1 
+ (2.10) 
+ Finally, since \1 for \1 , we have 
+ \1 
+ and because \1 and \1 , we also have \1 . Therefore, 
+ \1 
+ \1 
+ \1 
+ \1 
+ by ( 2.10 ). Since \1 was arbitrary, ( 2.1 ) yields 
+ \1 
+ Because \1 , we conclude that 
+ \1 
+ This completes the proof.
+∎ 
+ Corollary 2.2 . 
+ Let \1 be a graph on \1 vertices. Then 
+ \1 
+ Proof. 
+ Apply Theorem  1.3 to the adjacency matrix \1 .
+∎ 
+ 3. Deduction of the graph-theoretic theorem 
+ Proof of Theorem  1.4 . 
+ Let \1 be the complement of \1 . Then 
+ \1 
+ where \1 is the all-ones matrix. The eigenvalues of \1 are \1 and \1 with multiplicity \1 . In particular, 
+ \1 
+ We apply Weyl’s inequality for Hermitian matrices in the form 
+ \1 
+ see, for example,  [ 3 , §4.3] . Taking 
+ \1 
+ we obtain 
+ \1 
+ By Corollary  2.2 , 
+ \1 
+ Hence 
+ \1 
+ This proves the claimed bound.
+∎ 
+ Remark 3.1 . 
+ Theorem  1.4 is sharp for all \1 divisible by \1 .
+Determining the exact maximum of \1 for \1 remains an interesting problem. 
+ References 
+ [1] 
+Y. Hong,
+ Bounds of eigenvalues of a graph,
+ Acta Math. Appl. Sinica 4 (1988), 165–168.
+ doi:10.1007/BF02006065 .
+ [2] 
+Y. Hong,
+ Bounds of eigenvalues of graphs,
+ Discrete Math. 123 (1993), 65–74.
+ doi:10.1016/0012-365X(93)90007-G .
+ [3] 
+R. A. Horn and C. R. Johnson,
+ Matrix Analysis ,
+ 2nd ed., Cambridge University Press, Cambridge, 2012.
+ [4] 
+G. Leonida and S. Li,
+ On graphs with large third eigenvalue,
+ preprint, arXiv:2501.02563v4 [math.CO], 2026.
+ arXiv:2501.02563v4 .
+ [5] 
+S. Li,
+ Strengthened upper bound on the third eigenvalue of graphs,
+ preprint, arXiv:2501.07494 [math.CO], 2025.
+ arXiv:2501.07494 .
+ [6] 
+W. Linz,
+ Improved lower bounds on the extrema of eigenvalues of graphs,
+ Graphs Combin. 39 (2023), Paper No. 82.
+ doi:10.1007/s00373-023-02678-0 .
+ [7] 
+L. Liu and B. Ning,
+ Unsolved problems in spectral graph theory,
+ Oper. Res. Trans. 27 (2023), no. 4, 33–60.
+ Also available as arXiv:2305.10290v3 .
+ [8] 
+V. Nikiforov,
+ Extrema of graph eigenvalues,
+ Linear Algebra Appl. 482 (2015), 158–190.
+ doi:10.1016/j.laa.2015.05.016 .
+ [9] 
+D. L. Powers,
+ Bounds on graph eigenvalues,
+ Linear Algebra Appl. 117 (1989), 1–6.
+ doi:10.1016/0024-3795(89)90541-7 .
+ Experimental support, please
+ view the build logs 
+ for errors. Generated by
+ L
+ A 
+ T
+ E 
+ xml 
+ .
+ Instructions for reporting errors 
+ We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+ support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+ methods listed below: 
+ Click the "Report Issue" ( 
+ ) button, located in the page header. 
+ Tip: You can select the relevant text first, to include it in your report. 
+ Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+ may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+ should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+ all. 
+ Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . 
+ We gratefully acknowledge support from our major funders ,
+ member institutions , ,
+ and all contributors.
+ About · 
+ Help · 
+ Contact · 
+ Subscribe · 
+ Copyright · 
+ Privacy · 
+ Accessibility · 
+ Operational Status (opens in new tab) 

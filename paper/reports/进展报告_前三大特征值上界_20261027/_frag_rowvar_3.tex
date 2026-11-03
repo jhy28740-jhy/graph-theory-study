@@ -1,0 +1,160 @@
+
+\subsection{分数度障碍：$L(N)$ 对 $N\ge5$ 不可达；整数化阶梯}\label{sec:ladder}
+
+\begin{proposition}[分数度障碍，已证]\label{prop:fracdeg}
+在双均匀层中，$w_i=\sum_{j\in O(i)}\pi_j=n_i/N$，其中 $n_i:=|O(i)|\in\{0,1,\dots,N-1\}$ 是钝角图的度。
+若图案正则（$n_i\equiv n$），则定理~\ref{thm:LN} 的取等要求
+\[
+n=n^*:=N\omega^*=\frac{N\kappa_N}{3(1+\kappa_N)} .
+\]
+精确值：
+\[
+n^*(4)=1,\quad n^*(5)=2-\frac{\sqrt6}3=1.183503,\quad n^*(6)=\frac{5-\sqrt5}2=1.381966,\quad
+n^*(7)=3-\sqrt2=1.585786,
+\]
+\[
+n^*(8)=\frac72-\frac{\sqrt{105}}6=1.792175,\quad n^*(10)=\frac92-\frac{\sqrt{21}}2=2.208712,\quad
+n^*(12)=\frac{11}2-\frac{\sqrt{33}}2=2.627719 .
+\]
+因此\textbf{$L(N)$ 对一切 $N\ge5$ 都不可达}（$n^*$ 无理），而 $N=4$ 时 $n^*=1$ 是整数。
+\end{proposition}
+
+\begin{proof}
+$n^*$ 的闭式由 $\omega^*=\frac{\kappa_N}{3(1+\kappa_N)}$ 直接计算；$N\ge5$ 时 $\kappa_N=\sqrt{3(N-1)/(N-3)}$
+分别是 $\sqrt6,\sqrt5,\frac32\sqrt2,\dots$，$3(1+\kappa_N)$ 与 $N\kappa_N$ 不同比例，故 $n^*$ 无理
+（例如 $N=6$：$n^*=\frac{6\sqrt5}{3(1+\sqrt5)}=\frac{2\sqrt5}{1+\sqrt5}=\frac{2\sqrt5(\sqrt5-1)}4=\frac{5-\sqrt5}2$）。$\square$
+\end{proof}
+
+\begin{remark}\label{rmk:fracdegread}
+命题~\ref{prop:fracdeg} 是本轮最重要的\textbf{诊断性}结论：
+它说明 $\Phi-\rho_0=0.027449$ 这个缺口\emph{不是}因为 Cauchy--Schwarz 太粗，
+而是因为\textbf{钝角度必须是整数}。$N=4$ 是唯一「运气好」的阶数（$n^*=1$），
+所以行方差机制在 $N=4$ 精确、在 $N\ge5$ 必然松。这也解释了为什么
+\STW\ 的 $\Phi$ 是 $N=6$ 处的值：\STW\ 的证明同样没有用到度的整性。
+\end{remark}
+
+\begin{proposition}[$N=6$ 的整数化阶梯，已证（精确闭式）]\label{prop:ladder6}
+在双均匀层（$g_i\equiv\frac12$、$\pi_i\equiv\frac16$）且钝角图正则、度为 $n$ 时，
+REL 给出 $\rho\le\Lambda_n$，其中
+\[
+\Lambda_0=1,\quad \Lambda_1=\frac{13}{10},\quad \Lambda_2=\frac{4+\sqrt6}5=1.289897949,\quad
+\Lambda_3=\frac7{10}+\frac{\sqrt6}5=1.189897949,\quad \Lambda_4=1,\quad \Lambda_5=\frac12 .
+\]
+取等要求 $\varrho^*=\frac{9}{100}$（$n=1$）、$\frac7{50}-\frac{\sqrt6}{25}$（$n=2$）、$\frac{11}{100}-\frac{\sqrt6}{25}$（$n=3$）。
+故双均匀层在 $N=6$ 满足 $\rho\le\frac{13}{10}=1.300000$，比 $L(6)=\Phi=1.309017$ 改进了 $9.0\times10^{-3}$。
+\end{proposition}
+
+\begin{proof}
+$\omega=n/6$ 固定后，$A=\frac12+\sqrt{(\frac32-c)\frac{5-n}6}$ 关于 $c$ 严格减、$B=1+\sqrt{cn/6}$ 严格增，
+故 $\max\min\{A,B\}$ 在 $A=B$ 处取得；这是关于 $\sqrt\varrho$ 的一元二次方程，
+$n=1$：$20\varrho+4\sqrt\varrho-3=0\Rightarrow\sqrt\varrho=\frac3{10}$；
+$n=2$：$5\varrho+\sqrt2\sqrt\varrho-\frac12=0$；$n=3$：$4.5\varrho+\sqrt3\sqrt\varrho-\frac18=0$，
+逐个求解即得上述闭式。$n=0$ 给 $B=1$；$n=4,5$ 时 $A$ 与 $B$ 在可行域内不相交，
+上确界在 $c\to0$（$\Lambda_4=1$）或 $A$ 的端点（$\Lambda_5=\frac12$）处取得。$\square$
+\end{proof}
+
+\subsection{两值刚性：正则图案的两值秩三投影在 $N=6$ 只有 $\frac12(I_6-M)$}\label{sec:twovalue}
+
+若 REL 的 \eqref{eq:f} 在每一行都取等，则该行的全部\emph{锐角}元相等（因为 CS 取等要求
+$(q_{ij})_+\propto x_j$，而双均匀层里 $x_j$ 是常数）；同理 \eqref{eq:g}\eqref{eq:h1} 取等要求全部\emph{钝角}元相等。
+配合图案的连通性（锐角图或钝角图连通时，$q_{ij}=q_{ji}$ 把各行的常数粘在一起），
+极值点必须是\textbf{两值}的：$q_{ij}=m^+$（锐）或 $-m^-$（钝）。
+
+\begin{proposition}[两值情形的精确谱，已证（符号计算）]\label{prop:twovalue}
+令 $Q=\frac12I_6+m^+(J-I-A_O)-m^-A_O$，$A_O$ 为 $6$ 点正则图案。则：
+\begin{enumerate}[label=(\alph*),leftmargin=2.2em]
+\item $n=1$（完美匹配 $M$）：$\mathrm{spec}(Q)=\{\frac12-m^-+4m^+,\ \frac12-m^--2m^+,\ (\frac12+m^-)^{[3]}\}$。
+三重特征值 $\frac12+m^-$ 只能取 $1$（取 $0$ 会要求 $m^-=-\frac12<0$），故 $m^-=\frac12$；
+余下两个必须为 $0$，故 $m^+=0$。于是\textbf{唯一}可能是 $Q=\frac12(I_6-M)$，$Q_+=\frac12I_6$，$\rho=\frac12$。
+\item $n=2$（$C_6$ 或 $2C_3$）：\textbf{无解}。$C_6$ 用 Fourier 基得
+$\mathrm{spec}=\{\frac12+3m^+-2m^-,\ \frac12+m^++2m^-,\ (\frac12-2m^+-m^-)^{[2]},\ (\frac12+m^-)^{[2]}\}$，
+逐个讨论「三个 $1$ 三个 $0$」的所有分支均导出 $m^\pm<0$ 或矛盾；$2C_3$ 有四重特征值 $\frac12+m^-$，
+重数 $4>3$，无论取 $0$ 或 $1$ 都无法凑出 $(1,1,1,0,0,0)$。
+\item $n=3$（$K_{3,3}$ 或棱柱图）：\textbf{无解}。两者都含一个四重特征值（$K_{3,3}$：$\frac12-m^+$；棱柱：$\frac12-m^+$），同上排除。
+\item $n=0$ 与 $n=5$：\textbf{无解}（$n=0$ 给五重特征值 $\frac12-m^+$；$n=5$ 给五重 $\frac12+m^-$）。
+\end{enumerate}
+因此\textbf{双均匀层内不存在达到 $\Lambda_1=\frac{13}{10}$ 或 $\Lambda_2=\frac{4+\sqrt6}5$ 的秩三投影}。
+\end{proposition}
+
+\begin{remark}[$N=4$ 处同一套计算\textbf{成功}了]\label{rmk:n4exact}
+$N=4$ 的双均匀层是 $g_i\equiv\frac34$，正则图案只有完美匹配（$n=1=n^*$）。
+取 $Q=\frac34I_4+\frac14A(K_{2,2})-\frac14M$（即 $Q=I_4-vv^\top$，$v=(\frac12,\frac12,-\frac12,-\frac12)$）：
+\[
+\mathrm{spec}(Q)=\Bigl\{\underbrace{\tfrac34+\tfrac14}_{=1}\ (\text{二重：反对配对子空间}),\ \
+\tfrac34+2\cdot\tfrac14-\tfrac14=1,\ \ \tfrac34-2\cdot\tfrac14-\tfrac14=0\Bigr\}=\{1,1,1,0\},
+\]
+确是秩三投影；$Q_+=\frac34I_4+\frac14A(K_{2,2})$ 是正则矩阵，故 $x=\frac12\one$ 是 Perron 向量，
+$\rho=\frac34+\frac14\cdot2=\frac54=L(4)$。\textbf{行方差机制在 $N=4$ 精确取到 $\kappa_3(4)=\frac54$}，
+这是定理~\ref{thm:bipglobal} 的 $a=b=2$ 情形的一个\emph{独立}新证（证法完全不同：
+那里用的是秩二长期方程与根分布，这里用的是行能量瓜分与 AM--GM）。
+\end{remark}
+
+\subsection{$Z_5$-对称层：八个图案中六个被直接排除，冠军图案缺口 $3.2\times10^{-3}$}\label{sec:symlayer}
+
+冠军的对称群是 $Z_5$（枢纽 $+$ 正五边形锥）。$Z_5$-不变的钝角图案由两个数据决定：
+$b\in\{0,1\}$（枢纽--锥顶点是否为钝角）与 $m\subseteq\{1,2\}$（锥顶点之间哪些圆周距离类为钝角），共 $8$ 个。
+在这一层内，REL 只剩 $4$ 个自由参数（$g_{\rm hub},\pi_{\rm hub},r_{\rm hub},r_{\rm cone}$；
+$g_{\rm cone}=\frac{3-g_{\rm hub}}5$、$\pi_{\rm cone}=\frac{1-\pi_{\rm hub}}5$ 由两个求和约束定死，
+而 $w_{\rm hub}=5b\,\pi_{\rm cone}$、$w_{\rm cone}=b\,\pi_{\rm hub}+2|m|\,\pi_{\rm cone}$ 由图案\textbf{整性地}决定）。
+
+\begin{center}\small
+\begin{tabular}{clrl}
+\toprule
+$b$ & $m$ & REL 天花板 & 与 $\rho_0$ 之差\\
+\midrule
+0 & $\varnothing$ & $1.000000000000$ & $-0.281568$ \textbf{（排除）}\\
+1 & $\varnothing$ & $1.000000000000$（$g_{\rm hub}\to1$ 的极限） & $-0.281568$ \textbf{（排除）}\\
+1 & $\{1\}$ & $1.000000000000$（同上） & $-0.281568$ \textbf{（排除）}\\
+1 & $\{2\}$ & $1.000000000000$（同上） & $-0.281568$ \textbf{（排除）}\\
+0 & $\{1,2\}$ & $1.243046694070$ & $-0.038522$ \textbf{（排除）}\\
+1 & $\{1,2\}$ & $0.500000024835$ & $-0.781568$ \textbf{（排除）}\\
+0 & $\{1\}$ & $1.284780995477$ & $+0.003213$\\
+0 & $\{2\}$ & $1.284780995477$ & $+0.003213$ \textbf{（冠军所在类）}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+（\textbf{数值}标签：每格由差分进化全局搜索得到，$1200$ 代、种群 $24$、Sobol 初始化、内层用 \eqref{eq:inner} 闭式；
+$m=\{1\}$ 与 $m=\{2\}$ 给出同一数值，因为 $C_5$ 的两个圆周距离类互为同构（五边形 $\leftrightarrow$ 五角星），
+而冠军的钝角图恰是五角星。$b=1$ 的三格是 $g_{\rm hub}\to1$ 处的极限值，故写成 $1.000000$。）
+
+\begin{remark}[这张表读出的三件事]\label{rmk:symread}
+(i) \textbf{$8$ 个对称图案中 $6$ 个被 REL 单独否证}（天花板严格低于 $\rho_0$，最小余量 $0.0385$）。
+这是本项目第一次用\emph{同一条}解析不等式族把一批图案整类排除，而不是逐个跑 $F$ 的优化器。
+特别地，$b=1$（枢纽与锥顶点成钝角）整类被排除，$m=\{1,2\}$（锥顶点之间全钝）整类被排除：
+冠军的「枢纽全锐 $+$ 五角星钝」是\textbf{唯一存活}的对称图案。
+
+(ii) 存活类的天花板 $1.284780995477$ 与 $\rho_0$ 只差 $3.213\times10^{-3}$，
+其极大化点是 $(g_{\rm hub},\pi_{\rm hub},r_{\rm hub},r_{\rm cone})=(0.339344,0.200520,0,0.074883)$，
+与冠军的 $(0.331767,0.197272,0,0.072170)$ \textbf{很近但不相等}。
+也就是说：\textbf{主线缺口已经从 $2.7\times10^{-2}$（$\Phi-\rho_0$）压缩到 $3.2\times10^{-3}$}，
+而且剩下的缺口在一个 $4$ 维、图案已定死的显式优化问题里。
+
+(iii) 对照第~\ref{sec:conefamily} 小节（$Z_5$-锥族定理）：那里的解析计算给出\emph{同一层}的精确上确界就是 $\rho_0$。
+两者之差 $3.2\times10^{-3}$ 正是 REL 丢掉的秩三信息的价值——
+\textbf{这就是下一步要买回来的东西}（P1$'$）。
+\end{remark}
+
+\subsection{诊断：REL 缺的到底是什么，以及新的优先队列}\label{sec:diag}
+
+把本轮所有上界排成一条阶梯（$N=6$）：
+\begin{equation}\label{eq:ladder}
+\underbrace{1.366025}_{\text{Mohar }=\lim L(N)}\ >\
+\underbrace{1.309017}_{\Phi=L(6)=\text{REL 自由}}\ >\
+\underbrace{1.300000}_{\frac{13}{10}=\text{REL}+\text{度的整性}}\ >\
+\underbrace{1.284781}_{\text{REL}+Z_5\text{对称}+\text{整性}}\ >\
+\underbrace{1.281568}_{\rho_0=\text{目标}} .
+\end{equation}
+REL 丢掉的约束，按「买回来的难度 $\times$ 预计收益」排序如下：
+\begin{enumerate}[label=(\Alph*),leftmargin=2.2em]
+\item \textbf{图案的整性与对称性}（$w_i$ 必须是某个对称 $0$--$1$ 图案的 $\pi$-子集和；
+$r_i$ 与 $r_j$ 通过共享的钝角元 $q_{ij}$ 耦合，因为 $q_{ij}^2$ 同时计入 $r_i$ 与 $r_j$）。
+收益：$1.309017\to1.300000$（已兑现）。继续兑现的入口是把「子集和」写成对 $(\pi,w)$ 的显式不等式。
+\item \textbf{秩三}（\eqref{eq:tri} 的三角形恒等式、四点 Gram 行列式 $\det(q_{ij})_{i,j\in S}=0$（$|S|=4$）、
+以及等角线在 $\R^3$ 中至多 $6$ 条这一经典事实）。收益：预计是 $1.300\to\rho_0$ 的主要部分，
+因为命题~\ref{prop:twovalue} 已经显示「两值 $+$ 正则图案 $+$ 秩三」在 $N=6$ 几乎无解。
+\item \textbf{Perron 向量的二阶信息}：我们只用了行方程 $s_i=(\rho-g_i)x_i$。
+$Q_+$ 的\emph{全部}特征值（不只是最大的）与 $Q_+$ 的不可约性还没用。
+\item \textbf{自洽耦合} $\Sigma=1\{\Pi_3(D_p^{1/2}\Sigma D_p^{1/2})\ge0\}$：REL 完全没用，
+但注~\ref{rmk:chamberdead} 说明它才是 $N=6$ 那 $19$ 类的真正约束。
+\end{enumerate}

@@ -1,0 +1,10 @@
+{
+  "key": "semantic_scholar",
+  "source": "Semantic Scholar",
+  "query": "weighted sum largest eigenvalues graph",
+  "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=weighted%20sum%20largest%20eigenvalues%20graph&limit=20&fields=title,authors,year,url,externalIds",
+  "kind": "json",
+  "retrieved_utc": "2026-10-14T09:36:01.237795+00:00",
+  "error": "<HTTPError 429: ''>",
+  "http_status": 429
+}

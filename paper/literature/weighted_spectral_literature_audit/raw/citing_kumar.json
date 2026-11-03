@@ -1,0 +1,9 @@
+{
+  "key": "citing_kumar",
+  "source": "OpenAlex forward citations",
+  "query": "cites:W7148251236",
+  "url": "https://api.openalex.org/works?filter=cites:W7148251236&per-page=100",
+  "kind": "openalex",
+  "retrieved_utc": "2026-10-14T09:37:18.311432+00:00",
+  "error": "URLError(TimeoutError('_ssl.c:993: The handshake operation timed out'))"
+}

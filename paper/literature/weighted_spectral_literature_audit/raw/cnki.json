@@ -1,0 +1,19 @@
+{
+  "key": "cnki",
+  "source": "CNKI public search",
+  "query": "图 邻接特征值 加权和",
+  "url": "https://kns.cnki.net/kns8s/defaultresult/index?kw=%E5%9B%BE%20%E9%82%BB%E6%8E%A5%E7%89%B9%E5%BE%81%E5%80%BC%20%E5%8A%A0%E6%9D%83%E5%92%8C",
+  "kind": "html",
+  "retrieved_utc": "2026-10-14T09:35:59.516293+00:00",
+  "http_status": 200,
+  "final_url": "https://kns.cnki.net/verify/home?captchaType=blockPuzzle&ident=d3624d&captchaId=a3bc93c2-2600-4197-bcbb-38ba4c16cdb3&returnUrl=eyDvWCt4s2-U0foBpgUc98_4QfdbPTouJb655n6IwiV9aBoNVEYHF9-pddUEqxaiSSAcjc8azzE4dHP_RWy0Qska47AEcs9aOwuKGq8cm1rDDqVRQtlLug%3D%3D",
+  "content_type": "text/html",
+  "raw_file": "raw\\cnki.raw",
+  "bytes": 2154,
+  "sha256": "c1896377b2493f505a3c188d7d21606578c028f62d0e3340c1dfa030f032b5c7",
+  "result": {
+    "title": "安全验证",
+    "text_excerpt": "安全验证",
+    "interpretation": "Access probe; do not treat HTTP success as completed database search."
+  }
+}

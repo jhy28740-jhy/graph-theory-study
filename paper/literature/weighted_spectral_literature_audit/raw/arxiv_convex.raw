@@ -1,0 +1,269 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/Co9RB3V6PyTr1NhwPEaaYVUW8/M</id>
+  <title>arXiv Query: search_query=all:"convex combination" AND all:"eigenvalues" AND all:"graph"&amp;id_list=&amp;start=0&amp;max_results=100</title>
+  <updated>2026-10-14T09:37:21Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22convex+combination%22+AND+(all:%22eigenvalues%22+AND+all:%22graph%22)&amp;start=0&amp;max_results=100&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>100</opensearch:itemsPerPage>
+  <opensearch:totalResults>12</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.30931v1</id>
+    <title>Interpolating walk between discrete-time quantum walk and its intrinsic random walk on graph</title>
+    <updated>2026-09-25T07:47:35Z</updated>
+    <link href="https://arxiv.org/abs/2609.30931v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.30931v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider an interpolation with the parameter $p\in [0,1]$ between the discrete-time quantum ($p=0$) and its intrinsic random ($p=1$) walks on a finite connected graph. Its time evolution is defined by the convex combination of the Kraus (CPTP) maps of the quantum and random walks. The Kraus map of the random walk is represented by taking a kind of projection of that of the quantum walk. The time evolution of the interpolation is interpreted as the combination of the following two dynamics of $2$ walkers on the same graph correlated with each other: $2$ walkers move independently of each other (no-correlation) with probability $1-p$, while $2$ walkers always move into the same position (the maximal correlation) with probability $p$ at each time step. In this paper, we generalize the random walk to a new walk, namely, the correlated walk, which preserves the intrinsic property and relaxes the maximal correlation of the random walk. This correlation is determined by a partition of the arc sets in the underlying graph. We show that the eigenvalues of the interpolating walk between the correlated and quantum walks live in $\{ z\in \mathbb{C}\;|\;1-p\leq |z|\leq 1 \}$ and that the absorption state coincides with that of the correlated walk, which is characterized by the underlying graph structures.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-25T07:47:35Z</published>
+    <arxiv:comment>32 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>Yusuke Higuchi</name>
+    </author>
+    <author>
+      <name>Etsuo Segawa</name>
+    </author>
+    <author>
+      <name>Honoka Shiratori</name>
+    </author>
+    <author>
+      <name>Saori Yoshino</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.18492v1</id>
+    <title>From the Square-Energy Conjecture to Signed Graphs: Sharp Bounds for Positive Square Energy</title>
+    <updated>2026-08-19T03:32:24Z</updated>
+    <link href="https://arxiv.org/abs/2608.18492v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.18492v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $Σ=(G,σ)$ be a connected signed graph of order $n$ and size $m$, and let $s^{+}(Σ)$ and $s^{-}(Σ)$ denote the sums of the squares of its positive and negative adjacency eigenvalues, respectively. The square-energy conjecture of Elphick, Farber, Goldberg, and Wocjan states that every connected graph $G$ of order $n$ satisfies \[
+  \min\{s^{+}(G),s^{-}(G)\}\ge n-1. \] Liu and Ning~\cite{LiuNing2023} published a wide-ranging paper entitled ``Unsolved Problems in spectral graph theory", and this conjectures were placed first in their list of such problems. We prove that every signature $σ$ of a connected graph $G$ satisfies the sharp bound \[
+  s^{+}(Σ)\le 2m-n+1. \] For the all-positive signing this gives $s^{+}(G)\le 2m-n+1$, whereas for the all-negative signing it gives $s^{-}(G)\le 2m-n+1$. Since $s^{+}(G)+s^{-}(G)=2m$, these two special cases imply the square-energy conjecture; the present theorem is stronger in scope because the same bound holds for every signing of $G$. Applying the theorem to the negation $-Σ$ also yields \[
+  s^{+}(Σ)\ge n-1. \] Both bounds are sharp. The proof is based on a doubly nonnegative matrix inequality. We also shorten the proof of that inequality by replacing its final case distinction with a fixed convex combination.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-19T03:32:24Z</published>
+    <arxiv:comment>14 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Fu-Tao Hu</name>
+    </author>
+    <author>
+      <name>Xiao Han</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.18365v1</id>
+    <title>A short note on $A_α$-eigenvalues for simple graphs</title>
+    <updated>2026-01-26T11:16:40Z</updated>
+    <link href="https://arxiv.org/abs/2601.18365v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.18365v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Given a simple graph $G$, its $A_α$ matrix is a convex combination with parameter $α\in [0,1]$ of its adjacency matrix and its degree diagonal matrices. Here we compare two lower bounds presented in [J. D. G. Silva Jr., C. S. Oliveira and L. M. G. C. Costa. "Some results involving the $A_α$-eigenvalues for graphs and line graphs"] for the spectral radius of $A_α$, and prove that one is better than the other when there are no isolated nodes in $G$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-26T11:16:40Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Giovanni Barbarino</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.10036v2</id>
+    <title>Convex combination of first and second eigenvalues of trees</title>
+    <updated>2026-08-07T05:42:06Z</updated>
+    <link href="https://arxiv.org/abs/2601.10036v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.10036v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For a graph $G$, let $λ_1(G)$ and $λ_2(G)$ denote the largest and the second largest adjacency eigenvalue of $G$. The sum $λ_1(G) + λ_2(G)$ is called the \emph{spectral sum} of $G$. We investigate the spectral sum of trees of order $n$ and determine the extremal trees that attain the maximum/minimum. Moreover, for any $α\in [0,1],$ we describe the extremal trees which maximize the convex combination $αλ_1 + (1-α)λ_2$ in the class of $n$-vertex trees for sufficiently large $n$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-15T03:28:17Z</published>
+    <arxiv:comment>Improved version; some errors corrected</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Hitesh Kumar</name>
+    </author>
+    <author>
+      <name>Bojan Mohar</name>
+    </author>
+    <author>
+      <name>Shivaramakrishna Pragada</name>
+    </author>
+    <author>
+      <name>Hanmeng Zhan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.06933v1</id>
+    <title>On the distribution of $A_α$-eigenvalues in terms of graph invariants</title>
+    <updated>2025-10-08T12:17:40Z</updated>
+    <link href="https://arxiv.org/abs/2510.06933v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.06933v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $G$ be a connected graph of order $n$, and $A(G)$ and $D(G)$ its adjacency and degree diagonal matrices, respectively. For a parameter $α\in [0,1]$, Nikiforov~(2017) introduced the convex combination $A_α(G) = αD(G) + (1 - α)A(G)$. In this paper, we investigate the spectral distribution of $A_α(G)$-eigenvalues, over subintervals of the real line. We establish lower and upper bounds on the number of such eigenvalues in terms of structural parameters of $G$, including the number of pendant and quasi-pendant vertices, the domination number, the matching number, and the edge covering number. Additionally, we exhibit families of graphs for which these bounds are attained. Several of our results extend known spectral bounds on the eigenvalue distributions of both the adjacency and the signless Laplacian matrices.</summary>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-08T12:17:40Z</published>
+    <arxiv:primary_category term="cs.DM"/>
+    <author>
+      <name>Uilton Cesar Peres Junior</name>
+    </author>
+    <author>
+      <name>Carla Silva Oliveira</name>
+    </author>
+    <author>
+      <name>André Ebling Brondan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.03806v1</id>
+    <title>Bounds on $A_α$-eigenvalues using graph invariants</title>
+    <updated>2025-01-07T14:18:04Z</updated>
+    <link href="https://arxiv.org/abs/2501.03806v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.03806v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In 2017, Nikiforov introduced the concept of the $A_α$-matrix, as a linear convex combination of the adjacency matrix and the degree diagonal matrix of a graph. This matrix has attracted increasing attention in recent years, as it serves as a unifying structure that combines the adjacency matrix and the signless Laplacian matrix. In this paper, we present some bounds for the largest and smallest eigenvalue of $A_α$-matrix involving invariants associated to graphs.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-01-07T14:18:04Z</published>
+    <arxiv:comment>14 pages, 1 figure</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>João Domingos Gomes da Silva Junior</name>
+    </author>
+    <author>
+      <name>Carla Silva Oliveira</name>
+    </author>
+    <author>
+      <name>Liliana Manuela Gaspar Cerveira da Costa</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.14789v2</id>
+    <title>On the Spread of Graph-Related Matrices</title>
+    <updated>2025-09-03T10:45:27Z</updated>
+    <link href="https://arxiv.org/abs/2412.14789v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.14789v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The spread of a real symmetric matrix is defined as the difference between its largest and smallest eigenvalue. The study of graph-related matrices has attracted considerable attention, leading to a substantial body of findings. In this paper, we investigate a general spread problem related to $A_α$-matrix of graphs. The $A_α$-matrix of a graph $G$, introduced by Nikiforov in 2017, is a convex combinations of its diagonal degree matrix $D(G)$ and adjacency matrix $A(G)$, defined as $A_α (G) = αD(G) + (1-α) A(G)$. Let $λ_1^{(α)} (G)$ and $λ_n^{(α)} (G)$ denote the largest and smallest eigenvalues of $A_α (G)$, respectively. We determined the unique graph that maximizes $λ^{(α)}_1 (G) - β\cdotλ^{(γ)}_n (G)$ among all connected $n$-vertex graphs for sufficiently large $n$, where $0 \leq α&lt; 1$, $1/2\leq γ&lt; 1$ and $0&lt;βγ\leq 1$. As an application, we confirm a conjecture proposed by Lin, Miao, and Guo [Linear Algebra Appl. 606 (2020) 1--22]. In addition, one of main results in [SIAM J. Discrete Math. 38 (2024) 590--608] is a simple corollary of our result by choosing $α= γ= 1/2$ and $β= 1$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-19T12:29:22Z</published>
+    <arxiv:comment>12 pages, minor modification</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Lele Liu</name>
+    </author>
+    <author>
+      <name>Yi-Zheng Fan</name>
+    </author>
+    <author>
+      <name>Yi Wang</name>
+    </author>
+    <author>
+      <name>Wenyan Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2402.15470v1</id>
+    <title>Some results involving the $A_α$-eigenvalues for graphs and line graphs</title>
+    <updated>2024-02-23T18:01:35Z</updated>
+    <link href="https://arxiv.org/abs/2402.15470v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.15470v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $G$ be a simple graph with adjacency matrix $A(G)$, signless Laplacian matrix $Q(G)$, degree diagonal matrix $D(G)$ and let $l(G)$ be the line graph of $G$. In 2017, Nikiforov defined the $A_α$-matrix of $G$, $A_α(G)$, as a linear convex combination of $A(G)$ and $D(G)$, the following way, $A_α(G):=αA(G)+(1-α)D(G),$ where $α\in[0,1]$. In this paper, we present some bounds for the eigenvalues of $A_α(G)$ and for the largest and smallest eigenvalues of $A_α(l(G))$. Extremal graphs attaining some of these bounds are characterized.</summary>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-23T18:01:35Z</published>
+    <arxiv:comment>18 pages, 5 figures, 3 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.DM"/>
+    <author>
+      <name>Joao Domingos Gomes da Silva Junior</name>
+    </author>
+    <author>
+      <name>Carla Silva Oliveira</name>
+    </author>
+    <author>
+      <name>Liliana Manuela Gaspar C. da Costa</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2304.00554v1</id>
+    <title>On the eigenvalues and energy of the $A_α$-matrix of graphs</title>
+    <updated>2023-04-02T15:12:16Z</updated>
+    <link href="https://arxiv.org/abs/2304.00554v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2304.00554v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For a graph $G$, the generalized adjacency matrix $A_α(G)$ is the convex combination of the diagonal matrix $D(G)$ and the adjacency matrix $A(G)$ and is defined as $A_α(G)=αD(G)+(1-α) A(G)$ for $0\leq α\leq 1$. This matrix has been found to be useful in merging the spectral theories of $A(G)$ and the signless Laplacian matrix $Q(G)$ of the graph $G$. The generalized adjacency energy or $A_α$-energy is the mean deviation of the $A_α$-eigenvalues of $G$ and is defined as $E(A_α(G))=\sum_{i=1}^{n}|p_i-\frac{2αm}{n}|$, where $p_i$'s are $A_α$-eigenvalues of $G$. In this paper, we investigate the $A_α$-eigenvalues of a strongly regular graph $G$. We observe that $A_α$-spectral radius $p_1$ satisfies $δ(G)\leq p_1 \leq Δ(G)$, where $δ(G)$ and $Δ(G)$ are, respectively, the smallest and the largest degrees of $G$. Further, we show that the complete graph is the only graph to have exactly two distinct $A_α$-eigenvalues. We obtain lower and upper bounds of $A_α$-energy in terms of order, size and extremal degrees of $G$. We also discuss the extremal cases of these bounds.</summary>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-04-02T15:12:16Z</published>
+    <arxiv:primary_category term="math.SP"/>
+    <author>
+      <name>Nijara Konch</name>
+    </author>
+    <author>
+      <name>A. Bharali</name>
+    </author>
+    <author>
+      <name>S. Pirzada</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2301.02733v1</id>
+    <title>Bounds for a alpha-eigenvalues</title>
+    <updated>2023-01-06T22:26:59Z</updated>
+    <link href="https://arxiv.org/abs/2301.02733v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2301.02733v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let G be a graph with adjacency matrix A(G) and degree diagonal matrix D(G). In 2017, Nikiforov [1] defined the matrix Aalpha(G), as a convex combination of A(G) and D(G), the following way, Aalpha(G) = alpha A(G) + (1 - alpha)D(G), where alpha belongs to [0,1]. In this paper, we present some new upper and lower bounds for the largest, second largest, and smallest eigenvalue of the Aalpha-matrix. Moreover, extremal graphs attaining some of these bounds are characterized</summary>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-01-06T22:26:59Z</published>
+    <arxiv:comment>14 pages, 3 figures, 2 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.DM"/>
+    <author>
+      <name>João Domingos G. da Silva</name>
+    </author>
+    <author>
+      <name>Carla Silva Oliveira</name>
+    </author>
+    <author>
+      <name>Liliana Manuela G. C. da Costa</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2105.10903v1</id>
+    <title>On the $A_α$ spectral radius of strongly connected digraphs</title>
+    <updated>2021-05-23T10:20:25Z</updated>
+    <link href="https://arxiv.org/abs/2105.10903v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2105.10903v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $G$ be a digraph with adjacency matrix $A(G)$. Let $D(G)$ be the diagonal matrix with outdegrees of vertices of $G$. Nikiforov \cite{Niki} proposed to study the convex combinations of the adjacency matrix and diagonal matrix of the degrees of undirected graphs. Liu et al. \cite{LWCL} extended the definition to digraphs. For any real $α\in[0,1]$, the matrix $A_α(G)$ of a digraph $G$ is defined as $$A_α(G)=αD(G)+(1-α)A(G).$$ The largest modulus of the eigenvalues of $A_α(G)$ is called the $A_α$ spectral radius of $G$, denoted by $λ_α(G)$. This paper proves some extremal results about the spectral radius $λ_α(G)$ that generalize previous results about $λ_0(G)$ and $λ_{\frac{1}{2}}(G)$.
+  In particular, we characterize the extremal digraph with the maximum (or minimum) $A_α$ spectral radius among all $\widetilde{\infty}$-digraphs and $\widetildeθ$-digraphs on $n$ vertices. Furthermore, we determine the digraphs with the second and the third minimum $A_α$ spectral radius among all strongly connected bicyclic digraphs. For $0\leqα\leq\frac{1}{2}$, we also determine the digraphs with the second, the third and the fourth minimum $A_α$ spectral radius among all strongly connected digraphs on $n$ vertices. Finally, we characterize the digraph with the minimum $A_α$ spectral radius among all strongly connected bipartite digraphs which contain a complete bipartite subdigraph.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-05-23T10:20:25Z</published>
+    <arxiv:comment>20 pages,6 figures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Weige Xi</name>
+    </author>
+    <author>
+      <name>Ligong Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2005.01037v1</id>
+    <title>On $α$-adjacency energy of graphs and Zagreb index</title>
+    <updated>2020-05-03T10:08:01Z</updated>
+    <link href="https://arxiv.org/abs/2005.01037v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2005.01037v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $A(G)$ be the adjacency matrix and $D(G)$ be the diagonal matrix of the vertex degrees of a simple connected graph $G$. Nikiforov defined the matrix $A_α(G)$ of the convex combinations of $D(G)$ and $A(G)$ as $A_α(G)=αD(G)+(1-α)A(G)$, for $0\leq α\leq 1$. If $ ρ_{1}\geq ρ_{2}\geq \dots \geq ρ_{n}$ are the eigenvalues of $A_α(G)$ (which we call $α$-adjacency eigenvalues of $G$), the $ α$-adjacency energy of $G$ is defined as $E^{A_α}(G)=\sum_{i=1}^{n}\left|ρ_i-\frac{2αm}{n}\right|$, where $n$ is the order and $m$ is the size of $G$. We obtain the upper and lower bounds for $E^{A_α}(G) $ in terms of order $n$, size $m$ and Zagreb index $Zg(G)$ associated to the structure of $G$. Further, we characterize the extremal graphs attaining these bounds.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-05-03T10:08:01Z</published>
+    <arxiv:comment>17 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>AKCE International Journal of Graphs and Combinatorics, Volume 18, Issue 1, 2021, Pages 39-46</arxiv:journal_ref>
+    <author>
+      <name>S. Pirzada</name>
+    </author>
+    <author>
+      <name>Bilal A. Rather</name>
+    </author>
+    <author>
+      <name>Hilal A. Ganie</name>
+    </author>
+    <author>
+      <name>Rezwan ul Shaban</name>
+    </author>
+    <arxiv:doi>10.1080/09728600.2021.1917973</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1080/09728600.2021.1917973" title="doi"/>
+  </entry>
+</feed>

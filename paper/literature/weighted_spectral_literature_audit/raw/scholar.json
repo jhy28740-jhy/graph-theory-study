@@ -1,0 +1,9 @@
+{
+  "key": "scholar",
+  "source": "Google Scholar",
+  "query": "\"weighted sum\" \"eigenvalues\" graph",
+  "url": "https://scholar.google.com/scholar?q=%22weighted%20sum%22%20%22eigenvalues%22%20graph",
+  "kind": "html",
+  "retrieved_utc": "2026-10-14T09:35:58.010592+00:00",
+  "error": "URLError(TimeoutError('timed out'))"
+}

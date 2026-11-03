@@ -1,0 +1,18 @@
+{
+  "key": "citing_huang_wei",
+  "source": "OpenAlex forward citations",
+  "query": "cites:W7171495516",
+  "url": "https://api.openalex.org/works?filter=cites:W7171495516&per-page=100",
+  "kind": "openalex",
+  "retrieved_utc": "2026-10-14T09:37:18.311432+00:00",
+  "http_status": 200,
+  "final_url": "https://api.openalex.org/works?filter=cites:W7171495516&per-page=100",
+  "content_type": "application/json",
+  "raw_file": "raw\\citing_huang_wei.raw",
+  "bytes": 430,
+  "sha256": "f632875db37349d230dcc7e1dccb3e41305dfebbfa4f108c88a25e034fc6e2b7",
+  "result": {
+    "total": 0,
+    "items": []
+  }
+}

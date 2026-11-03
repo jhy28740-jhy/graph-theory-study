@@ -1,0 +1,42 @@
+{
+  "key": "crossref_2015",
+  "source": "Crossref DOI metadata",
+  "query": "10.1016/j.laa.2015.05.016",
+  "url": "https://api.crossref.org/works/10.1016%2Fj.laa.2015.05.016",
+  "kind": "crossref",
+  "retrieved_utc": "2026-10-14T09:35:54.912563+00:00",
+  "http_status": 200,
+  "final_url": "https://api.crossref.org/works/10.1016%2Fj.laa.2015.05.016",
+  "content_type": "application/json",
+  "raw_file": "raw\\crossref_2015.raw",
+  "bytes": 11374,
+  "sha256": "4a5fd8aecbc4b35c9b4b3059114097fd8869ca9259343b17d19ac05d2a3faa3d",
+  "result": {
+    "total": null,
+    "items": [
+      {
+        "id": null,
+        "title": "Extrema of graph eigenvalues",
+        "doi": "10.1016/j.laa.2015.05.016",
+        "year": {
+          "date-parts": [
+            [
+              2015,
+              10
+            ]
+          ]
+        },
+        "authors": [
+          "Vladimir Nikiforov"
+        ],
+        "cited_by_count": null,
+        "source": [
+          "Linear Algebra and its Applications"
+        ],
+        "type": "journal-article",
+        "locations": null,
+        "abstract": null
+      }
+    ]
+  }
+}

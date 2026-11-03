@@ -1,0 +1,19 @@
+{
+  "key": "mathscinet",
+  "source": "MathSciNet public search",
+  "query": "Quadratic inequalities between the largest eigenvalues",
+  "url": "https://mathscinet.ams.org/mathscinet/search/publications.html?pg1=TI&s1=Quadratic%20inequalities%20between%20the%20largest%20eigenvalues",
+  "kind": "html",
+  "retrieved_utc": "2026-10-14T09:35:59.109900+00:00",
+  "http_status": 200,
+  "final_url": "https://connect.liblynx.com/wayf/6acf4490f90220df3041ed253eb90d08",
+  "content_type": "text/html; charset=UTF-8",
+  "raw_file": "raw\\mathscinet.raw",
+  "bytes": 5672,
+  "sha256": "0676240adf8b7261b0570cbb0d9aa1e1b5048c78154e632721b14054c67f99db",
+  "result": {
+    "title": "Where Are You From",
+    "text_excerpt": "Where Are You From Login Institutional Access Individual Access Identity &amp; Access Management powered by LibLynx",
+    "interpretation": "Access probe; do not treat HTTP success as completed database search."
+  }
+}

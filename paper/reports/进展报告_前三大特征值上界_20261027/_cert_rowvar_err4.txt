@@ -1,0 +1,2 @@
+C:\Users\hyji11\Documents\ChatGPT\图论\进展报告_前三大特征值上界_20261027\证书_行方差松弛与天花板.py:452: OptimizeWarning: Unknown solver options: xtol, ftol
+  r=_nmmin(lambda w: -corank1_val(w), bestv, method=meth,

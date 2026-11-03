@@ -1,0 +1,1070 @@
+ 
+ Report GitHub Issue 
+ × 
+ Title: 
+ Content selection saved. Describe the issue below: 
+ Description: 
+ Submit without GitHub 
+ Submit in GitHub 
+ arXiv is now an independent nonprofit! 
+ Learn more 
+ × 
+ Back to arXiv 
+ Why HTML? 
+ Report Issue 
+ Back to Abstract 
+ Download PDF 
+ Abstract 
+ 1 Introduction 
+ 2 Basic results and structural tools 
+ 3 Technical estimates and proof of the main theorem 
+ References 
+ License: arXiv.org perpetual non-exclusive license
+arXiv:2607.23081v1 [math.CO] 25 Jul 2026 
+ The Exact Maximum of the Spectral Sum of Graphs 
+ Jing Huang
+ Wei Wei
+ Note:  Email addresses:
+jhuangmath@gzhu.edu.cn (J. Huang), weiweimath@sina.com (W. Wei). 
+ Corresponding Author: Jing Huang.
+ 1.School of Mathematics and Information Science, Guangzhou University, Guangzhou 510006, China
+ 2. Center of Intelligent Computing and Applied Statistics, School of Mathematics, Physics and
+Statistics, Shanghai University of Engineering Science, Shanghai 201620, China
+ Abstract 
+ For a simple graph \1 of order \1 , let
+ \1 denote its spectral sum. We
+determine, for every \1 , the exact maximum of \1 and all
+equality cases. The unique maximizer, up to isomorphism, is the
+complement of the disjoint union of a suitably balanced complete
+bipartite graph and isolated vertices, with the sizes of its three
+parts determined by \1 modulo \1 . Denoting this graph by
+ \1 , we further show that \1 
+with equality exactly when \1 . This proves a conjecture of Kumar, Liu, Monterde, Pragada and Tait, which strengthens the
+Aouchiche–Hansen 2010 conjecture by extending it from connected graphs to
+all graphs and by asserting uniqueness of the extremal graph. The
+result also subsumes the 2008 conjecture of Ebrahimi B., Mohar,
+Nikiforov, and Ahmady.
+The proof combines Ky Fan’s variational principle with a spectral
+inequality for weighted Ferrers quotients to reduce the problem to an
+explicit family whose complements have incidence rank one. Exact
+integer optimization and a separate equality analysis then yield the
+maximum and uniqueness. 
+ Keywords. 
+Spectral sum; adjacency eigenvalues; extremal graph; chain graph;
+Ferrers matrix. 
+ 2020 Mathematics Subject Classification. 
+05C50, 05C35, 15A18. 
+ 1 Introduction 
+ All graphs are finite and simple. For a real symmetric matrix \1 of
+order \1 , write 
+ \1 
+ For a graph \1 , write \1 . Let \1 and \1 
+denote the identity matrix and the all-ones matrix of order \1 ,
+respectively, and omit the subscripts when the order is clear.
+Both the largest and second largest adjacency eigenvalues have been
+studied extensively; see the surveys
+ [ 2 , 3 ] and the monograph
+ [ 16 ] . The sum \1 is the first nontrivial partial
+sum of the adjacency spectrum. Whereas the spectral radius is
+characterized by a single Rayleigh quotient, Ky Fan’s principle
+ [ 6 ] expresses \1 as the maximum Rayleigh trace over
+orthonormal pairs. The partial-sum viewpoint also connects \1 with
+graph energy: \1 
+see [ 7 , 13 ] . 
+ General bounds for partial spectral sums were obtained by Mohar
+ [ 11 ] and subsequently refined using inertia and rank by
+Das, Mojallal and Sun [ 4 ] . Related work treats random
+graphs [ 15 ] , symmetric and nonnegative matrices
+ [ 8 , 18 ] , and exact extremal or
+classification questions for trees and for connected graphs with small
+spectral sum
+ [ 10 , 17 ] . These results do not
+determine the unrestricted maximum at a fixed order. 
+ The exact maximum over all graphs of a prescribed order has a separate
+history. Gernert conjectured that every graph \1 of order \1 
+satisfies \1 , and verified the inequality for regular
+graphs and several other graph classes; see
+ [ 5 ] . Nikiforov [ 12 ] subsequently disproved this conjecture
+and established linear upper and lower bounds for the unrestricted
+maximum. A more precise conjectural picture
+emerged from the work of Ebrahimi B., Mohar, Nikiforov and
+Ahmady [ 5 ] . Besides sharpening the general upper
+bound, they showed that, for \1 , the graph obtained from \1 
+by deleting the edges of \1 has spectral sum
+ \1 
+This construction shows that the leading coefficient in any universal
+linear upper bound cannot be smaller than \1 , and led them to
+conjecture that \1 
+for every graph \1 .
+The construction above belongs to a natural three-part family that
+provides candidates at every order. For \1 , define 
+ \1 
+ We call the vertex sets of sizes \1 , \1 , and \1 the
+ \1 -part, the \1 -part, and the universal part, respectively.
+To specify the candidate of order \1 , write \1 , where
+ \1 , and put 
+ \1 
+ (1) 
+ Define 
+ \1 
+ (2) 
+ Thus the two nonadjacent parts differ in size by at most one, while
+their total size is \1 .
+With this notation, Aouchiche and Hansen
+ [ 1 , Conjecture 17] proposed \1 as the
+residue-dependent extremal graph for connected graphs. Their
+formulation asserts that \1 maximizes \1 and that
+ \1 
+with equality exactly when \1 , but does not include a
+uniqueness clause.
+Recently, Kumar, Liu, Monterde, Pragada and Tait [ 9 , Theorem 1.2] proved the universal
+bound \1 
+for every graph \1 . Together with
+the construction given in [ 5 ] ,
+this established \1 as the optimal linear coefficient but left the
+residue-dependent finite-order maximum and its equality cases open.
+The authors subsequently recorded the remaining exact finite-order
+problem, for all graphs and with uniqueness, as
+Conjecture 5.1 in [ 9 ] : \1 for
+every graph \1 of order \1 , with equality if and only if
+ \1 .
+Our main result, stated below, fully resolves this conjecture along with its sharp finite-order bound. 
+ Theorem 1.1 . 
+ For every graph \1 of order \1 , we have 
+ \1 
+ (3) 
+ Equality in ( 3 ) holds if and only if
+ \1 . Moreover, \1 
+with equality if and only if \1 . 
+ The proof separates the determination of the extremal value from the
+uniqueness argument. Choose a maximizer with as many edges as
+possible. Ky Fan’s variational principle turns edge-maximality into a
+threshold rule, which forces the complement to be a chain graph. A new
+sign-variation argument yields a spectral-tail inequality for the
+associated weighted Ferrers quotient and, in turn, a uniform defect
+whenever the incidence rank is at least two. Since incidence rank zero
+gives the complete graph, which is suboptimal, the complement must have
+incidence rank one. The maximizer therefore belongs to the family
+ \1 , and exact integer optimization selects \1 .
+Finally, a separate analysis of equality in the threshold rule rules
+out all other maximizers. 
+ The remainder of the paper is organized in two sections.
+Section  2 collects the variational and structural tools,
+optimizes the family \1 , and reduces an edge-maximal extremizer
+to one whose complement is a chain graph. Section  3 
+establishes the Ferrers tail inequality and the uniform defect for
+incidence rank at least two, and then combines these estimates with
+the rank-one optimization to prove Theorem  1.1 , including
+uniqueness. 
+ 2 Basic results and structural tools 
+ We first record Ky Fan’s variational principle and optimize the
+three-part family \1 . We then use the same principle to obtain
+the chain-graph reduction used in the proof of the main theorem. 
+ Lemma 2.1 . 
+ Let \1 be a real symmetric matrix of order \1 . Then 
+ \1 
+ If \1 is simple, equality holds for
+ \1 if and only if
+ \1 is spanned by an
+eigenvector for \1 and an eigenvector for
+ \1 . 
+ Proof. 
+ Let \1 be an orthonormal eigenbasis of
+ \1 , with corresponding eigenvalues
+ \1 , and let
+ \1 
+Then \1 is the orthogonal projector onto
+ \1 . Put
+ \1 . Since \1 and
+ \1 , 
+ \1 
+ \1 
+ \1 
+ Taking \1 and \1 proves the
+variational formula.
+Suppose that \1 is simple. Then
+ \1 , so equality in the last inequality forces
+ \1 , equivalently
+ \1 .
+Equality in the preceding inequality forces the remaining line of
+this span to lie in the eigenspace of \1 . The converse is
+immediate.
+∎ 
+ For a graph \1 of order \1 , set 
+ \1 
+ Lemma 2.2 . 
+ Let \1 be positive integers with \1 . Then \1 has rank three, and its nonzero eigenvalues are the roots of \1 
+Two are positive and the third is \1 for some \1 . Moreover, 
+ \1 
+ Proof. 
+ The partition into the three parts of sizes \1 is equitable for \1 , with quotient matrix 
+ \1 
+ A calculation gives \1 and \1 .
+Since \1 has three row types, its rank is at most \1 . Because \1 , its rank is exactly \1 , and its nonzero eigenvalues are precisely those of \1 . 
+ These eigenvalues are real, have product \1 , and sum \1 . Hence two are positive and one is negative; write the latter as \1 ( \1 ). The two positive eigenvalues are the two largest eigenvalues of \1 , so 
+ \1 
+ Substitution of \1 into \1 yields \1 .
+∎ 
+ We next determine the exact integer parameters \1 that maximize this spectral sum. 
+ Proposition 2.3 . 
+ For every \1 , the maximum of \1 over integers \1 with \1 is attained uniquely at 
+ \1 
+ Proof. 
+ If \1 or \1 , then \1 . By ( 1 ), all three parts of \1 are nonempty, so Lemma  2.2 gives \1 . Hence no boundary pair can maximize, and we restrict to \1 with \1 . 
+ Fix \1 . By Lemma  2.2 ,
+ \1 , where
+ \1 , implying \1 .
+For two feasible pairs with sum \1 , let \1 , and let
+ \1 and \1 be the corresponding positive roots. At
+ \1 , the polynomial corresponding to \1 has value 
+ \1 
+ This polynomial is strictly increasing on \1 and vanishes
+at \1 , so \1 . Thus \1 increases strictly with
+ \1 , uniquely maximizing at
+ \1 .
+It remains to maximize the corresponding positive root \1 of 
+ \1 
+ (4) 
+ for \1 . Set \1 . Evaluating the left-hand side of ( 4 ) for \1 at \1 yields \1 . Since the polynomials are strictly increasing, \1 if and only if \1 , and \1 if and only if \1 .
+When \1 , write \1 or \1 . Substituting \1 into ( 4 ) gives \1 , where 
+ \1 
+ Since \1 , we obtain \1 exactly when
+ \1 , and \1 exactly when \1 .
+If \1 , then \1 , and hence \1 
+If \1 , then \1 , and hence \1 
+Thus \1 strictly decreases whenever \1 .
+For \1 , direct substitution gives 
+ \1 
+ Moreover, ( 1 ) gives
+ \1 , and the displayed table shows that
+ \1 for every \1 .
+If \1 , \1 decreases strictly, so \1 . Monotonicity gives \1 , which forces \1 .
+If \1 , we consider two cases: if \1 , then \1 , yielding \1 ; if \1 , then \1 . Both cases ensure \1 , giving \1 .
+Therefore, \1 is uniquely maximized at \1 .
+∎ 
+ Let \1 be the negative eigenvalue of \1 . Then 
+ \1 
+ (5) 
+ Having defined the maximal candidate value in terms of \1 , we now establish sharp analytical bounds on this parameter. 
+ Lemma 2.4 . 
+ For every \1 , we have 
+ \1 
+ (6) 
+ The upper equality holds if and only if \1 . Moreover, for \1 , 
+ \1 
+ (7) 
+ Proof. 
+ Set \1 and \1 . By Lemma  2.2 , \1 , and \1 is strictly increasing on \1 . Writing \1 and using ( 1 ) gives 
+ \1 
+ Thus \1 , with equality exactly when \1 . Since \1 and \1 is strictly increasing, this proves ( 6 ) and its equality statement.
+The same table gives \1 . Expanding at \1 and using the preceding bound gives 
+ \1 
+ \1 
+ Since \1 is strictly increasing and \1 , we obtain \1 .
+Finally, ( 6 ) gives 
+ \1 
+ This proves ( 7 ).
+∎ 
+ We conclude our analysis of the candidate family by showing that the spectral sum
+of \1 strictly increases with its order. 
+ Lemma 2.5 . 
+ For every \1 , \1 
+ Proof. 
+ By ( 1 ) and ( 2 ), passing from
+ \1 to \1 increases the universal part by one
+when \1 , the \1 -part by one when
+ \1 , and the \1 -part by one when
+ \1 ; the other two parts remain unchanged.
+Consequently, \1 is an induced subgraph of
+ \1 , and \1 is a proper principal submatrix of
+ \1 .
+The universal part of \1 has size \1 , so \1 is
+connected and \1 is irreducible and nonnegative.
+Perron–Frobenius and Cauchy interlacing give 
+ \1 
+ Adding the first and last comparisons and using
+ \1 proves the desired result.
+∎ 
+ The preceding lemmas identify the optimal candidate in the family
+ \1 . We now turn to the structural reduction that explains why
+this family is extremal. The natural parameter in this reduction is
+the incidence rank of the complement.
+For a bipartite graph \1 with bipartition \1 , its
+ bipartite incidence matrix is the \1 – \1 matrix whose rows
+are indexed by \1 , whose columns are indexed by \1 , and whose
+ \1 -entry is one if and only if \1 . The rank of this matrix over \1 is called the
+ incidence rank of \1 .
+The bipartite graph \1 is a chain graph if the vertices of \1 
+can be ordered as \1 so that 
+ \1 
+ Equivalently, the vertices in the two bipartition classes can be
+ordered so that every row of the bipartite incidence matrix consists
+of an initial block of ones followed by zeros, with the block lengths
+nondecreasing down the rows. Such a matrix is called a
+ Ferrers matrix . We use this ordering throughout.
+The following lemma provides a sufficient algebraic condition for a graph to have a chain graph as its complement. 
+ Lemma 2.6 . 
+ Let \1 be a symmetric \1 – \1 matrix with diagonal entries one.
+Suppose that there exist vectors \1 and \1 such
+that, for \1 , \1 exactly when \1 
+Then the graph with adjacency matrix \1 is a chain graph. 
+ Proof. 
+ Put \1 . Since \1 , for \1 ,
+ \1 exactly when \1 
+Thus every edge of the graph with adjacency matrix \1 joins a
+vertex with positive \1 to one with negative \1 , while vertices
+with \1 are isolated. If \1 have the same nonzero sign,
+ \1 , and \1 is adjacent to \1 , then \1 has the
+opposite sign and \1 
+Hence every neighbor of \1 is also a neighbor of \1 . Ordering the
+vertices on each side by \1 therefore orders their neighborhoods
+by inclusion, so the graph is a chain graph.
+∎ 
+ We now apply this threshold condition to establish the main structural reduction for an edge-maximal extremal graph. 
+ Proposition 2.7 . 
+ Let \1 be an \1 -vertex graph maximizing \1 , chosen among all
+such graphs to have the maximum number of edges. Then \1 is
+connected and \1 is a chain graph. 
+ Proof. 
+ Let \1 be any orthonormal eigenvectors of \1 
+corresponding to \1 and \1 , with vertex
+coordinates \1 . 
+ If \1 , Lemma  2.1 gives
+ \1 . Hence
+ \1 . Equality would produce a maximizer with more
+edges, contrary to the choice of \1 , so the inequality is strict.
+Similarly, deleting an edge \1 gives
+ \1 , and hence
+ \1 . Thus \1 exactly when
+ \1 . 
+ Suppose that \1 is disconnected. Since \1 is block diagonal and
+the preceding argument applies to any such pair of eigenvectors, we
+may choose each eigenvector to be supported on one component. If
+their supporting components are distinct, choose one vertex from
+each; otherwise choose one vertex inside their common supporting
+component and one outside it. In either case, we obtain vertices
+ \1 in distinct components with \1 . The preceding
+criterion would make \1 an edge, a contradiction. Hence \1 is
+connected.
+By the Perron–Frobenius theorem, we may now choose \1 .
+The same criterion and Lemma  2.6 , applied
+to \1 , show that \1 is a chain graph.
+∎ 
+ We now organize the argument by the incidence rank of \1 .
+Rank zero means that \1 is empty, so \1 .
+If the incidence rank is one, all nonzero rows of the bipartite
+incidence matrix are equal: indeed, they are scalar multiples of one
+another, and two nonzero \1 – \1 rows can be scalar multiples only
+with scalar one. Hence \1 is a complete bipartite graph
+together with isolated vertices, and therefore \1 
+for some \1 with \1 . Proposition  2.3 
+therefore settles the cases of incidence rank at most one. It remains
+to exclude incidence rank at least two, which is the purpose of the
+technical estimates developed in the next section. 
+ 3 Technical estimates and proof of the main theorem 
+ The exclusion of chain complements of incidence rank at least two
+rests on two estimates: a spectral-tail inequality for weighted
+Ferrers quotients and a uniform numerical defect. To prove the first,
+we compress a chain graph to its nonzero neighborhood classes and use
+the sign pattern of the inverse quotient to control coefficient sign
+changes. 
+ For a finite sequence \1 with no zero terms, let
+ \1 be the number of indices
+ \1 such that \1 . These indices are
+called the sign-change positions.
+A real matrix is totally nonnegative if all its minors are
+nonnegative. The following is the zero-free specialization of the
+variation-diminishing theorem
+ [ 14 , Theorem 3.4(a)] . 
+ Lemma 3.1 . 
+ Let \1 be totally nonnegative. If \1 and \1 have
+no zero coordinates, then \1 
+ We now use this property to bound the displacement of sign-change positions. 
+ Lemma 3.2 . 
+ Let \1 and 
+ \1 
+ have no zero coefficients. If the sign-change positions of their
+coefficient sequences are \1 and \1 
+respectively, then \1 for \1 
+ Proof. 
+ Comparing coefficients in \1 gives 
+ \1 
+ Then, for each \1 , 
+ \1 
+ Every minor of either displayed matrix is either zero or a
+nonnegative power of \1 , so both matrices are totally
+nonnegative.
+Lemma  3.1 , together with the fact that
+reversing a sequence does not change its variation, therefore gives 
+ \1 
+ \1 
+ (8) 
+ \1 
+ \1 
+ (9) 
+ Since both full coefficient sequences have variation \1 , additivity
+of variation across a common endpoint and
+( 9 ) yield 
+ \1 
+ (10) 
+ For every \1 , the definition of \1 and
+( 8 ) give \1 
+If \1 , then ( 8 ) with
+ \1 gives \1 
+a contradiction. Hence \1 . On the other hand, taking
+ \1 in ( 10 ) gives 
+ \1 
+ Hence the \1 -th sign change of \1 occurs no later than position
+ \1 , so \1 .
+∎ 
+ Let \1 be a bipartite chain graph of incidence rank \1 .
+Deleting zero rows and zero columns from a bipartite incidence matrix
+does not change its rank. Since \1 is a chain graph, its distinct
+nonzero row supports are linearly ordered by inclusion; write
+ \1 
+For each \1 , choose
+ \1 . The submatrix whose rows are the
+distinct rows with supports \1 and whose columns are
+ \1 has \1 -entry one if and only if \1 .
+It is therefore lower triangular with diagonal entries one, so these
+ \1 rows are linearly independent. Since every nonzero row is
+equal to one of them, they also span the row space. Hence
+ \1 , and thus \1 
+For \1 , let \1 be the number of rows with support
+ \1 , and put \1 
+Define 
+ \1 
+ Write \1 for the number of isolated vertices of \1 . Set 
+ \1 
+ (11) 
+ With these matrices defined, we now show that the spectrum of \1 reduces to that of the smaller quotient matrix \1 or \1 . 
+ Lemma 3.3 . 
+ Let \1 be a bipartite chain graph of incidence rank \1 . If \1 , the spectrum of \1 consists of
+the spectrum of \1 together with zeros. If \1 , it consists of
+the spectrum of \1 together with zeros. 
+ Proof. 
+ Partition the vertices of \1 into the row blocks of sizes
+ \1 , the column blocks of sizes
+ \1 , and, when \1 , the block of isolated vertices.
+Let \1 be the subspace of vectors
+that are constant on each block. For each block of size \1 , take the
+vector that equals \1 on that block and zero elsewhere.
+Taking these vectors in the order just given produces an orthonormal
+basis of \1 . Since every block of \1 and \1 is
+constant, both matrices leave \1 invariant. 
+ The block of \1 between the \1 -th row block and the \1 -th column
+block is an all-ones block if \1 and a zero block otherwise.
+Consequently, the corresponding entry of the matrix of
+ \1 is
+ \1 
+All row–row and column–column blocks are zero, as are all blocks
+involving the isolated vertices. Hence the nonisolated part of this
+matrix is \1 . 
+ For two blocks of sizes \1 and \1 , the corresponding entry of the
+matrix of \1 is \1 . Thus this matrix is the
+outer product of the vector of square roots of the block sizes with
+itself. That vector is \1 when \1 and
+ \1 when \1 . It follows from
+( 11 ) that the matrix of
+ \1 is \1 when \1 and \1 when \1 . 
+ Now let \1 . Orthogonality to the
+normalized indicator vector of each block implies that the coordinates
+of \1 sum to zero on that block. Since every row of \1 
+and \1 is constant on each block, every coordinate of
+ \1 and \1 is a linear combination of these
+block sums. Therefore
+ \1 which leads to
+ \1 
+Complete the orthonormal basis of \1 above by an orthonormal
+basis of \1 . With respect to the resulting basis, 
+ \1 
+ The assertion follows.
+∎ 
+ For a polynomial \1 with no zero
+coefficients, write \1 
+ Lemma 3.4 . 
+ Let \1 be real-rooted and have no zero root or zero coefficient.
+Then \1 equals the number of positive roots of
+ \1 , counted with multiplicity. 
+ Proof. 
+ The coefficient of \1 in \1 is \1 . Thus, at each
+position, exactly one of the coefficient sequences of \1 and
+ \1 has a sign change. Hence 
+ \1 
+ Descartes’ rule of signs
+ [ 19 , Theorem] bounds the numbers of positive roots of
+ \1 and \1 by these two variations, respectively. These are
+the numbers of positive and negative roots of \1 . Since all roots
+of \1 are real and nonzero, their sum is \1 , so both bounds are
+equalities.
+∎ 
+ The inertia of a real symmetric matrix is the triple
+ \1 giving the numbers of its positive, negative, and zero
+eigenvalues, counted with multiplicity. In the next lemma, the parameters \1 in ( 11 ) are allowed to be arbitrary positive real
+numbers. 
+ Lemma 3.5 . 
+ Let \1 , and let
+ \1 be the eigenvalues of \1 .
+Then \1 
+Moreover, \1 has inertia \1 . 
+ Proof. 
+ The matrix \1 is lower triangular with diagonal entries
+ \1 , and is therefore invertible. Hence \1 is congruent
+to \1 
+and has inertia \1 . The Schur complement of the bottom-right
+entry \1 of \1 is
+ \1 .
+Thus \1 has inertia \1 , and 
+ \1 
+ (12) 
+ Direct multiplication gives 
+ \1 
+ Let \1 denote the \1 -th
+standard basis vector. Put
+ \1 Then
+ \1 and \1 , so
+direct multiplication yields 
+ \1 
+ Let the off-diagonal support graph of \1 have the coordinates
+of \1 as its vertices, with two distinct coordinates adjacent
+whenever the corresponding matrix entry is nonzero. The formula for
+ \1 shows that the \1 -th row coordinate is adjacent to the
+ \1 -th column coordinate and, when \1 , to the \1 -st column
+coordinate. The block \1 gives the two additional
+edges joining the isolated coordinate to the first column coordinate
+and the \1 -th row coordinate. Thus the graph is a \1 -cycle,
+with the coordinates occurring in the cyclic order: isolated, first
+column, first row, second column, second row, and so on. The only
+nonzero diagonal entry of \1 is \1 at the isolated
+coordinate. 
+ Let \1 be a proper principal submatrix of
+ \1 . Thus \1 , and its off-diagonal support graph
+is a disjoint union of paths. The Leibniz expansion is 
+ \1 
+ If a term in this sum is nonzero, then
+ \1 for every \1 . A cycle of length at least three
+in \1 would therefore give a cycle in the off-diagonal support
+graph of \1 , which is impossible. Hence \1 consists only of
+disjoint transpositions and fixed points. Since the only nonzero
+diagonal entry of \1 is \1 at the isolated coordinate,
+this coordinate is the only possible fixed point. 
+ If \1 , every nonzero term consists of \1 transpositions. For
+each transposition \1 , its permutation sign is \1 , while
+ \1 because \1 is symmetric. Thus every
+nonzero term has sign \1 . If \1 , every nonzero term
+consists of \1 transpositions together with the fixed isolated
+coordinate, whose diagonal entry is \1 . Hence every such term
+has sign \1 . For a fixed principal submatrix of order \1 , its determinant is
+either zero or a sum of nonzero terms all having sign \1 .
+Hence, if the determinant is nonzero, it has sign \1 .
+Similarly, a principal minor of order \1 is either zero or has
+sign \1 . 
+ For every \1 , there is a nonzero principal minor of
+order \1 . If \1 , choose \1 pairwise disjoint edges of the
+cycle and take their \1 endpoints. The permutation that exchanges
+the two endpoints of each chosen edge contributes a nonzero term to
+the corresponding determinant. If \1 , take the isolated
+coordinate together with the endpoints of \1 pairwise disjoint edges
+in the path obtained by deleting that coordinate. The permutation
+that fixes the isolated coordinate and exchanges the endpoints of
+each chosen edge again contributes a nonzero term. Since all nonzero
+terms in either determinant have the same sign, the resulting
+principal minors are nonzero. 
+ Write \1 . For a set \1 of coordinates, let \1 denote the principal
+submatrix indexed by \1 . In the expansion of
+ \1 , choosing \1 from \1 diagonal positions leaves
+the determinant of the principal submatrix on the remaining
+ \1 coordinates. Hence the identity \1 shows 
+ \1 
+ For each proper positive order, the preceding argument shows that the
+sum on the right is nonzero. It has sign \1 when its order is
+ \1 , and sign \1 when its order is \1 . Moreover,
+( 12 ) gives
+ \1 .
+For \1 , the relevant principal minors have order
+ \1 , while for \1 they have order
+ \1 . Therefore 
+ \1 
+ \1 
+ \1 
+ \1 
+ \1 
+ \1 
+ Here the principal minor of order zero is understood to be \1 .
+Together with \1 , this shows that every \1 is nonzero. The
+signs of \1 are
+ \1 , so the sign changes occur exactly in
+positions 
+ \1 
+ (13) 
+ Set 
+ \1 
+ Then \1 
+Since \1 has inertia \1 , both \1 and
+ \1 are positive.
+Define 
+ \1 
+ Their supports are disjoint and both have norm one, so they are
+orthonormal. The principal block of \1 on the row coordinates
+together with the isolated coordinate is the outer product of
+ \1 with itself.
+The principal block on the column coordinates is the outer product of
+ \1 with itself. Hence 
+ \1 
+ Since
+ \1 ,
+Lemma  2.1 gives
+ \1 
+Consequently, 
+ \1 
+ The polynomial \1 has \1 positive roots and \1 negative roots,
+ \1 has \1 roots of each sign, and \1 has \1 
+positive roots and \1 negative roots. 
+ Suppose that \1 . We already know that \1 .
+If \1 , then
+ \1 , because \1 is nonsingular.
+This contradicts \1 , so \1 . Since \1 , the coefficient
+sequence of \1 begins with \1 . Its first two sign changes
+therefore occur in positions \1 and \1 . 
+ To remove possible zero coefficients, regard \1 
+temporarily as an independent tuple of real variables. Every
+coefficient of \1 , \1 , and \1 is a nonzero
+polynomial in this tuple. Hence the product of these finitely many
+coefficient polynomials is a nonzero polynomial, and its zero set has
+empty interior. At the original tuple, all \1 and all
+coefficients \1 are nonzero, while \1 . These strict sign
+conditions persist in an open neighborhood of the original tuple.
+We may therefore choose a tuple in this neighborhood for which none
+of the three coefficient sequences contains a zero term. At this
+tuple, every \1 and every \1 has its original sign, and
+ \1 still holds. For notational simplicity, retain
+ \1 , \1 , and \1 for the perturbed tuple. 
+ Thus \1 , \1 , and \1 each have \1 positive roots.
+Lemma  3.4 shows that each has exactly \1 
+coefficient sign changes. The second sign change of \1 is in
+position \1 . Lemma  3.2 shows that after
+multiplication by \1 it is in position \1 or \1 , and
+after the subsequent multiplication by \1 it is in a
+position no larger than \1 . This contradicts
+( 13 ), where the second sign change of \1 is
+in position \1 . Therefore
+ \1 
+ Finally, \1 and
+ \1 , so
+ \1 . Consider the bordered matrix 
+ \1 
+ The Schur complement of \1 in \1 is
+ \1 .
+Since \1 has inertia \1 , it follows that \1 has
+inertia \1 . On the other hand, the Schur complement of \1 in \1 is \1 
+Therefore the inertia of \1 is the inertia of \1 plus
+ \1 , which yields the desired result.
+∎ 
+ We now transfer Lemma  3.5 from weighted
+Ferrers quotients to ordinary chain graphs. The case with no isolated
+vertices follows by a limiting argument. 
+ Theorem 3.6 . 
+ Let \1 be a bipartite chain graph on \1 vertices. If
+ \1 are the eigenvalues of \1 , then
+ \1 
+ Proof. 
+ Let \1 be the incidence rank of \1 , and let \1 be a bipartite
+incidence matrix of \1 . After ordering the vertices according to the
+two parts, 
+ \1 
+ (14) 
+ Multiplying all rows and columns indexed by the second part of the
+bipartition by \1 leaves the determinant unchanged and transforms
+ \1 into \1 . Hence 
+ \1 
+ Hence the nonzero eigenvalues of \1 occur in opposite pairs.
+Since
+ \1 , there are exactly
+ \1 such pairs. In particular, if \1 , there is at most one.
+Thus \1 has at most one positive and at most one negative
+eigenvalue. Since \1 is positive semidefinite of rank one,
+rank-one interlacing shows that \1 has at most two positive and
+at most one negative eigenvalue. Hence at most one of \1 is nonzero, so \1 
+This proves the asserted inequality when \1 . 
+ Assume now that \1 , and let \1 be the number of isolated
+vertices of \1 . If \1 , Lemma  3.5 
+gives the required inequality for \1 . Since \1 has inertia
+ \1 , Lemma  3.3 shows that the tail
+ \1 consists of the tail of \1 together with
+zeros. Hence the asserted inequality follows.
+Suppose that \1 . For \1 , put 
+ \1 
+ Lemma  3.5 applies to \1 , and \1 
+The ordered eigenvalues of a real symmetric matrix depend continuously
+on its entries, so the required inequality passes to
+ \1 . Since \1 and \1 has inertia \1 , \1 has at
+least three positive eigenvalues. Thus adjoining a zero changes
+neither its two largest eigenvalues nor \1 
+because every new product involving the adjoined eigenvalue is zero. Lemma  3.3 therefore gives the required
+inequality for \1 .
+∎ 
+ The tail inequality controls all pairwise products below the two
+largest eigenvalues. A nonsingular binary \1 minor now turns
+that qualitative control into a numerical gap uniform over all chain
+graphs of incidence rank at least two. 
+ For a real matrix \1 of rank \1 , write \1 
+for the positive square roots of the nonzero eigenvalues of
+ \1 , listed with multiplicity in decreasing order. These
+are the nonzero singular values of \1 .
+Let \1 be a bipartite graph on \1 vertices, and let
+ \1 be a bipartite incidence matrix of \1 . Put \1 , the incidence rank of \1 .
+For brevity, write \1 
+By ( 14 ), the nonzero eigenvalues of \1 are
+ \1 . 
+ Lemma 3.7 . 
+ Let \1 be a chain graph of incidence rank at least two and put \1 . Then 
+ \1 
+ Proof. 
+ Write \1 . Since \1 has exactly \1 entries equal to
+one and \1 has \1 entries equal to one, 
+ \1 
+ Therefore 
+ \1 
+ Since \1 
+separating the pairs involving the two largest eigenvalues gives 
+ \1 
+ Consequently, 
+ \1 
+ \1 
+ The positive eigenvalues of \1 begin with
+ \1 . Since \1 and \1 is positive
+semidefinite of rank one, rank-one interlacing gives
+ \1 
+Together with Theorem  3.6 , this implies 
+ \1 
+ (15) 
+ By hypothesis, \1 , so \1 contains a nonsingular
+ \1 submatrix \1 . Up to row and column permutations, \1 is
+either \1 or \1 
+The first has both squared singular values equal to one. For the
+second, 
+ \1 
+ Thus \1 is either \1 or \1 , and hence 
+ \1 
+ (16) 
+ Let \1 consist of the two columns of \1 containing \1 . After
+permuting rows and columns, write 
+ \1 
+ Then 
+ \1 
+ Both \1 and \1 are positive
+semidefinite. Eigenvalue monotonicity, together with the equality of
+the nonzero spectra of \1 and \1 and
+similarly for \1 , gives 
+ \1 
+ (17) 
+ Consequently, ( 15 ), ( 16 ) and ( 17 ) yield 
+ \1 
+ ∎ 
+ We now combine the preceding estimates with the structural reduction.
+The defect bound first forces an edge-maximal maximizer into incidence
+rank one, where the integer optimization determines its value. We
+then return to an arbitrary maximizer and analyze equality in the
+variational threshold to obtain uniqueness. 
+ Proof of Theorem  1.1 . 
+ We first determine the maximum value. Choose an \1 -vertex graph
+ \1 maximizing \1 and, among all such maximizers, choose one
+with the largest number of edges. By
+Proposition  2.7 , \1 is connected and
+ \1 is a chain graph. Put 
+ \1 
+ and let \1 be the incidence rank of \1 . Recall that
+ \1 is the negative eigenvalue of \1 . By the maximality of \1 , ( 5 ) and
+( 6 ) give 
+ \1 
+ If \1 , then \1 and \1 , contradicting the
+preceding lower bound. If \1 , then put
+ \1 
+Since \1 , Lemma  3.7 gives
+ \1 . Using the definition of \1 and expanding \1 , we obtain 
+ \1 
+ \1 
+ \1 
+ \1 
+ This together with the upper bound in ( 7 ) gives
+ \1 
+However, 
+ \1 
+ Since \1 , it follows that
+ \1 , a contradiction. Thus \1 is
+also impossible. 
+ Therefore \1 . Hence \1 consists of a complete
+bipartite graph and isolated vertices, so
+ \1 for some \1 with \1 .
+Proposition  2.3 and
+( 5 ) give 
+ \1 
+ Together with the preceding lower bound, this yields
+ \1 . It follows that 
+ \1 
+ (18) 
+ Together with ( 5 ), this proves
+( 3 ). 
+ We now determine the equality case. Let \1 be any \1 -vertex graph
+attaining equality in ( 3 ). We first show that \1 
+is connected. Suppose
+otherwise. If its two largest eigenvalues arise from distinct
+components of orders \1 and \1 , then they are the spectral
+radii of those components, and hence 
+ \1 
+ a contradiction.
+Thus both eigenvalues arise from one component \1 of order \1 ,
+and \1 . If \1 , applying ( 3 ) at order \1 and then Lemma  2.5 
+gives \1 
+again a contradiction. 
+ It remains to consider \1 . Since \1 is connected and
+contributes two eigenvalues, \1 . Write \1 for the graph obtained from \1 by adjoining a pendant vertex. Up to isomorphism, the connected graphs of orders
+ \1 , \1 , and \1 are exactly those listed below, and direct
+calculation gives 
+ \1 
+ where \1 denotes a negative root of \1 .
+Descartes’ rule applied after replacing \1 by \1 shows that it is
+the unique negative root. Since the polynomial is negative at
+ \1 and positive at \1 , we have
+ \1 , and hence \1 
+All the other entries in the table are also less than \1 . Therefore
+ \1 .
+By ( 5 ) and
+Lemma  2.5 ,
+ \1 
+contrary to \1 . Thus \1 is connected. 
+ Consequently, \1 is irreducible. Choose a positive unit Perron
+eigenvector \1 of \1 and a unit eigenvector
+ \1 for its second largest eigenvalue, and set
+ \1 
+For \1 , adding the edge \1 changes
+ \1 
+by \1 , while deleting it changes this sum by
+ \1 . Lemma  2.1 and the optimality of \1 
+therefore give 
+ \1 
+ (19) 
+ Define \1 by \1 and, for \1 ,
+ \1 
+Equation ( 19 ) shows that every one-entry of
+ \1 remains one in \1 . For a zero entry, it gives
+ \1 , so the definition of \1 changes that
+entry to one exactly when \1 . Each such change contributes
+ \1 to the Rayleigh sum. Therefore 
+ \1 
+ By ( 18 ) and Lemma  2.1 , 
+ \1 
+ Thus equality holds throughout, and
+ \1 attains the
+maximum in Lemma  2.1 for \1 . 
+ Since \1 entrywise and \1 is irreducible,
+ \1 is irreducible. Its Perron eigenvalue is therefore
+simple. The equality statement in Lemma  2.1 shows that
+ \1 has an orthonormal basis consisting of a positive Perron
+eigenvector \1 of \1 and an eigenvector
+ \1 for its second largest eigenvalue. Since both
+pairs are orthonormal bases of \1 , 
+ \1 
+ In particular, \1 
+The definition of \1 and the preceding identity satisfy the
+hypotheses of Lemma  2.6 . Hence the graph
+with adjacency matrix \1 is a chain graph. 
+ Let \1 be the chain graph with adjacency matrix
+ \1 . If \1 had incidence rank zero, then its
+bipartite incidence matrix, and hence \1 , would be zero.
+Thus \1 , giving
+ \1 , a contradiction.
+If \1 had incidence rank at least two, the preceding argument
+excluding \1 , applied to
+ \1 , would give
+ \1 
+On the other hand, \1 and
+( 7 ) give 
+ \1 
+ again a contradiction. Hence \1 has incidence rank one.
+As observed after Proposition  2.7 , an
+incidence-rank-one chain graph consists of a complete bipartite graph
+and isolated vertices. Hence
+ \1 for some \1 with \1 .
+Since \1 is a global maximizer,
+Proposition  2.3 gives, after relabelling,
+ \1 
+ It remains to show that \1 . Set 
+ \1 
+ Since the rows of \1 are constant on each of
+the \1 -, \1 -, and \1 -parts, the image of \1 is contained
+in the three-dimensional space of vectors that are constant on these
+parts. Lemma  2.2 gives
+ \1 , so its image is exactly this space. 
+ The same lemma shows that \1 has two positive eigenvalues
+and one negative eigenvalue \1 . Since \1 is a
+maximizing two-dimensional subspace for \1 , it is the
+positive spectral subspace. Let \1 be a unit eigenvector for
+ \1 . Since
+ \1 , it belongs to the image
+of \1 and is therefore constant on each part. Denote its
+values on the \1 -, \1 -, and \1 -parts by \1 ,
+respectively. The first two coordinates of
+ \1 give 
+ \1 
+ Since \1 , these equations show that
+ \1 are all nonzero. 
+ The vectors \1 form an orthonormal basis
+of the space of vectors that are constant on the three parts. The
+normalized characteristic vectors of the three parts form another
+orthonormal basis of the same space. Since the sum of the outer
+products of an orthonormal basis depends only on the subspace, for
+distinct vertices within the \1 -, \1 -, and \1 -parts, respectively, 
+ \1 
+ Moreover,
+ \1 . Since all three terms are positive, each
+of the preceding three quantities is positive. 
+ For vertices in the \1 - and \1 -parts, the same comparison of the two
+orthonormal bases and the first eigenvector equation give
+ \1 
+Similarly, between the \1 - and \1 -parts,
+ \1 
+These are exactly the off-diagonal positions at which \1 
+has entry one. Hence \1 
+whenever \1 and \1 
+ We have already shown that every one-entry of \1 remains one in
+ \1 . Conversely, let \1 and suppose that
+ \1 . Then \1 by the preceding
+inequality. If \1 , however,
+( 19 ) would give \1 , a
+contradiction. Hence \1 . Thus \1 and \1 
+have the same off-diagonal one-entries. Their diagonal entries are
+also equal to one, so \1 
+Consequently, \1 . Conversely,
+( 5 ) shows that \1 attains equality.
+Finally, ( 5 ) and ( 6 ) give 
+ \1 
+ with equality if and only if \1 .
+This completes the proof. 
+ ∎ 
+ References 
+ [1] 
+M. Aouchiche and P. Hansen,
+ A survey of automated conjectures in spectral graph theory ,
+Linear Algebra Appl. 432 (2010) 2293–2322.
+ [2] 
+D. Cvetković and P. Rowlinson,
+ The largest eigenvalue of a graph: A survey ,
+Linear Multilinear Algebra 28 (1990) 3–33.
+ [3] 
+D. Cvetković and S. Simić,
+ The second largest eigenvalue of a graph (a survey) ,
+Filomat 9 (1995) 449–472.
+ [4] 
+K. C. Das, S. A. Mojallal and S. Sun,
+ On the sum of the \1 largest eigenvalues of graphs and maximal
+energy of bipartite graphs ,
+Linear Algebra Appl. 569 (2019) 175–194.
+ [5] 
+J. Ebrahimi B., B. Mohar, V. Nikiforov and A. S. Ahmady,
+ On the sum of two largest eigenvalues of a symmetric matrix ,
+Linear Algebra Appl. 429 (2008) 2781–2787.
+ [6] 
+K. Fan,
+ On a theorem of Weyl concerning eigenvalues of linear
+transformations I ,
+Proc. Natl. Acad. Sci. USA 35 (1949) 652–655.
+ [7] 
+I. Gutman,
+ The energy of a graph ,
+Ber. Math. Stat. Sekt. Forschungsz. Graz 103 (1978)
+1–22.
+ [8] 
+L. Y. Kolotilina,
+ Upper bounds for the second largest eigenvalue of symmetric
+nonnegative matrices ,
+J. Math. Sci. 191 (2013) 75–88.
+ [9] 
+H. Kumar, L. Liu, H. Monterde, S. Pragada and M. Tait,
+ Maximum spectral sum of graphs , (2026),
+arXiv:2604.00512.
+ [10] 
+H. Kumar, B. Mohar, S. Pragada and H. Zhan,
+ Convex combination of first and second eigenvalues of trees , (2026),
+arXiv:2601.10036.
+ [11] 
+B. Mohar,
+ On the sum of \1 largest eigenvalues of graphs and symmetric
+matrices ,
+J. Combin. Theory Ser. B 99 (2009) 306–313.
+ [12] 
+V. Nikiforov,
+ Linear combinations of graph eigenvalues ,
+Electron. J. Linear Algebra 15 (2006) 329–336.
+ [13] 
+V. Nikiforov,
+ Beyond graph energy: Norms of graphs and matrices ,
+Linear Algebra Appl. 506 (2016) 82–138.
+ [14] 
+A. Pinkus,
+ Totally Positive Matrices ,
+Cambridge Tracts in Mathematics 181,
+Cambridge University Press, Cambridge, 2010.
+ [15] 
+I. Rocha,
+ Partial sum of eigenvalues of random graphs ,
+Appl. Math. 65 (2020) 609–618.
+ [16] 
+Z. Stanić,
+ Inequalities for Graph Eigenvalues ,
+London Mathematical Society Lecture Note Series 423,
+Cambridge University Press, Cambridge, 2015.
+ [17] 
+S. Sun, Y. Min and K. C. Das,
+ Extremal graphs for the sum of two largest eigenvalues ,
+AIMS Math. 11 (2026) 15028–15036.
+ [18] 
+S. Sun, Y. Min and K. C. Das,
+ Sum of the \1 largest eigenvalues of symmetric matrices:
+Theory and applications , (2026)
+arXiv:2605.26707.
+ [19] 
+X. Wang,
+ A simple proof of Descartes’s rule of signs ,
+Amer. Math. Monthly 111 (2004) 525–526.
+ Experimental support, please
+ view the build logs 
+ for errors. Generated by
+ L
+ A 
+ T
+ E 
+ xml 
+ .
+ Instructions for reporting errors 
+ We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+ support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+ methods listed below: 
+ Click the "Report Issue" ( 
+ ) button, located in the page header. 
+ Tip: You can select the relevant text first, to include it in your report. 
+ Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+ may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+ should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+ all. 
+ Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . 
+ We gratefully acknowledge support from
+ our major funders ,
+ member institutions , ,
+ and all contributors.
+ About 
+ · 
+ Help 
+ · 
+ Contact 
+ · 
+ Subscribe 
+ · 
+ Copyright 
+ · 
+ Privacy 
+ · 
+ Accessibility 
+ · 
+ Operational Status (opens in new tab) 
+ Major funding support from 

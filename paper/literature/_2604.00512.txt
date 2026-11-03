@@ -1,0 +1,1182 @@
+ 
+ Report GitHub Issue 
+ × 
+ Title: 
+ Content selection saved. Describe the issue below: 
+ Description: 
+ Submit without GitHub 
+ Submit in GitHub 
+ arXiv is now an independent nonprofit! 
+ Learn more 
+ × 
+ Back to arXiv 
+ Why HTML? 
+ Report Issue 
+ Back to Abstract 
+ Download PDF 
+ Abstract 
+ 1 Introduction 
+ 2 Asymptotic result suffices 
+ 3 Enter graphons 
+ 4 Proof of Theorem 
+ 4.1 Adjacency criterion 
+ 4.2 Ellipse equation for \1 and \1 
+ 4.3 \1 and \1 are step functions with at most \1 steps 
+ 4.4 Monotonicity of \1 and \1 
+ 4.5 Back to (weighted) graphs 
+ 4.6 Structure of \1 
+ 4.7 Exterior algebra 
+ 4.8 Matrix sum of squares 
+ 5 Concluding remarks 
+ References 
+ License: CC BY 4.0
+arXiv:2604.00512v2 [math.CO] 03 May 2026 
+ Maximum spectral sum of graphs 
+ Hitesh Kumar
+ Lele Liu
+ Hermie Monterde
+ Shivaramakrishna Pragada
+ Michael Tait
+ Abstract 
+ For a graph \1 of order \1 , the spectral sum of \1 is defined to be the sum \1 ,
+where \1 (resp. \1 ) is the largest (resp. second largest) adjacency eigenvalue of \1 .
+Ebrahimi, Mohar, Nikiforov and Ahmady (2008) conjectured that the spectral sum 
+ \1 
+ for any graph \1 . We prove this conjecture by combining tools from the theory of graph limits,
+convex geometry, exterior algebra and convex optimization. The techniques developed are of independent interest. 
+ Keywords: Spectral sum, Second eigenvalue, Graphon, Convexity, Exterior algebra, Matrix Sum of Squares 
+ MSC2020: 05C50, 15A18, 15A60, 52A38, 15A75, 15A39 
+ 1 Introduction 
+ Consider a simple undirected graph \1 with vertex set \1 .
+The adjacency matrix of \1 is defined to be the square matrix \1 of order \1 , where \1 if
+ \1 and \1 are adjacent, and \1 otherwise. We order the eigenvalues of \1 as
+ \1 . The first eigenvalue \1 is called
+the spectral radius of \1 . The sum of the first two largest eigenvalues \1 
+is called the spectral sum of \1 . For \1 , let \1 
+denote the set of simple undirected graphs on \1 vertices. We denote the complement of \1 by \1 . 
+ Extremization of graph eigenvalues, particularly \1 and \1 , over various
+graph families is an important and well-studied problem in spectral graph theory, see the
+surveys [ 9 , 10 , 28 ] . Investigation of combinations
+of eigenvalues, such as Nordhaus-Gaddum type sums \1 
+ [ 2 , 24 , 29 ] , \1 
+( spectral gap ) [ 27 , 28 ] , \1 ( spectral spread )
+ [ 6 ] , and \1 (a measure of bipartiteness)
+ [ 8 ] , has also led to interesting results, techniques and applications. 
+ Recall that the energy \1 of a graph \1 on \1 vertices is defined
+as the sum of the absolute values of eigenvalues of \1 . Equivalently, 
+ \1 
+ Thus, the sum of the \1 largest eigenvalues of a graph sheds light on the energy of the graph.
+Mohar [ 21 ] established an upper bound on \1 for
+ \1 and provided further details on its role in theoretical chemistry.
+Mohar’s bound was improved further by Das, Mojallal and Sun [ 11 ] .
+Gernert 1 1 
+ 1 
+ as described by Nikiforov [ 23 ] . investigated the case \1 
+and proved that the inequality \1 holds for various graph
+families, including regular graphs, triangle-free graphs and planar graphs. Gernert asked whether
+this inequality holds for any graph. Nikiforov [ 23 ] answered this question
+in the negative and also proved that the spectral sum of graphs in \1 is upper
+bounded by \1 . Later, Ebrahimi, Mohar, Nikiforov, and
+Ahmady [ 12 ] presented an improved upper bound on
+the spectral sum as described below. 
+ Theorem 1.1 ( [ 12 ] ) . 
+ For any graph \1 , we have 
+ \1 
+ Moreover, in [ 12 ] the authors constructed an infinite
+family of graphs of order \1 which have spectral sum \1 and
+suggested that \1 is the correct upper bound for the spectral sum. In this paper, we prove their conjecture. 
+ Theorem 1.2 . 
+ For any \1 , we have 
+ \1 
+ We prove Theorem 1.2 by translating the problem to graphons and
+then utilizing analytic tools to show that the spectral sum of graphons is at most \1 
+(Theorem 3.5 ). Our proof is inspired by Terpai’s [ 29 ] 
+(cf. [ 15 ] ) maximization proof of the sum \1 ,
+and Breen, Riasanovsky, Tait and Urschel’s [ 6 ] maximization
+proof of the spread \1 using graphons. However, there is a significant
+difficulty when considering the spectral sum that we must overcome here which requires novel methods.
+When considering either \1 or \1 ,
+both of these maximization problems can be expressed as the maximization of a two-term sum
+of quadratic forms over pairs of unit vectors (or \1 -functions when working with graphons).
+Because of this, one can do alterations to the purported extremal graph (or graphon)
+and its eigenvectors and estimate from below the objective function by considering
+Rayleigh quotients. The major difficulty with the spectral sum is that in this case,
+one has to maximize a two-term sum of quadratic forms over pairs of orthogonal 
+vectors. The orthogonality condition usually breaks down when one tries to modify the eigenvector(s)
+on a subset of vertices, and so any modification needs to be chosen carefully. We introduce some new
+ideas to overcome this, and we believe that the techniques used in this paper may find applications
+in other problems where one wishes to optimize a sum of quadratic forms over orthogonal vectors. 
+ High-level outline of our proof of Theorem 1.2 . We first
+show that it suffices to prove the weaker bound \1 for the spectral sum of
+graphs (Theorem 2.2 ) in Section 2 .
+We then give a brief introduction to graphons and relate the spectral sum of graphs with that of
+graphons (Lemma 3.4 ) in Section 3 . Thus, it suffices
+to show that the spectral sum of graphons is at most \1 (Theorem 3.5 ).
+We prove the result for graphons in Section 4 . We begin with an
+extremal graphon \1 which has maximum spectral sum and maximum value of its largest eigenvalue
+among all such graphons. We establish the adjacency criteria for \1 (Lemma 4.1 ) which describes
+the points \1 where \1 . Assuming \1 and \1 (resp. \1 and \1 )
+denote the largest (resp. the second largest) eigenvalue and the corresponding eigenfunction of \1 ,
+we show that \1 and \1 satisfy an ellipse equation for a.e. \1 (Lemma 4.2 ).
+Using Carathéodory’s Theorem from convex geometry, we then prove that \1 and \1 can be assumed
+to be step-functions with at most \1 steps a.e. (Lemma 4.6 ). We reduce
+the problem to analyzing the spectral sum of weighted graph(s) \1 of order at most \1 
+(Lemma 4.8 ). Using structural arguments, we determine the possibilities
+for \1 in subsection 4.6 and show that it suffices to upper bound the
+spectral sum of the unique weighted graph \1 shown in Figure 1 (Lemma 4.11 ).
+We prove Lemma 4.11 by first reducing it to a positive semi-definiteness verifiability
+problem (Lemma 4.14 ) using exterior algebra, and then using the matrix sum of squares
+technique from convex optimization to do the verification. 
+ 2 Asymptotic result suffices 
+ We observe the following using a graph-blowup argument originally by Nikiforov (cf. [ 7 ] ). 
+ Lemma 2.1 . 
+ Suppose for any graph \1 , we have 
+ \1 
+ Then, Theorem 1.2 holds for any \1 . 
+ Proof. 
+ For a graph \1 , consider \1 , the graph obtained by replacing every
+vertex of \1 by an empty graph of order \1 , where the copies of two vertices of \1 are
+adjacent in \1 if and only if the two vertices are adjacent in \1 . The graph \1 
+is called the (open) - \1 - blowup of \1 . It is known (see [ 22 ] )
+that the eigenvalues of \1 are precisely \1 \1 and \1 
+additional \1 ’s. By assumption, we have 
+ \1 
+ Since \1 and \1 , it follows that 
+ \1 
+ Dividing by \1 and considering the limit as \1 , we get 
+ \1 
+ completing the proof of the lemma.
+∎ 
+ Thus, in order to prove Theorem 1.2 , it is sufficient
+to prove the following asymptotic result. 
+ Theorem 2.2 . 
+ For any graph \1 , we have 
+ \1 
+ 3 Enter graphons 
+ Graphons are analytic objects that generalize graphs, originally defined in an influential
+paper by Lovász and Szegedy [ 16 ] and the monograph by Lovász [ 18 ] (cf. [ 4 ] ).
+We first give the necessary background on graphons, which is needed for further development in this paper. 
+ A graphon is a symmetric Lebesgue measurable function \1 .
+We denote the set of graphons by \1 . A graphon \1 is
+called step-graphon if there exists a partition \1 of \1 
+such that \1 is constant on \1 for all \1 . If \1 
+is a symmetric (i.e., \1 if and only if \1 ) measurable set,
+then its indicator function \1 , defined by 
+ \1 
+ is clearly a step-graphon. A graphon generalizes the notion of a graph as follows:
+given a (unweighted) graph \1 with vertex set \1 ,
+one can naturally define a subset 
+ \1 
+ which is symmetric and measurable, whose indicator function (which we denote by \1 for brevity)
+is a step-graphon. Clearly, for a given graph \1 , many graphons can be associated corresponding to
+different vertex labellings of \1 . Hence, an equivalence relation is defined on the set of graphons
+ \1 using the cut norm defined below so that for any graph \1 there is a unique
+(up to isomorphism) equivalence class of graphons corresponding to \1 . 
+ For \1 , its cut norm \1 is defined as 
+ \1 
+ Let \1 be the cut semidistance on \1 given by 
+ \1 
+ where \1 , and \1 . Define
+a relation \1 on \1 as follows:
+ \1 if and only if \1 . It is known that \1 is an equivalence relation and the quotient space \1 
+is a compact metric space, see [ 17 , Theorem 5.1] . 
+ For a measurable subset \1 , we will denote its Lebesgue measure by \1 .
+We say that two measurable subsets of \1 are equal almost everywhere (a.e. for short)
+if their symmetric difference has measure zero. Consider the Hilbert space \1 
+of square-integrable functions from \1 to \1 with inner product given by
+ \1 . For \1 , define the
+Hilbert-Schmidt operator \1 by 
+ \1 
+ for \1 and a.e. \1 . As \1 is symmetric and bounded,
+it is known that \1 is a compact Hermitian operator (cf. [ 3 ] ).
+This means \1 has a discrete, real spectrum with only possible accumulation point \1 .
+For two functions \1 and \1 , we define 
+ \1 
+ Recall the well-known Min-Max Theorem that relates eigenvalues to quadratic forms. 
+ Theorem 3.1 (Min-Max Theorem) . 
+ Let \1 be a compact Hermitian operator on a Hilbert space \1 with inner product
+ \1 . Let \1 denote a subspace of \1 .
+Then the \1 -th largest eigenvalue \1 of \1 is given by 
+ \1 
+ Moreover, if \1 are mutually orthonormal vectors such that
+ \1 for \1 , then \1 is a \1 -eigenvector for \1 . 
+ Let \1 and \1 denote the largest and the second largest eigenvalue of \1 .
+Then, by Theorem 3.1 , we have 
+ \1 
+ (3.1) 
+ Furthermore, if \1 is a unit function such that \1 ,
+then \1 is a \1 -eigenfunction of \1 (up to a set of measure zero). Similarly,
+if \1 is a \1 -eigenfunction and \1 is a unit function
+orthogonal to \1 such that \1 , then \1 is a \1 -eigenfunction
+of \1 . Also, one can always choose a \1 -eigenfunction \1 which is non-negative. 
+ We define \1 and we call it the spectral sum 
+of the graphon \1 . We note the following easy consequence of Theorem 3.1 ,
+which we will use repeatedly. 
+ Lemma 3.2 . 
+ For \1 , we have 
+ \1 
+ The following result shows that \1 and \1 are continuous functions on
+the space \1 w.r.t. \1 . 
+ Theorem 3.3 (cf. [ 4 , Theorem 6.6] or [ 25 , Theorem 11.54] ) . 
+ Let \1 be a sequence of graphons converging to \1 with
+respect to \1 . Then as \1 , 
+ \1 
+ So if \1 , then \1 and \1 .
+By compactness of the quotient space \1 , the following optimization problem is well defined: 
+ \1 
+ In particular, there exists a graphon (which we call extremal graphon ) that achieves the maximum. 
+ As expected, the spectral sum of a graph \1 is related to the spectral sum of its
+corresponding graphon \1 as described in the following lemma. It can be proved
+by replacing the eigenvectors of \1 with their corresponding step-functions,
+see [ 15 ] or [ 29 ] for details. 
+ Lemma 3.4 . 
+ For a graph \1 of order \1 , we have 
+ \1 
+ In view of Lemma 3.4 , the following result implies
+Theorem 2.2 . 
+ Theorem 3.5 . 
+ For any graphon \1 , we have \1 . 
+ We prove Theorem 3.5 in the following section. 
+ 4 Proof of Theorem 3.5 
+ Throughout this section, \1 will denote a graphon that
+maximizes the spectral sum \1 over \1 and
+has the maximum value of its largest eigenvalue among all such graphons. 
+ We will denote by \1 and \1 (resp. \1 and \1 ) the largest (resp. the second largest)
+eigenvalue and the corresponding eigenfunction of \1 . This means 
+ \1 
+ (4.1) 
+ and 
+ \1 
+ (4.2) 
+ for a.e. \1 . We further assume that \1 
+and \1 . Throughout, if the limits of integration of an integral
+are not specified, then it should be taken to be equal to \1 . 
+ In [ 12 ] , the authors constructed an infinite
+family of graphs of order \1 with spectral sum \1 . In light of
+Lemma 3.4 , we see that 
+ \1 
+ (4.3) 
+ Since \1 , we conclude that \1 . In particular, this
+means that \1 is always positive. We will often use this technical detail without mention in later proofs. 
+ 4.1 Adjacency criterion 
+ Since \1 is the eigenfunction for \1 , we can assume that \1 is non-negative.
+Define the positive support of \1 to be the set \1 .
+The negative support \1 and the zero set \1 are defined analogously.
+The support of \1 is given by \1 . For convenience,
+for any \1 , we define 
+ \1 
+ We first observe the following eigen-entry condition for an element \1 
+to be contained in the support of the extremal graphon \1 . When translated to graphs,
+this condition tells us when two vertices are adjacent in the extremal graph, and hence
+we call it the adjacency criterion . 
+ Lemma 4.1 (Adjacency) . 
+ For a.e. \1 , 
+ \1 
+ Proof. 
+ Let \1 , and define \1 and \1 similarly.
+Consider the graphon \1 defined by 
+ \1 
+ By Lemma 3.2 , we have 
+ \1 
+ \1 
+ \1 
+ \1 
+ Since \1 by the choice of \1 , we have \1 ,
+and both integrals in the last inequality must be \1 . This implies \1 a.e. on \1 . 
+ To address the behaviour on \1 , we consider the first eigenvalue \1 .
+Applying ( 3.1 ) and making use of the fact that \1 a.e. on \1 yield 
+ \1 
+ \1 
+ \1 
+ \1 
+ Since \1 by the choice of \1 , we conclude \1 
+and the integral in the last inequality is 0. This implies \1 a.e. on \1 . The proof is complete.
+∎ 
+ 4.2 Ellipse equation for \1 and \1 
+ In the next lemma, we show that for the graphon \1 , the function \1 
+is constant on the interval \1 except maybe on a subset of measure zero. 
+ Lemma 4.2 (Ellipse equation) . 
+ For a.e. \1 , we have 
+ \1 
+ Proof. 
+ Suppose the following is true: for any disjoint subintervals \1 
+and \1 of \1 with \1 , we have 
+ \1 
+ (4.4) 
+ Then \1 is a constant function a.e.. Since 
+ \1 
+ the constant is \1 and the assertion holds. In what follows,
+we aim to establish equation ( 4.4 ). 
+ Consider disjoint subintervals \1 and \1 of \1 
+with length \1 . Without loss of generality, assume that 
+ \1 
+ For any \1 sufficiently small, consider the (unique) piecewise linear
+function \1 that stretches \1 to length \1 , shrinks \1 
+to length \1 , and shifts only the elements in between \1 and \1 .
+Clearly, \1 is an orientation-preserving homeomorphism such
+that \1 and \1 . Furthermore, \1 is differentiable a.e.
+with derivative \1 given by 
+ \1 
+ Let \1 .
+By Lemma 4.1 , we see that \1 .
+Consider the corresponding graphon \1 , and the functions 
+ \1 
+ (4.5) 
+ where \1 .
+Clearly, \1 . 
+ Now, we compute the \1 -norms of \1 , \1 , and \1 .
+Applying the change of variable \1 and using ( 4.5 ), we obtain 
+ \1 
+ \1 
+ \1 
+ \1 
+ \1 
+ \1 
+ \1 
+ (4.6) 
+ Similar to the calculation above, we have 
+ \1 
+ (4.7) 
+ On the other hand, by ( 4.5 ) we see 
+ \1 
+ since \1 . It follows that 
+ \1 
+ (4.8) 
+ Next, we shall compute the quadratic forms \1 ,
+ \1 and \1 .
+Using the substitutions \1 and \1 , we see that 
+ \1 
+ \1 
+ \1 
+ \1 
+ (4.9) 
+ Similarly, \1 , and 
+ \1 
+ \1 
+ \1 
+ \1 
+ \1 
+ \1 
+ \1 
+ Combining the above equations with ( 4.5 ), we deduce that 
+ \1 
+ \1 
+ \1 
+ \1 
+ (4.10) 
+ Finally, we compare \1 and \1 . By the choice of \1 ,
+Lemma 3.2 and ( 4.6 ) – ( 4.10 ), we find 
+ \1 
+ \1 
+ \1 
+ \1 
+ \1 
+ \1 
+ as \1 . If \1 ,
+then choosing \1 sufficiently small makes the right-hand side of the above inequality negative,
+which is a contradiction. We conclude that equation ( 4.4 ) holds and the proof is complete.
+∎ 
+ 4.3 \1 and \1 are step functions with at most \1 steps 
+ Throughout, let 
+ \1 
+ By Lemma 4.2 , we see that \1 is dense in \1 . So in what follows,
+we will work with \1 (or \1 ) so that we can assume the eigenvalue-equation
+and the ellipse equation without worry. Let 
+ \1 
+ We first prove a technical lemma about the eigenfunctions \1 and \1 . 
+ Lemma 4.3 . 
+ Let \1 be a measurable subset with positive measure.
+Suppose there exist points \1 and non-negative real numbers
+ \1 with \1 such that the following two moment constraints are satisfied: 
+ \1 
+ (4.11) 
+ Then the linear moments are also preserved; that is, 
+ \1 
+ By symmetry, a similar assertion holds if \1 . 
+ Proof. 
+ Consider a partition of \1 into \1 measurable subsets \1 
+such that \1 for all \1 . Define a new graphon \1 with
+respect to the points \1 and the subsets \1 such that 
+ \1 
+ Essentially, we are cloning the point \1 over \1 . Moreover, since \1 
+for all \1 , the graphons \1 and \1 agree on \1 .
+Define functions \1 using a similar cloning operation, i.e., 
+ \1 
+ (4.12) 
+ We have the following two claims. 
+ Claim 4.1 . 
+ \1 , and \1 . 
+ Proof of Claim 4.1 . 
+ Using ( 4.11 ) we get 
+ \1 
+ Here, \1 . Again, by Lemma 4.2 , \1 
+is a function of \1 given by 
+ \1 
+ Averaging with weights \1 and using the first constraint in ( 4.11 ) gives 
+ \1 
+ (4.13) 
+ On the other hand, integrating the ellipse equation from Lemma 4.2 over \1 yields 
+ \1 
+ which is equivalent to 
+ \1 
+ (4.14) 
+ Combining ( 4.13 ) and ( 4.14 ) we see
+ \1 . Thus 
+ \1 
+ Finally, since \1 , we have 
+ \1 
+ and hence the second constraint in ( 4.11 ) gives us 
+ \1 
+ finishing the proof of the claim.
+∎ 
+ Claim 4.2 . 
+ We have 
+ \1 
+ (4.15) 
+ and 
+ \1 
+ (4.16) 
+ Proof of Claim 4.2 . 
+ We only prove ( 4.15 ); the proof of ( 4.16 ) is similar.
+Expand \1 into the following blocks 
+ \1 
+ \1 
+ \1 
+ \1 
+ Note that the second line equals \1 , while the third line can be written as
+ \1 by ( 4.12 ). So 
+ \1 
+ (4.17) 
+ where \1 . Using the
+eigenvalue-equation at \1 , we have 
+ \1 
+ (4.18) 
+ Using ( 4.18 ) at \1 we rewrite the mixed term in ( 4.17 ): 
+ \1 
+ Combining the above equation with ( 4.17 ) yields 
+ \1 
+ (4.19) 
+ Now, we compute the term \1 using the same block expansion.
+Applying ( 4.18 ) for \1 , we obtain 
+ \1 
+ \1 
+ \1 
+ Subtract this identity from ( 4.19 ) to get 
+ \1 
+ By ( 4.11 ), the first term vanishes, and we get the desired claim.
+∎ 
+ Because \1 are orthonormal, using Lemma 3.2 , we have 
+ \1 
+ \1 
+ \1 
+ Since \1 is extremal, \1 , and so the integrals in the
+last inequality must be zero. The assertion follows.
+∎ 
+ Note that in the above lemma, the assumption \1 allows
+us to specify the value of \1 on \1 , i.e., \1 
+for a.e. \1 . This is necessary for the calculation to work. 
+ Next, we recall two results from the theory of convexity. 
+ Lemma 4.4 ( [ 5 , Section 2.1.4] ) . 
+ Let \1 be a convex set and \1 be a random vector such that
+ \1 with probability one. Then \1 . 
+ For a subset \1 , the convex hull of \1 , denoted by \1 ,
+is defined to be the smallest convex set that contains it. We recall the following well-known theorem
+by Carathéodory on the convex hull of sets. 
+ Theorem 4.5 (Carathéodory’s Theorem [ 20 , Theorem 1.2.3] ) . 
+ Let \1 . If \1 , then there exist points
+ \1 and coefficients \1 with
+ \1 such that 
+ \1 
+ Equivalently, every point in \1 is a convex combination of at most \1 points of \1 . 
+ We are now ready to show that \1 are step-functions with at most 6 steps. 
+ Lemma 4.6 . 
+ We can assume that \1 has the following property: except on a set of measure zero,
+ \1 ( and therefore \1 ) takes at most \1 values on \1 
+and at most \1 values on \1 . 
+ Proof. 
+ Let \1 and define 
+ \1 
+ Recall that \1 is such that \1 .
+Define the map \1 by 
+ \1 
+ Then, by the definition of \1 and \1 , 
+ \1 
+ Using Lemma 4.4 , we see that \1 .
+By Carathéodory’s Theorem (Theorem 4.5 ), there exist points \1 
+and weights \1 with \1 such that 
+ \1 
+ which is equivalent to 
+ \1 
+ (4.20) 
+ Next, we show that necessarily 
+ \1 
+ (4.21) 
+ To this end, set \1 and partition \1 into subsets \1 
+such that \1 for all \1 . Then, ( 4.20 ) becomes 
+ \1 
+ Using Lemma 4.3 we get \1 ,
+which is equivalent to ( 4.21 ). 
+ Finally, define \1 , \1 and \1 as in the proof of
+Lemma 4.3 w.r.t. \1 , \1 ’s, and \1 ’s described above. Then,
+the proof of Lemma 4.3 gives us that \1 .
+Moreover, ( 4.15 ) implies that \1 . By the choice of \1 ,
+we see that \1 . This means \1 is an extremal graphon
+with maximum largest eigenvalue. Furthermore, by ( 4.15 ), we have
+ \1 , implying \1 is an
+ \1 -eigenfunction. Also, it is clear that
+ \1 using ( 4.16 ),
+which implies \1 is an \1 -eigenfunction. Thus, \1 
+is an extremal graphon with the property that its eigenfunctions \1 and \1 take at most 3 values on \1 .
+Now, starting with \1 and \1 and repeating the above steps,
+we can get an extremal graphon with the desired property. This completes the proof.
+∎ 
+ 4.4 Monotonicity of \1 and \1 
+ Without loss of generality, we can assume that \1 is monotonically decreasing on \1 .
+By the assumption on \1 , we see that \1 is monotonically increasing on \1 ,
+constant on \1 and monotonically decreasing on \1 . In light of Lemma 4.1 ,
+it is clear that \1 whenever \1 or \1 .
+The value of \1 is undetermined at this stage whenever \1 
+and \1 . We do have the following monotonicity property. 
+ Lemma 4.7 (Monotonicity of neighbourhoods) . 
+ The following statements hold. 
+ \1 
+ Let \1 and \1 such that \1 . If \1 , then \1 . 
+ \1 
+ Let \1 and \1 such that \1 . If \1 , then \1 . 
+ Proof. 
+ Since \1 , we have \1 and \1 .
+Since \1 , we see that 
+ \1 
+ Assertion \1 now follows from Lemma 4.1 and the assumption that \1 .
+A similar argument works for assertion \1 .
+∎ 
+ 4.5 Back to (weighted) graphs 
+ In Lemma 4.6 , we have shown that eigenfunctions \1 are step-functions
+with at most \1 steps a.e. on the interval \1 . So consider a partition
+ \1 of \1 ( \1 ) such that for \1 , we have 
+ • 
+ \1 on \1 a.e. for some numbers \1 , and 
+ • 
+ \1 on \1 a.e., where \1 is related to \1 
+by the ellipse equation in Lemma 4.2 . 
+ Define \1 . Clearly, \1 . Define a graph \1 (possibly with loops)
+such that \1 and \1 whenever \1 on \1 
+a.e. Using Lemma 4.1 it is clear that \1 for all \1 , i.e., every
+vertex in \1 has a loop. Now, consider the weighted matrix 
+ \1 
+ Here \1 is the adjacency matrix of \1 with rows and columns indexed by
+ \1 and \1 denotes the diagonal matrix with entries \1 .
+We relate the spectral sum of the extremal graphon \1 to the spectral sum of the matrix \1 . 
+ Lemma 4.8 . 
+ We have \1 and \1 . 
+ Proof. 
+ By the eigenvalue-equation ( 4.1 ) for \1 ,
+for any \1 , we have 
+ \1 
+ which is equivalent to 
+ \1 
+ This implies \1 is an eigenvalue of \1 with eigenvector \1 . 
+ Conversely, if \1 is an eigenvector for \1 ,
+then it is clear that the step-function given by 
+ \1 
+ is an eigenfunction of \1 with eigenvalue \1 . We conclude that \1 . 
+ Similarly, one can argue that \1 .
+∎ 
+ Note that the lengths \1 sum to \1 and are undetermined at this stage.
+The spectral sum of the matrix \1 depends on these lengths, equivalently on
+the diagonal matrix \1 , even if the underlying graph \1 is the same. Let us define 
+ \1 
+ and call it the spectral sum of \1 . 
+ Thus, to finish the proof of Theorem 3.5 , we only
+need to show that the spectral sum \1 is at most \1 . To that end,
+we next determine the possible graphs \1 for each \1 . 
+ 4.6 Structure of \1 
+ Precisely, we will show the following. 
+ Lemma 4.9 . 
+ The graph \1 , where \1 
+are as shown in Figure 1 . 
+ \1 \1 \1 
+ (a) \1 
+ \1 \1 \1 \1 
+ (b) \1 
+ \1 \1 \1 \1 \1 
+ (c) \1 
+ \1 \1 \1 \1 \1 \1 
+ (d) \1 
+ Figure 1 : Possibilities for \1 . The vertex labeled by \1 in the figure corresponds to \1 . 
+ We will prove Lemma 4.9 in a series of claims. We say that two
+distinct vertices in a graph are true twins if they have the same closed neighbourhoods.
+We observe that \1 cannot have true twins. 
+ Lemma 4.10 . 
+ The graph \1 is true-twin-free. 
+ Proof. 
+ Suppose \1 are true twins. Then, by the eigenvalue-equation ( 4.1 )
+for \1 , we have 
+ \1 
+ implying \1 , a contradiction.
+∎ 
+ Let us now analyze the structure of \1 for different values of \1 . 
+ Claim 4.3 . 
+ If \1 , then \1 . 
+ Proof. 
+ The case \1 is not possible. Indeed, \1 and \1 .
+This gives \1 , a contradiction. 
+ If \1 , then \1 for all choices of \1 .
+By ( 4.3 ), we know that \1 . Thus, there is no graph \1 of order \1 . 
+ Assume now that \1 . Without loss of generality, we can assume that \1 ,
+since \1 and \1 are both eigenfunctions for \1 . Then, by Lemma 4.1 ,
+we see that \1 in \1 . It is easy to check that the only graph on \1 vertices
+with at least one edge and true-twin-free is \1 (obviously with a loop on each vertex).
+∎ 
+ We already know that \1 for all \1 , i.e., each vertex of \1 has loops.
+In the proofs of the claims below, we will repeatedly use the fact that \1 is true-twin free
+(Lemma 4.10 ) and monotonicity of neighbourhoods (Lemma 4.7 ) without mention. 
+ Claim 4.4 . 
+ Suppose \1 , then \1 . 
+ Proof. 
+ In light of Lemma 4.6 , one of the following occurs: 
+ Case 1: \1 . 
+ Then, by Lemma 4.1 , \1 induce a triangle in \1 . If \1 ,
+then \1 , implying \1 and \1 are true-twins, a contradiction. If \1 ,
+then \1 , and so \1 and \1 are true-twins, again a contradiction. 
+ Case 2: \1 . 
+ We have \1 and \1 . If \1 , then \1 are adjacent to
+both \1 , implying \1 and \1 are true-twins, a contradiction. So suppose \1 . 
+ If \1 , then \1 . If \1 , then again \1 and \1 are true-twins,
+a contradiction. Thus, \1 . But then \1 and \1 are true-twins, a contradiction.
+So \1 . Arguing similarly with \1 , we see that \1 . 
+ Now, if \1 , then \1 and \1 are true-twins, a contradiction. Thus, the only
+possibility is \1 . This completely determines \1 , and we have \1 .
+∎ 
+ Claim 4.5 . 
+ If \1 , then \1 . 
+ Proof. 
+ Using Lemma 4.6 , without loss of generality, we can assume that 
+ \1 
+ Thus, \1 induce a triangle in \1 . Moreover, \1 . We consider the following cases: 
+ Case 1: \1 . 
+ Then \1 is adjacent to all vertices in \1 . This means \1 is also adjacent to all vertices,
+implying \1 and \1 are true-twins, a contradiction. 
+ Case 2: \1 and \1 . 
+ Then \1 are all adjacent to \1 . If \1 , then \1 and \1 
+are true-twins, a contradiction. So suppose \1 . This implies \1 and \1 
+are adjacent to all vertices in \1 and hence they are true-twins, a contradiction. 
+ Case 3: \1 . 
+ If \1 , then \1 and \1 are adjacent to all vertices, and hence they are true-twins,
+a contradiction. So suppose \1 . If \1 , then \1 and \1 are true-twins,
+a contradiction. So assume that \1 . We have \1 .
+If \1 , then \1 and \1 are true-twins, a contradiction. So we have \1 ,
+i.e., \1 . This completely determines \1 and we see that \1 .
+∎ 
+ Claim 4.6 . 
+ If \1 , then \1 . 
+ Proof. 
+ By Lemma 4.6 , we have 
+ \1 
+ By Lemma 4.1 we see that \1 (resp. \1 ) induce
+a triangle in \1 . We consider the following cases: 
+ Case 1: \1 . 
+ Then \1 . This implies \1 are also adjacent to all vertices in \1 .
+But then \1 and \1 are true-twins, a contradiction. 
+ Case 2: \1 and \1 . 
+ Then \1 and thus \1 are also adjacent to \1 . If \1 ,
+then \1 and \1 are true-twins. If \1 , then \1 and so \1 and
+ \1 are true-twins. In either case, we have a contradiction. 
+ Case 3: \1 and \1 . 
+ Then \1 are adjacent to \1 . 
+ Subcase 3.1: \1 . Then \1 and \1 are adjacent to all vertices in \1 , a contradiction. 
+ Subcase 3.2: \1 and \1 .   Then \1 are adjacent to \1 .
+If \1 , then \1 and \1 are true-twins. If \1 , then \1 and \1 are true-twins.
+In both cases, we have a contradiction. 
+ Subcase 3.3: \1 and \1 .   Then \1 and \1 are true-twins, a contradiction. 
+ Case 4: \1 . 
+ Arguing as above, one can show that \1 also is not adjacent to \1 . So we only need to
+worry about the edges (or non-edges) between \1 and \1 . If \1 , then \1 
+are adjacent to \1 and so \1 are true-twins, a contradiction. So assume \1 .
+If \1 , then \1 and \1 are true-twins, a contradiction. So we have \1 .
+If \1 , then \1 and \1 are true-twins, a contradiction. So the only possibility is
+ \1 . This determines the graph \1 . Indeed, \1 .
+∎ 
+ The above claims complete the proof of Lemma 4.9 . Interestingly,
+the graphs \1 are induced subgraphs of \1 . This means that if \1 ,
+we can add sub-intervals with measure zero to the list \1 so that
+we have a partition of \1 into \1 sub-intervals. Moreover, we can define \1 and \1 
+on these additional measure zero sets so that \1 always has non-negative values on \1 
+and negative values on \1 a.e. In other words, \1 on \1 a.e. where 
+ \1 
+ Thus, the problem is now reduced to proving the following. 
+ Lemma 4.11 . 
+ For \1 , let \1 be such that \1 . Let \1 denote the diagonal
+matrix with diagonal entries \1 . Let 
+ \1 
+ Then \1 . 
+ We will prove the above Lemma 4.11 using matrix sum of squares technique from
+convex optimization. Lemma 4.11 is a non-convex optimization problem which we
+first convert to a higher dimensional convex optimization problem using exterior algebra. 
+ 4.7 Exterior algebra 
+ Let \1 be a real square matrix of order \1 . For matrices \1 , let \1 denote
+the usual Kronecker product of matrices. Define 
+ \1 
+ A combinatorial interpretation of \1 is that if \1 is the adjacency matrix of a graph,
+then \1 is the adjacency matrix of the cartesian product of the graph with itself. 
+ For two vectors \1 , the wedge product of \1 and \1 is given by 
+ \1 
+ Let \1 denote the standard basis of \1 . Consider
+the \1 -nd exterior power of \1 given by 
+ \1 
+ which is an antisymmetric subspace of the tensor space \1 .
+An orthonormal basis of \1 is given by 
+ \1 
+ implying that the dimension of \1 is \1 .
+We know that \1 for all \1 .
+See, for instance, [ 19 ] for details. 
+ We observe that the subspace \1 is invariant under the linear transformation \1 . 
+ Proposition 4.12 . 
+ For all \1 , we have 
+ \1 
+ Proof. 
+ Recall that \1 for any square matrices \1 of a given order. Then 
+ \1 
+ \1 
+ \1 
+ \1 
+ \1 
+ Let \1 be the matrix whose columns are the basis
+vectors in \1 . Consider the map
+ \1 given by 
+ \1 
+ (4.22) 
+ for any \1 . 
+ Proposition 4.13 . 
+ The eigenvalues of \1 are precisely 
+ \1 
+ Proof. 
+ Suppose \1 denote the orthonormal eigenvectors (represented in the standard basis
+of \1 ) of \1 corresponding to the eigenvalues \1 ,
+respectively. For \1 , denote by \1 the representation of \1 
+in terms of the basis \1 as an element of \1 . Using
+Proposition 4.12 and the fact that \1 , we see that 
+ \1 
+ \1 
+ \1 
+ \1 
+ \1 
+ \1 
+ Thus, \1 is an eigenvector of \1 corresponding
+to the eigenvalue \1 .
+∎ 
+ Remark . 
+ It is worth mentioning that \1 defined in ( 4.22 ) is exactly the
+second additive compound matrix of \1 . More generally, let \1 ,
+and let \1 . If \1 , denote
+ \1 ,
+where \1 are the two unique elements in the symmetric difference \1 .
+The \1 -th additive compound of \1 is the matrix
+ \1 defined by 
+ \1 
+ For further results on additive compounds, we refer the reader to [ 13 ] . 
+ Letting \1 , where \1 \1 ,
+it is clear that the following implies Lemma 4.11 . 
+ Lemma 4.14 . 
+ Let \1 be such that \1 .
+Define \1 . Then 
+ \1 
+ i.e., \1 is a positive semi-definite matrix. 
+ We prove Lemma 4.14 using the sum of squares technique.
+We refer the reader to [ 26 ] for further details. 
+ 4.8 Matrix sum of squares 
+ Suppose we can find a symmetric positive semi-definite matrix \1 
+and a symmetric matrix \1 such that 
+ \1 
+ (4.23) 
+ for all \1 . Here 
+ \1 
+ Then on the unit sphere
+ \1 the second term vanishes, and we obtain 
+ \1 
+ implying Lemma 4.14 . 
+ Exact rational matrices \1 and \1 , satisfying 4.23 were found and are given here .
+For details on how this was done, refer Appendix. This completes the (long!) proof of
+Theorem 3.5 . 
+ 5 Concluding remarks 
+ In this paper, we established a tight upper bound for the spectral sum of graphs in \1 .
+The problem of characterizing graphs which attain the bound remains open
+(see Conjecture 5.1 below). 
+ For \1 , define \1 to be the graph obtained by taking the complement of
+the union of the complete bipartite graph \1 and \1 isolated vertices. In other words,
+ \1 is the join of \1 with \1 . In their survey of automated conjectures
+in spectral graph theory, Aouchiche and Hansen [ 1 ] generalized the
+tight construction for spectral sum from [ 12 ] and framed the following conjecture. 
+ Conjecture 5.1 ( [ 1 , 12 ] ) . 
+ Let \1 . Then for all graphs \1 , we have 
+ \1 
+ where if \1 with \1 , then 
+ \1 
+ Moreover, equality holds if and only if \1 . 
+ The key reason our proof of Theorem 1.2 does not fully characterize
+the extremal graphs (equivalently, extremal graphons) is because of the extra assumption on \1 that
+it has the maximum largest eigenvalue \1 among all graphons that maximize the spectral sum.
+We require this extra assumption on \1 at two places: first, in Lemma 4.1 to
+decide the value of \1 when \1 ; secondly, in Lemma 4.6 
+so that we can argue that \1 is an eigenfunction for \1 corresponding to
+eigenvalue \1 , which finally allows us to choose \1 
+in place of \1 . We believe that bypassing this assumption on \1 should lead to a characterization of the extremal graphon. 
+ The problem of maximizing/minimizing the spectral sum for trees was recently resolved by
+Kumar, Mohar, Pragada and Zhan [ 14 ] . Indeed, they considered
+the convex combination \1 \1 of \1 
+and \1 of trees of order \1 and fully characterized the extremal trees that maximize the convex combination for large \1 .
+It would be of interest to consider the convex combination of \1 and \1 for
+graphs in \1 and find the optimal upper bound. One may also try to investigate the
+spectral sum of other families; the family of \1 -free graphs is of some interest.
+The minimization of spectral sum of graphs remains an open problem. We propose the
+following conjecture for interested readers. 
+ Conjecture 5.2 . 
+ For sufficiently large \1 , the path uniquely minimizes the spectral
+sum among all connected graphs of order \1 . 
+ Acknowledgement 
+ Lele Liu is supported by the National Nature Science Foundation of China (No. 12471320),
+and Anhui Provincial Natural Science Foundation for Excellent Young Scholars (No. 2408085Y003).
+Hermie Monterde is supported in part by the Pacific Institute for the Mathematical Sciences through
+the PIMS-Simons Postdoctoral Fellowship. Michael Tait is partially supported by the US National
+Science Foundation via the grant DMS-2245556. We acknowledge the use of GPT 5.2 Plus during the ideation phase. 
+ References 
+ [1] 
+ M. Aouchiche and P. Hansen (2010) 
+ A survey of automated conjectures in spectral graph theory .
+ Linear Algebra Appl. 432 ( 9 ), pp. 2293–2322 .
+ External Links: ISSN 0024-3795,1873-1856 ,
+ Document ,
+ Link ,
+ MathReview Entry 
+ Cited by: Conjecture 5.1 ,
+ §5 .
+ [2] 
+ M. Aouchiche and P. Hansen (2013) 
+ A survey of Nordhaus-Gaddum type relations .
+ Discrete Appl. Math. 161 ( 4-5 ), pp. 466–546 .
+ External Links: ISSN 0166-218X,1872-6771 ,
+ Document ,
+ Link ,
+ MathReview Entry 
+ Cited by: §1 .
+ [3] 
+ J. Aubin (2000) 
+ Applied functional analysis .
+ Second edition , Pure and Applied Mathematics (New York) , Wiley-Interscience, New York .
+ Note: With exercises by Bernard Cornet and Jean-Michel Lasry, Translated from the French by Carole Labrousse 
+ External Links: ISBN 0-471-17976-0 ,
+ Document ,
+ MathReview (S. D. Chatterji) 
+ Cited by: §3 .
+ [4] 
+ C. Borgs, J. T. Chayes, L. Lovász, V. T. Sós, and K. Vesztergombi (2012) 
+ Convergent sequences of dense graphs II. Multiway cuts and statistical physics .
+ Ann. of Math. (2) 176 ( 1 ), pp. 151–219 .
+ External Links: ISSN 0003-486X,1939-8980 ,
+ Document ,
+ Link ,
+ MathReview (Michael Krivelevich) 
+ Cited by: Theorem 3.3 ,
+ §3 .
+ [5] 
+ S. Boyd and L. Vandenberghe (2004) 
+ Convex optimization .
+ Cambridge University Press, Cambridge .
+ External Links: ISBN 0-521-83378-7 ,
+ Document ,
+ MathReview (Dan Butnariu) 
+ Cited by: Lemma 4.4 .
+ [6] 
+ J. Breen, A. W. N. Riasanovsky, M. Tait, and J. Urschel (2022) 
+ Maximum spread of graphs and bipartite graphs .
+ Commun. Am. Math. Soc. 2 , pp. 417–480 .
+ External Links: ISSN 2692-3688 ,
+ Document ,
+ Link ,
+ MathReview Entry 
+ Cited by: §1 ,
+ §1 .
+ [7] 
+ P. Csikvári (2009) 
+ On a conjecture of V. Nikiforov .
+ Discrete Math. 309 ( 13 ), pp. 4522–4526 .
+ External Links: ISSN 0012-365X,1872-681X ,
+ Document ,
+ Link ,
+ MathReview Entry 
+ Cited by: §2 .
+ [8] 
+ P. Csikvári (2022) 
+ Note on the sum of the smallest and largest eigenvalues of a triangle-free graph .
+ Linear Algebra Appl. 650 , pp. 92–97 .
+ External Links: ISSN 0024-3795,1873-1856 ,
+ Document ,
+ Link ,
+ MathReview Entry 
+ Cited by: §1 .
+ [9] 
+ D. Cvetković and P. Rowlinson (1990) 
+ The largest eigenvalue of a graph: a survey .
+ Linear and Multilinear Algebra 28 ( 1-2 ), pp. 3–33 .
+ External Links: ISSN 0308-1087,1563-5139 ,
+ Document ,
+ MathReview (Robert C. Brigham) 
+ Cited by: §1 .
+ [10] 
+ D. Cvetković and S. Simić (1995) 
+ The second largest eigenvalue of a graph (a survey) .
+ pp. 449–472 .
+ Note: Algebra, logic & discrete mathematics (Niš, 1995) 
+ External Links: ISSN 0354-5180,2406-0933 ,
+ MathReview (Ernie S. Solheid) 
+ Cited by: §1 .
+ [11] 
+ K. C. Das, S. A. Mojallal, and S. Sun (2019) 
+ On the sum of the \1 largest eigenvalues of graphs and maximal energy of bipartite graphs .
+ Linear Algebra Appl. 569 , pp. 175–194 .
+ External Links: ISSN 0024-3795,1873-1856 ,
+ Document ,
+ MathReview (Carlos M. da Fonseca) 
+ Cited by: §1 .
+ [12] 
+ J. Ebrahimi B, B. Mohar, V. Nikiforov, and A. S. Ahmady (2008) 
+ On the sum of two largest eigenvalues of a symmetric matrix .
+ Linear Algebra Appl. 429 ( 11-12 ), pp. 2781–2787 .
+ External Links: ISSN 0024-3795,1873-1856 ,
+ Document ,
+ Link ,
+ MathReview (Raphael Loewy) 
+ Cited by: Theorem 1.1 ,
+ §1 ,
+ §1 ,
+ §4 ,
+ Conjecture 5.1 ,
+ §5 .
+ [13] 
+ M. Fiedler (1974) 
+ Additive compound matrices and an inequality for eigenvalues of symmetricstochastic matrices .
+ Czechoslovak Math. J. 24 ( 3 ), pp. 392–402 .
+ Cited by: Remark .
+ [14] 
+ H. Kumar, B. Mohar, S. Pragada, and H. Zhan (2026) 
+ Convex combination of first and second eigenvalues of trees .
+ External Links: 2601.10036 ,
+ Link 
+ Cited by: §5 .
+ [15] 
+ L. Liu (2024) 
+ Graph limits and spectral extremal problems for graphs .
+ SIAM J. Discrete Math. 38 ( 1 ), pp. 590–608 .
+ External Links: ISSN 0895-4801,1095-7146 ,
+ Document ,
+ MathReview (Lihua Feng) 
+ Cited by: §1 ,
+ §3 .
+ [16] 
+ L. Lovász and B. Szegedy (2006) 
+ Limits of dense graph sequences .
+ J. Combin. Theory Ser. B 96 ( 6 ), pp. 933–957 .
+ External Links: ISSN 0095-8956,1096-0902 ,
+ Document ,
+ Link ,
+ MathReview (Yoshiharu Kohayakawa) 
+ Cited by: §3 .
+ [17] 
+ L. Lovász and B. Szegedy (2007) 
+ Szemerédi’s lemma for the analyst .
+ Geom. Funct. Anal. 17 ( 1 ), pp. 252–270 .
+ External Links: ISSN 1016-443X,1420-8970 ,
+ Document ,
+ Link ,
+ MathReview Entry 
+ Cited by: §3 .
+ [18] 
+ L. Lovász (2012) 
+ Large networks and graph limits .
+ American Mathematical Society Colloquium Publications , Vol. 60 , American Mathematical Society, Providence, RI .
+ External Links: ISBN 978-0-8218-9085-1 ,
+ Document ,
+ MathReview (Anant P. Godbole) 
+ Cited by: §3 .
+ [19] 
+ S. Mac Lane and G. Birkhoff (1988) 
+ Algebra .
+ Third edition , Chelsea Publishing Co., New York .
+ External Links: ISBN 0-8284-0330-9 ,
+ MathReview Entry 
+ Cited by: §4.7 .
+ [20] 
+ J. Matoušek (2002) 
+ Lectures on discrete geometry .
+ Graduate Texts in Mathematics , Vol. 212 , Springer .
+ Cited by: Theorem 4.5 .
+ [21] 
+ B. Mohar (2009) 
+ On the sum of \1 largest eigenvalues of graphs and symmetric matrices .
+ J. Combin. Theory Ser. B 99 , pp. 306–313 .
+ Cited by: §1 .
+ [22] 
+ V. Nikiforov (2006) 
+ Eigenvalues and degree deviation in graphs .
+ Linear Algebra Appl. 414 , pp. 347–360 .
+ Cited by: §2 .
+ [23] 
+ V. Nikiforov (2006) 
+ Linear combinations of graph eigenvalues .
+ Electron. J. Linear Algebra 15 , pp. 329–336 .
+ Cited by: §1 ,
+ footnote 1 .
+ [24] 
+ V. Nikiforov (2007) 
+ Eigenvalue problems of Nordhaus-Gaddum type .
+ Discrete Math. 307 ( 6 ), pp. 774–780 .
+ External Links: ISSN 0012-365X,1872-681X ,
+ Document ,
+ Link ,
+ MathReview Entry 
+ Cited by: §1 .
+ [25] 
+ O. Ore (1962) 
+ Theory of graphs .
+ American Mathematical Society Colloquium Publications , Vol. Vol. XXXVIII , American Mathematical Society, Providence, RI .
+ External Links: MathReview (W. Moser) 
+ Cited by: Theorem 3.3 .
+ [26] 
+ P.A. Parrilo and R.R. Thomas (2020) 
+ Sum of squares: theory and applications .
+ Proceedings of Symposia in Applied Mathematics , American Mathematical Society .
+ External Links: ISBN 9781470450250 ,
+ LCCN 2020012201 
+ Cited by: §4.7 .
+ [27] 
+ Z. Stanić (2013) 
+ Graphs with small spectral gap .
+ Electron. J. Linear Algebra 26 , pp. 417–432 .
+ External Links: ISSN 1081-3810 ,
+ Document ,
+ Link ,
+ MathReview (Wei Wang) 
+ Cited by: §1 .
+ [28] 
+ Z. Stanić (2015) 
+ Inequalities for graph eigenvalues .
+ London Mathematical Society Lecture Note Series , Vol. 423 , Cambridge University Press, Cambridge .
+ External Links: ISBN 978-1-107-54597-7 ,
+ Document ,
+ MathReview (Sebastian M. Cioabă) 
+ Cited by: §1 .
+ [29] 
+ T. Terpai (2011) 
+ Proof of a conjecture of V. Nikiforov .
+ Combinatorica 31 ( 6 ), pp. 739–754 .
+ External Links: ISSN 0209-9683,1439-6912 ,
+ Document ,
+ Link ,
+ MathReview (Domingos Moreira Cardoso) 
+ Cited by: §1 ,
+ §1 ,
+ §3 .
+ Hitesh Kumar, Email: hitesh.kumar.math@gmail.com, hitesh_kumar@sfu.ca
+ Dept. of Mathematics, Simon Fraser University, Burnaby, BC V5A 1S6, Canada
+ Lele Liu, Email: liu@ahu.edu.cn
+ School of Mathematical Sciences, Anhui University, Hefei 230601,
+P.R. China
+ Hermie Monterde, Email: hermie.monterde@uregina.ca
+ Dept. of Mathematics and Statistics, University of Regina, Regina, SK, Canada S4S 0A2
+ Shivaramakrishna Pragada, Email: shivaramakrishna_pragada@sfu.ca
+ Dept. of Mathematics, Simon Fraser University, Burnaby, BC V5A 1S6, Canada
+ Michael Tait, Email: michael.tait@villanova.edu
+ Dept. of Mathematics & Statistics, Villanova University
+ Appendix 
+ Here, we describe the method we used to find the PSD matrix \1 and matrix \1 . For \1 ,
+let \1 denote the standard basis vector of \1 with \1 -th entry \1 and
+ \1 elsewhere. Note that the map \1 is linear. Then 
+ \1 
+ (5.1) 
+ Write \1 in \1 blocks as \1 , \1 .
+Expanding \1 gives 
+ \1 
+ (5.2) 
+ Also, 
+ \1 
+ (5.3) 
+ Comparing coefficients using ( 4.23 ) we obtain the system 
+ \1 
+ \1 
+ \1 
+ \1 
+ \1 
+ \1 
+ \1 
+ \1 
+ (5.4) 
+ Eliminating \1 , this is equivalent to 
+ \1 
+ \1 
+ \1 
+ \1 
+ \1 
+ \1 
+ (5.5) 
+ We find \1 and \1 and do the necessary verification as follows: 
+ 1. 
+ Set up the coefficient equations ( 5.5 ) as a semidefinite feasibility
+problem in the unknown blocks \1 and \1 , together with the constraint \1 . 
+ 2. 
+ Solve this feasibility problem numerically in CVXPY using the solver SCS ,
+to a prescribed error tolerance, obtaining numerical matrices \1 and \1 . 
+ 3. 
+ Symmetrize the numerical solution by replacing 
+ \1 
+ 4. 
+ Convert the numerical matrices into exact rational matrices using SymPy .
+More precisely, selected entries of \1 and \1 are replaced by nearby rational numbers of bounded denominator, and then assembled into candidate exact matrices \1 and \1 . 
+ 5. 
+ Reconstruct the remaining entries of \1 exactly from the linear coefficient equations,
+so that the polynomial identity holds exactly over \1 . 
+ 6. 
+ Verify the coefficient identity exactly using SymPy with rational arithmetic. 
+ 7. 
+ Verify \1 exactly by checking a rank one decomposition
+of \1 over \1 , again using SymPy . 
+ Experimental support, please
+ view the build logs 
+ for errors. Generated by
+ L
+ A 
+ T
+ E 
+ xml 
+ .
+ Instructions for reporting errors 
+ We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+ support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+ methods listed below: 
+ Click the "Report Issue" ( 
+ ) button, located in the page header. 
+ Tip: You can select the relevant text first, to include it in your report. 
+ Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+ may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+ should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+ all. 
+ Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . 
+ We gratefully acknowledge support from
+ our major funders ,
+ member institutions , ,
+ and all contributors.
+ About 
+ · 
+ Help 
+ · 
+ Contact 
+ · 
+ Subscribe 
+ · 
+ Copyright 
+ · 
+ Privacy 
+ · 
+ Accessibility 
+ · 
+ Operational Status (opens in new tab) 
+ Major funding support from 

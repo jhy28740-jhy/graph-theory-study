@@ -1,0 +1,234 @@
+xelatex: security risk: running with elevated privileges
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(进展报告_前三大特征值之和的精确上界.tex
+LaTeX2e <2026-06-01>
+L3 programming layer <2026-08-10>
+(C:\tmp\old-miktex-isolated\install\tex/latex/ctex\ctexart.cls
+(C:\tmp\old-miktex-isolated\install\tex/latex/ctex/config\ctexbackend.cfg)
+(C:\tmp\old-miktex-isolated\install\tex/latex/l3kernel\expl3.sty
+(C:\tmp\old-miktex-isolated\install\tex/latex/l3kernel\l3backend-xetex.def))
+Document Class: ctexart 2026/08/11 v2.6.5 Chinese adapter for class article (CT
+EX)
+(C:\tmp\old-miktex-isolated\install\tex/latex/ctex\ctexhook.sty)
+(C:\tmp\old-miktex-isolated\install\tex/latex/ctex\ctexpatch.sty)
+(C:\tmp\old-miktex-isolated\install\tex/latex/base\fix-cm.sty
+(C:\tmp\old-miktex-isolated\install\tex/latex/base\ts1enc.def))
+(C:\tmp\old-miktex-isolated\install\tex/latex/ctex/config\ctexopts.cfg)
+(C:\tmp\old-miktex-isolated\install\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\tmp\old-miktex-isolated\install\tex/latex/base\size11.clo))
+(C:\tmp\old-miktex-isolated\install\tex/latex/ctex/engine\ctex-engine-xetex.def
+(C:\tmp\old-miktex-isolated\install\tex/xelatex/xecjk\xeCJK.sty
+(C:\tmp\old-miktex-isolated\install\tex/latex/l3packages/xtemplate\xtemplate.st
+y) (C:\tmp\old-miktex-isolated\install\tex/latex/fontspec\fontspec.sty
+(C:\tmp\old-miktex-isolated\install\tex/latex/fontspec\fontspec-xetex.sty
+(C:\tmp\old-miktex-isolated\install\tex/latex/base\fontenc.sty)
+(C:\tmp\old-miktex-isolated\install\tex/latex/fontspec\fontspec.cfg)))
+(C:\tmp\old-miktex-isolated\install\tex/xelatex/xecjk\xeCJK.cfg)))
+(C:\tmp\old-miktex-isolated\install\tex/latex/zhnumber\zhnumber.sty
+(C:\tmp\old-miktex-isolated\install\tex/latex/zhnumber\zhnumber-utf8.cfg))
+(C:\tmp\old-miktex-isolated\install\tex/latex/ctex/scheme\ctex-scheme-chinese-a
+rticle.def
+(C:\tmp\old-miktex-isolated\install\tex/latex/ctex/config\ctex-name-utf8.cfg))
+(C:\tmp\old-miktex-isolated\install\tex/latex/ctex/fontset\ctex-fontset-windows
+.def)) (C:\tmp\old-miktex-isolated\install\tex/latex/ctex/config\ctex.cfg)
+(C:\tmp\old-miktex-isolated\install\tex/latex/amsmath\amsmath.sty
+For additional information on amsmath, use the `?' option.
+(C:\tmp\old-miktex-isolated\install\tex/latex/amsmath\amstext.sty
+(C:\tmp\old-miktex-isolated\install\tex/latex/amsmath\amsgen.sty))
+(C:\tmp\old-miktex-isolated\install\tex/latex/amsmath\amsbsy.sty)
+(C:\tmp\old-miktex-isolated\install\tex/latex/amsmath\amsopn.sty))
+(C:\tmp\old-miktex-isolated\install\tex/latex/amsfonts\amssymb.sty
+(C:\tmp\old-miktex-isolated\install\tex/latex/amsfonts\amsfonts.sty))
+(C:\tmp\old-miktex-isolated\install\tex/latex/amscls\amsthm.sty)
+(C:\tmp\old-miktex-isolated\install\tex/latex/mathtools\mathtools.sty
+(C:\tmp\old-miktex-isolated\install\tex/latex/graphics\keyval.sty)
+(C:\tmp\old-miktex-isolated\install\tex/latex/tools\calc.sty)
+(C:\tmp\old-miktex-isolated\install\tex/latex/mathtools\mhsetup.sty))
+(C:\tmp\old-miktex-isolated\install\tex/latex/booktabs\booktabs.sty)
+(C:\tmp\old-miktex-isolated\install\tex/latex/tools\longtable.sty)
+(C:\tmp\old-miktex-isolated\install\tex/latex/tools\array.sty)
+(C:\tmp\old-miktex-isolated\install\tex/latex/geometry\geometry.sty
+(C:\tmp\old-miktex-isolated\install\tex/generic/iftex\ifvtex.sty
+(C:\tmp\old-miktex-isolated\install\tex/generic/iftex\iftex.sty))
+(C:\tmp\old-miktex-isolated\install\tex/latex/geometry\geometry.cfg))
+(C:\tmp\old-miktex-isolated\install\tex/latex/enumitem\enumitem.sty)
+(C:\tmp\old-miktex-isolated\install\tex/latex/xcolor\xcolor.sty
+(C:\tmp\old-miktex-isolated\install\tex/latex/graphics-cfg\color.cfg)
+(C:\tmp\old-miktex-isolated\install\tex/latex/graphics-def\xetex.def)
+(C:\tmp\old-miktex-isolated\install\tex/latex/graphics\mathcolor.ltx))
+(C:\tmp\old-miktex-isolated\install\tex/latex/hyperref\hyperref.sty
+(C:\tmp\old-miktex-isolated\install\tex/latex/kvsetkeys\kvsetkeys.sty)
+(C:\tmp\old-miktex-isolated\install\tex/generic/kvdefinekeys\kvdefinekeys.sty)
+(C:\tmp\old-miktex-isolated\install\tex/generic/pdfescape\pdfescape.sty
+(C:\tmp\old-miktex-isolated\install\tex/generic/ltxcmds\ltxcmds.sty)
+(C:\tmp\old-miktex-isolated\install\tex/generic/pdftexcmds\pdftexcmds.sty
+(C:\tmp\old-miktex-isolated\install\tex/generic/infwarerr\infwarerr.sty)))
+(C:\tmp\old-miktex-isolated\install\tex/latex/hycolor\hycolor.sty)
+(C:\tmp\old-miktex-isolated\install\tex/latex/hyperref\nameref.sty
+(C:\tmp\old-miktex-isolated\install\tex/latex/refcount\refcount.sty)
+(C:\tmp\old-miktex-isolated\install\tex/generic/gettitlestring\gettitlestring.s
+ty (C:\tmp\old-miktex-isolated\install\tex/latex/kvoptions\kvoptions.sty)))
+(C:\tmp\old-miktex-isolated\install\tex/latex/etoolbox\etoolbox.sty)
+(C:\tmp\old-miktex-isolated\install\tex/generic/stringenc\stringenc.sty)
+(C:\tmp\old-miktex-isolated\install\tex/latex/hyperref\pd1enc.def)
+(C:\tmp\old-miktex-isolated\install\tex/generic/intcalc\intcalc.sty)
+(C:\tmp\old-miktex-isolated\install\tex/latex/hyperref\puenc.def)
+(C:\tmp\old-miktex-isolated\install\tex/latex/url\url.sty)
+(C:\tmp\old-miktex-isolated\install\tex/generic/bitset\bitset.sty
+(C:\tmp\old-miktex-isolated\install\tex/generic/bigintcalc\bigintcalc.sty)))
+(C:\tmp\old-miktex-isolated\install\tex/latex/hyperref\hxetex.def
+(C:\tmp\old-miktex-isolated\install\tex/latex/rerunfilecheck\rerunfilecheck.sty
+
+(C:\tmp\old-miktex-isolated\install\tex/generic/uniquecounter\uniquecounter.sty
+))) (进展报告_前三大特征值之和的精确上界.aux)
+(C:\tmp\old-miktex-isolated\install\tex/latex/graphics\graphicx.sty
+(C:\tmp\old-miktex-isolated\install\tex/latex/graphics\graphics.sty
+(C:\tmp\old-miktex-isolated\install\tex/latex/graphics\trig.sty)
+(C:\tmp\old-miktex-isolated\install\tex/latex/graphics-cfg\graphics.cfg)))
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+(进展报告_前三大特征值之和的精确上界.out) (进展报告_前三大特征值之和的精确上界.out)
+(C:\tmp\old-miktex-isolated\install\tex/latex/amsfonts\umsa.fd)
+(C:\tmp\old-miktex-isolated\install\tex/latex/amsfonts\umsb.fd)
+miktex-dvipdfmx: security risk: running with elevated privileges
+(进展报告_前三大特征值之和的精确上界.toc [1] [2]) [3] [4] [5]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 220.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\|' on input line 220.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\|' on input line 220.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 220.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\le' on input line 220.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\gamma' on input line 220.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 220.
+
+
+Overfull \hbox (37.42133pt too wide) detected at line 232
+\OML/cmm/m/it/10.95 f[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 t\OT1/cmr/m/n/10
+.95 ) = \OML/cmm/m/it/10.95 t[] \OMS/cmsy/m/n/10.95 ^^@ []\OML/cmm/m/it/10.95 ;
+  f[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 t\OT1/cmr/m/n/10.95 ) = \OML/cmm/m
+/it/10.95 t[] \OMS/cmsy/m/n/10.95 ^^@ []\OML/cmm/m/it/10.95 ;  ^^^\OT1/cmr/m/n/
+10.95 (\OML/cmm/m/it/10.95 u\OT1/cmr/m/n/10.95 ) = \OML/cmm/m/it/10.95 uu[] \OM
+S/cmsy/m/n/10.95 ^^@ []\OML/cmm/m/it/10.95 I[];  C \OT1/cmr/m/n/10.95 = [] \OML
+/cmm/m/it/10.95 c[];  X[] \OT1/cmr/m/n/10.95 = [][] \OML/cmm/m/it/10.95 c[]^^^\
+OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 u[]\OT1/cmr/m/n/10.95 )[][]\OML/cmm/m/it
+/10.95 :
+[6]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 309.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 309.
+
+[7]
+Overfull \hbox (58.15422pt too wide) detected at line 366
+\OML/cmm/m/it/10.95 c[] \OT1/cmr/m/n/10.95 = [][]^^C[][]\OML/cmm/m/it/10.95 D[]
+AD[][] \OT1/cmr/m/n/10.95 : \OML/cmm/m/it/10.95 N \OMS/cmsy/m/n/10.95 2 \U/msb/
+m/n/10.95 N\OML/cmm/m/it/10.95 ;  A \OMS/cmsy/m/n/10.95 2 f\OT1/cmr/m/n/10.95 0
+\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 1\OMS/cmsy/m/n/10.95 g[] []\OML/cmm/m/
+it/10.95 ;  A[] \OT1/cmr/m/n/10.95 = 1\OML/cmm/m/it/10.95 ;  p \OMS/cmsy/m/n/10
+.95 2 \OT1/cmr/m/n/10.95 ^^A[]\OML/cmm/m/it/10.95 ;  A \OT1/cmr/m/n/10.95 = 1[]
+^^E[](\OML/cmm/m/it/10.95 D[]AD[]\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^U \
+OT1/cmr/m/n/10.95 0[][]\OML/cmm/m/it/10.95 ;
+
+Overfull \hbox (104.82372pt too wide) detected at line 385
+\OML/cmm/m/it/10.95 a[] \OT1/cmr/m/n/10.95 = [] = 0\OML/cmm/m/it/10.95 :\OT1/cm
+r/m/n/10.95 197271565264962\OML/cmm/m/it/10.95 ;  b[] \OT1/cmr/m/n/10.95 = [] =
+ 0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 160545686946568\OML/cmm/m/it/10.95 ; 
+ [] \OT1/cmr/m/n/10.95 = 5[] \OMS/cmsy/m/n/10.95 ^^@ \OT1/cmr/m/n/10.95 12 = 1\
+OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 228756555322\OML/cmm/m/it/10.95 :
+[8]
+
+LaTeX Font Warning: Font shape `TU/SimSun(0)/b/it' undefined
+(Font)              using `TU/SimSun(0)/b/n' instead on input line 409.
+
+[9] [10] [11] [12]
+Underfull \hbox (badness 10000) in paragraph at lines 709--709
+[]|\TU/SimSun(0)/b/n/10 通 道 型 主 函 数 方 案  |（本 报 告 定
+[13] [14] [15]
+Overfull \hbox (0.50354pt too wide) in paragraph at lines 836--839
+[]\TU/SimSun(0)/b/n/10.95 通 道  |—|  分 布 的 联 合 约 束\TU/SimSun(0)/m/it/10.95 ：|  内
+ 积 的 经 验 分 布 $[][]\OMS/cmsy/m/n/10.95 f\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 
+i; j\OT1/cmr/m/n/10.95 ) : \OMS/cmsy/m/n/10.95 h\OML/cmm/m/it/10.95 u[]; u[]\OM
+S/cmsy/m/n/10.95 i 2 ^^Ag$ \TU/SimSun(0)/m/it/10.95 与 通 道 值 $\OT1/cmr/m/n/10.95
+ (\OML/cmm/m/it/10.95 C[]; X[]; \OMS/cmsy/m/n/10.95 k\OML/cmm/m/it/10.95 y\OMS/
+cmsy/m/n/10.95 k[]\OML/cmm/m/it/10.95 ; [] \OT1/cmr/m/n/10.95 )$
+
+Overfull \hbox (3.47566pt too wide) in paragraph at lines 854--857
+[]\TU/SimSun(0)/m/n/10.95 这 是 唯 一 一 条 在 同 类 问 题 上 \TU/SimSun(0)/m/it/10.95 已 经 
+被 验 证 能 达 到 锐 利 \TU/SimSun(0)/m/n/10.95 的 架 构：| $\OML/cmm/m/it/10.95 k \OT1/cmr
+/m/n/10.95 = 2$ \TU/SimSun(0)/m/n/10.95 时 的 \TU/lmr/m/n/10.95 Kumar–Liu–Monterd
+e–
+[16]
+Overfull \hbox (9.77025pt too wide) in paragraph at lines 877--882
+\OML/cmm/m/it/10.95 A[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 D[][]$ $\OT1/cmr
+/m/n/10.95 = [0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 76203144\OML/cmm/m/it/10
+.95 ;  \OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 25976838\OML
+/cmm/m/it/10.95 ;  \OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 
+25976838\OML/cmm/m/it/10.95 ;  \OMS/cmsy/m/n/10.95 ^^@\OT1/cmr/m/n/10.95 0\OML/
+cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 08312281\OML/cmm/m/it/10.95 ;  \OMS/cmsy/m/n
+/10.95 ^^@\OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 09922269\
+OML/cmm/m/it/10.95 ;  \OMS/cmsy/m/n/10.95 ^^@\OT1/cmr/m/n/10.95 0\OML/cmm/m/it/
+10.95 :\OT1/cmr/m/n/10.95 09922269]$\TU/SimSun(0)/m/it/10.95 ，|
+[17] [18]
+Overfull \hbox (17.62248pt too wide) in paragraph at lines 1005--1014
+[]\TU/SimSun(0)/m/n/10.95 第 一 类 是 下 界 一 侧 的 完 整 结 果，|  也 是 目 前 成 熟 度 最 高 的 部 分。
+|  定 理 [][]\TU/lmr/m/n/10.95 3.6[][] \TU/SimSun(0)/m/n/10.95 给 出 $[][] \OML/cmm
+/m/it/10.95 M[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 n\OT1/cmr/m/n/10.95 )/\O
+ML/cmm/m/it/10.95 n \OMS/cmsy/m/n/10.95 ^^U
+[19] [20]
+Overfull \hbox (18.30907pt too wide) in alignment at lines 1094--1098
+ [] [] [] 
+
+Overfull \hbox (18.30907pt too wide) in alignment at lines 1098--1102
+ [] [] [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 1103--1103
+[]|\TU/FangSong(0)/m/n/10 进 展 报 告 \TU/lmtt/m/n/10 _ \TU/FangSong(0)/m/n/10 前 三 
+大 特 征 值 之 和 的 精 确 上
+
+Underfull \hbox (badness 10000) in paragraph at lines 1104--1104
+[]|\TU/FangSong(0)/m/n/10 进 展 报 告 \TU/lmtt/m/n/10 _ \TU/FangSong(0)/m/n/10 前 三 
+大 特 征 值 之 和 的 精 确 上
+
+Underfull \hbox (badness 10000) in paragraph at lines 1105--1105
+[]|\TU/lmtt/m/n/10 Sivashankar-Tang-Wakhare_2608.02429_
+
+Overfull \hbox (15.64026pt too wide) in paragraph at lines 1105--1105
+\TU/lmtt/m/n/10 GraphEigenvaluesAndProjectionConstants.pdf| 
+
+Overfull \hbox (18.30907pt too wide) in alignment at lines 1102--1109
+ [] [] [] 
+miktex-dvipdfmx: major issue: So far, you have not checked for MiKTeX updates.
+[21] [22] [23] (进展报告_前三大特征值之和的精确上界.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ )
+(see the transcript file for additional information)
+Output written on 进展报告_前三大特征值之和的精确上界.pdf (23 pages).
+Transcript written on 进展报告_前三大特征值之和的精确上界.log.
+xelatex: major issue: So far, you have not checked for MiKTeX updates.

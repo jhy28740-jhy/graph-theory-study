@@ -1,0 +1,33 @@
+{
+  "key": "arxiv_linear",
+  "url": "https://export.arxiv.org/api/query?search_query=all%3A%22linear%20combinations%22%20AND%20all%3A%22graph%20eigenvalues%22&start=0&max_results=30",
+  "status": 200,
+  "final_url": "https://export.arxiv.org/api/query?search_query=all%3A%22linear%20combinations%22%20AND%20all%3A%22graph%20eigenvalues%22&start=0&max_results=30",
+  "items": [
+    {
+      "id": "http://arxiv.org/abs/2206.03723v1",
+      "title": "Two conjectures in spectral graph theory involving the linear combinations of graph eigenvalues",
+      "authors": [
+        "Lele Liu"
+      ],
+      "summary": "We prove two conjectures in spectral extremal graph theory involving the linear combinations of graph eigenvalues. Let $λ_1(G)$ be the largest eigenvalue of the adjacency matrix of a graph $G$, and $\\bar{G}$ be the complement of $G$. A nice conjecture states that the graph on $n$ vertices maximizing $λ_1(G) + λ_1(\\bar{G})$ is the join of a clique and an independent set, with $\\lfloor n/3\\rfloor$ and $\\lceil 2n/3\\rceil$ (also $\\lceil n/3\\rceil$ and $\\lfloor 2n/3\\rfloor$ if $n \\equiv 2 \\pmod{3}$) vertices, respectively. We resolve this conjecture for sufficiently large $n$ using analytic methods. Our second result concerns the $Q$-spread $s_Q(G)$ of a graph $G$, which is defined as the difference between the largest eigenvalue and least eigenvalue of the signless Laplacian of $G$. It was conjectured by Cvetković, Rowlinson and Simić in $2007$ that the unique $n$-vertex connected graph of maximum $Q$-spread is the graph formed by adding a pendant edge to $K_{n-1}$. We confirm this conjecture for sufficiently large $n$."
+    },
+    {
+      "id": "http://arxiv.org/abs/math/0608198v2",
+      "title": "Linear combinations of graph eigenvalues",
+      "authors": [
+        "Vladimir Nikiforov"
+      ],
+      "summary": "  Let F(G) be a fixed linear combination of the k extremal eigenvalues of a graph G and of its complement. The problem of finding max{F(G):v(G)=n} generalizes a number of problems raised previously in the literature. We show that the limit max{F(G):v(G)=n}/n exists when n tends to infinity. We also answer a question of Gernert about the sum of the two maximal eigenvalues of a graph."
+    },
+    {
+      "id": "http://arxiv.org/abs/2311.18030v2",
+      "title": "On topological states and secular equations for quantum-graph eigenvalues",
+      "authors": [
+        "Evans M. Harrell",
+        "Anna V. Maltsev"
+      ],
+      "summary": "Quantum graphs without interaction which contain equilateral cycles possess \"topological\" bound states which do not correspond to zeroes of one of the two variants of the secular equation for quantum graphs. Instead, their eigenvalues lie in the set of singularities of the vertex-scattering secular matrix. This observation turns out to be representative of a wider phenomenon. We introduce a notion of topological bound states and show that they are linear combinations of functions supported on generators of the fundamental group of the graph (hence the \"topological\" in the name), including for graphs that have interactions on the edges. Using an Ihara-style theorem, we elucidate the role of such topological bound states in the spectral analysis of quantum graph Hamiltonians using secular matrices. En route we determine the set of the fixed vectors of the bond-scattering matrix.\n  This work is dedicated to E.B. Davies on the occasion of his 80th birthday and in honor of his important contributions to the theory of quantum graphs, e.g., \\cite{DaExLi,Da13} and of his broad and influential work on spectral theory, e.g., \\cite{Da89,Da95}."
+    }
+  ]
+}

@@ -1,0 +1,1394 @@
+                                                               Maximum spectral sum of graphs
+                                            Hitesh Kumar, Lele Liu, Hermie Monterde, Shivaramakrishna Pragada, Michael Tait
+
+
+                                                                                            Abstract
+arXiv:2604.00512v2 [math.CO] 3 May 2026
+
+
+
+
+                                                    For a graph G of order n, the spectral sum of G is defined to be the sum λ1 (G) + λ2 (G), where
+                                                λ1 (G) (resp. λ2 (G)) is the largest (resp. second largest) adjacency eigenvalue of G. Ebrahimi,
+                                                Mohar, Nikiforov and Ahmady (2008) conjectured that the spectral sum
+                                                                                                           8
+                                                                                      λ1 (G) + λ2 (G) ≤      n
+                                                                                                           7
+                                                for any graph G. We prove this conjecture by combining tools from the theory of graph limits,
+                                                convex geometry, exterior algebra and convex optimization. The techniques developed are of
+                                                independent interest.
+
+                                          Keywords: Spectral sum, Second eigenvalue, Graphon, Convexity, Exterior algebra, Matrix Sum
+                                          of Squares
+                                          MSC2020: 05C50, 15A18, 15A60, 52A38, 15A75, 15A39
+
+                                          1. Introduction
+                                              Consider a simple undirected graph G = (V, E) with vertex set V = {1, 2, . . . , n}. The adjacency
+                                          matrix of G is defined to be the square matrix A(G) = [aij ] of order n, where aij = 1 if i and j are
+                                          adjacent, and aij = 0 otherwise. We order the eigenvalues of A(G) as λ1 (G) ≥ λ2 (G) ≥ · · · ≥ λn (G).
+                                          The first eigenvalue λ1 (G) is called the spectral radius of G. The sum of the first two largest
+                                          eigenvalues λ1 (G) + λ2 (G) is called the spectral sum of G. For n ∈ N, let G(n) denote the set of
+                                          simple undirected graphs on n vertices. We denote the complement of G by G.
+                                              Extremization of graph eigenvalues, particularly λ1 , λ2 and λn , over various graph families
+                                          is an important and well-studied problem in spectral graph theory, see the surveys [9, 10, 28].
+                                          Investigation of combinations of eigenvalues, such as Nordhaus-Gaddum type sums λi (G) + λi (G)
+                                          [2, 24, 29], λ1 − λ2 (spectral gap) [27, 28], λ1 − λn (spectral spread ) [6], and λ1 + λn (a measure of
+                                          bipartiteness) [8], has also led to interesting results, techniques and applications.
+                                              Recall that the energy E(G) of a graph G on n vertices is defined as the sum of the absolute
+                                          values of eigenvalues of G. Equivalently,
+                                                                                                     k
+                                                                                                     X
+                                                                                  E(G) = 2 max             λi (G).
+                                                                                             1≤k≤n
+                                                                                                     i=1
+
+                                          Thus, the sum of the k largest eigenvalues of a graph sheds light on the energy of the graph. Mohar
+                                          [21] established an upper bound on ki=1 λi (G) for 1 ≤ k ≤ n and provided further details on its
+                                                                               P
+
+
+                                                                                                1
+role in theoretical chemistry. Mohar’s bound was improved further by Das, Mojallal and Sun [11].
+Gernert1 investigated the case k = 2 and proved that the inequality λ1 (G) + λ2 (G) ≤ n holds for
+various graph families, including regular graphs, triangle-free graphs and planar graphs. Gernert
+asked whether this inequality holds for any graph. Nikiforov [23] answered this question in the
+                                                                                        √
+negative and also proved that the spectral sum of graphs in G(n) is upper bounded by 2n/ 3. Later,
+Ebrahimi, Mohar, Nikiforov, and Ahmady [12] presented an improved upper bound on the spectral
+sum as described below.
+
+Theorem 1.1 ([12]). For any graph G ∈ G(n), we have
+                                                            8.0185
+                                        λ1 (G) + λ2 (G) <          n.
+                                                               7
+   Moreover, in [12] the authors constructed an infinite family of graphs of order n = 7k which
+have spectral sum 8k − 2 = 87 n − 2 and suggested that 8n/7 is the correct upper bound for the
+spectral sum. In this paper, we prove their conjecture.
+
+Theorem 1.2. For any G ∈ G(n), we have
+                                                           8
+                                          λ1 (G) + λ2 (G) ≤ n.
+                                                           7
+    We prove Theorem 1.2 by translating the problem to graphons and then utilizing analytic tools
+to show that the spectral sum of graphons is at most 8/7 (Theorem 3.5). Our proof is inspired by
+Terpai’s [29] (cf. [15]) maximization proof of the sum λ1 (G) + λ1 (G), and Breen, Riasanovsky, Tait
+and Urschel’s [6] maximization proof of the spread λ1 − λn using graphons. However, there is a
+significant difficulty when considering the spectral sum that we must overcome here which requires
+novel methods. When considering either λ1 (G) + λ1 (G) or λ1 − λn , both of these maximization
+problems can be expressed as the maximization of a two-term sum of quadratic forms over pairs of
+unit vectors (or L 2 -functions when working with graphons). Because of this, one can do alterations
+to the purported extremal graph (or graphon) and its eigenvectors and estimate from below the
+objective function by considering Rayleigh quotients. The major difficulty with the spectral sum is
+that in this case, one has to maximize a two-term sum of quadratic forms over pairs of orthogonal
+vectors. The orthogonality condition usually breaks down when one tries to modify the eigenvector(s)
+on a subset of vertices, and so any modification needs to be chosen carefully. We introduce some new
+ideas to overcome this, and we believe that the techniques used in this paper may find applications
+in other problems where one wishes to optimize a sum of quadratic forms over orthogonal vectors.
+High-level outline of our proof of Theorem 1.2. We first show that it suffices to prove the
+weaker bound 87 n + o(n) for the spectral sum of graphs (Theorem 2.2) in Section 2. We then
+give a brief introduction to graphons and relate the spectral sum of graphs with that of graphons
+(Lemma 3.4) in Section 3. Thus, it suffices to show that the spectral sum of graphons is at most 8/7
+(Theorem 3.5). We prove the result for graphons in Section 4. We begin with an extremal graphon
+W (x, y) which has maximum spectral sum and maximum value of its largest eigenvalue among all
+  1
+      as described by Nikiforov [23].
+
+
+                                                    2
+such graphons. We establish the adjacency criteria for W (x, y) (Lemma 4.1) which describes the
+points (x, y) ∈ [0, 1]2 where W (x, y) = 1. Assuming µ1 and f (resp. µ2 and g) denote the largest
+(resp. the second largest) eigenvalue and the corresponding eigenfunction of W , we show that f and
+g satisfy an ellipse equation for a.e. x ∈ [0, 1] (Lemma 4.2). Using Carathéodory’s Theorem from
+convex geometry, we then prove that f and g can be assumed to be step-functions with at most 6
+steps a.e. (Lemma 4.6). We reduce the problem to analyzing the spectral sum of weighted graph(s)
+G∗ of order at most 6 (Lemma 4.8). Using structural arguments, we determine the possibilities
+for G∗ in subsection 4.6 and show that it suffices to upper bound the spectral sum of the unique
+weighted graph H6 shown in Figure 1 (Lemma 4.11). We prove Lemma 4.11 by first reducing it to a
+positive semi-definiteness verifiability problem (Lemma 4.14) using exterior algebra, and then using
+the matrix sum of squares technique from convex optimization to do the verification.
+
+
+2. Asymptotic result suffices
+    We observe the following using a graph-blowup argument originally by Nikiforov (cf. [7]).
+
+Lemma 2.1. Suppose for any graph G ∈ G(n), we have
+                                                          8n
+                                      λ1 (G) + λ2 (G) ≤      + o(n).
+                                                           7
+Then, Theorem 1.2 holds for any G ∈ G(n).
+
+Proof. For a graph G ∈ G(n), consider G(t) , the graph obtained by replacing every vertex of G by
+an empty graph of order t, where the copies of two vertices of G are adjacent in G(t) if and only if
+the two vertices are adjacent in G. The graph G(t) is called the (open)-t-blowup of G. It is known
+(see [22]) that the eigenvalues of G(t) are precisely tλi (G) (i = 1, . . . , n) and n(t − 1) additional 0’s.
+By assumption, we have
+                                                            8tn
+                                  λ1 (G(t) ) + λ2 (G(t) ) ≤     + o(tn).
+                                                             7
+Since λ1 (G(t) ) = tλ1 (G) and λ2 (G(t) ) = tλ2 (G), it follows that
+                                                          8tn
+                                    tλ1 (G) + tλ2 (G) ≤       + o(tn).
+                                                           7
+Dividing by t and considering the limit as t → ∞, we get
+                                                              8n
+                                          λ1 (G) + λ2 (G) ≤      ,
+                                                               7
+completing the proof of the lemma.
+
+    Thus, in order to prove Theorem 1.2, it is sufficient to prove the following asymptotic result.
+
+Theorem 2.2. For any graph G ∈ G(n), we have
+                                                          8n
+                                      λ1 (G) + λ2 (G) ≤      + o(n).
+                                                           7
+
+                                                     3
+3. Enter graphons
+     Graphons are analytic objects that generalize graphs, originally defined in an influential paper
+by Lovász and Szegedy [17] and the monograph by Lovász [16] (cf. [4]). We first give the necessary
+background on graphons, which is needed for further development in this paper.
+     A graphon is a symmetric Lebesgue measurable function K : [0, 1]2 → [0, 1]. We denote the set
+of graphons by K. A graphon K ∈ K is called step-graphon if there exists a partition U1 , . . . , Uk of
+[0, 1] such that K is constant on Ui × Uj for all i, j. If U ⊆ [0, 1]2 is a symmetric (i.e., (x, y) ∈ U if
+and only if (y, x) ∈ U ) measurable set, then its indicator function χU , defined by
+                                                  (
+                                                   1,           if (x, y) ∈ U ;
+                                    χU (x, y) =
+                                                       0,       otherwise,
+
+is clearly a step-graphon. A graphon generalizes the notion of a graph as follows: given a (unweighted)
+graph G ∈ G(n) with vertex set V (G) = {1, . . . , n}, one can naturally define a subset
+                                [ u − 1 u v − 1 v 
+                                            ,     ×         ,    ⊆ [0, 1]2 ,
+                                u∼v     n     n         n     n
+                              u,v∈V (G)
+
+which is symmetric and measurable, whose indicator function (which we denote by χG for brevity)
+is a step-graphon. Clearly, for a given graph G, many graphons can be associated corresponding to
+different vertex labellings of G. Hence, an equivalence relation is defined on the set of graphons K
+using the cut norm defined below so that for any graph G there is a unique (up to isomorphism)
+equivalence class of graphons corresponding to G.
+    For K ∈ K, its cut norm ∥K∥□ is defined as
+                                                 Z
+                                ∥K∥□ = sup            K(x, y) dx dy .
+                                          S,T ⊆[0,1]       S×T
+
+Let δ□ be the cut semidistance on K given by
+
+            δ□ (U, W ) = inf{∥U − W φ ∥□ : φ is a measure-preserving bijection on [0, 1]},
+
+where U, W ∈ K, and W φ (x, y) = W (φ(x), φ(y)). Define a relation ∼ on K as follows: U ∼ W if
+and only if δ□ (U, W ) = 0. It is known that ∼ is an equivalence relation and the quotient space
+K/ ∼ is a compact metric space, see [18, Theorem 5.1].
+    For a measurable subset U ⊆ [0, 1]2 , we will denote its Lebesgue measure by m(U ). We say that
+two measurable subsets of [0, 1]2 are equal almost everywhere (a.e. for short) if their symmetric
+difference has measure zero. Consider the Hilbert space L 2 [0, 1] of square-integrable functions
+                                                          R1
+from [0, 1] to R with inner product given by ⟨f, g⟩ = 0 f (x)g(x) dx. For K ∈ K/ ∼, define the
+Hilbert-Schmidt operator AK : L 2 [0, 1] → L 2 [0, 1] by
+                                                   Z 1
+                                    (AK f )(x) =               K(x, y)f (y) dy
+                                                       0
+
+
+                                                           4
+for f ∈ L 2 [0, 1] and a.e. x ∈ [0, 1]. As K is symmetric and bounded, it is known that AK is a
+compact Hermitian operator (cf. [3]). This means AK has a discrete, real spectrum with only
+possible accumulation point 0. For two functions f, g ∈ L 2 [0, 1] and K ∈ K/ ∼, we define
+                                         Z 1Z 1
+                               f Kg :=          K(x, y)f (x)g(y) dx dy.
+                                                  0     0
+
+    Recall the well-known Min-Max Theorem that relates eigenvalues to quadratic forms.
+
+Theorem 3.1 (Min-Max Theorem). Let A be a compact Hermitian operator on a Hilbert space H
+with inner product ⟨ · , · ⟩. Let U denote a subspace of H. Then the k-th largest eigenvalue λk of A
+is given by
+                                      λk = max       min ⟨z, Az⟩.
+                                                          U      z∈U
+                                                      dim(U )=k ∥z∥=1
+
+Moreover, if z1 , . . . , zk ∈ H are mutually orthonormal vectors such that λi = ⟨zi , Azi ⟩ for i = 1, . . . , k,
+then zi is a λi -eigenvector for A.
+
+   Let µ1 (K) and µ2 (K) denote the largest and the second largest eigenvalue of AK . Then, by
+Theorem 3.1, we have
+
+                     µ1 (K) =     max          f Kf     and    µ2 (K) =        max       min gKg.           (3.1)
+                                f ∈L 2 [0,1]                                U ⊂L 2 [0,1] g∈U
+                                  ∥f ∥2 =1                                  dim(U )=2 ∥g∥2 =1
+
+Furthermore, if f ∈ L 2 [0, 1] is a unit function such that µ1 (K) = f Kf , then f is a µ1 (K)-
+eigenfunction of K (up to a set of measure zero). Similarly, if f is a µ1 (K)-eigenfunction and
+g ∈ L 2 [0, 1] is a unit function orthogonal to f such that µ2 (K) = gKg, then g is a µ2 (K)-
+eigenfunction of K. Also, one can always choose a µ1 (K)-eigenfunction f which is non-negative.
+    We define σ(K) := µ1 (K) + µ2 (K) and we call it the spectral sum of the graphon K. We note
+the following easy consequence of Theorem 3.1, which we will use repeatedly.
+
+Lemma 3.2. For K ∈ K/ ∼, we have
+
+                           σ(K) = µ1 (K) + µ2 (K) =                   max          f Kf + gKg.
+                                                                  ∥f ∥2 =∥g∥2 =1
+                                                                      ⟨f,g⟩=0
+
+    The following result shows that µ1 and µ2 are continuous functions on the space K/ ∼ w.r.t. δ□ .
+
+Theorem 3.3 (cf. [4, Theorem 6.6] or [25, Theorem 11.54]). Let {Ki }i∈N be a sequence of graphons
+converging to K with respect to δ□ . Then as i → ∞,
+
+                                µ1 (Ki ) → µ1 (K)           and      µ2 (Ki ) → µ2 (K).
+
+  So if K ∼ K,                     e and µ2 (K) = µ2 (K).
+              e then µ1 (K) = µ1 (K)                    e By compactness of the quotient space
+K\ ∼, the following optimization problem is well defined:
+
+                                                        max σ(K).
+                                                       K∈K\∼
+
+
+                                                              5
+In particular, there exists a graphon (which we call extremal graphon) that achieves the maximum.
+    As expected, the spectral sum of a graph G is related to the spectral sum of its corresponding
+graphon χG as described in the following lemma. It can be proved by replacing the eigenvectors of
+G with their corresponding step-functions, see [15] or [29] for details.
+Lemma 3.4. For a graph G of order n, we have
+
+                           λ1 (G) = nµ1 (χG )      and    λ2 (G) = nµ2 (χG ).
+
+   In view of Lemma 3.4, the following result implies Theorem 2.2.
+Theorem 3.5. For any graphon K ∈ K/ ∼, we have σ(K) ≤ 8/7.
+   We prove Theorem 3.5 in the following section.
+
+4. Proof of Theorem 3.5
+     Throughout this section, W ∈ K/ ∼ will denote a graphon that maximizes the spectral sum
+σ( · ) over K/ ∼ and has the maximum value of its largest eigenvalue among all such graphons.
+     We will denote by µ1 and f (resp. µ2 and g) the largest (resp. the second largest) eigenvalue
+and the corresponding eigenfunction of W . This means
+                                         Z 1
+                            (AW f )(x) =     W (x, y)f (y) dy = µ1 f (x)                      (4.1)
+                                            0
+
+and                                        Z 1
+                             (AW g)(x) =         W (x, y)g(y) dy = µ2 g(x),                       (4.2)
+                                            0
+for a.e. x ∈ [0, 1]. We further assume that ∥f ∥22 = ∥g∥22 = 1 and ⟨f, g⟩ = 0. Throughout, if the
+limits of integration of an integral are not specified, then it should be taken to be equal to [0, 1]2 .
+    In [12], the authors constructed an infinite family of graphs of order n with spectral sum 87 n − 2.
+In light of Lemma 3.4, we see that
+                                                         8
+                                             µ1 + µ2 ≥ .                                           (4.3)
+                                                         7
+Since µ1 ≤ 1, we conclude that µ2 ≥ 1/7. In particular, this means that µ2 is always positive. We
+will often use this technical detail without mention in later proofs.
+
+4.1. Adjacency criterion
+    Since f is the eigenfunction for µ1 , we can assume that f is non-negative. Define the positive
+support of g to be the set S + (g) = {x ∈ [0, 1] : g(x) > 0}. The negative support S − (g) and the
+zero set S 0 (g) are defined analogously. The support of g is given by S(g) = S + (g) ∪ S − (g). For
+convenience, for any (x, y) ∈ [0, 1]2 , we define
+
+                                   κ(x, y) := f (x)f (y) + g(x)g(y).
+
+We first observe the following eigen-entry condition for an element (x, y) ∈ [0, 1]2 to be contained in
+the support of the extremal graphon W . When translated to graphs, this condition tells us when
+two vertices are adjacent in the extremal graph, and hence we call it the adjacency criterion.
+
+                                                    6
+Lemma 4.1 (Adjacency). For a.e. (x, y) ∈ [0, 1]2 ,
+                                                       (
+                                                        1,       if κ(x, y) ≥ 0;
+                                          W (x, y) =
+                                                        0,       otherwise.
+
+Proof. Let D+ = {(x, y) ∈ [0, 1]2 : κ(x, y) > 0}, and define D0 and D− similarly. Consider the
+graphon W1 defined by                     (
+                                            1, if (x, y) ∈ D+ ∪ D0 ;
+                             W1 (x, y) =
+                                            0, if (x, y) ∈ D− .
+By Lemma 3.2, we have
+                                 Z
+                                                          
+           σ(W1 ) − σ(W ) ≥           W1 (x, y) − W (x, y) κ(x, y) dx dy
+                                 Z                                   Z
+                                                   
+                             =         1 − W (x, y) κ(x, y) dx dy −      W (x, y)κ(x, y) dx dy
+                                 D+                                            D−
+
+                             ≥ 0.
+
+Since σ(W ) ≥ σ(W1 ) by the choice of W , we have σ(W1 ) = σ(W ), and both integrals in the last
+inequality must be 0. This implies W (x, y) = W1 (x, y) a.e. on D+ ∪ D− .
+   To address the behaviour on D0 , we consider the first eigenvalue µ1 (W1 ). Applying (3.1) and
+making use of the fact that W (x, y) = W1 (x, y) a.e. on D+ ∪ D− yield
+                        Z
+             µ1 (W1 ) ≥ W1 (x, y)f (x)f (y) dx dy
+                        Z                            Z
+                      = W (x, y)f (x)f (y) dx dy +        (1 − W (x, y)) f (x)f (y) dx dy
+                                                       D0
+                             Z
+                      = µ1 +     (1 − W (x, y)) f (x)f (y) dx dy.
+                                     D0
+
+Since µ1 ≥ µ1 (W1 ) by the choice of W , we conclude µ1 (W1 ) = µ1 and the integral in the last
+inequality is 0. This implies W (x, y) = 1 a.e. on D0 . The proof is complete.
+
+4.2. Ellipse equation for f and g
+   In the next lemma, we show that for the graphon W , the function µ1 f (x)2 + µ2 g(x)2 is constant
+on the interval [0, 1] except maybe on a subset of measure zero.
+
+Lemma 4.2 (Ellipse equation). For a.e. x ∈ [0, 1], we have
+
+                                          µ1 f (x)2 + µ2 g(x)2 = µ1 + µ2 .
+
+Proof. Suppose the following is true: for any disjoint subintervals I and J of [0, 1] with m(I) = m(J),
+we have                Z                             Z
+                         µ1 f (x)2 + µ2 g(x)2 dx =      µ1 f (x)2 + µ2 g(x)2 dx.                   (4.4)
+                         I                                       J
+
+
+
+                                                             7
+Then µ1 f (x)2 + µ2 g(x)2 is a constant function a.e.. Since
+                                Z 1
+                                    µ1 f (x)2 + µ2 g(x)2 dx = µ1 + µ2 ,
+                                                  0
+
+the constant is µ1 + µ2 and the assertion holds. In what follows, we aim to establish equation (4.4).
+    Consider disjoint subintervals I = [i1 , i2 ] and J = [j1 , j2 ] of [0, 1] with length m(I) = i2 − i1 =
+j2 − j1 = m(J) > 0. Without loss of generality, assume that
+                       Z                               Z
+                                 2            2
+                         µ1 f (x) + µ2 g(x) dx ≤         µ1 f (x)2 + µ2 g(x)2 dx.
+                                    I                                          J
+
+For any ε > 0 sufficiently small, consider the (unique) piecewise linear function φ that stretches I
+to length (1 + ε)m(I), shrinks J to length (1 − ε)m(J), and shifts only the elements in between I
+and J. Clearly, φ : [0, 1] → [0, 1] is an orientation-preserving homeomorphism such that φ(0) = 0
+and φ(1) = 1. Furthermore, φ is differentiable a.e. with derivative φ′ given by
+                                              
+                                              1 + ε, if x ∈ I;
+                                              
+                                              
+                                                          φ′ (x) =    1 − ε,       if x ∈ J;
+                                                                     
+                                                                     
+                                                                     1,           otherwise.
+
+   Let U = {(x, y) ∈ [0, 1]2 : W (φ(x), φ(y)) > 0}. By Lemma 4.1, we see that U = {(x, y) ∈ [0, 1]2 :
+W (φ(x), φ(y)) = 1}. Consider the corresponding graphon χU , and the functions
+
+                                   f˜ := φ′ · (f ◦ φ), g̃ := φ′ · (g ◦ φ) and h̃ := g̃ − αf˜,                               (4.5)
+               ˜
+where α := ⟨⟨ff˜,,g̃⟩
+                  f˜⟩
+                      . Clearly, ⟨f˜, h̃⟩ = 0.
+    Now, we compute the L 2 -norms of f˜, g̃, and h̃. Applying the change of variable u = φ(x) and
+using (4.5), we obtain
+          Z                                Z                               Z
+                       ′                               ′
+    ˜ 2                            2
+  ∥f ∥2 = (1 + ε)φ (x) f (φ(x)) dx + (1 − ε)φ (x) f (φ(x)) dx +     2
+                                                                                        φ′ (x) f (φ(x))2 dx
+            I                               J                               [0,1]\(I∪J)
+          Z                         Z                        Z
+                              2                        2
+        =        (1 + ε) f (u) du +       (1 − ε) f (u) du +                    f (u)2 du
+            φ(I)                     φ(J)                     [0,1]\(φ(I)∪φ(J))
+          Z                     Z                 Z              !
+         =            f (u)2 du + ε                   f (u)2 du −              f (u)2 du
+              [0,1]                           φ(I)                      φ(J)
+                      Z                      Z               
+         =1+ε                   f (u)2 du −                2
+                                                      f (u) du
+                            I                  J
+                      Z                           Z                            Z                       Z                !
+           +ε                     f (u)2 du −                  f (u)2 du +               f (u)2 du −            f (u)2 du
+                       φ(I)\I                         I\φ(I)                    J\φ(J)                 φ(J)\J
+
+                          ∥χI f ∥22 − ∥χJ f ∥22
+                                                      
+         =1+ε                                             + o(ε).                                                           (4.6)
+
+Similar to the calculation above, we have
+
+                                          ∥g̃∥22 = 1 + ε ∥χI g∥22 − ∥χJ g∥22 + o(ε).
+                                                                            
+                                                                                                                            (4.7)
+
+                                                                         8
+On the other hand, by (4.5) we see
+
+                         ∥g̃∥22 = ⟨g̃, g̃⟩ = ⟨h̃ + αf˜, h̃ + αf˜⟩ = ⟨h̃, h̃⟩ + α2 ⟨f˜, f˜⟩,
+
+since ⟨f˜, h̃⟩ = 0. It follows that
+
+                                            ∥h̃∥22 = ∥g̃∥22 − α2 ∥f˜∥22 ≤ ∥g̃∥22 .                    (4.8)
+
+   Next, we shall compute the quadratic forms f˜χU f˜, g̃χU g̃ and h̃χU h̃. Using the substitutions
+u = φ(x) and v = φ(y), we see that
+                              Z
+                      ˜   ˜
+                     f χU f = χU (x, y) f˜(x)f˜(y) dx dy
+                              Z
+                            = χU (x, y) φ′ (x)f (φ(x)) φ′ (y)f (φ(y)) dx dy
+                              Z
+                            = W (u, v)f (u)f (v) du dv = µ1 .                                  (4.9)
+
+Similarly, g̃χU g̃ = µ2 , and
+
+                       g̃χU f˜ = f˜χU g̃
+                                 Z
+                               = χU (x, y)f˜(x)g̃(y) dx dy
+                                 Z
+                               = W (φ(x), φ(y))φ′ (x)f (φ(x))φ′ (y)g(φ(y)) dx dy
+                                 Z
+                               = W (u, v)f (u)g(v) du dv
+                                 Z       Z                 !
+                                =                       W (u, v)g(v) dv f (u) du
+                                    [0,1]       [0,1]
+                                       Z
+                                = µ2            g(u)f (u) du = 0.
+                                        [0,1]
+
+Combining the above equations with (4.5), we deduce that
+
+                    h̃χU h̃ = g̃(x) − αf˜(x) χU g̃(x) − αf˜(x)
+                                                                 
+
+                            = g̃(x)χU g̃(x) + α2 f˜(x)χU f˜(x) − 2αf˜(x)χU g̃(x)
+                                 = µ2 + α2 µ1 ≥ µ2 .                                                 (4.10)
+
+Finally, we compare σ(W ) and σ(χU ). By the choice of W , Lemma 3.2 and (4.6) – (4.10), we find
+
+      0 ≤ σ(W ) − σ(χU )
+                                                  !                                          !
+                           f˜χU f˜ h̃χU h̃                                f˜χU f˜ h̃χU h̃
+        ≤ (µ1 + µ2 ) −             +                    ≤ (µ1 + µ2 ) −            +
+                            ∥f˜∥22   ∥h̃∥22                                ∥f˜∥22   ∥g̃∥22
+                                                                                                 !
+                                          µ1                              µ2
+        ≤ (µ1 + µ2 ) −                                     +
+                                        2          2                    2
+                           1 + ε ∥χI f ∥2 − ∥χJ f ∥2 + o(ε) 1 + ε ∥χI g∥2 − ∥χJ g∥22 + o(ε)
+                                                                                   
+
+
+                                                               9
+        = µ1 ε ∥χI f ∥22 − ∥χJ f ∥22 + µ2 ε ∥χI g∥22 − ∥χJ g∥22 + o(ε)
+                                                              
+           Z                               Z                          
+                         2            2                2          2
+        =ε      µ1 f (x) + µ2 g(x) dx − µ1 f (x) + µ2 g(x) dx + o(ε),
+                  I                                            J
+                           2         2             2         2
+             R                                             R
+as ε → 0. If                             J µ1 f (x) + µ2 g(x) dx, then choosing ε sufficiently small
+                 I µ1 f (x) + µ2 g(x) dx <
+makes the right-hand side of the above inequality negative, which is a contradiction. We conclude
+that equation (4.4) holds and the proof is complete.
+
+4.3. f and g are step functions with at most 6 steps
+   Throughout, let
+
+          E := {x ∈ [0, 1] : x satisfies (4.1), (4.2) and the ellipse equation in Lemma 4.2}.
+
+By Lemma 4.2, we see that E is dense in [0, 1]. So in what follows, we will work with E (or E × E)
+so that we can assume the eigenvalue-equation and the ellipse equation without worry. Let
+
+                       E + := E ∩ S + (g),             E 0 := E ∩ S 0 (g)       and    E − := E ∩ S − (g).
+
+   We first prove a technical lemma about the eigenfunctions f and g.
+Lemma 4.3. Let U ⊆ S + (g) ∪ S 0 (g) be a measurable subset with positive measure. Suppose there
+                                                                                       P
+exist points x1 , . . . , xk ∈ U ∩ E and non-negative real numbers u1 , . . . , uk with i ui = m(U ) such
+that the following two moment constraints are satisfied:
+                      k
+                      X                    Z                       k
+                                                                   X                             Z
+                                     2                 2
+                            ui f (xi ) =        f (x) dx,                ui f (xi )g(xi ) =           f (x)g(x) dx,   (4.11)
+                      i=1                   U                      i=1                            U
+
+Then the linear moments are also preserved; that is,
+                              k
+                              X                    Z                     k
+                                                                         X                   Z
+                                    ui f (xi ) =       f (x) dx,               ui g(xi ) =           g(x) dx.
+                              i=1                  U                     i=1                  U
+
+By symmetry, a similar assertion holds if U ⊆ S − (g) ∪ S 0 (g).
+Proof. Consider a partition of U into k measurable subsets U1 , . . . , Uk such that m(Ui ) = ui for all
+1 ≤ i ≤ k. Define a new graphon W f with respect to the points xi and the subsets Ui such that
+                                        
+                                        W (x, y), x, y ∈ / U;
+                                        
+                                        
+                              W (x, y) = W (xi , y), x ∈ Ui , y ∈
+                              f                                   / U;
+                                        
+                                        
+                                        1,          x, y ∈ U.
+
+Essentially, we are cloning the point xi over Ui . Moreover, since W (x, y) = 1 for all x, y ∈ U , the
+graphons W and W  f agree on U × U . Define functions f˜, g̃ using a similar cloning operation, i.e.,
+                               (                             (
+                                f (xi ), x ∈ U i ;            g(xi ), x ∈ Ui ;
+                       f˜(x) =                      g̃(x) =                                     (4.12)
+                                f (x), x ∈ / U;               g(x), x ∈  / U.
+
+   We have the following two claims.
+
+                                                                   10
+Claim 4.1. ∥f˜∥2 = ∥g̃∥2 = 1, and ⟨f˜, g̃⟩ = 0.
+
+Proof of Claim 4.1. Using (4.11) we get
+                      Z                         k
+                                                X                       Z          Xk
+           ∥f˜∥22 =                 2
+                              f (x) dx +                             2
+                                                        ui f (xi ) = 1 −        2
+                                                                           f (x) dx +   ui f (xi )2 = 1.
+                      Uc                        i=1                                       U                      i=1
+
+Here, U c = [0, 1]\U . Again, by Lemma 4.2, g(xi )2 is a function of f (xi )2 given by
+                                                                  µ1 + µ2 − µ1 f (xi )2
+                                                 g(xi )2 =                              .
+                                                                          µ2
+Averaging with weights ui and using the first constraint in (4.11) gives
+                                k
+                                                                                                     ui f (xi )2
+                                                                                                 P
+                                X                   (µ1 + µ2 ) m(U ) − µ1
+                                                    2
+                                        ui g(xi ) =                                                                  .                 (4.13)
+                                                                   µ2
+                                i=1
+
+On the other hand, integrating the ellipse equation from Lemma 4.2 over U yields
+                          Z                 Z
+                                  2
+                       µ1    f (x) dx + µ2     g(x)2 dx = (µ1 + µ2 ) m(U ),
+                                    U                                U
+
+which is equivalent to
+                                     (µ1 + µ2 ) m(U ) − µ1 U f (x)2 dx
+                                Z                          R
+                                            2
+                           g(x) dx =                                   .                                                               (4.14)
+                         U                           µ2
+Combining (4.13) and (4.14) we see i ui g(xi )2 = U g(x)2 dx. Thus
+                                  P              R
+
+                          Z                         X                                 Z                      k
+                                                                                                             X
+             ∥g̃∥22 =          g(x) dx +2                                2
+                                                             ui g(xi ) = 1 −                  g(x)2 dx +             ui g(xi )2 = 1.
+                          Uc                            i                               U                    i=1
+
+   Finally, since ⟨f, g⟩ = 0, we have
+                                Z                    Z
+                                    f (x)g(x) dx = −   f (x)g(x) dx,
+                                            Uc                                    U
+
+and hence the second constraint in (4.11) gives us
+                                                Z                                 k
+                                                                                  X
+                                ⟨f˜, g̃⟩ =                  f (x)g(x) dx +                ui f (xi )g(xi ) = 0,
+                                                 Uc                               i=1
+
+finishing the proof of the claim.
+
+Claim 4.2. We have                                                                                          !2
+                                                                 Z                        k
+                                                                                          X
+                                       f f˜ = µ1 +
+                                    f˜ W                                 f (x) dx −             ui f (xi )       ,                     (4.15)
+                                                                  U                       i=1
+and                                                                                                      !2
+                                                                 Z                        k
+                                                                                          X
+                                    g̃ W
+                                       f g̃ = µ2 +                       g(x) dx −              ui g(xi )        .                     (4.16)
+                                                                  U                       i=1
+
+
+                                                                             11
+                                                                                    f f˜ into the
+Proof of Claim 4.2. We only prove (4.15); the proof of (4.16) is similar. Expand f˜ W
+following blocks
+                                ZZ
+                        ˜   ˜
+                       f Wf =
+                          f              W (x, y)f (x)f (y) dx dy
+                                                        U c ×U c
+                                                         X k Z         Z
+                                                    +2                         W (xi , y) f (xi ) f (y) dx dy
+                                                         i=1     Ui       Uc
+                                                        ZZ
+                                                    +              f˜(x)f˜(y) dx dy.
+                                                          U ×U
+                                                PR
+Note that the second line equals 2 i ui f (xi ) U c W (xi , y)f (y) dy, while the third line can be written
+               2                   2
+as U f˜(x) dx =
+    R                P
+                        i ui f (xi )   by (4.12). So
+
+                                              k                  Z                                               k
+                                                                                                                                      !2
+                                              X                                                                  X
+                        f f˜ = I + 2
+                     f˜ W                           ui f (xi )             W (xi , y)f (y) dy +                          ui f (xi )        ,                 (4.17)
+                                              i=1                  Uc                                             i=1
+              RR
+where I :=     U c ×U c W (x, y)f (x)f (y) dx dy. Using the eigenvalue-equation at x ∈ U ∩ E, we have
+                                      Z                                                           Z
+                                              W (x, y)f (y) dy = µ1 f (x) −                                  f (y) dy.                                       (4.18)
+                                        Uc                                                           U
+
+Using (4.18) at x = xi we rewrite the mixed term in (4.17):
+              k
+              X                  Z                                                 k
+                                                                                   X                            k
+                                                                                                                X                  Z
+          2         ui f (xi )        W (xi , y)f (y) dy = 2µ1                           ui f (xi )2 − 2              ui f (xi )          f (y) dy.
+              i=1                Uc                                                i=1                          i=1                   U
+
+Combining the above equation with (4.17) yields
+
+                                        k                              k                    Z                            k
+                                                                                                                                               !2
+                                        X                              X                                                 X
+                 f f˜ = I + 2µ1
+              f˜ W                              ui f (xi )2 − 2                ui f (xi )         f (x) dx +                    ui f (xi )          .        (4.19)
+                                          i=1                          i=1                    U                           i=1
+
+   Now, we compute the term µ1 = f W f using the same block expansion. Applying (4.18) for
+x ∈ U ∩ E, we obtain
+                           Z                 Z              Z          2
+                µ1 = I + 2   f (x) µ1 f (x) −   f (y) dy dx +    f (x) dx
+                                          U                                    U                                   U
+                                            Z                          Z                       2
+                           = I + 2µ1                f (x)2 dx −                    f (x) dx          .
+                                                U                              U
+
+Subtract this identity from (4.19) to get
+
+                                        k                          Z                      !              Z                      k
+                                                                                                                                                    !2
+                                        X                                                                                       X
+            f f˜ − µ1 = 2µ1
+         f˜ W                                   ui f (xi ) − 2
+                                                                           f (x) dx 2
+                                                                                              +               f (x) dx −              ui f (xi )         .
+                                          i=1                         U                                  U                      i=1
+
+By (4.11), the first term vanishes, and we get the desired claim.
+
+                                                                            12
+    Because f˜, g̃ are orthonormal, using Lemma 3.2, we have
+
+                     f f˜ + g̃ W
+            f ) ≥ f˜ W
+          σ(W                  f g̃
+                                Z                          !2             Z                              !2
+                                               X                                          X
+                = µ1 + µ2 +         f (x) dx −   ui f (xi ) +                 g(x) dx −         ui g(xi )     .
+                                   U              i                       U                 i
+
+Since W is extremal, σ(W ) ≥ σ(W
+                               f ), and so the integrals in the last inequality must be zero. The
+assertion follows.
+
+   Note that in the above lemma, the assumption U ⊆ S + (g) ∩ S 0 (g) allows us to specify the value
+of W              f (x, y) = 1 = W (x, y) for a.e. x, y ∈ U . This is necessary for the calculation to
+   f on U , i.e., W
+work.
+   Next, we recall two results from the theory of convexity.
+
+Lemma 4.4 ([5, Section 2.1.4]). Let C ⊆ Rd be a convex set and x be a random vector such that
+x ∈ C with probability one. Then E(x) ∈ C.
+
+   For a subset S ⊆ Rd , the convex hull of S, denoted by conv(S), is defined to be the smallest
+convex set that contains it. We recall the following well-known theorem by Carathéodory on the
+convex hull of sets.
+
+Theorem 4.5 (Carathéodory’s Theorem [20, Theorem 1.2.3]). Let S ⊆ Rd . If x ∈ conv(S), then
+there exist points s0 , s1 , . . . , sd ∈ S and coefficients a0 , a1 , . . . , ad ≥ 0 with di=0 ai = 1 such that
+                                                                                          P
+
+                                                      d
+                                                      X
+                                                x=          ai si .
+                                                      i=0
+
+Equivalently, every point in conv(S) is a convex combination of at most d + 1 points of S.
+
+    We are now ready to show that f, g are step-functions with at most 6 steps.
+
+Lemma 4.6. We can assume that W has the following property: except on a set of measure zero, f
+(and therefore g) takes at most 3 values on S + (g) ∪ S 0 (g) and at most 3 values on S 0 (g) ∪ S − (g).
+
+Proof. Let U := S + (g) ∪ S 0 (g) and define
+                     Z                           Z                                              Z
+               1              2              1                                       1
+        A :=            f (x) dx, B :=              f (x)g(x) dx,              C :=                  f (x) dx.
+              m(U ) U                       m(U ) U                                 m(U )        U
+
+Recall that E + ∪ E 0 ⊆ U is such that m(E + ∪ E 0 ) = m(U ). Define the map Φ : E + ∪ E 0 → R2 by
+
+                                        Φ(x) := f (x)2 , f (x)g(x) .
+                                                                  
+
+
+Then, by the definition of A and B,
+                                           Z                          Z
+                                   1                      1
+                         (A, B) =              Φ(x) dx =                         Φ(x) dx.
+                                  m(U )      U           m(U )        E + ∪E 0
+
+
+                                                      13
+Using Lemma 4.4, we see that (A, B) ∈ conv(Φ(E + ∪ E 0 )). By Carathéodory’s Theorem (Theorem
+4.5), there exist points x1 , x2 , x3 ∈ E + ∪ E 0 and weights t1 , t2 , t3 ≥ 0 with t1 + t2 + t3 = 1 such that
+
+                                 t1 Φ(x1 ) + t2 Φ(x2 ) + t3 Φ(x3 ) = (A, B),
+
+which is equivalent to
+                               3
+                               X                           3
+                                                           X
+                                            2
+                                     ti f (xi ) = A,             ti f (xi )g(xi ) = B.                 (4.20)
+                               i=1                         i=1
+    Next, we show that necessarily
+
+                                      t1 f (x1 ) + t2 f (x2 ) + t3 f (x3 ) = C.                        (4.21)
+
+To this end, set ui := ti m(U ) and partition U into subsets U1 , U2 , U3 such that m(Ui ) = ui for all i.
+Then, (4.20) becomes
+                Z                X3               Z                    X3
+                         2                    2
+                    f (x) dx =      ui f (xi ) ,     f (x)g(x) dx =        ui f (xi )g(xi ).
+                  U               i=1                     U                       i=1
+                            P3                  R
+Using Lemma 4.3 we get i=1 ui f (xi ) = U f (x) dx, which is equivalent to (4.21).
+                    f , f˜ and g̃ as in the proof of Lemma 4.3 w.r.t. U , xi ’s, and Ui ’s described
+    Finally, define W
+above. Then, the proof of Lemma 4.3 gives us that σ(W     f ) = σ(W ). Moreover, (4.15) implies that
+µ1 (W ) ≥ µ1 . By the choice of W , we see that µ1 (W ) = µ1 . This means W
+    f                                               f                        f is an extremal graphon
+with maximum largest eigenvalue. Furthermore, by (4.15), we have µ1 (W               f f˜, implying f˜ is
+                                                                            f ) = f˜ W
+       f )-eigenfunction. Also, it is clear that µ2 = µ2 (W
+an µ1 (W                                                           f g̃ using (4.16), which implies g̃ is
+                                                          f ) = g̃ W
+an µ2 (W )-eigenfunction. Thus, W is an extremal graphon with the property that its eigenfunctions
+       f                         f
+f˜ and g̃ take at most 3 values on U . Now, starting with Wf and U = S 0 (g) ∪ S − (g) and repeating
+the above steps, we can get an extremal graphon with the desired property. This completes the
+proof.
+
+4.4. Monotonicity of f and g
+    Without loss of generality, we can assume that g is monotonically decreasing on [0, 1]. By the
+assumption on g, we see that f is monotonically increasing on E + , constant on E 0 and monotonically
+decreasing on E − . In light of Lemma 4.1, it is clear that W (x, y) = 1 whenever x, y ∈ E + ∪ E 0 or
+x, y ∈ E − ∪ E 0 . The value of W (x, y) is undetermined at this stage whenever x ∈ E + and y ∈ E − .
+We do have the following monotonicity property.
+Lemma 4.7 (Monotonicity of neighbourhoods). The following statements hold.
+  (i) Let x1 , x2 ∈ E + and y ∈ E − such that x2 ≥ x1 . If W (x1 , y) = 1, then W (x2 , y) = 1.
+
+ (ii) Let x1 , x2 ∈ E − and y ∈ E + such that x2 ≤ x1 . If W (x2 , y) = 1, then W (x1 , y) = 1.
+Proof. Since x2 ≥ x1 ∈ E + , we have f (x2 ) ≥ f (x1 ) and g(x2 ) ≤ g(x1 ). Since g(y) < 0, we see that
+
+                            f (x2 )f (y) + g(x2 )g(y) ≥ f (x1 )f (y) + g(x1 )g(y).
+
+Assertion (i) now follows from Lemma 4.1 and the assumption that W (x1 , y) = 1. A similar
+argument works for assertion (ii).
+
+                                                         14
+4.5. Back to (weighted) graphs
+    In Lemma 4.6, we have shown that eigenfunctions f, g are step-functions with at most 6 steps a.e.
+on the interval [0, 1]. So consider a partition U1 ⊔ · · · ⊔ Uk of [0, 1] (k ≤ 6) such that for i = 1, . . . , k,
+we have
+    • g ≡ βi on Ui a.e. for some numbers β1 > · · · > βk , and
+
+    • f ≡ αi on Ui a.e., where αi ≥ 0 is related to βi by the ellipse equation in Lemma 4.2.
+    Define ui := m(Ui ). Clearly, ki=1 ui = 1. Define a graph G∗ (possibly with loops) such that
+                                     P
+
+V (G) = {U1 , . . . , Uk } and Ui ∼ Uj whenever W (x, y) = 1 on Ui × Uj a.e. Using Lemma 4.1 it is
+clear that Ui ∼ Ui for all i, i.e., every vertex in G∗ has a loop. Now, consider the weighted matrix
+                                                       (√
+                                ∗     1/2     ∗   1/2       ui uj , if Ui ∼ Uj ;
+                              M := Du A(G )Du =
+                                                         0,         otherwise.
+
+Here A(G∗ ) is the adjacency matrix of G∗ with rows and columns indexed by U1 , . . . , Uk and Du
+denotes the diagonal matrix with entries {u1 , . . . , uk }. We relate the spectral sum of the extremal
+graphon W to the spectral sum of the matrix M ∗ .
+Lemma 4.8. We have µ1 = λ1 (M ∗ ) and µ2 = λ2 (M ∗ ).
+Proof. By the eigenvalue-equation (4.1) for µ1 , for any i = 1, . . . , k, we have
+                                                  X
+                                        µ1 αi =        αj uj
+                                                      Uj ∼Ui
+
+which is equivalent to
+                                        √        X √      √
+                                      µ1 ui αi =     uj αj uj ui .
+                                                    Uj ∼Ui
+                                                                  √
+This implies µ1 is an eigenvalue of M ∗ with eigenvector ( ui αi )ki=1 .
+    Conversely, if (a1 , . . . , ak ) is an eigenvector for λ1 (M ∗ ), then it is clear that the step-function
+given by
+                                                       ai
+                                               h(x) = √ , x ∈ Ui
+                                                        ui
+is an eigenfunction of W with eigenvalue λ1 (M ∗ ). We conclude that µ1 = λ1 (M ∗ ).
+    Similarly, one can argue that µ2 = λ2 (M ∗ ).
+
+   Note that the lengths ui sum to 1 and are undetermined at this stage. The spectral sum of the
+matrix M ∗ depends on these lengths, equivalently on the diagonal matrix Du , even if the underlying
+graph G∗ is the same. Let us define
+
+                                           σ(G∗ ) := max σ(M ∗ ),
+                                                        Du
+
+and call it the spectral sum of G∗ .
+   Thus, to finish the proof of Theorem 3.5, we only need to show that the spectral sum σ(G∗ ) is
+at most 8/7. To that end, we next determine the possible graphs G∗ for each 1 ≤ k ≤ 6.
+
+                                                      15
+4.6. Structure of G∗
+   Precisely, we will show the following.
+
+Lemma 4.9. The graph G∗ ∈ {P3 , P4 , H5 , H6 }, where P3 , P4 , H5 , H6 are as shown in Figure 1.
+
+
+
+
+           1            2             3                        1       2            3          4
+                     (a) P3                                                (b) P4
+
+
+
+                                                                             3
+
+
+
+
+                        3                                      1       2            4          5
+
+
+
+
+     1           2            4             5                                            6
+                     (c) H5                                                (d) H6
+
+      Figure 1: Possibilities for G∗ . The vertex labeled by i in the figure corresponds to Ui .
+
+    We will prove Lemma 4.9 in a series of claims. We say that two distinct vertices in a graph
+are true twins if they have the same closed neighbourhoods. We observe that G∗ cannot have true
+twins.
+
+Lemma 4.10. The graph G∗ is true-twin-free.
+
+Proof. Suppose Ui , Uj ∈ V (G∗ ) are true twins. Then, by the eigenvalue-equation (4.1) for µ1 , we
+have                                                 X
+                             µ1 αi = ui αi + uj αj +    uℓ αℓ = µ1 αj ,
+                                                      ℓ̸=i,j
+
+implying αi = αj , a contradiction.
+
+   Let us now analyze the structure of G∗ for different values of k.
+
+Claim 4.3. If k ≤ 3, then G∗ ∼
+                             = P3 .
+
+Proof. The case k = 1 is not possible. Indeed, 1 = ∥f ∥2 = α1 and 1 = ∥g∥2 = |β1 |. This gives
+0 = ⟨f, g⟩ = α1 β1 ̸= 0, a contradiction.
+   If k = 2, then σ(M ∗ ) = tr(M ∗ ) = 2i=1 ui = 1 for all choices of Du . By (4.3), we know that
+                                          P
+
+σ(G∗ ) ≥ 8/7. Thus, there is no graph G∗ of order 2.
+
+                                                 16
+    Assume now that k = 3. Without loss of generality, we can assume that β1 > β2 ≥ 0 > β3 ,
+since g and −g are both eigenfunctions for µ2 . Then, by Lemma 4.1, we see that U1 ∼ U2 in G∗ . It
+is easy to check that the only graph on 3 vertices with at least one edge and true-twin-free is P3
+(obviously with a loop on each vertex).
+
+    We already know that Ui ∼ Ui for all 1 ≤ i ≤ k, i.e., each vertex of G∗ has loops. In the proofs
+of the claims below, we will repeatedly use the fact that G∗ is true-twin free (Lemma 4.10) and
+monotonicity of neighbourhoods (Lemma 4.7) without mention.
+
+Claim 4.4. Suppose k = 4, then G∗ ∼
+                                  = P4 .
+Proof. In light of Lemma 4.6, one of the following occurs:
+   Case 1: β1 > β2 > β3 ≥ 0 > β4 .
+   Then, by Lemma 4.1, U1 , U2 , U3 induce a triangle in G∗ . If U4 ∼ U2 , then U3 ∼ U4 , implying U2
+and U3 are true-twins, a contradiction. If U4 ≁ U2 , then U4 ≁ U1 , and so U1 and U2 are true-twins,
+again a contradiction.
+   Case 2: β1 > β2 > 0 > β3 > β4 .
+   We have U1 ∼ U2 and U3 ∼ U4 . If U1 ∼ U4 , then U1 , U2 are adjacent to both U3 , U4 , implying
+U1 and U2 are true-twins, a contradiction. So suppose U1 ≁ U4 .
+   If U1 ∼ U3 , then U2 ∼ U3 . If U2 ≁ U4 , then again U1 and U2 are true-twins, a contradiction.
+Thus, U2 ∼ U4 . But then U2 and U3 are true-twins, a contradiction. So U1 ≁ U3 , U4 . Arguing
+similarly with U4 , we see that U4 ≁ U1 , U2 .
+   Now, if U2 ≁ U3 , then U1 and U2 are true-twins, a contradiction. Thus, the only possibility is
+U2 ∼ U3 . This completely determines G∗ , and we have G∗ ∼   = P4 .
+
+Claim 4.5. If k = 5, then G∗ ∼
+                             = H5 .
+Proof. Using Lemma 4.6, without loss of generality, we can assume that
+
+                                     β1 > β2 > β3 ≥ 0 > β4 > β5 .
+
+Thus, U1 , U2 , U3 induce a triangle in G∗ . Moreover, U4 ∼ U5 . We consider the following cases:
+    Case 1: U1 ∼ U5 .
+    Then U1 is adjacent to all vertices in G∗ . This means U2 is also adjacent to all vertices, implying
+U1 and U2 are true-twins, a contradiction.
+    Case 2: U1 ≁ U5 and U1 ∼ U4 .
+    Then U1 , U2 , U3 are all adjacent to U4 . If U2 ≁ U5 , then U1 and U2 are true-twins, a contradiction.
+So suppose U2 ∼ U5 . This implies U2 and U3 are adjacent to all vertices in G∗ and hence they are
+true-twins, a contradiction.
+    Case 3: U1 ≁ U4 , U5 .
+    If U2 ∼ U5 , then U2 and U3 are adjacent to all vertices, and hence they are true-twins, a
+contradiction. So suppose U2 ≁ U5 . If U2 ≁ U4 , then U1 and U2 are true-twins, a contradiction. So
+assume that U2 ∼ U4 . We have N [U2 ] = {U1 , U2 , U3 , U4 }. If U3 ≁ U5 , then U2 and U3 are true-twins,
+a contradiction. So we have U3 ∼ U5 , i.e., N [U3 ] = {U1 , U2 , U3 , U4 , U5 }. This completely determines
+G∗ and we see that G∗ ∼   = H5 .
+
+                                                    17
+Claim 4.6. If k = 6, then G∗ ∼
+                             = H6 .
+Proof. By Lemma 4.6, we have
+
+                                   β1 > β2 > β3 > 0 > β4 > β5 > β6 .
+
+By Lemma 4.1 we see that U1 , U2 , U3 (resp. U4 , U5 , U6 ) induce a triangle in G∗ . We consider the
+following cases:
+    Case 1: U1 ∼ U6 .
+    Then N [U1 ] = {U1 , . . . , U6 }. This implies U2 , U3 are also adjacent to all vertices in G∗ . But
+then U1 and U2 are true-twins, a contradiction.
+    Case 2: U1 ≁ U6 and U1 ∼ U5 .
+    Then U1 ∼ U4 and thus U2 , U3 are also adjacent to U4 , U5 . If U2 ≁ U6 , then U1 and U2 are
+true-twins. If U2 ∼ U6 , then U3 ∼ U6 and so U2 and U3 are true-twins. In either case, we have a
+contradiction.
+    Case 3: U1 ≁ U5 , U6 and U1 ∼ U4 .
+    Then U2 , U3 are adjacent to U4 .
+    Subcase 3.1: U2 ∼ U6 . Then U2 and U3 are adjacent to all vertices in G∗ , a contradiction.
+    Subcase 3.2: U2 ≁ U6 and U2 ∼ U5 . Then U2 , U3 are adjacent to U4 , U5 . If U3 ≁ U6 , then
+U2 and U3 are true-twins. If U3 ∼ U6 , then U3 and U4 are true-twins. In both cases, we have a
+contradiction.
+    Subcase 3.3: U2 ≁ U5 , U6 and U2 ∼ U4 . Then U1 and U2 are true-twins, a contradiction.
+    Case 4: U1 ≁ U4 , U5 , U6 .
+    Arguing as above, one can show that U6 also is not adjacent to U1 , U2 , U3 . So we only need to
+worry about the edges (or non-edges) between U2 , U3 and U4 , U5 . If U2 ∼ U5 , then U2 , U3 are adjacent
+to U4 , U5 and so U2 , U3 are true-twins, a contradiction. So assume U2 ≁ U5 . If U2 ≁ U4 , then U1
+and U2 are true-twins, a contradiction. So we have N [U2 ] = {U1 , U2 , U3 , U4 }. If U3 ≁ U5 , then U2
+and U3 are true-twins, a contradiction. So the only possibility is N [U3 ] = {U1 , U2 , U3 , U4 , U5 }. This
+determines the graph G∗ . Indeed, G∗ ∼     = H6 .
+
+     The above claims complete the proof of Lemma 4.9. Interestingly, the graphs P3 , P4 , H5 are
+induced subgraphs of H6 . This means that if k < 6, we can add sub-intervals with measure zero to
+the list U1 , U2 , . . . , Uk so that we have a partition of [0, 1] into 6 sub-intervals. Moreover, we can
+define f and g on these additional measure zero sets so that g always has non-negative values on
+U1 , U2 , U3 and negative values on U4 , U5 , U6 a.e. In other words, g ≡ βi on Ui a.e. where
+
+                                   β1 > β2 > β3 ≥ 0 > β4 > β5 > β6 .
+
+Thus, the problem is now reduced to proving the following.
+                                                         P
+Lemma 4.11. For 1 ≤ i ≤ 6, let 0 ≤ ui ≤ 1 be such that i ui = 1. Let Du denote the diagonal
+matrix with diagonal entries u1 , . . . , u6 . Let
+
+                                         M ∗ = Du1/2 A(H6 )Du1/2 .
+
+Then σ(M ∗ ) ≤ 8/7.
+
+                                                    18
+   We will prove the above Lemma 4.11 using matrix sum of squares technique from convex
+optimization. Lemma 4.11 is a non-convex optimization problem which we first convert to a higher
+dimensional convex optimization problem using exterior algebra.
+
+4.7. Exterior algebra
+   Let M be a real square matrix of order n. For matrices M, N , let M ⊗ N denote the usual
+Kronecker product of matrices. Define
+
+                                      N := M ⊗ In + In ⊗ M.
+
+A combinatorial interpretation of N is that if M is the adjacency matrix of a graph, then N is the
+adjacency matrix of the cartesian product of the graph with itself.
+   For two vectors u, v ∈ Rn , the wedge product of u and v is given by
+
+                                      u ∧ v := u ⊗ v − v ⊗ u.
+
+Let e1 , . . . , en denote the standard basis of Rn . Consider the 2-nd exterior power of Rn given by
+
+                              Λ2 (Rn ) = span{ei ∧ ej : 1 ≤ i < j ≤ n},
+
+which is an antisymmetric subspace of the tensor space Rn ⊗ Rn . An orthonormal basis of Λ2 (Rn )
+is given by                                                   
+                                        ei ∧ ej
+                                B :=      √     :1≤i<j≤n ,
+                                             2
+                                           n
+                                2  n
+implying that the dimension of Λ (R ) is 2 . We know that u ∧ v ∈ Λ2 (Rn ) for all u, v ∈ Rn . See,
+                                            
+
+for instance, [19] for details.
+    We observe that the subspace Λ2 (Rn ) is invariant under the linear transformation N .
+
+Proposition 4.12. For all u, v ∈ Rn , we have
+
+                                N (u ∧ v) = (M u) ∧ v + u ∧ (M v).
+
+Proof. Recall that (A ⊗ B)(C ⊗ D) = AC ⊗ BD for any square matrices A, B, C, D of a given order.
+Then
+
+     N (u ∧ v) = (M ⊗ In + In ⊗ M ) (u ⊗ v − v ⊗ u)
+               = (M ⊗ In )(u ⊗ v) + (In ⊗ M )(u ⊗ v) − (M ⊗ In )(v ⊗ u) − (In ⊗ M )(v ⊗ u)
+               = (M u ⊗ v − v ⊗ M u) + (u ⊗ M v − M v ⊗ u)
+               = (M u) ∧ v + u ∧ (M v).
+              2   n
+    Let P ∈ Rn ×( 2 ) be the matrix whose columns are the basis vectors in B. Consider the map
+              n    n
+ψ : Rn×n → R( 2 )×( 2 ) given by
+
+                            ψ(M ) := P T N P = P T (M ⊗ In + In ⊗ M )P                          (4.22)
+
+for any M ∈ Rn×n .
+
+                                                  19
+Proposition 4.13. The eigenvalues of ψ(M ) are precisely
+
+                                     λi (M ) + λj (M ),        1 ≤ i < j ≤ n.
+
+Proof. Suppose v1 , . . . , vn denote the orthonormal eigenvectors (represented in the standard basis
+of Rn ) of M corresponding to the eigenvalues λ1 (M ) ≥ · · · ≥ λn (M ), respectively. For i < j, denote
+by (vi ∧ vj )B the representation of vi ∧ vj in terms of the basis B as an element of Λ2 (Rn ). Using
+Proposition 4.12 and the fact that P T P = I(n) , we see that
+                                                    2
+
+
+                              ψ(M )(vi ∧ vj )B = (P T N P )(vi ∧ vj )B
+                                               = P T N (vi ∧ vj )
+                                               = P T (M vi ) ∧ vj + vi ∧ (M vj )
+                                                                                 
+
+                                               = λi (M ) + λj (M ) P T (vi ∧ vj )
+                                                                   
+                                                                   
+                                               = λi (M ) + λj (M ) (vi ∧ vj )B .
+
+Thus, (vi ∧ vj )B is an eigenvector of ψ(M ) corresponding to the eigenvalue λi (M ) + λj (M ).
+
+Remark. It is worth mentioning that ψ(M ) defined in (4.22) is exactly the second additive compound
+matrix of M = [mij ]. More generally, let 1 ≤ k ≤ n, and let α, β ∈ [n]
+                                                                          
+                                                                        k . If |α ∩ β| = k − 1, denote
+sign(α, β) = (−1)|{r∈α∩β, i<r<j}| , where i < j are the two unique elements in the symmetric difference
+                                                                     n  n
+α∆β. The k-th additive compound of M is the matrix M [k] ∈ R(k )×(k ) defined by
+                          P
+                           i∈α mii ,           if α = β,
+                          
+                          
+              (M [k] )α,β =    sign(α, β) · mij ,   if |α ∩ β| = k − 1, α\β = {i}, β\α = {j},
+                              
+                              
+                              0,                   otherwise.
+
+For further results on additive compounds, we refer the reader to [13].
+                                             √
+   Letting x = (x1 , . . . , x6 ), where xi = ui (i = 1, . . . , 6), it is clear that the following implies
+Lemma 4.11.
+
+Lemma 4.14. Let x ∈ R6 be such that ∥x∥2 = 1. Define M ∗ (x) = diag(x)A(H6 ) diag(x). Then
+                                            8
+                                              I15 − ψ(M ∗ (x)) ⪰ 0,
+                                            7
+i.e., 87 I15 − ψ(M ∗ (x)) is a positive semi-definite matrix.
+
+   We prove Lemma 4.14 using the sum of squares technique. We refer the reader to [26] for further
+details.
+
+4.8. Matrix sum of squares
+   Suppose we can find a symmetric positive semi-definite matrix Q ∈ R105×105 and a symmetric
+matrix T ∈ R15×15 such that
+                              8
+                                I15 − ψ(M ∗ (x)) = V (x)T QV (x) + (1 − ∥x∥22 )T                    (4.23)
+                              7
+
+                                                          20
+for all x ∈ R6 . Here
+                                   V (x) := (1, x1 , . . . , x6 )T ⊗ I15 .
+Then on the unit sphere ∥x∥2 = 1 the second term vanishes, and we obtain
+                              8
+                                I15 − ψ(M ∗ (x)) = V (x)T QV (x) ⪰ 0,
+                              7
+implying Lemma 4.14.
+   Exact rational matrices Q and T , satisfying 4.23 were found and are given here. For details on
+how this was done, refer Appendix. This completes the (long!) proof of Theorem 3.5.
+
+
+5. Concluding remarks
+    In this paper, we established a tight upper bound for the spectral sum of graphs in G(n). The
+problem of characterizing graphs which attain the bound remains open (see Conjecture 5.1 below).
+    For n ≥ p ≥ q ≥ 0, define K(n, p, q) to be the graph obtained by taking the complement of the
+union of the complete bipartite graph Kp,q and n − p − q isolated vertices. In other words, K(n, p, q)
+is the join of Kn−p−q with Kp ∪ Kq . In their survey of automated conjectures in spectral graph
+theory, Aouchiche and Hansen [1] generalized the tight construction for spectral sum from [12] and
+framed the following conjecture.
+
+Conjecture 5.1 ([1, 12]). Let n ≥ 5. Then for all graphs G ∈ G(n), we have
+
+                         λ1 (G) + λ2 (G) ≤ λ1 (K(n, p, q)) + λ2 (K(n, p, q)),
+
+where if n = 7k + r with 0 ≤ r ≤ 6, then
+                                      
+                                      
+                                       (2k, 2k)                 if r = 0, 1;
+                                      
+                                      
+                                      (2k + 1, 2k)              if r = 2;
+                                      
+                                      
+                                      
+                              (p, q) =    (2k + 1, 2k + 1)       if r = 3, 4;
+                                         
+                                         
+                                         
+                                         
+                                         
+                                         (2k + 2, 2k + 1)       if r = 5;
+                                         
+                                          (2k + 2, 2k + 2)       if r = 6.
+                                         
+
+Moreover, equality holds if and only if G ∼
+                                          = K(n, p, q).
+
+    The key reason our proof of Theorem 1.2 does not fully characterize the extremal graphs
+(equivalently, extremal graphons) is because of the extra assumption on W that it has the maximum
+largest eigenvalue µ1 among all graphons that maximize the spectral sum. We require this extra
+assumption on W at two places: first, in Lemma 4.1 to decide the value of W (x, y) when κ(x, y) = 0;
+secondly, in Lemma 4.6 so that we can argue that f˜ is an eigenfunction for W     f corresponding
+to eigenvalue µ1 (W                                             f in place of W . We believe that
+                   f ) = µ1 , which finally allows us to choose W
+bypassing this assumption on W should lead to a characterization of the extremal graphon.
+    The problem of maximizing/minimizing the spectral sum for trees was recently resolved by Kumar,
+Mohar, Pragada and Zhan [14]. Indeed, they considered the convex combination αλ1 + (1 − α)λ2
+
+                                                     21
+(α ∈ [0, 1]) of λ1 and λ2 of trees of order n and fully characterized the extremal trees that maximize
+the convex combination for large n. It would be of interest to consider the convex combination of λ1
+and λ2 for graphs in G(n) and find the optimal upper bound. One may also try to investigate the
+spectral sum of other families; the family of Kr -free graphs is of some interest. The minimization of
+spectral sum of graphs remains an open problem. We propose the following conjecture for interested
+readers.
+
+Conjecture 5.2. For sufficiently large n, the path uniquely minimizes the spectral sum among all
+connected graphs of order n.
+
+
+Acknowledgement
+    Lele Liu is supported by the National Nature Science Foundation of China (No. 12471320), and
+Anhui Provincial Natural Science Foundation for Excellent Young Scholars (No. 2408085Y003).
+Hermie Monterde is supported in part by the Pacific Institute for the Mathematical Sciences through
+the PIMS-Simons Postdoctoral Fellowship. Michael Tait is partially supported by the US National
+Science Foundation via the grant DMS-2245556. We acknowledge the use of GPT 5.2 Plus during
+the ideation phase.
+
+
+References
+ [1] Mustapha Aouchiche and Pierre Hansen. A survey of automated conjectures in spectral graph
+     theory. Linear Algebra Appl., 432(9):2293–2322, 2010. 21
+
+ [2] Mustapha Aouchiche and Pierre Hansen. A survey of Nordhaus-Gaddum type relations. Discrete
+     Appl. Math., 161(4-5):466–546, 2013. 1
+
+ [3] Jean-Pierre Aubin. Applied Functional Analysis. Pure and Applied Mathematics (New York).
+     Wiley-Interscience, New York, second edition, 2000. With exercises by Bernard Cornet and
+     Jean-Michel Lasry, Translated from the French by Carole Labrousse. 5
+
+ [4] C. Borgs, J. T. Chayes, L. Lovász, V. T. Sós, and K. Vesztergombi. Convergent sequences
+     of dense graphs II. Multiway cuts and statistical physics. Ann. of Math. (2), 176(1):151–219,
+     2012. 4, 5
+
+ [5] Stephen Boyd and Lieven Vandenberghe. Convex Optimization. Cambridge University Press,
+     Cambridge, 2004. 13
+
+ [6] Jane Breen, Alex W. N. Riasanovsky, Michael Tait, and John Urschel. Maximum spread of
+     graphs and bipartite graphs. Commun. Am. Math. Soc., 2:417–480, 2022. 1, 2
+
+ [7] Péter Csikvári. On a conjecture of V. Nikiforov. Discrete Math., 309(13):4522–4526, 2009. 3
+
+ [8] Péter Csikvári. Note on the sum of the smallest and largest eigenvalues of a triangle-free graph.
+     Linear Algebra Appl., 650:92–97, 2022. 1
+
+
+                                                  22
+ [9] D. Cvetković and P. Rowlinson. The largest eigenvalue of a graph: a survey. Linear and
+     Multilinear Algebra, 28(1-2):3–33, 1990. 1
+
+[10] Dragoš Cvetković and Slobodan Simić. The second largest eigenvalue of a graph (a survey).
+     Number 9, pages 449–472. 1995. Algebra, logic & discrete mathematics (Niš, 1995). 1
+
+[11] Kinkar Chandra Das, Seyed Ahmad Mojallal, and Shaowei Sun. On the sum of the k largest
+     eigenvalues of graphs and maximal energy of bipartite graphs. Linear Algebra Appl., 569:175–194,
+     2019. 2
+
+[12] Javad Ebrahimi B, Bojan Mohar, Vladimir Nikiforov, and Azhvan Sheikh Ahmady. On the sum
+     of two largest eigenvalues of a symmetric matrix. Linear Algebra Appl., 429(11-12):2781–2787,
+     2008. 2, 6, 21
+
+[13] Miroslav Fiedler. Additive compound matrices and an inequality for eigenvalues of symmetric-
+     stochastic matrices. Czechoslovak Math. J., 24(3):392–402, 1974. 20
+
+[14] Hitesh Kumar, Bojan Mohar, Shivaramakrishna Pragada, and Hanmeng Zhan. Convex combi-
+     nation of first and second eigenvalues of trees, 2026. 21
+
+[15] Lele Liu. Graph limits and spectral extremal problems for graphs. SIAM J. Discrete Math.,
+     38(1):590–608, 2024. 2, 6
+
+[16] László Lovász. Large networks and graph limits, volume 60 of American Mathematical Society
+     Colloquium Publications. American Mathematical Society, Providence, RI, 2012. 4
+
+[17] László Lovász and Balázs Szegedy. Limits of dense graph sequences. J. Combin. Theory Ser.
+     B, 96(6):933–957, 2006. 4
+
+[18] László Lovász and Balázs Szegedy. Szemerédi’s lemma for the analyst. Geom. Funct. Anal.,
+     17(1):252–270, 2007. 4
+
+[19] Saunders Mac Lane and Garrett Birkhoff. Algebra. Chelsea Publishing Co., New York, third
+     edition, 1988. 19
+
+[20] Jiřı́ Matoušek. Lectures on Discrete Geometry, volume 212 of Graduate Texts in Mathematics.
+     Springer, 2002. 13
+
+[21] Bojan Mohar. On the sum of k largest eigenvalues of graphs and symmetric matrices. J.
+     Combin. Theory Ser. B, 99:306–313, 2009. 1
+
+[22] Vladimir Nikiforov. Eigenvalues and degree deviation in graphs. Linear Algebra Appl., 414:347–
+     360, 2006. 3
+
+[23] Vladimir Nikiforov. Linear combinations of graph eigenvalues. Electron. J. Linear Algebra,
+     15:329–336, 2006. 2
+
+
+
+                                                 23
+[24] Vladimir Nikiforov. Eigenvalue problems of Nordhaus-Gaddum type. Discrete Math., 307(6):774–
+     780, 2007. 1
+
+[25] Oystein Ore. Theory of Graphs, volume Vol. XXXVIII of American Mathematical Society
+     Colloquium Publications. American Mathematical Society, Providence, RI, 1962. 5
+
+[26] P.A. Parrilo and R.R. Thomas. Sum of Squares: Theory and Applications. Proceedings of
+     Symposia in Applied Mathematics. American Mathematical Society, 2020. 20
+
+[27] Zoran Stanić. Graphs with small spectral gap. Electron. J. Linear Algebra, 26:417–432, 2013. 1
+
+[28] Zoran Stanić. Inequalities for Graph Eigenvalues, volume 423 of London Mathematical Society
+     Lecture Note Series. Cambridge University Press, Cambridge, 2015. 1
+
+[29] Tamás Terpai. Proof of a conjecture of V. Nikiforov. Combinatorica, 31(6):739–754, 2011. 1, 2,
+     6
+
+
+Hitesh Kumar, Email: hitesh.kumar.math@gmail.com, hitesh kumar@sfu.ca
+Dept. of Mathematics, Simon Fraser University, Burnaby, BC V5A 1S6, Canada
+
+Lele Liu, Email: liu@ahu.edu.cn
+School of Mathematical Sciences, Anhui University, Hefei 230601, P.R. China
+
+Hermie Monterde, Email: hermie.monterde@uregina.ca
+Dept. of Mathematics and Statistics, University of Regina, Regina, SK, Canada S4S
+0A2
+
+Shivaramakrishna Pragada, Email: shivaramakrishna pragada@sfu.ca
+Dept. of Mathematics, Simon Fraser University, Burnaby, BC V5A 1S6, Canada
+
+Michael Tait, Email: michael.tait@villanova.edu
+Dept. of Mathematics & Statistics, Villanova University
+
+
+
+
+                                                24
+Appendix
+    Here, we describe the method we used to find the PSD matrix Q and matrix T . For 1 ≤ i, j ≤ 6,
+let Eij denote the standard basis vector of R6×6 with (i, j)-th entry 1 and 0 elsewhere. Note that
+the map ψ is linear. Then
+                                6
+                                X                      X
+                   ψ(M (x)) =         x2i ψ(Eii ) +             xi xj ψ(Eij + Eji )A(H6 )ij .                   (5.1)
+                                i=1                   1≤i<j≤6
+
+
+Write Q in 7 × 7 blocks as Q = (Qab )0≤a,b≤6 , Qab ∈ R15×15 . Expanding V (x)T QV (x) gives
+                                  6
+                                  X                          6
+                                                             X                    X
+          V (x)T QV (x) = Q00 +          xi (Q0i + Qi0 ) +         x2i Qii +              xi xj (Qij + Qji ).   (5.2)
+                                  i=1                        i=1                1≤i<j≤6
+
+Also,
+                                                                6
+                                                                X
+                                        (1 − ∥x∥22 )T = T −            x2i T.                                   (5.3)
+                                                                 i=1
+
+Comparing coefficients using (4.23) we obtain the system
+                                            8
+                                 Q00 + T = I15
+                                            7
+                                Q0i + Qi0 = 0
+                                   Qii − T = −ψ(Eii )
+                                 Qij + Qji = −ψ(Eij + Eji )A(H6 )ij .                                           (5.4)
+
+Eliminating T , this is equivalent to
+                                            8
+                                Q00 + Qii = I15 − ψ(Eii )
+                                            7
+                                Q0i + Qi0 = 0
+                                 Qij + Qji = −ψ(Eij + Eji )A(H6 )ij .                                           (5.5)
+
+   We find Q and T and do the necessary verification as follows:
+
+  1. Set up the coefficient equations (5.5) as a semidefinite feasibility problem in the unknown
+     blocks Qab and T , together with the constraint Q ⪰ 0.
+
+  2. Solve this feasibility problem numerically in CVXPY using the solver SCS, to a prescribed error
+     tolerance, obtaining numerical matrices Qnum and T num .
+
+  3. Symmetrize the numerical solution by replacing
+                              1 num                                             1 num
+                    Qnum ←          + (Qnum )T ,                T num ←               + (T num )T .
+                                                                                                
+                                Q                                                 T
+                              2                                                 2
+
+
+
+                                                       25
+4. Convert the numerical matrices into exact rational matrices using SymPy. More precisely,
+   selected entries of Qnum and T num are replaced by nearby rational numbers of bounded
+   denominator, and then assembled into candidate exact matrices Qrat and T rat .
+
+5. Reconstruct the remaining entries of Qrat exactly from the linear coefficient equations, so that
+   the polynomial identity holds exactly over Q.
+
+6. Verify the coefficient identity exactly using SymPy with rational arithmetic.
+
+7. Verify Qrat ⪰ 0 exactly by checking a rank one decomposition of Qrat over Q, again using
+   SymPy.
+
+
+
+
+                                              26
+

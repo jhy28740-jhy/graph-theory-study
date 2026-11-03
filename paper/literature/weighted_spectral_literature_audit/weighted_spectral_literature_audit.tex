@@ -1,0 +1,122 @@
+% !TeX program = xelatex
+\documentclass[11pt,a4paper]{article}
+\usepackage{xeCJK}
+\IfFileExists{C:/Windows/Fonts/simsun.ttc}{\setCJKmainfont[BoldFont={Microsoft YaHei}]{SimSun}\setCJKsansfont{Microsoft YaHei}}{\setCJKmainfont{FandolSong-Regular}\setCJKsansfont{FandolHei-Regular}}
+\usepackage[xetex,margin=23mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array,longtable,enumitem,xcolor,fancyhdr,hyperref}
+\hypersetup{unicode=true,colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue,pdftitle={lambda_1+k lambda_2 文献查新与新颖性审查}}
+\setlength{\parindent}{2em}\setlength{\parskip}{4pt}\setlength{\emergencystretch}{2em}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small $\lambda_1+k\lambda_2$ 文献查新}\fancyhead[R]{\small 研究生论文选题审查}\fancyfoot[C]{\thepage}
+\newcommand{\R}{\mathbb R}\newcommand{\la}{\lambda}\newcommand{\arxiv}[1]{\href{https://arxiv.org/abs/#1}{arXiv:#1}}
+\begin{document}
+\begin{center}
+{\LARGE\bfseries $\lambda_1+k\lambda_2$ 谱极值问题}\\[5pt]
+{\Large 文献查新、已知结果与论文选题判断}\\[8pt]
+{\large 研究生论文检索报告}\\[5pt]
+检索日期：2026年10月14日
+\end{center}
+
+\section*{摘要}
+本报告针对一般有限简单图的加权目标
+\[
+ F_k(G)=\lambda_1(G)+k\lambda_2(G),\qquad k\ge 1,
+\]
+进行可复核的公开文献查新。结论是：关于其随图阶 $n$ 增长的最佳线性系数，已有一篇 2026 年 9 月公开的 arXiv 预印本给出更强的前两大特征值可达区域；因此“求任意固定 $k$ 的渐近最佳常数”不能作为新颖的主定理。$k=1$ 的有限阶精确最大值和唯一极图也已有 2026 年 7 月公开预印本。树类的凸组合问题另有直接论文。与此同时，本次检索没有找到一般图在 $k>1$ 时所有有限阶等号图、唯一性和定量稳定性均已解决的证据；这些内容只能作为经过导师确认后的候选方向，不能直接表述为已开放问题。
+
+\section{问题边界与检索标准}
+图 $G$ 为 $n$ 阶有限简单图，邻接特征值按
+$\lambda_1\ge\lambda_2\ge\cdots\ge\lambda_n$ 排列。报告只判断一般图上的邻接谱目标 $F_k$，不把拉普拉斯谱、$A_\alpha$ 矩阵、图能量或树类结果误当作一般图结果。\textbf{已发表}与\textbf{公开预印本}分开记录；检索到题名相近的文章时核对原文摘要、定理和适用图类。
+
+检索数据库和入口包括：arXiv API（精确题名、语义组合检索及引用回溯）、OpenAlex works API、Crossref DOI 元数据、Google/Bing 公开网页入口、zbMATH Open、MathSciNet 公共入口、CNKI 与万方公共入口。原始返回和失败信息保存在本报告目录的\texttt{raw/}中，检索脚本为\texttt{search\_audit.py}；引用回溯日志为\texttt{forward\_log.json}。Google Scholar 超时，Semantic Scholar 返回 429，zbMATH 返回 403，MathSciNet 进入登录页，CNKI/万方出现安全验证或登录提示；这些数据库不能被解释成“零结果”。
+
+主要检索式包括：
+\begin{itemize}[leftmargin=2.2em]
+\item \texttt{weighted sum largest two eigenvalues graph}；
+\item \texttt{linear combination first second adjacency eigenvalues}；
+\item \texttt{spectral sum graph}、\texttt{convex combination eigenvalues graph}；
+\item 精确题名 \texttt{Quadratic inequalities between the largest eigenvalues of a graph}、\texttt{The Exact Maximum of the Spectral Sum of Graphs}；
+\item 中文组合“图 邻接特征值 加权和”。
+\end{itemize}
+
+\section{决定性公开结果：前两大特征值的可达区域}
+Roland Paulin 的预印本 \emph{Quadratic inequalities between the largest eigenvalues of a graph}（arXiv:2609.37980v1，2026-09-29）在 Corollary 2.1 中令
+\[
+ s_i=\frac{\lambda_i+1}{n},
+\]
+并证明渐近可达区域恰为
+\[
+ R_{1,2}=\{(x,y):0\le y\le x,\ x^2+xy+2y^2\le x+y\}.
+\]
+原文同时给出三部分构造：两个互不相交的团各占质量 $t$，再与一个大小 $1-2t$ 的完全团作 join。因而这是整个 $(s_1,s_2)$ 区域的刻画，而不是只给出某个权重的估计。
+
+对固定 $k\ge1$，支持函数优化给出
+\[
+ C_k=\max_{(x,y)\in R_{1,2}}(x+ky)=
+ \begin{cases}
+ \displaystyle\frac{k+3+2\sqrt{2(k^2-k+2)}}7,&1\le k\le3,\\[6pt]
+ \displaystyle\frac{k+1}2,&k\ge3.
+ \end{cases}
+\]
+因此所有有限图都满足
+\[
+ \lambda_1(G)+k\lambda_2(G)\le C_k n-(k+1),
+\]
+并且 $C_k$ 是最佳线性系数。特别地，
+\[
+ C_2=\frac{5+4\sqrt2}{7}=1.5224077499\ldots.
+\]
+对 $1\le k\le3$，三块构造的接触参数为
+\[
+ t_k=\frac{1+(2k-1)\sqrt{2/(k^2-k+2)}}7.
+\]
+$k=1$ 时 $t=2/7$；$k=2$ 时 $t\approx0.4459029062$；$k=3$ 时 $t=1/2$，中心块消失。$k>3$ 的支持线在 $(1/2,1/2)$ 接触，对应两个近似等大的团。
+
+这里的结论是“已有结果的直接推论”：Paulins 的原文没有把每个 $k$ 的支持函数逐一列成标题定理，但完整区域刻画已经足以推出上述公式。因此仅把 $C_k$ 写成新定理，不能通过正常查新。
+
+\section{$k=1$ 的有限阶问题已经解决}
+Jing Huang 与 Wei Wei 的预印本 \emph{The Exact Maximum of the Spectral Sum of Graphs}（arXiv:2607.23081v1，2026-07-25）Theorem 1.1 证明：对每个 $n\ge5$，$S_2(G)=\lambda_1+\lambda_2$ 的最大值由唯一图（同构意义下）
+\[
+ K_n^\star=K_{n-s_n}\vee\bigl(K_{\lceil s_n/2\rceil}\cup K_{\lfloor s_n/2\rfloor}\bigr)
+\]
+取得，其中 $s_n$ 按 $n\pmod 7$ 分段给出；并且
+$S_2(K_n^\star)\le 8n/7-2$，当且仅当 $7\mid n$ 取等。这是有限阶值、等号图和唯一性的完整结论，不是仅有渐近界。
+
+更早的 Kumar、Liu、Monterde、Pragada 与 Tait，\emph{Maximum spectral sum of graphs}（arXiv:2604.00512v2，2026-05-03）Theorem 1.2 给出一般图的渐近最佳线性系数 $8/7$。Huang--Wei 的结果进一步完成有限阶精确分类。
+
+\section{直接相关但范围受限的文献}
+\begin{longtable}{p{0.25\textwidth}p{0.27\textwidth}p{0.39\textwidth}}
+\toprule
+文献 & 公开状态 & 与本题的关系\\
+\midrule
+Kumar--Mohar--Pragada--Zhan, \emph{Convex combination of first and second eigenvalues of trees}, \arxiv{2601.10036}v2 & arXiv 预印本，2026-08-07 & 对树类研究 $\alpha\lambda_1+(1-\alpha)\lambda_2$；摘要称给出充分大 $n$ 的极值树。其 Theorem 1.4 包含固定权的树类结果，Theorem 1.7 给出树类归一化渐近式。不能外推到一般图。\\
+Sun--Min--Das, \emph{Extremal graphs for the sum of two largest eigenvalues}, DOI \href{https://doi.org/10.3934/math.2026618}{10.3934/math.2026618}, AIMS Mathematics (2026) & Crossref 标记为期刊论文 & 核对题名和摘要入口后，研究的是连通图中 $\lambda_1+\lambda_2$ 的最小值（$P_n$ 为极小对象的方向），不是一般图的最大值，也不是 $\lambda_1+k\lambda_2$。\\
+Ebrahimi B.--Mohar--Nikiforov--Ahmady, \emph{On the sum of two largest eigenvalues of a symmetric matrix}, LAA 429 (2008), 2781--2787, DOI 10.1016/j.laa.2008.06.016 & 已发表 & 早期 $\lambda_1+\lambda_2$ 上界和猜想来源；不解决一般 $k>1$ 加权有限阶分类。\\
+Nikiforov, \emph{Extrema of graph eigenvalues}, LAA 482 (2015), 158--190, DOI 10.1016/j.laa.2015.05.016 & 已发表综述/研究论文 & 作为谱极值背景和引用链入口；不替代 Paulin 的完整前两特征值区域。\\
+\bottomrule
+\end{longtable}
+
+\section{新颖性判断}
+\subsection*{不能作为主原创结果的表述}
+以下命题已经被公开结果覆盖：\emph{“对一般图求固定 $k\ge1$ 的 $\lambda_1+k\lambda_2\le C_kn+O(1)$ 的最佳渐近系数，并证明系数 sharp。”} 其系数由 Paulin 的 Corollary 2.1 直接支持函数化得到；$k=1$ 甚至已有有限阶唯一极图。
+
+\subsection*{仍可能成立、但须先做二次查新的方向}
+本轮没有找到一篇公开文献同时给出一般图、任意固定 $k>1$、每个有限 $n$ 的精确最大值、全部等号图和唯一性；也没有找到定量稳定性定理。因此可以把“固定一个 $k>1$ 的有限阶整数优化和等号分类”作为候选方向，但在开题中只能写成\textbf{待进一步核实的研究空白}。先证明论文中明确的有限阶误差项、处理 $n$ 的同余类，并与 Paulin 的图形边界构造逐项比较，是必要的前置工作。
+
+树类凸组合结果说明：若论文改做树，选题也必须与该预印本区分，例如改变谱指标、研究精确阈值、稳定性或另一类受限图；不能只重复“树上凸组合极值”。
+
+本报告不对原先的 $\lambda_1+\lambda_3$ 研究作结论。$\lambda_1+\lambda_3$ 跳过 $\lambda_2$，不由上述前两特征值区域直接解决；原研究报告中的未解决状态应保持独立记录。
+
+\section{检索结论与建议}
+截至 2026-10-14，最稳妥的结论是：\textbf{渐近一般图问题已经有更强公开预印本结果，$k=1$ 的有限阶问题也已有公开精确解；$k>1$ 的一般图有限阶精确分类和稳定性尚未在本次可访问资料中得到确认，但不能据此声称绝对开放。} 因而不建议把“求 $C_k$”作为硕士论文的核心原创定理；若继续研究，应把问题收窄为一个明确的固定 $k>1$ 有限阶分类、稳定性或受限图类问题，并在导师同意后继续查新。
+
+\begin{thebibliography}{9}
+\bibitem{Paulin2026} Roland Paulin, \emph{Quadratic inequalities between the largest eigenvalues of a graph}, arXiv:2609.37980v1, 2026. \url{https://arxiv.org/abs/2609.37980}
+\bibitem{HuangWei2026} Jing Huang and Wei Wei, \emph{The Exact Maximum of the Spectral Sum of Graphs}, arXiv:2607.23081v1, 2026. \url{https://arxiv.org/abs/2607.23081}
+\bibitem{Kumar2026} Hitesh Kumar, Lele Liu, Hermie Monterde, Shivaramakrishna Pragada and Michael Tait, \emph{Maximum spectral sum of graphs}, arXiv:2604.00512v2, 2026. \url{https://arxiv.org/abs/2604.00512}
+\bibitem{Trees2026} Hitesh Kumar, Bojan Mohar, Shivaramakrishna Pragada and Hanmeng Zhan, \emph{Convex combination of first and second eigenvalues of trees}, arXiv:2601.10036v2, 2026. \url{https://arxiv.org/abs/2601.10036}
+\bibitem{SunMinDas2026} Shaowei Sun, Yaping Min and Kinkar Chandra Das, \emph{Extremal graphs for the sum of two largest eigenvalues}, AIMS Mathematics, 2026. DOI: \url{https://doi.org/10.3934/math.2026618}
+\bibitem{Ebrahimi2008} Javad Ebrahimi B., Bojan Mohar, Vladimir Nikiforov and Azhvan Sheikh Ahmady, \emph{On the sum of two largest eigenvalues of a symmetric matrix}, Linear Algebra Appl. 429 (2008), 2781--2787. DOI: \url{https://doi.org/10.1016/j.laa.2008.06.016}
+\bibitem{Nikiforov2015} Vladimir Nikiforov, \emph{Extrema of graph eigenvalues}, Linear Algebra Appl. 482 (2015), 158--190. DOI: \url{https://doi.org/10.1016/j.laa.2015.05.016}
+\end{thebibliography}
+\end{document}
+

@@ -1,0 +1,3678 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=renderer content=webkit><meta name=viewport content="width=1310"><meta name=referrer content=unsafe-url><meta name=keywords content=万方数据、论文、文献、期刊论文、学位论文、学术会议、中外标准、法律法规、科技成果、中外专利、外文文献><meta name=description content=万方数据知识服务平台-中外学术论文、中外标准、中外专利、科技成果、政策法规等科技文献的在线服务平台。><link rel=icon href=https://cdn.w.wanfangdata.com.cn/favicon.ico><script src=https://cdn.s.wanfangdata.com.cn/jquery.min.js></script><link rel=stylesheet href=https://cdn.s.wanfangdata.com.cn/layer.css type=text/css><link rel=stylesheet href=https://cdn.s.wanfangdata.com.cn/fonts.css type=text/css><title>万方数据知识服务平台</title><script>var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement('script');
+        hm.src = 'https://hm.baidu.com/hm.js?838fbc4154ad87515435bf1e10023fab';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(hm, s);
+        
+      })();
+
+      
+ (function () {
+        var query = function() {
+          return `AND CorePeriodical:* AND SingleSourceDB:WF AND HasFulltext:true AND IsOA:false AND PublishYear:[2025 TO *] NOT (题名：征稿 OR 投稿 OR "信息动态" OR 征文)`;
+        };
+        window.recommends = {
+          topicWord: 'ChatGPT',
+          recommendsFormular: function(count, currentDate, searchDate) {
+           //第一版 setting
+            return 0.3 * count + 15 * 0.7 * Math.cos((currentDate - searchDate) / (60 * 60 * 1000 * 24) / 10) + 10;
+          },
+          getDefaultQuery: query,
+          getQuery: query,
+           wordsList:{
+            title:'2024科技名词',
+            list: [
+              { word: '人工智能+' },
+              { word: '低空经济' },
+              { word: '月背采样' },
+              { word: '量子科技' },
+              { word: '具身智能' },
+              { word: '混合现实' },
+              { word: '生物制造' },
+              { word: '近零碳' },
+              { word: '实景三维' },
+              { word: '微核糖核酸' },
+            ]
+          }
+        };
+      })()</script><script src=https://w.wanfangdata.com.cn/www/file/static/behavior-tracker.bundle.min.js></script><link href=https://cdn.s.wanfangdata.com.cn/css/app.d46981d6.css rel=preload as=style><link href=https://cdn.s.wanfangdata.com.cn/css/chunk-vendors.46f7cde1.css rel=preload as=style><link href=https://cdn.s.wanfangdata.com.cn/css/viewdesign.a51a5ee0.css rel=preload as=style><link href=https://cdn.s.wanfangdata.com.cn/js/api.af1b9ac4.js rel=preload as=script><link href=https://cdn.s.wanfangdata.com.cn/js/app.4cd28265.js rel=preload as=script><link href=https://cdn.s.wanfangdata.com.cn/js/chunk-vendors.541ec17c.js rel=preload as=script><link href=https://cdn.s.wanfangdata.com.cn/js/echarts.e9122a9a.js rel=preload as=script><link href=https://cdn.s.wanfangdata.com.cn/js/viewdesign.7fca859c.js rel=preload as=script><meta name=ICO_URL content=https://cdn.w.wanfangdata.com.cn/ ><meta name=WWW_URL content=https://w.wanfangdata.com.cn/ ><link href=https://cdn.s.wanfangdata.com.cn/css/viewdesign.a51a5ee0.css rel=stylesheet><link href=https://cdn.s.wanfangdata.com.cn/css/chunk-vendors.46f7cde1.css rel=stylesheet><link href=https://cdn.s.wanfangdata.com.cn/css/app.d46981d6.css rel=stylesheet></head><body><div id=ie-tip-wrapper style="display: none;"><div style="font-size: 14px; color: #333; background: #f9f3cf;height: 30px;line-height: 30px;border: 1px solid #f7eaac;text-align: center;"><span>检测到您的浏览器版本过低，可能导致检索或导出功能无法正常使用，建议升级您的浏览器，或使用推荐浏览器 <a style="color: #2d8cf0" href=https://www.google.cn/intl/zh-CN/chrome/ target=_blank rel="noopener noreferrer">Google Chrome </a>、 <a style="color: #2d8cf0" href=https://www.microsoft.com/zh-cn/edge target=_blank rel="noopener noreferrer">Microsoft Edge </a>、 <a style="color: #2d8cf0" href=https://www.firefox.com.cn/ target=_blank rel="noopener noreferrer">Firefox </a>。 </span><span id=ie-tip-bar-close style="display: inline-block;cursor: pointer; color: #8e6529;background-color: #f7eaac;font-size: 10px; height: 15px;width: 15px;line-height: 15px;border-radius: 10px;margin-left: 15px;" onclick="var b = document.getElementById('ie-tip-wrapper');b.innerHTML = '';b.style = 'display:none';">X</span></div><script>function testIE(edition) {
+          function lowerIE(edition) {
+            var reg = /MSIE\s+(\d+)/;
+            var exec = reg.exec(navigator.userAgent);
+            return exec && exec[1] === String(edition);
+          }
+
+          function IE11() {
+            var reg = /rv:(\d+)/;
+            var exec = reg.exec(navigator.userAgent);
+            return exec && exec[1] === '11';
+          }
+
+          if (edition <= 10) {
+            return lowerIE(edition);
+          } else if (edition === 11) {
+            return IE11();
+          }
+        }
+        if (testIE(10) || testIE(9) || testIE(8) || testIE(7)) {
+          var el = document.getElementById('ie-tip-wrapper');
+          el.style.display = 'block';
+        }</script></div><div id=safari-tip-wrapper style="display: none;"><div style="font-size: 14px; color: #333; background: #f9f3cf;height: 30px;line-height: 30px;border: 1px solid #f7eaac;text-align: center;"><span>检测到您正在使用&nbsp;Safari&nbsp;浏览器，可能影响导出功能的正常使用，建议您下载 <a style="color: #2d8cf0" href=https://www.google.cn/intl/zh-CN/chrome/ target=_blank rel="noopener noreferrer">Google Chrome </a>、 <a style="color: #2d8cf0" href=https://www.microsoft.com/zh-cn/edge target=_blank rel="noopener noreferrer">Microsoft Edge </a>、 <a style="color: #2d8cf0" href=https://www.firefox.com.cn/ target=_blank rel="noopener noreferrer">Firefox </a>。 </span><span id=safari-tip-bar-close style="display: inline-block;cursor: pointer; color: #8e6529;background-color: #f7eaac;font-size: 10px; height: 15px;width: 15px;line-height: 15px;border-radius: 10px;margin-left: 15px;" onclick="var b = document.getElementById('safari-tip-wrapper');b.innerHTML = '';b.style = 'display:none';">X</span></div><script>function testSafari() {
+          var ua = window.navigator.userAgent.toLowerCase();
+          if (ua.indexOf('safari') !== -1 && ua.indexOf('chrome') === -1) {
+            var el = document.getElementById('safari-tip-wrapper');
+            el.style.display = 'block';
+          }
+        }
+        testSafari();</script></div><input type=hidden id=userNstr> <input type=hidden id=search><div class=layer-hidden style="left: 0;right: 0;top: 0;bottom: 0;position:fixed;z-index:999;display: none"></div><iframe id=loginframe style="display: none;margin-left: -10px;margin-top: -100px;" src="" height=750px; width=710px; scrolling=no frameborder=0></iframe><div class="top me-top"><div class="container me-container" id=zkHeader><!--
+   logo
+-->
+<style>
+    .export-tabs{width:100%}
+   #anxs-logo_sns{height: 62px;}.anxs-top-88qwe-logo_sns{padding: 9px 0;float: left;height:84px;box-sizing: border-box;}.anxs-top-88qwe-logo_sns a{color: #333;cursor: pointer;text-decoration: none}.anxs-top-88qwe-logo_sns .anxs-top-88qwe-imgwrapper{margin-right:25px;display: block;float: left;}.anxs-top-index_sns{float: left;line-height: 60px;}.anxs-top-88qwe-logo_sns .nav_color_index{font-size: 16px;vertical-align: middle; margin: 0 10px;}.anxs-top-88qwe-logo_sns .nav_color_index:hover{color: #6073c5}
+   .anxs-sns-guide-icon{display: inline-block;display:none;font-weight: 100;padding:0 4px;background: #ff6c00;height: 14px;line-height: 13px;position: relative;top: -13px;left: -5px;text-align: center;color: #fff;font-size: 12px;border-radius: 7px;}
+   .anxs-top-sns-guide-icon{display: inline-block;display:none;font-weight: 100;text-indent:0;padding:0 4px;background: #ff6c00;height: 14px;line-height: 13px;position: relative;text-align: center;color: #fff;font-size: 12px;border-radius: 7px;}
+   
+   /* 隐藏高级检索通配符的描述，等后端服务修复后删除 */
+   .advanced-search-tip-child:nth-child(7) {
+        display: none
+   }
+   .nav_sns_hint,.nav_sns_authority {
+       display:none;
+           min-width: 105px;
+    height: 155px;
+    background: #fff;
+    border: 1px solid #f5f5f5;
+    box-shadow: 0 1px 5px 3px #e6e6e6;
+    z-index: 5;
+    position: absolute;
+    left: -27px;
+    top:57px;
+
+   }
+    .nav_sns_hint a{display: block;
+    line-height: 30px;
+    z-index: 1;
+    font-size: 12px;
+    font-weight: 700;
+    color:#555;
+    text-indent:9px}
+    .nav_sns_hint a:hover{
+        background:#f1f1f1;
+    }
+    .anxs-sns-nav-list-filter{
+        width: 100%;
+        height: 20px;
+        position: absolute;
+        top: -20px;
+        right: 0;
+        z-index: 1;
+    }
+    .anxs-sns-icon{
+    display: block;
+    width: 9px;
+    height: 7px;
+    background:url(https://login.wanfangdata.com.cn/Content/src/img/anxs-tri.png) no-repeat;
+    position: relative;
+    top: 12px;
+    left: 50%;
+    margin-left: -5px
+    }
+    .nav_color_sns_box{
+        display: inline-block;
+        position: relative;
+    }
+     .nav_color_sns_box:hover .nav_sns_hint{
+        display:block;
+    }
+    /*惠图标的样式*/
+    .anxs-top-88qwe-logo_sns .nav_color_index{
+          position: relative;
+    }
+    .nav_color_index .favorable_icon {
+        position: absolute;
+        padding: 0;
+        display: inline-block;
+        width: 16px;
+        height: 15px;
+        top: -15px;
+        right: -15px;
+        background: url(https://cdn.login.wanfangdata.com.cn/Content/src/img/hui.png) no-repeat;
+        display:none;
+    }
+</style>
+<style>
+ .wf-header-nav-item {
+        display: inline-block;
+        position: relative; 
+        width: 105px
+    }
+
+  
+  .wf-header-nav-item > .wf-header-nav-sub {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    right: 0;
+    z-index: 4;
+    width: 420px;
+    height: 278px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 11px 1px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    display: flex;
+    border-top: 1px solid #EAF2FF;
+    background: #fff;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+  }
+
+  .wf-header-nav-item > .wf-header-nav-sub > .wf-header-nav-sub-menu {
+    margin: 0 auto;
+    width: 1400px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .wf-header-nav-item.active > .wf-header-nav-sub {
+    z-index: 5;
+  }
+  .wf-header-nav-item a {
+    height: 40px;
+    display: inline-block;
+  }
+  .wf-header-nav-item a:hover {
+    color: #234EA2;
+  }
+   .wf-header-nav-item.active > .wf-header-nav-sub {
+    z-index: 99;
+  }
+  .wf-header-nav-item  > span >span{
+    color: #333;
+  }
+  .wf-header-nav-item.active > span >span{
+    color: #234EA2;
+  }
+  
+  /* .wf-header-nav-item:after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: #234EA2;
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    right: 25px;
+  } */
+  .wf-header-nav-item.active:after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: #234EA2;
+    position: absolute;
+    bottom: -3px;
+    left: 0px;
+    right: 40px;
+  }
+
+  .wf-header-nav-item.active > span > svg {
+    fill: #234EA2;
+    transform: rotate(180deg);
+  }
+</style>
+
+<style>
+.resource-list-nav  {
+    width: 100%;
+    padding:30px;
+    display: flex;
+      flex-wrap: wrap;
+        gap: 0px;
+}
+.resource-list-nav-item {
+    flex: 0 1 50%;
+   height: 40px;
+    margin-bottom: 20px;
+
+}
+.resource-list-nav-item-svg-wrap {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    background-color: #f5f5ff;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    vertical-align: top;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+.resource-list-nav-item-svg-title {
+    height: 40px;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 8px;
+    vertical-align: top;
+    line-height: 40px;
+}
+ 
+.topCategoryImg_periodical {
+    background-image: url(https://www.wanfangdata.com.cn/images/topCategory/periodical.svg);
+    background-size: 22px;
+
+  }
+  .topCategoryImg_thesis {
+    background-size: 22px;
+    background-image: url(https://www.wanfangdata.com.cn/images/topCategory/thesis.svg);
+  }
+  .topCategoryImg_conference{
+    background-size: 22px;
+    background-image: url(https://www.wanfangdata.com.cn/images/topCategory/conference.svg);
+  }
+  .topCategoryImg_nstr{
+    background-size: 20px;
+    background-image: url(https://www.wanfangdata.com.cn/images/topCategory/nstr.svg);
+  }
+  .topCategoryImg_patent{
+    background-size: 20px;
+    background-image: url(https://www.wanfangdata.com.cn/images/topCategory/patent.svg);
+  }
+  .topCategoryImg_standard{
+    background-size: 20px;
+    background-image: url(https://www.wanfangdata.com.cn/images/topCategory/standard.svg);
+  } 
+  .topCategoryImg_cstad{
+    background-size: 17px;
+    background-image: url(https://www.wanfangdata.com.cn/images/topCategory/cstad.svg);
+  } 
+  .topCategoryImg_law{
+    background-size: 17px;
+    background-image: url(https://www.wanfangdata.com.cn/images/topCategory/law.svg);
+  }
+</style>
+
+<div class="anxs-top-88qwe-logo_sns">
+    <a href="https://www.wanfangdata.com.cn/index.html?index=true" class="anxs-top-88qwe-imgwrapper">
+        <img id="anxs-logo_sns">
+    </a>
+    <div class="anxs-top-index_sns">
+        <span class="wf-header-nav-item nav_color_index" role="menuitem" aria-haspopup="true" aria-expanded="false">
+            <span>
+                <span style="cursor: pointer;">学术导航</span>
+                <svg width="10" height="5" viewBox="0 0 638 361" style="vertical-align: 2px;margin-left: 4px;">
+                    <path
+                        d="M39.77.61C7.31.61-13.45,43.95,11.42,68.81l279.41,279.42c16.02,16.02,39.86,16.02,55.88,0L626.13,68.81c24.25-24.23,5.34-68.21-27.94-68.21H39.77ZM39.77.61" />
+                </svg>
+            </span>
+            <div class="wf-header-nav-sub" style="display: none;">
+                <ul class="wf-header-nav-sub-menu" role="menu">
+                    <li>
+                        <nav class="resource-list-nav">
+                            <span class="resource-list-nav-item">
+                                <a target="_blank" href="https://c.wanfangdata.com.cn/periodical">
+                                    <span class="resource-list-nav-item-svg-wrap topCategoryImg_periodical">
+                                    </span>
+                                    <span class="resource-list-nav-item-svg-title">学术期刊</span>
+                                </a>
+                            </span>
+                            <span class="resource-list-nav-item">
+                                <a target="_blank" href="https://c.wanfangdata.com.cn/thesis" style="margin-left:10px">
+                                    <span class="resource-list-nav-item-svg-wrap topCategoryImg_thesis">
+                                    </span>
+                                    <span class="resource-list-nav-item-svg-title">学位论文</span>
+                                </a>
+                            </span>
+                            <span class="resource-list-nav-item">
+                                <a target="_blank" href="https://c.wanfangdata.com.cn/conference">
+                                    <span class="resource-list-nav-item-svg-wrap topCategoryImg_conference">
+                                    </span>
+                                    <span class="resource-list-nav-item-svg-title">会议论文</span>
+                                </a>
+                            </span>
+                            <span class="resource-list-nav-item">
+                                <a target="_blank" href="https://c.wanfangdata.com.cn/nstr" style="margin-left:10px">
+                                    <span class="resource-list-nav-item-svg-wrap topCategoryImg_nstr">
+                                    </span>
+                                    <span class="resource-list-nav-item-svg-title">科技报告</span>
+                                </a>
+                            </span>
+                            <span class="resource-list-nav-item">
+                                <a target="_blank" href="https://c.wanfangdata.com.cn/patent">
+                                    <span class="resource-list-nav-item-svg-wrap topCategoryImg_patent">
+                                    </span>
+                                    <span class="resource-list-nav-item-svg-title">专利</span>
+                                </a>
+                            </span>
+                            <span class="resource-list-nav-item">
+                                <a target="_blank" href="https://c.wanfangdata.com.cn/standard" style="margin-left:10px">
+                                    <span class="resource-list-nav-item-svg-wrap topCategoryImg_standard">
+                                    </span>
+                                    <span class="resource-list-nav-item-svg-title">标准</span>
+                                </a>
+                            </span>
+                            <span class="resource-list-nav-item">
+                                <a target="_blank" href="https://c.wanfangdata.com.cn/cstad">
+                                    <span class="resource-list-nav-item-svg-wrap topCategoryImg_cstad">
+                                    </span>
+                                    <span class="resource-list-nav-item-svg-title">科技成果</span>
+                                </a>
+                            </span>
+                            <span class="resource-list-nav-item">
+                                <a target="_blank" href="https://c.wanfangdata.com.cn/claw" style="margin-left:10px">
+                                    <span class="resource-list-nav-item-svg-wrap topCategoryImg_law">
+                                    </span>
+                                    <span class="resource-list-nav-item-svg-title">法律法规</span>
+                                </a>
+                            </span>
+                        </nav>
+                    </li>
+                </ul>
+            </div>
+        </span>
+        <a style="margin-left: 18px" href="https://zhiyan.wanfangdata.com.cn" class="nav_color_index" target="_blank">智研平台<svg width="20"
+                height="6" fill="#f00" viewBox="0 0 20 6"
+                style="margin-left: 2px; margin-top: -10px;vertical-align:12px;">
+                <path data-v-3c17594c=""
+                    d="M0,6H1V3A3.084,3.084,0,0,1,3,1C3.457,1.016,4,.854,4,2V6H5V2A1.73,1.73,0,0,0,3,0,2.789,2.789,0,0,0,1,1H1V0H0V6ZM9,6a4.053,4.053,0,0,0,3-1L11,4A5.016,5.016,0,0,1,9,5,1.868,1.868,0,0,1,7,3h5a9.687,9.687,0,0,0,0-1c-0.031-1.135-1.51-2-3-2C6.908,0,6,1.065,6,3A2.871,2.871,0,0,0,9,6ZM7,2A1.9,1.9,0,0,1,9,1a1.873,1.873,0,0,1,2,1H7Zm7,4h1l1-1V2h1V5l1,1h1l1-3V0H19V3L18,5V3L17,0H16L15,3V5L14,3V0H13V3Z">
+                </path>
+            </svg></a></h5>
+        </a>
+        <a href="https://svip.wanfangdata.com.cn/?wfchannel=headerNavigation" class="nav_color_index other_app"
+            id="wfpub_vip" style="display:none" target="_blank">
+            会员
+            <span class="favorable_icon"></span>
+        </a>
+
+        <script>
+
+            // 导航菜单收起展开
+            var navItemHaspopup = $('.wf-header-nav-item[aria-haspopup="true"]');
+            var navSubMenus = $('.wf-header-nav-sub');
+
+            function showHeaderShadow() {
+                if (!$('#header-if > .wf-header-shadow').length) {
+                    $('#header-if').append($('<div class="wf-header-shadow"></div>'));
+                }
+                $('#header-if > .wf-header-shadow').fadeIn();
+                if (window.indexTheme) {
+                    document.getElementsByClassName('wf-header')[0].style.background = '#e66145'
+                }
+            }
+
+            function hideHeaderShadow() {
+                $('#header-if > .wf-header-shadow').fadeOut('normal', function () {
+                    if (window.indexTheme) {
+                        document.getElementsByClassName('wf-header')[0].style.background = 'none'
+                    }
+                });
+            }
+
+            navItemHaspopup.on('click', '> span', function (e) {
+                e.stopPropagation(); // 阻止事件冒泡到文档层面
+                var $menuItem = $(e.delegateTarget);
+
+                // 收起其他菜单
+                navItemHaspopup.not($menuItem).removeClass('active').attr('aria-expanded', 'false');
+                navSubMenus.slideUp();
+                if ($('#suggestionForm').is(':visible')) {
+                    handleSuggestionFormVisible && handleSuggestionFormVisible(e)
+                }
+
+                // 切换当前菜单状态
+                if ($menuItem.hasClass('active')) {
+                    // 如果当前菜单已展开，则收起
+                    hideHeaderShadow();
+                    $menuItem.removeClass('active').attr('aria-expanded', 'false');
+                } else {
+                    // 如果当前菜单未展开，则展开
+                    showHeaderShadow();
+                    $menuItem.addClass('active').attr('aria-expanded', 'true');
+                    if ($menuItem.hasClass('wf-client-support')) {
+                        handleSuggestionFormVisible && handleSuggestionFormVisible(e)
+                    } else {
+                        $menuItem.find('.wf-header-nav-sub').slideDown();
+                    }
+                }
+            });
+
+            $(document).on('click', function (e) {
+                // 如果点击区域不在活动菜单内，则关闭所有菜单
+                if (
+                    !$(e.target).closest('.wf-header-nav-item.active').length &&
+                    !$(e.target).closest('#suggestionForm').length &&
+                    !$(e.target).closest('.ntalk-window-containter').length
+                ) {
+                    hideHeaderShadow();
+                    navItemHaspopup.removeClass('active').attr('aria-expanded', 'false');
+                    navSubMenus.slideUp();
+                    if ($('#suggestionForm').is(':visible')) {
+                        handleSuggestionFormVisible && handleSuggestionFormVisible(e)
+                    }
+                }
+            });
+
+
+        </script>
+    </div>
+</div>
+<script> 
+  (function(){"use strict";var t="a1b2c3d4e5f6g7h8",e="Hm_lvt_"+t,o=".wanfangdata.com.cn",n=31536e3,r=16;function i(){var t=[navigator.platform||""],e=navigator.userAgent||"";t.push(/Firefox/.test(e)?"firefox":/Edg/.test(e)?"edge":/Chrome/.test(e)?"chrome":/Safari/.test(e)?"safari":"other");try{var n=document.createElement("canvas");n.width=200,n.height=50;var o=n.getContext("2d");o.textBaseline="top",o.font="14px Arial",o.fillStyle="#f60",o.fillRect(0,0,100,20),o.fillStyle="#069",o.fillText("wf-fp",2,2),o.fillStyle="rgba(102,204,0,0.7)",o.fillText("wf-fp",4,8),t.push(n.toDataURL())}catch(t){}try{var r=document.createElement("canvas").getContext("webgl");if(r){var i=r.getExtension("WEBGL_debug_renderer_info");if(i)t.push(r.getParameter(i.UNMASKED_RENDERER_WEBGL)||"")}}catch(t){}return t.join("|||")}function c(t){for(var e=0x811c9dc5,o=0x1000193,n=0;n<t.length;n++){var r=t.charCodeAt(n);e^=r,e=0x1000193*e>>>0,o^=r,o=0x85ebca6b*o>>>0}return("00000000"+e.toString(16)).slice(-8)+("00000000"+o.toString(16)).slice(-8)}function a(t){return c(t+"|"+i())}function u(t){var e=new RegExp("(?:^| )"+t+"=([^;]+)"),n=document.cookie.match(e);return n?decodeURIComponent(n[1]):null}function s(t,e){document.cookie=t+"="+encodeURIComponent(e)+"; Domain="+o+"; Path=/; Max-Age="+n+"; SameSite=Lax"}function f(){var t=e+"_",n=document.cookie.split(";");for(var o=0;o<n.length;o++){var r=n[o].trim(),i=r.indexOf("=");if(i>0){var c=r.substring(0,i).trim();if(0===c.indexOf(t)){var a=parseInt(c.substring(t.length),10);if(a&&!isNaN(a))return{name:c,ts:a,value:decodeURIComponent(r.substring(i+1))}}}}return null}return{encode:function(){if(!f()){var t=Date.now();s(e+"_"+t,a(t))}},decode:function(){var t=f();if(!t)return{ok:!1,reason:"no_cookie"};var e=t.value;if(e.length!==r)return{ok:!1,reason:"bad_format"};if(!/^[0-9a-f]{16}$/.test(e))return{ok:!1,reason:"bad_hash"};var o=t.ts,n=Date.now();if(o>n)return{ok:!1,reason:"future_ts"};if(o<n-63072e8)return{ok:!1,reason:"expired"};var i=a(o);return i===e?{ok:!0,reason:"valid",hash:e,ts:o}:(n-o)/864e5<1?{ok:!1,reason:"fp_mismatch",hash:e,expected:i,ts:o}:{ok:!0,reason:"fp_stale",hash:e,expected:i,ts:o}}}})().encode();
+window.originlocation = document['location']
+var wfIndexTheme = 'https://cdn.wanfangdata.com.cn/css/theme/theme.css';
+var domainConf = {
+    static:"https://static.wanfangdata.com.cn",
+    recommendurl:"//s.wanfangdata.com.cn/recommends/",
+    ad:"https://ad.wanfangdata.com.cn/",
+    newOss:'https://f.wanfangdata.com.cn/',
+    topic : "https://topic.wanfangdata.com.cn/",
+	search : "https://www.wanfangdata.com.cn/",
+	advert : "https://advertnew.wanfangdata.com.cn/",
+	www : "https://www.wanfangdata.com.cn/",
+	login : "https://my.wanfangdata.com.cn/auth/",
+	tran : "https://my.wanfangdata.com.cn/user/",
+	user : "https://my.wanfangdata.com.cn/user/",
+	common : "https://common.wanfangdata.com.cn/",
+	loginbyurl : "https://login.wanfangdata.com.cn/",
+	Istic : "https://istic.wanfangdata.com.cn/",
+	f : "https://oss.wanfangdata.com.cn/",
+	csite : "https://c.wanfangdata.com.cn/",
+	D : "https://d.wanfangdata.com.cn/",
+	S: "https://s.wanfangdata.com.cn/",
+	ossbranch : "https://oss.wanfangdata.com.cn/branch/",
+	miner: "https://miner.wanfangdata.com.cn/",
+	nstl : "https://nstl.wanfangdata.com.cn/",
+	sns : "https://sns.wanfangdata.com.cn/",
+    reader: "https://reader.wanfangdata.com.cn/",
+	msgUrl: "http://sns.wanfangdata.com.cn/third-web/per/",
+	publishfulltext: "https://prepub.wanfangdata.com.cn/",
+	social: "https://sns.wanfangdata.com.cn/",
+	fz : "https://fz.wanfangdata.com.cn/",
+    history: "https://s.wanfangdata.com.cn/history/",
+	trend : "${trend_Front}",
+	fx : "https://fx.wanfangdata.com.cn/",
+    expert : "https://institution.wanfangdata.com.cn/",
+	CookieName : "CASTGC",
+	CookieDomain : "wanfangdata.com.cn",
+	CookieTimeout : "7200",
+    video : "https://video.wanfangdata.com.cn/",
+    resultanalysis : "https://fx.wanfangdata.com.cn/resultanalysis/",
+    trends : "https://trends.wanfangdata.com.cn/",
+    W: "https://www.wanfangdata.com.cn/",
+    wfApi:"https://api.wf.pub",
+    comWfPub:"https://com.wf.pub/",
+    newUserCenter:"https://my.wanfangdata.com.cn/usercenter/",
+    svip:"https://svip.wanfangdata.com.cn/",
+    kx: "https://kx.wanfangdata.com.cn/",
+    fund: "https://scifund.wanfangdata.com.cn/",
+    jc: "https://jc.wanfangdata.com.cn/",
+    opadmin: "https://op.wanfangdata.com.cn/",
+    wisdom: "https://zhiyan.wanfangdata.com.cn",
+    periodical_group:"https://www.zgkjqk.com/",
+    aiSearch: 'https://s.wanfangdata.com.cn/aipaper',
+    my:"https://my.wanfangdata.com.cn/",
+    ai: "https://ai.wfdata.com/"
+};
+</script>
+<script>
+  // mathjax
+  window.__defineSetter__('MathJax', function(MathJax){
+    if(MathJax.tex) {
+      MathJax.tex.inlineMath.push(['\\begin{document}$','$\\end{document}'])
+    }
+    window.__MathJax=MathJax;
+  })
+  window.__defineGetter__('MathJax', function(){return window.__MathJax;})
+</script><!--
+    状态栏
+-->
+<script>
+    blackMagazineCount = 103
+</script>  
+<script type="text/javascript" src="https://cdn.login.wanfangdata.com.cn/Content/js/lib/layer-2.4.js"></script>
+<style>
+    @media (max-width: 1200px) {
+        .top {
+            width: 100%!important
+        }
+
+        .anxs-8qwe-footer {
+             width: 100%!important
+        }
+
+    }
+        .wf-header .container {
+            max-width: 100%;
+    padding: 0 40px;
+    }
+      .anxs-8qwe-list {
+        border-radius:5px
+    }
+    .header-i18n .line {
+        display: inline-block;
+        width: 1px;
+        height: 18px;
+        background: #E9E9E9;
+        vertical-align: middle;
+        border: none;
+        margin-left: 0px;
+        margin-bottom: 0px;
+    }
+
+    .anxs-top-88qwe .anxs-top-88qwe-container {
+        width: 100%;
+        height: 70px;
+        padding: 0 40px !important;
+        box-sizing: border-box;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .anxs-8qwe-grName,
+    .anxs-8qwe-list-gr-new-main a,
+    .anxs-8qwe-top-rt .anxs-8qwe-list-jg .anxs-8qwe-list-jg-box .anxs-8qwe-nav-list-main h5 .anxs-8qwe-nav-list-main-name {
+        text-decoration: none
+    }
+
+   
+    .anxs-8qwe-list_bind .anxs-8qwe-list_bind-wx .anxs-8qwe-list_bind-img {
+        margin-top: 30px;
+        padding-top: 0px !important;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list-gr .anxs-8qwe-grName-wrap {
+        height: 34px !important;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list-gr .anxs-8qwe-grName,
+    .anxs-8qwe-top-rt .anxs-8qwe-list-jg .anxs-8qwe-jgName b {
+        height: 36px !important;
+        line-height: 36px;
+    }
+
+    .wf-d-center .d-top-container .d-top-wrap .d-top-btn {
+        background: #665EFF !important
+    }
+
+    .wf-d-center .d-top-container .d-top-wrap {
+        top: -55px !important
+    }
+
+    .top .container {
+        max-width: 100% !important;
+        min-width: 480px;
+        margin: 0 auto;
+        padding: 0 40px !important;
+        box-sizing: border-box;
+        width: 100% !important;
+    }
+
+    #zkHeader {
+        padding: 0 40px !important;
+
+        box-sizing: border-box;
+    }
+
+    .second-search-wrap {
+        z-index: 9 !important
+    }
+
+    .other_app {
+        margin: 0px 30px !important
+    }
+
+    .anxs-top-index_sns {
+        margin-left: 35px;
+    }
+
+    .me-container {
+        min-width: 1200px;
+        box-sizing: border-box
+    }
+
+    .top,
+    .anxs-top-88qwe-logo_sns {
+        height: 70px !important
+    }
+
+    #anxs-logo_sns {
+        height: 53px !important
+    }
+
+    .anxs-top-index_sns {
+        line-height: 50px !important
+    }
+
+    .clear {
+        zoom: 1
+    }
+
+    .clear:after {
+        content: "";
+        display: block;
+        clear: both;
+        visibility: hidden;
+        height: 0;
+    }
+
+    .anxs-8qwe-top-rt {
+        float: right;
+        font-family: 'Microsoft YaHei';
+        padding-top: 18px
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list {
+        float: left;
+        border-left: 1px solid #d4d9dc;
+        color: #555;
+        font-size: 16px;
+        font-family: 'Microsoft YaHei';
+    }
+
+    .anxs-8qwe-reading {
+        position: relative;
+    }
+
+    .anxs-8qwe-readingDay {
+        width: 74px;
+        height: 20px;
+        position: absolute;
+        left: 32px;
+        top: -22px;
+        display: none;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list_bind {
+        display: none;
+        position: relative;
+        z-index: 999999;
+        margin-right: 20px;
+        padding-right: 20px;
+        border-left: none;
+        border-right: 1px solid #d4d9dc;
+        line-height: 36px;
+        cursor: pointer;
+    }
+
+    .anxs-8qwe-list_bind .anxs-8qwe-list_bind-wx {
+        position: absolute;
+        top: 36px;
+        right: 0px;
+        width: 320px;
+        background-color: #fff;
+        text-align: center;
+        box-shadow: 0 0 10px #888;
+        border: 1px solid #cccccc;
+        cursor: default;
+        display: none;
+    }
+
+    .anxs-8qwe-list_bind .anxs-8qwe-list_bind-wx span:first-child {
+        position: absolute;
+        top: -20px;
+        right: -2px;
+        display: inline-block;
+        width: 110px;
+        height: 36px;
+    }
+
+    .anxs-8qwe-list_bind .anxs-8qwe-list_bind-wx span:first-child i {
+        display: inline-block;
+        position: absolute;
+        top: 12px;
+        left: 54px;
+        width: 11px;
+        height: 8px;
+        background:url(https://cdn.login.wanfangdata.com.cn/Content/src/img/anxs-tri.png) no-repeat;
+    }
+
+    .anxs-8qwe-list_bind .anxs-8qwe-list_bind-wx .anxs-8qwe-list_bind-img {
+        padding-top: 30px;
+        width: 120px;
+        height: 120px;
+    }
+
+    .anxs-8qwe-list_bind-wx .anxs-8qwe-bind-layer {
+        display: inline-block;
+        position: absolute;
+        top: 30px;
+        left: 100px;
+        width: 120px;
+        height: 120px;
+        background: rgba(0, 0, 0, 0.6) !important;
+        background: #000;
+        filter: Alpha(opacity=60);
+        display: none;
+    }
+
+    .anxs-8qwe-list_bind-wx .anxs-8qwe-bind-layer span {
+        display: block;
+        text-align: center;
+        color: #ffffff;
+        font-size: 12px;
+        line-height: 28px;
+    }
+
+    .anxs-8qwe-list_bind .anxs-8qwe-list_bind-wx .anxs-8qwe-bind-title {
+        display: inline-block;
+        padding: 16px;
+        font-size: 12px;
+        line-height: 22px;
+        text-align: left;
+    }
+
+    .anxs-8qwe-list_bind-wx .anxs-8qwe-bind-title i {
+        color: #f00;
+        font-style: normal;
+        display: none;
+    }
+
+    .anxs-8qwe-list_bind-wx .anxs-8qwe-bind-title em {
+        font-style: normal;
+        color: #417dc9;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .anxs-8qwe-top-rt .anxs-no-line {
+        border: 0
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list-login {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list-login .anxs-8qwe-login-all,
+    .anxs-8qwe-top-rt .anxs-8qwe-list-login .anxs-8qwe-login-gr,
+    .anxs-8qwe-top-rt .anxs-8qwe-list-login .anxs-8qwe-login-jg {
+        display: none;
+        box-sizing: border-box;
+        border-radius: 3px;
+        width: 120px;
+        height: 36px;
+        line-height: 36px;
+        font-size: 14px;
+        text-align: center;
+        color: #324076;
+        border: 1px solid #CCCCCC;
+        border: 1px solid #B5C8E8;
+        background: #F1F7FF;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list>a {
+        color: #555;
+        padding: 0 10px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list.anxs-8qwe-nav:hover .anxs-8qwe-grName {
+        color: #fff !important;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list .anxs-8qwe-login {
+        color: #ff6c00
+    }
+
+    .anxs-8qwe-top-rt a:hover {
+        text-decoration: none;
+        color: #4955ff;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-nav {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        padding-left: 0px
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list .anxs-8qwe-nav-list {
+        display: none;
+        cursor: default;
+        position: absolute;
+        top: 35px;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        background: none;
+        border: 1px solid #EEEEEE;
+        border-top: none;
+        border-radius: 3px;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list .anxs-8qwe-nav-list dl {
+        float: left;
+        color: #555;
+        font-size: 12px;
+        font-family: 'Microsoft YaHei'
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list .anxs-8qwe-nav-list dl dt {
+        font-weight: 700;
+        margin-bottom: 5px
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list .anxs-8qwe-nav-list dl dd {
+        float: left;
+        width: 90px;
+        line-height: 26px;
+        text-align: left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list .anxs-8qwe-nav-list dl dd a {
+        text-decoration: none;
+        color: #555;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list .anxs-8qwe-nav-list dl dd a:hover {
+        color: #ff6c00;
+        text-decoration: none;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list .anxs-8qwe-nav-list .anxs-8qwe-list-resource {
+        width: 180px
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list .anxs-8qwe-nav-list .anxs-8qwe-list-service {
+        width: 100px
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list .anxs-8qwe-nav-list .anxs-8qwe-list-view {
+        width: 68px
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list .anxs-8qwe-nav-list .anxs-8qwe-list-view dd {
+        width: 74px
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-nav:hover,
+    .anxs-8qwe-top-rt .anxs-8qwe-nav:hover {
+        /* background: #EEEEEE;
+        border-radius: 5px;
+        color: #333333;
+        fill:#B3B3B3; */
+    }
+
+    #personHover:hover {
+        background: #eee !important;
+        fill: #333 !important;
+        color: #333 !important;
+        position: relative; 
+    }
+
+    #personHover:hover .anxs-8qwe-grName-wrap-center-user>a {
+        -webkit-text-fill-color: #333 !important;
+        color: #333 !important;
+    }
+
+    a:focus {
+        outline: none;
+        box-shadow: none;
+        border-color: none
+    }
+
+    .anxs-8qwe-grName {
+        -webkit-text-fill-color: #333 !important;
+        background: none !important;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-nav:hover .anxs-icon-pull-down {
+        transform: rotate(180deg);
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-nav:hover .anxs-8qwe-nav-list {
+        display: block
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list-jg {
+        display: none;
+        margin-right: 10px;
+        background: #eee
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list-jg .anxs-8qwe-jgName {
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 0 14px; 
+        height: 34px;
+        border-radius: 3px;
+        text-align: left;
+        font-size: 14px;
+        line-height: 36px;
+        border: 1px solid #eee; color: #333333;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list-jg .anxs-8qwe-jgName b {
+        display: inline-block;
+        font-weight: 400;
+        width: 122px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        vertical-align: bottom;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list-jg .anxs-8qwe-list-jg-box {
+        display: none;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list-jg .anxs-8qwe-list-jg-box .anxs-8qwe-nav-list-main h5 {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0 14px;
+        height: 40px;
+        font-weight: 400;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list-jg .anxs-8qwe-list-jg-box .anxs-8qwe-nav-list-main h5:hover {
+        background: #F6F6F6;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list-jg .anxs-8qwe-list-jg-box .anxs-8qwe-nav-list-main h5 .anxs-8qwe-nav-list-main-name {
+        flex: 1;
+        display: inline-block;
+        margin-right: 10px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-size: 14px;
+        color: #333;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list-jg .anxs-8qwe-list-jg-box .anxs-8qwe-nav-list-main h5 .anxs-8qwe-nav-list-main-back {
+        float: right;
+        font-size: 14px;
+        color: #234EA2;
+        cursor: pointer;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list-jg .anxs-8qwe-list-jg-box .anxs-8qwe-nav-list-main p {
+        margin: 0;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list-jg .anxs-8qwe-list-jg-box .anxs-8qwe-nav-list-main p .anxs-8qwe-login-jg {
+        font-size: 14px;
+        color: #234EA2;
+        padding: 0 14px;
+        height: 40px;
+        line-height: 40px;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list-common-box {
+        display: none;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list-common-box .anxs-8qwe-nav-list .anxs-8qwe-nav-list-main h5 {
+        margin: 0;
+        padding: 0 14px;
+        line-height: 30px;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list-common-box .anxs-8qwe-nav-list .anxs-8qwe-nav-list-main h5:hover {
+        background: #f1f1f1
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list-common-box .anxs-8qwe-nav-list .anxs-8qwe-nav-list-main h5 a {
+        color: #333;
+        display: inline-block;
+        width: 100%;
+        text-decoration: none;
+        cursor: pointer;
+        text-decoration: none
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list-gr .anxs-8qwe-grName-wrap {
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 0 14px;
+        border: 1px solid transparent;
+        border-radius: 3px;
+        height: 36px;
+        line-height: 36px;
+        font-size: 14px;
+        text-align: left;
+        color: #333;
+        background: #eee;
+        border-radius: 5px;
+
+    }
+
+    .anxs-8qwe-grName-wrap-center-user {
+        position: relative;
+        display: flex;
+        text-align: center;
+        margin: 0 2px;
+    }
+
+    #anxs-8qwe-grName-wrap-center-user-giftTip {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        cursor: pointer;
+        display: none;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-nav:hover .anxs-8qwe-jgName,
+    .anxs-8qwe-top-rt .anxs-8qwe-nav:hover .anxs-8qwe-grName-wrap {
+        background: #fff;
+        border: 1px solid #EEEEEE;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-nav:hover .anxs-8qwe-jgName {
+        border-bottom: 1px solid #fff;
+    }
+
+    .anxs-8qwe-grName-wrap-center-user {
+        width: 100px
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list-gr .anxs-8qwe-grName-wrap .anxs-8qwe-grName {
+        display: inline-block;
+        /* max-width: 124px; */
+        width: 86px;
+        vertical-align: bottom;
+        font-weight: 500;
+        color: #333;
+        font-weight: 400;
+        font-size: 14px;
+        color: #A66AB4;
+        background: linear-gradient(0deg, #A92EED 0%, #535FFC 99.31640625%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list-gr .anxs-8qwe-certification-no {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        background:url(https://cdn.login.wanfangdata.com.cn/Content/src/img/anxs-certification-no.png) no-repeat;
+        position: absolute;
+        right: 21px;
+        top: 0;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list-gr .anxs-8qwe-certification {
+        background:url(https://cdn.login.wanfangdata.com.cn/Content/src/img/anxs-certification.png) no-repeat;
+    }
+
+    .anxs-8qwe-list-gr-new {
+        width: 380px;
+        padding-top: 10px;
+        background: transparent;
+        left: auto !important;
+        right: 0 !important;
+        border: none !important;
+
+    }
+
+    .anxs-8qwe-list-jg-box {
+        background: #fff !important
+    }
+
+    .anxs-8qwe-list-gr-new-boxshadow {
+        padding-top: 20px;
+        width: 380px;
+        box-shadow: 0px 2px 11px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        box-sizing: border-box;
+        position: relative;
+        z-index: 11;
+        background: #fff
+    }
+
+    .anxs-8qwe-list-gr-new::before {
+        content: "";
+        position: absolute;
+        top: -8px;
+        right: 30px;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        /* 左侧边框透明 */
+        border-right: 10px solid transparent;
+        /* 右侧边框透明 */
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid white;
+        z-index: 20;
+    }
+
+    .anxs-8qwe-list-gr-new-main {
+        margin: 0 auto;
+        margin-top: 10px;
+        width: 330px;
+        height: 92px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .anxs-8qwe-list-gr-new-main>a {
+        width: 60px;
+        height: 60px;
+        font-weight: 400;
+        font-size: 14px;
+        color: #999999;
+        text-align: center;
+        fill: #000000;
+    }
+
+    .anxs-8qwe-list-gr-new-main>a:hover {
+        fill: #4955ff;
+        color: #4955ff;
+    }
+
+    .anxs-8qwe-list-gr-new-novips {
+        width: 326px;
+        height: 89px;
+        background: rgba(255, 255, 255, 0.6);
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 16px;
+        box-sizing: border-box;
+        background-size: 100% 100%;
+    }
+
+    .anxs-8qwe-list-gr-new-novips-left {
+        margin-top: 5px;
+        font-weight: 400;
+        font-size: 12px;
+        color: #AAAAAA;
+        line-height: 20px;
+    }
+
+    .anxs-8qwe-list-gr-new-novips-left-no {
+        font-weight: 500;
+        font-size: 14px;
+        color: #5B6B88;
+    }
+
+    .anxs-8qwe-list-gr-new-novips-left-text {
+        font-size: 12px;
+        color: #AAAAAA;
+    }
+
+    .anxs-8qwe-list-gr-new-novips-rightnow {
+        width: 92px;
+        height: 32px;
+        background: linear-gradient(90deg, #FEE4AD 0%, #FFCF89 100%);
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: #894508;
+    }
+
+    ..anxs-8qwe-list-gr-new-novips-rightnow:hover {
+        color: #4955ff;
+    }
+
+    .anxs-8qwe-list-gr-new-vip {
+        width: 346px;
+        background: linear-gradient(140deg, #FCF2E3 0%, #E4CFAE 100%);
+        border-radius: 10px;
+        padding: 10px;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+
+     .anxs-8qwe-list-gr-new-vip-bg {
+        background: url('https://www.wanfangdata.com.cn/images/vipbg.png') no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .anxs-8qwe-list-gr-new-novip-bg {
+        background: url('https://www.wanfangdata.com.cn/images/novipbg.png') no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .anxs-8qwe-list-gr-new-vip-title {
+        font-weight: bold;
+        font-size: 19px;
+        color: #6C532C;
+        height: 22px;
+        line-height: 22px;
+        margin-top: 8px;
+        margin-bottom: 17px;
+        display: flex;
+        align-items: center;
+    }
+
+    .anxs-8qwe-list-gr-new-vip-title>span {
+        margin-left: 13px;
+    }
+
+    #anxs-8qwe-list-gr-new-vip-greysvg {
+        width: 26px;
+        height: 22px;
+        display: none;
+    }
+
+    #anxs-8qwe-list-gr-new-vip-goldsvg {
+        display: none;
+    }
+
+    .anxs-8qwe-list-gr-new-vips {
+        width: 326px;
+        background: rgba(255, 255, 255, 0.6);
+        border-radius: 5px;
+        padding: 9px 16px;
+        box-sizing: border-box;
+    }
+
+    .anxs-8qwe-list-gr-new-vips-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .anxs-8qwe-list-gr-new-vips-name {
+        font-weight: 500;
+        font-size: 14px;
+        color: #6C532C;
+        line-height: 26px;
+    }
+
+    .anxs-8qwe-list-gr-new-vips-validityTime {
+        font-weight: 400;
+        font-size: 12px;
+        color: #B4A794;
+        line-height: 26px;
+    }
+
+    .anxs-8qwe-list-gr-new-person {
+        height: 50px;
+        width: 336px;
+        margin: 10px auto;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .anxs-8qwe-list-gr-new-person-avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 24px;
+    }
+
+    .anxs-8qwe-list-gr-new-person-set {
+        display: flex;
+        align-items: center;
+    }
+
+    .anxs-8qwe-list-gr-new-person-right {
+        width: 276px;
+        margin-left: 12px;
+    }
+
+    .anxs-8qwe-list-gr-new-person-right-bottom {
+        font-weight: 400;
+        font-size: 12px;
+        color: #BBBBBB;
+        line-height: 16px;
+        margin-top: 6px;
+    }
+
+    .anxs-8qwe-list-gr-new-person-id {
+        font-weight: bold;
+        font-size: 18px;
+        color: #333333;
+        max-width: 170px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .anxs-8qwe-list-gr-new-person-set {
+        font-weight: 400;
+        font-size: 14px;
+        color: #666666;
+        height: 16px;
+        display: flex;
+        align-items: center;
+    }
+
+    .anxs-8qwe-list-gr-new-person-set-a {
+        height: 16px;
+        line-height: 16px;
+        margin-left: 12px;
+        padding-left: 12px;
+        color: #666666;
+        border-left: 1px solid #DDDDDD;
+    }
+
+    .anxs-8qwe-list-gr-new-person-svg {
+        display: none;
+    }
+
+    .anxs-8qwe-list-gr-new-person-set-a:hover {
+        color: #4955ff !important;
+    }
+
+    .anxs-8qwe-list-gr-new-person-set-svg {
+        position: relative;
+    }
+
+    .anxs-8qwe-list-gr-new-person-set-svg:hover {
+        fill: #4955ff;
+    }
+
+    .anxs-8qwe-list-gr-new-person-set-dot {
+        display: none;
+        position: absolute;
+        height: 10px;
+        width: 10px;
+        border-radius: 5px;
+        right: -5px;
+        top: -5px;
+        background-color: #FE6F3B;
+    }
+
+    .anxs-8qwe-list-gr-new-person-right-top {
+        font-weight: 400;
+        font-size: 12px;
+        color: #BBBBBB;
+    }
+
+    .anxs-8qwe-list-gr-new-person-right>div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .anxs-8qwe-list-gr-new-person-right-bottom-ids {
+        display: flex;
+        align-items: center;
+        position: relative;
+        fill: #CCCCCC;
+    }
+
+    #anxs-8qwe-list-gr-new-person-copyId {
+        margin-left: 6px;
+        cursor: pointer;
+    }
+
+    .anxs-8qwe-list-gr-new-person-copyId-tip {
+        height: 45px;
+        width: 120px;
+        color: #fff;
+        text-align: center;
+        line-height: 45px;
+        background-color: rgba(0, 0, 0, .5);
+        border-radius: 5px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+    }
+
+    #anxs-8qwe-list-gr-new-person-copyId:hover {
+        fill: #4955ff;
+    }
+
+    .anxs-8qwe-list-gr-new-person-right-bottom-id {
+        max-width: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .anxs-8qwe-list-gr-new-loginOut {
+        width: 346px;
+        margin: 0 auto;
+        height: 60px;
+        border-top: 1px solid #EEEEEE;
+        fill: #000000;
+    }
+
+    .anxs-8qwe-list-gr-new-loginOut a {
+        display: flex;
+        justify-content: center;
+        height: 60px;
+        align-items: center;
+        font-size: 14px;
+        color: #999999;
+    }
+
+    .anxs-8qwe-list-gr-new-loginOut svg {
+        margin-right: 10px;
+    }
+
+    .anxs-8qwe-list-gr-new-loginOut a:hover {
+        color: #4955ff;
+        fill: #4955ff;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list-gr .anxs-8qwe-list-gr-box .anxs-8qwe-nav-list-main h5 {
+        line-height: 40px;
+        font-weight: 400;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list-gr .anxs-8qwe-list-gr-box .anxs-8qwe-nav-list-main .anxs-8qwe-nav-list-main-back {
+        color: #234EA2;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list-gr .anxs-8qwe-no-certification-wrapper {
+        padding: 0;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list-message .anxs-8qwe-jgName a {
+        color: #555;
+        text-decoration: none;
+    }
+    .anxs-8qwe-top-rt .anxs-8qwe-list-message .anxs-8qwe-nav-list .anxs-8qwe-nav-list-main h5 a {
+        text-indent: 27px;
+    }
+
+    .anxs-8qwe-top-rt .new-semester-message-2018 {
+        position: absolute;
+        display: none;
+        top: 15px;
+        right: 110px;
+        width: 96px;
+        height: 18px;
+        background:url(https://cdn.login.wanfangdata.com.cn/Content/src/img/new-semester-2018.png) no-repeat;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-reading {
+        border-left: 0px
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-nav-main .nav_color {
+        color: #ff6c00;
+        padding: 0 4px;
+    }
+
+    .anxs-8qwe-nav-main a {
+        color: #ff6c00
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list_bind {
+        border-right: 0px
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list {
+        border-left: 0px
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-nav-main {
+        border-left: 1px solid #d4d9dc
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list.anxs-8qwe-nav-main:hover {
+        color: #f60;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-return_old {
+        display: inline-block;
+        cursor: pointer;
+        padding-left: 8px;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-return_old a {
+        color: #333;
+        font-size: 14px;
+    }
+
+    .header-i18n {
+        display: inline-block;
+        padding-left: 20px;
+        height: 36px;
+        line-height: 36px;
+        font-size: 14px;
+        color: #aaa;
+        cursor: pointer;
+    }
+
+    .header-i18n .line {
+        display: inline-block;
+        width: 1px;
+        height: 18px;
+        background: #E9E9E9;
+        vertical-align: middle;
+    }
+
+    .header-i18n span:hover {
+        color: #324076;
+    }
+
+    .header-i18n span {
+        margin-right: 6px;
+    }
+
+    .header-i18n .header-english {
+        color: #999;
+    }
+
+    .header-i18n .header-english:hover {
+        color: #6BA439;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list .activity-hot {
+        display: none;
+        background: url(https://my.wanfangdata.com.cn/user/Content/images/hot.png) no-repeat;
+        width: 21px;
+        height: 26px;
+        position: absolute;
+        right: 9px;
+        top: -20px;
+        transform: scale(0.8);
+        padding: 0;
+        animation: hotactive 1.8s infinite;
+        animation-duration: 1.8s;
+        animation-timing-function: ease;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-fill-mode: none;
+        animation-play-state: running;
+        animation-name: hotactive;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list-hy {
+        height: 36px;
+        display: flex;
+        align-items: center;
+        margin-right: 35px;
+        cursor: pointer;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list-hy:hover span {
+        color: #4955ff !important;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list-cz {
+        height: 36px;
+        display: flex;
+        align-items: center;
+        margin-right: 25px;
+        cursor: pointer;
+        font-size: 14px;
+        color: #464646;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list-cz a {
+        height: 36px;
+        line-height: 36px;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list-cz a:hover {
+        color: #4955ff !important;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list-hy img {
+        width: 18px;
+        height: 13px;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list-hy span {
+        font-size: 14px;
+        color: #464646;
+        margin-left: 3px;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list .activity-hot-always {
+        display: none;
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        right: 26px;
+        top: 4px;
+        transform: scale(0.8);
+        padding: 0;
+        animation: hotactive 1.8s infinite;
+        animation-duration: 1.8s;
+        animation-timing-function: ease;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-fill-mode: none;
+        animation-play-state: running;
+        animation-name: hotactive;
+        z-index: 999
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list .activity-hot-always-nologin {
+        right: 15px;
+        top: 3px;
+    }
+
+    .anxs-8qwe-top-rt .anxs-8qwe-list-login {
+        position: relative;
+    }
+
+    .layer-anim-01 {
+        animation-name: none;
+    }
+
+    @media screen and (max-width: 1440px) {
+        .anxs-8qwe-top-rt .anxs-8qwe-list-cz {
+            font-size: 14px;
+            height: 28px;
+            line-height: 28px;
+        }
+
+        .anxs-8qwe-top-rt .anxs-8qwe-list-hy {
+            height: 28px;
+            line-height: 28px;
+            font-size: 12px;
+        }
+
+        .anxs-8qwe-top-rt .anxs-8qwe-list-hy img {
+            width: 14px;
+            height: 11px;
+        }
+
+        .anxs-8qwe-top-rt .anxs-8qwe-list-hy span {
+            font-size: 12px;
+            margin-left: 2px;
+        }
+
+        .anxs-8qwe-top-rt .anxs-8qwe-list-login .anxs-8qwe-login-all,
+        .anxs-8qwe-top-rt .anxs-8qwe-list-login .anxs-8qwe-login-gr,
+        .anxs-8qwe-top-rt .anxs-8qwe-list-login .anxs-8qwe-login-jg {
+            width: 120px;
+            height: 36px;
+            line-height: 36px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .anxs-8qwe-top-rt .anxs-8qwe-list-gr .anxs-8qwe-grName-wrap {
+            width: 125px;
+            height: 28px;
+            line-height: 26px;
+            font-size: 12px;
+            border-radius: 5px;
+        }
+
+        .anxs-8qwe-top-rt {
+            display: flex;
+            align-items: center;
+        }
+
+        .anxs-8qwe-top-rt .anxs-8qwe-list .anxs-8qwe-nav-list {}
+
+        .header-i18n {
+            height: 36px;
+            line-height: 36px;
+            font-size: 14px;
+        }
+    }
+</style>
+<img src="https://ipv6.wanfangdata.com.cn/v6/ip/info" alt=""/>
+<div class="anxs-8qwe-top-rt">
+    <a class="new-semester-message-2018" href="https://my.wanfangdata.com.cn/user/personal/index" target="_blank"></a>
+    <div class="anxs-8qwe-list_bind anxs-8qwe-list">绑定机构
+        <div class="anxs-8qwe-list_bind-wx" style="display: none">
+            <span><i></i></span>
+            <img src="https://cdn.login.wanfangdata.com.cn/Content/src/img/anxs-loding-wx.gif" class="anxs-8qwe-list_bind-img">
+            <div class="anxs-8qwe-bind-layer">
+                <img src="https://cdn.login.wanfangdata.com.cn/Content/images/bind_right_icon.png" style="width:18px;height: 15px;margin-top:14px"/>
+                <span>扫描成功</span>
+                <span>请在APP上操作</span>
+            </div>
+            <span></span>
+            <span class="anxs-8qwe-bind-title">
+			打开万方数据APP，点击右上角"扫一扫"，扫描二维码即可将您登录的个人账号与机构账号绑定，绑定后您可在APP上享有机构权限，如需更换机构账号，可到个人中心解绑。
+		</span>
+        </div>
+    </div>
+    <div class="anxs-8qwe-list anxs-8qwe-nav anxs-8qwe-list-jg">
+        <span class="anxs-8qwe-jgName">
+            <b></b>
+            <svg class="anxs-icon-pull-down" width="10" height="5" viewBox="0 0 638 361">
+                <path d="M39.77.61C7.31.61-13.45,43.95,11.42,68.81l279.41,279.42c16.02,16.02,39.86,16.02,55.88,0L626.13,68.81c24.25-24.23,5.34-68.21-27.94-68.21H39.77ZM39.77.61"></path>
+            </svg>
+         </span>
+        <div class="anxs-8qwe-nav-list anxs-8qwe-list-jg-box" style="z-index:5">
+            <div class="anxs-8qwe-nav-list-main">
+                <p><a class="anxs-8qwe-login anxs-8qwe-login-jg">登录机构账号</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="anxs-8qwe-list anxs-8qwe-list-login anxs-no-line">
+        <a onclick="activityHotAlways()" target="_blank" class="activity-hot-always activity-hot-always-nologin"></a>
+        <a class="anxs-8qwe-login-all" style="margin-right: 10px; display: inline;">登录 / 注册</a>
+        <a class="anxs-8qwe-login-gr" style="margin-right: 10px;">登录 / 注册</a>
+        <a class="anxs-8qwe-login-jg" style="margin-right: 10px;">机构登录</a>
+    </div>
+    <div class="anxs-8qwe-list anxs-8qwe-nav anxs-8qwe-list-common-box anxs-8qwe-list-gr"
+        style="margin-right: 20px; border-radius: 5px;">
+        <!-- <a onclick="activityHot()" target="_blank" class="activity-hot"></a> -->
+        <a onclick="activityHotAlways()" target="_blank" class="activity-hot-always activity-hot-always-person"></a>
+        <div class="anxs-8qwe-grName-wrap" id="personHover">
+            <div class="anxs-8qwe-grName-wrap-center-user">
+                <a href="https://my.wanfangdata.com.cn/usercenter/" target="_blank" class="anxs-8qwe-person-center anxs-8qwe-grName">
+                </a><a id="anxs-8qwe-grName-wrap-center-user-giftTip"><svg viewBox="0 0 1132 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                        <path
+                            d="M17.885047 226.624992h1096.949544c9.836776 0 17.885047 8.048271 17.885047 17.885047v213.428226c0 9.836776-8.048271 17.885047-17.885047 17.885047H17.885047c-9.836776 0-17.885047-8.048271-17.885047-17.885047V244.510039c0-9.836776 8.048271-17.885047 17.885047-17.885047z"
+                            fill="#FF505D"></path>
+                        <path
+                            d="M142.335165 475.823312h848.049308c6.557851 0 11.923365 5.365514 11.923365 11.923365V1012.076635c0 6.557851-5.365514 11.923365-11.923365 11.923365h-848.049308c-6.557851 0-11.923365-5.365514-11.923365-11.923365V487.746677c0-6.557851 5.365514-11.923365 11.923365-11.923365z"
+                            fill="#FF6174"></path>
+                        <path
+                            d="M258.438928 160.59936S128.474254 135.560294 102.540936 126.617771l45.904953 66.025631L65.578505 225.581697s193.903717 35.919136 402.860682 4.918388L367.835798 184.893215l-109.39687-24.293855zM351.888298 3.359989c-66.025632-11.774323-97.473506 11.178154-97.473506 11.178155l-18.034089 114.017174s46.650164-31.745958 101.944768-18.034089c71.987314 18.034089 162.008717 119.978856 162.008717 119.978856v-77.948996S441.313533 19.307489 351.888298 3.359989zM989.639263 192.643402l46.053996-66.025631c-25.933318 8.942523-155.897992 33.981589-155.897993 33.981589L770.398396 184.893215l-100.603389 45.755912c208.956965 31.000748 402.860682-5.06743 402.860682-5.06743L989.639263 192.643402zM901.704449 128.555318L883.819402 14.687186s-31.447874-22.952477-97.473506-11.178155C696.920662 19.456531 637.900007 152.700131 637.900007 152.700131v77.948996s89.872361-101.944767 161.859674-119.978856c55.145561-13.860911 101.944767 17.885047 101.944768 17.885047z"
+                            fill="#FFCA3E"></path>
+                        <path d="M491.83879 141.521977h149.042058V1024H491.83879z" fill="#FFCA3E"></path>
+                        <path d="M491.83879 479.99649h149.042058v544.00351H491.83879z" fill="#FFB82C"></path>
+                        <path
+                            d="M387.211266 127.959149c-64.982337-37.558599-142.186123-24.890024-150.681521 0.745211-9.38965 28.168949 36.664346 58.126402 103.286146 93.002244 43.818365 22.952477 160.667338 8.942523 160.667339 8.942523s-48.289627-65.280421-113.271964-102.689978zM901.704449 128.555318c-8.495397-25.635234-85.699183-38.303809-150.681521-0.745211s-113.271964 102.689978-113.271963 102.689978 116.998015 14.009953 160.667338-8.942523c66.6218-34.726799 112.675796-64.833295 103.286146-93.002244z"
+                            fill="#FFB82C"></path>
+                    </svg></a>
+            </div>
+            <svg class="anxs-icon-pull-down" width="10" height="5" viewBox="0 0 638 361">
+                <path
+                    d="M39.77.61C7.31.61-13.45,43.95,11.42,68.81l279.41,279.42c16.02,16.02,39.86,16.02,55.88,0L626.13,68.81c24.25-24.23,5.34-68.21-27.94-68.21H39.77ZM39.77.61">
+                </path>
+            </svg>
+        </div>
+        <div class="anxs-8qwe-nav-list anxs-8qwe-list-gr-box anxs-8qwe-list-gr-new" style="z-index: 9999">
+            <div class="anxs-8qwe-list-gr-new-boxshadow">
+                <div class="anxs-8qwe-list-gr-new-person-copyId-tip">复制成功</div>
+                <div class="anxs-8qwe-list-gr-new-person">
+                    <div class="anxs-8qwe-list-gr-new-person-left">
+                        <img class="anxs-8qwe-list-gr-new-person-avatar" src="">
+                        <svg class="anxs-8qwe-list-gr-new-person-svg" viewBox="0 0 1024 1024" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                            <path
+                                d="M515.56977778 9.73255111c-276.66545778 0-503.02862222 226.36202667-503.02862223 503.02862222 0 276.66204445 226.36316445 503.02293333 503.02976 503.02293334 276.66090667 0 503.02293333-226.36088889 503.02293333-503.02293334 0-276.66773333-226.36202667-503.02862222-503.02293333-503.02862222z m12.57358222 150.90688c191.77927111 0 191.77927111 144.62293333 191.77927111 226.36088889 0 81.74592-75.45514667 232.6528-191.77927111 235.79306667-113.18044445 0-191.77927111-150.90574222-191.77927112-235.79306667 0.00113778-81.73909333 0.00113778-226.36088889 191.77927112-226.36088889z m-12.57244445 826.84928c-144.62293333 0-276.66659555-66.02524445-364.69646222-169.76896 12.57358222-31.44248889 28.29425778-66.02524445 50.30343111-84.88618666 47.15633778-37.73098667 188.63217778-100.608 188.63217778-100.608l88.02986666 169.7735111 15.71953778-40.8723911L468.40888888 710.82325333l50.30343112-50.29888 50.30343111 50.29888-22.01031111 53.44597334 12.57813333 40.87352888 91.17240889-166.62755555s141.47470222 62.87587555 188.63559111 100.60686222c22.00462222 15.71612445 37.72529778 44.01493333 47.15747555 69.16209778C801.664 918.3232 666.47552 987.48871111 515.56977778 987.48871111z m0 0"
+                                fill="#D2DDF2"></path>
+                        </svg>
+                    </div>
+                    <div class="anxs-8qwe-list-gr-new-person-right">
+                        <div class="anxs-8qwe-list-gr-new-person-right-top">
+                            <div class="anxs-8qwe-list-gr-new-person-id"></div>
+                            <div class="anxs-8qwe-list-gr-new-person-set">
+                                <a class="anxs-8qwe-list-gr-new-person-set-svg" href="https://my.wanfangdata.com.cn/usercenter/message"
+                                    target="_blank">
+                                    <div class="anxs-8qwe-list-gr-new-person-set-dot"></div><svg viewBox="0 0 1024 1024"
+                                        version="1.1" xmlns="http://www.w3.org/2000/svg" width="14" height="14">
+                                        <path
+                                            d="M939 822.3c-0.6-15.3-16.6-23.4-26.7-32.2-19-16.5-35.6-35.8-49-57.1-25.5-40.5-38.5-87.9-38.5-135.7V426.7c0-143-96.4-263.8-227.5-301V85.4c0-110-170.7-110-170.7 0v40.3c-132.9 37.7-227.5 162.8-227.5 301v170.7c0 57.4-19.3 113.9-55.1 158.8-14.7 18.5-34.9 30.8-49.9 48.2-15.6 18.1-7.4 49 19.6 49h258.8C355.2 940.2 423.3 1024 512 1024c88.6 0 156.8-83.9 139.4-170.7h258.8c16.7 0.1 29.4-14.9 28.8-31z m-739.6-32.9c41.2-54.6 63.8-121.3 63.8-192V426.7c0-109.7 75.4-209 180.2-239.2 45.2-11 92.2-11.1 137.4 0C685.7 217.6 761 317.1 761 426.7v170.7c0 70.7 22.6 137.4 63.8 192H199.4zM512 64c11.8 0 21.3 9.6 21.3 21.3v30.3c-14.2-0.9-28.5-0.9-42.7 0V85.3c0.1-11.7 9.7-21.3 21.4-21.3z m0 896c-48.9 0-86.2-46.3-76.6-94l2.5-12.6H586l2.5 12.6c9.7 47.7-27.7 94-76.5 94z"
+                                            fill="#6E78BD"></path>
+                                    </svg>
+                                </a>
+                                <a class="anxs-8qwe-list-gr-new-person-set-a" href="https://my.wanfangdata.com.cn/usercenter/accountInfo"
+                                    target="_blank">设置</a>
+                            </div>
+                        </div>
+                        <div class="anxs-8qwe-list-gr-new-person-right-bottom">
+                            <div class="anxs-8qwe-list-gr-new-person-right-bottom-ids">
+                                <div class="anxs-8qwe-list-gr-new-person-right-bottom-id"></div><svg
+                                    id="anxs-8qwe-list-gr-new-person-copyId" viewBox="0 0 1024 1024" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" width="11" height="11">
+                                    <path
+                                        d="M877.60406781-3.16936828H340.27687725C257.18504365-3.16936828 196.25103234 63.3040986 196.25103234 140.85647661v49.85510016h-49.85510015C63.3040986 190.71157677 2.37008728 257.18504365 2.37008728 334.73742166v537.32719058c0 83.0918336 66.47346689 144.0258449 144.02584491 144.0258449h537.32719056c83.0918336 0 144.0258449-66.47346689 144.02584491-144.0258449v-49.85510016h49.85510015c83.0918336 0 144.0258449-66.47346689 144.02584491-144.02584489V146.39593219c5.53945557-83.0918336-60.93401131-149.56530046-144.02584491-149.56530047zM733.57822292 877.60406781c0 27.69727787-22.1578223 49.85510015-49.85510017 49.85510017H146.39593219c-27.69727787 0-49.85510015-22.1578223-49.85510017-49.85510017V340.27687725c0-27.69727787 22.1578223-49.85510015 49.85510017-49.85510017h537.32719056c27.69727787 0 49.85510015 22.1578223 49.85510017 49.85510017v537.32719056z m193.88094506-193.88094506c0 27.69727787-22.1578223 49.85510015-49.85510017 49.85510017h-49.85510015V340.27687725c0-83.0918336-66.47346689-144.0258449-144.02584491-144.02584491H290.42177708v-49.85510015c0-27.69727787 22.1578223-49.85510015 49.85510017-49.85510017h537.32719056c27.69727787 0 49.85510015 22.1578223 49.85510017 49.85510017v537.32719056z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="anxs-8qwe-list-gr-new-person-right-bottom-createTime"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="anxs-8qwe-list-gr-new-vip">
+
+                    <div class="anxs-8qwe-list-gr-new-vip-title">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            id="anxs-8qwe-list-gr-new-vip-goldsvg" width="26" height="22" viewBox="0 0 585.74 491.99">
+                            <defs>
+                                <style>
+                                    .cls-122 {
+                                        fill: url(#_未命名的渐变_9);
+                                    }
+                                </style>
+                                <linearGradient id="_未命名的渐变_9" x1="566.11" y1="4.37" x2=".3" y2="458.33"
+                                    gradientTransform="translate(0 491.89) scale(1 -1)" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#e09900" />
+                                    <stop offset=".97" stop-color="#fbd59f" />
+                                </linearGradient>
+                            </defs>
+                            <path class="cls-122"
+                                d="M580.67,121.9c-9.53-14.88-29.33-19.22-44.21-9.68l-88.34,58.91c-7.51,4.81-17.45,3.11-22.94-3.92L318.09,12.31c-1.61-2.07-3.47-3.93-5.54-5.54-13.93-10.87-34.04-8.39-44.91,5.54l-107.09,154.9c-5.49,7.03-15.43,8.73-22.94,3.92l-88.34-58.91c-6.41-4.11-14.07-5.79-21.62-4.76C10.14,109.87-2.1,126.01.3,143.52l76.33,318.61c2.35,17.11,16.97,29.86,34.24,29.86h364c17.27,0,31.89-12.75,34.24-29.86l76.33-318.61c1.04-7.54-.65-15.21-4.76-21.62h-.01ZM397.19,283.14c-.42,1.57-1.35,3.66-2.78,6.27l-69.31,118.58c-.6,1.27-1.38,2.3-2.33,3.08-.96.78-2.51,1.38-4.67,1.79-2.15.41-5.09.67-8.8.78s-8.56.17-14.54.17c-4.79,0-8.89-.02-12.3-.06-3.41-.04-6.32-.13-8.71-.28-2.4-.15-4.34-.37-5.84-.67-1.5-.3-2.76-.67-3.77-1.12-1.02-.45-1.8-.99-2.33-1.62-.54-.63-1.05-1.44-1.53-2.41l-69.13-118.47c-1.44-2.69-2.31-4.82-2.6-6.38-.3-1.57.3-2.74,1.8-3.53,1.5-.78,4.04-1.27,7.63-1.46,3.59-.19,8.62-.28,15.08-.28,5.5,0,9.81.08,12.93.22,3.11.15,5.5.41,7.18.78,1.67.37,2.84.93,3.5,1.68s1.28,1.68,1.89,2.8l56.56,94.78h.18l55.49-94.22c.48-1.27,1.08-2.3,1.79-3.08.72-.78,1.94-1.4,3.68-1.85,1.73-.45,4.22-.75,7.45-.9s7.66-.22,13.29-.22,9.79.11,12.84.34c3.05.22,5.15.77,6.29,1.62,1.14.86,1.5,2.07,1.08,3.64l-.02.02Z" />
+                        </svg>
+                        <img id="anxs-8qwe-list-gr-new-vip-greysvg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAAsCAYAAAAq/ZsdAAAAAXNSR0IArs4c6QAACZxJREFUaEPNWntsVuUZf57ztYAUMtikmQJxrqACFi0DZEYdjSFcwv1SubTd6qDVzcoEW7oYQ4ku4zJdtFwCrXRyNYW2gzKgi1CKiNGZkQl22EpYLG2hU8CEMmjPeZ/lvZ5zvn63apvw/dGe7zv93vf9Pc/z+z2XU4QefNXUUNzVQMsLADCFAREAVt/t3LMxNRXtntoWe2phvm75yaZcApzLr4n/YIxfVSyYOLSop/btMUD7a5tSAPFNAYbjACZBEYBj4YpFvxh8pidA9Qigqk+b+95uo1JATDRgNBoOCKi1X1tc1owZ997sblA9Amh/bXMBIEzmYAjED+ka4n7S11S98On71t7xgMpqmp/AALwmcQSDIYlNhyHRq4sn3XeqO0F1q4cqay4O6MBepQg4wAuGKQ/5wHBQRN+2x7FfZaXef727QHUroH21za8BsSd0hAkfhQHDlUKGH5xKn/STV+84QPuPN08mixXwbCNjSvhIcEdKtksl/sYLlBDWZk66v7o7QAkPHf30v/e0t8PPyIK2+KvXT0+bNvx2Vxav+PByom3b24FBQjD5ORipdO6FD4wQC7wJ4GRlTh7W2pV93z7c0LtPOz0JyPqSzf6RM29kC1ad/no8InudAcRLIWKtiIF1M38+6J+xLE5EuL+26Q0iSPGC0fQPBcbcc2WPe/RMxpSfrkRE7eOI2289WDcGyVoFCInc3Q6ADcRewaqPruwiwMFGfkR0MG7VAx1Wx9a0x4f+L9LK+2ob5xLDXBdMkJL5POO55wMj5ZyAirKmJlVE2u/Nssa7+vdpyyGAWcL8yvskKitswoOnW2u8CwiqqnhHoss2Y+vnh8nqe2ubhgYYFAOw3lHJT6HByO9xB4mT3bZszP7lzKSvQoEqOdCQwiw7Hwh/3AmMpC3gwY+u7ATCIZK3wjNqA7MTt1zFXTdubvNyq6yMAjSoaSMSPeQjfxBnxL2IYGTZquUDCc8ntCW9kJaGjgYluGJTNgATdaELhtzvCrrQJTzw4ZV8Qpwqaq0QYJRAARI1EbL1858a+hn/7L3jlzItoCwvGJcvyjweyRb+0eLAjaekzwtGnJXxQ1Lpr2c8uIO/LT5wfjQB5APCYH3fayQ3RQgvH8HKU61T0WL58jAuYg1dxraWXb4bHCOiDkCYQgSoZTmqkhmlU7hIFauusAsw6rDc3keJrHhC9jSIfSRYHxiffDBwHFzPVW6wzexdwWA8+ytORSljfOQ32UdmoTBgXFZ5D+st/fxfFMZVLjX5TiIV4hBgdrpAXvHB5QoAGuj1ivSX7GG6lPnD8EXjUuTX6Va7S1k+NBifkinySy6paoPbmuha7oLkuQJQ5Qctq4loouaLa+zuAROeL4rgRhR0Ue56RoLxk78TGJlAT+QuSF4jPVTbPBcQcv0JXauPv+yPVsaIzWMkv6KF1C2Z1OVZvXyJCEYFrTxi0YsLkisEoLKaxmFWIFCsPROuh4mpjOkS+UOFWHTyG6+Z8COwKbBsRdqoLwWgQiJr5MmWKiToG7WHuQPIL/wi844uUG5eq0ueUViIzLQP+040riPA8VoBvmvm7ynyK33ygJBgZLiyT5Y/8+gqfu0Cqm1cQgyXxtTDxFbGdFayqOQPJcseJQvyjKabw6DkpYWjd/sA7Xm/cXScBW/F2sN4+xwGdJ0Ab3MZRUYJBNjP5BhVrLk1m0t+IrIJ6CqQRQhOHCP8kRaIMEpmPORVZLBx+e8WJ4sKxniorOzzXjToB4eIWHxXyE/EWjOnJC3UZT9vJ7YfaXgLAZNVfSN+uXMSZTIi27LjspbNG35JgiDcXPnv9xAg0Q/Gq2RumBntIdbxLcZPL0wb1e4DxN/sPfZVESA8HHsPY8r+DVlTkw7rEPjL4YYkx4FthGSpKFHk9cgy0Z7sWSOEsvLXloqz0wkCKw0YT/6RxnDrHLmKrD0J4NyKhY/m6nV8M4W9xxqXEdFiyTT1tdgy//V2p++SHM+craSqfjkAzA72jMpT37S198tYkSZ7rQ3V/0pIuBG3CxAH6DImWMn0gcWpVPUiIoloz8pFKcYwfkDHGx8jRmvNAKNr5C97dtrwLXrjdw6c7+9YuANJTYCklUTNZQH9IXv2yPf1324qr/sNIlsgD+uVYzfENGdI1UHSYbxTtQryFj3ycUgP7ai+nBCwblXxPsntYdwhh1g0TNlPjGxmYdayaZIT/LXtYP10AKbCSHeX9HnOrBG5mnOb/np2KDAsJYBAODBuBWP4J83DixLbmpGX+UhbSED8w51//08JAiUJd3ahh1GR8PHSmQ8U6MU50YsPfrEZdBPIeP2POc/NH9ngeufcOkIYL/ogafSQSuZ6xtV+QrqwctGYpXot/rvTXG539cUXGcKcSGW/3FctbHoUqWTMgYKc2Q+YECiuqB/hWM4mDg4ADz0/Z8Qb+gCby+smMGJ/1MWnXDFYyUI1nircCCrzlox5OyKgnUcuTqQArf4ePUxjc/+WZwtTU80zoC2VdfkA8OQtuJ3x0pwUMSUtrKmJG/RNYikDNiTYK5ovpnXx9EHuvA+AHGdNXsa4ExEBlRxt/GEv6CjXxpJNlS/dRu1hiGBzzqyH9umN/lx5ZkAfJ/6x5+c/bIaJReVnnwGC58KBCSa/Jo238QzE3Zq3Iu3xqxEB8ZvvHr2wmwjvFVrvGWCIL6r84M38MgB8PUxbb7qVnqW84d2QX2/e/dlApzfuAlEMh0iWRsn8tVJQF92clz5mSfDaIWfbpUcuFCDQ5FADDIHJHQhF6GH8fPFuXFR+Lh8YTf0eYPi+1fnpYzs9jgkHaBoQ5UUiv5qyuufsNMAgssB6xbHZ2d+mjbohSpt9dQk2stFI8DogodEVtUooJfP73gxruFU35GeOM9WJPkhIQMWHG4YEAHaa0wYpmR+MHIJEG2BEzPxhRmjBgxoT2mIcbmesSp9gcl5EQPzm9sP1FcBwoLFQiAJTZ36xUadpTPSyP7iM8U4NO0+dFIGl/a4VZIxVQ0c/i8I+Hyo51LDGAnrK8MWkiO80wIg5WYYNMbW/7NfwZEHm2NXBgsDfhwX0zt/q5xED/j8GnQcYZkgeaRrT9cwfFowptGWYOAgbf58xTqaWoFdYQKVVF4bb4GyLTn7vinLgZ+qILpQxsYDR0WIFnOz8JRNM+eQ9QVhAXJVKquq3EdCwYHGINL30lTFhehgv57yZ30SV74GzkgLlJST6Mj9zXHa450gRn7FurfribnToZUIaL+fYkUexsfYwsZJfGNI82gRCgk8C8finlxeP/TpUuPHP/g8nJ0dgVZ675gAAAABJRU5ErkJggg==" alt="" sizes="" srcset="">
+                        <span>万方会员</span>
+                    </div>
+                    <div class="anxs-8qwe-list-gr-new-vips"></div>
+                    <div class="anxs-8qwe-list-gr-new-novips">
+                        <div class="anxs-8qwe-list-gr-new-novips-left">
+                            <div class="anxs-8qwe-list-gr-new-novips-left-no">暂未开通会员</div>
+                            <div class="anxs-8qwe-list-gr-new-novips-left-text">开通即享超值福利、会员权益<br>优质内容推荐</div>
+                        </div>
+                        <div class="anxs-8qwe-list-gr-new-novips-right">
+                            <a href="https://svip.wanfangdata.com.cn/?wfchannel=headerNavigation" target="_blank"
+                                class="anxs-8qwe-list-gr-new-novips-rightnow">
+                                立即开通
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="anxs-8qwe-nav-list-main anxs-8qwe-list-gr-new-main">
+                    <a class="anxs-8qwe-person-center" target="_blank" href="https://my.wanfangdata.com.cn/usercenter/">
+                        <div class="anxs-8qwe-list-gr-new-main-box"><svg xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" id="_图层_1" width="22" height="20"
+                                viewBox="0 0 717.84 570.49">
+                                <g class="cls-3">
+                                    <path
+                                        d="M547.21,569.6H170.89c-37.12,0-67.84-23.75-75.52-57.01L.65,75.56c-2.56-9.5,2.56-20.19,12.8-24.94,8.96-4.75,21.76-3.56,29.44,2.38l158.72,125.88L338.57,9.06c10.24-11.88,30.72-11.88,40.96,0l136.96,169.82,158.72-125.88c7.68-7.13,20.48-7.13,29.44-2.38,8.96,4.75,14.08,15.44,12.8,24.94l-94.72,437.03c-7.68,33.25-38.4,57.01-75.52,57.01h0ZM65.93,133.75l79.36,369.34c2.56,10.69,12.8,19,25.6,19h376.32c12.8,0,23.04-8.31,25.6-19l79.36-369.34-122.88,97.38c-5.12,4.75-12.8,5.94-19.2,5.94-6.4-1.19-14.08-3.56-17.92-9.5L359.05,62.5l-133.12,165.08c-3.84,4.75-10.24,8.31-17.92,9.5-6.4,1.19-14.08-1.19-19.2-5.94l-122.88-97.38ZM65.93,133.75" />
+                                </g>
+                                <path
+                                    d="M359.05,450.84c-8.96,0-17.92-4.75-21.76-11.88l-76.8-118.76c-7.68-10.69-3.84-26.13,8.96-32.07,11.52-7.12,28.16-3.56,34.56,8.31l55.04,84.32,55.04-84.32c7.68-10.69,23.04-15.44,34.56-8.31,11.52,7.13,16.64,21.38,8.96,32.07l-76.8,118.76c-3.84,7.13-12.8,11.88-21.76,11.88h0ZM359.05,450.84" />
+                            </svg>
+                        </div>个人中心
+                    </a>
+                    <a class="anxs-8qwe-person-center" target="_blank" href="https://zhiyan.wanfangdata.com.cn">
+                        <div class="anxs-8qwe-list-gr-new-main-box"><svg xmlns="http://www.w3.org/2000/svg" id="_图层_1"
+                                width="20" height="20" viewBox="0 0 757.08 750.33">
+                                <path
+                                    d="M630.68,418.77v230.26c0,28.03-24.71,50.65-55.02,50.65H110.05c-30.45,0-55.02-22.75-55.02-50.65V223.09c0-28.03,24.71-50.65,55.02-50.65h259.57c27.45,0,25.67-50.65,0-50.65H110.05C49.29,121.79,0,167.16,0,223.09v425.93c0,55.93,49.29,101.3,110.05,101.3h465.48c60.76,0,110.05-45.37,110.05-101.3v-228.62c.14-25.14-54.89-26.02-54.89-1.63h0ZM630.68,418.77" />
+                                <path
+                                    d="M729.52,44.85l-71.41-38.08c-26.35-13.95-59.94-5.66-75.23,18.6l-206.44,329.17,27.85,131.84,139.13-43.11,206.3-329.3c15.16-24.26,6.14-55.18-20.21-69.13ZM688.28,110.58l-178.85,285.31-63.9,24.51-7.64-62.59,178.85-285.31c7.65-12.07,24.44-16.21,37.55-9.3l23.89,12.69c13.24,7.17,17.75,22.63,10.1,34.69Z" />
+                                <path
+                                    d="M508.06,530.19H177.65c-15.16,0-27.58,11.31-27.58,25.39s12.28,25.39,27.58,25.39h330.27c15.16,0,27.58-11.31,27.58-25.39s-12.29-25.39-27.44-25.39h0Z" />
+                                <path
+                                    d="M287.7,291.15h-110.05c-15.16,0-27.58,11.31-27.58,25.39s12.29,25.39,27.58,25.39h110.05c15.15,0,27.58-11.31,27.58-25.39s-12.43-25.39-27.58-25.39h0Z" />
+                                <path
+                                    d="M287.7,410.67h-110.05c-15.16,0-27.58,11.31-27.58,25.39s12.29,25.39,27.58,25.39h110.05c15.15,0,27.58-11.31,27.58-25.39s-12.43-25.39-27.58-25.39h0Z" />
+                            </svg>
+                        </div>我的智研
+                    </a></h5>
+                    </a>
+                    <a class="anxs-8qwe-person-center" target="_blank" href="https://zhiyan.wanfangdata.com.cn/subscribe">
+                        <div class="anxs-8qwe-list-gr-new-main-box"><svg xmlns="http://www.w3.org/2000/svg" id="_图层_1"
+                                width="20" height="20" viewBox="0 0 669.1 669.1">
+                                <path
+                                    d="M302.55,475.83c-6.4,0-12.8-2.56-17.92-7.68l-115.2-115.2c-10.24-10.24-10.24-25.6,0-35.84,10.24-10.24,25.6-10.24,35.84,0l97.28,97.28,161.28-161.28c10.24-10.24,25.6-10.24,35.84,0,10.24,10.24,10.24,25.6,0,35.84l-179.2,179.2c-5.12,5.12-11.52,7.68-17.92,7.68h0ZM302.55,475.83" />
+                                <path
+                                    d="M590.55,667.35H78.55c-42.24,0-76.8-34.56-76.8-76.8V104.15C1.75,61.91,36.31,27.35,78.55,27.35c14.08,0,25.6,11.52,25.6,25.6s-11.52,25.6-25.6,25.6-25.6,11.52-25.6,25.6v486.4c0,14.08,11.52,25.6,25.6,25.6h512c14.08,0,25.6-11.52,25.6-25.6V104.15c0-14.08-11.52-25.6-25.6-25.6s-25.6-11.52-25.6-25.6,11.52-25.6,25.6-25.6c42.24,0,76.8,34.56,76.8,76.8v486.4c0,42.24-34.56,76.8-76.8,76.8h0ZM590.55,667.35" />
+                                <path
+                                    d="M180.95,104.15c-14.08,0-25.6-11.52-25.6-25.6V27.35c0-14.08,11.52-25.6,25.6-25.6s25.6,11.52,25.6,25.6v51.2c0,14.08-11.52,25.6-25.6,25.6h0ZM385.75,78.55h-102.4c-14.08,0-25.6-11.52-25.6-25.6s11.52-25.6,25.6-25.6h102.4c14.08,0,25.6,11.52,25.6,25.6s-11.52,25.6-25.6,25.6h0ZM488.15,104.15c-14.08,0-25.6-11.52-25.6-25.6V27.35c0-14.08,11.52-25.6,25.6-25.6s25.6,11.52,25.6,25.6v51.2c0,14.08-11.52,25.6-25.6,25.6h0ZM488.15,104.15" />
+                            </svg>
+                        </div>订阅
+                    </a>
+                    <a class="anxs-8qwe-person-center" target="_blank" href="https://zhiyan.wanfangdata.com.cn/collect">
+                        <div class="anxs-8qwe-list-gr-new-main-box"><svg xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" id="_图层_1" width="20" height="20"
+                                viewBox="0 0 742.8 712.8">
+                                <g class="cls-4">
+                                    <path class="cls-2"
+                                        d="M174.56,711.84c-10.24,0-21.76-3.84-30.72-10.24-15.36-11.52-23.04-28.16-21.76-47.36l19.2-192L13.28,318.88c-12.8-14.08-16.64-33.28-10.24-51.2,6.4-17.92,20.48-30.72,38.4-34.56l188.16-40.96L326.88,25.76C335.84,9.12,352.48.16,371.68.16s35.84,10.24,44.8,25.6l97.28,166.4,188.16,40.96c17.92,3.84,33.28,16.64,38.4,34.56,5.12,17.92,1.28,37.12-10.24,51.2l-128,143.36,19.2,192c1.28,19.2-6.4,35.84-21.76,47.36-15.36,11.52-34.56,12.8-51.2,5.12l-176.64-76.8-176.64,78.08c-6.4,2.56-14.08,3.84-20.48,3.84h0ZM371.68,578.72c7.68,0,14.08,1.28,20.48,3.84l176.64,78.08,1.28-1.28-19.2-192c-1.28-14.08,3.84-29.44,12.8-39.68l128-143.36,5.12-26.88-5.12,25.6-188.16-39.68c-14.08-2.56-26.88-11.52-33.28-24.32l-97.28-166.4h-1.28l-97.28,166.4c-7.68,12.8-19.2,21.76-33.28,24.32l-189.44,40.96v1.28l128,143.36c10.24,10.24,14.08,25.6,12.8,39.68l-19.2,192,1.28,1.28,176.64-78.08c6.4-3.84,12.8-5.12,20.48-5.12h0ZM371.68,578.72" />
+                                </g>
+                                <path
+                                    d="M458.89,402.98l-86.86,44.54-86.37-43.79c-11.95-5.74-26.29-.7-32.02,11.25h0c-5.74,11.95-.7,26.29,11.25,32.02l95.09,47.87c6.51,3.13,13.72,3.05,19.88.4,1.74-.25,3.49-.7,5.2-1.36l91.12-46.15c12.37-4.77,18.52-18.66,13.75-31.03h0c-4.77-12.37-18.66-18.52-31.03-13.75Z" />
+                            </svg>
+                        </div>收藏
+                    </a>
+                </div>
+                <div class="anxs-8qwe-list-gr-new-loginOut">
+                    <a data-useid="" class="anxs-8qwe-nav-list-main-back anxs-8qwe-back">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 665.58 665.68">
+                            <path
+                                d="M403.36,499.2c-15.28,0-27.76,12.4-27.76,27.76v69.36c0,7.68-6.24,13.84-13.84,13.84H69.36c-7.68,0-13.84-6.24-13.84-13.84V69.36c0-7.68,6.24-13.84,13.84-13.84h292.4c7.68,0,13.84,6.24,13.84,13.84v69.36c0,15.28,12.4,27.76,27.76,27.76s27.76-12.4,27.76-27.76v-69.36c0-38.24-31.12-69.36-69.36-69.36H69.36C31.12,0,0,31.12,0,69.36v526.96c0,38.24,31.12,69.36,69.36,69.36h292.4c38.24,0,69.36-31.12,69.36-69.36v-69.36c0-15.36-12.48-27.76-27.76-27.76h0ZM403.36,499.2" />
+                            <path
+                                d="M657.36,313.2l-120.41-137.21c-11.04-10.8-28.88-10.8-39.92,0-5.3,5.15-5.89,8.1-5.89,15.49s2.59,17.37,7.88,22.51l81.23,91.05h-288.57c-15.6,0-28.24,12.4-28.24,27.76s12.64,27.76,28.24,27.76h288.57l-80.72,90.51c-5.3,5.15-8.39,15.71-8.39,23.09s4.86,11.74,10.16,16.88c5.52,5.44,12.72,8.16,20,8.16s14.48-2.72,20-8.16l116.07-138.64c10.96-10.8,10.96-28.4,0-39.2h0ZM657.36,313.2" />
+                        </svg>
+                        退出登录
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-i18n">
+        <span onclick="zh_tran('s')" class="header-simplified" class="zh_click" id="zh_click_s">简</span>
+        <span class="line"></span>
+        <span onclick="zh_tran('t')" class="header-traditional" class="zh_click" id="zh_click_t">繁</span>
+    </div>
+</div>
+<iframe id="anxs-8qwe-login" style="margin-left:-10px;margin-top:-100px;display:none" src="" height="750px;" width="710px;" scrolling="no" frameborder="0" class="layui-layer-wrap">
+</iframe>
+<iframe id="gr-info-form" class="layui-layer-wrap" src="" scrolling="no" frameborder="0"></iframe>
+<style>
+   #gr-info-form{
+      display: none;
+      width: 1050px;
+      height: 790px;
+    }
+    .personinfoPop {
+        border-radius:30px!important;
+        overflow:hidden!important; 
+
+    }
+    .personinfoPop .layui-layer-close {
+        display:none!important;
+    }
+    .personinfoPop .layui-layer-content {
+        overflow:hidden!important;
+        height: 790px!important;
+
+    }
+    .couponinfoPop {
+        border-radius: 0!important;
+        overflow: hidden!important;
+        background: transparent!important;
+        box-shadow: none!important;
+        border: none!important;
+    }
+    .couponinfoPop .layui-layer-close {
+        display:none!important;
+    }
+    .couponinfoPop .layui-layer-content {
+        overflow:hidden!important;
+        width: 666px!important;
+        height: 598px!important;
+        background: transparent!important;
+    }
+    .couponinfoPop .layui-layer-content iframe {
+        width: 666px!important;
+        height: 598px!important;
+        background: transparent!important;
+    }
+    .couponreceivePop {
+        border-radius: 0!important;
+        overflow: hidden!important;
+        background: transparent!important;
+        box-shadow: none!important;
+        border: none!important;
+    }
+    .couponreceivePop .layui-layer-close {
+        display:none!important;
+    }
+    .couponreceivePop .layui-layer-content {
+        overflow:hidden!important;
+        width: 666px!important;
+        height: 612px!important;
+        background: transparent!important;
+    }
+    .couponreceivePop .layui-layer-content iframe {
+        width: 666px!important;
+        height: 612px!important;
+        background: transparent!important;
+    }
+    @media (max-height: 850px) {
+        .personinfoPop {
+            transform: translate(-50%, -50%) scale(0.75)!important;
+        }
+    }
+
+    @media (max-height: 700px) {
+    .personinfoPop {
+            transform: translate(-50%, -50%) scale(0.55)!important;
+        }
+    }
+    @media (max-width: 768px) {
+        .couponinfoPop {
+            transform: translate(-50%, -50%) scale(0.6)!important;
+        }
+        .couponreceivePop {
+            transform: translate(-50%, -50%) scale(0.6)!important;
+        }
+    }
+</style>
+<script>
+     var grInfoForm = document.getElementById('gr-info-form');
+    if(grInfoForm) {
+        document.body.appendChild(grInfoForm);
+    }
+    function checkDeviceType() {
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera
+        // 专门针对手机的正则表达式（排除iPad和平板）
+        var phoneRegex = /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i
+
+        // 更精确的判断
+        if (/iPad/i.test(userAgent)) {
+            // iPad
+            return 'tablet'
+        } else if (/Android/i.test(userAgent) && !/Mobile/i.test(userAgent)) {
+            // Android平板
+            return 'tablet'
+        } else if (phoneRegex.test(userAgent)) {
+            // 手机设备
+            return 'mobile'
+        } else if (/iPad/i.test(userAgent) || (/Android/i.test(userAgent) && !/Mobile/i.test(userAgent))) {
+            // 平板设备
+            return 'tablet'
+        } else {
+            // PC端
+            return 'desktop'
+        }
+    }
+    function checkPopUp() {
+    $.ajax({
+        url: 'https://my.wanfangdata.com.cn/usercenter/info/checkPopup',
+        dataType: 'jsonp',
+        jsonp: 'callback',
+        cache: false,
+        success: function (data) {
+            data = data || {};
+            var shouldDisplayOldPopup = !!data.shouldDisplay && checkDeviceType() != 'mobile';
+            function openLayerByConfig(config) {
+                var winHeight = $(window).height();
+                if (winHeight < 800) {
+                    config.offset = '40px';
+                } else {
+                    config.offset = 'auto';
+                    config.scrollbar = true;
+                }
+                layer.open(config);
+            }
+
+            function openOldInquirePopup() {
+                var grInfoForm = $('#gr-info-form');
+                grInfoForm.attr('src', 'https://svip.wanfangdata.com.cn/inquire');
+                openLayerByConfig({
+                    type: 1,
+                    area: ['50%px'],
+                    title: '',
+                    shade: 0.6,
+                    moveType: 1,
+                    shift: 1,
+                    content: $('#gr-info-form'),
+                    success: function (layero) {
+                        $(layero).addClass('personinfoPop');
+                        $(layero).css({ 'position': 'fixed', 'top': '50%', 'left': '50%', 'transform': 'translate(-50%, -50%)', 'marginBottom': '40px' });
+                        $(window).resize(function () {
+                            $(layero).css({ 'position': 'fixed', 'top': '50%', 'left': '50%', 'transform': 'translate(-50%, -50%)', 'marginBottom': '40px' });
+                        });
+                        var messageHandler = function (e) {
+                            if (e.data && e.data.type && e.data.type == 'close-inquire') {
+                                var oldLayerIndex = parseInt($(layero).attr('times'), 10);
+                                if (!isNaN(oldLayerIndex)) {
+                                    layer.close(oldLayerIndex);
+                                } else {
+                                    $(layero).hide();
+                                    $('.layui-layer-shade').remove();
+                                }
+                            }
+                        };
+                        window.addEventListener('message', messageHandler);
+                    },
+                    end: function () {
+                    }
+                });
+            }
+
+            if (shouldDisplayOldPopup) {
+                openOldInquirePopup();
+            }
+        }
+    });
+}
+function checkUseCouponPopUp(next, suppressDisplay) {
+    $.ajax({
+        url: 'https://my.wanfangdata.com.cn/usercenter/activity/couponPopup',
+        dataType: 'jsonp',
+        jsonp: 'callback',
+        cache: false,
+        success: function (data) {
+            data = data || {};
+            var showCouponPopup = !!data.showCouponPopup;
+            var coupon = data.grantedCoupons && data.grantedCoupons.length ? data.grantedCoupons[0] : null;
+            if (suppressDisplay) {
+                if (typeof next === 'function') {
+                    next();
+                }
+                return;
+            }
+            if (!showCouponPopup || !coupon) {
+                if (typeof next === 'function') {
+                    next();
+                }
+                return;
+            }
+            var grInfoForm = $('#gr-info-form');
+            var couponData = encodeURIComponent(JSON.stringify(coupon || {}));
+            var loginUrl = 'https://my.wanfangdata.com.cn/auth/user/login.do?service=' + encodeURIComponent(window.location.href);
+            grInfoForm.attr('src', 'https://svip.wanfangdata.com.cn/inquire/coupon-for-use?couponData=' + couponData + '&loginUrl=' + encodeURIComponent(loginUrl));
+            var called = false;
+            function callNextOnce() {
+                if (called) {
+                    return;
+                }
+                called = true;
+                if (typeof next === 'function') {
+                    next();
+                }
+            }
+            var winHeight = $(window).height();
+            var openConfig = {
+                type: 1,
+                area: ['666px', '598px'],
+                title: '',
+                shade: 0.6,
+                moveType: 1,
+                shift: 1,
+                content: $('#gr-info-form'),
+                success: function (layero) {
+                    $(layero).addClass('couponinfoPop');
+                    $(layero).css({ 'position': 'fixed', 'top': '50%', 'left': '50%', 'transform': 'translate(-50%, -50%)', 'marginBottom': '40px' });
+                    $(window).resize(function () {
+                        $(layero).css({ 'position': 'fixed', 'top': '50%', 'left': '50%', 'transform': 'translate(-50%, -50%)', 'marginBottom': '40px' });
+                    });
+                    var messageHandler = function (e) {
+                        if (!(e.data && e.data.type)) {
+                            return;
+                        }
+                        if (e.data.type == 'close-inquire') {
+                            var couponLayerIndex = parseInt($(layero).attr('times'), 10);
+                            if (!isNaN(couponLayerIndex)) {
+                                layer.close(couponLayerIndex);
+                            } else {
+                                $(layero).hide();
+                                $('.layui-layer-shade').remove();
+                                callNextOnce();
+                            }
+                        }
+                        if (e.data.type == 'coupon-go-login') {
+                            top.location.href = 'https://my.wanfangdata.com.cn/auth/user/login.do?service=' + encodeURIComponent(window.location.href);
+                        }
+                        if (e.data.type === 'coupon-go-use') {
+                            if (coupon && coupon.redirectUrl) {
+                                window.open(coupon.redirectUrl, '_blank');
+                            }
+                        }
+                    };
+                    window.addEventListener('message', messageHandler);
+                },
+                end: function () {
+                    callNextOnce();
+                }
+            };
+            if (winHeight < 800) {
+                openConfig.offset = '40px';
+            } else {
+                openConfig.offset = 'auto';
+                openConfig.scrollbar = true;
+            }
+            layer.open(openConfig);
+        },
+        error: function () {
+            if (typeof next === 'function') {
+                next();
+            }
+        }
+    });
+}
+function getTodayKey() {
+    var d = new Date();
+    var y = d.getFullYear() % 100;
+    var m = d.getMonth() + 1;
+    var day = d.getDate();
+    y = y < 10 ? '0' + y : '' + y;
+    m = m < 10 ? '0' + m : '' + m;
+    day = day < 10 ? '0' + day : '' + day;
+    return '' + y + m + day;
+}
+function getCookieValue(name) {
+    var list = document.cookie ? document.cookie.split('; ') : [];
+    for (var i = 0; i < list.length; i++) {
+        var p = list[i].split('=');
+        if (p[0] === name) {
+            return p.slice(1).join('=');
+        }
+    }
+    return '';
+}
+function setDailyCouponCookie() {
+    var v = getTodayKey();
+    var nextDay = new Date();
+    nextDay.setDate(nextDay.getDate() + 1);  // 日期加1天
+    nextDay.setHours(0, 0, 0, 0);             // 设置为当天0点
+    document.cookie = 'cpd=' + v + '; domain=.wanfangdata.com.cn; path=/; expires=' + nextDay.toUTCString();
+}
+function hasShownCouponToday() {
+    return getCookieValue('cpd') === getTodayKey();
+}
+function checkFirstLoginCouponPopUp() {
+    if (hasShownCouponToday()) {
+        return;
+    }
+    $.ajax({
+        url: 'https://my.wanfangdata.com.cn/usercenter/activity/check',
+        dataType: 'jsonp',
+        jsonp: 'callback',
+        cache: false,
+        success: function (data) {
+            if (!data || !data.length) {
+                return;
+            }
+            var grInfoForm = $('#gr-info-form');
+            var coupon = data[0] && data[0].coupons && data[0].coupons.length ? data[0].coupons[0] : null;
+            if (!coupon) {
+                return;
+            }
+            var couponData = encodeURIComponent(JSON.stringify(coupon));
+            var loginUrl = 'https://my.wanfangdata.com.cn/auth/user/login.do?service=' + encodeURIComponent(window.location.href);
+            grInfoForm.attr('src', 'https://svip.wanfangdata.com.cn/inquire/coupon-for-receive?couponData=' + couponData + '&loginUrl=' + encodeURIComponent(loginUrl));
+            var winHeight = $(window).height();
+            var openConfig = {
+                type: 1,
+                area: ['666px', '612px'],
+                title: '',
+                shade: 0.6,
+                moveType: 1,
+                shift: 1,
+                content: $('#gr-info-form'),
+                success: function (layero) {
+                    setDailyCouponCookie();
+                    $(layero).addClass('couponreceivePop');
+                    $(layero).css({ 'position': 'fixed', 'top': '50%', 'left': '50%', 'transform': 'translate(-50%, -50%)', 'marginBottom': '40px' });
+                    $(window).resize(function () {
+                        $(layero).css({ 'position': 'fixed', 'top': '50%', 'left': '50%', 'transform': 'translate(-50%, -50%)', 'marginBottom': '40px' });
+                    });
+                    window.addEventListener('message', function (e) {
+                        if (!(e.data && e.data.type)) {
+                            return;
+                        }
+                        if (e.data.type == 'close-inquire') {
+                            setDailyCouponCookie();
+                            var receiveLayerIndex = parseInt($(layero).attr('times'), 10);
+                            if (!isNaN(receiveLayerIndex)) {
+                                layer.close(receiveLayerIndex);
+                            } else {
+                                $(layero).hide();
+                                $('.layui-layer-shade').remove();
+                            }
+                        }
+                        if (e.data.type == 'coupon-go-login') {
+                            top.location.href = 'https://my.wanfangdata.com.cn/auth/user/login.do?service=' + encodeURIComponent(window.location.href);
+                        }
+                        if (e.data.type === 'coupon-go-use') {
+                            if (coupon && coupon.redirectUrl) {
+                                window.open(coupon.redirectUrl, '_blank');
+                            }
+                        }
+                    });
+                },
+                end: function () {
+                    setDailyCouponCookie();
+                }
+            };
+            if (winHeight < 800) {
+                openConfig.offset = '40px';
+            } else {
+                openConfig.offset = 'auto';
+                openConfig.scrollbar = true;
+            }
+            layer.open(openConfig);
+        }
+    });
+}
+</script>
+<script>
+     function getPersonInfo() {
+    try{
+  $.ajax({
+        url: 'https://www.wanfangdata.com.cn/api/getPersonInfo',
+        dataType: 'jsonp',
+        jsonp: 'callback',
+        cache: false,
+        success: function(data) {
+            if(!data) {
+                return
+            }
+            const myArray =  data.vipCard||[];
+            // 获取要渲染到的元素
+         
+            const $container = $('.anxs-8qwe-list-gr-new-vips');
+            if(data.createTime){
+               $('.anxs-8qwe-list-gr-new-person-right-bottom-createTime').text(data.createTime + '  加入'); 
+            }
+             $('.anxs-8qwe-list-gr-new-person-right-bottom-id').attr('title', 'ID：' + data.userId).text('ID：' + data.userId);
+             var loginParent = $('.anxs-8qwe-list-login');
+            var grShow = $('.anxs-8qwe-list-gr');
+             var grName = grShow.find('.anxs-8qwe-grName'); 
+             var grLogin = loginParent.find('.anxs-8qwe-login-gr');   //个人登陆按钮
+             var registerName = $('.anxs-8qwe-register');             //注册按钮
+            var messageName = $('.anxs-8qwe-list-message'); 
+            var personBack = $('.anxs-8qwe-back');   
+             grName.text(data.realName||data.nickName||data.userId).attr('title', data.realName||data.nickName||data.userId);
+             $('.anxs-8qwe-list-gr-new-person-id').text(data.realName||data.nickName||data.userId).attr('title', data.realName||data.nickName||data.userId);
+                // grLogin.hide();
+                // registerName.hide();
+                // messageName.show();
+                personBack.attr('data-useId',data.userId);
+                grShow.show();
+            // 遍历数组并渲染到页面上
+            if(data.hasMessage){
+                $('.anxs-8qwe-list-gr-new-person-set-dot').show();
+            }
+            if(data.avatar){
+                $('.anxs-8qwe-list-gr-new-person-avatar').show().attr('src','https://my.wanfangdata.com.cn/usercenter/file' + data.avatar);
+            }else{
+                 $('.anxs-8qwe-list-gr-new-person-avatar').hide();
+                 $('.anxs-8qwe-list-gr-new-person-svg').show();
+            }
+            if(myArray.length){
+                $('.anxs-8qwe-list-gr-new-vip').addClass('anxs-8qwe-list-gr-new-vip-bg');
+                 $('.anxs-8qwe-list-gr-new-vips').show();
+                 $('.anxs-8qwe-list-gr-new-novips').hide();
+                 $('#anxs-8qwe-list-gr-new-vip-goldsvg').show();
+                 $('#anxs-8qwe-list-gr-new-vip-greysvg').hide();
+                 $('.anxs-8qwe-list-gr-new-vip-title').css('color', '#6C532C')
+            }else{
+                 $('.anxs-8qwe-list-gr-new-vip').addClass('anxs-8qwe-list-gr-new-novip-bg');
+                 $('.anxs-8qwe-list-gr-new-vips').hide();
+                 $('.anxs-8qwe-list-gr-new-novips').show();
+                $('#anxs-8qwe-list-gr-new-vip-goldsvg').hide();
+                 $('#anxs-8qwe-list-gr-new-vip-greysvg').show();
+                 $('.anxs-8qwe-list-gr-new-vip-title').css('color', '#5B6B88')
+            }
+            myArray.forEach(function(item) {
+                // 创建一个新的盒子元素
+                const $itemBox = $('<div>').addClass('anxs-8qwe-list-gr-new-vips-item');
+            
+                // 创建并添加 name 元素
+                const $nameElement = $('<div>').addClass('anxs-8qwe-list-gr-new-vips-name').text(item.name);
+                $itemBox.append($nameElement);
+            
+                // 创建并添加 validityTime 元素
+                const $validityTimeElement = $('<div>').addClass('anxs-8qwe-list-gr-new-vips-validityTime').text('有效期至 ' + item.validityTime.substring(0,10));
+                $itemBox.append($validityTimeElement);
+            
+                // 将盒子添加到容器中
+                $container.append($itemBox);
+            });
+        }
+        });
+    }catch(err){}
+  
+    try {
+        $('#anxs-8qwe-list-gr-new-person-copyId').click(function() {
+            const textToCopy = $('.anxs-8qwe-list-gr-new-person-right-bottom-id').text();
+            const match = textToCopy.match(/：(.+)/);
+            var id = ''
+            if (match) {
+                id = match[1]; // 匹配到的内容在 match[1]
+            }
+            const $temp = $('<textarea>');
+            $('body').append($temp);
+            $temp.val(id).select();
+            
+            try {
+                document.execCommand('copy');
+                // layer.msg("复制成功")
+                const $tip = $('.anxs-8qwe-list-gr-new-person-copyId-tip');
+                $tip.fadeIn(300); // 渐显效果，持续500毫秒
+                // 3秒后渐隐
+                setTimeout(function() {
+                    $tip.fadeOut(300); // 渐隐效果，持续500毫秒
+                }, 2400);
+                
+            } catch (err) {
+                //  layer.msg('复制失败');
+                const $tip = $('.anxs-8qwe-list-gr-new-person-copyId-tip');
+                $tip.text('复制失败').fadeIn(300); // 渐显效果，持续500毫秒
+                // 3秒后渐隐
+                setTimeout(function() {
+                    $tip.fadeOut(300); // 渐隐效果，持续500毫秒
+                }, 2400);
+            }
+            
+            $temp.remove();
+        });
+        //
+        }catch(err){
+            console.log(err)
+        }  
+     }                       
+</script>
+<script>
+    // try {
+    //     window.activeLoginMark = [{"image":"https://www.wanfangdata.com.cn/www/file/static/cps/index_header/login_mark/MOqVayORKVgAItsOgZaAuZZaKcWqXYnlsfrhXnjXCmnoTSS.png?v=1735290469576","route":"https://svip.wanfangdata.com.cn?wfchannel=userSuperscript","startDate":"2025-04-09T16:00:00.000Z","endDate":"2025-05-30T15:59:59.000Z","logcontant":"首页-论文冲刺加油包-礼物盒角标-点击","active":true,"log":true,"title":"论文冲刺加油包","name":"论文冲刺加油包","id":"GGliKrQhchqOfJrprb1745566634021","timerange":["2025-04-09T16:00:00.000Z","2025-05-30T15:59:59.000Z"]},{"image":"https://www.wanfangdata.com.cn/www/file/static/cps/index_header/login_mark/FLQDpkZoqFYTLnPBGBhOAyQxrvZwYVFjxGxYbbAjhYbGRVF.png?v=1735290391644","route":"https://svip.wanfangdata.com.cn/?wfchannel=userSuperscript","startDate":"2024-12-26T16:00:00.000Z","endDate":"2024-12-29T22:59:00.000Z","logcontant":"首页-买一赠一活动入口-hot标签","active":true,"log":true,"title":"hot","name":"hot","id":"bhgCefjRlQCcGBrCda1745566634021","timerange":["2024-12-26T16:00:00.000Z","2024-12-29T22:59:00.000Z"]}].filter(function(item){return item.active && (!item.startDate || new Date() >= new Date(item.startDate)) && (!item.endDate || new Date() <= new Date(item.endDate))})[0];
+    //     if(window.activeLoginMark) {
+    //         var style = document.createElement('style')
+    //         style.innerHTML = '.anxs-8qwe-top-rt .anxs-8qwe-list .activity-hot-always{background: url('+activeLoginMark.image+') no-repeat;background-size: contain}'
+    //         document.body.appendChild(style)
+    //     }
+    // } catch(e){console.error(e)}
+    try{
+       document.domain="wanfangdata.com.cn";
+    }catch(e){}
+    var refer = document.referrer;
+    if(refer!=null && (refer.indexOf("http://tongji.baidu.com/")!=-1 || refer.indexOf("https://tongji.baidu.com/")!=-1|| refer.indexOf("https://wf.pub/")!=-1|| refer.indexOf("https://app.wanfangdata.com.cn/")!=-1)){
+    }else{
+        try{
+        var parentHost = parent.location.hostname;
+        if (
+            window != parent &&
+            parentHost != "wf.pub" &&
+            parentHost !== "wanfangdata.com.cn" &&
+            !parentHost.endsWith(".wanfangdata.com.cn")
+        ) {
+            top.location.href = location.href;
+        }
+        }catch(e){}
+    }
+    $(function(){
+        var getProp = (function () {
+            var me = $('#anxs-8qwe-login');
+            var loginParent = $('.anxs-8qwe-list-login');
+            var allLogin = loginParent.find('.anxs-8qwe-login-all'); //默认登陆按钮
+            var grLogin = loginParent.find('.anxs-8qwe-login-gr');   //个人登陆按钮
+            var grShow = $('.anxs-8qwe-list-gr');
+            var grName = grShow.find('.anxs-8qwe-grName');           //个人名字
+            var certificationImg = grShow.find('.anxs-8qwe-certification-no');  //认证图片
+            var jgLogin = $('.anxs-8qwe-login-jg');   //机构登陆按钮
+            var jgname = $('.anxs-8qwe-list-jg');
+            var jgMain = jgname.find('.anxs-8qwe-nav-list-main');    //机构下拉列表
+            var listJgName = jgname.find('.anxs-8qwe-login-jg');     //机构下拉列表中的机构登陆按钮
+            var registerName = $('.anxs-8qwe-register');             //注册按钮
+            var personBack = $('.anxs-8qwe-back');                   //个人下拉列表中的退出按钮
+            var messageName = $('.anxs-8qwe-list-message');          //消息按钮
+            var messageNum = messageName.find('.anxs-8qwe-num');     //消息按钮下拉列表下的消息数
+            var castgc = '';
+            /* var socialBtn = $('.anxs-8qwe-social-my');               //我的学术圈按钮 */
+            var addPeople = $('.anxs-8qwe-addPeople');               //新增关注
+
+            //Binding mecFhanism variable
+            var bindMe = $('.anxs-8qwe-list_bind');
+            var bindMeWx = $('.anxs-8qwe-list_bind-wx');//扫码
+            var bindMeImg = $('.anxs-8qwe-list_bind-img');//图片
+            var bindMeTitle = bindMeWx.find('.anxs-8qwe-bind-title');//文字提示
+            var bindTime = '';
+
+            return {
+                //绑定机构的出现
+                bindMeShow:function () {
+                    var that = this;
+                    $.ajax({
+                        url: 'https://login.wanfangdata.com.cn/showBindTip',
+                        dataType: 'jsonp',
+                        jsonp: 'callback',
+                        cache:false,
+                        success:function(data){
+                            that.cookieAjax();
+                            if(data == 'true') {
+                                bindMe.show();
+                                that.bindMechanism();
+                            }else {
+                                bindMe.hide();
+                                $('.anxs-8qwe-bind-layer').hide();
+                            }
+                        }
+                    });
+                },
+                //绑定机构
+                bindMechanism:function () {
+                    var that = this;
+                    bindMe.hover(function (e) {
+                        bindMeWx.show();
+                        that.getBindqcInfo();
+                        that.refreshQrCode();
+                    },function () {
+                        bindMeWx.hide();
+                        clearInterval(that.bindTime);
+                        clearInterval(that.sweepCode);
+                    });
+                },
+                //拿到二维码信息
+                getBindqcInfo:function () {
+                    var that = this;
+                    clearInterval(that.sweepCode);
+                    $.ajax({
+                        url:'https://login.wanfangdata.com.cn/getQRcodeMessage?time='+(+new Date()),
+                        dataType:'jsonp',
+                        jsonp:'callback',
+                        success:function (data) {
+                            if(data == 'isBind') {
+                                window.location.reload();
+                            }else if(data == 'error'){
+                                window.location.reload();
+                            }else {
+                                var Ciphertext = data.ciphertext,
+                                        CodeId = data.codeId;
+                                bindMeImg.attr('src','https://login.wanfangdata.com.cn/createQRCode?ciphertext='+encodeURIComponent(Ciphertext))
+                                that.sweepCodeSuccess(CodeId);
+                                that.refreshsweepCodeSuccess(CodeId);
+                            }
+                        },
+                        error:function() {
+                            console.log('二维码请求失败!');
+                        }
+                    });
+                },
+                //1秒钟自动刷新扫描状态请求
+                refreshsweepCodeSuccess:function (CodeId) {
+                    var that = this;
+                    clearInterval(that.sweepCode);
+                    this.sweepCode = setInterval(function () {
+                        that.sweepCodeSuccess(CodeId);
+                    },1500)
+                },
+                //一分钟自动刷新
+                refreshQrCode:function () {
+                    var that = this;
+                    clearInterval(that.bindTime);
+                    this.bindTime = setInterval(function () {
+                        that.getBindqcInfo();
+                    },60000)
+                },
+                //扫描成功
+                sweepCodeSuccess:function (CodeId) {
+                    var that = this;
+                    $.ajax({
+                        url: 'https://login.wanfangdata.com.cn/getQRCodeStatus',
+                        dataType:'jsonp',
+                        jsonp:'callback',
+                        data:{codeId:CodeId},
+                        success:function(data){
+                            if(data == 'scanned') {
+                                clearInterval(that.sweepCode);
+                                clearInterval(that.bindTime);
+                                $('.anxs-8qwe-bind-layer').show();
+                            }else if (data == 'available') {
+                                $('.anxs-8qwe-bind-layer').hide();
+                            }else{
+                                $('.anxs-8qwe-bind-layer').hide();
+                            }
+                        },
+                        error:function (err) {
+                            console.log(err)
+                        }
+                    });
+                },
+                //弹出登录框
+                layerAlert:function(){
+                    var winHeight = $(window).height();
+                    if(winHeight<800){
+                        layer.open({
+                            offset: '40px',
+                            type: 1, //page层 1div，2页面
+                            area: ['50%px'],
+                            title: '',
+                            shade: 0.6, //遮罩透明度
+                            moveType: 1, //拖拽风格，0是默认，1是传统拖动
+                            shift: 1, //0-6的动画形式，-1不开启
+                            content: $("#anxs-8qwe-login"),
+                            success:function(layero){
+                                $(layero).css({'position':'absolute','top':'40px','left':'50%','marginLeft':'-350px','marginBottom':'40px'});
+                                $(window).resize(function(){
+                                    var winHeight = $(window).height();
+                                    if(winHeight <800){
+                                        $(layero).css({'position':'absolute','top':'40px','left':'50%','marginLeft':'-350px','marginBottom':'40px'});
+                                    }else{
+                                        $(layero).css({'position':'','top':'','left':'50%','marginLeft':'-350px','marginBottom':''});
+                                    }
+                                });
+                            },
+                            end: function(){
+
+                            }
+                        });
+                    }else{
+                        layer.open({
+                            offset:'auto',
+                            type: 1, //page层 1div，2页面
+                            area: ['50%px'],
+                            scrollbar: true,
+                            title: '',
+                            shade: 0.6, //遮罩透明度
+                            moveType: 1, //拖拽风格，0是默认，1是传统拖动
+                            shift: 1, //0-6的动画形式，-1不开启
+                            content: $("#anxs-8qwe-login"),
+                            success:function(layero){
+                                $(window).resize(function(){
+                                    var winHeight = $(window).height();
+                                    if(winHeight <800){
+                                        $(layero).css({'position':'absolute','top':'40px','left':'50%','marginLeft':'-350px','marginBottom':'40px'});
+                                    }else{
+                                        $(layero).css({'position':'','top':'','left':'50%','marginLeft':'-350px','marginBottom':''});
+                                    }
+                                });
+                            },
+                            end: function(){
+
+                            }
+                        });
+                    }
+                },
+                //获取url参数
+                getRequest: function () {
+                    var url = location.search; //获取url中"?"符后的字串
+                    if (!url) {
+                        return '';
+                    }
+                    var theRequest = new Object();
+                    if (url.indexOf("?") != -1) {
+                        var str = url.substr(1);
+                        var strs = str.split("&");
+                        for (var i = 0; i < strs.length; i++) {
+                            theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+                        }
+                    }
+                    return theRequest;
+                },
+                //获取cookie名字
+                getCookies: function (cookieName) {
+                    var strCookie = document.cookie;
+                    var arrCookie = strCookie.split("; ");
+                    for (var i = 0; i < arrCookie.length; i++) {
+                        var arr = arrCookie[i].split("=");
+                        if (cookieName == arr[0]) {
+                            return arr[1];
+                        }
+                    }
+                    return "";
+                },
+                //赋值给iframe
+                getSrc: function (loginModel) {
+                    this.layerAlert();
+                    me.attr('src', '//my.wanfangdata.com.cn/auth/user/'+loginModel+'?login_mode=AJAX&service=' + encodeURIComponent(window.location.href));
+                },
+                //初始化角标
+                loginCornerMark: function (type) {
+                    $.ajax({
+                        url: 'https://op.wanfangdata.com.cn/advert/infoList?position=login&scope=' + type,
+                        success: function (data) {
+                            window.activeLoginMark = data[0];
+                            if (window.activeLoginMark) {
+                                let loginCornerMarkDom = ''
+                                if (type === 'tourist') {
+                                    loginCornerMarkDom = $('.activity-hot-always-nologin')
+                                } else {
+                                    loginCornerMarkDom = $('.activity-hot-always-person')
+                                }
+                                loginCornerMarkDom.show();
+                                var style = document.createElement('style')
+                                style.innerHTML = '.anxs-8qwe-top-rt .anxs-8qwe-list .activity-hot-always{background: url(' + window.activeLoginMark.image + ') no-repeat;background-size: contain}'
+                                loginCornerMarkDom[0].style.cursor = window.activeLoginMark.route ? 'pointer' : 'default !important';
+                                if (window.activeLoginMark.route === '') {
+                                    $('.anxs-8qwe-top-rt .anxs-8qwe-list > a').css('cursor', 'default');
+                                }
+                                document.body.appendChild(style)
+                            }
+                        },
+                        error: function (data) {
+                            window.activeLoginMark = '';
+                        },
+                    });
+                },
+                //获取ip的值
+                isIp:function(nameData){
+                    for(var prop in nameData){
+                        if(prop == 'OnlyIPLogin'){
+                            return nameData[prop];
+                            break;
+                        }
+                    }
+                    return false;
+                },
+                //判断是否存在机构
+                isGroup:function(nameData){
+                    for(var prop in nameData){
+                        var propId = prop.split('.');
+                        if(propId[0] == 'Group'){
+                            return true;
+                            break;
+                        }
+                    }
+                    return false;
+                },
+                //判断是否是个人
+                isPerson:function(nameData){
+                    for(var prop in nameData){
+                        var propId = prop.split('.');
+                        if(propId[0] == 'Person'){
+                            return true;
+                        }
+                    }
+                    return false;
+                },
+                //获取cookie中的值，判断是否登录
+                cookieAjax: function () {
+                    var that = this;
+                    $.ajax({
+                        url: "https://login.wanfangdata.com.cn/getUserState",
+                        dataType: "jsonp",
+                        jsonp: "callback",
+                        success: function (data) {
+                            var hasGroup = that.isGroup(data.context.data);
+                            var hasPerson = that.isPerson(data.context.data);
+                            //判断当前账号是否是游客进入
+                            if (!hasGroup && !hasPerson) {
+                                that.loginCornerMark('tourist');//初始化游客角标
+                                var needCheckPop = ['https://s.wanfangdata.com.cn/', 'https://d.wanfangdata.com.cn/', 'https://svip.wanfangdata.com.cn/', 'https://www.wanfangdata.com.cn/'];
+                                var hitCheck = needCheckPop.some(function (domain) {
+                                    return location.href.indexOf(domain) !== -1;
+                                });
+                                var isPackPage = location.href.indexOf('https://d.wanfangdata.com.cn/pack') !== -1;
+                                if (hitCheck && !isPackPage && location.href.indexOf('https://svip.wanfangdata.com.cn/inquire') == -1) {
+                                    checkFirstLoginCouponPopUp();
+                                }
+                            }
+                            //判断当前账号是否是只有个人进入
+                            if (hasPerson && !hasGroup) {
+                                that.loginCornerMark('person');//初始化个人角标
+                            }
+                            window.__loginCallback&&window.__loginCallback(data)
+                            var dataParent = data.context;
+                            var accountId = dataParent.accountIds;
+                            var idLength = accountId.length;
+                            if(!idLength){
+                                window.initcarousel && window.initcarousel()
+
+                                return true;
+                            }
+                            var nameData = dataParent.data;
+                            var nameArr = [];
+
+                            // begin 判断是否有全局配置排序方法，如果有执行检测产品排序方法
+                            if (window._accountOrderFun) {
+                                //替换原有的accountId
+                                try {
+                                    accountId = _accountOrderFun(accountId)
+                                } catch (error) {
+                                    console.log(error)
+                                }
+                            }
+                            // end
+
+                            for(var i=0;i<idLength;i++){
+                                var idArr = accountId[i].split('.');
+
+                                if(idArr[0] == 'Group' ||  idArr[0] == 'GroupSub'){
+                                    //显示样式
+                                    allLogin.hide().parent().removeClass('anxs-no-line');
+                                    jgLogin.hide();
+                                    if(accountId.length>1){
+                                        jgname.show().addClass('anxs-no-line');
+                                        listJgName.show();
+                                        grLogin.show();
+                                        var idList = [];
+                                        var groupList=[];
+                                        for(var j=0;j<accountId.length;j++){
+                                            var idArr = accountId[j].split('.');
+                                            if(idArr[1]=='njxzxyIP'||idArr[1]=='softcentertest'){
+                                                idList.push(idArr[1]);
+                                            }
+                                            if(idArr[0] == 'Group' ||  idArr[0] == 'GroupSub'){
+                                                 groupList.push(idArr[1])
+                                            }
+                                        };
+                                        if(idList.length===1&&groupList.length===1){
+                                            jgname.hide();
+                                            listJgName.show();
+                                            grLogin.show();
+                                        }
+
+
+                                    }else{
+                                        if(idArr[1]==='softcentertest'||idArr[1]==='njxzxyIP'){
+                                            jgname.hide();
+                                            listJgName.show();
+                                            grLogin.show();
+                                        }else{
+                                            jgname.show().addClass('anxs-no-line');
+                                            listJgName.show();
+                                            grLogin.show();
+                                        }
+                                    }
+
+                                    //取机构的最新值
+                                    for(var prop in nameData){
+                                        var propId = prop.split('.');
+                                        if(propId[0] == 'Group' || propId[0] == 'GroupSub'){
+                                            if(accountId[i]+'.'+propId[propId.length-1] == prop){
+                                                nameArr.push(nameData[prop]);
+                                            }
+                                        }
+                                    };
+                                    jgname.find('.anxs-8qwe-jgName b').text(nameArr[0]?nameArr[0]:nameArr[1]);
+                                    jgname.find('.anxs-8qwe-jgName b').attr('title',nameArr[0]?nameArr[0]:nameArr[1]);
+                                }
+                                if(idArr[0] == 'Person'){
+                                    allLogin.hide();
+                                    var hasGroup = that.isGroup(nameData);
+                                    if(!hasGroup){
+                                        jgLogin.show();
+                                    }else{
+                                        jgLogin.hide();
+                                    }
+                                    listJgName.show();
+                                    that.backEvent(); //初始化退出
+                                }
+                            }
+                            window.initcarousel && window.initcarousel()
+
+                             //给机构下拉框赋值
+                            for(var i=idLength-1;i>=0;i--){
+                                var idArr = accountId[i].split('.');
+                                if(idArr[0] == 'Group' || idArr[0] == 'GroupSub'){
+                                    var groupLength = idArr[0].length+1;
+                                    if(idArr[1]==='njxzxyIP' ||idArr[1]==='softcentertest'){
+                                        jgMain.prepend('');
+
+                                    }else{
+                                        jgMain.prepend('<h5><a href="https://www.wanfangdata.com.cn/boughtitems" target="_blank" class="anxs-8qwe-nav-list-main-name">'+accountId[i].slice(groupLength)+'</a><span data-useId="'+accountId[i].slice(groupLength)+'" class="anxs-8qwe-nav-list-main-back">退出</span></h5>');
+                                    }
+                                    var onlyIpStr=nameData['OnlyIPLogin'];
+                                    if(typeof onlyIpStr != "undefined" && onlyIpStr != null && onlyIpStr != ""){
+                                        var onlyIpStrs = onlyIpStr.split(",");
+                                        jgMain.find('h5').each(function(index){
+                                            var nameValue = $(this).find('.anxs-8qwe-nav-list-main-name').html();
+                                            for(var i=0;i<onlyIpStrs.length;i++){
+                                                if(nameValue == onlyIpStrs[i]){
+                                                    $(this).find('span').remove();
+                                                }
+                                            }
+                                        });
+                                    }
+                                }
+                            }
+
+                            that.backEvent(); //初始化退出
+                            var hasPerson = that.isPerson(nameData);
+                            for(var prop in nameData){
+                                var propId = prop.split('.');
+                                if(propId[0] == 'Person'){
+                                    grLogin.hide();
+                                    if($.trim(nameData[prop])){
+                                        grName.text(nameData[prop]);
+                                    }else{
+                                        grName.text(propId[1]);
+                                    }
+                                    personBack.attr('data-useId',propId[1]);
+                                    registerName.hide();
+                                    messageName.show();
+                                    grShow.show();
+                                    that.activityHotAlwaysNoPersonLoginHide();
+                                }
+                            }
+                            for(var prop in nameData){
+                                var propId = prop.split('.');
+                                if(propId[0] == 'Researcher'){
+                                    if($.trim(nameData[prop])){
+                                        grName.text(nameData[prop]);
+                                    }else{
+                                        grName.text(propId[1]);
+                                    }
+
+                                }
+                            }
+                        },
+                        error: function () {
+                            console.log('fail');
+                            window.__userContext = {}
+                        }
+                    });
+                },
+                //登录按钮
+                loginEvent:function(){
+                    var that = this;
+                    allLogin.click(function(){
+                        that.getSrc('alllogin.do');
+                    });
+                    grLogin.click(function(){
+                        that.getSrc('alllogin.do');
+                    });
+                    jgLogin.click(function(){
+                        that.getSrc('jglogin.do');
+                    });
+                    registerName.click(function(){
+                        var registerHref = "/auth/user/register.do";
+                        var locaHref = window.location.pathname;
+                        if(registerHref == locaHref) {
+                            $(this).attr('href',window.location.href);
+                        }else {
+                            $(this).attr('href',"https://my.wanfangdata.com.cn/auth/user/register.do?service="+ encodeURIComponent(window.location.href));
+                        }
+                    });
+                },
+                //退出登录
+                backEvent:function(){
+                    var that = this;
+                    $('.anxs-8qwe-nav-list-main-back').click(function(){
+                        var backurl = window.location.href;
+                        backurl = encodeURIComponent(backurl).replace("&","%26");//复制原先的代码，具体为什么replace不清楚
+                        var username = encodeURIComponent($(this).data('useid'));
+                        castgc = that.getCookies('CASTGC');
+                        window.location.href="https://my.wanfangdata.com.cn/auth/rest/logout.do?user_id="+username+"&service="+backurl+"&token="+castgc;
+                    });
+                },
+                activityHotShow() {
+                    $('.anxs-8qwe-nav').mouseover(function (e) {
+                        if(e.target === $('.activity-hot')[0]) {$(this).find('.anxs-8qwe-nav-list').hide();return}
+                        $(this).find('.anxs-8qwe-nav-list').show();
+                    })
+
+                    $('.anxs-8qwe-nav').mouseout(function (e) {
+                        $(this).find('.anxs-8qwe-nav-list').hide();
+                    })
+
+                    var activityStart = new Date('2024-08-09 00:00:00');
+                    var activityEnd = new Date('2024-09-10 23:59:59');
+                    var currentDate = new Date();
+                    if(activityStart<=currentDate && activityEnd>=currentDate) {
+                        $('.activity-hot').show();
+                    }
+
+                },
+                activityHotAlwaysShow() {
+                    $('.anxs-8qwe-nav').mouseover(function (e) {
+                        if(e.target === $('.activity-hot-always-person')[0]) {$(this).find('.anxs-8qwe-nav-list').hide();return}
+                        $(this).find('.anxs-8qwe-nav-list').show();
+                    })
+                    $('.anxs-8qwe-nav').mouseout(function (e) {
+                        $(this).find('.anxs-8qwe-nav-list').hide();
+                    })
+                    if(this.activityHotAlwaysIsBegin()) {
+                        if(window.__userContext) {
+                            window.__userContext.context.accountIds
+                            .map(function(item){return item.replace(/\./g,'_')})
+                            .forEach(function(item){
+                                if(item.indexOf('Group') === 0) {
+                                    groupId = item
+                                }
+                                if(item.indexOf('Person') === 0) {
+                                    personId = item
+                                }
+                            })
+                            if(personId && !groupId) {
+                                // $('.activity-hot-always-person').show();
+                                // $('.activity-hot-always-nologin').show();
+                            } else {
+                            // $('.activity-hot-always-person').hide();
+                            //     $('.activity-hot-always-nologin').hide();
+                            }
+                            if(!personId && !groupId) {
+                                // $('.activity-hot-always-person').show();
+                                // $('.activity-hot-always-nologin').show();
+                            }
+                        } else {
+                            // $('.activity-hot-always-person').hide();
+                            // $('.activity-hot-always-nologin').hide();
+                        }
+                        return true;
+                    }
+                    return false;
+                },
+                activityHotAlwaysNoPersonLoginHide() {
+                    if(!this.activityHotAlwaysIsBegin()) {
+                        // $('.activity-hot-always-person').hide();
+                        // $('.activity-hot-always-nologin').hide();
+                        return;
+                    }
+                    // $('.activity-hot-always-nologin').hide(); // 个人未登录时活动图标
+                },
+                // 买一赠一活动
+                activityHotAlwaysIsBegin() {
+                    return window.activeLoginMark;
+                },
+                init: function () {
+                    this.loginEvent();
+                    this.bindMeShow();
+                    if (!this.activityHotAlwaysShow()) {
+                        this.activityHotShow();
+                    }
+                }
+            };
+        })().init();
+    })
+</script>
+<script>
+function chargehandle() {
+    /**惠图标已替换为hot图标*/
+    window._czc && window._czc.push(['_trackEvent', '首页-充值送活动入口-惠标签', '点击', '惠标签']);
+    window.open('https://my.wanfangdata.com.cn/user/charge')
+}
+function activityHot() {
+     window.open('https://svip.wanfangdata.com.cn/activity?utm=hot&hmsr=hot')
+}
+function activityHotAlways() {
+    if(window.activeLoginMark) {
+        // if(window.activeLoginMark.logcontant) window._czc && window._czc.push(['_trackEvent', window.activeLoginMark.logcontant, '点击', '标签']);
+        if(window.activeLoginMark.route) window.open(window.activeLoginMark.route)
+    }
+}
+function fireEvent (element,event){
+    if (document.createEventObject) {
+        // IE浏览器支持fireEvent方法
+        var evt = document.createEventObject();
+        return element.fireEvent('on'+event,evt)
+    } else {
+        // 其他标准浏览器使用dispatchEvent方法
+        var evt = document.createEvent( 'HTMLEvents' );
+        evt.initEvent(event, true, true);
+        return element.dispatchEvent(evt);
+    }
+};
+window.__loginCallback = function(data) {
+ window.__userContext = data;
+ fireEvent(window, 'userContext')
+ window.__userContext = data;
+  var lastLogin = ''
+  var groupId = ''
+  var personId = ''
+  var accountIdslist = data.context.accountIds.filter(function(id){return id.indexOf('Group') >= 0})
+  var hiddenWisdom = ["g_cgdx","g_crdx","g_twdjdx","g_cjdxjcjyy","g_twdydx","g_fgwlxy","dilalib","g_gljtdx","g_fgdx","g_gsjkglzkxx","g_glhwkjdx","g_glqykjdx","g_zsyxdx","g_tbkjdx","g_twkjdx","g_gltwysdx","g_twglzydx","twzzdx","g_mxkjdx","g_mzkjdx","g_twzydx","g_xzdx","g_zgyydxtw","g_zhdx","dthpyjzx","itritrial","tactri","g_xzyywdw","tarigovtw","g_xzynywyh","zhjjyjyip","zhjjyjy","cpc1","cpctechlib","g_zggtgfyxgs","csctic1","csctic3","g_zlgtgfyxgs","g_zhfysxy","g_jdjtwjhsxy","tbtslib","g_twsxyjxy","ttcsuser","g_twsgsxy","holylight2020","g_twzhxysxy","g_twjjyjy","tier06","g_gljydx","naturalcheng","g_twdlgfyxgszhyjs","g_ydjsxy","g_tbsldx","g_fzcyzhyjs","cgdx","g_dwdxtw","g_gljngjdx","g_gltbdx","g_gltnysdx","g_gltwhydx","g_gltzkjdx","g_glyldx","g_ygdzdxy","iktcds","g_glzsdx","g_jydx","g_spgyfzyjs","g_tzjsgyy","g_ysdx","g_zhjdjyy","twdx","g_ztsxy","iiimic","twceci","g_gldhdx","g_glqhdx","g_glpddx","g_gltwtyyddx","g_hgkjdx","g_zykjdx","g_ntkjdx","g_lhkjdx","g_nhdx","g_dhdx","g_sjdx","g_yzdx","g_hnyjs","g_swjskfzx","g_twgxcgjnyy","g_hxzazxyy","g_kjxjsxy","chs2019","g_wzwydx","g_zhkjdx","g_ypyskjdx","yumtlibrary","g_zgwhdx","g_glphkjdx","g_glzzdx","g_gltddx","g_gltndx","g_gllhdx","g_fjdx","g_yzhdx","g_wnkjdx","g_drkjdx","g_gltbsydx","g_tbhljkdx","g_kskjdx","g_fykjdx","g_jsgyyjfzzx","mirdclib","twsfdxip","g_ldkjdx","g_ztkjdx","g_tnyykjdx","g_syhkjdx","g_gltbjydx","g_xwkjdx","twdzyyjy","twsinica","g_glgxsfdx","g_frdx","yungshun","srdcetdic","g_gltydx","g_dnkjdx","g_hljkxy","g_glzhsfdx","g_gltbysdx","g_oucc","g_glgxkjdx","g_gljmdx","g_tbyxdx","g_glzxdx","g_hfdx","lestw"]
+  if( accountIdslist.length == 1 && hiddenWisdom.some(function(item){return accountIdslist[0].indexOf('Group.'+item) >= 0})) {
+    var style = document.createElement('style');
+    style.type = 'text/css';
+    style.textContent = '#zhiyanDialog{display:none}';
+    document.head.appendChild(style);
+  }
+  data.context.accountIds
+    .map(function(item){return item.replace(/\./g,'_')})
+    .forEach(function(item){
+      if(item.indexOf('Group') === 0) {
+        groupId = item
+      } else if(item.indexOf('Person') === 0) {
+        personId = item
+        lastLogin = document.cookie.split('; ').filter(c=>c.indexOf(item)===0)[0]
+      }
+    })
+
+    if(personId || (groupId == '' &&  personId == '')) {
+        $('#wfpub_app').show()
+        $('#wfpub_vip').show()
+    }
+    if(personId) {
+        getPersonInfo()
+    }
+    function decodeWebTransactionRequestValue(value) {
+        if (!value || typeof value !== 'string') {
+            throw new Error('Invalid input');
+        }
+        var base64 = value.replace(/-/g, '+').replace(/_/g, '/');
+        if (base64.length % 4 === 1) {
+            throw new Error('Invalid Base64 string');
+        }
+        while (base64.length % 4 !== 0) {
+            base64 += '=';
+        }
+        var binary = atob(base64);
+        var bytes = Uint8Array.from(binary, function (c) { return c.charCodeAt(0); });
+        var decoder = new TextDecoder('utf-8', { fatal: true });
+        return decoder.decode(bytes);
+    }
+
+    var needCheckPopForUse = ['https://s.wanfangdata.com.cn/', 'https://d.wanfangdata.com.cn/', 'https://svip.wanfangdata.com.cn/', 'https://my.wanfangdata.com.cn/usercenter/']
+    var hitCheckForUse = needCheckPopForUse.some(function (domain) {
+        return location.href.indexOf(domain) !== -1;
+    });
+    var isTranDomain = location.href.indexOf('https://my.wanfangdata.com.cn/user/') !== -1;
+    var isTranVipSaleMember = location.href.indexOf('https://my.wanfangdata.com.cn/user/vip/saleMember') !== -1;
+    var hitTranWithTransferInRule = false;
+    if (isTranDomain && !isTranVipSaleMember) {
+        var wtrMatch = location.href.match(/[?&]webTransactionRequest=([^&#]+)/);
+        if (wtrMatch && wtrMatch[1]) {
+            try {
+                var wtrEncoded = decodeURIComponent(wtrMatch[1]);
+                var wtrDecoded = decodeWebTransactionRequestValue(wtrEncoded);
+                console.log('[checkUseCouponPopUp] webTransactionRequest decoded:', wtrDecoded);
+                var wtrJson = JSON.parse(wtrDecoded);
+                var transferIn = wtrJson && wtrJson.transactionRequest && wtrJson.transactionRequest.transferIn ? wtrJson.transactionRequest.transferIn : {};
+                var transferInAccountType = transferIn && transferIn.accountType ? transferIn.accountType : '';
+                var transferInKey = transferIn && transferIn.key ? transferIn.key : '';
+                var transferInFull = transferInAccountType && transferInKey ? (transferInAccountType + '.' + transferInKey) : '';
+
+                var fullTransferAllowList = [
+                    'Income.PeriodicalFulltext',
+                    'Income.PatentFulltext',
+                    'Income.ThesisFulltext',
+                    'Income.PeriodicalFulltextWord'
+                ];
+
+                var hitFullTransfer = fullTransferAllowList.indexOf(transferInFull) !== -1;
+                hitTranWithTransferInRule = hitFullTransfer;
+                console.log('[checkUseCouponPopUp] webTransactionRequest transferIn match:', {
+                    transferInKey: transferInKey,
+                    transferInFull: transferInFull,
+                    hitFullTransfer: hitFullTransfer,
+                    hitTranWithTransferInRule: hitTranWithTransferInRule
+                });
+            } catch (e) {
+                console.log('[checkUseCouponPopUp] webTransactionRequest decode error:', e);
+            }
+        }
+    }
+    var hitCheckForUseTran = isTranVipSaleMember || hitTranWithTransferInRule;
+    hitCheckForUse = hitCheckForUse || hitCheckForUseTran;
+    var needCheckPopForInquire = ['https://s.wanfangdata.com.cn/', 'https://d.wanfangdata.com.cn/', 'https://svip.wanfangdata.com.cn/', 'https://my.wanfangdata.com.cn/usercenter/']
+    var hitCheckForInquire = needCheckPopForInquire.some(function (domain) {
+        return location.href.indexOf(domain) !== -1;
+    });
+    var isPackPage = location.href.indexOf('https://d.wanfangdata.com.cn/pack') !== -1;
+    var shouldCheckUsePopup = !!personId && hitCheckForUse && location.href.indexOf('https://svip.wanfangdata.com.cn/inquire')  == -1;
+    var shouldCheckInquirePopup = !!personId && !groupId && hitCheckForInquire && location.href.indexOf('https://svip.wanfangdata.com.cn/inquire')  == -1;
+    var suppressUsePopupDisplay = !!groupId;
+    if(shouldCheckUsePopup && !isPackPage) {
+        checkUseCouponPopUp(function () {
+            if (shouldCheckInquirePopup && !isPackPage) {
+                checkPopUp();
+            }
+        }, suppressUsePopupDisplay);
+    }
+    if(personId && !groupId) {
+        // $('.activity-hot-always-person').show();
+        // $('.activity-hot-always-nologin').show();
+    } else {
+        // $('.activity-hot-always-person').hide();
+        // $('.activity-hot-always-nologin').hide();
+    }
+     if(!personId && !groupId) {
+        //  $('.activity-hot-always-person').show();
+        // $('.activity-hot-always-nologin').show();
+     }
+  // group 定制 Logo
+  if(document.getElementById('anxs-logo_sns')) {
+    document.getElementById('anxs-logo_sns').src = 'https://www.wanfangdata.com.cn/www/file/logo/' + groupId + '.png?v=2&default=' + (window.__logo_theme_name || 'logo/default.svg')
+  }
+  if(document.getElementById('anxs-logoName_sns')) {
+    var initGroupName = document.head.appendChild(document.createElement('script'))
+    initGroupName.src = 'https://www.wanfangdata.com.cn/www/file/logo/' + groupId + '.js'
+    initGroupName.remove()
+  }
+  window.dispatchEvent(new CustomEvent('userLogin', {detail:{groupId,personId}}))
+}
+</script><script>
+ (function () {
+        var query = function() {
+          return `AND CorePeriodical:(ISTIC OR PKU OR EI OR CSCD OR SCI OR NJU) AND SingleSourceDB:WF AND HasFulltext:true AND IsOA:false AND PublishYear:[${new Date().getFullYear() - 1} TO *] NOT (题名：征稿 OR 投稿 OR "信息动态" OR 征文)`;
+        };
+        window.recommends = {
+          topicWord: 'ChatGPT',
+          recommendsFormular: function(count, currentDate, searchDate) {
+           //第一版 setting
+            return 0.3 * count + 15 * 0.7 * Math.cos((currentDate - searchDate) / (60 * 60 * 1000 * 24) / 10) + 10;
+          },
+          getDefaultQuery: query,
+          getQuery: query,
+          wordsList:{
+            title:'2024科技名词',
+            list: [
+              { word: '人工智能+' },
+              { word: '低空经济' },
+              { word: '月背采样' },
+              { word: '量子科技' },
+              { word: '具身智能' },
+              { word: '混合现实' },
+              { word: '生物制造' },
+              { word: '近零碳' },
+              { word: '实景三维' },
+              { word: '微核糖核酸' },
+            ]
+          }
+        };
+      })()
+</script></div></div><div id=app style="min-height: 545px;"></div><div id=zkFooter><script language="javascript" src="https://cdn.w.wanfangdata.com.cn/js/lang.js"></script>
+<style>
+body{overflow-x:hidden;}.service-footer-icon{height:27px;width:20px;position:relative;top:-6px;padding-right:4px}.anxs-8qwe-footRt ul{list-style:none;margin:0;padding:0;}.anxs-8qwe-footer .clear{zoom:1}.anxs-8qwe-footer .clear:after{content:"";display:block;clear:both;visibility:hidden;height:0}.anxs-8qwe-footer{font-family:'Microsoft YaHei';width:100%;background:#f3f3f3;color:#323232;clear:both;font-size:14px;padding-bottom:10px}.anxs-8qwe-footer a:hover{text-decoration:none;}.anxs-8qwe-footer .anxs-8qwe-footer-wrapper{max-width:1440px;margin:0 auto;cursor:default;}.anxs-8qwe-footer .anxs-8qwe-footLt{font-size:12px;position:relative;}.anxs-8qwe-footer  .anxs-8qwe-small{padding-top:34px;width:100%;padding-bottom:31px;}.anxs-8qwe-footer  .anxs-8qwe-small .anxs-8qwe-small-lt{float:left;}.anxs-8qwe-footer  .anxs-8qwe-small .anxs-8qwe-small-rt{float:right;}.anxs-8qwe-footer  .anxs-8qwe-small  a{white-space:nowrap;color:#323232;font-size:13px;font-weight:700;text-decoration:none;vertical-align:top;}.anxs-8qwe-footer  .anxs-8qwe-small  .anxs-8qwe-small-lt a{margin-right:82px; font-size: 15px; line-height: 15px} .anxs-8qwe-small-lt a:last-child{margin-right:0;}  .anxs-8qwe-footer  .anxs-8qwe-small  .anxs-8qwe-small-rt a:first-child+a{margin:0 4px;}.anxs-8qwe-footer .anxs-8qwe-footLt .anxs-8qwe-copy,.anxs-8qwe-footer .anxs-8qwe-footLt .anxs-8qwe-copy_middle{color:#666666;overflow:hidden;float:left;}.anxs-8qwe-footer .anxs-8qwe-footLt .anxs-8qwe-copy a,.anxs-8qwe-footer .anxs-8qwe-footLt .anxs-8qwe-copy_middle a{color:#666666;text-decoration:none;}.anxs-8qwe-footer .anxs-8qwe-footLt .anxs-8qwe-copy .anxs-lt,.anxs-8qwe-footer .anxs-8qwe-footLt .anxs-8qwe-copy_middle .anxs-rt{margin-bottom:16px;}.anxs-8qwe-footer .anxs-8qwe-footLt .anxs-8qwe-copy{width: 646px; font-size: 13px;line-height: 13px}.anxs-8qwe-footer .anxs-8qwe-footLt .anxs-8qwe-copy_middle{width:462px;font-size: 13px;line-height: 13px}.anxs-8qwe-footer .anxs-8qwe-footRt{color:#65686f;font-size:13px;float:left;line-height:13px;}.anxs-8qwe-onlineService{cursor: pointer;} .anxs-8qwe-footer .anxs-8qwe-footRt .anxs-8qwe-footRt-top{background:0 0;margin-bottom: 10px;}.anxs-8qwe-footer .anxs-8qwe-footRt .anxs-8qwe-footRt-top .anxs-8qwe-icon{width:32px;height:34px;display:inline-block;background:url(https://cdn.login.wanfangdata.com.cn/Content/src/img/me-global.png) no-repeat;background-position:-256px -75px;vertical-align:middle}.anxs-8qwe-footer .anxs-8qwe-footRt .anxs-8qwe-footRt-contactus li{margin-bottom:10px}.anxs-8qwe-footer .anxs-8qwe-footRt .anxs-8qwe-footRt-contactus li a{cursor:pointer;color:#65686f;text-decoration:none}.anxs-8qwe-footer .anxs-8qwe-footRt .anxs-8qwe-footRt-contactus li i{background:url(https://cdn.login.wanfangdata.com.cn/Content/src/img/icon-contactus.png) no-repeat;display:inline-block;height:20px;width:20px;vertical-align:top;margin:2px 12px 0 0}.anxs-8qwe-footer .anxs-8qwe-footRt .anxs-8qwe-footRt-contactus li .anxs-8qwe-footRt-online{background-position:0 0}.anxs-8qwe-footer .anxs-8qwe-footRt .anxs-8qwe-footRt-contactus li .anxs-8qwe-footRt-tel{background-position:0 -20px;}@media(max-width:1200px){.anxs-8qwe-footer{width:1200px;}}
+
+.wf-pop-main{display:flex;width:140px;justify-content:space-evenly;}.wf-pop-main > div{position:relative;}.wf-pop-panel{position:absolute;display:none;z-index:100;top:-155px;left:-45px;padding:5px;height:145px;text-align:center;border-radius:8px;background:white;box-shadow:0 0 10px #777777;box-sizing: unset;}.wf-pop-panel > div{width:120px;height:128px;}.wf-pop-panel::after{content:"";display:block;width:0;height:0;margin:auto;border:10px solid transparent;border-top-color:white;}.wf-pop-hover,.wf-pop-hover2{width:40px;height:40px;}.wf-pop-hover:hover + div,.wf-pop-hover2:hover + div,.wf-pop-panel:hover{display:block;}
+@media screen and (max-width: 1440px){
+    .anxs-8qwe-small-lt{
+        margin-right: 0px;
+    }
+    body .anxs-8qwe-footer .anxs-8qwe-footLt .anxs-8qwe-copy{
+        width: 550px!important;
+    }
+    body .anxs-8qwe-footer .anxs-8qwe-footLt .anxs-8qwe-copy_middle {
+        width: 343px!important;
+    }
+}
+@media screen and (min-width: 1440px){
+    .anxs-8qwe-small-lt{
+        margin-right: 40px;
+    }
+}
+.character-list{display: inline-flex;}
+</style>
+<div class="anxs-8qwe-footer">
+    <div class="anxs-8qwe-footer-wrapper clear">
+        <div class="anxs-8qwe-small clear" style="display: flex;flex-wrap: nowrap;">
+            <div class="anxs-8qwe-small-lt" style="display: flex;flex-wrap: nowrap;margin-top: 12px;">
+                <a target="_blank" href="https://www.wanfangdata.com.cn/Help">帮助</a>
+                <a target="_blank" href="https://www.wanfangdata.com.cn/Customer">客户服务</a>
+                <a target="_blank" href="https://www.wjx.top/jq/23244564.aspx">问卷调查</a>
+                <a target="_blank" href="https://www.wanfangdata.com.cn/About">关于我们</a>
+                <a target="_blank" href="http://www.wanfang.com.cn">公司首页</a>
+                <a target="_blank" href="https://wanfangdata1.zhiye.com/">加入我们</a>
+                <a target="_blank" href="https://www.wanfangdata.com.cn/sitemap">网站地图</a>
+                <a target="_blank" style="margin-right: 0" href="https://login.wanfangdata.com.cn/notice/shop">官方店铺</a>
+            </div>
+            <div class="wf-pop-main">
+                <div>
+                    <img class="wf-pop-hover" src="https://cdn.wanfangdata.com.cn/picture/wb.svg" />
+                    <div class="wf-pop-panel">
+                        <div style="background:url('https://cdn.wanfangdata.com.cn/picture/wb_qr.png') no-repeat center;background-size: contain"></div>
+                        <a target="_blank" href="https://weibo.com/wanfangdata">万方数据微博</a>
+                    </div>
+                </div>
+                <div>
+                    <img class="wf-pop-hover2" src="https://cdn.wanfangdata.com.cn/picture/wx.svg" />
+                    <div class="wf-pop-panel">
+                        <div style="background:url('https://cdn.wanfangdata.com.cn/picture/wx_qr.png') no-repeat center;background-size: cover"></div>
+                        <a>万方数据公众号</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="anxs-8qwe-footLt clear" style="display: flex;flex-wrap: nowrap;">
+            <div class="anxs-8qwe-copy">
+                <div class="anxs-lt"><a target="_blank" href="https://ad.wanfangdata.com.cn/images/hlwcb.jpg">网络出版服务许可证：(署)网出证(京)字第072号</a></div>
+                <div class="anxs-lt"><a target="_blank" href="https://ad.wanfangdata.com.cn/images/zhengshu_2.jpg">药品医疗器械网络信息服务备案：(京)网药械信息备字（2023）第 00470 号</a></div>
+                <div class="anxs-lt"><a target="_blank" href="https://ad.wanfangdata.com.cn/images/stjmxkz3.jpg">信息网络传播视听节目许可证 许可证号：0108284</a></div>
+                <div class="anxs-lt">万方数据知识服务平台--国家科技支撑计划资助项目（编号：2006BAH03B01）</div>
+                <div class="anxs-lt"><a target="_blank" href="https://www.wanfangdata.com.cn/www/file/wfdatazs.pdf">万方数据学术资源发现获取服务系统[简称：万方智搜] V3.0 证书号：软著登字第11363462号</a></div>
+            </div>
+            <div class="anxs-8qwe-copy_middle">
+                <div class="anxs-rt"><a target="_blank" href="https://ad.wanfangdata.com.cn/images/icp.jpg">京ICP证：010071</a></div>
+                <div class="anxs-rt"><a target="_blank" href="https://ad.wanfangdata.com.cn/images/yyzz.png">营业执照</a></div>
+                <div class="anxs-rt"><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802020237">京公网安备11010802020237号</a></div>
+        <div class="anxs-rt"><a target="_blank" id="icpbei" href="https://beian.miit.gov.cn/">京ICP备08100800号-1</a></div> 
+        <script>
+          if(window.location.hostname.indexOf("wanfangdata.cn") != -1) {
+            document.getElementById("icpbei").innerText="京ICP备2021041393号-2";
+          }
+        </script>
+                <div class="anxs-rt">&copy;北京万方数据股份有限公司 万方数据电子出版社</div>
+            </div>
+            <div class="anxs-8qwe-footRt">
+                <div class="anxs-8qwe-footRt-top">
+                     <div style="display:flex;height:13px">
+                        <img class="service-footer-icon" src="https://cdn.wanfangdata.com.cn/images/footer/service.svg" />
+                        <b><span class="anxs-8qwe-onlineService">在线客服</span></b>
+                    </div>
+                </div>
+                <ul class="anxs-8qwe-footRt-contactus">
+                    <li>
+                        <div style="display:flex;height:13px">
+                            <img class="service-footer-icon" src="https://cdn.wanfangdata.com.cn/images/footer/service_call.svg" />
+                            <b><span>客服电话：4000115888</span></b>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="display:flex;height:13px">
+                            <img class="service-footer-icon" src="https://cdn.wanfangdata.com.cn/images/footer/service_mail.svg" />
+                            <b><a href="mailto:service@wanfangdata.com.cn">客服邮箱：service@wanfangdata.com.cn</a></b>
+                        </div>
+                    </li>
+                    <li>违法和不良信息举报电话：4000115888</li>
+                    <li>举报邮箱：problem@wanfangdata.com.cn</li>
+                    <li><a target="_blank" href="https://www.12377.cn/ ">举报专区：https://www.12377.cn/</a><img style="display:none" src="https://ipv6.wanfangdata.com.cn/v6/" alt=""/></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+NTKF_PARAM = {
+    siteid: 'kf_9358', // 企业ID，为固定值，必填
+    settingid: 'kf_9358_1469523642099', // 接待组ID，为固定值，必填
+    uid: "", // 用户ID，未登录可以为空，但不能给null，uid赋予的值显示到小能客户端上
+    uname: "", // 用户名，未登录可以为空，但不能给null，uname赋予的值显示到小能客户端上
+    isvip: '0', // 是否为vip用户，0代表非会员，1代表会员，取值显示到小能客户端上
+    userlevel: '1', // 网站自定义会员级别，0-N，可根据选择判断，取值显示到小能客户端上
+    erpparam: 'abc' // erpparam为erp功能的扩展字段，可选，购买erp功能后用于erp功能集成
+};
+ $('.anxs-8qwe-onlineService').click(function(){
+    onlineService();
+});
+ function onlineService(){
+    var panel = document.getElementById('help_phone_webChat')
+    var iframe = panel.getElementsByTagName('iframe')[0]
+    if(iframe.src) {
+        panel.style.display = 'block'
+        return
+    }
+    $.ajax({
+        url:'https://login.wanfangdata.com.cn/user/getOnlineUser',
+        dataType: "jsonp",
+        jsonp: "callback",
+        success: function (data) {
+            iframe.src = 'https://a8-im.7x24cc.com/phone_webChat.html?accountId=N000000052196&chatId=1b14169a-62bd-46ac-bd53-c54cf8f33248&visitorId=' + data.Id;
+            panel.style.display = 'block'
+        }
+    });
+ }
+</script>
+<div id="help_phone_webChat">
+    <div onclick="document.getElementById('help_phone_webChat').style.display='none'" style="cursor:pointer;width:20px;border-radius:50%;background:#2d2d2d;text-align:center;color:#bbbbbb;opacity:.8;position:absolute;right:10px;top:10px;line-height:18px;height:20px;">
+        x
+    </div>
+    <iframe></iframe>
+</div>
+<style>
+    #help_phone_webChat {
+        display: none;
+        position:fixed;
+        right:4px;
+        bottom:0px;
+        border-radius: 16px;
+        z-index:999999;
+        box-shadow: 0px 0px 8px gray
+    }
+    #help_phone_webChat > iframe {
+        width:415px;
+        height:520px;
+        border: none
+    }
+</style>
+<script type="text/javascript" src="https://www.wanfangdata.com.cn/www/file/static/umlog.js?v=2"></script>
+<style>a[title='站长统计'] {display: none;}</style><!--建议--><style>
+  .anxs-left-bom {
+    position: fixed;
+    right: 0;
+    bottom: 80px;
+    z-index: 99999;
+    background: #ffffff;
+    box-shadow: 0px 2px 6px 0px rgba(35, 24, 21, 0.09);
+  }
+
+  .anxs-left-bom-list {
+    position: relative;
+    border: 1px solid #234ea2;
+    cursor: pointer;
+  }
+
+  .anxs-left-bom-list a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    color: #234ea2;
+    cursor: pointer;
+  }
+
+  .anxs-left-bom-list:hover {
+    background: #234ea2;
+  }
+
+  .anxs-left-bom-list:hover>a {
+    color: #fff;
+  }
+
+  #anxs-top,
+  #anxs-top>a>div,
+  #anxs-top:hover>a>svg {
+    display: none;
+  }
+
+  #anxs-top:hover>a>div {
+    display: block;
+  }
+
+</style>
+
+<div class="anxs-left-bom">
+  <div class="anxs-left-bom-list" id="anxs-top">
+    <a href="javascript:void(0);">
+      <svg fill="#234ea2" viewBox="0 0 1024 1024" version="1.1" width="24" height="24"><path d="M846.7458488 544.62952686L542.81308601 240.03122916c-4.33091472-6.52816662-10.72767089-11.94004361-18.94439875-14.81413259-4.39591505-1.72530124-9.06312941-2.5024633-13.79958188-2.40072571-0.33771225 0-0.61042555-0.17097572-0.96368191-0.17097571-0.45781916 0-0.82944484 0.20488778-1.287264 0.23597465-4.61493297-0.06499893-9.16627961 0.644339-13.40958826 2.30040073-8.35520545 2.90800107-14.84663207 8.38911754-19.21146023 15.08543328L171.52999571 544.62952686c-14.08642533 14.0722952-12.98850777 38.01597012 2.38518296 53.37411672 15.38923346 15.35249482 38.591071 15.75944518 52.68173553 1.68997518 1.11346172-1.15020035 2.21420726-1.89486435 3.14397571-3.18071437l240.02738599-239.60489286 0.38999501 570.8019338c-0.2204319 1.49073918 0 2.70593849 0 4.19667767 0 18.73527177 16.67508349 33.95635471 38.43987722 33.95635473s39.41768926-15.22108297 39.41768926-33.95635473l0.40836295-574.99861286 240.07684219 239.60489289c0.94813778 1.28585141 2.0291014 2.03051401 3.18212834 3.18071436 14.0680574 14.06947001 37.27130753 13.66251964 52.66053962-1.68997518C859.73576914 582.64549699 860.81814399 558.70182207 846.7458488 544.62952686z"></path><path d="M999.79884492 94.91377062c0 19.12667938-15.49379626 34.63460578-34.63601977 34.63460577L53.09888783 129.54837639c-19.12809197 0-34.63601975-15.50934038-34.63601976-34.63460577l0 0c0-19.12809197 15.50792779-34.63601975 34.63601976-34.63601977l912.0639387 0C984.30504865 60.27775085 999.79884492 75.78567726 999.79884492 94.91377062L999.79884492 94.91377062z"></path></svg>
+      <div>
+        <span>回到</span>
+        <br />
+        <span>顶部</span>
+      </div>
+    </a>
+  </div>
+</div>
+<script>
+  var originUrl = window.location.origin + '/';
+  if(originUrl.includes('https://d.wanfangdata.com.cn/') ) {
+    $('#zhiyanDialog').show()
+  } else if(originUrl.includes('https://s.wanfangdata.com.cn/')) {
+    let pathList = ['/advanced-search/paper', '/aipaper', '/paper', '/periodical', '/thesis', '/conference', '/patent', '/nstr', '/cstad', '/standard', '/law', '/localchronicleitem', '/video', '/nav-page'];
+    if(pathList.includes(window.location.pathname)) {
+      $('#zhiyanDialog').show()
+    } else {
+      $('#zhiyanDialog').hide()
+    }
+  } else {
+    $('#zhiyanDialog').hide()
+  }
+  function GetPageScroll() {
+    var x, y;
+    if (window.pageYOffset) {
+      // all except IE
+      y = window.pageYOffset;
+      x = window.pageXOffset;
+    } else if (document.documentElement && document.documentElement.scrollTop) {
+      // IE 6 Strict
+      y = document.documentElement.scrollTop;
+      x = document.documentElement.scrollLeft;
+    } else if (document.body) {
+      // all other IE
+      y = document.body.scrollTop;
+      x = document.body.scrollLeft;
+    }
+    /*return {X:x, Y:y};*/
+    return y;
+  }
+
+  setInterval(function () {
+    var suggest_arrow = $('#suggestionForm .suggest-arrow');
+    var scrollTop = GetPageScroll();
+    if (scrollTop > 1400) {
+      $('#anxs-top').show();
+    } else {
+      $('#anxs-top').hide();
+    }
+  }, 40);
+
+  /*点击返回顶部*/
+  $('#anxs-top').click(function () {
+    $('body,html').animate({ scrollTop: 0 }, 500);
+  });
+  if(document.cookie.indexOf('zhiyanClose=1') == -1) {
+    $('#zhiyanDialog').css('display', 'block')
+  }
+  // 智妍弹框跳转入口
+  $('#zhiyanButton').click(function() {
+    let accountIds = window.__userContext.context.accountIds
+    let isPersonLogin = accountIds.some(function(item){return item.includes('Person')})
+    if(isPersonLogin) {
+      window.open("https://zhiyan.wanfangdata.com.cn");
+    } else {
+      window.open('https://my.wanfangdata.com.cn/auth/user/login.do?service=' + encodeURIComponent('https://zhiyan.wanfangdata.com.cn'));
+    }
+  })
+  // 关闭弹框
+  $('#zhiyanClose').click(function() {
+    document.cookie='zhiyanClose=1;domain=.wanfangdata.com.cn;expires='+new Date(new Date().getTime() + 604800000).toGMTString()
+    $('#zhiyanDialog').hide()
+  })
+</script></div><script>window.onload = function() {
+        $('.anxs-8qwe-list-login a').click(function() {
+          if ($(this).css('color') != 'rgb(85, 85, 85)') {
+            $(this).css('color', '#553');
+            $(this).removeAttr('style');
+            $(this).show();
+          } else {
+            $(this).removeAttr('style');
+            $(this).show();
+            $(this).css('color', '#554');
+          }
+        });
+      };</script><script src=https://cdn.s.wanfangdata.com.cn/layer.js></script><script>function login_kjbgTips_callback(userrole, obj) {
+        if (
+          userrole == '1' ||
+          (userrole == '2' && kjbgOnlineUrl != undefined && kjbgOnlineUrl != null && kjbgOnlineUrl != '')
+        ) {
+          obj.location.href = $('#userNstr').val();
+        } else if (
+          userrole == null ||
+          userrole == '' ||
+          userrole == undefined ||
+          (userrole == '0' && kjbgAuthUrl != undefined && kjbgAuthUrl != null && kjbgAuthUrl != '')
+        ) {
+          obj.location.href = $('#userNstr').val();
+        }
+      }
+      try{document.domain = 'wanfangdata.com.cn';}catch(e){}
+      var requestpaper = (function() {
+        var creatHtml = function(src) {
+          var html =
+            '<div class="request-layer"><div class="wrap-layer"></div><div class="request-close" onclick="requestpaper.close()"></div><iframe  src ="' +
+            src +
+            '" width="640" height="480" frameborder="0"><iframe></div>';
+          return html;
+        };
+        return {
+          show: function(src) {
+            $('body').append(creatHtml(src));
+          },
+          close: function() {
+            $('body .request-layer').remove('');
+          }
+        };
+      })();
+      function packUpChap(obj) {
+        var close = $(obj).attr('name');
+        if ('up' == close) {
+          $(obj).attr('name', 'down');
+          $(obj)
+            .parent()
+            .parent()
+            .nextUntil('li')
+            .hide();
+          $(obj)
+            .parent()
+            .parent()
+            .parent()
+            .nextUntil('span')
+            .hide();
+          $(obj)
+            .children()
+            .first()
+            .removeClass('icon_l_up');
+          $(obj)
+            .children()
+            .first()
+            .addClass('icon_l_down');
+        } else {
+          $(obj).attr('name', 'up');
+          $(obj)
+            .parent()
+            .parent()
+            .nextUntil('li')
+            .show();
+          $(obj)
+            .parent()
+            .parent()
+            .parent()
+            .nextUntil('span')
+            .show();
+          $(obj)
+            .children()
+            .first()
+            .removeClass('icon_l_down');
+          $(obj)
+            .children()
+            .first()
+            .addClass('icon_l_up');
+        }
+      }
+
+      function resize(width, height) {
+        $('#iframeId')
+          .width(width)
+          .height(height);
+      }
+
+      var loginUrl = '';
+      if (window.location.hostname === 's.local.wanfangdata.com.cn') {
+        loginUrl = 'http://my.test.wanfangdata.com.cn/auth/';
+      } else {
+        loginUrl = window.location.protocol + window.domainConf.login;
+      }
+
+      // 登录
+      function getloginurl(loginModel, modelparam) {
+        var msg = arguments[1];
+        var backurl = encodeURIComponent(window.location.href);
+        var searchUrl = $('#search').val();
+        if (msg != '' && msg != undefined && msg != null && msg != 'null') {
+          if (loginModel == 'GR') {
+            $('#loginframe').attr(
+              'src',
+              loginUrl + 'user/login.do?service=' + backurl + '&login_mode=AJAX&msg=' + msg + modelparam
+            );
+          } else if (loginModel == 'JG') {
+            $('#loginframe').attr(
+              'src',
+              loginUrl + 'user/jglogin.do?service=' + backurl + '&login_mode=AJAX&msg=' + msg
+            );
+          } else {
+            $('#loginframe').attr(
+              'src',
+              loginUrl + 'user/alllogin.do?service=' + backurl + '&login_mode=AJAX&msg=' + msg
+            );
+          }
+        } else {
+          if (loginModel == 'GR') {
+            $('#loginframe').attr(
+              'src',
+              loginUrl + 'user/login.do?service=' + backurl + '&login_mode=AJAX' + modelparam
+            );
+          } else if (loginModel == 'JG') {
+            $('#loginframe').attr('src', loginUrl + 'user/jglogin.do?service=' + backurl + '&login_mode=AJAX');
+          } else {
+            $('#loginframe').attr('src', loginUrl + 'user/alllogin.do?service=' + backurl + '&login_mode=AJAX');
+          }
+        }
+        layer.open({
+          type: 1, //page层 1div，2页面
+          area: ['50%px', '50%px'],
+          title: '',
+          shade: 0.6, //遮罩透明度
+          moveType: 1, //拖拽风格，0是默认，1是传统拖动
+          shift: 1, //0-6的动画形式，-1不开启
+          content: $('#loginframe'),
+          end: function() {
+            $('#loginframe').attr('src', '');
+          }
+        });
+        zh_init02();
+        $('#status').attr('href', window.location.href);
+      }</script><script>//判断当前设备是否是pc打开
+    function isPC() {
+      const userAgent = navigator.userAgent.toLowerCase();
+      const screenWidth = window.innerWidth;
+      // 检查用户代理字符串中是否包含移动端标识符
+      const mobileKeywords = [
+        'mobile', 'android', 'iphone', 'ipod', 'ipad',
+        'windows phone', 'blackberry', 'webos',
+        'opera mini', 'opera mobi', 'iemobile'
+      ];
+      // 先检查明确的移动设备
+      for (let keyword of mobileKeywords) {
+        if (userAgent.includes(keyword)) {
+          return false; // 手机设备
+        }
+      }
+      // 特殊处理iPad和Mac
+      if (userAgent.includes('macintosh')) {
+        // 检测是否iPad Pro（有触摸屏的Mac）
+        const isTouchDevice = navigator.maxTouchPoints > 1;
+        return !isTouchDevice; // 有触摸屏→iPad→false; 无触摸屏→Mac→true
+      }
+      return true;
+    }
+    if (isPC()) {
+      // 执行PC端相关的应用缩放比例
+      if (innerWidth <= 1280) {
+        document.body.style.zoom = 0.7
+      }
+    }</script><script src=https://cdn.s.wanfangdata.com.cn/js/api.af1b9ac4.js></script><script src=https://cdn.s.wanfangdata.com.cn/js/viewdesign.7fca859c.js></script><script src=https://cdn.s.wanfangdata.com.cn/js/echarts.e9122a9a.js></script><script src=https://cdn.s.wanfangdata.com.cn/js/chunk-vendors.541ec17c.js></script><script src=https://cdn.s.wanfangdata.com.cn/js/app.4cd28265.js></script></body></html>

@@ -1,0 +1,135 @@
+\subsection{第 16 轮：能量分解与双 Cauchy--Schwarz}\label{sec:r16:energy}
+
+本小节的对象是\textbf{每个原子}的能量分配。对原子 $i$ 令 $O(i)=\{j:\langle u_i,u_j\rangle<0\}$、
+$A(i)=\{j:\langle u_i,u_j\rangle>0\}$（含 $j=i$），并定义
+\begin{align}
+\eta_i&:=\sum_{j\in O(i)}g_j\langle u_i,u_j\rangle^2 &&\text{（$i$ 的\emph{钝部}方向能量）}\notag\\
+\zeta_i&:=\sum_{j\in A(i),\,j\ne i}g_j\langle u_i,u_j\rangle^2 &&\text{（$i$ 的\emph{锐部}离对角能量）}\notag\\
+\kappa_i&:=\sum_{j\in O(i)}g_jh_j^2=\sum_{j\in O(i)}x_j^2=1-\sum_{j\in A(i)}x_j^2 &&\text{（钝邻域的 Perron 质量）}\label{eq:energydef}\\
+\sigma_i&:=\sum_{j\in O(i)}c_j|\langle u_i,u_j\rangle|,\qquad
+p_i:=\langle u_i,W_i\rangle=\rho h_i,\qquad
+A_1:=\sum_ic_i\kappa_i,\quad A_2:=\sum_ic_i\eta_i .\notag
+\end{align}
+\eqref{eq:energydef} 中 $\kappa_i$ 的第二个等号用 $g_jh_j^2=x_j^2$，第三个用帧条件
+$\sum_jg_j\langle u_i,u_j\rangle^2=u_i^\top(\sum g_ju_ju_j^\top)u_i=1$ 与 $A(i)\cup O(i)$ 是全集。
+
+\begin{lemma}[能量分解]\label{lem:framesplit}
+$g_i+\eta_i+\zeta_i=1$ 对一切 $i$ 精确成立。特别地 $\|Q_-\|_F^2=e=\sum_ig_i\eta_i$。
+\end{lemma}
+
+\begin{proof}
+帧条件按 $j=i$、$j\in O(i)$、$j\in A(i)\setminus\{i\}$ 三段拆分，$j=i$ 段贡献 $g_i\cdot1$。
+第二个断言：$e=\sum_{ij}(Q_-)_{ij}^2=\sum_{ij}g_ig_j\langle u_i,u_j\rangle^2\mathbf 1\{ij\text{ 钝}\}=\sum_ig_i\eta_i$。
+\end{proof}
+
+\begin{lemma}[第一 Cauchy--Schwarz，冠军处取等]\label{lem:cs1}
+$\sigma_i^2\le\kappa_i\eta_i$，等号 $\Leftrightarrow$ 在 $O(i)$ 上 $h_j$ 与 $|\langle u_i,u_j\rangle|$ 成比例。
+\end{lemma}
+
+\begin{proof}
+$\sigma_i=\sum_{j\in O(i)}(\sqrt{g_j}h_j)(\sqrt{g_j}|\langle u_i,u_j\rangle)$，用 Cauchy--Schwarz。
+\end{proof}
+
+\begin{lemma}[第二 Cauchy--Schwarz]\label{lem:cs2}
+$p_i^2\le(1-\kappa_i)(1-\eta_i)$，且
+$\varphi(u_i):=\sum_jc_j|\langle u_i,u_j\rangle|\le\sqrt{(1-\kappa_i)(1-\eta_i)}+\sqrt{\kappa_i\eta_i}\le1$，
+右端第二个不等号取等 $\Leftrightarrow\kappa_i=\eta_i$。
+\end{lemma}
+
+\begin{proof}
+$p_i=\langle u_i,W_i\rangle$，把 $W_i$ 按 $A(i)$ 拆分并用引理~\ref{lem:framesplit}；
+最后一句是 $\sqrt{(1-a)(1-b)}+\sqrt{ab}\le1$（$a,b\in[0,1]$，两边平方后化简为 $(\sqrt{a(1-b)}-\sqrt{b(1-a)})^2\ge0$）。
+\end{proof}
+
+\begin{theorem}[乘积界 \textrm{thm:betaAA}]\label{thm:betaAA}
+对一切帧测度与一切 $N$：
+\begin{equation}\label{eq:betaAA}
+\beta^2\ \le\ A_1A_2 ,
+\end{equation}
+其中 $\beta=x^\top Q_-x$。冠军处取等：$\beta^2-A_1A_2=+1.39\times10^{-17}$。
+\end{theorem}
+
+\begin{proof}
+两步 Cauchy--Schwarz：
+\[
+\beta=\sum_ic_i\sigma_i\overset{\text{引理}\ref{lem:cs1}}{\le}\sum_ic_i\sqrt{\kappa_i\eta_i}
+\le\sqrt{\Bigl(\sum_ic_i\kappa_i\Bigr)\Bigl(\sum_ic_i\eta_i\Bigr)}=\sqrt{A_1A_2}.
+\]
+$c_i>0$ 保证第二步是真正的 Cauchy--Schwarz。取等数值核对：
+$\beta=0.304972937817$、$A_1=0.469920973690$、$A_2=0.197923689318$。
+\end{proof}
+
+\begin{proposition}[取等刻画]\label{prop:betaAAeq}
+\eqref{eq:betaAA} 取等 $\Leftrightarrow$ 同时满足
+\begin{enumerate}\itemsep1pt
+\item[(E1)] 每条钝边 $\{i,j\}$ 上 $h_i=h_j$；
+\item[(E2)] $(h_i+h_j)^2/|\langle u_i,u_j\rangle|$ 在全部钝边上是同一常数。
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+第一步取等要求在每个 $O(i)$ 上 $h_j\propto|\langle u_i,u_j\rangle|$；
+对两条共享端点的钝边比较比例常数即得 (E1)，回代即得 (E2)。
+\end{proof}
+
+冠军的钝边集是五芒星的五条边 $\{(1,3),(1,4),(2,4),(2,5),(3,5)\}$；
+(E1) 的最大偏离 $1.22\times10^{-15}$、(E2) 的比例散布 $3.28\times10^{-15}$。
+在 $300$ 个\textbf{人为破坏} (E2) 的随机构型中，$299$ 个给出严格不等式
+（余下 $1$ 个是钝图为空的退化情形，此时 $\beta=A_1=A_2=0$，两边同为 $0$）。
+
+\begin{remark}[为什么这条定理不够]\label{rmk:betaAAlimit}
+\eqref{eq:betaAA} 在冠军处\textbf{尖锐}，所以它本身没有损失。损失发生在下一步：
+要用它闭合主猜想，还需要 $\alpha+\sqrt{A_1A_2}\le\rho_0$，而这一条\textbf{是假的}
+（命题~\ref{prop:fourthfalse}）。这是本轮最重要的一次「否证」，见下节。
+\end{remark}
+
+\subsection{否证：全局「第四不等式」$\alpha+\sqrt{A_1A_2}\le\rho_0$}\label{sec:r16:refute}
+
+\begin{proposition}[否证]\label{prop:fourthfalse}
+不等式
+\begin{equation}\label{eq:fourth}
+\alpha+\sqrt{A_1A_2}\ \le\ \rho_0
+\end{equation}
+\textbf{不是}对所有帧测度成立的真命题。存在 $N=7$ 的构型使左端 $=1.287835562520>\rho_0=1.281568196872$，
+超出 $6.27\times10^{-3}$。
+\end{proposition}
+
+\begin{proof}[数值证据]
+在 $360$ 个随机构型（$N=4,\dots,14$，由 \texttt{random\_frame\_measure} 通过 LP 构造，保证帧条件精确成立）
+上扫描，最大值为上式。脚本 \texttt{\_o2.py} 第 (E) 段，输出文件 \texttt{\_o2\_out.txt}。
+\end{proof}
+
+\begin{remark}[否证的含义，以及它\textbf{不}否证什么]\label{rmk:fourthmean}
+\begin{enumerate}\itemsep2pt
+\item \eqref{eq:fourth} 在冠军处\textbf{取等}（残差 $-4.44\times10^{-16}$），
+所以它是一条「尖锐的候选」；被否证的是它的\textbf{全局有效性}，不是它的尖锐性。
+\item 它\textbf{不}否证主猜想 $\kappa_3\le\rho_0$：反例构型的真实 $\rho=\alpha+\beta$ 仍远小于 $\rho_0$，
+失效的只是 $\beta\le\sqrt{A_1A_2}$ 这一步的\textbf{松弛量}。
+\item 因此 \textbf{thm:betaAA} 这条路线只可能在\emph{临界点集合}上完成：
+在满足定理~\ref{thm:stiefelkkt} 全部方程的构型上，$\kappa_i,\eta_i$ 不再自由
+（它们被 $\Lam$、$h$、钝图三者共同锁定），\eqref{eq:fourth} 有可能在那里成立。
+这把问题从「$N$ 维不等式」缩小成「$6+1$ 个参数的刚性方程组上的不等式」，
+是\textbf{一次真实的降维}，但尚未完成。
+\item 反例出现在 $N=7$，正好是 $\dim\ker M\ge1$ 的第一个阶数。这提示
+\eqref{eq:fourth} 的失效与「矩核方向上 $\rho$ 不取极值」是同一现象的两面，
+应当与定理~\ref{thm:dichotomy} 合并使用。
+\end{enumerate}
+\end{remark}
+
+\textbf{仍然全局成立}（$360$ 个构型 $0$ 违背，最大超出如下）：
+\begin{center}\small
+\begin{tabular}{lcc}
+\hline
+不等式 / 恒等式 & 最大超出 & 冠军处 \\
+\hline
+$g_i+\eta_i+\zeta_i=1$（引理~\ref{lem:framesplit}） & $3.11\times10^{-15}$ & 恒等式 \\
+$\sigma_i^2\le\kappa_i\eta_i$（引理~\ref{lem:cs1}） & $+1.39\times10^{-17}$ & \textbf{取等} \\
+$p_i^2\le(1-\kappa_i)(1-\eta_i)$（引理~\ref{lem:cs2}） & $+8.40\times10^{-16}$ & 余量 $2.34\times10^{-2}$ \\
+$\varphi(u_i)\le\sqrt{(1-\kappa_i)(1-\eta_i)}+\sqrt{\kappa_i\eta_i}$ & $0$ & 余量 $1.18\times10^{-2}$ \\
+$\sqrt{(1-\kappa_i)(1-\eta_i)}+\sqrt{\kappa_i\eta_i}\le1$ & $0$ & 严格 \\
+$\beta^2\le A_1A_2$（定理~\ref{thm:betaAA}） & $0$ & \textbf{取等} \\
+$\rho^2\le\sum_ig_i(1-\kappa_i)(1-\eta_i)$ & $+3.33\times10^{-16}$ & 余量 $2.56\times10^{-1}$（约 $15\%$ 松） \\
+\hline
+\end{tabular}
+\end{center}
+

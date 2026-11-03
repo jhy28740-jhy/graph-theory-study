@@ -1,0 +1,253 @@
+{
+  "key": "crossref_title0",
+  "source": "Crossref title search",
+  "query": "Quadratic inequalities between the largest eigenvalues of a graph",
+  "url": "https://api.crossref.org/works?query.title=Quadratic%20inequalities%20between%20the%20largest%20eigenvalues%20of%20a%20graph&rows=10",
+  "kind": "crossref",
+  "retrieved_utc": "2026-10-14T09:35:56.513263+00:00",
+  "http_status": 200,
+  "final_url": "https://api.crossref.org/works?query.title=Quadratic%20inequalities%20between%20the%20largest%20eigenvalues%20of%20a%20graph&rows=10",
+  "content_type": "application/json",
+  "raw_file": "raw\\crossref_title0.raw",
+  "bytes": 46693,
+  "sha256": "7cc093389d15004a7493ac24df67ccbf821ecf79150f56613f64caee3bbe3911",
+  "result": {
+    "total": 2536257,
+    "items": [
+      {
+        "id": null,
+        "title": "Deviation Inequalities on Largest Eigenvalues",
+        "doi": "10.1007/978-3-540-72053-9_10",
+        "year": null,
+        "authors": [
+          "M. Ledoux"
+        ],
+        "cited_by_count": null,
+        "source": [
+          "Lecture Notes in Mathematics",
+          "Geometric Aspects of Functional Analysis"
+        ],
+        "type": "book-chapter",
+        "locations": null,
+        "abstract": null
+      },
+      {
+        "id": null,
+        "title": "Inequalities for Graph Eigenvalues",
+        "doi": "10.1017/cbo9781316341308",
+        "year": {
+          "date-parts": [
+            [
+              2015,
+              7,
+              23
+            ]
+          ]
+        },
+        "authors": [
+          "Zoran Stanić"
+        ],
+        "cited_by_count": null,
+        "source": null,
+        "type": "monograph",
+        "locations": null,
+        "abstract": "<jats:p>Written for mathematicians working with the theory of graph spectra, this book explores more than 400 inequalities for eigenvalues of the six matrices associated with finite simple graphs: the adjacency matrix, Laplacian matrix, signless Laplacian matrix, normalized Laplacian matrix, Seidel matrix, and distance matrix. The book begins with a brief survey of the main results and selected applications to related topics, including chemistry, physics, biology, computer science, and control theory. The author then proceeds to detail proofs, discussions, comparisons, examples, and exercises. Each chapter ends with a brief survey of further results. The author also points to open problems and gives ideas for further reading.</jats:p>"
+      },
+      {
+        "id": null,
+        "title": "The largest two Laplacian eigenvalues of a graph",
+        "doi": "10.1080/03081080310001649565",
+        "year": {
+          "date-parts": [
+            [
+              2004,
+              11
+            ]
+          ]
+        },
+        "authors": [
+          "Kinkar Ch. Das *"
+        ],
+        "cited_by_count": null,
+        "source": [
+          "Linear and Multilinear Algebra"
+        ],
+        "type": "journal-article",
+        "locations": null,
+        "abstract": null
+      },
+      {
+        "id": null,
+        "title": "On the two largest distance eigenvalues of graph powers",
+        "doi": "10.1016/j.ipl.2016.11.008",
+        "year": {
+          "date-parts": [
+            [
+              2017,
+              3
+            ]
+          ]
+        },
+        "authors": [
+          "Rundan Xing",
+          "Bo Zhou"
+        ],
+        "cited_by_count": null,
+        "source": [
+          "Information Processing Letters"
+        ],
+        "type": "journal-article",
+        "locations": null,
+        "abstract": null
+      },
+      {
+        "id": null,
+        "title": "Quadratic interval of eigenvalues of the transposition graph",
+        "doi": "10.1016/j.disc.2026.115116",
+        "year": {
+          "date-parts": [
+            [
+              2026,
+              9
+            ]
+          ]
+        },
+        "authors": [
+          "Cheng Yeaw Ku",
+          "Leyou Xu"
+        ],
+        "cited_by_count": null,
+        "source": [
+          "Discrete Mathematics"
+        ],
+        "type": "journal-article",
+        "locations": null,
+        "abstract": null
+      },
+      {
+        "id": null,
+        "title": "Nordhaus–Gaddum type inequalities for the two largest Laplacian eigenvalues",
+        "doi": "10.1016/j.dam.2019.04.005",
+        "year": {
+          "date-parts": [
+            [
+              2019,
+              8
+            ]
+          ]
+        },
+        "authors": [
+          "Rodrigo Grijó",
+          "Leonardo de Lima",
+          "Carla Oliveira",
+          "Guilherme Porto",
+          "Vilmar Trevisan"
+        ],
+        "cited_by_count": null,
+        "source": [
+          "Discrete Applied Mathematics"
+        ],
+        "type": "journal-article",
+        "locations": null,
+        "abstract": null
+      },
+      {
+        "id": null,
+        "title": "Inequalities between Dirichlet and Neumann Eigenvalues",
+        "doi": "10.1007/978-3-642-83743-2_13",
+        "year": {
+          "date-parts": [
+            [
+              1989
+            ]
+          ]
+        },
+        "authors": [
+          "Howard A. Levine",
+          "Hans F. Weinberger"
+        ],
+        "cited_by_count": null,
+        "source": [
+          "Analysis and Continuum Mechanics"
+        ],
+        "type": "book-chapter",
+        "locations": null,
+        "abstract": null
+      },
+      {
+        "id": null,
+        "title": "Inequalities between dirichlet and Neumann eigenvalues",
+        "doi": "10.1007/bf00279862",
+        "year": {
+          "date-parts": [
+            [
+              1986
+            ]
+          ]
+        },
+        "authors": [
+          "Howard A. Levine",
+          "Hans F. Weinberger"
+        ],
+        "cited_by_count": null,
+        "source": [
+          "Archive for Rational Mechanics and Analysis"
+        ],
+        "type": "journal-article",
+        "locations": null,
+        "abstract": null
+      },
+      {
+        "id": null,
+        "title": "Nordhaus-Gaddum Type Inequalities for the $k$th Largest Laplacian Eigenvalues",
+        "doi": "10.37236/12008",
+        "year": {
+          "date-parts": [
+            [
+              2024,
+              2,
+              9
+            ]
+          ]
+        },
+        "authors": [
+          "Wen-Jun Li",
+          "Ji-Ming Guo"
+        ],
+        "cited_by_count": null,
+        "source": [
+          "The Electronic Journal of Combinatorics"
+        ],
+        "type": "journal-article",
+        "locations": null,
+        "abstract": "<jats:p>Let $G$ be a simple connected graph and $\\mu_1(G) \\geq \\mu_2(G) \\geq \\cdots \\geq \\mu_n(G)$ be the Laplacian eigenvalues of $G$. Let $\\overline{G}$ be the complement of $G$. Einollahzadeh et al.[J. Combin. Theory Ser. B, 151(2021), 235–249] proved that $\\mu_{n-1}(G)+\\mu_{n-1}(\\overline{G})\\geq 1$. Grijò et al. [Discrete Appl. Math., 267(2019), 176–183] conjectured that $\\mu_{n-2}(G)+\\mu_{n-2}(\\overline{G})\\geq 2$ for any graph and proved it to be true for some graphs. In this paper, we prove $\\mu_{n-2}(G)+\\mu_{n-2}(\\overline{G})\\geq 2$ is true for some new graphs. Furthermore, we propose a more general conjecture that $\\mu_k(G)+\\mu_k(\\overline{G})\\geq n-k$ holds for any graph $G$, with equality if and only if $G$ or $\\overline{G}$ is isomorphic to $K_{n-k}\\vee H$, where $H$ is a disconnected graph on $k$ vertices and has at least $n-k+1$ connected components. And we prove that it is true for $k\\leq \\frac{n+1}{2}$, for unicyclic graphs, bicyclic graphs, threshold graphs, bipartite graphs, regular graphs, complete multipartite graphs and c-cyclic graphs when $n\\geq 2c+8$.</jats:p>"
+      },
+      {
+        "id": null,
+        "title": "Upper bounds for the largest eigenvalues of a bipartite graph",
+        "doi": "10.13001/1081-3810.1647",
+        "year": {
+          "date-parts": [
+            [
+              2013,
+              1,
+              1
+            ]
+          ]
+        },
+        "authors": [
+          "Jorma Merikoski",
+          "Ravinder Kumar",
+          "Ram Rajput"
+        ],
+        "cited_by_count": null,
+        "source": [
+          "The Electronic Journal of Linear Algebra"
+        ],
+        "type": "journal-article",
+        "locations": null,
+        "abstract": null
+      }
+    ]
+  }
+}

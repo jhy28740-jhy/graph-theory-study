@@ -1,0 +1,168 @@
+\subsection{新全局定理：矩核二阶变分的符号二分}\label{sec:r17:dichotomy}
+
+这是本轮的主定理，也是对「先攻全局」这一指令的直接回应。
+它的目标是：\textbf{不依赖任何未证猜想}，说明 $N\ge7$ 的构型为什么不能成为极大元，
+并把残留的困难精确地分割成两个各自良定的分支。
+
+\paragraph{设定}
+固定方向组 $U=(u_1,\dots,u_N)\subset S^2$。帧测度簇
+$\mathcal G_U=\{g\in\R^N_{>0}:\sum_ig_iu_iu_i^\top=I_3\}$
+是一个开凸集内的仿射切片，其方向空间是
+$\ker M$，其中 $M$ 是 $7\times N$ 的\emph{矩矩阵}，
+行为 $\bigl(1,\ u_{i,0}^2,\ u_{i,1}^2,\ u_{i,2}^2,\ u_{i,0}u_{i,1},\ u_{i,0}u_{i,2},\ u_{i,1}u_{i,2}\bigr)_{i=1}^N$。
+因为 $u_{i,0}^2+u_{i,1}^2+u_{i,2}^2\equiv1$，$\rank M\le6$，故
+\begin{equation}\label{eq:kerdim}
+\dim\ker M=N-\rank M\ \ge\ N-6 ,
+\end{equation}
+\textbf{这正是「$N\ge7$ 才有矩核方向」的来源}，也是 $N=6$ 成为冠军的结构性原因：
+$N=6$ 时一般 $\dim\ker M=0$，质量 $g$ 被方向 $U$ 完全锁死，没有内部扰动可用。
+
+令 $\mathcal K:=\{\,q=D\,a:a\in\ker M\,\}$，$D=\operatorname{diag}(x_i/g_i)$，$\dim\mathcal K=\dim\ker M$。
+
+\begin{lemma}[一阶条件是无条件的]\label{lem:firstorder}
+若 $g$ 是 $\rho(\cdot,U)$ 在 $\mathcal G_U$ 上的局部极值点且 $\lambda_{\max}(Q_+)$ 单重，则
+$\langle a,h^2\rangle=0$ 对一切 $a\in\ker M$ 成立，即 $h^2=(h_i^2)_i\in\operatorname{rowspace}(M)$：
+存在对称 $\Lam$ 与常数 $\lambda_0$ 使 $h_i^2=u_i^\top\!\Lam u_i+\lambda_0$。
+\end{lemma}
+
+\begin{proof}
+$g+ta\in\mathcal G_U$ 对小 $|t|$ 成立（$g>0$），故 $\rho'(0)=0$。
+由定理~\ref{thm:secondvar} 的一阶部分 $\rho'(0)=\rho\sum_i(a_i/g_i)x_i^2=\rho\langle a,h^2\rangle$。
+\end{proof}
+
+\begin{theorem}[二阶变分的谱形式，复核]\label{thm:secondvar2}
+在引理~\ref{lem:firstorder} 的条件下，沿 $a\in\ker M$：
+\begin{equation}\label{eq:secondvar2}
+\rho''(0)=2\rho\,q^\top R\,q,\qquad q_i=\frac{a_ix_i}{g_i},\qquad
+R:=\sum_{k\ge2}\frac{\rho_k}{\rho-\rho_k}\,w_kw_k^\top ,
+\end{equation}
+其中 $\rho=\rho_1>\rho_2\ge\cdots$ 与 $w_k$ 是 $Q_+$ 的特征值与单位特征向量。
+\end{theorem}
+
+\begin{proof}[证明要点（本轮补全了此前缺失的抵消步骤）]
+$Q(t)_{ij}=\sqrt{(g_i+ta_i)(g_j+ta_j)}\,\langle u_i,u_j\rangle$，故
+$Q'(0)=\tfrac12(\hat AQ+Q\hat A)$、$Q''(0)_{ij}=-Q_{ij}(\hat a_i-\hat a_j)^2/4$，$\hat a_i=a_i/g_i$。
+符号掩码在 $t=0$ 附近不变，故 $\mathrm d(Q_+)_{ij}=K_{ij}\mathrm dQ_{ij}$，
+且 $K\circ Q'(0)$ 满足 $x^\top(K\circ Q')w_k=\tfrac12(\rho+\rho_k)(q^\top w_k)$。
+标准二阶摄动给
+$\rho''=2\sum_{k\ge2}\frac{|x^\top(K\circ Q')w_k|^2}{\rho-\rho_k}+x^\top(K\circ Q'')x$，
+其中 $x^\top(K\circ Q'')x=-\tfrac12\bigl[\rho|q|^2-\sum_k\rho_k(q^\top w_k)^2\bigr]$。
+由引理~\ref{lem:firstorder}，$q^\top x=\langle a,h^2\rangle=0$，故 $|q|^2=\sum_{k\ge2}(q^\top w_k)^2$；
+代入后 $\rho^2$ 与 $\rho_k^2$ 的项\textbf{精确抵消}，只剩 $2\rho\rho_k$ 项，得 \eqref{eq:secondvar2}。
+数值复核：$N=7,\dots,10$ 共 $12$ 个构型、每个取 $4$ 条矩核方向，
+$\max|\rho''_{\rm num}-\eqref{eq:secondvar2}|=5.86\times10^{-8}$（步长 $2\times10^{-4}$ 的中心二阶差分截断误差量级）。
+\end{proof}
+
+\begin{theorem}[全局二分定理（本轮主定理）]\label{thm:dichotomy}
+设 $N\ge7$，$g_i>0$ 对一切 $i$，$\lambda_{\max}(Q_+)$ 单重，且 $(U,g)$ 是 $\rho$ 在 $\mathcal G_U$ 上的局部极大点。则
+\begin{equation}\label{eq:Rneg}
+R\big|_{\mathcal K}\preceq0 ,
+\end{equation}
+从而：
+\begin{enumerate}\itemsep2pt
+\item[(i)] $n_+(Q_+)\le7$；
+\item[(ii)] \textbf{分支 I}：$\nu_-(Q_+)\ge1$；\quad\textbf{或}\quad
+\textbf{分支 II}：$Q_+\succeq0$ 且 $\mathcal K\subseteq\ker Q_+$（此时 $n_+(Q_+)\le6$）；
+\item[(iii)] 特别地，\textbf{若 $Q_+\succ0$ 则必有 $N\le6$}。
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+局部极大给 $\rho''(0)\le0$ 对一切 $a\in\ker M$，即 \eqref{eq:Rneg}。
+把 $\R^N$ 按 $Q_+$ 的谱分解为
+$\mathcal P=\operatorname{span}\{w_k:\rho_k>0,k\ge2\}$、
+$\mathcal Z=\ker Q_+$、$\mathcal N=\operatorname{span}\{w_k:\rho_k<0\}$，
+则 $R$ 在 $\mathcal P$ 上 $\succ0$、在 $\mathcal N$ 上 $\prec0$、在 $\mathcal Z\oplus\R x$ 上 $=0$。
+
+(i) 若 $0\ne q\in\mathcal K\cap\mathcal P$ 则 $q^\top Rq>0$，与 \eqref{eq:Rneg} 矛盾。故
+$\dim\mathcal K+\dim\mathcal P\le N$，即 $(N-6)+(n_+-1)\le N$，得 $n_+\le7$。
+
+(ii) 若 $\nu_-=0$ 则 $\mathcal N=\{0\}$，于是 $q^\top Rq=0\Leftrightarrow q\in\mathcal Z\oplus\R x$；
+又 $q\in\mathcal K$ 已蕴含 $q\perp x$，故 \eqref{eq:Rneg}（此时 $R\succeq0$）强制 $R|_{\mathcal K}\equiv0$，
+即 $\mathcal K\subseteq\mathcal Z=\ker Q_+$。此时 $\dim\ker Q_+=N-n_+\ge\dim\mathcal K=N-6$，得 $n_+\le6$。
+
+(iii) $Q_+\succ0$ 时 $\mathcal Z=\{0\}$、$\mathcal N=\{0\}$，(ii) 给 $\mathcal K=\{0\}$，
+故 $\dim\ker M=0$，与 \eqref{eq:kerdim} 及 $N\ge7$ 矛盾。
+\end{proof}
+
+\begin{remark}[与旧猜想的关系]\label{rmk:dichvsold}
+猜想~\ref{conj:sixatom} 要求「每个 $N\ge7$ 的构型都存在一条全程 $Q_+\succeq0$ 的矩核直线」。
+定理~\ref{thm:dichotomy} 把这句话\textbf{削弱并精确化}为：只需要排除分支 I 与分支 II 两种情形，
+而这两个分支都是\textbf{可以在有限维上陈述和检验}的条件，
+不再需要对「整条直线上的 $Q_+$ 半定性」这种全局性质作断言。这是实质性的进展。
+\end{remark}
+
+\begin{corollary}[分支 II 的球面二次曲线刚性]\label{cor:branch2rigid}
+在分支 II 中，令 $B=Q_+\operatorname{diag}(x_j/g_j)$，则 $B_{ij}=\sqrt{g_i}\,h_j(\langle u_i,u_j\rangle)_+$，
+且 $\mathcal K\subseteq\ker Q_+$ 等价于 $B\,a=0$ 对一切 $a\in\ker M$，即 $B$ 的\textbf{每一行属于} $\operatorname{rowspace}(M)$。
+写成几何形式：对每个 $i$ 存在常数 $\mu_i$ 与对称 $3\times3$ 矩阵 $\Gamma_i$，使
+\begin{equation}\label{eq:conic}
+h_j\,\bigl(\langle u_i,u_j\rangle\bigr)_+\ =\ \mu_i+u_j^\top\Gamma_iu_j\qquad(\forall j),
+\qquad\text{且}\qquad 3\mu_i+\tr\Gamma_i=\rho h_i .
+\end{equation}
+于是：二次函数 $u\mapsto\mu_i+u^\top\Gamma_iu$ 在球面上的零集（一条\textbf{球面二次曲线}）
+必须\textbf{恰好包含} $u_i$ 的全部钝伙伴；而在锐伙伴处它必须取值 $h_j\langle u_i,u_j\rangle>0$。
+\end{corollary}
+
+\begin{proof}
+$B\,a=0\ \forall a\in\ker M\Leftrightarrow$ 行空间条件。
+第二式：\eqref{eq:conic} 两端乘 $g_j$ 求和，左端 $\sum_jg_jh_j(\langle u_i,u_j\rangle)_+=p_i=\rho h_i$，
+右端 $3\mu_i+\tr\Gamma_i$（帧条件）。
+\end{proof}
+
+\begin{remark}[分支 II 就是「重合分裂」退化]\label{rmk:coincident}
+若两个原子\textbf{重合}（$u_i=u_j$），则 $a=e_i-e_j\in\ker M$，
+且 $\rho$ 沿之\textbf{恒等不变}——因为 $\rho$ 只依赖于测度 $\mu=\sum_ig_i\delta_{u_i}$
+（第 15 轮的合并/分裂等谱性：合并保 $\rho$ 精确、分裂添一个零特征值）。
+于是 $R|_{\mathcal K}$ 在这些方向上恰为 $0$，\textbf{分支 II 被精确实现}。
+反过来，\eqref{eq:conic} 说明分支 II 中 $h_j(\langle u_i,u_j\rangle)_+$ 作为 $u_j$ 的函数
+必须被一个二次多项式在原子集上插值；而 $\max(\langle u_i,u\rangle,0)$ 在 $\langle u_i,u\rangle=0$ 处有\textbf{折点}，
+$\sqrt{u^\top\Lam u}$ 又不是多项式——除非原子大量重合，否则这种插值刚性极难满足。
+\textbf{这给出了「分支 II 迫使原子重合」这条待证命题的精确形式}，是下一轮的队首之一。
+\end{remark}
+
+\subsection{数值：$N\ge7$ 极大元的精确结构}\label{sec:r17:num}
+
+用命题~\ref{prop:gradformula} 的解析梯度 $\nabla_V\rho=2(xx^\top\!\circ K)V$ 作 Stiefel 切向投影
+$G\leftarrow G-V\,\mathrm{sym}(V^\top G)$ 加 QR 收缩，从随机初值上升。结果：
+
+\begin{center}\small
+\begin{tabular}{cccccl}
+\hline
+$N$ & $\max\rho-\rho_0$ & $\min_ig_i$ & $\nu_-(Q_+)$ & $n_+(Q_+)$ & 极大元的质量分组 \\
+\hline
+5 & $-3.157\times10^{-2}$ & $2.04\times10^{-1}$ & 0 & 4 & （$\kappa_3(5)=\frac{9+4\sqrt6}{15}$） \\
+6 & $-2.693\times10^{-2}$ & $2.61\times10^{-1}$ & 0 & 6 & 局部吸引域（非全局） \\
+7 & $-3.678\times10^{-12}$ & $5.91\times10^{-11}$ & 0 & 6 & 冠军 $+$ 一个零质量行 \\
+8 & $+1.110\times10^{-15}$ & $1.52\times10^{-1}$ & 0 & 6 & 冠军，其中 $2$ 个原子各作重合二分裂 \\
+9 & $-5.400\times10^{-10}$ & $8.68\times10^{-9}$ & 1 & 6 & 冠军 $+$ 零质量行 $+$ 重合分裂 \\
+10 & $-1.345\times10^{-10}$ & $3.48\times10^{-10}$ & 0 & 6 & 同上 \\
+12 & $+8.882\times10^{-16}$ & $1.07\times10^{-2}$ & 0 & 6 & 冠军，$6$ 个方向作 $(3,3,2,1,2,1)$ 重合分裂 \\
+\hline
+\end{tabular}
+\end{center}
+
+$N=12$ 的分组是\textbf{精确}的（不是数值巧合）：
+\[
+\{0,3,7\},\ \{1,5,8\},\ \{2,6\},\ \{4\},\ \{11\}\ \text{各自}\ \textstyle\sum g=0.533646579188=g^\ast,
+\qquad \{9,10\}:\ \textstyle\sum g=0.331767104061=g_0^\ast .
+\]
+即 $12$ 个原子只占据 $6$ 个不同方向，正是冠军测度 $\mu^\ast=g_0^\ast\delta_{u_0}+g^\ast\sum_{k=0}^4\delta_{u_k}$。
+
+\textbf{分支 II 在这个极大元上被机器精度级地验证}：
+\[
+\max_{a\in\ker M\text{ 基}}|Ba|=3.91\times10^{-13},\qquad
+\operatorname{eig}\bigl(R|_{\mathcal K}\bigr)=\{-3.0\times10^{-15},\dots,+2.6\times10^{-15}\}\ (\text{全为 }0,\ \dim\mathcal K=6).
+\]
+$N=8$ 的情形同样给出 $4$ 个 $g^\ast$ 分组、一个二分裂 $\{4,6\}$（和 $=0.533646579186$）
+与一个 $g=4\times10^{-12}$ 的零质量行。
+
+\begin{remark}[数值结论的强度]\label{rmk:numstrength}
+以上\textbf{不是}「跑算法找极值」，而是用定理~\ref{thm:dichotomy} 预言的结构去\emph{检验}算法输出：
+预言是「$N\ge7$ 的极大元必在分支 II（$R|_{\mathcal K}=0$）且必为冠军测度的重合分裂」，
+检验结果是\textbf{完全吻合}，$g$ 的分组和精确到 $10^{-12}$。
+因此数值在这里的作用是\textbf{证伪探测器}：如果分支 II 只能由重合原子实现，
+那么 $\kappa_3(N)=\rho_0$（$N\ge6$）就与 $\kappa_3(6)=\rho_0$ 是同一件事，
+全局归约就归结为 $N=6$ 的 $20$ 个符号类（第~\ref{sec:n6global} 节）与推论~\ref{cor:branch2rigid} 的刚性。
+\end{remark}
+

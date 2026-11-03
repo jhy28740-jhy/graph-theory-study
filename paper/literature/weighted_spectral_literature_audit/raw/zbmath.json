@@ -1,0 +1,10 @@
+{
+  "key": "zbmath",
+  "source": "zbMATH Open",
+  "query": "ti:\"Quadratic inequalities between the largest eigenvalues\"",
+  "url": "https://zbmath.org/?q=ti%3A%22Quadratic%20inequalities%20between%20the%20largest%20eigenvalues%22",
+  "kind": "html",
+  "retrieved_utc": "2026-10-14T09:35:58.243312+00:00",
+  "error": "<HTTPError 403: 'Forbidden'>",
+  "http_status": 403
+}

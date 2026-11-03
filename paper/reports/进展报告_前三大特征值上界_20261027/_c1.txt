@@ -1,0 +1,1794 @@
+xelatex: security risk: running with elevated privileges
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(进展报告_前三大特征值之和的精确上界.tex
+LaTeX2e <2026-06-01>
+L3 programming layer <2026-08-10>
+(C:\tmp\old-miktex-isolated\install\tex/latex/ctex\ctexart.cls
+(C:\tmp\old-miktex-isolated\install\tex/latex/ctex/config\ctexbackend.cfg)
+(C:\tmp\old-miktex-isolated\install\tex/latex/l3kernel\expl3.sty
+(C:\tmp\old-miktex-isolated\install\tex/latex/l3kernel\l3backend-xetex.def))
+Document Class: ctexart 2026/08/11 v2.6.5 Chinese adapter for class article (CT
+EX)
+(C:\tmp\old-miktex-isolated\install\tex/latex/ctex\ctexhook.sty)
+(C:\tmp\old-miktex-isolated\install\tex/latex/ctex\ctexpatch.sty)
+(C:\tmp\old-miktex-isolated\install\tex/latex/base\fix-cm.sty
+(C:\tmp\old-miktex-isolated\install\tex/latex/base\ts1enc.def))
+(C:\tmp\old-miktex-isolated\install\tex/latex/ctex/config\ctexopts.cfg)
+(C:\tmp\old-miktex-isolated\install\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\tmp\old-miktex-isolated\install\tex/latex/base\size11.clo))
+(C:\tmp\old-miktex-isolated\install\tex/latex/ctex/engine\ctex-engine-xetex.def
+(C:\tmp\old-miktex-isolated\install\tex/xelatex/xecjk\xeCJK.sty
+(C:\tmp\old-miktex-isolated\install\tex/latex/l3packages/xtemplate\xtemplate.st
+y) (C:\tmp\old-miktex-isolated\install\tex/latex/fontspec\fontspec.sty
+(C:\tmp\old-miktex-isolated\install\tex/latex/fontspec\fontspec-xetex.sty
+(C:\tmp\old-miktex-isolated\install\tex/latex/base\fontenc.sty)
+(C:\tmp\old-miktex-isolated\install\tex/latex/fontspec\fontspec.cfg)))
+(C:\tmp\old-miktex-isolated\install\tex/xelatex/xecjk\xeCJK.cfg)))
+(C:\tmp\old-miktex-isolated\install\tex/latex/zhnumber\zhnumber.sty
+(C:\tmp\old-miktex-isolated\install\tex/latex/zhnumber\zhnumber-utf8.cfg))
+(C:\tmp\old-miktex-isolated\install\tex/latex/ctex/scheme\ctex-scheme-chinese-a
+rticle.def
+(C:\tmp\old-miktex-isolated\install\tex/latex/ctex/config\ctex-name-utf8.cfg))
+(C:\tmp\old-miktex-isolated\install\tex/latex/ctex/fontset\ctex-fontset-windows
+.def)) (C:\tmp\old-miktex-isolated\install\tex/latex/ctex/config\ctex.cfg)
+(C:\tmp\old-miktex-isolated\install\tex/latex/amsmath\amsmath.sty
+For additional information on amsmath, use the `?' option.
+(C:\tmp\old-miktex-isolated\install\tex/latex/amsmath\amstext.sty
+(C:\tmp\old-miktex-isolated\install\tex/latex/amsmath\amsgen.sty))
+(C:\tmp\old-miktex-isolated\install\tex/latex/amsmath\amsbsy.sty)
+(C:\tmp\old-miktex-isolated\install\tex/latex/amsmath\amsopn.sty))
+(C:\tmp\old-miktex-isolated\install\tex/latex/amsfonts\amssymb.sty
+(C:\tmp\old-miktex-isolated\install\tex/latex/amsfonts\amsfonts.sty))
+(C:\tmp\old-miktex-isolated\install\tex/latex/amscls\amsthm.sty)
+(C:\tmp\old-miktex-isolated\install\tex/latex/mathtools\mathtools.sty
+(C:\tmp\old-miktex-isolated\install\tex/latex/graphics\keyval.sty)
+(C:\tmp\old-miktex-isolated\install\tex/latex/tools\calc.sty)
+(C:\tmp\old-miktex-isolated\install\tex/latex/mathtools\mhsetup.sty))
+(C:\tmp\old-miktex-isolated\install\tex/latex/booktabs\booktabs.sty)
+(C:\tmp\old-miktex-isolated\install\tex/latex/tools\longtable.sty)
+(C:\tmp\old-miktex-isolated\install\tex/latex/tools\array.sty)
+(C:\tmp\old-miktex-isolated\install\tex/latex/geometry\geometry.sty
+(C:\tmp\old-miktex-isolated\install\tex/generic/iftex\ifvtex.sty
+(C:\tmp\old-miktex-isolated\install\tex/generic/iftex\iftex.sty))
+(C:\tmp\old-miktex-isolated\install\tex/latex/geometry\geometry.cfg))
+(C:\tmp\old-miktex-isolated\install\tex/latex/enumitem\enumitem.sty)
+(C:\tmp\old-miktex-isolated\install\tex/latex/xcolor\xcolor.sty
+(C:\tmp\old-miktex-isolated\install\tex/latex/graphics-cfg\color.cfg)
+(C:\tmp\old-miktex-isolated\install\tex/latex/graphics-def\xetex.def)
+(C:\tmp\old-miktex-isolated\install\tex/latex/graphics\mathcolor.ltx))
+(C:\tmp\old-miktex-isolated\install\tex/latex/hyperref\hyperref.sty
+(C:\tmp\old-miktex-isolated\install\tex/latex/kvsetkeys\kvsetkeys.sty)
+(C:\tmp\old-miktex-isolated\install\tex/generic/kvdefinekeys\kvdefinekeys.sty)
+(C:\tmp\old-miktex-isolated\install\tex/generic/pdfescape\pdfescape.sty
+(C:\tmp\old-miktex-isolated\install\tex/generic/ltxcmds\ltxcmds.sty)
+(C:\tmp\old-miktex-isolated\install\tex/generic/pdftexcmds\pdftexcmds.sty
+(C:\tmp\old-miktex-isolated\install\tex/generic/infwarerr\infwarerr.sty)))
+(C:\tmp\old-miktex-isolated\install\tex/latex/hycolor\hycolor.sty)
+(C:\tmp\old-miktex-isolated\install\tex/latex/hyperref\nameref.sty
+(C:\tmp\old-miktex-isolated\install\tex/latex/refcount\refcount.sty)
+(C:\tmp\old-miktex-isolated\install\tex/generic/gettitlestring\gettitlestring.s
+ty (C:\tmp\old-miktex-isolated\install\tex/latex/kvoptions\kvoptions.sty)))
+(C:\tmp\old-miktex-isolated\install\tex/latex/etoolbox\etoolbox.sty)
+(C:\tmp\old-miktex-isolated\install\tex/generic/stringenc\stringenc.sty)
+(C:\tmp\old-miktex-isolated\install\tex/latex/hyperref\pd1enc.def)
+(C:\tmp\old-miktex-isolated\install\tex/generic/intcalc\intcalc.sty)
+(C:\tmp\old-miktex-isolated\install\tex/latex/hyperref\puenc.def)
+(C:\tmp\old-miktex-isolated\install\tex/latex/url\url.sty)
+(C:\tmp\old-miktex-isolated\install\tex/generic/bitset\bitset.sty
+(C:\tmp\old-miktex-isolated\install\tex/generic/bigintcalc\bigintcalc.sty)))
+(C:\tmp\old-miktex-isolated\install\tex/latex/hyperref\hxetex.def
+(C:\tmp\old-miktex-isolated\install\tex/latex/rerunfilecheck\rerunfilecheck.sty
+
+(C:\tmp\old-miktex-isolated\install\tex/generic/uniquecounter\uniquecounter.sty
+))) (进展报告_前三大特征值之和的精确上界.aux)
+(C:\tmp\old-miktex-isolated\install\tex/latex/graphics\graphicx.sty
+(C:\tmp\old-miktex-isolated\install\tex/latex/graphics\graphics.sty
+(C:\tmp\old-miktex-isolated\install\tex/latex/graphics\trig.sty)
+(C:\tmp\old-miktex-isolated\install\tex/latex/graphics-cfg\graphics.cfg)))
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+(进展报告_前三大特征值之和的精确上界.out) (进展报告_前三大特征值之和的精确上界.out)
+(C:\tmp\old-miktex-isolated\install\tex/latex/amsfonts\umsa.fd)
+miktex-dvipdfmx: security risk: running with elevated privileges
+(C:\tmp\old-miktex-isolated\install\tex/latex/amsfonts\umsb.fd) [1] [2]
+[3] [4] (进展报告_前三大特征值之和的精确上界.toc [5] [6] [7] [8] [9]) [10] [11] [12]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 416.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\|' on input line 416.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\|' on input line 416.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 416.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\le' on input line 416.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\gamma' on input line 416.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 416.
+
+[13] [14]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 508.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 508.
+
+[15]
+
+LaTeX Font Warning: Font shape `TU/SimSun(0)/b/it' undefined
+(Font)              using `TU/SimSun(0)/b/n' instead on input line 611.
+
+[16] [17] [18]
+Overfull \hbox (109.09982pt too wide) detected at line 803
+[] \OMS/cmsy/m/n/10.95 j\OML/cmm/m/it/10.95 T[]\OMS/cmsy/m/n/10.95 j \OT1/cmr/m
+/n/10.95 = 0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 313572464368744174  ([]\OML
+/cmm/m/it/10.95 T[][]\OT1/cmr/m/n/10.95 (1\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10
+.95 2))\OML/cmm/m/it/10.95 ;  \OMS/cmsy/m/n/10.95 k\OML/cmm/m/it/10.95 T\OMS/cm
+sy/m/n/10.95 k[] \OT1/cmr/m/n/10.95 = [][] \OML/cmm/m/it/10.95 m[]T[][][] \OT1/
+cmr/m/n/10.95 = 2\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 521337009637\OML/cmm/m
+/it/10.95 :
+[19] [20] [21]
+Overfull \hbox (16.3799pt too wide) in paragraph at lines 945--949
+[][] [][]\OMS/cmsy/m/n/10.95 h\OT1/cmr/m/n/10.95 ^^F \OMS/cmsy/m/n/10.95 ^^L \O
+ML/cmm/m/it/10.95 vv[]; P\OMS/cmsy/m/n/10.95 i \OT1/cmr/m/n/10.95 = [][] ^^C[](
+^^F \OMS/cmsy/m/n/10.95 ^^L \OML/cmm/m/it/10.95 vv[]\OT1/cmr/m/n/10.95 )$\TU/Si
+mSun(0)/m/n/10.95 ，|  末 步 用 \TU/lmr/m/n/10.95 Ky Fan \TU/SimSun(0)/m/n/10.95 极 
+大 化 $[][]\OMS/cmsy/m/n/10.95 h\OML/cmm/m/it/10.95 C; P\OMS/cmsy/m/n/10.95 i \OT
+1/cmr/m/n/10.95 =
+[22]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1001.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1001.
+
+[23] [24] [25]
+Overfull \hbox (6.55148pt too wide) in paragraph at lines 1206--1208
+[]$\OML/cmm/m/it/10.95 T \OMS/cmsy/m/n/10.95 ^^W \OT1/cmr/m/n/10.95 0$\TU/SimSu
+n(0)/m/it/10.95 ，| $\OML/cmm/m/it/10.95 T \OMS/cmsy/m/n/10.95 ^^@ \OT1/cmr/m/n/
+10.95 ^^F[] \OMS/cmsy/m/n/10.95 ^^W \OT1/cmr/m/n/10.95 0$\TU/SimSun(0)/m/it/10.
+95 ，|  且 $[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 T\OT1/cmr/m/n/10.95 ) = \OM
+L/cmm/m/it/10.95 ^^Z[][]$\TU/SimSun(0)/m/it/10.95 ；|  数 值 为 $\OML/cmm/m/it/10.9
+5 c \OT1/cmr/m/n/10.95 = 0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 9016477597477
+553$\TU/SimSun(0)/m/it/10.95 ，| $\OML/cmm/m/it/10.95 d \OT1/cmr/m/n/10.95 = 0\O
+ML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 8343546013722100$\TU/SimSun(0)/m/it/10.95
+ ，|
+
+Overfull \hbox (4.14345pt too wide) detected at line 1223
+[] \OT1/cmr/m/n/10.95 = [] \OML/cmm/m/it/10.95 ;  ^^U[] \OT1/cmr/m/n/10.95 = \O
+ML/cmm/m/it/10.95 ^^Z[] \OT1/cmr/m/n/10.95 + 2\OML/cmm/m/it/10.95 d [] \OT1/cmr
+/m/n/10.95 72[] + 2\OML/cmm/m/it/10.95 e [] \OT1/cmr/m/n/10.95 144[]\OML/cmm/m/
+it/10.95 ;  ^^U[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 ^^Z[] \OT1/cmr/m/n/1
+0.95 + 2\OML/cmm/m/it/10.95 d [] \OT1/cmr/m/n/10.95 144[] + 2\OML/cmm/m/it/10.9
+5 e [] \OT1/cmr/m/n/10.95 72[]\OML/cmm/m/it/10.95 ;
+[26] [27]
+Overfull \hbox (7.07126pt too wide) in paragraph at lines 1312--1318
+[][]\TU/SimSun(0)/b/n/10.95 注 \TU/lmr/bx/n/10.95 3.32 \TU/lmr/m/n/10.95 (class2
+ \TU/SimSun(0)/m/n/10.95 与 \TU/lmr/m/n/10.95 class3\TU/SimSun(0)/m/n/10.95 ：|  
+数 值 变 成 定 理\TU/lmr/m/n/10.95 )\TU/lmr/bx/n/10.95 . []\TU/SimSun(0)/m/n/10.95 第 
+[][]\TU/lmr/m/n/10.95 3.9[][] \TU/SimSun(0)/m/n/10.95 节 报 告 的 两 法 逐 位 一 致 值 \TU
+/lmr/m/n/10.95 class2 $\OT1/cmr/m/n/10.95 = 1\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/
+10.95 236504556084$\TU/SimSun(0)/m/n/10.95 、|
+[28] [29] [30]
+Overfull \hbox (2.98547pt too wide) in paragraph at lines 1482--1485
+\TU/SimSun(0)/m/n/10.95 包 含 性 由 \TU/lmtt/m/n/10.95 sympy \TU/SimSun(0)/m/n/10.9
+5 在 代 数 数 域 $\U/msb/m/n/10.95 Q\OT1/cmr/m/n/10.95 ([]\OML/cmm/m/it/10.95 ; []\O
+T1/cmr/m/n/10.95 )$ \TU/SimSun(0)/m/n/10.95 上 \TU/SimSun(0)/m/it/10.95 精 确 \TU/
+SimSun(0)/m/n/10.95 判 定  |（\TU/lmtt/m/n/10.95 bool(tau_lo < tau < tau_hi) == Tr
+ue\TU/SimSun(0)/m/n/10.95 ） ，|
+
+Overfull \hbox (5.16882pt too wide) in paragraph at lines 1518--1519
+[][]\TU/SimSun(0)/b/n/10.95 注 \TU/lmr/bx/n/10.95 3.39 \TU/lmr/m/n/10.95 (\TU/Si
+mSun(0)/m/n/10.95 穷 举 给 出 的 定 量 分 层\TU/lmr/m/n/10.95 )\TU/lmr/bx/n/10.95 . []\T
+U/SimSun(0)/m/n/10.95 把 $\OT1/cmr/m/n/10.95 115$ \TU/SimSun(0)/m/n/10.95 个 自 洽 
+掩 码 按 $[]\OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10.95 ^^U[]\OT1/cmr/m/n/10.95 (\OML
+/cmm/m/it/10.95 M\OT1/cmr/m/n/10.95 ) \OML/cmm/m/it/10.95 > \OT1/cmr/m/n/10.95 
+0\OMS/cmsy/m/n/10.95 g$ \TU/SimSun(0)/m/n/10.95 分 档  |（$\OML/cmm/m/it/10.95 N \
+OMS/cmsy/m/n/10.95 ^^T \OT1/cmr/m/n/10.95 7$\TU/SimSun(0)/m/n/10.95 ，| \TU/lmtt
+/m/n/10.95 _scan7F.json\TU/SimSun(0)/m/n/10.95 ） ：| 
+[31]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1591.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\le' on input line 1591.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1591.
+
+[32]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1645.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\kappa' on input line 1645.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 1645.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1645.
+
+[33]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1683.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\kappa' on input line 1683.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 1683.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1683.
+
+[34] [35] [36] [37]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1902.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\kappa' on input line 1902.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 1902.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1902.
+
+[38]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1985.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ell' on input line 1985.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 1985.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1985.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1985.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\rho' on input line 1985.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 1985.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1985.
+
+
+Overfull \hbox (7.80183pt too wide) detected at line 1994
+\OML/cmm/m/it/10.95 Q[][] \OT1/cmr/m/n/10.95 = []1\OML/cmm/m/it/10.95 :\OT1/cmr
+/m/n/10.95 384614891548\OML/cmm/m/it/10.95 ;  \OT1/cmr/m/n/10.95 1\OML/cmm/m/it
+/10.95 :\OT1/cmr/m/n/10.95 258722890561 \OMS/cmsy/m/n/10.95 ^^B \OT1/cmr/m/n/10
+.95 5[]\OML/cmm/m/it/10.95 ;  ^^Z[] \OT1/cmr/m/n/10.95 = 1\OML/cmm/m/it/10.95 :
+\OT1/cmr/m/n/10.95 281568196872 \OMS/cmsy/m/n/10.95 2 \OT1/cmr/m/n/10.95 [ 1\OM
+L/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 2587229\OML/cmm/m/it/10.95 ;  \OT1/cmr/m/n
+/10.95 1\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 3846149 ]\OML/cmm/m/it/10.95 ;
+[39]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2034.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\le' on input line 2034.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2034.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2034.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2034.
+
+[40]
+Overfull \hbox (23.35721pt too wide) detected at line 2099
+\OML/cmm/m/it/10.95 Z \OT1/cmr/m/n/10.95 = [][]  0;  []  0;   0  [];   0  [];  
+ 0  [][] \OMS/cmsy/m/n/10.95 2 []\OT1/cmr/m/n/10.95 (5\OML/cmm/m/it/10.95 ; \OT
+1/cmr/m/n/10.95 2)\OML/cmm/m/it/10.95 ;  Q \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/1
+0.95 I[] \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 ZZ[] \OT1/cmr/m/n/10.95 = 
+[] \OML/cmm/m/it/10.95 ;
+[41]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2171.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\le' on input line 2171.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2171.
+
+[42] [43]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2231.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2231.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2231.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2231.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2278.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 2278.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2278.
+
+[44]
+Overfull \hbox (46.86182pt too wide) detected at line 2343
+\OML/cmm/m/it/10.95 a[] \OT1/cmr/m/n/10.95 = [] = 0\OML/cmm/m/it/10.95 :\OT1/cm
+r/m/n/10.95 222718666398339 [] \OML/cmm/m/it/10.95 ;  \OT1/cmr/m/n/10.95 ^^C[](
+\OML/cmm/m/it/10.95 a[]\OT1/cmr/m/n/10.95 ) = [] = [] + [] = 1\OML/cmm/m/it/10.
+95 :\OT1/cmr/m/n/10.95 125991238631895\OML/cmm/m/it/10.95 ;
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2365.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2365.
+
+[45]
+Overfull \hbox (76.24883pt too wide) detected at line 2435
+\OML/cmm/m/it/10.95 ^^T[]\OT1/cmr/m/n/10.95 (5) \OMS/cmsy/m/n/10.95 ^^T [] \OML
+/cmm/m/it/10.95 F\OT1/cmr/m/n/10.95 (^^F) []  \OMS/cmsy/m/n/10.95 ^  []\OML/cmm
+/m/it/10.95 F \OMS/cmsy/m/n/10.95 ^^T \OT1/cmr/m/n/10.95 
+ \OMS/cmsy/m/n/10.95 ^^T \OML/cmm/m/it/10.95 ^^Z[] []  \OMS/cmsy/m/n/10.95 ^  \
+OML/cmm/m/it/10.95 F\OT1/cmr/m/n/10.95 (^^F[]) \OMS/cmsy/m/n/10.95 ^^T [] \OML/
+cmm/m/it/10.95 ^^U[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 B\OT1/cmr/m/n/10.95
+ (\OML/cmm/m/it/10.95 Z\OT1/cmr/m/n/10.95 )) []
+[46]
+Overfull \hbox (49.70116pt too wide) detected at line 2475
+\OML/cmm/m/it/10.95 B\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 Z[]\OT1/cmr/m/n/10
+.95 ) = [] \OML/cmm/m/it/10.95 ;  ^^_[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 
+^^U\OT1/cmr/m/n/10.95 ) = [] = \OML/cmm/m/it/10.95 ^^U[] \OMS/cmsy/m/n/10.95 ^^
+@ \OT1/cmr/m/n/10.95 3\OML/cmm/m/it/10.95 ^^U[] \OT1/cmr/m/n/10.95 + []\OML/cmm
+/m/it/10.95 ^^U[] \OMS/cmsy/m/n/10.95 ^^@ []\OML/cmm/m/it/10.95 ^^U[] \OT1/cmr/
+m/n/10.95 + []\OML/cmm/m/it/10.95 ^^U;
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2493.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2493.
+
+[47]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2548.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2548.
+
+[48]
+Overfull \hbox (56.07927pt too wide) in paragraph at lines 2576--2588
+ [] 
+
+Underfull \hbox (badness 1874) in paragraph at lines 2613--2613
+[]|$\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 366025 = []$ |\TU/SimSun
+(0)/m/n/10 （帧 $\OML/cmm/m/it/10 t \OT1/cmr/m/n/10 =
+
+Underfull \hbox (badness 1852) in paragraph at lines 2614--2614
+[][]\OT1/cmr/m/n/10 (1 \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 t[] \OT1/cmr/m/n/1
+0 + \OML/cmm/m/it/10 t[]W[]\OT1/cmr/m/n/10 )$\TU/SimSun(0)/m/n/10 ，| $\OML/cmm/
+m/it/10 W[] \OT1/cmr/m/n/10 =
+
+Underfull \hbox (badness 5954) in paragraph at lines 2614--2615
+\TU/SimSun(0)/m/n/10 陷 恰 为 $\OT1/cmr/m/n/10 0$\TU/SimSun(0)/m/n/10 ，|  超 出 $\OT
+1/cmr/m/n/10 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 75$\TU/SimSun(0)/m/n/10 ；|  真 值
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2616--2616
+[]|\TU/SimSun(0)/m/n/10 块 界 $\OT1/cmr/m/n/10 ^^I = [] +
+
+Underfull \hbox (badness 10000) in paragraph at lines 2616--2617
+[]|\TU/SimSun(0)/m/n/10 丢 掉 对 角 与 跨 块 的 耦 合；|
+
+Underfull \hbox (badness 10000) in paragraph at lines 2618--2618
+[]|\TU/SimSun(0)/m/n/10 秩 二 块 对 角 优 占 $[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^R\
+OT1/cmr/m/n/10 ) =
+
+Underfull \hbox (badness 10000) in paragraph at lines 2618--2618
+\OT1/cmr/m/n/10 ^^C[](\OML/cmm/m/it/10 D \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 sH\
+OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^R\OT1/cmr/m/n/10 ))$\TU/SimSun(0)/m/n/10 ，| 
+$\OML/cmm/m/it/10 H\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^R\OT1/cmr/m/n/10 ) =
+
+Underfull \hbox (badness 3942) in paragraph at lines 2619--2619
+[]|\TU/SimSun(0)/m/n/10 配 套 下 界 型 $[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^R\OT1/
+cmr/m/n/10 ) = 1 \OMS/cmsy/m/n/10 ^^@
+[49] [50] [51] [52] [53] [54] [55] [56] [57]
+Overfull \hbox (5.65182pt too wide) in paragraph at lines 3084--3095
+[] \TU/SimSun(0)/m/n/10.95 剩 下
+[58] [59]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3208.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3208.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3208.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 3208.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3208.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3218.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 3218.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3218.
+
+[60] [61]
+Overfull \hbox (65.45775pt too wide) in paragraph at lines 3353--3357
+[][]\TU/SimSun(0)/m/n/10.95 ：|  由 引 理 [][]\TU/lmr/m/n/10.95 5.3[][](ii) \TU/Sim
+Sun(0)/m/n/10.95 与 \TU/lmr/m/n/10.95 Cauchy–Schwarz\TU/SimSun(0)/m/n/10.95 ，| $
+\OML/cmm/m/it/10.95 s[] \OT1/cmr/m/n/10.95 = [][][](\OML/cmm/m/it/10.95 q[]\OT1
+/cmr/m/n/10.95 )[]\OML/cmm/m/it/10.95 x[][][] \OMS/cmsy/m/n/10.95 ^^T [][][][]\
+OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 q[]\OT1/cmr/m/n/10.95 )[][][][][][][] \O
+ML/cmm/m/it/10.95 x[][] \OT1/cmr/m/n/10.95 =
+[62]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3401.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3401.
+
+
+Overfull \hbox (30.47168pt too wide) detected at line 3415
+[][][]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 ^^Z \OMS/cmsy/m/n/10.95 ^^@ \OML/
+cmm/m/it/10.95 g[]\OT1/cmr/m/n/10.95 )[]\OML/cmm/m/it/10.95 ^^Y[] \OMS/cmsy/m/n
+/10.95 ^^T []\OML/cmm/m/it/10.95 g[]\OT1/cmr/m/n/10.95 (1 \OMS/cmsy/m/n/10.95 ^
+^@ \OML/cmm/m/it/10.95 g[]\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm
+/m/it/10.95 r[][]\OT1/cmr/m/n/10.95 (1 \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10
+.95 ^^Y[] \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 w[]\OT1/cmr/m/n/10.95 )  
+\OMS/cmsy/m/n/10.95 8\OML/cmm/m/it/10.95 i;  ^^L[] \OMS/cmsy/m/n/10.95 ^^T \OML
+/cmm/m/it/10.95 S[]W[];  ^^L \OMS/cmsy/m/n/10.95 ^^T [] []\OML/cmm/m/it/10.95 ;
+  ^^K\OT1/cmr/m/n/10.95 (1 \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 ^^K\OT1/
+cmr/m/n/10.95 ) + \OML/cmm/m/it/10.95 ^^L[] \OMS/cmsy/m/n/10.95 ^^T \OML/cmm/m/
+it/10.95 R:
+
+Overfull \hbox (79.8168pt too wide) in paragraph at lines 3421--3426
+\TU/SimSun(0)/m/n/10.95 内 层  |（给 定 $\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 g; 
+^^Y; r; w\OT1/cmr/m/n/10.95 )$ \TU/SimSun(0)/m/n/10.95 后 对 $\OT1/cmr/m/n/10.95 
+(\OML/cmm/m/it/10.95 ^^K; ^^L\OT1/cmr/m/n/10.95 )$ \TU/SimSun(0)/m/n/10.95 的）| 
+ 最 大 化 是 \TU/SimSun(0)/b/n/10.95 一 维 且 闭 式 \TU/SimSun(0)/m/n/10.95 的：| $\OML/cm
+m/m/it/10.95 ^^L$ \TU/SimSun(0)/m/n/10.95 的 上 限 是 $\OML/cmm/m/it/10.95 ^^L[] \O
+T1/cmr/m/n/10.95 = []\OMS/cmsy/m/n/10.95 f[]\OML/cmm/m/it/10.95 ;  [][] [];  []
+\OMS/cmsy/m/n/10.95 g$\TU/SimSun(0)/m/n/10.95 ，|
+[63]
+Overfull \hbox (39.4709pt too wide) detected at line 3451
+\OML/cmm/m/it/10.95 L\OT1/cmr/m/n/10.95 (7) = [] = 1\OML/cmm/m/it/10.95 :\OT1/c
+mr/m/n/10.95 320377241\OML/cmm/m/it/10.95 ;  L\OT1/cmr/m/n/10.95 (8) = [] = 1\O
+ML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 327934423\OML/cmm/m/it/10.95 ;  L\OT1/cmr
+/m/n/10.95 (12) = [] = 1\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 343070331\OML/c
+mm/m/it/10.95 ;
+[64]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3526.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3526.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3526.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ge' on input line 3526.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3526.
+
+
+Overfull \hbox (11.40878pt too wide) detected at line 3544
+\OML/cmm/m/it/10.95 n[]\OT1/cmr/m/n/10.95 (4) = 1\OML/cmm/m/it/10.95 ;  n[]\OT1
+/cmr/m/n/10.95 (5) = 2 \OMS/cmsy/m/n/10.95 ^^@ []\OML/cmm/m/it/10.95 ;  n[]\OT1
+/cmr/m/n/10.95 (6) = []\OML/cmm/m/it/10.95 ;  n[]\OT1/cmr/m/n/10.95 (7) = 3 \OM
+S/cmsy/m/n/10.95 ^^@ []\OML/cmm/m/it/10.95 ;  n[]\OT1/cmr/m/n/10.95 (8) = [] \O
+MS/cmsy/m/n/10.95 ^^@ []\OML/cmm/m/it/10.95 ;  n[]\OT1/cmr/m/n/10.95 (9) = []\O
+ML/cmm/m/it/10.95 ;
+
+Overfull \hbox (96.94662pt too wide) detected at line 3556
+[][][]\OMS/cmsy/m/n/10.95 E \OT1/cmr/m/n/10.95 = []  \OMS/cmsy/m/n/10.95 [  [] 
+\OT1/cmr/m/n/10.95 = \OMS/cmsy/m/n/10.95 f\OT1/cmr/m/n/10.95 4\OML/cmm/m/it/10.
+95 ; \OT1/cmr/m/n/10.95 9\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 28\OML/cmm/m/
+it/10.95 ; \OT1/cmr/m/n/10.95 99\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 364\OM
+L/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 1353\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10
+.95 5044\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 18819\OML/cmm/m/it/10.95 ; \OT
+1/cmr/m/n/10.95 70228\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 262089\OML/cmm/m/
+it/10.95 ; [] \OMS/cmsy/m/n/10.95 g\OML/cmm/m/it/10.95 :
+[65]
+Overfull \hbox (53.65741pt too wide) detected at line 3613
+[]
+[66]
+Overfull \hbox (34.59805pt too wide) detected at line 3649
+\OT1/cmr/m/n/10.95 ^^C[] = 1\OML/cmm/m/it/10.95 ;  \OT1/cmr/m/n/10.95 ^^C[] = [
+]\OML/cmm/m/it/10.95 ;  \OT1/cmr/m/n/10.95 ^^C[] = [] = 1\OML/cmm/m/it/10.95 :\
+OT1/cmr/m/n/10.95 289897949\OML/cmm/m/it/10.95 ;  \OT1/cmr/m/n/10.95 ^^C[] = []
+ + [] = 1\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 189897949\OML/cmm/m/it/10.95 ;
+  \OT1/cmr/m/n/10.95 ^^C[] = 1\OML/cmm/m/it/10.95 ;  \OT1/cmr/m/n/10.95 ^^C[] =
+ []\OML/cmm/m/it/10.95 :
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3665.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3665.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3665.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\begingroup' on input line 3665.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\endgroup' on input line 3665.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@@over' on input line 3665.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 3665.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3665.
+
+[67]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3701.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 3701.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3701.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3701.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\times' on input line 3701.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 3701.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3701.
+
+[68]
+Overfull \hbox (29.56917pt too wide) in paragraph at lines 3736--3741
+[]\TU/lmr/m/n/10.95 (ii) \TU/SimSun(0)/m/n/10.95 存 活 类 的 天 花 板 $\OT1/cmr/m/n/10
+.95 1\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 284780995477$ \TU/SimSun(0)/m/n/10
+.95 与 $\OML/cmm/m/it/10.95 ^^Z[]$ \TU/SimSun(0)/m/n/10.95 只 差 $\OT1/cmr/m/n/10.
+95 3\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 213 \OMS/cmsy/m/n/10.95 ^^B \OT1/cm
+r/m/n/10.95 10[]$\TU/SimSun(0)/m/n/10.95 ，|  其 极 大 化 点 是 $\OT1/cmr/m/n/10.95 (\
+OML/cmm/m/it/10.95 g[]; ^^Y[]; r[]; r[]\OT1/cmr/m/n/10.95 ) =
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3771.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 3771.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3771.
+
+[69] [70]
+Overfull \hbox (0.19093pt too wide) detected at line 3887
+[][][]\OML/cmm/m/it/10.95 ^^Y[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 x[] \O
+T1/cmr/m/n/10.95 = [] = 0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 19727156526496
+2\OML/cmm/m/it/10.95 ;  ^^Y[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 x[] \OT1
+/cmr/m/n/10.95 = [] = 0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 160545686947008\
+OML/cmm/m/it/10.95 :
+[71]
+Overfull \hbox (204.55685pt too wide) detected at line 3912
+\OML/cmm/m/it/10.95 ^^Z\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 s[]\OT1/cmr/m/n/
+10.95 ) = [] = [] \OMS/cmsy/m/n/10.95 ^^@ \OT1/cmr/m/n/10.95 2\OML/cmm/m/it/10.
+95 s[] \OT1/cmr/m/n/10.95 = [] \OMS/cmsy/m/n/10.95 ^^@ [] \OT1/cmr/m/n/10.95 = 
+[] = []\OML/cmm/m/it/10.95 :
+[72]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3963.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3963.
+
+[73]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4007.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Phi' on input line 4007.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\lambda' on input line 4007.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 4007.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\max' on input line 4007.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 4007.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4007.
+
+[74]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4059.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\kappa' on input line 4059.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 4059.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\begingroup' on input line 4059.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\endgroup' on input line 4059.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@@over' on input line 4059.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4059.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4059.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\kappa' on input line 4059.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 4059.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\begingroup' on input line 4059.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\endgroup' on input line 4059.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@@over' on input line 4059.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4059.
+
+[75]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4128.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\rho' on input line 4128.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\begingroup' on input line 4128.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\alpha' on input line 4128.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ell' on input line 4128.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\endgroup' on input line 4128.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@@over' on input line 4128.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4128.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4128.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\alpha' on input line 4128.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4128.
+
+
+Overfull \hbox (29.12224pt too wide) in paragraph at lines 4135--4138
+\TU/SimSun(0)/m/it/10.95 于 是 主 猜 想 $\OML/cmm/m/it/10.95 ^^T[] \OMS/cmsy/m/n/10.
+95 ^^T \OML/cmm/m/it/10.95 ^^Z[]$ \TU/SimSun(0)/b/n/10.95 逐 字 等 价 \TU/SimSun(0)
+/m/it/10.95 于  |「第 四 条 不 等 式」| $\OML/cmm/m/it/10.95 ^^K \OT1/cmr/m/n/10.95 + \O
+ML/cmm/m/it/10.95 ` \OMS/cmsy/m/n/10.95 ^^T \OT1/cmr/m/n/10.95 2\OML/cmm/m/it/1
+0.95 ^^Z[]$\TU/SimSun(0)/m/it/10.95 ，|  并 且 冠 军 处 取 等  |（$\OML/cmm/m/it/10.95 `
+ \OT1/cmr/m/n/10.95 = 1\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 586541134688899 
+=
+[76]
+Overfull \hbox (10.01434pt too wide) in paragraph at lines 4201--4209
+\TU/SimSun(0)/m/n/10.95 最 后 一 步 用 $\OML/cmm/m/it/10.95 ^^U[]\OT1/cmr/m/n/10.95 
+(\OMS/cmsy/m/n/10.95 j\OML/cmm/m/it/10.95 Q\OMS/cmsy/m/n/10.95 j\OT1/cmr/m/n/10
+.95 ) \OMS/cmsy/m/n/10.95 ^^T kj\OML/cmm/m/it/10.95 Q\OMS/cmsy/m/n/10.95 jk[] \
+OT1/cmr/m/n/10.95 = \OMS/cmsy/m/n/10.95 k\OML/cmm/m/it/10.95 Q\OMS/cmsy/m/n/10.
+95 k[] \OT1/cmr/m/n/10.95 = []$\TU/SimSun(0)/m/n/10.95 。|  这 就 是 \TU/lmr/m/n/10
+.95 Mohar \TU/SimSun(0)/m/n/10.95 的 $[]$，|  与 定 理 [][]\TU/lmr/m/n/10.95 5.8[][]
+ \TU/SimSun(0)/m/n/10.95 的 $[][] \OML/cmm/m/it/10.95 L\OT1/cmr/m/n/10.95 (\OML/
+cmm/m/it/10.95 N\OT1/cmr/m/n/10.95 )$
+
+Underfull \hbox (badness 1448) in paragraph at lines 4238--4238
+[]|\TU/SimSun(0)/m/n/10 全 局：|  秩 三 约 束 $\OMS/cmsy/m/n/10 ^^B$
+
+Underfull \hbox (badness 10000) in paragraph at lines 4243--4243
+[]|\TU/SimSun(0)/m/n/10 整 数 化 锐 化  |（脱 离
+
+Underfull \hbox (badness 4739) in paragraph at lines 4246--4246
+[]|\TU/SimSun(0)/m/n/10 证 明 $[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 N\OT1/cmr/m/n/
+10 ) =
+[77] [78] [79] [80]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4429.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Psi' on input line 4429.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\le' on input line 4429.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 4429.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4429.
+
+[81] [82]
+Overfull \hbox (8.48004pt too wide) in paragraph at lines 4552--4559
+[][]\TU/SimSun(0)/b/n/10.95 命 题 \TU/lmr/bx/n/10.95 6.11 \TU/lmr/m/n/10.95 (\TU/
+SimSun(0)/m/n/10.95 挫 折 界，|  未 闭 合\TU/lmr/m/n/10.95 )\TU/lmr/bx/n/10.95 . []\TU
+/SimSun(0)/m/it/10.95 对 任 意 符 号 染 色 $\OML/cmm/m/it/10.95 " \OMS/cmsy/m/n/10.95 
+2 f^^F\OT1/cmr/m/n/10.95 1\OMS/cmsy/m/n/10.95 g[]$\TU/SimSun(0)/m/it/10.95 ，|  
+令 $[][] \OT1/cmr/m/n/10.95 = [][] \OML/cmm/m/it/10.95 c[]c[]\OMS/cmsy/m/n/10.95
+ jh\OML/cmm/m/it/10.95 u[]; u[]\OMS/cmsy/m/n/10.95 ij$
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4585.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4585.
+
+[83] [84] [85]
+Overfull \hbox (58.34059pt too wide) detected at line 4780
+[]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4789.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 4789.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4789.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4789.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4789.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4789.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4789.
+
+[86]
+Overfull \hbox (186.92351pt too wide) detected at line 4849
+\OT1/cmr/m/n/10.95 1\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 240186898264\OML/cm
+m/m/it/10.95 ;  \OT1/cmr/m/n/10.95 1\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 260
+043241072\OML/cmm/m/it/10.95 ;  \OT1/cmr/m/n/10.95 1\OML/cmm/m/it/10.95 :\OT1/c
+mr/m/n/10.95 254191504574\OML/cmm/m/it/10.95 ;  \OT1/cmr/m/n/10.95 1\OML/cmm/m/
+it/10.95 :\OT1/cmr/m/n/10.95 238325394688\OML/cmm/m/it/10.95 ;  \OT1/cmr/m/n/10
+.95 1\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 252993053595\OML/cmm/m/it/10.95 ; 
+ \OT1/cmr/m/n/10.95 1\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 253419542550\OML/c
+mm/m/it/10.95 ;  \OT1/cmr/m/n/10.95 1\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 24
+5607856493\OML/cmm/m/it/10.95 ;  \OT1/cmr/m/n/10.95 1\OML/cmm/m/it/10.95 :\OT1/
+cmr/m/n/10.95 249638553443\OML/cmm/m/it/10.95 ;
+
+Overfull \hbox (3.7457pt too wide) detected at line 4853
+[]  [][]\OML/cmm/m/it/10.95 I\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 M\OT1/cmr/
+m/n/10.95 ) + 3 \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 M \OT1/cmr/m/n/10.9
+5 + [][] = 1\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 248748900844 (\OML/cmm/m/it
+/10.95 M \OT1/cmr/m/n/10.95 = 2\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 635)\OML
+/cmm/m/it/10.95 ;
+
+Overfull \hbox (62.18068pt too wide) detected at line 4867
+\OML/cmm/m/it/10.95 g[] \OT1/cmr/m/n/10.95 = [] = 0\OML/cmm/m/it/10.95 :\OT1/cm
+r/m/n/10.95 331767104061\OML/cmm/m/it/10.95 ;  h[] \OT1/cmr/m/n/10.95 = 1 \OMS/
+cmsy/m/n/10.95 ^^@ [] \OT1/cmr/m/n/10.95 = 0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/1
+0.95 250440243412\OML/cmm/m/it/10.95 ;  r[] \OT1/cmr/m/n/10.95 = [] = 0\OML/cmm
+/m/it/10.95 :\OT1/cmr/m/n/10.95 749559756588\OML/cmm/m/it/10.95 ;
+[87]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4901.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\kappa' on input line 4901.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 4901.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\rho' on input line 4901.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 4901.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4901.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4901.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4901.
+
+
+Overfull \hbox (363.96133pt too wide) detected at line 4912
+[]
+[88] [89]
+Overfull \hbox (16.9565pt too wide) in paragraph at lines 5010--5017
+\TU/SimSun(0)/m/it/10.95 数 $[]\OMS/cmsy/m/n/10.95 fh\OML/cmm/m/it/10.95 u[]; u[
+]\OMS/cmsy/m/n/10.95 i \OML/cmm/m/it/10.95 > \OT1/cmr/m/n/10.95 0\OMS/cmsy/m/n/
+10.95 g$\TU/SimSun(0)/m/n/10.95 。|  这 两 个 矩 阵 \TU/SimSun(0)/b/n/10.95 只 在 再 与 $
+\OML/cmm/m/it/10.95 K$ \TU/SimSun(0)/b/n/10.95 缩 并 一 次 时 才 相 同\TU/SimSun(0)/m/n
+/10.95 ：| $[][]\OT1/cmr/m/n/10.95 (\OMS/cmsy/m/n/10.95 h\OML/cmm/m/it/10.95 u[]
+; u[]\OMS/cmsy/m/n/10.95 i\OT1/cmr/m/n/10.95 )[]\OML/cmm/m/it/10.95 c[] \OT1/cm
+r/m/n/10.95 = [][] \OML/cmm/m/it/10.95 c[]\OMS/cmsy/m/n/10.95 h\OML/cmm/m/it/10
+.95 u[]; u[]\OMS/cmsy/m/n/10.95 i \OT1/cmr/m/n/10.95 =
+
+Overfull \hbox (80.88925pt too wide) in paragraph at lines 5062--5067
+\TU/SimSun(0)/b/n/10.95 恰 好 是 原 子 方 向 $\OML/cmm/m/it/10.95 u[]$ \TU/SimSun(0)/b
+/n/10.95 在 一 个 固 定 迹 一 椭 球 $\OT1/cmr/m/n/10.95 ^^C$ \TU/SimSun(0)/b/n/10.95 上 的
+ 支 撑 函 数\TU/SimSun(0)/m/n/10.95 。|  冠 军 处 $\OT1/cmr/m/n/10.95 ^^C$ \TU/SimSun(0
+)/m/n/10.95 的 谱 是 $\OMS/cmsy/m/n/10.95 f\OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95
+ :\OT1/cmr/m/n/10.95 594608575866\OML/cmm/m/it/10.95 ;  \OT1/cmr/m/n/10.95 0\OM
+L/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 202695712067[]\OML/cmm/m/it/10.95 ;  \OMS/
+cmsy/m/n/10.95 g$\TU/SimSun(0)/m/n/10.95 ，|
+[90]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 5132.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\tau' on input line 5132.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\beta' on input line 5132.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\alpha' on input line 5132.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 5132.
+
+[91]
+Overfull \hbox (1.56456pt too wide) in paragraph at lines 5198--5203
+[]$\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 Q[]\OT1/cmr/m/n/10.95 )[] \OML/cmm/m
+/it/10.95 > \OT1/cmr/m/n/10.95 0$ \TU/SimSun(0)/m/n/10.95 仅 当 $\OML/cmm/m/it/10
+.95 Q[] < \OT1/cmr/m/n/10.95 0$\TU/SimSun(0)/m/n/10.95 ，|  此 时 $\OML/cmm/m/it/1
+0.95 Q[] \OT1/cmr/m/n/10.95 = \OMS/cmsy/m/n/10.95 ^^@\OT1/cmr/m/n/10.95 (\OML/c
+mm/m/it/10.95 Q[]\OT1/cmr/m/n/10.95 )[]$\TU/SimSun(0)/m/n/10.95 ，|  故 $\OMS/cms
+y/m/n/10.95 h\OML/cmm/m/it/10.95 Q; Q[]\OMS/cmsy/m/n/10.95 i \OT1/cmr/m/n/10.95
+ = [][] \OML/cmm/m/it/10.95 Q[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 Q[]\OT1/
+cmr/m/n/10.95 )[] = \OMS/cmsy/m/n/10.95 ^^@ []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it
+/10.95 Q[]\OT1/cmr/m/n/10.95 )[] =
+[92]
+Overfull \hbox (70.74701pt too wide) detected at line 5260
+[]
+
+Overfull \hbox (32.34033pt too wide) in paragraph at lines 5282--5285
+[][]\TU/SimSun(0)/b/n/10.95 引 理 \TU/lmr/bx/n/10.95 7.19 \TU/lmr/m/n/10.95 (\TU/
+SimSun(0)/m/n/10.95 第 二 \TU/lmr/m/n/10.95 Cauchy–Schwarz)\TU/lmr/bx/n/10.95 . [
+]$\OML/cmm/m/it/10.95 p[] \OMS/cmsy/m/n/10.95 ^^T \OT1/cmr/m/n/10.95 (1 \OMS/cm
+sy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 ^^T[]\OT1/cmr/m/n/10.95 )(1 \OMS/cmsy/m/n/
+10.95 ^^@ \OML/cmm/m/it/10.95 ^^Q[]\OT1/cmr/m/n/10.95 )$\TU/SimSun(0)/m/it/10.9
+5 ，|  且 $\OML/cmm/m/it/10.95 '\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 u[]\OT1/c
+mr/m/n/10.95 ) := [][] \OML/cmm/m/it/10.95 c[]\OMS/cmsy/m/n/10.95 jh\OML/cmm/m/
+it/10.95 u[]; u[]\OMS/cmsy/m/n/10.95 ij ^^T [] \OT1/cmr/m/n/10.95 +
+[93]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 5334.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\alpha' on input line 5334.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 5334.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 5334.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 5334.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\le' on input line 5334.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\rho' on input line 5334.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 5334.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 5334.
+
+
+Overfull \hbox (26.0724pt too wide) in paragraph at lines 5340--5343
+\TU/SimSun(0)/b/n/10.95 不 是 \TU/SimSun(0)/m/it/10.95 对 所 有 帧 测 度 成 立 的 真 命 题。| 
+ 存 在 $\OML/cmm/m/it/10.95 N \OT1/cmr/m/n/10.95 = 7$ \TU/SimSun(0)/m/it/10.95 的 
+构 型 使 左 端 $\OT1/cmr/m/n/10.95 = 1\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 287835
+562520 \OML/cmm/m/it/10.95 > ^^Z[] \OT1/cmr/m/n/10.95 = 1\OML/cmm/m/it/10.95 :\
+OT1/cmr/m/n/10.95 281568196872$\TU/SimSun(0)/m/it/10.95 ，|
+[94]
+Overfull \hbox (106.87454pt too wide) in paragraph at lines 5392--5398
+\TU/SimSun(0)/m/n/10.95 凸 集 内 的 仿 射 切 片，|  其 方 向 空 间 是 $[] \OML/cmm/m/it/10.95 
+M$\TU/SimSun(0)/m/n/10.95 ，|  其 中 $\OML/cmm/m/it/10.95 M$ \TU/SimSun(0)/m/n/10.
+95 是 $\OT1/cmr/m/n/10.95 7 \OMS/cmsy/m/n/10.95 ^^B \OML/cmm/m/it/10.95 N$ \TU/S
+imSun(0)/m/n/10.95 的 \TU/SimSun(0)/m/it/10.95 矩 矩 阵\TU/SimSun(0)/m/n/10.95 ，|  
+行 为 $[]\OT1/cmr/m/n/10.95 1\OML/cmm/m/it/10.95 ;  u[];  u[];  u[];  u[]u[];  u[
+]u[];  u[]u[][][]$\TU/SimSun(0)/m/n/10.95 。|
+[95]
+Overfull \hbox (0.48013pt too wide) in paragraph at lines 5427--5438
+[]$\OML/cmm/m/it/10.95 Q\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 t\OT1/cmr/m/n/1
+0.95 )[] = [] \OMS/cmsy/m/n/10.95 h\OML/cmm/m/it/10.95 u[]; u[]\OMS/cmsy/m/n/10
+.95 i$\TU/SimSun(0)/m/n/10.95 ，|  故 $\OML/cmm/m/it/10.95 Q[]\OT1/cmr/m/n/10.95 
+(0) =
+[96]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 5508.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ge' on input line 5508.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 5508.
+
+
+Overfull \hbox (75.31865pt too wide) detected at line 5533
+\OMS/cmsy/m/n/10.95 f\OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.
+95 3\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 7\OMS/cmsy/m/n/10.95 g\OML/cmm/m/i
+t/10.95 ;  \OMS/cmsy/m/n/10.95 f\OT1/cmr/m/n/10.95 1\OML/cmm/m/it/10.95 ; \OT1/
+cmr/m/n/10.95 5\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 8\OMS/cmsy/m/n/10.95 g\
+OML/cmm/m/it/10.95 ;  \OMS/cmsy/m/n/10.95 f\OT1/cmr/m/n/10.95 2\OML/cmm/m/it/10
+.95 ; \OT1/cmr/m/n/10.95 6\OMS/cmsy/m/n/10.95 g\OML/cmm/m/it/10.95 ;  \OMS/cmsy
+/m/n/10.95 f\OT1/cmr/m/n/10.95 4\OMS/cmsy/m/n/10.95 g\OML/cmm/m/it/10.95 ;  \OM
+S/cmsy/m/n/10.95 f\OT1/cmr/m/n/10.95 11\OMS/cmsy/m/n/10.95 g []  [] \OML/cmm/m/
+it/10.95 g \OT1/cmr/m/n/10.95 = 0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 533646
+579188 = \OML/cmm/m/it/10.95 g[];  \OMS/cmsy/m/n/10.95 f\OT1/cmr/m/n/10.95 9\OM
+L/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 10\OMS/cmsy/m/n/10.95 g \OT1/cmr/m/n/10.9
+5 :  [] \OML/cmm/m/it/10.95 g \OT1/cmr/m/n/10.95 = 0\OML/cmm/m/it/10.95 :\OT1/c
+mr/m/n/10.95 331767104061 = \OML/cmm/m/it/10.95 g[]:
+
+Overfull \hbox (4.79512pt too wide) detected at line 5540
+[] \OMS/cmsy/m/n/10.95 j\OML/cmm/m/it/10.95 Ba\OMS/cmsy/m/n/10.95 j \OT1/cmr/m/
+n/10.95 = 3\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 91 \OMS/cmsy/m/n/10.95 ^^B \
+OT1/cmr/m/n/10.95 10[]\OML/cmm/m/it/10.95 ;  [][]R\OMS/cmsy/m/n/10.95 j[][] \OT
+1/cmr/m/n/10.95 = \OMS/cmsy/m/n/10.95 f^^@\OT1/cmr/m/n/10.95 3\OML/cmm/m/it/10.
+95 :\OT1/cmr/m/n/10.95 0 \OMS/cmsy/m/n/10.95 ^^B \OT1/cmr/m/n/10.95 10[]\OML/cm
+m/m/it/10.95 ; [] ; \OT1/cmr/m/n/10.95 +2\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.9
+5 6 \OMS/cmsy/m/n/10.95 ^^B \OT1/cmr/m/n/10.95 10[]\OMS/cmsy/m/n/10.95 g \OT1/c
+mr/m/n/10.95 ([]0\OML/cmm/m/it/10.95 ;  [] \OMS/cmsy/m/n/10.95 K \OT1/cmr/m/n/1
+0.95 = 6)\OML/cmm/m/it/10.95 :
+[97] [98]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 5684.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Lambda' on input line 5684.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 5684.
+
+[99] [100]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 5747.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\tau' on input line 5747.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 5747.
+
+[101]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 5869.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 5869.
+
+[102]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 5918.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Lambda' on input line 5918.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 5918.
+
+[103]
+Overfull \hbox (11.05217pt too wide) in paragraph at lines 5998--6003
+[][]\TU/SimSun(0)/b/n/10.95 注 \TU/lmr/bx/n/10.95 8.14 \TU/lmr/m/n/10.95 (\TU/Si
+mSun(0)/m/n/10.95 第 \TU/lmr/m/n/10.95 19 \TU/SimSun(0)/m/n/10.95 轮 回 填\TU/lmr/m
+/n/10.95 )\TU/lmr/bx/n/10.95 . []\TU/SimSun(0)/m/n/10.95 本 命 题 现 在 是 \TU/SimSun
+(0)/b/n/10.95 定 理\TU/SimSun(0)/m/n/10.95 。|  写 $\OML/cmm/m/it/10.95 L[] \OT1/cm
+r/m/n/10.95 = \OML/cmm/m/it/10.95 g[]u[]\OT1/cmr/m/n/10.95 ^^C\OML/cmm/m/it/10.
+95 u[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 x[]\OT1/cmr/m/n/10.95 (^^C)[]$\
+TU/SimSun(0)/m/n/10.95 ，|  则 $\OML/cmm/m/it/10.95 ^^Z\OT1/cmr/m/n/10.95 (^^C) =
+ [][](\OML/cmm/m/it/10.95 Q[]\OT1/cmr/m/n/10.95 )[][]$\TU/SimSun(0)/m/n/10.95 ，
+|
+[104]
+Overfull \hbox (19.37617pt too wide) in paragraph at lines 6050--6054
+\TU/SimSun(0)/m/it/10.95 冠 军 的 三 档 微 扰 $\OML/cmm/m/it/10.95 " \OT1/cmr/m/n/10.9
+5 = 10[]\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 10[]\OML/cmm/m/it/10.95 ; \OT1
+/cmr/m/n/10.95 4 \OMS/cmsy/m/n/10.95 ^^B \OT1/cmr/m/n/10.95 10[]$\TU/SimSun(0)/
+m/it/10.95 ）|  全 部 满 足 $[][] \OML/cmm/m/it/10.95 ^^Z\OT1/cmr/m/n/10.95 (^^C) \O
+MS/cmsy/m/n/10.95 ^^T \OML/cmm/m/it/10.95 ^^Z[]$\TU/SimSun(0)/m/it/10.95 ，|  全 
+局 最 大 值 $\OT1/cmr/m/n/10.95 1\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 2815681965
+84$
+[105] [106] [107] [108]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 6318.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Lambda' on input line 6318.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 6318.
+
+[109] [110]
+Overfull \hbox (89.44221pt too wide) detected at line 6476
+[][][][] \OML/cmm/m/it/10.95 Q[] \OT1/cmr/m/n/10.95 = [][] \OML/cmm/m/it/10.95 
+g[] \OT1/cmr/m/n/10.95 = 3\OML/cmm/m/it/10.95 ;  \OMS/cmsy/m/n/10.95 k\OML/cmm/
+m/it/10.95 Q[]\OMS/cmsy/m/n/10.95 k[] \OT1/cmr/m/n/10.95 + \OMS/cmsy/m/n/10.95 
+k\OML/cmm/m/it/10.95 Q[]\OMS/cmsy/m/n/10.95 k[] \OT1/cmr/m/n/10.95 = \OMS/cmsy/
+m/n/10.95 k\OML/cmm/m/it/10.95 Q\OMS/cmsy/m/n/10.95 k[] \OT1/cmr/m/n/10.95 = []
+(\OML/cmm/m/it/10.95 Q[]\OT1/cmr/m/n/10.95 ) = 3\OML/cmm/m/it/10.95 ;  ^^K \OMS
+/cmsy/m/n/10.95 ^^T \OML/cmm/m/it/10.95 ^^U[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/
+10.95 Q\OT1/cmr/m/n/10.95 ) = 1\OML/cmm/m/it/10.95 ;  ^^L \OMS/cmsy/m/n/10.95 ^
+^T \OML/cmm/m/it/10.95 ^^U[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 Q[]\OT1/cmr
+/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^T k\OML/cmm/m/it/10.95 Q[]\OMS/cmsy/m/n/10.9
+5 k[]\OML/cmm/m/it/10.95 ;
+[111] [112]
+Overfull \hbox (12.12868pt too wide) in paragraph at lines 6571--6582
+[]\TU/SimSun(0)/m/n/10.95 乘 积 集 上 的 上 确 界 可 换 序：| $[][] [][] \OML/cmm/m/it/10.9
+5 ^^Z[]\OT1/cmr/m/n/10.95 (^^C) = [][] \OML/cmm/m/it/10.95 ^^Z[]\OT1/cmr/m/n/10
+.95 (^^C) = [][] [][] \OML/cmm/m/it/10.95 ^^Z[]\OT1/cmr/m/n/10.95 (^^C)$\TU/Sim
+Sun(0)/m/n/10.95 。|
+
+Overfull \hbox (12.14795pt too wide) in paragraph at lines 6571--6582
+\TU/SimSun(0)/m/n/10.95 帧 条 件 [] 在 $\OML/cmm/m/it/10.95 u[] \OMS/cmsy/m/n/10.95
+ 7! \OML/cmm/m/it/10.95 Ru[]$ \TU/SimSun(0)/m/n/10.95 下 不 变，|  且 $\OML/cmm/m/it
+/10.95 h[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 g; RU; \OT1/cmr/m/n/10.95 ^^C
+) = [] = \OML/cmm/m/it/10.95 h[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 g; U; R
+[]\OT1/cmr/m/n/10.95 ^^C\OML/cmm/m/it/10.95 R\OT1/cmr/m/n/10.95 )$\TU/SimSun(0)
+/m/n/10.95 、| $\OMS/cmsy/m/n/10.95 h\OML/cmm/m/it/10.95 Ru[]; Ru[]\OMS/cmsy/m/n
+/10.95 i \OT1/cmr/m/n/10.95 =
+[113] [114] [115]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 6763.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\kappa' on input line 6763.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 6763.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sup' on input line 6763.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 6763.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Theta' on input line 6763.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 6763.
+
+
+Overfull \hbox (28.14569pt too wide) in paragraph at lines 6810--6818
+[][]\TU/SimSun(0)/b/n/10.95 注 \TU/lmr/bx/n/10.95 10.2 \TU/lmr/m/n/10.95 (\TU/Si
+mSun(0)/m/n/10.95 自 洽 条 件 是 冗 余 的\TU/lmr/m/n/10.95 )\TU/lmr/bx/n/10.95 . []\TU/
+SimSun(0)/m/n/10.95 定 理 [][]\TU/lmr/m/n/10.95 3.42[][](ii) \TU/SimSun(0)/m/n/10
+.95 在 陈 述 $\OML/cmm/m/it/10.95 ^^T[]$ \TU/SimSun(0)/m/n/10.95 的 图 形 式 时 附 加 了 自
+ 洽 要 求 $\OT1/cmr/m/n/10.95 ^^F = []\OMS/cmsy/m/n/10.95 f\OT1/cmr/m/n/10.95 ^^E[
+](\OML/cmm/m/it/10.95 D[]\OT1/cmr/m/n/10.95 ^^F\OML/cmm/m/it/10.95 D[]\OT1/cmr/
+m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^U
+[116] [117]
+Overfull \hbox (79.30098pt too wide) in paragraph at lines 6947--6949
+[][]\TU/SimSun(0)/b/n/10.95 命 题 \TU/lmr/bx/n/10.95 10.7 \TU/lmr/m/n/10.95 (\TU/
+SimSun(0)/m/n/10.95 负 尾 就 是 $\OML/cmm/m/it/10.95 ^^\[]$\TU/lmr/m/n/10.95 )\TU/l
+mr/bx/n/10.95 . []\TU/SimSun(0)/m/it/10.95 在 定 理 [][]\TU/lmr/m/it/10.95 10.6[][
+] \TU/SimSun(0)/m/it/10.95 的 最 优 权 重 下，| $\OML/cmm/m/it/10.95 D[]\OT1/cmr/m/n/1
+0.95 (\OML/cmm/m/it/10.95 I \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 A[]\OT1/cm
+r/m/n/10.95 )\OML/cmm/m/it/10.95 D[]$ \TU/SimSun(0)/m/it/10.95 的 谱 为 $\OMS/cmsy
+/m/n/10.95 f\OML/cmm/m/it/10.95 ^^U[];  q[]';  q[]';  ^^U[];  \OMS/cmsy/m/n/10.
+95 ^^@\OML/cmm/m/it/10.95 q[]\OT1/cmr/m/n/10.95 /\OML/cmm/m/it/10.95 ';  \OMS/c
+msy/m/n/10.95 ^^@\OML/cmm/m/it/10.95 q[]\OT1/cmr/m/n/10.95 /\OML/cmm/m/it/10.95
+ '\OMS/cmsy/m/n/10.95 g$\TU/SimSun(0)/m/it/10.95 ，|
+[118]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 6979.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 6979.
+
+[119]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 7054.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 7054.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 7054.
+
+[120]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 7099.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\rho' on input line 7099.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sum@' on input line 7099.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\slimits@' on input line 7099.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 7099.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ell' on input line 7099.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 7099.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ell' on input line 7099.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 7099.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ell' on input line 7099.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 7099.
+
+[121]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 7188.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Phi' on input line 7188.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 7188.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 7188.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Phi' on input line 7188.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 7188.
+
+[122] [123]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 7305.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\le' on input line 7305.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\varphi' on input line 7305.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 7305.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 7305.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 7305.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 7305.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 7307.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 7307.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 7307.
+
+[124]
+Overfull \hbox (17.95pt too wide) in paragraph at lines 7378--7381
+[]\TU/SimSun(0)/m/n/10.95 恒 等 式 $\OT1/cmr/m/n/10.95 ([] \OML/cmm/m/it/10.95 ma\
+OT1/cmr/m/n/10.95 )[] = ([] \OML/cmm/m/it/10.95 m\OT1/cmr/m/n/10.95 )([] \OML/c
+mm/m/it/10.95 ma[]\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^@ [] [][] \OML/cmm
+/m/it/10.95 m[]m[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 a[] \OMS/cmsy/m/n/10.
+95 ^^@ \OML/cmm/m/it/10.95 a[]\OT1/cmr/m/n/10.95 )[]$ \TU/SimSun(0)/m/n/10.95 是
+ 初 等 的  |（两 边 都 等 于 $[][] \OML/cmm/m/it/10.95 m[]m[]a[]a[]$
+
+Overfull \hbox (35.20842pt too wide) in paragraph at lines 7404--7411
+[]$\OML/cmm/m/it/10.95 L \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 S[] \OT1/cmr/
+m/n/10.95 + [][] \OML/cmm/m/it/10.95 m[]m[]\OMS/cmsy/m/n/10.95 jh\OML/cmm/m/it/
+10.95 `[]; `[]\OMS/cmsy/m/n/10.95 ij$\TU/SimSun(0)/m/n/10.95 ，|  对 第 二 项 用 \TU/
+lmr/m/n/10.95 Cauchy–Schwarz\TU/SimSun(0)/m/n/10.95 ：| $\OMS/cmsy/m/n/10.95 ^^T
+ []$\TU/SimSun(0)/m/n/10.95 。|
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 7426.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\le' on input line 7426.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\varphi' on input line 7426.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 7426.
+
+[125]
+Overfull \hbox (7.3297pt too wide) detected at line 7487
+\OML/cmm/m/it/10.95 L \OMS/cmsy/m/n/10.95 ^^T [] \OT1/cmr/m/n/10.95 + [] = [] =
+ [] = [] = 3\OML/cmm/m/it/10.95 ':
+[126]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 7547.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 7547.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 7547.
+
+
+Overfull \hbox (11.30016pt too wide) detected at line 7567
+[][][]\OML/cmm/m/it/10.95 c[] \OT1/cmr/m/n/10.95 := 6\OML/cmm/m/it/10.95 ^^Z[] 
+\OMS/cmsy/m/n/10.95 ^^@ [] \OT1/cmr/m/n/10.95 = 1\OML/cmm/m/it/10.95 :\OT1/cmr/
+m/n/10.95 8744425029524276\OML/cmm/m/it/10.95 ;  c[] \OT1/cmr/m/n/10.95 := [] =
+ [] = 0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 2081458476888777\OML/cmm/m/it/10
+.95 :
+[127]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 7602.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 7602.
+
+[128]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 7648.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\max' on input line 7648.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\rho' on input line 7648.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 7648.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 7648.
+
+
+Overfull \hbox (70.44727pt too wide) in paragraph at lines 7671--7673
+[][]\TU/SimSun(0)/b/n/10.95 定 义 \TU/lmr/bx/n/10.95 13.1 \TU/lmr/m/n/10.95 (\TU/
+SimSun(0)/m/n/10.95 锥 族\TU/lmr/m/n/10.95 )\TU/lmr/bx/n/10.95 . []\TU/SimSun(0)/
+m/n/10.95 固 定 $\OML/cmm/m/it/10.95 n \OMS/cmsy/m/n/10.95 ^^U \OT1/cmr/m/n/10.95
+ 3$ \TU/SimSun(0)/m/n/10.95 与 纬 度 $\OML/cmm/m/it/10.95 z \OMS/cmsy/m/n/10.95 2 
+\OT1/cmr/m/n/10.95 [0\OML/cmm/m/it/10.95 ; []\OT1/cmr/m/n/10.95 ]$\TU/SimSun(0)
+/m/n/10.95 。|  令 极 点 $\OML/cmm/m/it/10.95 u[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/i
+t/10.95 e[]$\TU/SimSun(0)/m/n/10.95 ，|  轮 缘 $\OML/cmm/m/it/10.95 u[] \OT1/cmr/m
+/n/10.95 = [][] [] []\OML/cmm/m/it/10.95 ;  [] [] [];  z[]$\TU/SimSun(0)/m/n/10
+.95 ，|
+
+Overfull \hbox (52.01193pt too wide) in paragraph at lines 7684--7690
+[]\TU/SimSun(0)/m/n/10.95 轮 缘 部 分：| $[] [][]\OT1/cmr/m/n/10.95 ([] []\OML/cmm/m
+/it/10.95 ; [] []\OT1/cmr/m/n/10.95 )[]([] ) = []\OML/cmm/m/it/10.95 I[]$ |\TU/
+SimSun(0)/m/n/10.95 （$\OML/cmm/m/it/10.95 n \OMS/cmsy/m/n/10.95 ^^U \OT1/cmr/m/
+n/10.95 3$ \TU/SimSun(0)/m/n/10.95 时 精 确） ，|  故 $[][] \OML/cmm/m/it/10.95 g[]u[
+]u[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 G []\OT1/cmr/m/n/10.95 ([]\OML/cm
+m/m/it/10.95 ; []; z[]\OT1/cmr/m/n/10.95 ) =
+[129]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 7718.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 7718.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 7718.
+
+
+Overfull \hbox (110.6827pt too wide) detected at line 7739
+[][][]\OML/cmm/m/it/10.95 J[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 z[]\OT1/cm
+r/m/n/10.95 ) = 7\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 5959503072186315972406
+28904572525771282\OML/cmm/m/it/10.95 ;  ^^T[]\OT1/cmr/m/n/10.95 ([]) = [] = 1\O
+ML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 265991717869771932873438150762\OML/cmm/m/
+it/10.95 ;
+[130]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 7771.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\max' on input line 7771.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\rho' on input line 7771.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 7771.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 7771.
+
+[131] [132] [133]
+Overfull \hbox (8.83209pt too wide) in paragraph at lines 7966--7967
+[][]\TU/SimSun(0)/b/n/10.95 命 题 \TU/lmr/bx/n/10.95 13.15 \TU/lmr/m/n/10.95 (\TU
+/SimSun(0)/m/n/10.95 等 纬 度 圆 上 $\OML/cmm/m/it/10.95 L$ \TU/SimSun(0)/m/n/10.95 
+的 最 大 值：|  正 方 形\TU/lmr/m/n/10.95 )\TU/lmr/bx/n/10.95 . []\TU/SimSun(0)/m/it/10
+.95 正 则 正 方 形  |（$\OT1/cmr/m/n/10.95 4$ \TU/SimSun(0)/m/it/10.95 个 原 子、|  质 量 $
+[]$、|  角 度 $\OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 90[]\O
+ML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 180[]\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/
+10.95 270[]$\TU/SimSun(0)/m/it/10.95 ）|
+
+Overfull \hbox (17.49216pt too wide) in paragraph at lines 8008--8017
+ [] 
+[134]
+Overfull \hbox (46.29742pt too wide) in paragraph at lines 8049--8068
+ [] 
+[135]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 8094.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sigma' on input line 8094.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 8094.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 8094.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 8094.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 8094.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 8094.
+
+[136] [137] [138] [139]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 8429.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sigma' on input line 8429.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 8429.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 8429.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 8429.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 8429.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 8429.
+
+[140] [141]
+Overfull \hbox (13.06725pt too wide) in paragraph at lines 8534--8536
+\TU/SimSun(0)/m/n/10.95 三 分 支 合 并 得 $\OT1/cmr/m/n/10.95 ^^H(\OML/cmm/m/it/10.95
+ V\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^U \OML/cmm/m/it/10.95 m[]$ \TU/Sim
+Sun(0)/m/n/10.95 对 一 切 $\OML/cmm/m/it/10.95 V \OMS/cmsy/m/n/10.95 ^^U \OT1/cmr/
+m/n/10.95 0$\TU/SimSun(0)/m/n/10.95 ，|  即 []。|  除 以 $\OT1/cmr/m/n/10.95 6$ \TU/
+SimSun(0)/m/n/10.95 得 $\OML/cmm/m/it/10.95 ^^T[] \OMS/cmsy/m/n/10.95 ^^T \OML/c
+mm/m/it/10.95 ^^Z[] \OMS/cmsy/m/n/10.95 ^^@ [] \OT1/cmr/m/n/10.95 = \OML/cmm/m/
+it/10.95 ^^Z[] \OMS/cmsy/m/n/10.95 ^^@ \OT1/cmr/m/n/10.95 1\OML/cmm/m/it/10.95 
+:\OT1/cmr/m/n/10.95 733262710583346 \OMS/cmsy/m/n/10.95 ^^B
+
+Overfull \hbox (3.7216pt too wide) in paragraph at lines 8562--8573
+[][]\TU/SimSun(0)/b/n/10.95 注 \TU/lmr/bx/n/10.95 14.20 \TU/lmr/m/n/10.95 (\TU/S
+imSun(0)/m/n/10.95 方 法 的 天 花 板 与 真 实 余 量 的 差 距\TU/lmr/m/n/10.95 )\TU/lmr/bx/n/1
+0.95 . []\TU/SimSun(0)/m/n/10.95 由 注 [][]\TU/lmr/m/n/10.95 14.13[][]\TU/SimSun(
+0)/m/n/10.95 ，|  命 题 [][]\TU/lmr/m/n/10.95 14.12[][] \TU/SimSun(0)/m/n/10.95 的 
+闭 式 族 同 时 取 到 定 理 [][]\TU/lmr/m/n/10.95 14.9[][] \TU/SimSun(0)/m/n/10.95 与
+[142] [143] [144] [145] [146] [147]
+Underfull \hbox (badness 10000) in paragraph at lines 8962--8962
+[]|\TU/SimSun(0)/b/n/10 通 道 型 主 函 数 方 案  |（本 报 告 定
+[148] [149] [150] [151] [152]
+Overfull \hbox (0.50354pt too wide) in paragraph at lines 9188--9191
+[]\TU/SimSun(0)/b/n/10.95 通 道  |—|  分 布 的 联 合 约 束\TU/SimSun(0)/m/it/10.95 ：|  内
+ 积 的 经 验 分 布 $[][]\OMS/cmsy/m/n/10.95 f\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 
+i; j\OT1/cmr/m/n/10.95 ) : \OMS/cmsy/m/n/10.95 h\OML/cmm/m/it/10.95 u[]; u[]\OM
+S/cmsy/m/n/10.95 i 2 ^^Ag$ \TU/SimSun(0)/m/it/10.95 与 通 道 值 $\OT1/cmr/m/n/10.95
+ (\OML/cmm/m/it/10.95 C[]; X[]; \OMS/cmsy/m/n/10.95 k\OML/cmm/m/it/10.95 y\OMS/
+cmsy/m/n/10.95 k[]\OML/cmm/m/it/10.95 ; [] \OT1/cmr/m/n/10.95 )$
+
+Overfull \hbox (3.47566pt too wide) in paragraph at lines 9206--9209
+[]\TU/SimSun(0)/m/n/10.95 这 是 唯 一 一 条 在 同 类 问 题 上 \TU/SimSun(0)/m/it/10.95 已 经 
+被 验 证 能 达 到 锐 利 \TU/SimSun(0)/m/n/10.95 的 架 构：| $\OML/cmm/m/it/10.95 k \OT1/cmr
+/m/n/10.95 = 2$ \TU/SimSun(0)/m/n/10.95 时 的 \TU/lmr/m/n/10.95 Kumar–Liu–Monterd
+e–
+[153] [154] [155] [156]
+Overfull \hbox (0.62224pt too wide) in paragraph at lines 9407--9417
+[]\TU/SimSun(0)/m/n/10.95 第 一 类 是 下 界 一 侧 的 完 整 结 果，|  也 是 目 前 成 熟 度 最 高 的 部 分。
+|  定 理 [][]\TU/lmr/m/n/10.95 3.6[][] \TU/SimSun(0)/m/n/10.95 给 出 $[][] \OML/cmm
+/m/it/10.95 M[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 n\OT1/cmr/m/n/10.95 )/\O
+ML/cmm/m/it/10.95 n \OMS/cmsy/m/n/10.95 ^^U
+[157] [158] [159] [160] [161] [162]
+Underfull \hbox (badness 10000) in paragraph at lines 9730--9730
+[]|\TU/FangSong(0)/m/n/10 进 展 报 告 \TU/lmtt/m/n/10 _ \TU/FangSong(0)/m/n/10 前 三 
+大 特 征 值 之 和 的 精 确 上
+
+Underfull \hbox (badness 10000) in paragraph at lines 9731--9731
+[]|\TU/FangSong(0)/m/n/10 进 展 报 告 \TU/lmtt/m/n/10 _ \TU/FangSong(0)/m/n/10 前 三 
+大 特 征 值 之 和 的 精 确 上
+
+Underfull \hbox (badness 1062) in paragraph at lines 9745--9749
+[]$ |\TU/SimSun(0)/m/n/10 （含 三 类 符 号 分 布 的 \TU/lmtt/m/n/10 sympy \TU/SimSun(0)/
+m/n/10 不 等 式 证
+
+Overfull \hbox (5.18044pt too wide) in paragraph at lines 9764--9765
+\TU/lmtt/m/n/10 _n5chi.json\TU/SimSun(0)/m/n/10 ）|| 
+
+Underfull \hbox (badness 10000) in paragraph at lines 9774--9775
+[]|\TU/SimSun(0)/m/n/10 本 报 告  |（第
+
+Underfull \hbox (badness 10000) in paragraph at lines 9774--9775
+\TU/SimSun(0)/m/n/10 六 版 新
+
+Underfull \hbox (badness 10000) in paragraph at lines 9774--9775
+\TU/SimSun(0)/m/n/10 增，|  运 行 约
+
+Overfull \hbox (4.21167pt too wide) in paragraph at lines 9774--9775
+\TU/lmtt/m/n/10 _kmnbi.json\TU/SimSun(0)/m/n/10 、|
+
+Underfull \hbox (badness 10000) in paragraph at lines 9776--9778
+[]|\TU/SimSun(0)/m/n/10 上 述 两 份 证 书 的 原 始 输 出。|  其 中
+
+Underfull \hbox (badness 1303) in paragraph at lines 9776--9778
+\TU/lmtt/m/n/10 _kmn7.json \TU/SimSun(0)/m/n/10 逐 类 记 录 $\OT1/cmr/m/n/10 30$ \T
+U/SimSun(0)/m/n/10 个 完 全  |（多）|
+
+Underfull \hbox (badness 10000) in paragraph at lines 9776--9778
+\TU/SimSun(0)/m/n/10 部 掩 码 的 $[] \OT1/cmr/m/n/10 ^^C[]$\TU/SimSun(0)/m/n/10 、| 
+$[] []\OT1/cmr/m/n/10 ((\OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 M\OT1/cmr/m/n/10 )
+[])$\TU/SimSun(0)/m/n/10 、|
+
+Underfull \hbox (badness 3690) in paragraph at lines 9776--9778
+[] [][] \OML/cmm/m/it/10 ^^U[]$\TU/SimSun(0)/m/n/10 、| $[] []\OT1/cmr/m/n/10 (\
+OML/cmm/m/it/10 M\OT1/cmr/m/n/10 )$ \TU/SimSun(0)/m/n/10 与 极 大 化 点，|
+
+Underfull \hbox (badness 10000) in paragraph at lines 9779--9780
+[]|\TU/SimSun(0)/m/n/10 本 报 告  |（数
+
+Underfull \hbox (badness 1852) in paragraph at lines 9781--9784
+\TU/SimSun(0)/m/n/10 由 \TU/lmr/m/n/10 graph6 \TU/SimSun(0)/m/n/10 码 解 码 后 补 算  
+|「是 否 完 全 多
+
+Underfull \hbox (badness 4060) in paragraph at lines 9781--9784
+\TU/SimSun(0)/m/n/10 部  |（及 各 部 大 小） 」 「是 否 含 诱 导
+
+Underfull \hbox (badness 10000) in paragraph at lines 9785--9786
+[]|\TU/SimSun(0)/m/n/10 本 报 告  |（数
+
+Underfull \hbox (badness 10000) in paragraph at lines 9787--9788
+[]|\TU/SimSun(0)/m/n/10 共 用 核 心：| $\OML/cmm/m/it/10 F\OT1/cmr/m/n/10 (\OML/cmm/
+m/it/10 A\OT1/cmr/m/n/10 ) =
+
+Underfull \hbox (badness 10000) in paragraph at lines 9787--9788
+[][] \OT1/cmr/m/n/10 ^^C[](\OML/cmm/m/it/10 D[]AD[]\OT1/cmr/m/n/10 )$ \TU/SimSu
+n(0)/m/n/10 的 稳 健 优 化
+
+Underfull \hbox (badness 3199) in paragraph at lines 9795--9797
+[]|\TU/SimSun(0)/m/n/10 定 理 [][]\TU/lmr/m/n/10 3.50[][] \TU/SimSun(0)/m/n/10 的 
+原 始 输 出：| $\OML/cmm/m/it/10 ^^T[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 N\OT1/cmr/m/
+n/10 )$\TU/SimSun(0)/m/n/10 、| $\OML/cmm/m/it/10 ^^K$\TU/SimSun(0)/m/n/10 、| $\
+OML/cmm/m/it/10 ^^L$\TU/SimSun(0)/m/n/10 、|
+
+Underfull \hbox (badness 10000) in paragraph at lines 9798--9799
+[]|\TU/SimSun(0)/m/n/10 本 报 告  |（数
+
+Underfull \hbox (badness 10000) in paragraph at lines 9804--9805
+[]|\TU/SimSun(0)/m/n/10 本 报 告  |（数
+miktex-dvipdfmx: major issue: So far, you have not checked for MiKTeX updates.
+[163] [164] [165] [166] [167] [168] [169] (进展报告_前三大特征值之和的精确上界.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information)
+Output written on 进展报告_前三大特征值之和的精确上界.pdf (169 pages).
+Transcript written on 进展报告_前三大特征值之和的精确上界.log.
+xelatex: major issue: So far, you have not checked for MiKTeX updates.

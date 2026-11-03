@@ -1,0 +1,9 @@
+{
+  "key": "openalex1",
+  "source": "OpenAlex",
+  "query": "linear combination first second adjacency eigenvalues",
+  "url": "https://api.openalex.org/works?search=linear%20combination%20first%20second%20adjacency%20eigenvalues&per-page=50",
+  "kind": "openalex",
+  "retrieved_utc": "2026-10-14T09:35:32.249057+00:00",
+  "error": "URLError(TimeoutError('_ssl.c:993: The handshake operation timed out'))"
+}

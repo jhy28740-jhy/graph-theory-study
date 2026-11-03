@@ -1,0 +1,128 @@
+{
+  "key": "arxiv_query2",
+  "source": "arXiv",
+  "query": "all:\"spectral sum\" AND all:\"graph\"",
+  "url": "https://export.arxiv.org/api/query?search_query=all%3A%22spectral%20sum%22%20AND%20all%3A%22graph%22&start=0&max_results=100&sortBy=submittedDate&sortOrder=descending",
+  "kind": "atom",
+  "retrieved_utc": "2026-10-14T09:35:30.795941+00:00",
+  "http_status": 200,
+  "final_url": "https://export.arxiv.org/api/query?search_query=all%3A%22spectral%20sum%22%20AND%20all%3A%22graph%22&start=0&max_results=100&sortBy=submittedDate&sortOrder=descending",
+  "content_type": "application/atom+xml; charset=utf-8",
+  "raw_file": "raw\\arxiv_query2.raw",
+  "bytes": 15962,
+  "sha256": "24e20de3d711e5666ce824ac70316d7e7ec602bd18417343e7b3792747e4b741",
+  "result": {
+    "total": "8",
+    "items": [
+      {
+        "id": "http://arxiv.org/abs/2607.23081v1",
+        "title": "The Exact Maximum of the Spectral Sum of Graphs",
+        "published": "2026-07-25T07:04:24Z",
+        "updated": "2026-07-25T07:04:24Z",
+        "summary": "For a simple graph $G$ of order $n$, let $S_2(G)=λ_1(G)+λ_2(G)$ denote its spectral sum. We determine, for every $n\\geq5$, the exact maximum of $S_2(G)$ and all equality cases. The unique maximizer, up to isomorphism, is the complement of the disjoint union of a suitably balanced complete bipartite graph and isolated vertices, with the sizes of its three parts determined by $n$ modulo $7$. Denoting this graph by $K_n^\\star$, we further show that $ S_2(K_n^\\star)\\leq\\frac{8n}{7}-2,$ with equality exactly when $7\\mid n$. This proves a conjecture of Kumar, Liu, Monterde, Pragada and Tait, which strengthens the Aouchiche--Hansen 2010 conjecture by extending it from connected graphs to all graphs and by asserting uniqueness of the extremal graph. The result also subsumes the 2008 conjecture of Ebrahimi B., Mohar, Nikiforov, and Ahmady. The proof combines Ky Fan's variational principle with a spectral inequality for weighted Ferrers quotients to reduce the problem to an explicit family whose complements have incidence rank one. Exact integer optimization and a separate equality analysis then yield the maximum and uniqueness.",
+        "journal_ref": "",
+        "doi": "",
+        "authors": [
+          "Jing Huang",
+          "Wei Wei"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2606.30996v1",
+        "title": "Path-Minimality for Positive $p$-Energies, Laplacian-Type Spectra, and Line Graphs",
+        "published": "2026-06-30T00:15:02Z",
+        "updated": "2026-06-30T00:15:02Z",
+        "summary": "We derive several applications of the path-minimality theorem for adjacency $p$-energy proved in the companion paper. First, we prove the sharp inequality $$ \\mathcal E_p^+(G)\\ge \\mathcal E_p^+(P_n), $$ where $P_n$ is the path on $n$ vertices, in three settings: connected bipartite graphs for every real $p\\ge2$, all connected graphs for every odd integer $p\\ge3$, and all connected graphs for $p=4$. Second, using subdivision graphs, we prove path-minimality for Laplacian and signless Laplacian-type spectral sums, including power sums, Estrada-type quantities, resolvent energies, and thresholded tails. Third, we prove an edge-count second-order stop-loss comparison for the signless Laplacian above the threshold $2$. This yields the sharp line-graph inequality $$ \\mathcal E_p^+(\\mathcal L(G))\\ge \\mathcal E_p^+(P_m) $$ for every connected graph $G$ with $m$ edges and every real $p\\ge2$.",
+        "journal_ref": "",
+        "doi": "",
+        "authors": [
+          "Yinchen Liu",
+          "Quanyu Tang"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2604.00512v2",
+        "title": "Maximum spectral sum of graphs",
+        "published": "2026-04-01T05:55:15Z",
+        "updated": "2026-05-03T20:41:18Z",
+        "summary": "For a graph $G$ of order $n$, the spectral sum of $G$ is defined to be the sum $λ_1(G) + λ_2(G)$, where $λ_1(G)$ (resp. $λ_2(G)$) is the largest (resp. second largest) adjacency eigenvalue of $G$. Ebrahimi, Mohar, Nikiforov and Ahmady (2008) conjectured that the spectral sum \\[ λ_1(G) + λ_2(G)\\le \\frac{8}{7}n \\] for any graph $G$. We prove this conjecture by combining tools from the theory of graph limits, convex geometry, exterior algebra and convex optimization. The techniques developed are of independent interest.",
+        "journal_ref": "",
+        "doi": "",
+        "authors": [
+          "Hitesh Kumar",
+          "Lele Liu",
+          "Hermie Monterde",
+          "Shivaramakrishna Pragada",
+          "Michael Tait"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2601.10036v2",
+        "title": "Convex combination of first and second eigenvalues of trees",
+        "published": "2026-01-15T03:28:17Z",
+        "updated": "2026-08-07T05:42:06Z",
+        "summary": "For a graph $G$, let $λ_1(G)$ and $λ_2(G)$ denote the largest and the second largest adjacency eigenvalue of $G$. The sum $λ_1(G) + λ_2(G)$ is called the \\emph{spectral sum} of $G$. We investigate the spectral sum of trees of order $n$ and determine the extremal trees that attain the maximum/minimum. Moreover, for any $α\\in [0,1],$ we describe the extremal trees which maximize the convex combination $αλ_1 + (1-α)λ_2$ in the class of $n$-vertex trees for sufficiently large $n$.",
+        "journal_ref": "",
+        "doi": "",
+        "authors": [
+          "Hitesh Kumar",
+          "Bojan Mohar",
+          "Shivaramakrishna Pragada",
+          "Hanmeng Zhan"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2512.01779v3",
+        "title": "A discrete approach to Dirichlet L-functions, their special values and zeros",
+        "published": "2025-12-01T15:20:02Z",
+        "updated": "2026-05-15T14:13:13Z",
+        "summary": "We develop a discrete spectral framework for Dirichlet $L$-functions that reveals a combinatorial structure underlying their special values and connects this to their zeros. Our approach approximates the classical Dirichlet series by finite spectral sums $L_n(s,χ)$ associated with cyclic graphs $\\mathbb{Z}/n\\mathbb{Z}$ and studies their asymptotics as $n\\rightarrow \\infty$. Combining a refined Euler Maclaurin expansion with a structural polynomiality property, we show that at integer arguments the asymptotic expansions terminate and yield exact identities. This asymptotic to exact principle produces new infinite families of relations among special values of Dirichlet $L$-functions and recovers, by a different mechanism, formulas previously obtained by Xie, Zhao and Zhao. An interesting feature of our method is that $ζ(2n)$ and the corresponding special values for all Dirichlet $L$-functions thereby admit a finite combinatorial interpretation in terms of rooted spanning forests on any fixed cyclic graph. Concerning zeros, the same framework leads to some remarks about real zeros and a reformulation of the Generalized Riemann Hypothesis in the case of odd primitive characters in terms of an asymptotic functional equation relating $ξ_n(1-s,\\overlineχ)$ to $ξ_n(s,χ)$ of the completed discrete functions. This establishes the remaining case of the one dimensional picture obtained in earlier works.",
+        "journal_ref": "",
+        "doi": "",
+        "authors": [
+          "Anders Karlsson",
+          "Dylan Müller"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2011.06475v2",
+        "title": "Quantum algorithms for spectral sums",
+        "published": "2020-11-12T16:29:45Z",
+        "updated": "2024-06-10T04:21:41Z",
+        "summary": "We propose new quantum algorithms for estimating spectral sums of positive semi-definite (PSD) matrices. The spectral sum of an PSD matrix $A$, for a function $f$, is defined as $ \\text{Tr}[f(A)] = \\sum_j f(λ_j)$, where $λ_j$ are the eigenvalues of $A$. Typical examples of spectral sums are the von Neumann entropy, the trace of $A^{-1}$, the log-determinant, and the Schatten $p$-norm, where the latter does not require the matrix to be PSD. The current best classical randomized algorithms estimating these quantities have a runtime that is at least linearly in the number of nonzero entries of the matrix and quadratic in the estimation error. Assuming access to a block-encoding of a matrix, our algorithms are sub-linear in the matrix size, and depend at most quadratically on other parameters, like the condition number and the approximation error, and thus can compete with most of the randomized and distributed classical algorithms proposed in the literature, and polynomially improve the runtime of other quantum algorithms proposed for the same problems. We show how the algorithms and techniques used in this work can be applied to three problems in spectral graph theory: approximating the number of triangles, the effective resistance, and the number of spanning trees within a graph.",
+        "journal_ref": "",
+        "doi": "",
+        "authors": [
+          "Alessandro Luongo",
+          "Changpeng Shao"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/1703.06327v1",
+        "title": "Spectrum Estimation from a Few Entries",
+        "published": "2017-03-18T18:12:17Z",
+        "updated": "2017-03-18T18:12:17Z",
+        "summary": "Singular values of a data in a matrix form provide insights on the structure of the data, the effective dimensionality, and the choice of hyper-parameters on higher-level data analysis tools. However, in many practical applications such as collaborative filtering and network analysis, we only get a partial observation. Under such scenarios, we consider the fundamental problem of recovering spectral properties of the underlying matrix from a sampling of its entries. We are particularly interested in directly recovering the spectrum, which is the set of singular values, and also in sample-efficient approaches for recovering a spectral sum function, which is an aggregate sum of the same function applied to each of the singular values. We propose first estimating the Schatten $k$-norms of a matrix, and then applying Chebyshev approximation to the spectral sum function or applying moment matching in Wasserstein distance to recover the singular values. The main technical challenge is in accurately estimating the Schatten norms from a sampling of a matrix. We introduce a novel unbiased estimator based on counting small structures in a graph and provide guarantees that match its empirical performance. Our theoretical analysis shows that Schatten norms can be recovered accurately from strictly smaller number of samples compared to what is needed to recover the underlying low-rank matrix. Numerical experiments suggest that we significantly improve upon a competing approach of using matrix completion methods.",
+        "journal_ref": "",
+        "doi": "",
+        "authors": [
+          "Ashish Khetan",
+          "Sewoong Oh"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/1308.5340v1",
+        "title": "On sums of graph eigenvalues",
+        "published": "2013-08-24T14:47:41Z",
+        "updated": "2013-08-24T14:47:41Z",
+        "summary": "We use two variational techniques to prove upper bounds for sums of the lowest several eigenvalues of matrices associated with finite, simple, combinatorial graphs. These include estimates for the adjacency matrix of a graph and for both the standard combinatorial Laplacian and the renormalized Laplacian. We also provide upper bounds for sums of squares of eigenvalues of these three matrices. Among our results, we generalize an inequality of Fiedler for the extreme eigenvalues of the graph Laplacian to a bound on the sums of the smallest (or largest) k such eigenvalues, k < n. Furthermore, if lambda_j are the eigenvalues of the positive graph Laplacian H, in increasing order, on a finite graph with |V| vertices and |E| edges which is isomorphic to a subgraph of the ν-dimensional infinite cubic lattice, then the spectral sums obey a Weyl-type upper bound, a simplification of which reads $$ \\sum_{j=1}^{k-1}{λ_j} \\le \\frac{π^2 |\\mathcal{E}|}{3} \\left(\\frac{k}{|\\mathcal{V}|} \\right)^{1+\\frac{2}ν} $$ for each k < |V|. This and related estimates for sums of lambda_j^2 provide a family of necessary conditions for the embeddability of the graph in a lattice of dimension νor less.",
+        "journal_ref": "",
+        "doi": "",
+        "authors": [
+          "Evans M. Harell",
+          "Joachim Stubbe"
+        ]
+      }
+    ]
+  }
+}

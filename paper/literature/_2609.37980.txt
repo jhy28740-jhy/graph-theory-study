@@ -1,0 +1,620 @@
+ 
+ Report GitHub Issue 
+ × 
+ Title: 
+ Content selection saved. Describe the issue below: 
+ Description: 
+ Submit without GitHub 
+ Submit in GitHub 
+ arXiv is now an independent nonprofit! 
+ Learn more 
+ × 
+ Back to arXiv 
+ Why HTML? 
+ Report Issue 
+ Back to Abstract 
+ Download PDF 
+ Abstract. 
+ 1 Introduction 
+ 2 Statement of the results 
+ 3 Proofs 
+ 4 Proof of Proposition 
+ References 
+ License: arXiv.org perpetual non-exclusive license
+arXiv:2609.37980v1 [math.CO] 29 Sep 2026 
+ Quadratic inequalities between the largest eigenvalues of a graph Thanks:  The author was supported by the Dynasnet ERC Synergy project (ERC-2018-SYG 810115) and the Hungarian National Research, Development and Innovation Office (Advanced grant 15337) 
+ Roland Paulin
+ Address:  HUN-REN Alfréd Rényi Institute of Mathematics, H-1053 Budapest, Reáltanoda utca 13-15
+ Email address: paulinroland@gmail.com 
+ Date: September 29, 2026 
+ Abstract. 
+ We prove a sharp quadratic inequality between the largest two eigenvalues \1 of a graph with \1 vertices.
+We also prove a quadratic inequality between the second and third largest eigenvalues \1 .
+These results in particular imply the bounds \1 , \1 and \1 .
+In fact we determine the closure of the set of possible \1 and \1 .
+More generally, we prove quadratic bounds in the case of symmetric matrices in \1 , and we also give a quadratic bound for two eigenvalues of a symmetric matrix in \1 .
+These bounds are proved by transforming the problem into extremal geometric questions in \1 and \1 .
+We use the method of Lagrange multipliers to reduce to special cases with at most five points, and we deal with these special cases directly. 
+ Key words and phrases:  graph eigenvalues, matrix eigenvalues
+ 2020 Mathematics Subject Classification 05C35, 05C50, 15A18, 15A42
+ 1. Introduction 
+ In this article we study the first, second and third largest eigenvalues of the adjacency matrix \1 of a graph \1 , and more generally, of a symmetric matrix \1 .
+Let \1 be the eigenvalues of the adjacency matrix \1 , where \1 is a finite, simple graph with \1 vertices, and let \1 .
+It is known that \1 and \1 (see [ 3 ] ), and recently \1 has been proved by Tang [ 8 ] (also see [ 7 ] ), solving a problem of Nikiforov [ 6 ] .
+Recently Kumar, Liu, Monterde, Pragada and Tait [ 5 ] proved \1 , solving a conjecture of Ebrahimi B, Mohar, Nikiforov and Ahmady [ 1 ] , and Huang and Wei [ 4 ] improved this to \1 . 
+ We study the possible values of \1 and \1 .
+We prove that \1 and \1 , and we prove that these bounds are sharp in a sense (Corollary 2.1 ).
+As a consequence we get \1 , \1 and \1 .
+We prove quadratic inequalities not just for graphs, but more generally, for symmetric matrices \1 (Theorem 2.1 ).
+We also prove a quadratic bound for two eigenvalues of a symmetric matrix \1 (Theorem 2.2 ).
+We prove these results as a consequence of extremal geometric statements in \1 and in \1 (Propositions 2.1 , 2.2 , 2.3 and 2.4 ).
+In the last extremal geometric problem (in the proof of Proposition 2.4 ), we use the method of Lagrange multipliers, and reduce the problem to the case of at most \1 points (with further restrictions as well), and we deal with these special cases directly. 
+ We use the notation \1 for \1 .
+For symmetric square matrices \1 means \1 is positive semidefinite, and \1 means \1 is positive definite.
+If \1 is a finite simple graph with vertex set \1 , then \1 denotes its adjacency matrix.
+The characteristic polynomial of a matrix \1 is \1 .
+Let \1 denote the set of \1 such that there is a sequence \1 of finite, simple graphs, where \1 has \1 vertices and eigenvalues \1 , and \1 and \1 as \1 for \1 .
+Similarly, let \1 denote the set of \1 such that there is a sequence \1 of finite, simple graphs, where \1 has \1 vertices and eigenvalues \1 , and \1 and \1 as \1 for \1 .
+Let \1 and \1 be slight modifications of \1 and \1 , where we do not require \1 in the definition.
+So \1 is the closure of the set \1 and \1 is the closure of the set \1 .
+Clearly \1 and \1 .
+In Corollary 2.1 we give exact descriptions for \1 , \1 , \1 , \1 . 
+ A diagram of the structure of the proofs in this article: 
+ Cor. 2.2 Prop. 2.1 Prop. 2.2 Prop. 2.3 Prop. 2.4 Thm. 2.1 Thm. 2.2 Cor. 2.1 
+ 2. Statement of the results 
+ The following theorem gives a quadratic inequality between the first and second largest eigenvalues, and an inequality between the second and third largest eigenvalues of a symmetric matrix in \1 . 
+ Theorem 2.1 . 
+ Let \1 , and let \1 be a symmetric matrix with eigenvalues \1 .
+Let \1 .
+Then \1 and \1 .
+If \1 , then 
+ (1) 
+ \1 
+ If \1 and \1 , then 
+ (2) 
+ \1 
+ Remark 2.1 . 
+ The construction in the proof of Corollary 2.1 shows that the bounds here are sharp in some sense (assuming \1 in the first inequality, and \1 in the second one).
+The inequality \1 can fail if \1 , e.g., for \1 we get \1 .
+The inequality \1 can fail if \1 , e.g., for \1 we get \1 . 
+ Figures 1 and 2 show the regions of \1 and \1 defined by the above quadratic inequalities, with the requirements \1 and \1 .
+As a consequence we get that \1 , and \1 and \1 for \1 .
+The condition \1 is automatically satisfied if \1 for every \1 (e.g., if \1 for a finite simple graph \1 ), because then \1 and \1 . 
+ Corollary 2.1 . 
+ Let \1 be a finite simple graph with \1 vertices, and let \1 be the eigenvalues of \1 .
+Let \1 .
+Then \1 , \1 , 
+ \1 
+ and if \1 , then 
+ \1 
+ If \1 and \1 is not the path graph with \1 vertices, then \1 .
+The quadratic inequalities are sharp in the following sense: 
+ \1 
+ \1 
+ \1 
+ \1 
+ and 
+ \1 
+ We deduce the quadratic inequality for \1 in Theorem 2.1 from the following \1 -dimensional geometric statement. 
+ Proposition 2.1 . 
+ Let \1 , \1 such that \1 and \1 .
+Let \1 be symmetric, and let 
+ \1 
+ Let \1 be the eigenvalues of \1 .
+Then \1 and \1 , and if \1 , then 
+ \1 
+ Similarly, we deduce the quadratic inequality for \1 in Theorem 2.1 from the following \1 -dimensional geometric statement. 
+ Proposition 2.2 . 
+ Let \1 , \1 such that \1 and \1 .
+Let \1 be symmetric, and let 
+ \1 
+ Let \1 be the eigenvalues of \1 .
+Then \1 , and if \1 , then 
+ \1 
+ We will prove Proposition 2.1 using Proposition 2.2 .
+In the proof of Proposition 2.2 , we use an orthogonal projection from \1 onto a plane orthogonal to \1 .
+Then we need a plane geometric statement (Proposition 2.3 ), where instead of \1 , we take a symmetric \1 .
+This plane geometric statement also allows us to prove the following result about two eigenvalues of such a matrix \1 . 
+ Theorem 2.2 . 
+ Let \1 be a symmetric matrix with eigenvalues \1 , …, \1 .
+Let \1 , \1 for some \1 .
+Then \1 , and if \1 , then 
+ (3) 
+ \1 
+ Remark 2.2 . 
+ We give two constructions to show that the bound here is sharp in some sense.
+First, let \1 , \1 , \1 , where \1 if and only if \1 .
+Then 
+ \1 
+ with 
+ \1 
+ Then \1 .
+Here \1 only depend on \1 , and \1 as \1 , and \1 as \1 , so we can approximate all points of the circle arc between these (see figure 3 ).
+Taking \1 we get the opposite circle arc too. 
+ For our second construction, let \1 , \1 , \1 symmetric, where for \1 let \1 if and only if \1 and \1 .
+Then 
+ \1 
+ for some \1 .
+Here \1 with \1 (with \1 only for \1 ), and \1 as \1 , and \1 at \1 .
+So \1 (because the zeros depend continuously on \1 , see e.g., [ 2 ] ), \1 , and \1 .
+We could of course take \1 instead of \1 , so we can approximate the whole ellipse arc between \1 and \1 (see figure 3 ).
+Taking \1 we also get the opposite ellipse arc. 
+ Figure 3 shows the closure of the set of attainable \1 .
+We will prove this theorem using the following plane geometric statement. 
+ Proposition 2.3 . 
+ Let \1 , \1 such that \1 and \1 .
+Let \1 be symmetric, and let 
+ \1 
+ Let \1 , \1 be the eigenvalues of \1 .
+Then \1 , and if \1 , then 
+ \1 
+ The convex region \1 with \1 has a description as an intersection of half planes, which will be useful for us. 
+ Lemma 2.1 . 
+ Let \1 .
+Then \1 if and only if 
+ (4) 
+ \1 
+ for every \1 . 
+ We will prove Proposition 2.3 using the following result. 
+ Proposition 2.4 . 
+ Let \1 , \1 such that \1 and \1 .
+Let \1 , \1 .
+Then 
+ (5) 
+ \1 
+ Note that this result easily generalizes to Borel probability measures on \1 (generalizing the case when the measure is supported on finitely many points \1 , where \1 has measure \1 ). 
+ We can use Propositions 2.1 , 2.2 , 2.3 to get the following result. 
+ Corollary 2.2 . 
+ Let \1 be symmetric, and let \1 , \1 , \1 .
+If \1 , \1 and \1 , then \1 and \1 , and if also \1 , then 
+ \1 
+ If \1 , \1 and \1 , then 
+ \1 
+ If \1 , \1 and \1 , then \1 , and if also \1 , then 
+ \1 
+ Remark 2.3 . 
+ If \1 , \1 with \1 , \1 is symmetric, \1 for every \1 , and the eigenvalues of \1 are \1 , then \1 , because \1 and \1 .
+Note that \1 with \1 .
+So if \1 , then by Sylvester’s law of inertia, \1 and \1 have the same signature: they have the same rank, and the same number of positive/negative eigenvalues.
+So e.g., if \1 , then \1 (and by continuity, we do not even need \1 here, \1 suffices). 
+ \1 \1 \1 \1 \1 \1 \1 \1 \1 \1 \1 
+ Figure 1. The region \1 
+ \1 \1 \1 \1 \1 \1 \1 \1 \1 \1 
+ Figure 2. The region \1 
+ \1 \1 \1 \1 \1 \1 \1 \1 
+ Figure 3. The closure of the set of attainable \1 
+ 3. Proofs 
+ Proof of Theorem 2.1 \1 Corollary 2.1 . 
+ We apply Theorem 2.1 for the matrix \1 with eigenvalues \1 .
+As we have seen earlier, \1 , because \1 and \1 .
+If \1 is the three-vertex path graph, then \1 , and the quadratic inequality for \1 holds.
+Now we prove that if \1 and \1 is not the three-vertex path graph, then \1 (and thus \1 ).
+The Cauchy interlacing theorem implies that if \1 is an induced subgraph of \1 with at least \1 vertices, then \1 .
+But the only \1 vertex graph \1 with \1 is the path graph.
+So if \1 , then every three vertex induced subgraph of \1 has exactly two edges.
+This cannot happen for \1 , and can only happen for \1 if \1 , in which case \1 .
+So applying Theorem 2.1 for \1 we get the quadratic bounds.
+We also get \1 , because in the definition of \1 we require \1 as \1 .
+So \1 is a compact subset of \1 , and \1 is a compact subset of \1 .
+We may add an appropriate number of isolated vertices to the graphs (which only add zero eigenvalues), so it follows that if \1 and \1 , then \1 too, and similarly, if \1 and \1 , then \1 too.
+So it is enough to prove that \1 for \1 with \1 , and that \1 for \1 with \1 . 
+ For \1 we define a graph \1 with vertex set \1 .
+For \1 with \1 , \1 is an edge in \1 if and only if \1 or \1 .
+(So \1 can be obtained by taking the graph consisting of two disjoint copies of \1 , and taking the join of this graph with \1 .)
+Let \1 be the adjacency matrix of \1 .
+It is easy to check that \1 has only three nonzero eigenvalues, which are the eigenvalues of \1 , or equivalently, of \1 .
+Here \1 , so the three nonzero eigenvalues are 
+ \1 
+ First let \1 .
+Then \1 , \1 , and \1 .
+So here \1 is a point of the ellipse arc between \1 and \1 (see figure 1 ), and it only depends on the ratio \1 .
+Moreover \1 converges to \1 as \1 , and it converges to \1 as \1 , and we get every point of the ellipse arc in between.
+So \1 is indeed the given region. 
+ Now let \1 be the disjoint union of \1 and \1 (so \1 has \1 vertices), where \1 .
+The eigenvalues of \1 are \1 and \1 (with multiplicity \1 ).
+So the largest \1 eigenvalues of \1 are \1 .
+So here \1 and \1 .
+If we fix a \1 and take \1 and \1 , then \1 , \1 and \1 .
+Here \1 is on the ellipse \1 , and \1 as \1 , and \1 as \1 (see figure 2 ).
+So we get that the whole ellipse arc is in \1 , hence \1 is indeed the given region.
+The only \1 for which \1 is the three-vertex path graph, so we also get \1 .
+∎ 
+ Proof of Propositions 2.1 , 2.2 \1 Theorem 2.1 . 
+ The matrix \1 is not negative definite (e.g., because \1 ), so \1 .
+There are eigenvectors \1 such that \1 , \1 for \1 , and \1 .
+Let \1 , \1 (we think of \1 as a column vector).
+Then \1 , \1 and 
+ \1 
+ so \1 , \1 and the quadratic inequality for \1 (assuming \1 ) follows from Proposition 2.1 .
+If \1 and \1 , then we can take \1 , \1 .
+Then \1 , so we get the quadratic inequality for \1 using Proposition 2.2 .
+∎ 
+ Proof of Proposition 2.3 \1 Theorem 2.2 . 
+ We use the same method as in the proof of Theorem 2.1 .
+There are eigenvectors \1 such that \1 , \1 , \1 and \1 .
+Let \1 , \1 (we think of \1 as a column vector).
+Then \1 , \1 and 
+ \1 
+ so the theorem follows from Proposition 2.3 .
+∎ 
+ Proof of Propositions 2.1 , 2.2 , 2.3 \1 Corollary 2.2 . 
+ There are orthogonal, norm \1 eigenvectors \1 of \1 for the eigenvalues \1 , \1 .
+So \1 , \1 , \1 , \1 .
+For \1 let \1 (column vector) if \1 , otherwise let \1 .
+Then 
+ \1 
+ and 
+ \1 
+ so the \1 case follows from Proposition 2.1 .
+In the \1 case the same proof works with \1 for \1 , \1 otherwise, using Proposition 2.2 .
+Finally, if \1 and \1 , then again the same proof works, with \1 , \1 and \1 for \1 , \1 otherwise, using Proposition 2.3 .
+∎ 
+ Proof of Proposition 2.2 \1 Proposition 2.1 . 
+ Let \1 with \1 .
+Let \1 have eigenvalues \1 .
+The claim is trivial for \1 , so assume that \1 .
+Let \1 , \1 and \1 for \1 , and let \1 and \1 .
+(Here we think of \1 as a column vector.)
+Then \1 and \1 (here we are using block matrix notation).
+Let \1 , where \1 for \1 , \1 for \1 , and \1 .
+Then \1 has eigenvalues \1 .
+Taking \1 we get \1 , so then \1 has eigenvalues \1 , where \1 and \1 .
+Applying Proposition 2.2 for \1 , \1 , \1 , we get that \1 , and that if \1 , then \1 .
+So \1 , and if \1 , then \1 and thus \1 .
+The bound \1 follows from \1 and \1 .
+∎ 
+ Proof of Proposition 2.3 \1 Proposition 2.2 . 
+ Let \1 and \1 .
+Let us choose \1 such that \1 and \1 , and let \1 (so if \1 , then \1 ).
+Let \1 (so we take in the \1 coordinate system the orthogonal projection of \1 onto \1 ).
+Then \1 , and 
+ \1 
+ \1 
+ \1 
+ where \1 is the matrix with columns \1 and \1 . 
+ Let \1 , \1 .
+Let 
+ \1 
+ \1 
+ \1 
+ Thinking of \1 as a quadratic form on \1 , here we get \1 times its restriction to the plane \1 .
+Let \1 be the eigenvalues of \1 .
+Using Cauchy’s interlacing theorem, we get \1 and \1 .
+Applying Proposition 2.3 for \1 and \1 , we get that \1 , and if \1 , then \1 .
+So \1 .
+Now suppose that \1 .
+Then \1 , so \1 .
+The ellipse \1 is convex and contains \1 , \1 , \1 , \1 , so it contains the rectangle \1 (because \1 ), hence it also contains \1 .
+Thus we get \1 .
+∎ 
+ Proof of Lemma 2.1 . 
+ Let \1 .
+Let \1 , \1 .
+Then \1 and \1 .
+Suppose that \1 , and let \1 .
+Then \1 , so by the Cauchy-Schwarz inequality, 
+ \1 
+ Conversely, suppose that \1 for every \1 .
+If \1 , then \1 .
+Now let \1 .
+Then \1 and \1 , so 
+ \1 
+ thus \1 .
+∎ 
+ Proof of Proposition 2.4 \1 Proposition 2.3 . 
+ Let \1 .
+Using the Cauchy-Schwarz inequality we get 
+ \1 
+ \1 
+ \1 
+ \1 
+ thus \1 .
+Here we have used that for \1 and for a symmetric matrix \1 we always have \1 .
+(Proof: We may assume that \1 is diagonal, because we can replace \1 with \1 , where \1 is an orthogonal matrix.
+So let \1 be diagonal, and let \1 .
+Then \1 .) 
+ Now let \1 .
+Taking \1 instead of \1 negates \1 and \1 , so we may assume that \1 .
+Let \1 , \1 .
+There is an orthogonal matrix \1 such that \1 .
+Applying Proposition 2.4 for \1 , \1 , \1 , we get 
+ \1 
+ \1 
+ \1 
+ By Lemma 2.1 it follows that \1 .
+∎ 
+ 4. Proof of Proposition 2.4 
+ By continuity, it is enough to prove the claim for \1 with \1 .
+So let us fix \1 , \1 , \1 .
+For \1 , \1 with \1 , let \1 .
+Let \1 be the set of \1 with \1 , \1 , \1 , \1 , \1 .
+Let \1 be the set of \1 with \1 .
+Let \1 and \1 .
+Clearly \1 
+We need to prove \1 .
+We assume indirectly that \1 . 
+ An overview of the proof: First we prove that \1 for every big enough \1 .
+The idea is that if there are many \1 pointing towards nearly the same direction, then we can use “ \1 -variation”: vary the \1 ’s so that some \1 becomes \1 , while \1 does not decrease.
+Next we prove using a compactness argument that there is in fact a \1 with some \1 such that \1 .
+We will take \1 to be minimal.
+Once we have a \1 with \1 , we can look at the partial derivatives with respect to \1 , \1 , and use Lagrange multipliers to get a lot of information about \1 , \1 .
+This information, together with the \1 -variation and the minimality of \1 , will allow us to prove \1 , with further restrictions on \1 , \1 .
+Finally, we deal with the remaining special cases directly. 
+ Let us call \1 a special pair for \1 , if \1 , \1 are disjoint subsets of \1 , such that \1 if \1 or \1 , and \1 if \1 , \1 .
+The following lemma shows that if we have a special pair satisfying a certain condition, then \1 can be decreased without decreasing \1 . 
+ Lemma 4.1 ( \1 -variation) . 
+ Let \1 .
+Let \1 be a special pair for \1 .
+Suppose that there is a \1 such that \1 , \1 , and \1 for every \1 .
+Then there is a \1 and a \1 such that \1 , \1 , and \1 .
+So there is a \1 such that \1 . 
+ Proof. 
+ Let \1 .
+Then 
+ \1 
+ for \1 , with \1 and \1 , where \1 .
+So this is a convex function of \1 .
+Since \1 , the set of \1 such that \1 , is a closed interval \1 , with \1 .
+So using the convexity we get that \1 for some \1 , and here \1 for some \1 .
+Then \1 , and deleting \1 and \1 , we get \1 with \1 .
+∎ 
+ If \1 , then there is a closed quadrant of the plane containing at least \1 of the points \1 .
+Let \1 be the corresponding set of indices \1 .
+Then \1 , and \1 for every \1 .
+Then \1 and \1 give us \1 equations for \1 (note that \1 are symmetric matrices), so there is a nonzero solution.
+So using the lemma, we get \1 for \1 .
+So \1 for \1 . 
+ Next we show that the supremum \1 is achieved.
+To see this, we need a change of variables to get compactness.
+Fix \1 .
+Let \1 and \1 .
+Then \1 , \1 and \1 .
+Here \1 , so \1 .
+So by compactness and continuity, there is a \1 with \1 , \1 , \1 , \1 , \1 and maximal \1 .
+Let \1 if \1 , otherwise let \1 .
+Then \1 and \1 . 
+ So there is an \1 and a \1 such that \1 .
+We choose \1 to be minimal.
+If \1 for some \1 , then we could delete \1 and \1 , contradicting the minimality of \1 .
+So \1 for every \1 .
+We will show now that \1 .
+Suppose indirectly that \1 .
+Then there is a \1 such that \1 .
+Let \1 , \1 , \1 and \1 for \1 , \1 , \1 .
+Then \1 , \1 and 
+ \1 
+ \1 
+ \1 
+ \1 
+ \1 
+ at \1 .
+Here \1 , so \1 , therefore \1 .
+So \1 for every \1 .
+Here \1 , so there are \1 , \1 such that \1 and \1 for every \1 .
+Then \1 , \1 and \1 .
+Then \1 , so using the Cauchy-Schwarz inequality, we get \1 .
+So \1 .
+However it is easy to check that \1 for \1 .
+This contradiction proves that indeed \1 . 
+ The next step of the proof is to use the method of Lagrange multipliers (a standard tool in constrained optimization) to get further information on the maximizing \1 . 
+ Lemma 4.2 . 
+ Suppose that \1 .
+Let \1 , \1 such that \1 and \1 is minimal.
+Let \1 be a symmetric matrix such that \1 for every \1 .
+Let \1 for \1 , and let \1 .
+Then \1 , \1 is diagonal and positive definite, \1 , and \1 , \1 for every \1 .
+Moreover \1 , \1 and \1 for every \1 , and \1 and \1 for \1 . 
+ Proof. 
+ If \1 for some \1 , then we can delete \1 , contradicting the minimality of \1 .
+So \1 for every \1 .
+So \1 maximizes \1 under the constraints \1 , \1 with \1 , \1 , and the maximum value is \1 .
+So our objective function is 
+ \1 
+ and our constraint function is 
+ \1 
+ where \1 denotes the vector space of symmetric matrices in \1 .
+Note that here \1 is a \1 dimensional vector space.
+We know that \1 is a local maximum point of \1 under the constraint \1 .
+In order for the method of Lagrangian multipliers to be applicable, we need to check the constraint gradient requirement: the differential of \1 at \1 has to have rank \1 .
+Suppose indirectly that this rank is not \1 .
+Then there is a \1 such that 
+ \1 
+ has zero differential at \1 .
+Then \1 , so we get (using \1 ) that \1 for every \1 .
+So \1 , hence \1 .
+Then \1 .
+This contradiction shows that the constraint gradient requirement is satisfied. 
+ Our Lagrangian function is 
+ \1 
+ \1 
+ \1 
+ where \1 , \1 .
+The method of Lagrange multipliers tells us that there is a unique \1 such that \1 , \1 , \1 , \1 are all zero at \1 .
+The equations \1 and \1 just give us the constraints \1 and \1 .
+From \1 we get \1 .
+From \1 we get \1 , so \1 .
+So we get \1 .
+Then 
+ \1 
+ and \1 .
+Let \1 .
+Then \1 , \1 and \1 for every \1 , and \1 .
+So \1 .
+So \1 and \1 .
+Using \1 we get that \1 is diagonal. 
+ Let \1 .
+As we have seen earlier (in the proof of Proposition 2.4 \1 Proposition 2.3 ), we have \1 , so \1 .
+If \1 or \1 , then \1 .
+So \1 , hence \1 .
+Since \1 , we have \1 and thus \1 for every \1 .
+If \1 for some \1 , then we can replace \1 , \1 with \1 without changing \1 , contradicting the minimality of \1 .
+So \1 and thus \1 for \1 (here we have used that \1 is invertible).
+Since \1 has rank \1 , we have \1 .
+If \1 , then \1 , which is impossible.
+So \1 .
+∎ 
+ Let \1 , \1 , \1 , \1 .
+Then \1 , and 
+ \1 
+ for every \1 , thus \1 .
+Similarly, \1 .
+Here \1 means that \1 and \1 .
+So \1 and \1 are both eigenvalues of \1 (and if \1 then with multiplicity \1 ).
+In other words, \1 divides the characteristic polynomial \1 . 
+ Now we know that \1 implies \1 , because \1 and \1 .
+Using this observation, Lemma 4.1 , and the minimality of \1 , we get that \1 for every special pair \1 for \1 . 
+ We can negate any \1 , and we can also permute the indices of \1 , without changing \1 and \1 .
+So we may assume that 
+ \1 
+ with \1 , \1 .
+In fact here \1 , because if \1 for some \1 , then \1 , and this is impossible, because \1 and \1 .
+Note that \1 , so if \1 , then \1 , and if \1 , then \1 . 
+ Suppose that \1 .
+If \1 , then \1 , so \1 , so \1 and thus \1 , which is impossible.
+So \1 .
+We have \1 , so \1 or \1 .
+So \1 or \1 .
+If \1 , then \1 and \1 .
+So \1 .
+If \1 , then \1 .
+So \1 .
+So 
+ \1 
+ Then \1 , where \1 .
+We know that \1 divides \1 , so \1 for some \1 .
+Then \1 , \1 and \1 .
+Substituting \1 into the second equation, we get \1 .
+Expanding this, we get \1 (the same calculation appears in Remark 2.2 ).
+Using Lemma 2.1 we get \1 .
+So \1 . 
+ For \1 we have \1 , because otherwise \1 would be a special pair.
+Furthermore, for \1 , we have \1 , because otherwise \1 would be a special pair.
+So we get \1 , thus \1 , so \1 . 
+ Suppose that \1 .
+Then \1 , and \1 .
+So \1 , \1 .
+If \1 , then \1 .
+If \1 , then \1 .
+If \1 and \1 , then \1 .
+If \1 and \1 , then \1 .
+Since \1 for \1 , we get \1 . 
+ Finally, for \1 we have \1 and \1 .
+So \1 , \1 .
+So 
+ \1 
+ Then \1 , where 
+ \1 
+ For us the exact value of \1 , \1 is not important, we only use \1 .
+We know that \1 , where \1 .
+Then for \1 we can solve the linear system of equations \1 in \1 .
+Explicitly, we can eliminate \1 by taking \1 .
+We get 
+ \1 
+ So \1 , hence \1 .
+If \1 , then \1 , so \1 , hence \1 , thus \1 and again \1 .
+Using Lemma 2.1 , we get \1 .
+This final contradiction proves that indeed \1 . 
+ Acknowledgement 
+ No AI was used during the preparation of this article, except at the end for a final check. 
+ References 
+ [1] 
+ J. Ebrahimi B, B. Mohar, V. Nikiforov, and A. S. Ahmady (2008) 
+ On the sum of two largest eigenvalues of a symmetric matrix .
+ Linear Algebra Appl. 429 ( 11-12 ), pp. 2781–2787 .
+ External Links: ISSN 0024-3795,1873-1856 ,
+ Document ,
+ Link ,
+ MathReview (Raphael Loewy) 
+ Cited by: §1 .
+ [2] 
+ K. Hirose (2020) 
+ Continuity of the roots of a polynomial .
+ Amer. Math. Monthly 127 ( 4 ), pp. 359–363 .
+ External Links: ISSN 0002-9890,1930-0972 ,
+ Document ,
+ Link ,
+ MathReview (Mohan L. Tikoo) 
+ Cited by: Remark 2.2 .
+ [3] 
+ Y. Hong (1988) 
+ Bounds of eigenvalues of a graph .
+ Acta Math. Appl. Sinica (English Ser.) 4 ( 2 ), pp. 165–168 .
+ External Links: ISSN 0168-9673,1618-3932 ,
+ Document ,
+ Link ,
+ MathReview (W.-K. Chen) 
+ Cited by: §1 .
+ [4] 
+ J. Huang and W. Wei (2026) 
+ The exact maximum of the spectral sum of graphs .
+ External Links: 2607.23081 ,
+ Link 
+ Cited by: §1 .
+ [5] 
+ H. Kumar, L. Liu, H. Monterde, S. Pragada, and M. Tait (2026) 
+ Maximum spectral sum of graphs .
+ External Links: 2604.00512 ,
+ Link 
+ Cited by: §1 .
+ [6] 
+ V. Nikiforov (2015) 
+ Extrema of graph eigenvalues .
+ Linear Algebra Appl. 482 , pp. 158–190 .
+ External Links: ISSN 0024-3795,1873-1856 ,
+ Document ,
+ Link ,
+ MathReview (Ravinder Kumar) 
+ Cited by: §1 .
+ [7] 
+ V. Sivashankar, Q. Tang, and T. Wakhare (2026) 
+ Graph eigenvalues and projection constants .
+ External Links: 2608.02429 ,
+ Link 
+ Cited by: §1 .
+ [8] 
+ Q. Tang (2026) 
+ A sharp upper bound on the third adjacency eigenvalue of a graph .
+ External Links: 2603.21181 ,
+ Link 
+ Cited by: §1 .
+ Experimental support, please
+ view the build logs 
+ for errors. Generated by
+ L
+ A 
+ T
+ E 
+ xml 
+ .
+ Instructions for reporting errors 
+ We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+ support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+ methods listed below: 
+ Click the "Report Issue" ( 
+ ) button, located in the page header. 
+ Tip: You can select the relevant text first, to include it in your report. 
+ Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+ may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+ should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+ all. 
+ Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . 
+ We gratefully acknowledge support from
+ our major funders ,
+ member institutions , ,
+ and all contributors.
+ About 
+ · 
+ Help 
+ · 
+ Contact 
+ · 
+ Subscribe 
+ · 
+ Copyright 
+ · 
+ Privacy 
+ · 
+ Accessibility 
+ · 
+ Operational Status (opens in new tab) 
+ Major funding support from 

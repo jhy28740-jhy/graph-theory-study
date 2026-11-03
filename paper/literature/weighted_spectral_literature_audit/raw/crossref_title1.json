@@ -1,0 +1,10 @@
+{
+  "key": "crossref_title1",
+  "source": "Crossref title search",
+  "query": "The Exact Maximum of the Spectral Sum of Graphs",
+  "url": "https://api.crossref.org/works?query.title=The%20Exact%20Maximum%20of%20the%20Spectral%20Sum%20of%20Graphs&rows=10",
+  "kind": "crossref",
+  "retrieved_utc": "2026-10-14T09:35:57.243998+00:00",
+  "error": "<HTTPError 429: 'Too Many Requests'>",
+  "http_status": 429
+}

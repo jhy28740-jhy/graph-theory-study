@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "C:\Users\hyji11\Documents\ChatGPT\图论\进展报告_前三大特征值上界_20261027\证书_行方差松弛与天花板.py", line 187, in <module>
+    tgt6=sp.expand(L**6-3*L**5+3*L**4-L**3)
+                   ^
+NameError: name 'L' is not defined. Did you mean: 'fL'?

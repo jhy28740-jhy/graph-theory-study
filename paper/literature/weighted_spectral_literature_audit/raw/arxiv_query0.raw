@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/T2dLr9fPoetYInFp5hC2f4otkqc</id>
+  <title>arXiv Query: search_query=all:"weighted sum" AND all:"eigenvalues" AND all:"graph"&amp;id_list=&amp;start=0&amp;max_results=100</title>
+  <updated>2026-10-14T09:35:32Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22weighted+sum%22+AND+(all:%22eigenvalues%22+AND+all:%22graph%22)&amp;start=0&amp;max_results=100&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>100</opensearch:itemsPerPage>
+  <opensearch:totalResults>10</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2403.19143v1</id>
+    <title>Tiny Graph Neural Networks for Radio Resource Management</title>
+    <updated>2024-03-28T04:35:27Z</updated>
+    <link href="https://arxiv.org/abs/2403.19143v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2403.19143v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The surge in demand for efficient radio resource management has necessitated the development of sophisticated yet compact neural network architectures. In this paper, we introduce a novel approach to Graph Neural Networks (GNNs) tailored for radio resource management by presenting a new architecture: the Low Rank Message Passing Graph Neural Network (LR-MPGNN). The cornerstone of LR-MPGNN is the implementation of a low-rank approximation technique that substitutes the conventional linear layers with their low-rank counterparts. This innovative design significantly reduces the model size and the number of parameters. We evaluate the performance of the proposed LR-MPGNN model based on several key metrics: model size, number of parameters, weighted sum rate of the communication system, and the distribution of eigenvalues of weight matrices. Our extensive evaluations demonstrate that the LR-MPGNN model achieves a sixtyfold decrease in model size, and the number of model parameters can be reduced by up to 98%. Performance-wise, the LR-MPGNN demonstrates robustness with a marginal 2% reduction in the best-case scenario in the normalized weighted sum rate compared to the original MPGNN model. Additionally, the distribution of eigenvalues of the weight matrices in the LR-MPGNN model is more uniform and spans a wider range, suggesting a strategic redistribution of weights.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.NI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-03-28T04:35:27Z</published>
+    <arxiv:comment>Accepted as a full paper by the tinyML Research Symposium 2024</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Ahmad Ghasemi</name>
+    </author>
+    <author>
+      <name>Hossein Pishro-Nik</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2403.15811v1</id>
+    <title>Distance Adjustment of a Graph Drawing Stress Model</title>
+    <updated>2024-03-23T11:49:51Z</updated>
+    <link href="https://arxiv.org/abs/2403.15811v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2403.15811v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Stress models are a promising approach for graph drawing. They minimize the weighted sum of the squared errors of the Euclidean and desired distances for each node pair. The desired distance typically uses the graph-theoretic distances obtained from the all-node pair shortest path problem. In a minimized stress function, the obtained coordinates are affected by the non-Euclidean property and the high-dimensionality of the graph-theoretic distance matrix. Therefore, the graph-theoretic distances used in stress models may not necessarily be the best metric for determining the node coordinates. In this study, we propose two different methods of adjusting the graph-theoretical distance matrix to a distance matrix suitable for graph drawing while preserving its structure. The first method is the application of eigenvalue decomposition to the inner product matrix obtained from the distance matrix and the obtainment of a new distance matrix by setting some eigenvalues with small absolute values to zero. The second approach is the usage of a stress model modified by adding a term that minimizes the Frobenius norm between the adjusted and original distance matrices. We perform computational experiments using several benchmark graphs to demonstrate that the proposed method improves some quality metrics, including the node resolution and the Gabriel graph property, when compared to conventional stress models.</summary>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-03-23T11:49:51Z</published>
+    <arxiv:comment>24 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.DS"/>
+    <author>
+      <name>Yosuke Onoue</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.01866v3</id>
+    <title>Fluctuation of the Largest Eigenvalue of a Kernel Matrix with application in Graphon-based Random Graphs</title>
+    <updated>2025-08-20T21:16:20Z</updated>
+    <link href="https://arxiv.org/abs/2401.01866v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.01866v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this article, we explore the spectral properties of general random kernel matrices $[K(U_i,U_j)]_{1\leq i\neq j\leq n}$ from a Lipschitz kernel $K$ with $n$ independent random variables $U_1,U_2,\ldots, U_n$ distributed uniformly over $[0,1]$. In particular we identify a dichotomy in the extreme eigenvalue of the kernel matrix, where, if the kernel $K$ is degenerate, the largest eigenvalue of the kernel matrix (after proper normalization) converges weakly to a weighted sum of independent chi-squared random variables. In contrast, for non-degenerate kernels, it converges to a normal distribution extending and reinforcing earlier results from Koltchinskii and Giné (2000). Further, we apply this result to show a dichotomy in the asymptotic behavior of extreme eigenvalues of $W$-random graphs, which are pivotal in modeling complex networks and analyzing large-scale graph behavior. These graphs are generated using a kernel $W$, termed as graphon, by connecting vertices $i$ and $j$ with probability $W(U_i, U_j)$. Our results show that for a Lipschitz graphon $W$, if the degree function is constant, the fluctuation of the largest eigenvalue (after proper normalization) converges to the weighted sum of independent chi-squared random variables and an independent normal distribution. Otherwise, it converges to a normal distribution.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-01-03T18:19:01Z</published>
+    <arxiv:comment>Updated notations and structure to match the accepted version. To appear in The Annals of Applied Probability</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Anirban Chatterjee</name>
+    </author>
+    <author>
+      <name>Jiaoyang Huang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2205.01478v3</id>
+    <title>Eigenvector centrality for multilayer networks with dependent node importance</title>
+    <updated>2023-05-24T00:43:50Z</updated>
+    <link href="https://arxiv.org/abs/2205.01478v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2205.01478v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a novel approach for computing a variant of eigenvector centrality for multilayer networks with inter-layer constraints on node importance. Specifically, we consider a multilayer network defined by multiple edge-weighted, potentially directed, graphs over the same set of nodes with each graph representing one layer of the network and no inter-layer edges. As in the standard eigenvector centrality construction, the importance of each node in a given layer is based on the weighted sum of the importance of adjacent nodes in that same layer. Unlike standard eigenvector centrality, we assume that the adjacency relationship and the importance of adjacent nodes may be based on distinct layers. Importantly, this type of centrality constraint is only partially supported by existing frameworks for multilayer eigenvector centrality that use edges between nodes in different layers to capture inter-layer dependencies. For our model, constrained, layer-specific eigenvector centrality values are defined by a system of independent eigenvalue problems and dependent pseudo-eigenvalue problems, whose solution can be efficiently realized using an interleaved power iteration algorithm.</summary>
+    <category term="physics.soc-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-05-03T13:17:43Z</published>
+    <arxiv:primary_category term="physics.soc-ph"/>
+    <author>
+      <name>H. Robert Frost</name>
+    </author>
+    <arxiv:doi>10.1007/978-3-031-53472-0_1</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/978-3-031-53472-0_1" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2107.10781v1</id>
+    <title>Applications of the Harary-Sachs Theorem for Hypergraphs</title>
+    <updated>2021-07-22T16:18:30Z</updated>
+    <link href="https://arxiv.org/abs/2107.10781v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2107.10781v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Harary-Sachs theorem for $k$-uniform hypergraphs equates the codegree-$d$ coefficient of the adjacency characteristic polynomial of a uniform hypergraph with a weighted sum of subgraph counts over certain multi-hypergraphs with $d$ edges. We begin by showing that the classical Harary-Sachs theorem for graphs is indeed a special case of this general theorem. To this end we apply the generalized Harary-Sachs theorem to the leading coefficients of the characteristic polynomial of various hypergraphs. In particular, we provide explicit and asymptotic formulas for the contribution of the $k$-uniform simplex to the codegree-$d$ coefficient. Moreover, we provide an explicit formula for the leading terms of the characteristic polynomial of a 3-uniform hypergraph and further show how this can be used to determine the complete spectrum of a hypergraph. We conclude with a conjecture concerning the multiplicity of the zero-eigenvalue of a hypergraph.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-07-22T16:18:30Z</published>
+    <arxiv:comment>arXiv admin note: substantial text overlap with arXiv:1812.00468</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Gregory J. Clark</name>
+    </author>
+    <author>
+      <name>Joshua Cooper</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1907.08880v1</id>
+    <title>Spectral Graph Matching and Regularized Quadratic Relaxations I: The Gaussian Model</title>
+    <updated>2019-07-20T23:36:41Z</updated>
+    <link href="https://arxiv.org/abs/1907.08880v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1907.08880v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Graph matching aims at finding the vertex correspondence between two unlabeled graphs that maximizes the total edge weight correlation. This amounts to solving a computationally intractable quadratic assignment problem. In this paper we propose a new spectral method, GRAph Matching by Pairwise eigen-Alignments (GRAMPA). Departing from prior spectral approaches that only compare top eigenvectors, or eigenvectors of the same order, GRAMPA first constructs a similarity matrix as a weighted sum of outer products between all pairs of eigenvectors of the two graphs, with weights given by a Cauchy kernel applied to the separation of the corresponding eigenvalues, then outputs a matching by a simple rounding procedure. The similarity matrix can also be interpreted as the solution to a regularized quadratic programming relaxation of the quadratic assignment problem.
+  For the Gaussian Wigner model in which two complete graphs on $n$ vertices have Gaussian edge weights with correlation coefficient $1-σ^2$, we show that GRAMPA exactly recovers the correct vertex correspondence with high probability when $σ= O(\frac{1}{\log n})$. This matches the state of the art of polynomial-time algorithms, and significantly improves over existing spectral methods which require $σ$ to be polynomially small in $n$. The superiority of GRAMPA is also demonstrated on a variety of synthetic and real datasets, in terms of both statistical accuracy and computational efficiency. Universality results, including similar guarantees for dense and sparse Erdős-Rényi graphs, are deferred to the companion paper.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-07-20T23:36:41Z</published>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Zhou Fan</name>
+    </author>
+    <author>
+      <name>Cheng Mao</name>
+    </author>
+    <author>
+      <name>Yihong Wu</name>
+    </author>
+    <author>
+      <name>Jiaming Xu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1704.00779v1</id>
+    <title>What is the meaning of the graph energy after all?</title>
+    <updated>2017-04-03T19:29:31Z</updated>
+    <link href="https://arxiv.org/abs/1704.00779v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1704.00779v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For a simple graph $G=(V,E)$ with eigenvalues of the adjacency matrix $λ_{1}\geqλ_{2}\geq\cdots\geqλ_{n}$, the energy of the graph is defined by $E(G)=\sum_{j=1}^{n}|λ_{j}|$. Myriads of papers have been published in the mathematical and chemistry literature about properties of this graph invariant due to its connection with the energy of (bipartite) conjugated molecules. However, a structural interpretation of this concept in terms of the contributions of even and odd walks, and consequently on the contribution of subgraphs, is not yet known. Here, we find such interpretation and prove that the (adjacency) energy of any graph (bipartite or not) is a weighted sum of the traces of even powers of the adjacency matrix. We then use such result to find bounds for the energy in terms of subgraphs contributing to it. The new bounds are studied for some specific simple graphs, such as cycles and fullerenes. We observe that including contributions from subgraphs of sizes not bigger than 6 improves some of the best known bounds for the energy, and more importantly gives insights about the contributions of specific subgraphs to the energy of these graphs.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-04-03T19:29:31Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Ernesto Estrada</name>
+    </author>
+    <author>
+      <name>Michele Benzi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1504.07327v1</id>
+    <title>Toward Smart Power Grids: Communication Network Design for Power Grids Synchronization</title>
+    <updated>2015-04-28T01:51:15Z</updated>
+    <link href="https://arxiv.org/abs/1504.07327v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1504.07327v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In smart power grids, keeping the synchronicity of generators and the corresponding controls is of great importance. To do so, a simple model is employed in terms of swing equation to represent the interactions among dynamics of generators and feedback control. In case of having a communication network available, the control can be done based on the transmitted measurements by the communication network. The stability of system is denoted by the largest eigenvalue of the weighted sum of the Laplacian matrices of the communication infrastructure and power network. In this work, we use graph theory to model the communication network as a graph problem. Then, Ant Colony System (ACS) is employed for optimum design of above graph for synchronization of power grids. Performance evaluation of the proposed method for the 39-bus New England power system versus methods such as exhaustive search and Rayleigh quotient approximation indicates feasibility and effectiveness of our method for even large scale smart power grids.</summary>
+    <category term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-04-28T01:51:15Z</published>
+    <arxiv:comment>This paper has been presented at the 27th International Power System Conference in 2012</arxiv:comment>
+    <arxiv:primary_category term="cs.NE"/>
+    <author>
+      <name>Hojjat Salehinejad</name>
+    </author>
+    <author>
+      <name>Farhad Pouladi</name>
+    </author>
+    <author>
+      <name>Siamak Talebi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1504.03408v4</id>
+    <title>Weighted Hurwitz numbers and hypergeometric $τ$-functions: an overview</title>
+    <updated>2015-09-21T19:37:40Z</updated>
+    <link href="https://arxiv.org/abs/1504.03408v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1504.03408v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This is an overview of recent results on the use of 2D Toda $τ$-functions as generating functions for multiparametric families of weighted Hurwitz numbers. The Bose-Fermi equivalence composed with the characteristic map provides an isomorphism between the zero charge sector of the Fermionic Fock space and the direct sum of the centers of the group algebra of the symmetric groups $S_n$. Specializing the fermionic formula to the case of diagonal group elements gives $τ$-functions of hypergeometric type, for which the expansion over products of Schur functions is diagonal, with coefficients of {\em content product} type. The corresponding abelian group action on the centre of the $S_n$ group algebra is determined by forming symmetric functions multiplicatively from a weight generating function $G(z)$ and evaluating on the Jucys-Murphy elements of the group algebra. The resulting central elements act diagonally on the basis of orthogonal idempotents and the eigenvalues $r^{G(z)}_λ$ are the {\em content product} coefficients appearing in the double Schur function expansion. Both the geometrical meaning of weighted Hurwitz numbers, as weighted sums over $n$-sheeted branched coverings, and the combinatorial one, as weighted enumeration of paths in the Cayley graph of $S_n$ generated by transpositions follow from expansion of the Cauchy-Littlewood generating functions over dual pairs of bases of the algebra of symmetric functions. The coefficients in the resulting $τ$-function expansion over products of power sum symmetric functions are the weighted Hurwitz numbers. Replacement of the Cauchy-Littlewood generating function by that for Macdonald polynomials provides $(q,t)$-deformations that yield generating functions for quantum weighted Hurwitz numbers.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nlin.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-04-14T03:10:45Z</published>
+    <arxiv:comment>53 pages. Ref. [15] added. Minor typos corrected</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <arxiv:journal_ref>Proc. Symp. Pure Math. 93. 289-333 (2016)</arxiv:journal_ref>
+    <author>
+      <name>J. Harnad</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1504.03311v3</id>
+    <title>Quantum Hurwitz numbers and Macdonald polynomials</title>
+    <updated>2016-11-19T18:24:19Z</updated>
+    <link href="https://arxiv.org/abs/1504.03311v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1504.03311v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Parametric families in the centre ${\bf Z}({\bf C}[S_n])$ of the group algebra of the symmetric group are obtained by identifying the indeterminates in the generating function for Macdonald polynomials as commuting Jucys-Murphy elements. Their eigenvalues provide coefficients in the double Schur function expansion of 2D Toda $τ$-functions of hypergeometric type. Expressing these in the basis of products of power sum symmetric functions, the coefficients may be interpreted geometrically as parametric families of quantum Hurwitz numbers, enumerating weighted branched coverings of the Riemann sphere. Combinatorially, they give quantum weighted sums over paths in the Cayley graph of $S_n$ generated by transpositions. Dual pairs of bases for the algebra of symmetric functions with respect to the scalar product in which the Macdonald polynomials are orthogonal provide both the geometrical and combinatorial significance of these quantum weighted enumerative invariants.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nlin.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-04-13T19:40:03Z</published>
+    <arxiv:comment>23 pages. Minor typos corrected. References updated. Scalar product for Jack polynomials corrected</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <arxiv:journal_ref>J. Math. Phys. 57, 113505 (2016)</arxiv:journal_ref>
+    <author>
+      <name>J. Harnad</name>
+    </author>
+    <arxiv:doi>10.1063/1.4967953</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1063/1.4967953" title="doi"/>
+  </entry>
+</feed>
