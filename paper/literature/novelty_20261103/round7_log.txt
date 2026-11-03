@@ -1,0 +1,28 @@
+  retry(0) HTTP Error 429: Too Many Requests
+  retry(1) HTTP Error 429: Too Many Requests
+  retry(2) HTTP Error 429: Too Many Requests
+  retry(3) HTTP Error 429: Too Many Requests
+
+## sum of the three largest eigenvalues
+   (no response)
+  retry(0) HTTP Error 429: Too Many Requests
+  retry(1) HTTP Error 429: Too Many Requests
+  retry(2) HTTP Error 429: Too Many Requests
+  retry(3) HTTP Error 429: Too Many Requests
+
+## three largest eigenvalues bound
+   (no response)
+  retry(0) HTTP Error 429: Too Many Requests
+  retry(1) HTTP Error 429: Too Many Requests
+  retry(2) HTTP Error 429: Too Many Requests
+  retry(3) HTTP Error 429: Too Many Requests
+
+## AIMS: extremal graphs for sum of two largest eigenvalues
+   (no response)
+  retry(0) HTTP Error 429: Too Many Requests
+  retry(1) HTTP Error 429: Too Many Requests
+  retry(2) HTTP Error 429: Too Many Requests
+  retry(3) HTTP Error 429: Too Many Requests
+
+## Laplacian energy eigenvalue-sum
+   (no response)

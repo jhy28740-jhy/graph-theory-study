@@ -1,0 +1,42 @@
+########## AIMS Mathematics site search ##########
+  retry HTTP Error 400: Bad Request
+  retry HTTP Error 400: Bad Request
+
+## Extremal graphs for the sum of two largest eigenvalues  (len=0)
+   article links: 0
+  retry HTTP Error 400: Bad Request
+  retry HTTP Error 400: Bad Request
+
+## sum of two largest eigenvalues extremal graphs  (len=0)
+   article links: 0
+
+
+########## arXiv full-text sweep (not rate limited) ##########
+
+## all:"three largest eigenvalues" AND cat:math.CO
+   (0 hits)
+
+## abs:"sum of the three largest eigenvalues"
+   (0 hits)
+
+## all:"pole-pentagon"
+   (0 hits)
+
+## abs:"lambda_1+2\lambda_2" AND cat:math.CO
+   (0 hits)
+
+## abs:"2\lambda_2" AND cat:math.CO
+   (0 hits)
+
+## abs:"spectral sum" AND abs:"threshold graph"
+   (0 hits)
+
+## all:"joint moment bound" AND cat:math.CO
+   (0 hits)
+
+## abs:"projection constant" AND cat:math.CO
+   - 2026-09-02 2609.03200v1 Stability of maximal relative projection constants
+   - 2026-08-03 2608.02429v1 Graph Eigenvalues and Projection Constants
+   - 2026-03-31 2603.29280v1 Graph Eigenvalues and Projection Constants
+   - 2025-02-19 2502.13752v2 Large Signed Sums and the Polarization Constant of Convex Bodies
+   - 2019-01-23 1901.07866v1 Computation of maximal projection constants

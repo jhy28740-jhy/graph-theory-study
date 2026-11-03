@@ -1,0 +1,49 @@
+########## OpenAlex: works citing STW arXiv:2608.02429 ##########
+direct: https://openalex.org/W7172451143 Graph Eigenvalues and Projection Constants cited_by: 0
+search: https://openalex.org/W7172451143 Graph Eigenvalues and Projection Constants
+
+citing works of https://openalex.org/W7172451143 : 0
+
+
+########## OpenAlex: works citing Huang-Wei / KLMPT / Paulin ##########
+
+10.48550/arxiv.2607.23081 : cited_by_count=0
+
+10.48550/arxiv.2604.00512 : cited_by_count=0
+
+10.48550/arxiv.2609.37980 : cited_by_count=0
+
+
+########## other preprint servers ##########
+
+## OSF preprints title=third spectral sum
+   total: 0
+
+## OSF preprints title=spectral sum graphs
+   total: 0
+
+## OSF preprints title=lambda1 lambda2
+   total: 0
+
+## HAL title_t=third spectral sum
+   total: 0
+
+## HAL title_t=spectral sum graph
+   total: 7
+   - 2022-07-04 | QCD spectral sum rules 2022
+   - 2014-06-30 | Mini-review on QCD spectral sum rules
+   - 2025-10-17 | Dequantization and Hardness of Spectral Sum Estimation
+   - 2022-07-04 | $0^+$ XTZ states from QCD spectral sum rules
+   - 1998-09-14 | Tau spectral functions - QCD applications and spectral sum rules
+   - 2013 | Revisiting f_B and m_b(m_b) from HQET spectral sum rules
+   - 2019-09-16 | Classical spectral sum rules and “half-naked” electron effects in radiation from relativistic electrons in external field
+  retry HTTP Error 404: Not Found
+  retry HTTP Error 404: Not Found
+  retry HTTP Error 404: Not Found
+
+## viXra search third spectral sum (no response)
+  retry <urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。>
+  retry <urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。>
+  retry <urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。>
+
+## SSRN search spectral sum graphs (no response)

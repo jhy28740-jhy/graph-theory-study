@@ -74,6 +74,52 @@ Crossref 在本次会话中不可达，Semantic Scholar 间歇性失败，
 \texttt{stair graph eigenvalues extremal}、\texttt{Pell equation spectral graph theory}、
 \texttt{second largest eigenvalue maximum graphs exact}。
 
+\subsection{覆盖率的直接证据}
+
+除检索式本身之外，本次还用四条独立途径交叉验证``没有后续文献''这一判断。
+
+\begin{enumerate}[label=(\alph*),leftmargin=2.2em]
+\item \textbf{引用图谱为空。} STW 在 OpenAlex 中的记录为
+\texttt{W7172451143}（\emph{Graph Eigenvalues and Projection Constants}），
+其 \texttt{cited\_by\_count} 为 \textbf{0}；
+按 \texttt{filter=cites:W7172451143} 反查亦返回 0 条。
+Huang--Wei（2607.23081）、KLMPT（2604.00512）、Paulin（2609.37980）三篇的
+\texttt{cited\_by\_count} 同样为 \textbf{0}。
+也就是说，这一方向在索引层面\emph{尚无任何后续工作}，
+``已被别人改进''只可能来自未被学术索引收录的自存档。
+
+\item \textbf{其他预印本平台为空。} OSF Preprints 标题检索
+（\texttt{third spectral sum}、\texttt{spectral sum graphs}、
+\texttt{eigenvalue sum graph}）三项均返回 \textbf{0 条}。
+HAL 以 \texttt{title\_t} 检索 \texttt{"third spectral sum"} 返回 0 条，
+检索 \texttt{"spectral sum"} 返回 7 条，逐条核对后全部属 QCD 谱求和规则
+或``Spectral Sum Estimation''的计算复杂度论文，与图论无关。
+viXra 的检索端点本次返回 404，SSRN 连接超时；
+但两者均被 OpenAlex 收录，而 OpenAlex 的标题级检索对同一批检索式返回 0 条。
+
+\item \textbf{``pole--pentagon''这一命名只存在于那两条 Zenodo 记录。}
+OpenAlex 全文检索 \texttt{"pole-pentagon"} 命中 \textbf{2 条}，
+即 doi:10.5281/zenodo.21785906 与 22082842，别无其他；
+arXiv 全文检索 \texttt{all:"pole-pentagon"} 命中 \textbf{0 条}。
+这说明该术语未进入任何同行评审文献或主流预印本。
+
+\item \textbf{投影常数方向的 arXiv 全集只有 5 篇。}
+以 \texttt{abs:"projection constant" AND cat:math.CO} 检索，
+返回 2609.03200、2608.02429、2603.29280、2502.13752、1901.07866 共 5 篇，
+其中前三篇已列入表~\ref{tab:main}
+（2603.29280 与 2608.02429 标题相同，为同一工作的前身版本），
+后两篇分别是凸体极化常数与极大投影常数的数值计算，与图论求和无关。
+
+\item \textbf{新识别到的一篇期刊论文不影响结论。}
+OpenAlex 检索中另出现
+\emph{Extremal graphs for the sum of two largest eigenvalues}，
+\textbf{AIMS Mathematics}（2026）。该文处理的是\emph{两项}和
+$\lambda_1+\lambda_2$ 的极图，属 Huang--Wei 所在的同一问题族，
+既不涉及 $\Lam_3$，也不涉及权重为 2 的 $\lambda_1+2\lambda_2$。
+因 OpenAlex 在本次会话后段触发 IP 级限流（HTTP 429），
+其 DOI 与作者名单暂未取到，留作后续补录。
+\end{enumerate}
+
 \textbf{局限（须向导师说明）。}
 (i)~Zenodo 的站内关键词检索接口在本次会话中已失效
 （任意查询均返回全站四万余条记录），因此 Zenodo 一侧的排查改为
@@ -122,6 +168,9 @@ $\lambda_1,\lambda_2$ 的锐二次不等式与 $\lambda_2,\lambda_3$ 的二次�
 推出 $\lambda_1+\lambda_2\le8n/7-2$、$\lambda_3\le n/3-1$、$\lambda_2+\lambda_3\le2n/3-2$；
 确定两组归一化特征值对的闭包 &
 最近邻的二次不等式路线；\textbf{本次已补引}\\
+\emph{Extremal graphs for the sum of two largest eigenvalues}, AIMS Mathematics (2026) &
+两项和 $\lambda_1+\lambda_2$ 的极图 &
+与 Huang--Wei 同族；DOI 待补（限流）\\
 Sun--Guo--Ge--Das, arXiv:2609.23707 &
 $S_k$ 的 Hoffman 型结果：刻画 $S_k<2k$ 的连通图，$P_n$ 为唯一极小图 &
 属``极小/下界''方向，与本文不冲突\\

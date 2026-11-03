@@ -1,0 +1,72 @@
+########## OpenAlex full search (not title-only) ##########
+
+## "third spectral sum"
+   count: 3
+   - [2026] The Third Spectral Sum of Graphs: Exact Projection Equivalence, Pole–Pentagon Geometry, and Certifie | Zenodo (CERN European Organization for Nuclear Research)
+   - [2026] The Third Spectral Sum of Graphs: An Exact Universal Bound, Pole–Pentagon Extremality, and Resolutio | Zenodo (CERN European Organization for Nuclear Research)
+   - [2025] QCD 2 ’t Hooft model: Two-flavor mesons spectrum | Physical review. D/Physical review. D.
+
+## "spectral sum" graph eigenvalues maximum
+   count: 156
+   - [2026] Maximum spectral sum of graphs | arXiv (Cornell University)
+   - [2026] The Exact Maximum of the Spectral Sum of Graphs | arXiv (Cornell University)
+   - [2026] Quantum Algorithms for Spectral Sums | Proceedings of the AAAI Conference on Artificial Intelligence
+   - [2026] Extremal graphs for the sum of two largest eigenvalues | AIMS Mathematics
+   - [2020] Quantum algorithms for spectral sums | arXiv (Cornell University)
+   - [2026] Convex combination of first and second eigenvalues of trees | arXiv (Cornell University)
+   - [2026] Spectral Problems and Probabilistic Techniques | eScholarship (California Digital Library)
+   - [2016] Approximating the Spectral Sums of Large-scale Matrices using Chebyshev Approximations | arXiv (Cornell University)
+   - [2026] A proof of the maximum Laplacian energy conjecture for connected graphs via a sharp eigenvalue-sum b | arXiv (Cornell University)
+   - [2026] Graph Eigenvalues and Projection Constants | arXiv (Cornell University)
+
+## "lambda_1+2lambda_2"
+   count: 0
+
+## "lambda_1 + 2 lambda_2"
+   count: 8
+   - [2005] A note on the extension of the Dinaburg–Sinai theorem to higher dimension | Ergodic Theory and Dynamical Systems
+   - [2004] Neutrino Oscillations and Collider Test of the R-parity Violating Minimal Supergravity Model | CERN Document Server (European Organization for Nuclear Research)
+   - [2021] Spectral interpretations of dynamical degrees and applications | Annals of Mathematics
+   - [2025] Final evolutions for Lotka-Volterra systems in R^3 having a Darboux invariant | Electronic Journal of Differential Equations
+   - [2026] Uniform Large Deviations, Barrier Identity and the Néel--Arrhenius Law for the One-Dimensional Stoch | arXiv (Cornell University)
+   - [2026] A Formal Model for Canvas Temporal Mathematics: Spectral Semantics for a Temporal Foundation | Zenodo (CERN European Organization for Nuclear Research)
+   - [2026] Imaging Tensor de Difusão (dti) na Avaliação da Integridade da Substância Branca | Nursing Edição Brasileira
+   - [2006] Computational issues in autonomous control of unmanned air vehicles | ThinkTech (Texas Tech University)
+
+## "pole-pentagon" graph
+   count: 2
+   - [2026] The Third Spectral Sum of Graphs: Exact Projection Equivalence, Pole–Pentagon Geometry, and Certifie | Zenodo (CERN European Organization for Nuclear Research)
+   - [2026] The Third Spectral Sum of Graphs: An Exact Universal Bound, Pole–Pentagon Extremality, and Resolutio | Zenodo (CERN European Organization for Nuclear Research)
+  retry HTTP Error 429: Too Many Requests
+  retry HTTP Error 429: Too Many Requests
+
+## "sum of the three largest eigenvalues" graph
+   (no response)
+  retry HTTP Error 429: Too Many Requests
+  retry HTTP Error 429: Too Many Requests
+
+## "three largest eigenvalues" graph bound
+   (no response)
+
+
+########## viXra / Preprints.org via OpenAlex host filter ##########
+  retry HTTP Error 429: Too Many Requests
+  retry HTTP Error 429: Too Many Requests
+
+## host~ vixra
+   (no response)
+  retry HTTP Error 429: Too Many Requests
+  retry HTTP Error 429: Too Many Requests
+
+## host~ preprints.org
+   (no response)
+  retry HTTP Error 429: Too Many Requests
+  retry HTTP Error 429: Too Many Requests
+
+## host~ ssrn
+   (no response)
+  retry HTTP Error 429: Too Many Requests
+  retry HTTP Error 429: Too Many Requests
+
+## host~ research square
+   (no response)
