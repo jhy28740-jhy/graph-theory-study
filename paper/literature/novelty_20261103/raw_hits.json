@@ -1,0 +1,4501 @@
+[
+ {
+  "src": "arxiv",
+  "title": "Cheeger-like inequalities for the largest eigenvalue of the graph Laplace Operator",
+  "id": "http://arxiv.org/abs/1910.12233v2",
+  "published": "2019-10-27",
+  "updated": "2021-01-20",
+  "authors": [
+   "Jürgen Jost",
+   "Raffaella Mulas"
+  ],
+  "cats": [
+   "math.SP",
+   "math.CO"
+  ],
+  "abstract": "We define a new Cheeger-like constant for graphs and we use it for proving Cheeger-like inequalities that bound the largest eigenvalue of the normalized Laplace operator.",
+  "query": "all:\"largest eigenvalues\" AND all:\"graph\" AND cat:math.CO"
+ },
+ {
+  "src": "arxiv",
+  "title": "On the sum of the two largest eigenvalues of the curl-curl operator on graphs",
+  "id": "http://arxiv.org/abs/2606.26512v1",
+  "published": "2026-06-25",
+  "updated": "2026-06-25",
+  "authors": [
+   "Yueli Han",
+   "Lu Lu",
+   "Jianfeng Wang"
+  ],
+  "cats": [
+   "math.CO"
+  ],
+  "abstract": "The Grone--Merris conjecture, proved by Bai in~2011, states that the spectrum of the graph Laplacian $Δ_0 = -\\operatorname{div}\\operatorname{grad}$ is majorized by the conjugate of the vertex degree sequence. Duval and Reiner proposed a simplicial complex analogue of this statement. On a graph, where triangles serve as $2$-simplices, their conjecture reduces to the assertion that the spectrum of $\\operatorname{curl}^*\\operatorname{curl}$ is majorized by the conjugate of the second-order degree sequence, which records the number of triangles containing each vertex. We prove that the sum of the ",
+  "query": "all:\"largest eigenvalues\" AND all:\"graph\" AND cat:math.CO"
+ },
+ {
+  "src": "arxiv",
+  "title": "The second largest eigenvalues of some Cayley graphs on alternating groups",
+  "id": "http://arxiv.org/abs/1711.08944v2",
+  "published": "2017-11-24",
+  "updated": "2018-12-12",
+  "authors": [
+   "Xueyi Huang",
+   "Qiongxiang Huang"
+  ],
+  "cats": [
+   "math.CO"
+  ],
+  "abstract": "Let $A_n$ denote the alternating group of degree $n$ with $n\\geq 3$. The alternating group graph $AG_n$, extended alternating group graph $EAG_n$ and complete alternating group graph $CAG_n$ are the Cayley graphs $\\mathrm{Cay}(A_n,T_1)$, $\\mathrm{Cay}(A_n,T_2)$ and $\\mathrm{Cay}(A_n,T_3)$, respectively, where $T_1=\\{(1,2,i),(1,i,2)\\mid 3\\leq i\\leq n\\}$, $T_2=\\{(1,i,j),(1,j,i)\\mid 2\\leq i<j\\leq n\\}$ and $T_3=\\{(i,j,k),(i,k,j)\\mid 1\\leq i<j<k\\leq n\\}$. In this paper, we determine the second largest eigenvalues of $AG_n$, $EAG_n$ and $CAG_n$.",
+  "query": "all:\"largest eigenvalues\" AND all:\"graph\" AND cat:math.CO"
+ },
+ {
+  "src": "arxiv",
+  "title": "Graphs with second largest eigenvalue less than $1/2$",
+  "id": "http://arxiv.org/abs/2211.03380v1",
+  "published": "2022-11-07",
+  "updated": "2022-11-07",
+  "authors": [
+   "Xiaoxia Wu",
+   "Jianguo Qian",
+   "Haigen Peng"
+  ],
+  "cats": [
+   "math.CO"
+  ],
+  "abstract": "We characterize the simple connected graphs with the second largest eigenvalue less than 1/2, which consists of 13 classes of specific graphs. These 13 classes hint that $c_{2}\\in [1/2, \\sqrt{2+\\sqrt{5}}]$, where $c_2$ is the minimum real number $c$ for which every real number greater than $c$ is a limit point in the set of the second largest eigenvalues of the simple connected graphs. We leave it as a problem.",
+  "query": "all:\"largest eigenvalues\" AND all:\"graph\" AND cat:math.CO"
+ },
+ {
+  "src": "arxiv",
+  "title": "Hoffman-type Results for the Sum of k Largest Eigenvalues of a Graph",
+  "id": "http://arxiv.org/abs/2609.23707v1",
+  "published": "2026-09-20",
+  "updated": "2026-09-20",
+  "authors": [
+   "Shaowei Sun",
+   "Mengyao Guo",
+   "Hongyan Ge",
+   "Kinkar Chandra Das"
+  ],
+  "cats": [
+   "math.CO"
+  ],
+  "abstract": "Let $S_k(G)$ denote the sum of the $k$ largest eigenvalues of a graph $G$. Motivated by the classical Hoffman program for the spectral radius of a graph, we investigate an additive Hoffman-type problem for $S_k(G)$. For each fixed $k\\geq 2$ and sufficiently large order $n$, we characterize all connected graphs satisfying $S_k(G)<2k$. As a consequence, we prove that the path $P_n$ is the unique minimizer of $S_k(G)$ among all connected graphs of order $n$. \\vspace*{2mm} We further investigate the first Hoffman-type range \\[ 2k\\leq S_k(G)<2k+\\sqrt{2+\\sqrt5}-2. \\] We completely characterize the n",
+  "query": "all:\"largest eigenvalues\" AND all:\"graph\" AND cat:math.CO | all:\"sum of k largest eigenvalues\" | sum of three largest eigenvalues of a graph | Ebrahimi sum largest eigenvalues graphs | Huang Wei exact maximum spectral sum graphs",
+  "doi": "https://doi.org/10.48550/arxiv.2609.23707",
+  "venue": "arXiv (Cornell University)"
+ },
+ {
+  "src": "arxiv",
+  "title": "Quadratic inequalities between the largest eigenvalues of a graph",
+  "id": "http://arxiv.org/abs/2609.37980v1",
+  "published": "2026-09-29",
+  "updated": "2026-09-29",
+  "authors": [
+   "Roland Paulin"
+  ],
+  "cats": [
+   "math.CO"
+  ],
+  "abstract": "We prove a sharp quadratic inequality between the largest two eigenvalues $λ_1 \\ge λ_2$ of a graph with $n$ vertices. We also prove a quadratic inequality between the second and third largest eigenvalues $λ_2 \\ge λ_3$. These results in particular imply the bounds $λ_1 + λ_2 \\le \\frac{8}{7} n - 2$, $λ_3 \\le \\frac{n}{3} - 1$ and $λ_2 + λ_3 \\le \\frac{2}{3} n - 2$. In fact we determine the closure of the set of possible $(\\frac{λ_1+1}{n}, \\frac{λ_2+1}{n}) \\in \\mathbb{R}^2$ and $(\\frac{λ_2+1}{n}, \\frac{λ_3+1}{n}) \\in \\mathbb{R}^2$. More generally, we prove quadratic bounds in the case of symmetric ",
+  "query": "all:\"largest eigenvalues\" AND all:\"graph\" AND cat:math.CO | Ebrahimi sum largest eigenvalues graphs | Sivashankar Tang Wakhare graph eigenvalues projection constants",
+  "doi": "https://doi.org/10.48550/arxiv.2609.37980",
+  "venue": "arXiv (Cornell University)"
+ },
+ {
+  "src": "arxiv",
+  "title": "Minimum supports of eigenfunctions with the second largest eigenvalue of the Star graph",
+  "id": "http://arxiv.org/abs/1910.01374v1",
+  "published": "2019-10-03",
+  "updated": "2019-10-03",
+  "authors": [
+   "Vladislav Kabanov",
+   "Elena V. Konstantinova",
+   "Leonid Shalaginov",
+   "Alexandr Valyuzhenich"
+  ],
+  "cats": [
+   "math.CO"
+  ],
+  "abstract": "The Star graph $S_n$, $n\\ge 3$, is the Cayley graph on the symmetric group $Sym_n$ generated by the set of transpositions $\\{(12),(13),\\ldots,(1n)\\}$. In this work we study eigenfunctions of $S_n$ corresponding to the second largest eigenvalue $n-2$. For $n\\ge 8$ and $n=3$, we find the minimum cardinality of the support of an eigenfunction of $S_n$ corresponding to the second largest eigenvalue and obtain a characterization of eigenfunctions with the minimum cardinality of the support.",
+  "query": "all:\"largest eigenvalues\" AND all:\"graph\" AND cat:math.CO"
+ },
+ {
+  "src": "arxiv",
+  "title": "Sum of the $k$ Largest Eigenvalues of Symmetric Matrices: Theory and Applications",
+  "id": "http://arxiv.org/abs/2605.26707v2",
+  "published": "2026-05-26",
+  "updated": "2026-05-29",
+  "authors": [
+   "Shaowei Sun",
+   "Yaping Min",
+   "Kinkar Chandra Das"
+  ],
+  "cats": [
+   "math.CO"
+  ],
+  "abstract": "This paper establishes new upper bounds for the sum of the $k$ largest eigenvalues of symmetric matrices. When applied to the adjacency matrix of a graph, our results improve upon a related bound due to Mohar {\\bf [On the sum of k largest eigenvalues of graphs and symmetric matrices, J. Combin. Theory Ser. B 99 (2009) 306--313]}. Furthermore, in the case of the Laplacian matrix, we prove that the well-known Brouwer's conjecture {\\bf [Spectra of Graphs, Springer, New York, 2012]} holds for small values of $k$ for almost all graphs, thereby taking a significant step toward its complete resolutio",
+  "query": "all:\"largest eigenvalues\" AND all:\"graph\" AND cat:math.CO | all:\"sum of k largest eigenvalues\""
+ },
+ {
+  "src": "arxiv",
+  "title": "THe largest eigenvalue of sparse random graphs",
+  "id": "http://arxiv.org/abs/math/0106066v1",
+  "published": "2001-06-10",
+  "updated": "2001-06-10",
+  "authors": [
+   "Michael Krivelevich",
+   "Benny Sudakov"
+  ],
+  "cats": [
+   "math.CO",
+   "math.PR"
+  ],
+  "abstract": "We prove that for all values of the edge probability p(n) the largest eigenvalue of a random graph G(n,p) satisfies almost surely: λ_1(G)=(1+o(1))max{\\sqrtΔ,np}, where Δis a maximal degree of G, and the o(1) term tends to zero as max{\\sqrtΔ,np} tends to infinity.",
+  "query": "all:\"largest eigenvalues\" AND all:\"graph\" AND cat:math.CO"
+ },
+ {
+  "src": "arxiv",
+  "title": "Connected triangle-free planar graphs whose second largest eigenvalue is at most 1",
+  "id": "http://arxiv.org/abs/2412.19203v1",
+  "published": "2024-12-26",
+  "updated": "2024-12-26",
+  "authors": [
+   "Kun Cheng",
+   "Shuchao Li"
+  ],
+  "cats": [
+   "math.CO"
+  ],
+  "abstract": "Let $λ_2$ be the second largest eigenvalue of the adjacency matrix of a connected graph. In 2023, Li and Sun \\cite{LiSun1} determined all the connected $\\{K_{2,3}, K_4\\}$-minor free graphs whose second largest eigenvalue $λ_2\\le 1$. As a continuance of it, in this paper we completely identify all the connected $\\{K_5,K_{3,3}\\}$-minor free graphs without $C_3$ whose second largest eigenvalue does not exceed 1. This partially solves an open problem posed by Li and Sun \\cite{LiSun1}: Characterize all connected planar graphs whose second largest eigenvalue is at most $1.$ Our main tools include th",
+  "query": "all:\"largest eigenvalues\" AND all:\"graph\" AND cat:math.CO"
+ },
+ {
+  "src": "arxiv",
+  "title": "On the largest eigenvalue of a mixed graph with partial orientation",
+  "id": "http://arxiv.org/abs/2003.08782v1",
+  "published": "2020-03-18",
+  "updated": "2020-03-18",
+  "authors": [
+   "Bo-Jun Yuan",
+   "Yi Wang",
+   "Yi-Zheng Fan"
+  ],
+  "cats": [
+   "math.CO"
+  ],
+  "abstract": "Let $G$ be a connected graph and let $T$ be a spanning tree of $G$. A partial orientation $σ$ of $G$ respect to $T$ is an orientation of the edges of $G$ except those edges of $T$, the resulting graph associated with which is denoted by $G_T^σ$. In this paper we prove that there exists a partial orientation $σ$ of $G$ respect to $T$ such that the largest eigenvalue of the Hermitian adjacency matrix of $G_T^σ$ is at most the largest absolute value of the roots of the matching polynomial of $G$.",
+  "query": "all:\"largest eigenvalues\" AND all:\"graph\" AND cat:math.CO"
+ },
+ {
+  "src": "arxiv",
+  "title": "Bounds for the largest eigenvalue and sum of Laplacian eigenvalues of signed graphs",
+  "id": "http://arxiv.org/abs/2512.01736v1",
+  "published": "2025-12-01",
+  "updated": "2025-12-01",
+  "authors": [
+   "Linfeng Xie",
+   "Xiaogang Liu"
+  ],
+  "cats": [
+   "math.CO"
+  ],
+  "abstract": "In this paper, we consider the bounds for the largest eigenvalue and the sum of the $k$ largest Laplacian eigenvalues of signed graphs. Firstly, we give an upper bound on the largest eigenvalue of the adjacency matrix of a signed graph and characterize the extremal graphs that attain this bound. Secondly, we prove that a non-bipartite signed graph $Γ$ of order $n$ and size $m$ contains a balanced triangle if $λ_{1}(Γ)\\ge \\sqrt{m-1}$, $λ_{1}(Γ) \\ge |λ_{n}(Γ)|$ and $Γ\\not \\sim (C_{5}\\cup (n-5)K_{1},+)$, where $λ_{1}(Γ)$ is the largest eigenvalue of the adjacency matrix of $Γ$. Thirdly, we confir",
+  "query": "all:\"largest eigenvalues\" AND all:\"graph\" AND cat:math.CO"
+ },
+ {
+  "src": "arxiv",
+  "title": "Extremal results on the second largest eigenvalue of graphs with given order",
+  "id": "http://arxiv.org/abs/2606.11623v1",
+  "published": "2026-06-10",
+  "updated": "2026-06-10",
+  "authors": [
+   "Zhiwen Wang",
+   "Ji-Ming Guo"
+  ],
+  "cats": [
+   "math.CO"
+  ],
+  "abstract": "In this paper, we demonstrate the effects on the second largest eigenvalue $λ_2(G)$ of a connected graph $G$ after edge addition or deletion. In 1989, Chung, Graham and Wilson showed $\\max\\{|λ_2|,|λ_n|\\}>Ω(n)$ for dense $K_{r+1}$-free graphs of order $n$, giving spectral comprehension of existence of large clique or independent set, respect to Ramsey theory. Applying the results of effects on $λ_2$ after edge operations, we determine the maximum value of $λ_2$ among all $K_{r+1}$-free connected graphs with given order, and completely characterize the extremal graphs. Moreover, for arbitrary gi",
+  "query": "all:\"largest eigenvalues\" AND all:\"graph\" AND cat:math.CO"
+ },
+ {
+  "src": "arxiv",
+  "title": "The second largest eigenvalue of some nonnormal Cayley graphs on symmetric groups",
+  "id": "http://arxiv.org/abs/2402.02427v1",
+  "published": "2024-02-04",
+  "updated": "2024-02-04",
+  "authors": [
+   "Yuxuan Li",
+   "Binzhou Xia",
+   "Sanming Zhou"
+  ],
+  "cats": [
+   "math.CO"
+  ],
+  "abstract": "A Cayley graph on the symmetric group $S_n$ is said to have the Aldous property if its strictly second largest eigenvalue (that is, the largest eigenvalue strictly smaller than the degree) is attained by the standard representation of $S_n$. For $1\\leq r < k < n$, let $C(n,k;r)$ be the set of $k$-cycles of $S_n$ moving every point in $\\{1, \\ldots, r\\}$. Recently, Siemons and Zalesski [J. Algebraic Combin. 55 (2022) 989--1005] posed a conjecture which is equivalent to saying that for any $n \\ge 5$ and $1\\leq r<k<n$ the nonnormal Cayley graph $\\mathrm{Cay}(S_n, C(n,k;r))$ on $S_n$ with connectio",
+  "query": "all:\"largest eigenvalues\" AND all:\"graph\" AND cat:math.CO"
+ },
+ {
+  "src": "arxiv",
+  "title": "Graphs with three eigenvalues and second largest eigenvalue at most 1",
+  "id": "http://arxiv.org/abs/1506.02435v1",
+  "published": "2015-06-08",
+  "updated": "2015-06-08",
+  "authors": [
+   "Xi-Ming Cheng",
+   "Gary R. W. Greaves",
+   "Jack H. Koolen"
+  ],
+  "cats": [
+   "math.CO"
+  ],
+  "abstract": "We classify the connected graphs with precisely three distinct eigenvalues and second largest eigenvalue at most 1.",
+  "query": "all:\"largest eigenvalues\" AND all:\"graph\" AND cat:math.CO"
+ },
+ {
+  "src": "arxiv",
+  "title": "On the order of regular graphs with fixed second largest eigenvalue",
+  "id": "http://arxiv.org/abs/1809.01888v1",
+  "published": "2018-09-06",
+  "updated": "2018-09-06",
+  "authors": [
+   "Jae Young Yang",
+   "Jack H. Koolen"
+  ],
+  "cats": [
+   "math.CO"
+  ],
+  "abstract": "Let $v(k, λ)$ be the maximum number of vertices of a connected $k$-regular graph with second largest eigenvalue at most $λ$. The Alon-Boppana Theorem implies that $v(k, λ)$ is finite when $k > \\frac{λ^2 + 4}{4}$. In this paper, we show that for fixed $λ\\geq1$, there exists a constant $C(λ)$ such that $2k+2 \\leq v(k, λ) \\leq 2k + C(λ)$ when $k > \\frac{λ^2 + 4}{4}$.",
+  "query": "all:\"largest eigenvalues\" AND all:\"graph\" AND cat:math.CO"
+ },
+ {
+  "src": "arxiv",
+  "title": "The Largest Eigenvalue and Bi-Average Degree of a Graph",
+  "id": "http://arxiv.org/abs/1106.0811v1",
+  "published": "2011-06-04",
+  "updated": "2011-06-04",
+  "authors": [
+   "Vsevolod F. Lev"
+  ],
+  "cats": [
+   "math.CO"
+  ],
+  "abstract": "We show that for a graph $G$ with the vertex set $V$ and the largest eigenvalue $λ_{\\max}(G)$, letting $$ M(G) := \\max_{X,Y \\subset V} \\frac{e(X,Y)}{\\sqrt{|X||Y|}} $$ (where $e(X,Y)$ denotes the number of edges between $X$ and $Y$), we have $$ M(G) \\le λ_{\\max}(G) \\le \\big(\\frac14 \\log|V| + 1 \\big) \\M(G). $$ Here the lower bound is attained if $G$ is regular or bi-regular, whereas the logarithmic factor in the upper bound, conjecturally, can be improved --- although we present an example showing that it cannot be replaced with a factor growing slower than $(\\log |V|/\\log\\log|V|)^{1/8}$. Furthe",
+  "query": "all:\"largest eigenvalues\" AND all:\"graph\" AND cat:math.CO"
+ },
+ {
+  "src": "arxiv",
+  "title": "Upper bounds of the second largest eigenvalue of graphs",
+  "id": "http://arxiv.org/abs/2606.11633v1",
+  "published": "2026-06-10",
+  "updated": "2026-06-10",
+  "authors": [
+   "Zhiwen Wang",
+   "Zihao Geng",
+   "Ji-Ming Guo"
+  ],
+  "cats": [
+   "math.CO"
+  ],
+  "abstract": "Let $λ_i(G)$ denote the $i$-th largest eigenvalue of adjacency matrix of a graph $G$. Gerschgorin's Theorem indicates $λ_1(G)$ belongs to the largest disk, i.e., $λ_1(G)\\leΔ_1(G)$, where $Δ_i(G)$ is the $i$-th largest degree of $G$. We show that $λ_2(G)$ lies in the second largest disk. That is, in detail, $$λ_2(G)<Δ_2(G)-\\frac{1}{n^2}.$$ A classical theorem proved by Hong [\\textit{Linear Algebra Appl.} 1988] states that $λ_1(G)\\le\\sqrt{2m-n+1}$ for a connected graph $G$ with $n$ vertices and $m$ edges, where the equality holds if and only if $G$ is a star $S_n$ or a complete graph $K_n$. We g",
+  "query": "all:\"largest eigenvalues\" AND all:\"graph\" AND cat:math.CO"
+ },
+ {
+  "src": "arxiv",
+  "title": "Largest Eigenvalue of the Laplacian Matrix",
+  "id": "http://arxiv.org/abs/1502.04207v1",
+  "published": "2015-02-14",
+  "updated": "2015-02-14",
+  "authors": [
+   "Benjamin Iriarte Giraldo"
+  ],
+  "cats": [
+   "math.CO",
+   "math.SP"
+  ],
+  "abstract": "We study the eigenspace of the Laplacian matrix of a simple graph corresponding to the largest eigenvalue, subsequently arriving at the theory of modular decomposition of T. Gallai.",
+  "query": "all:\"largest eigenvalues\" AND all:\"graph\" AND cat:math.CO"
+ },
+ {
+  "src": "arxiv",
+  "title": "Planar graphs whose second largest eigenvalue does not exceed 1",
+  "id": "http://arxiv.org/abs/2610.24716v1",
+  "published": "2026-10-17",
+  "updated": "2026-10-17",
+  "authors": [
+   "Zihao Geng",
+   "Zhiwen Wang",
+   "Wen-Jun Li",
+   "Xue-Ying Li",
+   "Qian-Qian Chen",
+   "Ji-Ming Guo"
+  ],
+  "cats": [
+   "math.CO"
+  ],
+  "abstract": "The problem posed by Hoffman, namely, to characterize graphs whose second largest adjacency eigenvalue is at most \\(1\\), was first studied by D.~M.~Cvetković in 1982 [\\textit{Publ. Inst. Math. (Beograd)} \\textbf{31} (1982), 15--20]. In this paper, we completely characterize all connected planar graphs whose second largest eigenvalue does not exceed $1$.",
+  "query": "all:\"largest eigenvalues\" AND all:\"graph\" AND cat:math.CO"
+ },
+ {
+  "src": "arxiv",
+  "title": "A lower bound of toughness of regular graphs: in terms of second largest eigenvalue",
+  "id": "http://arxiv.org/abs/2605.00627v1",
+  "published": "2026-05-01",
+  "updated": "2026-05-01",
+  "authors": [
+   "Wenqian Zhang"
+  ],
+  "cats": [
+   "math.CO"
+  ],
+  "abstract": "Let $G$ be a connected (non-complete) $d$-regular graph with $d\\geq3$. Let $c(G-S)$ denote the number of components of $G-S$ for any cut $S$ of $G$. The toughness $t(G)$ of $G$ is defined as $\\min\\left\\{\\frac{|S|}{c(G-S)}\\right\\}$, where the minimum is taken over all proper cuts $S$ of $G$. Let $λ_{2}(G)$ denote the second largest eigenvalue of $G$. In this paper, we prove $$t(G)\\geq\\min\\left\\{\\frac{d+1}{d}(d-λ_{2}(G)),1\\right\\}.$$",
+  "query": "all:\"largest eigenvalues\" AND all:\"graph\" AND cat:math.CO"
+ },
+ {
+  "src": "arxiv",
+  "title": "On Minimizing the Energy of a Spherical Graph Representation",
+  "id": "http://arxiv.org/abs/2309.02817v1",
+  "published": "2023-09-06",
+  "updated": "2023-09-06",
+  "authors": [
+   "Matt DeVos",
+   "Danielle Rogers",
+   "Alexandra Wesolek"
+  ],
+  "cats": [
+   "cs.CG",
+   "math.CO"
+  ],
+  "abstract": "Graph representations are the generalization of geometric graph drawings from the plane to higher dimensions. A method introduced by Tutte to optimize properties of graph drawings is to minimize their energy. We explore this minimization for spherical graph representations, where the vertices lie on a unit sphere such that the origin is their barycentre. We present a primal and dual semidefinite program which can be used to find such a spherical graph representation minimizing the energy. We denote the optimal value of this program by $ρ(G)$ for a given graph $G$. The value turns out to be rel",
+  "query": "all:\"largest eigenvalues\" AND all:\"graph\" AND cat:math.CO"
+ },
+ {
+  "src": "arxiv",
+  "title": "The second largest eigenvalue of normal Cayley graphs on symmetric groups generated by cycles",
+  "id": "http://arxiv.org/abs/2302.04022v1",
+  "published": "2023-02-08",
+  "updated": "2023-02-08",
+  "authors": [
+   "Yuxuan Li",
+   "Binzhou Xia",
+   "Sanming Zhou"
+  ],
+  "cats": [
+   "math.CO"
+  ],
+  "abstract": "We study the normal Cayley graphs $\\mathrm{Cay}(S_n, C(n,I))$ on the symmetric group $S_n$, where $I\\subseteq \\{2,3,\\ldots,n\\}$ and $C(n,I)$ is the set of all cycles in $S_n$ with length in $I$. We prove that the strictly second largest eigenvalue of $\\mathrm{Cay}(S_n,C(n,I))$ can only be achieved by at most four irreducible representations of $S_n$, and we determine further the multiplicity of this eigenvalue in several special cases. As a corollary, in the case when $I$ contains neither $n-1$ nor $n$ we know exactly when $\\mathrm{Cay}(S_n, C(n,I))$ has the Aldous property, namely the strictl",
+  "query": "all:\"largest eigenvalues\" AND all:\"graph\" AND cat:math.CO"
+ },
+ {
+  "src": "arxiv",
+  "title": "On the largest eigenvalue of a sparse random subgraph of the hypercube",
+  "id": "http://arxiv.org/abs/math/0107229v1",
+  "published": "2001-07-31",
+  "updated": "2001-07-31",
+  "authors": [
+   "Alexander Soshnikov"
+  ],
+  "cats": [
+   "math.CO",
+   "math-ph",
+   "math.PR"
+  ],
+  "abstract": "We consider a sparse random subraph of the $n$-cube where each edge appears independently with small probability $p(n) =O(n^{-1+o(1)})$. In the most interesting regime when $p(n)$ is not exponentially small we prove that the largest eigenvalue of the graph is asymtotically equal to the square root of the maximum degree.",
+  "query": "all:\"largest eigenvalues\" AND all:\"graph\" AND cat:math.CO"
+ },
+ {
+  "src": "arxiv",
+  "title": "On the second largest eigenvalue of some Cayley graphs of the Symmetric Group",
+  "id": "http://arxiv.org/abs/2012.12460v3",
+  "published": "2020-12-23",
+  "updated": "2021-02-20",
+  "authors": [
+   "Johannes Siemons",
+   "Alexandre Zalesski"
+  ],
+  "cats": [
+   "math.CO",
+   "math.RT"
+  ],
+  "abstract": "Let $S_n$ and $A_{n}$ denote the symmetric and alternating group on the set $\\{1,.., n\\},$ respectively. In this paper we are interested in the second largest eigenvalue $λ_{2}(Γ)$ of the Cayley graph $Γ=Cay(G,H)$ over $G=S_{n}$ or $A_{n}$ for certain connecting sets $H.$ Let $1<k\\leq n$ and denote the set of all $k$-cycles in $S_{n}$ by $C(n,k).$ For $H=C(n,n)$ we prove that $λ_{2}(Γ)=(n-2)!$ (when $n$ is even) and $λ_{2}(Γ)=2(n-3)!$ (when $n$ is odd). Further, for $H=C(n,n-1)$ we have $λ_{2}( Γ)=3(n-3)(n-5)!$ (when $n$ is even) and $λ_{2}(Γ)=2(n-2)(n-5) !$ (when $n$ is odd). The case $H=C(n,",
+  "query": "all:\"largest eigenvalues\" AND all:\"graph\" AND cat:math.CO"
+ },
+ {
+  "src": "arxiv",
+  "title": "Maximum spectral sum of graphs",
+  "id": "http://arxiv.org/abs/2604.00512v2",
+  "published": "2026-04-01",
+  "updated": "2026-05-03",
+  "authors": [
+   "Hitesh Kumar",
+   "Lele Liu",
+   "Hermie Monterde",
+   "Shivaramakrishna Pragada",
+   "Michael Tait"
+  ],
+  "cats": [
+   "math.CO"
+  ],
+  "abstract": "For a graph $G$ of order $n$, the spectral sum of $G$ is defined to be the sum $λ_1(G) + λ_2(G)$, where $λ_1(G)$ (resp. $λ_2(G)$) is the largest (resp. second largest) adjacency eigenvalue of $G$. Ebrahimi, Mohar, Nikiforov and Ahmady (2008) conjectured that the spectral sum \\[ λ_1(G) + λ_2(G)\\le \\frac{8}{7}n \\] for any graph $G$. We prove this conjecture by combining tools from the theory of graph limits, convex geometry, exterior algebra and convex optimization. The techniques developed are of independent interest.",
+  "query": "all:\"spectral sum\" AND all:\"graph\" | ti:\"spectral sum\" | spectral sum of graphs exact maximum | Ebrahimi sum largest eigenvalues graphs",
+  "doi": "https://doi.org/10.48550/arxiv.2604.00512",
+  "venue": "arXiv (Cornell University)"
+ },
+ {
+  "src": "arxiv",
+  "title": "The Exact Maximum of the Spectral Sum of Graphs",
+  "id": "http://arxiv.org/abs/2607.23081v1",
+  "published": "2026-07-25",
+  "updated": "2026-07-25",
+  "authors": [
+   "Jing Huang",
+   "Wei Wei"
+  ],
+  "cats": [
+   "math.CO"
+  ],
+  "abstract": "For a simple graph $G$ of order $n$, let $S_2(G)=λ_1(G)+λ_2(G)$ denote its spectral sum. We determine, for every $n\\geq5$, the exact maximum of $S_2(G)$ and all equality cases. The unique maximizer, up to isomorphism, is the complement of the disjoint union of a suitably balanced complete bipartite graph and isolated vertices, with the sizes of its three parts determined by $n$ modulo $7$. Denoting this graph by $K_n^\\star$, we further show that $ S_2(K_n^\\star)\\leq\\frac{8n}{7}-2,$ with equality exactly when $7\\mid n$. This proves a conjecture of Kumar, Liu, Monterde, Pragada and Tait, which s",
+  "query": "all:\"spectral sum\" AND all:\"graph\" | ti:\"spectral sum\" | spectral sum of graphs exact maximum | Ebrahimi sum largest eigenvalues graphs",
+  "doi": "https://doi.org/10.48550/arxiv.2607.23081",
+  "venue": "arXiv (Cornell University)"
+ },
+ {
+  "src": "arxiv",
+  "title": "Quantum algorithms for spectral sums",
+  "id": "http://arxiv.org/abs/2011.06475v2",
+  "published": "2020-11-12",
+  "updated": "2024-06-10",
+  "authors": [
+   "Alessandro Luongo",
+   "Changpeng Shao"
+  ],
+  "cats": [
+   "quant-ph",
+   "cs.AI",
+   "cs.DS",
+   "cs.LG"
+  ],
+  "abstract": "We propose new quantum algorithms for estimating spectral sums of positive semi-definite (PSD) matrices. The spectral sum of an PSD matrix $A$, for a function $f$, is defined as $ \\text{Tr}[f(A)] = \\sum_j f(λ_j)$, where $λ_j$ are the eigenvalues of $A$. Typical examples of spectral sums are the von Neumann entropy, the trace of $A^{-1}$, the log-determinant, and the Schatten $p$-norm, where the latter does not require the matrix to be PSD. The current best classical randomized algorithms estimating these quantities have a runtime that is at least linearly in the number of nonzero entries of th",
+  "query": "all:\"spectral sum\" AND all:\"graph\" | ti:\"spectral sum\" | Huang Wei exact maximum spectral sum graphs",
+  "doi": "https://doi.org/10.48550/arxiv.2011.06475",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 2
+ },
+ {
+  "src": "arxiv",
+  "title": "On sums of graph eigenvalues",
+  "id": "http://arxiv.org/abs/1308.5340v1",
+  "published": "2013-08-24",
+  "updated": "2013-08-24",
+  "authors": [
+   "Evans M. Harell",
+   "Joachim Stubbe"
+  ],
+  "cats": [
+   "math.SP"
+  ],
+  "abstract": "We use two variational techniques to prove upper bounds for sums of the lowest several eigenvalues of matrices associated with finite, simple, combinatorial graphs. These include estimates for the adjacency matrix of a graph and for both the standard combinatorial Laplacian and the renormalized Laplacian. We also provide upper bounds for sums of squares of eigenvalues of these three matrices. Among our results, we generalize an inequality of Fiedler for the extreme eigenvalues of the graph Laplacian to a bound on the sums of the smallest (or largest) k such eigenvalues, k < n. Furthermore, if ",
+  "query": "all:\"spectral sum\" AND all:\"graph\" | sum of three largest eigenvalues of a graph | sum of three largest eigenvalues of a graph",
+  "doi": "https://doi.org/10.1016/j.laa.2014.05.001",
+  "venue": "Linear Algebra and its Applications",
+  "cited_by": 10
+ },
+ {
+  "src": "arxiv",
+  "title": "Path-Minimality for Positive $p$-Energies, Laplacian-Type Spectra, and Line Graphs",
+  "id": "http://arxiv.org/abs/2606.30996v1",
+  "published": "2026-06-30",
+  "updated": "2026-06-30",
+  "authors": [
+   "Yinchen Liu",
+   "Quanyu Tang"
+  ],
+  "cats": [
+   "math.CO"
+  ],
+  "abstract": "We derive several applications of the path-minimality theorem for adjacency $p$-energy proved in the companion paper. First, we prove the sharp inequality $$ \\mathcal E_p^+(G)\\ge \\mathcal E_p^+(P_n), $$ where $P_n$ is the path on $n$ vertices, in three settings: connected bipartite graphs for every real $p\\ge2$, all connected graphs for every odd integer $p\\ge3$, and all connected graphs for $p=4$. Second, using subdivision graphs, we prove path-minimality for Laplacian and signless Laplacian-type spectral sums, including power sums, Estrada-type quantities, resolvent energies, and thresholded",
+  "query": "all:\"spectral sum\" AND all:\"graph\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Convex combination of first and second eigenvalues of trees",
+  "id": "http://arxiv.org/abs/2601.10036v2",
+  "published": "2026-01-15",
+  "updated": "2026-08-07",
+  "authors": [
+   "Hitesh Kumar",
+   "Bojan Mohar",
+   "Shivaramakrishna Pragada",
+   "Hanmeng Zhan"
+  ],
+  "cats": [
+   "math.CO"
+  ],
+  "abstract": "For a graph $G$, let $λ_1(G)$ and $λ_2(G)$ denote the largest and the second largest adjacency eigenvalue of $G$. The sum $λ_1(G) + λ_2(G)$ is called the \\emph{spectral sum} of $G$. We investigate the spectral sum of trees of order $n$ and determine the extremal trees that attain the maximum/minimum. Moreover, for any $α\\in [0,1],$ we describe the extremal trees which maximize the convex combination $αλ_1 + (1-α)λ_2$ in the class of $n$-vertex trees for sufficiently large $n$.",
+  "query": "all:\"spectral sum\" AND all:\"graph\" | Ebrahimi sum largest eigenvalues graphs",
+  "doi": "https://doi.org/10.48550/arxiv.2601.10036",
+  "venue": "arXiv (Cornell University)"
+ },
+ {
+  "src": "arxiv",
+  "title": "Spectrum Estimation from a Few Entries",
+  "id": "http://arxiv.org/abs/1703.06327v1",
+  "published": "2017-03-18",
+  "updated": "2017-03-18",
+  "authors": [
+   "Ashish Khetan",
+   "Sewoong Oh"
+  ],
+  "cats": [
+   "stat.ML",
+   "cs.DS",
+   "cs.LG",
+   "math.NA"
+  ],
+  "abstract": "Singular values of a data in a matrix form provide insights on the structure of the data, the effective dimensionality, and the choice of hyper-parameters on higher-level data analysis tools. However, in many practical applications such as collaborative filtering and network analysis, we only get a partial observation. Under such scenarios, we consider the fundamental problem of recovering spectral properties of the underlying matrix from a sampling of its entries. We are particularly interested in directly recovering the spectrum, which is the set of singular values, and also in sample-effici",
+  "query": "all:\"spectral sum\" AND all:\"graph\""
+ },
+ {
+  "src": "arxiv",
+  "title": "A discrete approach to Dirichlet L-functions, their special values and zeros",
+  "id": "http://arxiv.org/abs/2512.01779v3",
+  "published": "2025-12-01",
+  "updated": "2026-05-15",
+  "authors": [
+   "Anders Karlsson",
+   "Dylan Müller"
+  ],
+  "cats": [
+   "math.NT"
+  ],
+  "abstract": "We develop a discrete spectral framework for Dirichlet $L$-functions that reveals a combinatorial structure underlying their special values and connects this to their zeros. Our approach approximates the classical Dirichlet series by finite spectral sums $L_n(s,χ)$ associated with cyclic graphs $\\mathbb{Z}/n\\mathbb{Z}$ and studies their asymptotics as $n\\rightarrow \\infty$. Combining a refined Euler Maclaurin expansion with a structural polynomiality property, we show that at integer arguments the asymptotic expansions terminate and yield exact identities. This asymptotic to exact principle pr",
+  "query": "all:\"spectral sum\" AND all:\"graph\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Graph Eigenvalues and Projection Constants",
+  "id": "http://arxiv.org/abs/2608.02429v1",
+  "published": "2026-08-03",
+  "updated": "2026-08-03",
+  "authors": [
+   "Varun Sivashankar",
+   "Quanyu Tang",
+   "Tanay Wakhare"
+  ],
+  "cats": [
+   "math.CO"
+  ],
+  "abstract": "For an integer $k\\ge2$, let $λ_k(G)$ denote the $k$th largest adjacency eigenvalue of a graph $G$. For every graph $G$ on $n$ vertices and every $2 \\leq k \\leq n$, we prove \\[ λ_k(G) \\le \\frac{(k-2)\\sqrt{k+1}+2}{2k(k-1)}\\,n-1. \\] Our bound is tight for $k\\in\\{2,3,4,8,24\\}$. We obtain it by reducing the graph-eigenvalue problem to an extremal problem for orthogonal projections and then applying the general upper bound on the absolute projection constant $γ(r)$ due to Deręgowska and Lewandowska. We also give an alternative proof of their bound by repairing the Gegenbauer-polynomial argument of K",
+  "query": "all:\"projection constant\" AND all:\"eigenvalue\" | all:\"projection constant\" AND all:\"eigenvalue\" | all:\"absolute projection constant\" | all:\"absolute projection constant\" | absolute projection constant rank three | mixed projection constant eigenvalue graph | Ebrahimi sum largest eigenvalues graphs",
+  "doi": "https://doi.org/10.48550/arxiv.2608.02429",
+  "venue": "arXiv (Cornell University)"
+ },
+ {
+  "src": "arxiv",
+  "title": "Computation of maximal projection constants",
+  "id": "http://arxiv.org/abs/1901.07866v1",
+  "published": "2019-01-23",
+  "updated": "2019-01-23",
+  "authors": [
+   "Giuliano Basso"
+  ],
+  "cats": [
+   "math.MG",
+   "math.CO",
+   "math.FA"
+  ],
+  "abstract": "The linear projection constant $Π(E)$ of a finite-dimensional real Banach space $E$ is the smallest number $C\\in [0,+\\infty)$ such that $E$ is a $C$-absolute retract in the category of real Banach spaces with bounded linear maps. We denote by $Π_n$ the maximal linear projection constant amongst $n$-dimensional Banach spaces. In this article, we prove that $Π_n$ may be determined by computing eigenvalues of certain two-graphs. From this result we obtain that the relative projection constants of codimension $n$ converge to $1+Π_n$. Furthermore, using the classification of $K_4$-free two-graphs, ",
+  "query": "all:\"projection constant\" AND all:\"eigenvalue\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Guaranteed Lower Eigenvalue Bounds for Spectral Galerkin Methods with Application to Schrödinger Operators",
+  "id": "http://arxiv.org/abs/2607.04247v1",
+  "published": "2026-07-05",
+  "updated": "2026-07-05",
+  "authors": [
+   "Xuefeng Liu"
+  ],
+  "cats": [
+   "math.NA"
+  ],
+  "abstract": "Spectral Galerkin methods are renowned for high-precision eigenvalue approximation, yet a rigorous lower bound obtained directly from a spectral discretisation has remained unavailable: the classical Kato and Weinstein--Temple enclosures do apply, but require a~priori information on a neighbouring eigenvalue. This paper resolves the issue by extending the author's projection-based framework for guaranteed lower eigenvalue bounds -- so far realised only through finite element methods -- to conforming spectral Galerkin methods. For trial spaces of exact eigenfunctions the required projection con",
+  "query": "all:\"projection constant\" AND all:\"eigenvalue\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Projective affine Ossermann curvature models",
+  "id": "http://arxiv.org/abs/1403.1900v1",
+  "published": "2014-03-07",
+  "updated": "2014-03-07",
+  "authors": [
+   "Peter Gilkey",
+   "Bronson Lim"
+  ],
+  "cats": [
+   "math.DG"
+  ],
+  "abstract": "A curvature model (V,A) is a real vector space V which is equipped with a \"curvature operator\" A(x,y)z that A has the same symmetries as an affine curvature operator; A(x,y)z=-A(y,x)z and A(x,y)z+A(y,z)x+A(z,x)y=0. Such a model is called projective affine Osserman if the spectrum of the Jacobi operator J(y):x->A(x,y)y, is projectively constant. There are topological conditions imposed on such a model by Adam's Theorem concerning vector fields on spheres. In this paper we construct projective affine Osserman curvature models when the dimension is odd, when the dimension is congruent to 2 mod 4,",
+  "query": "all:\"projection constant\" AND all:\"eigenvalue\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Projection Constants and Banach-Mazur Distance in Codimension Two",
+  "id": "http://arxiv.org/abs/2610.06141v1",
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "authors": [
+   "Beata Deregowska",
+   "Barbara Lewandowska"
+  ],
+  "cats": [
+   "math.FA"
+  ],
+  "abstract": "We prove that every subspace $V\\subset\\ell_\\infty^N$ of codimension one or two with absolute projection constant $λ(V)<4/3$ satisfies $$ d(V,\\ell_\\infty^{\\dim V}) \\leq\\frac{λ(V)}{4-3λ(V)}. $$ We conjecture that the codimension assumption can be removed and that the same estimate holds for every subspace $V\\subset\\ell_\\infty^N$ with $λ(V)<4/3$.",
+  "query": "all:\"absolute projection constant\" | absolute projection constant rank three",
+  "doi": "https://doi.org/10.48550/arxiv.2610.06141",
+  "venue": "arXiv (Cornell University)"
+ },
+ {
+  "src": "arxiv",
+  "title": "On the value of the fifth maximal projection constant",
+  "id": "http://arxiv.org/abs/2206.01596v2",
+  "published": "2022-06-03",
+  "updated": "2022-11-30",
+  "authors": [
+   "Beata Derȩgowska",
+   "Matthew Fickus",
+   "Simon Foucart",
+   "Barbara Lewandowska"
+  ],
+  "cats": [
+   "math.FA"
+  ],
+  "abstract": "Let $λ(m)$ denote the maximal absolute projection constant over real $m$-dimensional subspaces. This quantity is extremely hard to determine exactly, as testified by the fact that the only known value of $λ(m)$ for $m>1$ is $λ(2)=4/3$. There is also numerical evidence indicating that $λ(3)=(1+\\sqrt{5})/2$. In this paper, relying on a new construction of certain mutually unbiased equiangular tight frames, we show that $λ(5)\\geq 5(11+6\\sqrt{5})/59 \\approx 2.06919$. This value coincides with the numerical estimation of $λ(5)$ obtained by B. L. Chalmers, thus reinforcing the belief that this is th",
+  "query": "all:\"absolute projection constant\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Maximal Projection Constants and Extremal Vector Configurations: Some Conjectures and Examples",
+  "id": "http://arxiv.org/abs/2608.08695v2",
+  "published": "2026-08-09",
+  "updated": "2026-10-05",
+  "authors": [
+   "Beata Deregowska",
+   "Barbara Lewandowska"
+  ],
+  "cats": [
+   "math.FA"
+  ],
+  "abstract": "Let $λ_{\\mathbb K}(m)$ denote the maximal absolute projection constant among $m$-dimensional Banach spaces over $\\mathbb K=\\mathbb R$ or $\\mathbb C$. Its exact value is known only in a few cases, and determining it remains a challenging problem. In this note, we investigate several structured vector configurations that naturally arise in this context. We first recall the connection between maximal projection constants and tight frames, then consider biangular tight frames, and show that their relative and quasimaximal projection constants coincide. A particularly interesting example is provide",
+  "query": "all:\"absolute projection constant\" | Sivashankar Tang Wakhare graph eigenvalues projection constants",
+  "doi": "https://doi.org/10.48550/arxiv.2608.08695",
+  "venue": "arXiv (Cornell University)"
+ },
+ {
+  "src": "arxiv",
+  "title": "Spaces with the maximal projection constant revisited",
+  "id": "http://arxiv.org/abs/2505.24526v2",
+  "published": "2025-05-30",
+  "updated": "2026-09-14",
+  "authors": [
+   "Tomasz Kobos"
+  ],
+  "cats": [
+   "math.FA"
+  ],
+  "abstract": "Let $n \\geq 2$ be an integer such that an equiangular set of vectors $w_1, \\ldots, w_d$ of the maximal possible cardinality (that is, attaining the classical Gerzon upper bound) exists in $\\mathbb{K}^n$, where $\\mathbb{K}=\\mathbb{R}$ or $\\mathbb{K}=\\mathbb{C}$ (so that $d=\\frac{n(n+1)}{2}$ in the real case and $d=n^2$ in the complex case). We provide a complete characterization of $n$-dimensional normed spaces whose absolute projection constant is maximal among all $n$-dimensional normed spaces over $\\mathbb{K}$. The characterization states that $X$ has the maximal projection constant if and o",
+  "query": "all:\"absolute projection constant\" | absolute projection constant rank three",
+  "doi": "https://doi.org/10.48550/arxiv.2505.24526",
+  "venue": "arXiv (Cornell University)"
+ },
+ {
+  "src": "arxiv",
+  "title": "A simple proof of the Grunbaum conjecture",
+  "id": "http://arxiv.org/abs/2206.09454v4",
+  "published": "2022-06-19",
+  "updated": "2024-02-27",
+  "authors": [
+   "Beata Deregowska",
+   "Barbara Lewandowska"
+  ],
+  "cats": [
+   "math.FA"
+  ],
+  "abstract": "Let $λ_\\mathbb{K}(m)$ denote the maximal absolute projection constant over the subspaces of dimension $m$. Apart from the trivial case for $ m=1$, the only known value of $λ_\\mathbb{K}(m)$ is for $ m=2$ and $\\mathbb{K}=\\mathbb{R}.$ In 1960, B.Grunbaum conjectured that $λ_\\mathbb{R}(2)=\\frac{4}{3}$ and in 2010, B. Chalmers and G. Lewicki proved it. In 2019, G. Basso delivered the alternative proof of this conjecture. Both proofs are quite complicated, and there was a strong belief that providing an exact value for $λ_\\mathbb{K}(m)$ in other cases will be a tough task. In our paper, we present a",
+  "query": "all:\"absolute projection constant\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Stability of maximal relative projection constants",
+  "id": "http://arxiv.org/abs/2609.03200v1",
+  "published": "2026-09-02",
+  "updated": "2026-09-02",
+  "authors": [
+   "Hitesh Kumar",
+   "Bojan Mohar",
+   "Seyed Ahmad Mojallal",
+   "Shivaramakrishna Pragada"
+  ],
+  "cats": [
+   "math.FA",
+   "math.CO"
+  ],
+  "abstract": "For positive integers $n\\ge r$, let $λ(r,n)$ denote the \\emph{maximal relative projection constant} of $r$-dimensional subspaces of $\\ell_\\infty^n$ and $λ(r)$ denote the \\emph{maximal absolute projection constant}, respectively. It is known that for any fixed $r$, $λ(r,n)$ is a non-decreasing sequence with limit $λ(r)$ as $n\\to \\infty$. A natural question is whether $λ(r,n)$ stabilizes at $λ(r)$ for some $n>r$. We prove that for any fixed $r$, \\[λ(r,n)=λ(r) \\qquad \\text{for every}\\qquad n\\ge 2^{r}\\binom{r+1}{2}.\\] This answers a question of Basso. The technique used is of independent interest.",
+  "query": "all:\"absolute projection constant\" | Sivashankar Tang Wakhare graph eigenvalues projection constants",
+  "doi": "https://doi.org/10.48550/arxiv.2609.03200",
+  "venue": "arXiv (Cornell University)"
+ },
+ {
+  "src": "arxiv",
+  "title": "On the Distribution of an Arbitrary Subset of the Eigenvalues for some Finite Dimensional Random Matrices",
+  "id": "http://arxiv.org/abs/2001.00519v1",
+  "published": "2020-01-02",
+  "updated": "2020-01-02",
+  "authors": [
+   "Marco Chiani",
+   "Alberto Zanella"
+  ],
+  "cats": [
+   "math.ST",
+   "cs.IT"
+  ],
+  "abstract": "We present some new results on the joint distribution of an arbitrary subset of the ordered eigenvalues of complex Wishart, double Wishart, and Gaussian hermitian random matrices of finite dimensions, using a tensor pseudo-determinant operator. Specifically, we derive compact expressions for the joint probability distribution function of the eigenvalues and the expectation of functions of the eigenvalues, including joint moments, for the case of both ordered and unordered eigenvalues.",
+  "query": "all:\"joint moment\" AND all:\"eigenvalue\""
+ },
+ {
+  "src": "arxiv",
+  "title": "A discrete analogue of periodic delta Bose gas and affine Hecke algebra",
+  "id": "http://arxiv.org/abs/1209.2758v2",
+  "published": "2012-09-13",
+  "updated": "2014-03-12",
+  "authors": [
+   "Yoshihiro Takeyama"
+  ],
+  "cats": [
+   "math-ph",
+   "math.QA"
+  ],
+  "abstract": "We consider an eigenvalue problem for a discrete analogue of the Hamiltonian of the non-ideal Bose gas with delta-potentials on a circle. It is a two-parameter deformation of the discrete Hamiltonian for joint moments of the partition function of the O'Connell-Yor semi-discrete polymer. We construct the propagation operator by using integral-reflection operators, which give a representation of the affine Hecke algebra. We also construct eigenfunctions by means of the Bethe ansatz method.",
+  "query": "all:\"joint moment\" AND all:\"eigenvalue\""
+ },
+ {
+  "src": "arxiv",
+  "title": "General Tridiagonal Random Matrix Models, Limiting Distributions and Fluctuations",
+  "id": "http://arxiv.org/abs/math/0610827v3",
+  "published": "2006-10-27",
+  "updated": "2008-02-18",
+  "authors": [
+   "Ionel Popescu"
+  ],
+  "cats": [
+   "math.PR",
+   "math.OA"
+  ],
+  "abstract": "In this paper we discuss general tridiagonal matrix models which are natural extensions of the ones given by Dumitriu and Edelman. We prove here the convergence of the distribution of the eigenvalues and compute the limiting distributions in some particular cases. We also discuss the limit of fluctuations, which, in a general context, turn out to be Gaussian. For the case of several random matrices, we prove the convergence of the joint moments and the convergence of the fluctuations to a Gaussian family.",
+  "query": "all:\"joint moment\" AND all:\"eigenvalue\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Sparse Layered MIMO with Iterative Detection",
+  "id": "http://arxiv.org/abs/2105.10476v2",
+  "published": "2021-05-21",
+  "updated": "2021-11-22",
+  "authors": [
+   "Mohamad H. Dinan",
+   "Nemanja Stefan Perovic",
+   "Mark F. Flanagan"
+  ],
+  "cats": [
+   "cs.IT",
+   "eess.SP"
+  ],
+  "abstract": "In this paper, we propose a novel transmission scheme, called sparse layered MIMO (SL-MIMO), that combines non-orthogonal transmission and singular value decomposition (SVD) precoding. Nonorthogonality in SL-MIMO allows re-using of the eigen-channels which improves the spectral efficiency and error rate performance of the system through enhancing the coding gain and diversity gain. We also present a low-complexity message-passing (MP) detector for the proposed SL-MIMO system which performs quite close to maximum likelihood (ML). The joint moment generating function (MGF) of the ordered eigenva",
+  "query": "all:\"joint moment\" AND all:\"eigenvalue\""
+ },
+ {
+  "src": "arxiv",
+  "title": "A central limit theorem for star-generators of $S_{\\infty}$, which relates to the law of a GUE matrix",
+  "id": "http://arxiv.org/abs/1807.05633v4",
+  "published": "2018-07-15",
+  "updated": "2020-07-26",
+  "authors": [
+   "Claus Koestler",
+   "Alexandru Nica"
+  ],
+  "cats": [
+   "math.PR",
+   "math.CO",
+   "math.OA"
+  ],
+  "abstract": "It is well-known that, on a purely algebraic level, a simplified algebraic version of the Central Limit Theorem (CLT) can be proved in the framework of a noncommutative probability space, under the hypotheses that the sequence of non-commutative random variables we consider is exchangeable and obeys a certain vanishing condition of some of its joint moments. In this approach (which covers versions for both the classical CLT and the CLT of free probability), the determination of the resulting limit law has to be addressed on a case-by-case basis. In this paper we discuss an instance of the abov",
+  "query": "all:\"joint moment\" AND all:\"eigenvalue\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Circulant Tensors with Applications to Spectral Hypergraph Theory and Stochastic Process",
+  "id": "http://arxiv.org/abs/1312.2752v8",
+  "published": "2013-12-10",
+  "updated": "2014-11-26",
+  "authors": [
+   "Zhongming Chen",
+   "Liqun Qi"
+  ],
+  "cats": [
+   "math.SP"
+  ],
+  "abstract": "Circulant tensors naturally arise from stochastic process and spectral hypergraph theory. The joint moments of stochastic processes are symmetric circulant tensors. The adjacency, Laplacian and signless Laplacian tensors of circulant hypergraphs are also symmetric circulant tensors. The adjacency, Laplacian and signless Laplacian tensors of directed circulant hypergraphs are circulant tensors, but they are not symmetric in general. In this paper, we study spectral properties of circulant tensors and their applications in spectral hypergraph theory and stochastic process. We show that in certai",
+  "query": "all:\"joint moment\" AND all:\"eigenvalue\""
+ },
+ {
+  "src": "arxiv",
+  "title": "The limiting distributions of large heavy Wigner and arbitrary random matrices",
+  "id": "http://arxiv.org/abs/1209.2366v1",
+  "published": "2012-09-11",
+  "updated": "2012-09-11",
+  "authors": [
+   "Camille Male"
+  ],
+  "cats": [
+   "math.PR",
+   "math.CO",
+   "math.OA"
+  ],
+  "abstract": "The model of heavy Wigner matrices generalizes the classical ensemble of Wigner matrices: the sub-diagonal entries are independent, identically distributed along to and out of the diagonal, and the moments its entries are of order 1/N, where N is the size of the matrices. Adjacency matrices of Erdös-Renyi sparse graphs and matrices with properly truncated heavy tailed entries are examples of heavy Wigner matrices. We consider a family X_N of independent heavy Wigner matrices and a family Y_N of arbitrary random matrices, independent of X_N, with a technical condition (e.g. the matrices of Y_N ",
+  "query": "all:\"joint moment\" AND all:\"eigenvalue\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Distributional Limits for Eigenvalues of Graphon Kernel Matrices",
+  "id": "http://arxiv.org/abs/2601.04584v6",
+  "published": "2026-01-08",
+  "updated": "2026-10-14",
+  "authors": [
+   "Behzad Aalipur"
+  ],
+  "cats": [
+   "math.PR",
+   "math.ST"
+  ],
+  "abstract": "We study eigenvalue fluctuations of kernel and adjacency matrices in dense graphon-based random graph models, for modes associated with simple, isolated nonzero eigenvalues of the graphon integral operator. Our results require no smoothness or Lipschitz continuity. They include degenerate non-leading modes whose normalized eigenfunctions have constant modulus and change sign between $-1$ and $+1$ on measurable sets. Continuous graphons exclude this possibility: their nonzero eigenfunctions have continuous representatives, so constant modulus forces a constant eigenfunction, which corresponds t",
+  "query": "abs:\"graphon\" AND abs:\"eigenvalue\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Pattern Formation in Random Networks Using Graphons",
+  "id": "http://arxiv.org/abs/2110.14018v2",
+  "published": "2021-10-26",
+  "updated": "2022-10-18",
+  "authors": [
+   "Jason Bramburger",
+   "Matt Holzer"
+  ],
+  "cats": [
+   "math.DS",
+   "math.AP",
+   "math.PR",
+   "nlin.PS"
+  ],
+  "abstract": "We study Turing bifurcations on one-dimensional random ring networks where the probability of a connection between two nodes depends on the distance between the two nodes. Our approach uses the theory of graphons to approximate the graph Laplacian in the limit as the number of nodes tends to infinity by a nonlocal operator -- the graphon Laplacian. For the ring networks considered here, we employ center manifold theory to characterize Turing bifurcations in the continuum limit in a manner similar to the classical partial differential equation case and classify these bifurcations as sub/super/t",
+  "query": "abs:\"graphon\" AND abs:\"eigenvalue\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Graphon-based sensitivity analysis of SIS epidemics",
+  "id": "http://arxiv.org/abs/1912.10330v2",
+  "published": "2019-12-21",
+  "updated": "2020-01-30",
+  "authors": [
+   "Renato Vizuete",
+   "Paolo Frasca",
+   "Federica Garin"
+  ],
+  "cats": [
+   "eess.SY",
+   "cs.SI",
+   "math.OC"
+  ],
+  "abstract": "In this work, we use the spectral properties of graphons to study stability and sensitivity to noise of deterministic SIS epidemics over large networks. We consider the presence of additive noise in a linearized SIS model and we derive a noise index to quantify the deviation from the disease-free state due to noise. For finite networks, we show that the index depends on the adjacency eigenvalues of its graph. We then assume that the graph is a random sample from a piecewise Lipschitz graphon with finite rank and, using the eigenvalues of the associated graphon operator, we find an approximatio",
+  "query": "abs:\"graphon\" AND abs:\"eigenvalue\""
+ },
+ {
+  "src": "arxiv",
+  "title": "The Laplacian Spectrum of Large Graphs Sampled from Graphons",
+  "id": "http://arxiv.org/abs/2004.09177v2",
+  "published": "2020-04-20",
+  "updated": "2020-12-01",
+  "authors": [
+   "Renato Vizuete",
+   "Federica Garin",
+   "Paolo Frasca"
+  ],
+  "cats": [
+   "math.PR",
+   "eess.SY",
+   "math.OC"
+  ],
+  "abstract": "This paper studies the Laplacian spectrum and the average effective resistance of (large) graphs that are sampled from graphons. Broadly speaking, our main finding is that the Laplacian eigenvalues of a large dense graph can be effectively approximated by using the degree function of the corresponding graphon. More specifically, we show how to approximate the distribution of the Laplacian eigenvalues and the average effective resistance (Kirchhoff index) of the graph. For all cases, we provide explicit bounds on the approximation errors and derive the asymptotic rates at which the errors go to",
+  "query": "abs:\"graphon\" AND abs:\"eigenvalue\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Minimax Optimal Probability Matrix Estimation For Graphon With Spectral Decay",
+  "id": "http://arxiv.org/abs/2410.01073v1",
+  "published": "2024-10-01",
+  "updated": "2024-10-01",
+  "authors": [
+   "Yuchen Chen",
+   "Jing Lei"
+  ],
+  "cats": [
+   "math.ST"
+  ],
+  "abstract": "We study the optimal estimation of probability matrices of random graph models generated from graphons. This problem has been extensively studied in the case of step-graphons and Hölder smooth graphons. In this work, we characterize the regularity of graphons based on the decay rates of their eigenvalues. Our results show that for such classes of graphons, the minimax upper bound is achieved by a spectral thresholding algorithm and matches an information-theoretic lower bound up to a log factor. We provide insights on potential sources of this extra logarithm factor and discuss scenarios where",
+  "query": "abs:\"graphon\" AND abs:\"eigenvalue\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Learning Sparse Graphons and the Generalized Kesten-Stigum Threshold",
+  "id": "http://arxiv.org/abs/2006.07695v1",
+  "published": "2020-06-13",
+  "updated": "2020-06-13",
+  "authors": [
+   "Emmanuel Abbe",
+   "Shuangping Li",
+   "Allan Sly"
+  ],
+  "cats": [
+   "math.ST",
+   "cs.LG",
+   "math.PR"
+  ],
+  "abstract": "The problem of learning graphons has attracted considerable attention across several scientific communities, with significant progress over the recent years in sparser regimes. Yet, the current techniques still require diverging degrees in order to succeed with efficient algorithms in the challenging cases where the local structure of the graph is homogeneous. This paper provides an efficient algorithm to learn graphons in the constant expected degree regime. The algorithm is shown to succeed in estimating the rank-$k$ projection of a graphon in the $L_2$ metric if the top $k$ eigenvalues of t",
+  "query": "abs:\"graphon\" AND abs:\"eigenvalue\""
+ },
+ {
+  "src": "arxiv",
+  "title": "The Generalized Friendship Paradox for Eigenvectors",
+  "id": "http://arxiv.org/abs/2607.19549v1",
+  "published": "2026-07-21",
+  "updated": "2026-07-21",
+  "authors": [
+   "Bishakh Bhattacharya",
+   "Arijit Chakrabarty",
+   "Rajat Subhra Hazra"
+  ],
+  "cats": [
+   "math.PR"
+  ],
+  "abstract": "In this paper, we investigate the generalized friendship paradox for eigenvectors (alternatively called the eigen friendship paradox and abbreviated hereafter as EFP) in the setting of inhomogeneous Erdős--Rényi random graphs whose edge probabilities are generated by a continuous graphon. We consider the adjacency matrix of the graph and take the entries of the eigenvector corresponding to its largest eigenvalue as the vertex attributes. It was shown in \\cite{hazra2026generalized} that the generalized friendship paradox holds in this setting. We study the empirical distribution of the resultin",
+  "query": "abs:\"graphon\" AND abs:\"eigenvalue\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Graphon Spin Systems as Exactly Solvable Models",
+  "id": "http://arxiv.org/abs/2608.20410v1",
+  "published": "2026-08-13",
+  "updated": "2026-08-13",
+  "authors": [
+   "Artem Alexandrov",
+   "Georgi S. Medvedev"
+  ],
+  "cats": [
+   "cond-mat.dis-nn",
+   "math-ph"
+  ],
+  "abstract": "Graphons are measurable functions used to describe the asymptotic behavior of convergent graph families. Originally motivated by problems in combinatorics and graph theory, graphons have found numerous applications in the modeling and analysis of dynamical processes on networks. In this work, we use graphons to formulate the Ising model on convergent graph sequences, which include many network topologies common in applications. We derive the mean-field limit for the resulting model and obtain exact results for phase transitions in such systems. Specifically, we show that the critical temperatu",
+  "query": "abs:\"graphon\" AND abs:\"eigenvalue\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Limits of kernel operators and the spectral regularity lemma",
+  "id": "http://arxiv.org/abs/1003.5588v1",
+  "published": "2010-03-29",
+  "updated": "2010-03-29",
+  "authors": [
+   "Balazs Szegedy"
+  ],
+  "cats": [
+   "math.CO",
+   "math.FA"
+  ],
+  "abstract": "We study the spectral aspects of the graph limit theory. We give a description of graphon convergence in terms of converegnce of eigenvalues and eigenspaces. Along these lines we prove a spectral version of the strong regularity lemma. Using spectral methods we investigate group actions on graphons. As an application we show that the set of isometry invariant graphons on the sphere is closed in terms of graph convergence however the analogous statement does not hold for the circle. This fact is rooted in the representation theory of the orthogonal group.",
+  "query": "abs:\"graphon\" AND abs:\"eigenvalue\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Generalized Graphon Process: Convergence of Graph Frequencies in Stretched Cut Distance",
+  "id": "http://arxiv.org/abs/2309.05260v1",
+  "published": "2023-09-11",
+  "updated": "2023-09-11",
+  "authors": [
+   "Xingchao Jian",
+   "Feng Ji",
+   "Wee Peng Tay"
+  ],
+  "cats": [
+   "eess.SP",
+   "cs.LG"
+  ],
+  "abstract": "Graphons have traditionally served as limit objects for dense graph sequences, with the cut distance serving as the metric for convergence. However, sparse graph sequences converge to the trivial graphon under the conventional definition of cut distance, which make this framework inadequate for many practical applications. In this paper, we utilize the concepts of generalized graphons and stretched cut distance to describe the convergence of sparse graph sequences. Specifically, we consider a random graph process generated from a generalized graphon. This random graph process converges to the ",
+  "query": "abs:\"graphon\" AND abs:\"eigenvalue\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Spectral Convergence of Complexon Shift Operators",
+  "id": "http://arxiv.org/abs/2309.07169v4",
+  "published": "2023-09-12",
+  "updated": "2024-05-05",
+  "authors": [
+   "Purui Zhang",
+   "Xingchao Jian",
+   "Feng Ji",
+   "Wee Peng Tay",
+   "Bihan Wen"
+  ],
+  "cats": [
+   "eess.SP",
+   "cs.LG"
+  ],
+  "abstract": "Topological Signal Processing (TSP) utilizes simplicial complexes to model structures with higher order than vertices and edges. In this paper, we study the transferability of TSP via a generalized higher-order version of graphon, known as complexon. We recall the notion of a complexon as the limit of a simplicial complex sequence [1]. Inspired by the graphon shift operator and message-passing neural network, we construct a marginal complexon and complexon shift operator (CSO) according to components of all possible dimensions from the complexon. We investigate the CSO's eigenvalues and eigenv",
+  "query": "abs:\"graphon\" AND abs:\"eigenvalue\""
+ },
+ {
+  "src": "arxiv",
+  "title": "A Generative Model for Controllable Feature Heterophily in Graphs",
+  "id": "http://arxiv.org/abs/2509.23230v1",
+  "published": "2025-09-27",
+  "updated": "2025-09-27",
+  "authors": [
+   "Haoyu Wang",
+   "Renyuan Ma",
+   "Gonzalo Mateos",
+   "Luana Ruiz"
+  ],
+  "cats": [
+   "stat.ML",
+   "cs.LG",
+   "eess.SP"
+  ],
+  "abstract": "We introduce a principled generative framework for graph signals that enables explicit control of feature heterophily, a key property underlying the effectiveness of graph learning methods. Our model combines a Lipschitz graphon-based random graph generator with Gaussian node features filtered through a smooth spectral function of the rescaled Laplacian. We establish new theoretical guarantees: (i) a concentration result for the empirical heterophily score; and (ii) almost-sure convergence of the feature heterophily measure to a deterministic functional of the graphon degree profile, based on ",
+  "query": "abs:\"graphon\" AND abs:\"eigenvalue\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Corrections to and improvements on results from \"The Laplacian spectrum of large graphs sampled from graphons\"",
+  "id": "http://arxiv.org/abs/2407.14422v1",
+  "published": "2024-07-19",
+  "updated": "2024-07-19",
+  "authors": [
+   "Federica Garin",
+   "Paolo Frasca",
+   "Renato Vizuete"
+  ],
+  "cats": [
+   "math.OC",
+   "math.PR"
+  ],
+  "abstract": "In this note we correct the proof of Proposition 4 in our paper \"The Laplacian Spectrum of Large Graphs Sampled from Graphons\" (arXiv:2004.09177) and we improve several results therein. To this end, we prove a new concentration lemma about degrees and Laplacian eigenvalues. This lemma allows us to improve several bounds and to dispense from assuming that the graphon is bounded away from zero in several results. This extension leads, in particular, to correct the proof of Proposition 4. Additionally, we extend Proposition 4 to graphs that are sampled from graphons by using deterministic latent ",
+  "query": "abs:\"graphon\" AND abs:\"eigenvalue\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Large deviation principle for the maximal eigenvalue of inhomogeneous Erdős-Rényi random graphs",
+  "id": "http://arxiv.org/abs/2008.08367v1",
+  "published": "2020-08-19",
+  "updated": "2020-08-19",
+  "authors": [
+   "Arijit Chakrabarty",
+   "Rajat Subhra Hazra",
+   "Frank den Hollander",
+   "Matteo Sfragara"
+  ],
+  "cats": [
+   "math.PR",
+   "math-ph"
+  ],
+  "abstract": "We consider an inhomogeneous Erdős-Rényi random graph $G_N$ with vertex set $[N] = \\{1,\\dots,N\\}$ for which the pair of vertices $i,j \\in [N]$, $i\\neq j$, is connected by an edge with probability $r(\\tfrac{i}{N},\\tfrac{j}{N})$, independently of other pairs of vertices. Here, $r\\colon\\,[0,1]^2 \\to (0,1)$ is a symmetric function that plays the role of a reference graphon. Let $λ_N$ be the maximal eigenvalue of the adjacency matrix of $G_N$. It is known that $λ_N/N$ satisfies a large deviation principle as $N \\to \\infty$. The associated rate function $ψ_r$ is given by a variational formula that i",
+  "query": "abs:\"graphon\" AND abs:\"eigenvalue\""
+ },
+ {
+  "src": "arxiv",
+  "title": "The Large Deviation Principle for $W$-random spectral measures",
+  "id": "http://arxiv.org/abs/2405.04417v1",
+  "published": "2024-05-07",
+  "updated": "2024-05-07",
+  "authors": [
+   "Mahya Ghandehari",
+   "Georgi S. Medvedev"
+  ],
+  "cats": [
+   "math.PR",
+   "math-ph",
+   "math.CO"
+  ],
+  "abstract": "The $W$-random graphs provide a flexible framework for modeling large random networks. Using the Large Deviation Principle (LDP) for $W$-random graphs from [9], we prove the LDP for the corresponding class of random symmetric Hilbert-Schmidt integral operators. Our main result describes how the eigenvalues and the eigenspaces of the integral operator are affected by the large deviations in the underlying random graphon. To prove the LDP, we demonstrate continuous dependence of the spectral measures associated with integral operators on the underlying graphons and use the Contraction Principle.",
+  "query": "abs:\"graphon\" AND abs:\"eigenvalue\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Learning graphons from data: Random walks, transfer operators, and spectral clustering",
+  "id": "http://arxiv.org/abs/2507.18147v2",
+  "published": "2025-07-24",
+  "updated": "2026-04-08",
+  "authors": [
+   "Stefan Klus",
+   "Jason J. Bramburger"
+  ],
+  "cats": [
+   "stat.ML"
+  ],
+  "abstract": "Many signals evolve in time as a stochastic process, randomly switching between states over discretely sampled time points. Here we make an explicit link between the underlying stochastic process of a signal that can take on a bounded continuum of values and a random walk process on a graphon. Graphons are infinite-dimensional objects that represent the limit of convergent sequences of graphs whose size tends to infinity. We introduce transfer operators, such as the Koopman and Perron--Frobenius operators, associated with random walk processes on graphons and then illustrate how these operator",
+  "query": "abs:\"graphon\" AND abs:\"eigenvalue\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Central limit theorems for linear spectral statistics of inhomogeneous random graphs with graphon limits",
+  "id": "http://arxiv.org/abs/2412.19352v2",
+  "published": "2024-12-26",
+  "updated": "2025-04-08",
+  "authors": [
+   "Xiangyi Zhu",
+   "Yizhe Zhu"
+  ],
+  "cats": [
+   "math.PR",
+   "math.CO"
+  ],
+  "abstract": "We establish central limit theorems (CLTs) for the linear spectral statistics of the adjacency matrix of inhomogeneous random graphs across all sparsity regimes, providing explicit covariance formulas under the assumption that the variance profile of the random graphs converges to a graphon limit. Two types of CLTs are derived for the (non-centered) adjacency matrix and the centered adjacency matrix, with different scaling factors when the sparsity parameter $p$ satisfies $np = n^{Ω(1)}$, and with the same scaling factor when $np = n^{o(1)}$. In both cases, the limiting covariance is expressed",
+  "query": "abs:\"graphon\" AND abs:\"eigenvalue\" | graphon eigenvalue sum extremal",
+  "doi": "https://doi.org/10.48550/arxiv.2412.19352",
+  "venue": "arXiv (Cornell University)"
+ },
+ {
+  "src": "arxiv",
+  "title": "Optimal and Approximate Solutions to Linear Quadratic Regulation of a Class of Graphon Dynamical Systems",
+  "id": "http://arxiv.org/abs/1911.02421v1",
+  "published": "2019-11-06",
+  "updated": "2019-11-06",
+  "authors": [
+   "Shuang Gao",
+   "Peter E. Caines"
+  ],
+  "cats": [
+   "math.OC"
+  ],
+  "abstract": "In this paper we study the linear quadratic regulation (LQR) problem for dynamical systems coupled over large-scale networks and obtain locally computable low-complexity solutions. The underlying large or even infinite networks are represented by graphons and the couplings appear in both the dynamics and the quadratic cost. The optimal solution is obtained first for graphon dynamical systems for the special case where the graphons are exactly characterized by finite spectral summands. The complexity of generating these control solutions involves solving d+1 scalar Riccati equations where d is ",
+  "query": "abs:\"graphon\" AND abs:\"eigenvalue\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Fluctuation of the Largest Eigenvalue of a Kernel Matrix with application in Graphon-based Random Graphs",
+  "id": "http://arxiv.org/abs/2401.01866v3",
+  "published": "2024-01-03",
+  "updated": "2025-08-20",
+  "authors": [
+   "Anirban Chatterjee",
+   "Jiaoyang Huang"
+  ],
+  "cats": [
+   "math.PR",
+   "math.ST"
+  ],
+  "abstract": "In this article, we explore the spectral properties of general random kernel matrices $[K(U_i,U_j)]_{1\\leq i\\neq j\\leq n}$ from a Lipschitz kernel $K$ with $n$ independent random variables $U_1,U_2,\\ldots, U_n$ distributed uniformly over $[0,1]$. In particular we identify a dichotomy in the extreme eigenvalue of the kernel matrix, where, if the kernel $K$ is degenerate, the largest eigenvalue of the kernel matrix (after proper normalization) converges weakly to a weighted sum of independent chi-squared random variables. In contrast, for non-degenerate kernels, it converges to a normal distribu",
+  "query": "abs:\"graphon\" AND abs:\"eigenvalue\" | graphon eigenvalue sum extremal",
+  "doi": "https://doi.org/10.1214/25-aap2220",
+  "venue": "The Annals of Applied Probability",
+  "cited_by": 2
+ },
+ {
+  "src": "arxiv",
+  "title": "Subsampling Sparse Graphons Under Minimal Assumptions",
+  "id": "http://arxiv.org/abs/1907.12528v2",
+  "published": "2019-07-29",
+  "updated": "2019-08-25",
+  "authors": [
+   "Robert Lunde",
+   "Purnamrita Sarkar"
+  ],
+  "cats": [
+   "math.ST",
+   "stat.ME"
+  ],
+  "abstract": "We establish a general theory for subsampling network data generated by the sparse graphon model. In contrast to previous work for networks, we demonstrate validity under minimal assumptions; the main requirement is weak convergence of the functional of interest. We study the properties of two procedures: vertex subsampling and $p$-subsampling. For the first, we prove validity under the mild condition that the number of subsampled vertices is $o(n)$. For the second, we establish validity under analogous conditions on the expected subsample size. For both procedures, we also establish condition",
+  "query": "abs:\"graphon\" AND abs:\"eigenvalue\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Large deviation principle for the norm of the Laplacian matrix of inhomogeneous Erdős-Rényi random graphs",
+  "id": "http://arxiv.org/abs/2307.02324v2",
+  "published": "2023-07-05",
+  "updated": "2025-01-06",
+  "authors": [
+   "Rajat Subhra Hazra",
+   "Frank den Hollander",
+   "Maarten Markering"
+  ],
+  "cats": [
+   "math.PR",
+   "math.FA"
+  ],
+  "abstract": "We consider an inhomogeneous Erdős-Rényi random graph $G_N$ with vertex set $[N] = \\{1,\\dots,N\\}$ for which the pair of vertices $i,j \\in [N]$, $i\\neq j$, is connected by an edge with probability $r_N(\\tfrac{i}{N},\\tfrac{j}{N})$, independently of other pairs of vertices. Here, $r_N\\colon\\,[0,1]^2 \\to (0,1)$ is a symmetric function that plays the role of a reference graphon. Let $λ_N$ be the maximal eigenvalue of the Laplacian matrix of $G_N$. We show that if $\\lim_{N\\to\\infty} \\|r_N-r\\|_\\infty = 0$ for some limiting graphon $r\\colon\\,[0,1]^2 \\to (0,1)$, then $λ_N/N$ satisfies a downward LDP wi",
+  "query": "abs:\"graphon\" AND abs:\"eigenvalue\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Ultrametric Graphons and Hierarchical Community Networks: Spectral Theory and Applications",
+  "id": "http://arxiv.org/abs/2605.13423v1",
+  "published": "2026-05-13",
+  "updated": "2026-05-13",
+  "authors": [
+   "Ángel Alfredo Morán Ledezma"
+  ],
+  "cats": [
+   "math.SP",
+   "math.PR"
+  ],
+  "abstract": "We develop a theory of ultrametric graphons as limiting objects for random networks with nested hierarchical community structure. A graphon $W:[0,1]^2\\to[0,1]$ is called ultrametric if $W(x,y)=w(d(x,y))$, where $d$ is an ultrametric on $[0,1]$ induced by a family of nested partitions and $w$ is a positive kernel. The resulting random graphs exhibit a nested hierarchical community structure in which the density of connections is governed by the ultrametric distance between vertices. The Laplacian $L_d^k$ of the deterministic graph sampled from an ultrametric graphon is itself an ultrametric Lap",
+  "query": "abs:\"graphon\" AND abs:\"eigenvalue\""
+ },
+ {
+  "src": "arxiv",
+  "title": "The large deviation principle for inhomogeneous Erdős-Rényi random graphs",
+  "id": "http://arxiv.org/abs/2010.03504v2",
+  "published": "2020-10-07",
+  "updated": "2022-08-21",
+  "authors": [
+   "Maarten Markering"
+  ],
+  "cats": [
+   "math.PR"
+  ],
+  "abstract": "Consider the inhomogeneous Erdős-Rényi random graph (ERRG) on $n$ vertices for which each pair $i,j\\in\\{1,\\ldots,n\\}$, $i\\neq j$ is connected independently by an edge with probability $r_n(\\frac{i-1}{n},\\frac{j-1}{n})$, where $(r_n)_{n\\in\\mathbb{N}}$ is a sequence of graphons converging to a reference graphon $r$. As a generalization of the celebrated LDP for ERRGs by Chatterjee and Varadhan (2010), Dhara and Sen (2019) proved a large deviation principle (LDP) for a sequence of such graphs under the assumption that $r$ is bounded away from 0 and 1, and with a rate function in the form of a low",
+  "query": "abs:\"graphon\" AND abs:\"eigenvalue\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Spectral properties of the Laplacian of a generalized Wigner matrix",
+  "id": "http://arxiv.org/abs/2011.07912v2",
+  "published": "2020-11-16",
+  "updated": "2021-07-12",
+  "authors": [
+   "Anirban Chatterjee",
+   "Rajat Subhra Hazra"
+  ],
+  "cats": [
+   "math.PR"
+  ],
+  "abstract": "In this article we consider the spectrum of a Laplacian matrix, also known as the Markov matrix, under the independence assumption. We assume that the entries have a variance profile. Motivated by recent works on generalized Wigner matrices we assume that variance profile gives rise to a sequence of graphons. Under the assumption that these graphons converge, we show that the limiting spectral distribution of the scaled Laplacian converge. We give an expression for the moments of the limiting measure in terms of graph homomorphisms. In some special cases we identify the limit explicitly. We al",
+  "query": "abs:\"graphon\" AND abs:\"eigenvalue\""
+ },
+ {
+  "src": "arxiv",
+  "title": "The Keller-Segel Model for Chemotaxis on Metapopulation Graphs and Graphons",
+  "id": "http://arxiv.org/abs/2610.31049v1",
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "authors": [
+   "Daecheol Kim",
+   "Yefei Zhang",
+   "Yuxuan Zhao",
+   "Daniel B. Cooney"
+  ],
+  "cats": [
+   "math.DS",
+   "math.AP"
+  ],
+  "abstract": "Many models of spatial populations use directed motion towards environmental attractants as a mechanism for spatial pattern formation. While prior approaches typically focus on partial differential equation models for directed motion in continuous space, it is natural to consider the dynamics of biological and social systems on a metapopulation featuring well-mixed local patches and spatial motion between patches. In this paper, we formulate a version of the Keller-Segel model for chemotaxis on a graph metapopulation, modeling a chemoattractant that can diffuse across patches and a population ",
+  "query": "abs:\"graphon\" AND abs:\"eigenvalue\""
+ },
+ {
+  "src": "arxiv",
+  "title": "On the sum of the largest $A_α$-eigenvalues of graphs",
+  "id": "http://arxiv.org/abs/2012.11177v1",
+  "published": "2020-12-21",
+  "updated": "2020-12-21",
+  "authors": [
+   "Zhen Lin",
+   "Lianying Miao",
+   "Shuguang Guo"
+  ],
+  "cats": [
+   "math.CO"
+  ],
+  "abstract": "For every real $0\\leq α\\leq 1$, Nikiforov defined the $A_α$-matrix of a graph $G$ as $A_α(G)=αD(G)+(1-α)A(G)$, where $A(G)$ and $D(G)$ are the adjacency matrix and the degree diagonal matrix of a graph $G$, respectively. The eigenvalues of $A_α(G)$ are called the $A_α$-eigenvalues of $G$. Let $S_k(A_α(G))$ be the sum of $k$ largest $A_α$-eigenvalues of $G$. In this paper, we present several upper and lower bounds on $S_k(A_α(G))$ and characterize the extremal graphs for certain cases, which can be regard as a common generalization of the sum of $k$ largest eigenvalues of adjacency matrix and s",
+  "query": "all:\"sum of k largest eigenvalues\" | Ebrahimi sum largest eigenvalues graphs",
+  "doi": "https://doi.org/10.48550/arxiv.2012.11177",
+  "venue": "arXiv (Cornell University)"
+ },
+ {
+  "src": "arxiv",
+  "title": "Uniform Large Deviations, Barrier Identity and the Néel--Arrhenius Law for the One-Dimensional Stochastic Landau--Lifshitz--Gilbert Equation",
+  "id": "http://arxiv.org/abs/2610.34823v1",
+  "published": "2026-10-26",
+  "updated": "2026-10-26",
+  "authors": [
+   "Zdzisław Brzeźniak",
+   "Fan Gu",
+   "Liang Li"
+  ],
+  "cats": [
+   "math.PR",
+   "math-ph",
+   "math.AP"
+  ],
+  "abstract": "We study the one-dimensional stochastic Landau-Lifshitz-Gilbert equation with a regularised, multiplicative, degenerate trace-class noise of strength sqrt(eps), the regularisation being Q_delta^{1/2} = (I + delta A^{beta/2})^{-1}, A = -d^2/dx^2, beta > 3/2, and determine the exponential rate of thermally induced magnetisation reversal. (i) Uniform large deviations at fixed delta: for every delta > 0 the solution satisfies a large deviation principle on C([0,T];H), with a good rate function, uniformly in the initial datum over a V-bounded set with compact H-closure; no non-degeneracy of the noi",
+  "query": "all:\"lambda_1 + 2 lambda_2\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Heat Kernel and Closed Geodesic Asymptotics for Nilpotent Coverings",
+  "id": "http://arxiv.org/abs/2607.13890v1",
+  "published": "2026-07-15",
+  "updated": "2026-07-15",
+  "authors": [
+   "Atsushi Katsuda"
+  ],
+  "cats": [
+   "math.SP",
+   "math.AP",
+   "math.DG",
+   "math.DS",
+   "math.NT"
+  ],
+  "abstract": "We establish all order long-time asymptotic expansions for heat kernels on nilpotent coverings and for prime closed geodesics in fixed central classes of nilpotent quotients of compact hyperbolic surfaces. The exact lattice-side input is the finite-dimensional rational Floquet-Bloch theory of the companion paper: rational Kirillov restrictions give exact finite-dimensional fibers, and a generalized Pytlik functional gives exact Fourier-inversion and normalized-trace identities. At a rational parameter $p/q$ the decomposition is exact, and the fluctuation of the fiber integrand is controlled on",
+  "query": "all:\"weighted spectral sum\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Dynamical Mass Generation of Vector Mesons from QCD Trace Anomaly",
+  "id": "http://arxiv.org/abs/1306.3759v2",
+  "published": "2013-06-17",
+  "updated": "2013-09-06",
+  "authors": [
+   "Tomoya Hayata"
+  ],
+  "cats": [
+   "hep-ph",
+   "hep-th"
+  ],
+  "abstract": "Mass formulas for the light-vector mesons written in terms of the gluon condensate i.e., the trace anomaly in quantum chromodynamics (QCD), are derived on the basis of finite energy QCD sum rules. We utilize sum rules with $s^n$ and $s^{n+1/2}$ weights, which relate the energy-weighted spectral sums to the vacuum expectation values of certain commutation relations. After evaluating the commutation relations, the sum rules with $s^n$ weights are reduced to the familiar ones obtained from the operator product expansion (OPE). On the other hand, the sum rules with $s^{n+1/2}$ weights cannot be de",
+  "query": "all:\"weighted spectral sum\""
+ },
+ {
+  "src": "arxiv",
+  "title": "QCD spectral sum rules 2022",
+  "id": "http://arxiv.org/abs/2211.14536v3",
+  "published": "2022-11-26",
+  "updated": "2023-08-06",
+  "authors": [
+   "Stephan Narison"
+  ],
+  "cats": [
+   "hep-ph",
+   "hep-ex",
+   "hep-lat"
+  ],
+  "abstract": "We present a compact review of the status of QCD spectral sum rules until 2022. We emphasize the recent progresses for determining the QCD input parameters ($α_s$, running quark masses, quark and gluon condensates) where their correlations have been taken into account. Some selected phenomenological uses of the sum rules in different channels (light and heavy quarks, gluonia/glueballs, hybrids and four-quark states) are briefly reviewed and commented. The estimate of the $1^{-+}$ light hybrid mass is revised which confirms the hybrid nature of the $π_1(1600)$ but not the $π_1(2050)$.",
+  "query": "ti:\"spectral sum\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Duality violations and spectral sum rules",
+  "id": "http://arxiv.org/abs/hep-ph/0506004v2",
+  "published": "2005-06-01",
+  "updated": "2005-09-01",
+  "authors": [
+   "O. Cata",
+   "M. Golterman",
+   "S. Peris"
+  ],
+  "cats": [
+   "hep-ph",
+   "hep-ex",
+   "hep-lat",
+   "nucl-th"
+  ],
+  "abstract": "We study the issue of duality violations in the VV-AA vacuum polarization function in the chiral limit. This is done with the help of a model with an expansion in inverse powers of the number of colors, Nc, allowing us to consider resonances with a finite width. Due to these duality violations, the Operator Product Expansion (OPE) and the moments of the spectral function (e.g. the Weinberg sum rules) do not match at finite momentum, and we analyze this difference in detail. We also perform a comparative study of many of the different methods proposed in the literature for the extraction of the",
+  "query": "ti:\"spectral sum\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Determining F_pi from spectral sum rules",
+  "id": "http://arxiv.org/abs/hep-lat/0607022v1",
+  "published": "2006-07-17",
+  "updated": "2006-07-17",
+  "authors": [
+   "Magdalena Luz"
+  ],
+  "cats": [
+   "hep-lat"
+  ],
+  "abstract": "We derive spectral sum rules for a system with two quarks coupled to an imaginary isospin chemical potential in the εregime. The sum rules show an explicit dependence on the pion decay constant which should make it possible to measure F_pi from the eigenvalue spectrum of this particular Dirac operator.",
+  "query": "ti:\"spectral sum\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Spectral sum rules and Selberg's integral",
+  "id": "http://arxiv.org/abs/hep-th/9402008v1",
+  "published": "1994-02-02",
+  "updated": "1994-02-02",
+  "authors": [
+   "Jacobus Verbaarschot"
+  ],
+  "cats": [
+   "hep-th"
+  ],
+  "abstract": "Using Selberg's integral formula we derive all Leutwyler-Smilga type sum rules for one and two flavors, and for each of the three chiral random matrix ensembles. In agreement with arguments from effective field theory, all sum rules for $N_f = 1$ coincide for the three ensembles. The connection between spectral correlations and the low-energy effective partition function is discussed.",
+  "query": "ti:\"spectral sum\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Spectral sum rules on a $d$--sphere",
+  "id": "http://arxiv.org/abs/2604.00845v1",
+  "published": "2026-04-01",
+  "updated": "2026-04-01",
+  "authors": [
+   "Paolo Amore"
+  ],
+  "cats": [
+   "math-ph"
+  ],
+  "abstract": "We derive spectral sum rules for inverse powers of the eigenvalues of the Helmholtz equation on a $d$-sphere in the presence of an arbitrary density. By adopting a rigorous renormalization scheme, we remove the divergent contributions of the zero mode and obtain exact expressions for the sum rules without requiring an explicit determination of the eigenvalues, which is generally impossible. As an application, we derive explicit sum rules for the density $Σ(Ω) = 1 + κY_{1,\\vec{0}}(Ω)$ in $d=3,4,5$ dimensions and compare them with numerical estimates obtained by approximating the low-lying part ",
+  "query": "ti:\"spectral sum\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Mini-review on QCD spectral sum rules",
+  "id": "http://arxiv.org/abs/1409.8148v2",
+  "published": "2014-09-29",
+  "updated": "2014-10-03",
+  "authors": [
+   "Stephan Narison"
+  ],
+  "cats": [
+   "hep-ph",
+   "hep-ex",
+   "hep-lat",
+   "nucl-th"
+  ],
+  "abstract": "Taking the example of the most popular and well-established Borel / Laplace / Exponential sum rule (LSR), I shortly review some of its recent applications in hadron physics namely the estimates of non-perturbative condensates, the determination of the light and heavy quark masses, the extraction of the heavy-light decay constants, the estimates of charmonium and bottomium molecule masses and the properties of scalar gluonium. In addition to the standard τ(sum rule variable) and t_c (QCD continuum threshold) stablity criteria, I introduce a new stability criterion versus the arbitrary QCD subtr",
+  "query": "ti:\"spectral sum\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Dequantization and Hardness of Spectral Sum Estimation",
+  "id": "http://arxiv.org/abs/2509.20183v3",
+  "published": "2025-09-24",
+  "updated": "2026-08-12",
+  "authors": [
+   "Roman Edenhofer",
+   "Atsuya Hasegawa",
+   "François Le Gall"
+  ],
+  "cats": [
+   "quant-ph",
+   "cs.CC",
+   "cs.DS"
+  ],
+  "abstract": "We give new dequantization and hardness results for estimating spectral sums of matrices, such as the log-determinant. Recent quantum algorithms have demonstrated that the logarithm of the determinant of sparse, well-conditioned, positive matrices can be approximated to $\\varepsilon$-relative accuracy in time polylogarithmic in the dimension $N$, specifically in time $\\poly(\\log(N), s, κ, 1/\\varepsilon)$, where $s$ is the sparsity and $κ$ the condition number of the input matrix. We provide a simple dequantization of these techniques that preserves the polylogarithmic dependence on the dimensi",
+  "query": "ti:\"spectral sum\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Electromagnetic Emission Rates and Spectral Sum Rules",
+  "id": "http://arxiv.org/abs/hep-ph/9802256v1",
+  "published": "1998-02-05",
+  "updated": "1998-02-05",
+  "authors": [
+   "James Steele",
+   "Hidenaga Yamagishi",
+   "Ismail Zahed"
+  ],
+  "cats": [
+   "hep-ph"
+  ],
+  "abstract": "The electromagnetic emission rates at SPS energies satisfy spectral constraints in leading order in the pion and nucleon densities. These constraints follow from the strictures of broken chiral symmetry. We saturate these constraints using available data, leading to model independent emission rates from a hadronic gas. With a simple fire-ball scenario, only large nucleon densities may account for the present CERES data.",
+  "query": "ti:\"spectral sum\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Spectral sum rules for the Schrödinger equation",
+  "id": "http://arxiv.org/abs/2008.09581v1",
+  "published": "2020-08-21",
+  "updated": "2020-08-21",
+  "authors": [
+   "Paolo Amore"
+  ],
+  "cats": [
+   "math-ph",
+   "quant-ph"
+  ],
+  "abstract": "We study the sum rules of the form $Z(s) = \\sum_n E_n^{-s}$, where $E_n$ are the eigenvalues of the time--independent Schrödinger equation (in one or more dimensions) and $s$ is a rational number for which the series converges. We have used perturbation theory to obtain an explicit formula for the sum rules up to second order in the perturbation and we have extended it non--perturbatively by means of a Padé--approximant. For the special case of a box decorated with one impurity in one dimension we have calculated the first few sum rules of integer order exactly; the sum rule of order one has a",
+  "query": "ti:\"spectral sum\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Heavy Quarks from QCD Spectral Sum Rules",
+  "id": "http://arxiv.org/abs/hep-ph/9409427v1",
+  "published": "1994-09-27",
+  "updated": "1994-09-27",
+  "authors": [
+   "Stephan Narison"
+  ],
+  "cats": [
+   "hep-ph",
+   "hep-lat"
+  ],
+  "abstract": "We summarize the recent developments on the extraction of the dynamical properties of the heavy quarks from QCD spectral sum rules.",
+  "query": "ti:\"spectral sum\" | ti:\"spectral sum\""
+ },
+ {
+  "src": "arxiv",
+  "title": "QCD SPECTRAL SUM RULES FOR HEAVY FLAVOURS",
+  "id": "http://arxiv.org/abs/hep-ph/9503234v1",
+  "published": "1995-03-04",
+  "updated": "1995-03-04",
+  "authors": [
+   "Stephan Narison"
+  ],
+  "cats": [
+   "hep-ph"
+  ],
+  "abstract": "Recent developments in the uses of QCD spectral sum rules (QSSR) for heavy flavours are summarized and updated. QSSR results are compared with the existing data and with the ones from alternative approaches.",
+  "query": "ti:\"spectral sum\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Heavy flavours from QCD spectral sum rules",
+  "id": "http://arxiv.org/abs/hep-ph/9510270v2",
+  "published": "1995-10-11",
+  "updated": "1995-11-21",
+  "authors": [
+   "Stephan Narison"
+  ],
+  "cats": [
+   "hep-ph"
+  ],
+  "abstract": "We present a summary update of the QCD spectral sum rule (QSSR) results for the running and {\\it perturbative pole} quark masses, the $f_D$ and $f_B$ leptonic decay constants, the heavy-to-light and heavy-to-heavy exclusive transition-form factors. Analytic expressions of these latter quantities are presented, which give a deeper understanding of their $q^2$- and infinite mass-behaviours. A short comparison of the QSSR results with alternative approaches is done.",
+  "query": "ti:\"spectral sum\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Doubly heavy Baryons from QCD Spectral Sum Rules",
+  "id": "http://arxiv.org/abs/1009.2428v1",
+  "published": "2010-09-13",
+  "updated": "2010-09-13",
+  "authors": [
+   "R. M. Albuquerque",
+   "S. Narison"
+  ],
+  "cats": [
+   "hep-ph",
+   "hep-ex",
+   "hep-lat"
+  ],
+  "abstract": "We consider the ratios of doubly heavy baryon masses using Double Ratios of Sum Rules (DRSR), which are more accurate than the usual simple ratios used for getting hadron masses. Our results are comparable with the ones from potential models. The Xi^*_{QQ}-Xi_{QQ} splittings seem to behave like 1/M_Q and can only allow the electromagnetic decay Xi^*_{QQ} to Xi_{QQ}+gamma but not to Xi_{QQ}+ pi. Our results also show that the SU(3) mass-splittings are (almost) independent of the spin of the baryons and behave approximately like 1/M_Q, which could be understood from the QCD expressions of the co",
+  "query": "ti:\"spectral sum\""
+ },
+ {
+  "src": "arxiv",
+  "title": "$0^+$ XTZ states from QCD spectral sum rules",
+  "id": "http://arxiv.org/abs/2212.10184v1",
+  "published": "2022-12-20",
+  "updated": "2022-12-20",
+  "authors": [
+   "R. M. Albuquerque",
+   "S. Narison",
+   "D. Rabetiarivony"
+  ],
+  "cats": [
+   "hep-ph"
+  ],
+  "abstract": "We review our results in\\,\\cite{ANR22} for the masses and couplings of $T_{ccqq'}\\, (J^P=0^+)$ states from (inverse) QCD Laplace sum rule (LSR), their ratios ${\\cal R}$ and double ratio of sum rules (DRSR) within stability criteria and including Factorized Next-to-Leading Order (FNLO) Perturbative (PT) corrections and Lowest Order (LO) QCD condensates up to $\\langle G^3 \\rangle$. We show that combining ${\\cal R}$ and DRSR can provide more precise results. Calibrated to the observed $X_c(3872)$ and $T^{1^+}_{cc}(3875)$, ${\\cal R}$ combined with DRSR lead to a more precise prediction of $M_{T^{0",
+  "query": "ti:\"spectral sum\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Spectral sum rules for the quark-gluon plasma",
+  "id": "http://arxiv.org/abs/0903.3946v1",
+  "published": "2009-03-24",
+  "updated": "2009-03-24",
+  "authors": [
+   "Paul Romatschke",
+   "Dam Thanh Son"
+  ],
+  "cats": [
+   "hep-ph",
+   "hep-th",
+   "nucl-th"
+  ],
+  "abstract": "We derive sum rules involving the spectral density of the stress-energy tensor in N=4 super-Yang-Mills theory and pure Yang-Mills theory. The sum rules come from the hydrodynamic behavior at small momenta and the conformal (in the case of N=4 SYM theory) or asymptotically free (as for the pure Yang-Mills theory) behavior at large momenta. These sum rules may help constrain QGP transport coefficients obtained from lattice QCD.",
+  "query": "ti:\"spectral sum\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Comment on Dirac spectral sum rules for QCD_3",
+  "id": "http://arxiv.org/abs/hep-th/0007042v2",
+  "published": "2000-07-05",
+  "updated": "2000-10-01",
+  "authors": [
+   "S. M. Nishigaki"
+  ],
+  "cats": [
+   "hep-th",
+   "cond-mat"
+  ],
+  "abstract": "Recently Magnea hep-th/9907096 , hep-th/9912207 [Phys.Rev.D61, 056005 (2000); Phys.Rev.D62, 016005 (2000)] claimed to have computed the first sum rules for Dirac operators in 3D gauge theories from 0D non-linear sigma models. I point out that these computations are incorrect, and that they contradict with the exact results for the spectral densities unambiguously derived from random matrix theory by Nagao and myself.",
+  "query": "ti:\"spectral sum\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Massive Spectral Sum Rules for the Dirac Operator",
+  "id": "http://arxiv.org/abs/hep-th/9711047v1",
+  "published": "1997-11-07",
+  "updated": "1997-11-07",
+  "authors": [
+   "Poul H. Damgaard"
+  ],
+  "cats": [
+   "hep-th"
+  ],
+  "abstract": "Massive spectral sum rules are derived for Dirac operators of $SU(N_c)$ gauge theories with $N_f$ flavors. The universal microscopic massive spectral densities of random matrix theory, where known, are all consistent with these sum rules.",
+  "query": "ti:\"spectral sum\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Spectral sum of current correlators from lattice QCD",
+  "id": "http://arxiv.org/abs/2103.06539v2",
+  "published": "2021-03-11",
+  "updated": "2021-11-12",
+  "authors": [
+   "Tsutomu Ishikawa",
+   "Shoji Hashimoto"
+  ],
+  "cats": [
+   "hep-lat",
+   "hep-ph"
+  ],
+  "abstract": "We propose a method to use lattice QCD to compute the Borel transform of the vacuum polarization function appearing in the Shifman-Vainshtein-Zakharov QCD sum rule. We construct the spectral sum corresponding to the Borel transform from two-point functions computed on the Euclidean lattice. As a proof of principle, we compute the $s \\bar{s}$ correlators at three lattice spacings and take the continuum limit. We confirm that the method yields results that are consistent with the operator product expansion in the large Borel mass region. The method provides a ground on which the OPE analyses can",
+  "query": "ti:\"spectral sum\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Spectral sum rules for the Tomonaga-Luttinger model",
+  "id": "http://arxiv.org/abs/cond-mat/9305022v1",
+  "published": "1993-05-19",
+  "updated": "1993-05-19",
+  "authors": [
+   "K. Schönhammer",
+   "V. Meden"
+  ],
+  "cats": [
+   "cond-mat"
+  ],
+  "abstract": "In connection with recent publications we discuss spectral sum rules for the Tomonaga-Luttinger model without using the explicit result for the one-electron Green's function. They are usefull in the interpretation of recent high resolution photoemission spectra of quasi-one-dimensional conductors. It is shown that the limit of infinite frequency and band cut\\-off do not commute. Our result for arbitrary shape of the interaction potential generalizes an earlier discussion by Suzumura. A general analytical expression for the spectral function for wave vectors far from the Fermi wave vector $k_{F",
+  "query": "ti:\"spectral sum\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Spectral sum rules for confining large-N theories",
+  "id": "http://arxiv.org/abs/1512.09119v2",
+  "published": "2015-12-30",
+  "updated": "2016-01-19",
+  "authors": [
+   "Aleksey Cherman",
+   "David A. McGady",
+   "Masahito Yamazaki"
+  ],
+  "cats": [
+   "hep-th"
+  ],
+  "abstract": "We consider asymptotically-free four-dimensional large-$N$ gauge theories with massive fermionic and bosonic adjoint matter fields, compactified on squashed three-spheres, and examine their regularized large-$N$ confined-phase spectral sums. The analysis is done in the limit of vanishing 't Hooft coupling, which is justified by taking the size of the compactification manifold to be small compared to the inverse strong scale $Λ^{-1}$. Our results motivate us to conjecture some universal spectral sum rules for these large $N$ gauge theories.",
+  "query": "ti:\"spectral sum\""
+ },
+ {
+  "src": "arxiv",
+  "title": "QCD spectral sum rules and spontaneously broken chiral symmetry",
+  "id": "http://arxiv.org/abs/hep-ph/9911287v1",
+  "published": "1999-11-09",
+  "updated": "1999-11-09",
+  "authors": [
+   "E. Marco",
+   "W. Weise"
+  ],
+  "cats": [
+   "hep-ph"
+  ],
+  "abstract": "The gap Delta = 4 pi f_pi ~ 1.2 GeV of spontaneous chiral symmetry breaking is introduced as a scale delineating resonance and continuum regions in the QCD spectral sum rules for vector mesons. Basic current algebra results are easily recovered, and accurate sum rules for the lower moments of the spectral distributions are derived. The in-medium scaling of vector meson masses finds a straightforward interpretation, at least in the narrow width limit.",
+  "query": "ti:\"spectral sum\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Moments of isotropic measures and optimal projective codes",
+  "id": "http://arxiv.org/abs/1904.11159v2",
+  "published": "2019-04-25",
+  "updated": "2020-12-30",
+  "authors": [
+   "Alexey Glazyrin"
+  ],
+  "cats": [
+   "math.MG",
+   "math.CO"
+  ],
+  "abstract": "In this paper, we use the linear programming approach to find new upper bounds for the moments of isotropic measures. These bounds are then utilized for finding lower packing bounds and energy bounds for projective codes. We also show that the obtained energy bounds are sharp for several infinite families of codes.",
+  "query": "all:\"isotropic measure\" AND all:\"projection\" | all:\"moment of isotropic measures\""
+ },
+ {
+  "src": "arxiv",
+  "title": "Mean width inequalities of sections and projections for isotropic measures",
+  "id": "http://arxiv.org/abs/2111.10729v2",
+  "published": "2021-11-21",
+  "updated": "2022-08-05",
+  "authors": [
+   "Ai-Jun Li",
+   "Qingzhong Huang"
+  ],
+  "cats": [
+   "math.MG"
+  ],
+  "abstract": "In this paper, we establish mean width inequalities of sections and projections of convex bodies for isotropic measures with complete equality conditions, which extends the recent work of Alonso-Gutiérrez and Brazitikos. Different from their approach, our proof is based on the approach developed by Lutwak, Yang and Zhang, by using the Ball-Barthe inequality, the mass transportation, and the isotropic embedding.",
+  "query": "all:\"isotropic measure\" AND all:\"projection\""
+ },
+ {
+  "src": "arxiv",
+  "title": "The Sine Transform of Isotropic Measures",
+  "id": "http://arxiv.org/abs/1207.7266v1",
+  "published": "2012-07-31",
+  "updated": "2012-07-31",
+  "authors": [
+   "Gabriel Maresch",
+   "Franz E. Schuster"
+  ],
+  "cats": [
+   "math.MG",
+   "math.DG",
+   "math.FA"
+  ],
+  "abstract": "Sharp isoperimetric inequalities for the sine transform of even isotropic measures are established. The corresponding reverse inequalities are obtained in an asymptotically optimal form. These new inequalities have direct applications to strong volume estimates for convex bodies from data about their sections or projections.",
+  "query": "all:\"isotropic measure\" AND all:\"projection\""
+ },
+ {
+  "src": "openalex",
+  "title": "The largest eigenvalue of nonregular graphs",
+  "id": "https://openalex.org/W2087170480",
+  "doi": "https://doi.org/10.1016/j.jctb.2003.12.002",
+  "published": "2004-01-23",
+  "venue": "Journal of Combinatorial Theory Series B",
+  "cited_by": 54,
+  "authors": [
+   "Dragan Stevanović"
+  ],
+  "query": "sum of three largest eigenvalues of a graph"
+ },
+ {
+  "src": "openalex",
+  "title": "On the sum of the k largest eigenvalues of graphs and maximal energy of bipartite graphs",
+  "id": "https://openalex.org/W2913713179",
+  "doi": "https://doi.org/10.1016/j.laa.2019.01.016",
+  "published": "2019-01-28",
+  "venue": "Linear Algebra and its Applications",
+  "cited_by": 16,
+  "authors": [
+   "Kinkar Chandra Das",
+   "Seyed Ahmad Mojallal",
+   "Shaowei Sun"
+  ],
+  "query": "sum of three largest eigenvalues of a graph | Ebrahimi sum largest eigenvalues graphs"
+ },
+ {
+  "src": "openalex",
+  "title": "On the sum of Laplacian eigenvalues of graphs",
+  "id": "https://openalex.org/W3121147506",
+  "doi": "https://doi.org/10.1016/j.laa.2009.03.038",
+  "published": "2009-04-29",
+  "venue": "Linear Algebra and its Applications",
+  "cited_by": 59,
+  "authors": [
+   "Willem H. Haemers",
+   "Ali Mohammadian",
+   "Behruz Tayfeh‐Rezaie"
+  ],
+  "query": "sum of three largest eigenvalues of a graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Sum of the largest eigenvalues of symmetric matrices and graphs",
+  "id": "https://openalex.org/W126502365",
+  "doi": null,
+  "published": "2008-01-01",
+  "venue": "Summit (Simon Fraser University)",
+  "cited_by": 0,
+  "authors": [
+   "Javad B. Ebrahimi"
+  ],
+  "query": "sum of three largest eigenvalues of a graph | Ebrahimi sum largest eigenvalues graphs"
+ },
+ {
+  "src": "openalex",
+  "title": "Extremal graphs for the sum of two largest eigenvalues",
+  "id": "https://openalex.org/W7162674177",
+  "doi": "https://doi.org/10.3934/math.2026618",
+  "published": "2026-01-01",
+  "venue": "AIMS Mathematics",
+  "cited_by": 0,
+  "authors": [
+   "Shaowei Sun",
+   "Yaping Min",
+   "Kinkar Chandra Das"
+  ],
+  "query": "sum of three largest eigenvalues of a graph | Ebrahimi sum largest eigenvalues graphs"
+ },
+ {
+  "src": "openalex",
+  "title": "On the sum of k largest distance eigenvalues of graphs",
+  "id": "https://openalex.org/W2963340133",
+  "doi": "https://doi.org/10.1016/j.dam.2018.12.031",
+  "published": "2019-01-21",
+  "venue": "Discrete Applied Mathematics",
+  "cited_by": 10,
+  "authors": [
+   "Huiqiu Lin"
+  ],
+  "query": "sum of three largest eigenvalues of a graph"
+ },
+ {
+  "src": "openalex",
+  "title": "On the sum of signless Laplacian eigenvalues of a graph",
+  "id": "https://openalex.org/W2066054567",
+  "doi": "https://doi.org/10.1016/j.laa.2013.01.023",
+  "published": "2013-03-08",
+  "venue": "Linear Algebra and its Applications",
+  "cited_by": 30,
+  "authors": [
+   "Firouzeh Ashraf",
+   "G.R. Omidi",
+   "Behruz Tayfeh‐Rezaie"
+  ],
+  "query": "sum of three largest eigenvalues of a graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Eigenvalues of graphs",
+  "id": "https://openalex.org/W2279053140",
+  "doi": "https://doi.org/10.11575/prism/21350",
+  "published": "1970-01-01",
+  "venue": "Libraries and Cultural Resources (University of Calgary)",
+  "cited_by": 104,
+  "authors": [
+   "Eva Nosal"
+  ],
+  "query": "sum of three largest eigenvalues of a graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Graphs with three distinct eigenvalues and largest eigenvalue less than 8",
+  "id": "https://openalex.org/W2110183614",
+  "doi": "https://doi.org/10.1016/j.laa.2008.11.028",
+  "published": "2009-01-05",
+  "venue": "Linear Algebra and its Applications",
+  "cited_by": 23,
+  "authors": [
+   "H. Chuang",
+   "G.R. Omidi"
+  ],
+  "query": "sum of three largest eigenvalues of a graph"
+ },
+ {
+  "src": "openalex",
+  "title": "On the second largest Laplacian eigenvalues of graphs",
+  "id": "https://openalex.org/W2074725044",
+  "doi": "https://doi.org/10.1016/j.laa.2012.10.047",
+  "published": "2012-12-11",
+  "venue": "Linear Algebra and its Applications",
+  "cited_by": 53,
+  "authors": [
+   "Jianxi Li",
+   "Ji‐Ming Guo",
+   "Wai Chee Shiu"
+  ],
+  "query": "sum of three largest eigenvalues of a graph"
+ },
+ {
+  "src": "openalex",
+  "title": "On the sum of the two largest Laplacian eigenvalues of unicyclic graphs",
+  "id": "https://openalex.org/W1952809588",
+  "doi": "https://doi.org/10.1186/s13660-015-0794-1",
+  "published": "2015-09-17",
+  "venue": "Journal of Inequalities and Applications",
+  "cited_by": 6,
+  "authors": [
+   "Yirong Zheng",
+   "An Chang",
+   "Jianxi Li"
+  ],
+  "query": "sum of three largest eigenvalues of a graph"
+ },
+ {
+  "src": "openalex",
+  "title": "de Caen's inequality and bounds on the largest Laplacian eigenvalue of a graph",
+  "id": "https://openalex.org/W2006655961",
+  "doi": "https://doi.org/10.1016/s0024-3795(00)00307-4",
+  "published": "2001-05-01",
+  "venue": "Linear Algebra and its Applications",
+  "cited_by": 58,
+  "authors": [
+   "Jiong-Sheng Li",
+   "Yong-Liang Pan"
+  ],
+  "query": "sum of three largest eigenvalues of a graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Brouwer's conjecture for the sum of the k largest Laplacian eigenvalues of some graphs",
+  "id": "https://openalex.org/W4403637703",
+  "doi": "https://doi.org/10.1515/math-2024-0062",
+  "published": "2024-01-01",
+  "venue": "Open Mathematics",
+  "cited_by": 1,
+  "authors": [
+   "Ke Wang",
+   "Zhen Lin",
+   "Shumin Zhang",
+   "Chengfu Ye"
+  ],
+  "query": "sum of three largest eigenvalues of a graph"
+ },
+ {
+  "src": "openalex",
+  "title": "On the eigenvalues of eccentricity matrix of graphs",
+  "id": "https://openalex.org/W3136608462",
+  "doi": "https://doi.org/10.1016/j.dam.2021.02.029",
+  "published": "2021-03-13",
+  "venue": "Discrete Applied Mathematics",
+  "cited_by": 27,
+  "authors": [
+   "Xingyu Lei",
+   "Jianfeng Wang",
+   "Guozheng Li"
+  ],
+  "query": "sum of three largest eigenvalues of a graph"
+ },
+ {
+  "src": "openalex",
+  "title": "On the sum of $k$-th largest distance eigenvalues of graphs",
+  "id": "https://openalex.org/W2803355438",
+  "doi": "https://doi.org/10.48550/arxiv.1805.09661",
+  "published": "2018-05-24",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 0,
+  "authors": [
+   "Huiqiu Lin"
+  ],
+  "query": "sum of three largest eigenvalues of a graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Sharp bounds for the largest eigenvalue of the signless Laplacian of a graph",
+  "id": "https://openalex.org/W1981489568",
+  "doi": "https://doi.org/10.1016/j.laa.2010.04.026",
+  "published": "2010-05-06",
+  "venue": "Linear Algebra and its Applications",
+  "cited_by": 22,
+  "authors": [
+   "Yanqing Chen",
+   "Ligong Wang"
+  ],
+  "query": "sum of three largest eigenvalues of a graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Extremal graphs for the sum of the two largest signless Laplacian eigenvalues",
+  "id": "https://openalex.org/W1917381452",
+  "doi": "https://doi.org/10.13001/1081-3810.3143",
+  "published": "2015-02-08",
+  "venue": "Electronic Journal of Linear Algebra",
+  "cited_by": 6,
+  "authors": [
+   "Carla Silva Oliveira",
+   "Leonardo de Lima",
+   "Paula Rama",
+   "Paula Carvalho"
+  ],
+  "query": "sum of three largest eigenvalues of a graph | Ebrahimi sum largest eigenvalues graphs"
+ },
+ {
+  "src": "openalex",
+  "title": "TransGraph: Transfer Graph Learning",
+  "id": "https://openalex.org/W4399568675",
+  "doi": "https://doi.org/10.32614/cran.package.transgraph",
+  "published": "2023-10-19",
+  "venue": null,
+  "cited_by": 0,
+  "authors": [
+   "Mingyang Ren",
+   "Ruixuan Zhao",
+   "Xin He",
+   "Junhui Wang"
+  ],
+  "query": "upper bound lambda1 lambda2 lambda3 graph | maximum of lambda1 + k lambda2 graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Differential expression of interferon-lambda receptor 1 splice variants determines the magnitude of the antiviral response induced by interferon-lambda 3 in human immune cells",
+  "id": "https://openalex.org/W3022536911",
+  "doi": "https://doi.org/10.1371/journal.ppat.1008515",
+  "published": "2020-04-30",
+  "venue": "PLoS Pathogens",
+  "cited_by": 61,
+  "authors": [
+   "Deanna M. Santer",
+   "Gillian E. S. Minty",
+   "Dominic P. Golec",
+   "Julia Lu",
+   "Julia F. May",
+   "Afshin Namdar"
+  ],
+  "query": "upper bound lambda1 lambda2 lambda3 graph"
+ },
+ {
+  "src": "openalex",
+  "title": "How do we pay with euro notes? Empirical evidence from Monopoly experiments",
+  "id": "https://openalex.org/W2156418671",
+  "doi": null,
+  "published": "2003-11-07",
+  "venue": "RePEc: Research Papers in Economics",
+  "cited_by": 1,
+  "authors": [
+   "Philip Hans Franses",
+   "Jeanine Kippers"
+  ],
+  "query": "upper bound lambda1 lambda2 lambda3 graph"
+ },
+ {
+  "src": "openalex",
+  "title": "cencrne: Consistent Estimation of the Number of Communities via Regularized Network Embedding",
+  "id": "https://openalex.org/W4399577392",
+  "doi": "https://doi.org/10.32614/cran.package.cencrne",
+  "published": "2023-01-09",
+  "venue": null,
+  "cited_by": 0,
+  "authors": [
+   "Mingyang Ren",
+   "Sanguo Zhang",
+   "Junhui Wang"
+  ],
+  "query": "upper bound lambda1 lambda2 lambda3 graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Development of the D-Optimality-Based Coordinate-Exchange Algorithm for an Irregular Design Space and the Mixed-Integer Nonlinear Robust Parameter Design Optimization",
+  "id": "https://openalex.org/W2735689317",
+  "doi": null,
+  "published": "2017-01-01",
+  "venue": "TigerPrints (Clemson University)",
+  "cited_by": 0,
+  "authors": [
+   "Akın Özdemir"
+  ],
+  "query": "upper bound lambda1 lambda2 lambda3 graph | weighted sum lambda1 + 2 lambda2 graph extremal"
+ },
+ {
+  "src": "openalex",
+  "title": "Optimal Control and Numerical Optimization Applied to Epidemiological Models",
+  "id": "https://openalex.org/W1506586834",
+  "doi": "https://doi.org/10.48550/arxiv.1401.7390",
+  "published": "2014-01-29",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 17,
+  "authors": [
+   "Helena Sofia Rodrigues"
+  ],
+  "query": "upper bound lambda1 lambda2 lambda3 graph | maximum of lambda1 + k lambda2 graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Assessment of Forest above Ground Biomass Estimation Using Multi-Temporal C-band Sentinel-1 and Polarimetric L-band PALSAR-2 Data",
+  "id": "https://openalex.org/W2890183925",
+  "doi": "https://doi.org/10.3390/rs10091424",
+  "published": "2018-09-07",
+  "venue": "Remote Sensing",
+  "cited_by": 107,
+  "authors": [
+   "Xiaodong Huang",
+   "Beth L. Ziniti",
+   "Nathan Torbick",
+   "Mark J. Ducey"
+  ],
+  "query": "upper bound lambda1 lambda2 lambda3 graph"
+ },
+ {
+  "src": "openalex",
+  "title": "HiRel: Hybrid Automated Reliability Predictor (HARP) integrated reliability tool system, (version 7.0). Volume 2: HARP tutorial",
+  "id": "https://openalex.org/W228342287",
+  "doi": null,
+  "published": "1994-11-01",
+  "venue": "NASA Technical Reports Server (NASA)",
+  "cited_by": 13,
+  "authors": [
+   "Elizabeth Rothmann",
+   "J.B. Dugan",
+   "Kishor Shridharbhai Trivedi",
+   "Nitin Mittal",
+   "Salvatore J. Bavuso"
+  ],
+  "query": "upper bound lambda1 lambda2 lambda3 graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Techniques of Machine Learning for Producing Metaheuristic Operators",
+  "id": "https://openalex.org/W4404172430",
+  "doi": "https://doi.org/10.1002/9781394229680.ch6",
+  "published": "2024-11-08",
+  "venue": null,
+  "cited_by": 0,
+  "authors": [
+   "Erik Cuevas",
+   "Jorge Galvez",
+   "Omar Avalos",
+   "Fernando Wario"
+  ],
+  "query": "upper bound lambda1 lambda2 lambda3 graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Optimal energy use in mobile applications with storage",
+  "id": "https://openalex.org/W1433805473",
+  "doi": null,
+  "published": "2013-05-24",
+  "venue": "Illinois Digital Environment for Access to Learning and Scholarship (University of Illinois at Urbana-Champaign)",
+  "cited_by": 4,
+  "authors": [
+   "Timothy O. Deppen"
+  ],
+  "query": "upper bound lambda1 lambda2 lambda3 graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Mathematical modelling of In-vivo HIV optimal therapy and management",
+  "id": "https://openalex.org/W3006725310",
+  "doi": null,
+  "published": "2018-01-01",
+  "venue": "SU+ Digital Repository (Strathmore University)",
+  "cited_by": 1,
+  "authors": [
+   "Purity Ngina"
+  ],
+  "query": "upper bound lambda1 lambda2 lambda3 graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Empirical Studies on Cash Payments",
+  "id": "https://openalex.org/W2156286671",
+  "doi": null,
+  "published": "2004-09-09",
+  "venue": "RePub (Erasmus University Rotterdam)",
+  "cited_by": 49,
+  "authors": [
+   "Jeanine Kippers"
+  ],
+  "query": "upper bound lambda1 lambda2 lambda3 graph | weighted sum lambda1 + 2 lambda2 graph extremal"
+ },
+ {
+  "src": "openalex",
+  "title": "Epidemiological models and optimal control theory - Applications to marketing and computer viruses transmission",
+  "id": "https://openalex.org/W2751288634",
+  "doi": null,
+  "published": "2017-07-17",
+  "venue": "Portuguese National Funding Agency for Science, Research and Technology (RCAAP Project by FCT)",
+  "cited_by": 2,
+  "authors": [
+   "João N.C. Gonçalves"
+  ],
+  "query": "upper bound lambda1 lambda2 lambda3 graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Tropical geometry for Nagata's conjecture and Legendrian curves",
+  "id": "https://openalex.org/W2259933724",
+  "doi": "https://doi.org/10.13097/archive-ouverte/unige:80308",
+  "published": "2015-01-01",
+  "venue": "Archive ouverte UNIGE (University of Geneva)",
+  "cited_by": 0,
+  "authors": [
+   "Nikita Sergeevich Kalinin"
+  ],
+  "query": "upper bound lambda1 lambda2 lambda3 graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Few-Shot Continual Learning via Flat-to-Wide Approaches",
+  "id": "https://openalex.org/W4400020447",
+  "doi": "https://doi.org/10.1109/tnnls.2024.3415048",
+  "published": "2024-06-25",
+  "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+  "cited_by": 6,
+  "authors": [
+   "Muhammad Anwar Ma’Sum",
+   "Mahardhika Pratama",
+   "Edwin David Lughofer",
+   "Lin Liu",
+   "Habibullah",
+   "Ryszard Kowalczyk"
+  ],
+  "query": "upper bound lambda1 lambda2 lambda3 graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Adaptive temperature distillation with curriculum learning for lightweight multilingual language teaching models",
+  "id": "https://openalex.org/W7223457765",
+  "doi": "https://doi.org/10.1007/s44163-026-02138-7",
+  "published": "2026-10-24",
+  "venue": "Discover Artificial Intelligence",
+  "cited_by": 0,
+  "authors": [
+   "Sirui Wang",
+   "Shuai Wu",
+   "Haiyan Wang"
+  ],
+  "query": "upper bound lambda1 lambda2 lambda3 graph"
+ },
+ {
+  "src": "openalex",
+  "title": "MBESS: The MBESS R Package",
+  "id": "https://openalex.org/W4399569858",
+  "doi": "https://doi.org/10.32614/cran.package.mbess",
+  "published": "2006-05-06",
+  "venue": null,
+  "cited_by": 4,
+  "authors": [
+   "Ken Kelley"
+  ],
+  "query": "upper bound lambda1 lambda2 lambda3 graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Efficient Parameter-free Clustering Using First Neighbor Relations",
+  "id": "https://openalex.org/W2915105654",
+  "doi": "https://doi.org/10.48550/arxiv.1902.11266",
+  "published": "2019-02-28",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 18,
+  "authors": [
+   "Muhammad Saquib Sarfraz",
+   "Vivek Sharma",
+   "Rainer Stiefelhagen"
+  ],
+  "query": "upper bound lambda1 lambda2 lambda3 graph"
+ },
+ {
+  "src": "openalex",
+  "title": "The design of a neural network compiler",
+  "id": "https://openalex.org/W2739358962",
+  "doi": null,
+  "published": "1994-01-01",
+  "venue": "Loughborough University Research Repository (Loughborough University)",
+  "cited_by": 0,
+  "authors": [
+   "Md. Nasir Sulaiman"
+  ],
+  "query": "upper bound lambda1 lambda2 lambda3 graph"
+ },
+ {
+  "src": "openalex",
+  "title": "The immune modulatory role of interferon lambda on human B-cell functions",
+  "id": "https://openalex.org/W3136895060",
+  "doi": "https://doi.org/10.5451/unibas-007157179",
+  "published": "2019-01-01",
+  "venue": "edoc (University of Basel)",
+  "cited_by": 0,
+  "authors": [
+   "Mohammedyaseen Syedbasha"
+  ],
+  "query": "upper bound lambda1 lambda2 lambda3 graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Wavelets on graphs via spectral graph theory",
+  "id": "https://openalex.org/W2158787690",
+  "doi": "https://doi.org/10.1016/j.acha.2010.04.005",
+  "published": "2010-04-29",
+  "venue": "Applied and Computational Harmonic Analysis",
+  "cited_by": 2186,
+  "authors": [
+   "David Kenric Hammond",
+   "Pierre Vandergheynst",
+   "Rémi Gribonval"
+  ],
+  "query": "spectral sum of graphs exact maximum"
+ },
+ {
+  "src": "openalex",
+  "title": "The Spectral Radius and the Maximum Degree of Irregular Graphs",
+  "id": "https://openalex.org/W2134034033",
+  "doi": "https://doi.org/10.37236/956",
+  "published": "2007-05-23",
+  "venue": "The Electronic Journal of Combinatorics",
+  "cited_by": 50,
+  "authors": [
+   "Sebastian M. Cioabă"
+  ],
+  "query": "spectral sum of graphs exact maximum"
+ },
+ {
+  "src": "openalex",
+  "title": "Graph Spectral Image Processing",
+  "id": "https://openalex.org/W2783991429",
+  "doi": "https://doi.org/10.1109/jproc.2018.2799702",
+  "published": "2018-04-09",
+  "venue": "Proceedings of the IEEE",
+  "cited_by": 253,
+  "authors": [
+   "Gene Cheung",
+   "Enrico Magli",
+   "Yuichi Tanaka",
+   "Michael K. Ng"
+  ],
+  "query": "spectral sum of graphs exact maximum | three block graph join two cliques spectral | Huang Wei exact maximum spectral sum graphs"
+ },
+ {
+  "src": "openalex",
+  "title": "Maximum spectral gaps of graphs",
+  "id": "https://openalex.org/W4415504692",
+  "doi": "https://doi.org/10.1016/j.laa.2025.10.024",
+  "published": "2025-10-24",
+  "venue": "Linear Algebra and its Applications",
+  "cited_by": 0,
+  "authors": [
+   "George Brooks",
+   "William Linz",
+   "Linyuan Lü"
+  ],
+  "query": "spectral sum of graphs exact maximum"
+ },
+ {
+  "src": "openalex",
+  "title": "Spectral Alignment of Graphs",
+  "id": "https://openalex.org/W2753632377",
+  "doi": "https://doi.org/10.1109/tnse.2019.2913233",
+  "published": "2019-04-25",
+  "venue": "IEEE Transactions on Network Science and Engineering",
+  "cited_by": 57,
+  "authors": [
+   "Soheil Feizi",
+   "Gerald Quon",
+   "Mariana Recamonde‐Mendoza",
+   "Muriel Médard",
+   "M Kellis",
+   "Ali Jadbabaie"
+  ],
+  "query": "spectral sum of graphs exact maximum"
+ },
+ {
+  "src": "openalex",
+  "title": "Infinite Lewis Weights in Spectral Graph Theory",
+  "id": "https://openalex.org/W4320853866",
+  "doi": "https://doi.org/10.48550/arxiv.2302.05966",
+  "published": "2023-02-12",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 0,
+  "authors": [
+   "Amit Suliman",
+   "Omri Weinstein"
+  ],
+  "query": "spectral sum of graphs exact maximum"
+ },
+ {
+  "src": "openalex",
+  "title": "Asymptotic maximum spectral radius of nonregular graphs",
+  "id": "https://openalex.org/W7220743464",
+  "doi": "https://doi.org/10.48550/arxiv.2610.04947",
+  "published": "2026-10-04",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 0,
+  "authors": [
+   "Hangxi Cha",
+   "Haiying Shan"
+  ],
+  "query": "spectral sum of graphs exact maximum"
+ },
+ {
+  "src": "openalex",
+  "title": "Decreasing the spectral radius of a graph by link removals",
+  "id": "https://openalex.org/W2080397156",
+  "doi": "https://doi.org/10.1103/physreve.84.016101",
+  "published": "2011-07-06",
+  "venue": "Physical Review E",
+  "cited_by": 186,
+  "authors": [
+   "Piet Van Mieghem",
+   "Dragan Stevanović",
+   "Fernando A. Kuipers",
+   "Cong Li",
+   "Ruud van de Bovenkamp",
+   "D. Liu"
+  ],
+  "query": "spectral sum of graphs exact maximum"
+ },
+ {
+  "src": "openalex",
+  "title": "Two-point spectral correlations for star graphs",
+  "id": "https://openalex.org/W2027092023",
+  "doi": "https://doi.org/10.1088/0305-4470/32/45/302",
+  "published": "1999-10-28",
+  "venue": "Journal of Physics A Mathematical and General",
+  "cited_by": 76,
+  "authors": [
+   "Gregory Berkolaiko",
+   "Jonathan P. Keating"
+  ],
+  "query": "spectral sum of graphs exact maximum"
+ },
+ {
+  "src": "openalex",
+  "title": "Exact variance-energy relations and optimal spectral bounds for graphs",
+  "id": "https://openalex.org/W4415255454",
+  "doi": "https://doi.org/10.30538/oms2025.0261",
+  "published": "2025-10-16",
+  "venue": "Open Journal of Mathematical Sciences",
+  "cited_by": 1,
+  "authors": [
+   "Akbar Jahanbani",
+   "İvan Gutman"
+  ],
+  "query": "spectral sum of graphs exact maximum"
+ },
+ {
+  "src": "openalex",
+  "title": "Nonregular graphs of odd maximum degree with maximum spectral radius",
+  "id": "https://openalex.org/W7214313089",
+  "doi": "https://doi.org/10.48550/arxiv.2609.28706",
+  "published": "2026-09-23",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 0,
+  "authors": [
+   "Liangdong Fan",
+   "Liying Kang",
+   "Yaojun Chen"
+  ],
+  "query": "spectral sum of graphs exact maximum"
+ },
+ {
+  "src": "openalex",
+  "title": "Spectrally approximating large graphs with smaller graphs",
+  "id": "https://openalex.org/W2787976462",
+  "doi": "https://doi.org/10.48550/arxiv.1802.07510",
+  "published": "2018-02-21",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 52,
+  "authors": [
+   "Andreas Loukas",
+   "Pierre Vandergheynst"
+  ],
+  "query": "spectral sum of graphs exact maximum"
+ },
+ {
+  "src": "openalex",
+  "title": "Multi-graph fusion for multi-view spectral clustering",
+  "id": "https://openalex.org/W2981206386",
+  "doi": "https://doi.org/10.1016/j.knosys.2019.105102",
+  "published": "2019-10-18",
+  "venue": "Knowledge-Based Systems",
+  "cited_by": 300,
+  "authors": [
+   "Zhao Kang",
+   "Guoxin Shi",
+   "Shudong Huang",
+   "Wenyu Chen",
+   "Xiaorong Pu",
+   "Joey Tianyi Zhou"
+  ],
+  "query": "spectral sum of graphs exact maximum"
+ },
+ {
+  "src": "openalex",
+  "title": "The maximum spectral radius of connected graphs with prescribed order and size",
+  "id": "https://openalex.org/W7223559091",
+  "doi": "https://doi.org/10.48550/arxiv.2610.34905",
+  "published": "2026-10-25",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 0,
+  "authors": [
+   "Dragan Stevanović"
+  ],
+  "query": "spectral sum of graphs exact maximum"
+ },
+ {
+  "src": "openalex",
+  "title": "Nonregular graphs with a given maximum degree attaining the maximum spectral radius",
+  "id": "https://openalex.org/W4404988645",
+  "doi": "https://doi.org/10.1016/j.jcta.2026.106271",
+  "published": "2026-10-08",
+  "venue": "Journal of Combinatorial Theory Series A",
+  "cited_by": 0,
+  "authors": [
+   "Zejun Huang",
+   "Jiahui Liu",
+   "Chenxi Yang"
+  ],
+  "query": "spectral sum of graphs exact maximum"
+ },
+ {
+  "src": "openalex",
+  "title": "The spectral radius of graphs without paths and cycles of specified length",
+  "id": "https://openalex.org/W2078483670",
+  "doi": "https://doi.org/10.1016/j.laa.2009.05.023",
+  "published": "2009-09-09",
+  "venue": "Linear Algebra and its Applications",
+  "cited_by": 174,
+  "authors": [
+   "Никифоров Владимир Олегович"
+  ],
+  "query": "spectral sum of graphs exact maximum"
+ },
+ {
+  "src": "openalex",
+  "title": "Joint Spectral Radius and Path-Complete Graph Lyapunov Functions",
+  "id": "https://openalex.org/W1605218320",
+  "doi": "https://doi.org/10.1137/110855272",
+  "published": "2014-01-01",
+  "venue": "SIAM Journal on Control and Optimization",
+  "cited_by": 114,
+  "authors": [
+   "Amir Ali Ahmadi",
+   "Raphaël M. Jungers",
+   "Pablo A. Parrilo",
+   "Mardavij Roozbehani"
+  ],
+  "query": "spectral sum of graphs exact maximum"
+ },
+ {
+  "src": "openalex",
+  "title": "Spectral graph theory of brain oscillations",
+  "id": "https://openalex.org/W3012806516",
+  "doi": "https://doi.org/10.1002/hbm.24991",
+  "published": "2020-03-23",
+  "venue": "Human Brain Mapping",
+  "cited_by": 66,
+  "authors": [
+   "Ashish Raj",
+   "Chang Cai",
+   "Xihe Xie",
+   "Eva M. Palacios",
+   "Julia P. Owen",
+   "Pratik Mukherjee"
+  ],
+  "query": "spectral sum of graphs exact maximum"
+ },
+ {
+  "src": "openalex",
+  "title": "Autocalibration and the absolute quadric",
+  "id": "https://openalex.org/W1960801737",
+  "doi": "https://doi.org/10.1109/cvpr.1997.609388",
+  "published": "2002-11-22",
+  "venue": "IEEE Computer Society Conference on Computer Vision and Pattern Recognition/Proceedings - IEEE Computer Society Conference on Computer Vision and Pattern Recognition/Proceedings",
+  "cited_by": 444,
+  "authors": [
+   "Bill Triggs"
+  ],
+  "query": "absolute projection constant rank three | absolute projection constant rank three"
+ },
+ {
+  "src": "openalex",
+  "title": "Spaces with maximal projection constants",
+  "id": "https://openalex.org/W1995844989",
+  "doi": "https://doi.org/10.4064/sm159-3-2",
+  "published": "2003-01-01",
+  "venue": "Studia Mathematica",
+  "cited_by": 4,
+  "authors": [
+   "Hermann König",
+   "Nicole Tomczak-jaegermann B"
+  ],
+  "query": "absolute projection constant rank three"
+ },
+ {
+  "src": "openalex",
+  "title": "Risk Factor Modification and Projections of Absolute Breast Cancer Risk",
+  "id": "https://openalex.org/W2109853785",
+  "doi": "https://doi.org/10.1093/jnci/djr172",
+  "published": "2011-06-24",
+  "venue": "JNCI Journal of the National Cancer Institute",
+  "cited_by": 106,
+  "authors": [
+   "Elisabetta Petracci",
+   "Adriano Decarli",
+   "Catherine Schairer",
+   "Ruth M. Pfeiffer",
+   "D. Pee",
+   "Giovanna Masala"
+  ],
+  "query": "absolute projection constant rank three"
+ },
+ {
+  "src": "openalex",
+  "title": "The Heegner Kernel and the Pion as Boundary Probe: Yukawa Structure and Hadronic Scale from a Rank-5 Projection",
+  "id": "https://openalex.org/W7159940077",
+  "doi": "https://doi.org/10.5281/zenodo.20005293",
+  "published": "2026-05-03",
+  "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+  "cited_by": 0,
+  "authors": [
+   "Pasquale Camelia"
+  ],
+  "query": "absolute projection constant rank three"
+ },
+ {
+  "src": "openalex",
+  "title": "Projection constants for spaces of multivariate polynomials",
+  "id": "https://openalex.org/W4292108258",
+  "doi": "https://doi.org/10.48550/arxiv.2208.06467",
+  "published": "2022-08-12",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 0,
+  "authors": [
+   "Andreas Defant",
+   "Daniel Galicer",
+   "Martín Mansilla",
+   "Mieczysław Mastyło",
+   "Santiago Muro"
+  ],
+  "query": "absolute projection constant rank three"
+ },
+ {
+  "src": "openalex",
+  "title": "On maximal relative projection constants",
+  "id": "https://openalex.org/W2527816160",
+  "doi": "https://doi.org/10.1016/j.jmaa.2016.09.066",
+  "published": "2016-10-08",
+  "venue": "Journal of Mathematical Analysis and Applications",
+  "cited_by": 17,
+  "authors": [
+   "Simon Foucart",
+   "Lesław Skrzypek"
+  ],
+  "query": "absolute projection constant rank three"
+ },
+ {
+  "src": "openalex",
+  "title": "On the isotropy constant of projections of polytopes",
+  "id": "https://openalex.org/W2062928757",
+  "doi": "https://doi.org/10.1016/j.jfa.2009.10.019",
+  "published": "2009-10-31",
+  "venue": "Journal of Functional Analysis",
+  "cited_by": 13,
+  "authors": [
+   "David Alonso–Gutiérrez",
+   "Jesús Bastero",
+   "Julio Bernués",
+   "Paweł Wolff"
+  ],
+  "query": "absolute projection constant rank three"
+ },
+ {
+  "src": "openalex",
+  "title": "Projection Methods in Sparse and Low Rank Feasibility",
+  "id": "https://openalex.org/W4212935146",
+  "doi": "https://doi.org/10.53846/goediss-5173",
+  "published": "2015-01-01",
+  "venue": null,
+  "cited_by": 1,
+  "authors": [
+   "Patrick Neumann"
+  ],
+  "query": "absolute projection constant rank three"
+ },
+ {
+  "src": "openalex",
+  "title": "Projection Constants of Polynomial Spaces via Representation Theory",
+  "id": "https://openalex.org/W7213867250",
+  "doi": "https://doi.org/10.48550/arxiv.2609.22050",
+  "published": "2026-09-18",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 0,
+  "authors": [
+   "Andreas Defant",
+   "Daniel Galicer",
+   "Martín Mansilla",
+   "Mieczysław Mastyło",
+   "Santiago Muro",
+   "Pablo Zadunaisky"
+  ],
+  "query": "absolute projection constant rank three"
+ },
+ {
+  "src": "openalex",
+  "title": "High-Dimensional Nonparametric Change-Point Detection via Low-Rank Degree-Three Density Projection",
+  "id": "https://openalex.org/W7203668656",
+  "doi": "https://doi.org/10.48550/arxiv.2608.15466",
+  "published": "2026-08-16",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 0,
+  "authors": [
+   "Guoqing Zhang",
+   "Zhaixin Chen"
+  ],
+  "query": "absolute projection constant rank three"
+ },
+ {
+  "src": "openalex",
+  "title": "Low-rank signal subspace: parameterization, projection and signal estimation",
+  "id": "https://openalex.org/W3125358129",
+  "doi": "https://doi.org/10.4310/21-sii709",
+  "published": "2022-07-27",
+  "venue": "Statistics and Its Interface",
+  "cited_by": 2,
+  "authors": [
+   "Nikita K. Zvonarev",
+   "Голяндина Нина Эдуардовна"
+  ],
+  "query": "absolute projection constant rank three"
+ },
+ {
+  "src": "openalex",
+  "title": "Robust Absolute Rotation Estimation via Low-Rank and Sparse Matrix Decomposition",
+  "id": "https://openalex.org/W2011479004",
+  "doi": "https://doi.org/10.1109/3dv.2014.48",
+  "published": "2014-12-01",
+  "venue": "International Conference on 3D Vision (3DV)",
+  "cited_by": 42,
+  "authors": [
+   "Federica Arrigoni",
+   "Luca Magri",
+   "Beatrice Rossi",
+   "Pasqualina Fragneto",
+   "Andrea Fusiello"
+  ],
+  "query": "absolute projection constant rank three"
+ },
+ {
+  "src": "openalex",
+  "title": "Sketch low-rank dynamics: orthogonal vs. oblique projections",
+  "id": "https://openalex.org/W7167637748",
+  "doi": "https://doi.org/10.48550/arxiv.2607.03402",
+  "published": "2026-07-03",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 0,
+  "authors": [
+   "Benjamin Carrel",
+   "Laura Grigori"
+  ],
+  "query": "absolute projection constant rank three"
+ },
+ {
+  "src": "openalex",
+  "title": "Absolute Concentration Robustness in Rank-One Kinetic Systems",
+  "id": "https://openalex.org/W4388195780",
+  "doi": "https://doi.org/10.46793/match.91-2.453m",
+  "published": "2023-10-01",
+  "venue": "match Communications in Mathematical and in Computer Chemistry",
+  "cited_by": 1,
+  "authors": [
+   "Eduardo Mendoza",
+   "Dylan Antonio S. J. Talabis",
+   "Editha C. Jose",
+   "Lauro L. Fontanil"
+  ],
+  "query": "absolute projection constant rank three"
+ },
+ {
+  "src": "openalex",
+  "title": "Precise expressions for random projections: Low-rank approximation and randomized Newton",
+  "id": "https://openalex.org/W3035891470",
+  "doi": "https://doi.org/10.48550/arxiv.2006.10653",
+  "published": "2020-06-18",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 1,
+  "authors": [
+   "Michał Dereziński",
+   "Feynman Liang",
+   "Zhenyu Liao",
+   "Michael W. Mahoney"
+  ],
+  "query": "absolute projection constant rank three"
+ },
+ {
+  "src": "openalex",
+  "title": "Quasioptimal alternating projections and their use in low-rank approximation of matrices and tensors",
+  "id": "https://openalex.org/W4414019289",
+  "doi": "https://doi.org/10.1007/s00211-025-01483-6",
+  "published": "2025-09-05",
+  "venue": "Numerische Mathematik",
+  "cited_by": 1,
+  "authors": [
+   "Stanislav Budzinskiy"
+  ],
+  "query": "absolute projection constant rank three"
+ },
+ {
+  "src": "openalex",
+  "title": "Matrix eigenvalue model: Feynman graph technique for all genera",
+  "id": "https://openalex.org/W2000905618",
+  "doi": "https://doi.org/10.1088/1126-6708/2006/12/026",
+  "published": "2006-12-07",
+  "venue": "Journal of High Energy Physics",
+  "cited_by": 135,
+  "authors": [
+   "Leonid Chekhov",
+   "Bertrand Eynard"
+  ],
+  "query": "mixed projection constant eigenvalue graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Bulk eigenvalue statistics for random regular graphs",
+  "id": "https://openalex.org/W2169995452",
+  "doi": "https://doi.org/10.1214/16-aop1145",
+  "published": "2017-11-01",
+  "venue": "The Annals of Probability",
+  "cited_by": 54,
+  "authors": [
+   "Roland Bauerschmidt",
+   "Jiaoyang Huang",
+   "Antti Knowles",
+   "Horng‐Tzer Yau"
+  ],
+  "query": "mixed projection constant eigenvalue graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Simple eigenvalues of graphs and digraphs",
+  "id": "https://openalex.org/W244827953",
+  "doi": null,
+  "published": "2015-01-26",
+  "venue": "Summit (Simon Fraser University)",
+  "cited_by": 6,
+  "authors": [
+   "Krystal Guo"
+  ],
+  "query": "mixed projection constant eigenvalue graph"
+ },
+ {
+  "src": "openalex",
+  "title": "On the problem of spurious eigenvalues in the approximation of linear elliptic problems in mixed form",
+  "id": "https://openalex.org/W2012061418",
+  "doi": "https://doi.org/10.1090/s0025-5718-99-01072-8",
+  "published": "1999-02-19",
+  "venue": "Mathematics of Computation",
+  "cited_by": 164,
+  "authors": [
+   "Daniele Boffi",
+   "Franco Brezzi",
+   "Lucia Gastaldi"
+  ],
+  "query": "mixed projection constant eigenvalue graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Mixed orthogonality graphs for continuous‐time state space models and orthogonal projections",
+  "id": "https://openalex.org/W4403906865",
+  "doi": "https://doi.org/10.1111/jtsa.12787",
+  "published": "2024-10-30",
+  "venue": "Journal of Time Series Analysis",
+  "cited_by": 3,
+  "authors": [
+   "Vicky Fasen",
+   "Lea Schenk"
+  ],
+  "query": "mixed projection constant eigenvalue graph | mixed projection constant eigenvalue graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Upper bound on the $k$-th eigenvalue of a graph",
+  "id": "https://openalex.org/W7147345047",
+  "doi": "https://doi.org/10.48550/arxiv.2603.28738",
+  "published": "2026-03-30",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 0,
+  "authors": [
+   "Varun Sivashankar"
+  ],
+  "query": "mixed projection constant eigenvalue graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Optimizing Extremal Eigenvalues of Weighted Graph Laplacians and Associated Graph Realizations",
+  "id": "https://openalex.org/W209710530",
+  "doi": null,
+  "published": "2012-03-23",
+  "venue": "Qucosa (Saxon State and University Library Dresden)",
+  "cited_by": 2,
+  "authors": [
+   "Susanna Reiß"
+  ],
+  "query": "mixed projection constant eigenvalue graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Graphs with three eigenvalues from group divisible designs",
+  "id": "https://openalex.org/W7222534423",
+  "doi": "https://doi.org/10.48550/arxiv.2610.21724",
+  "published": "2026-10-15",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 0,
+  "authors": [
+   "Gary R. W. Greaves",
+   "Jose Yip"
+  ],
+  "query": "mixed projection constant eigenvalue graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Constant Curvature Graph Convolutional Networks",
+  "id": "https://openalex.org/W2984640634",
+  "doi": "https://doi.org/10.3929/ethz-b-000393914",
+  "published": "2019-11-12",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 63,
+  "authors": [
+   "Gregor Bachmann",
+   "Gary Bécigneul",
+   "Octavian-Eugen Ganea"
+  ],
+  "query": "mixed projection constant eigenvalue graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Least squares subspace projection approach to mixed pixel classification for hyperspectral images",
+  "id": "https://openalex.org/W2163436471",
+  "doi": "https://doi.org/10.1109/36.673681",
+  "published": "1998-05-01",
+  "venue": "IEEE Transactions on Geoscience and Remote Sensing",
+  "cited_by": 205,
+  "authors": [
+   "Cheng-I Chang",
+   "Xiao-Li Zhao",
+   "Mark L. Althouse",
+   "Jeng Jong Pan"
+  ],
+  "query": "mixed projection constant eigenvalue graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Eigenvalues and Perturbed Domains",
+  "id": "https://openalex.org/W21833641",
+  "doi": "https://doi.org/10.1016/b978-044451861-3/50003-3",
+  "published": "2005-01-01",
+  "venue": "Elsevier eBooks",
+  "cited_by": 31,
+  "authors": [
+   "Jack K. Hale"
+  ],
+  "query": "mixed projection constant eigenvalue graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Arnold--Winther Mixed Finite Elements for Stokes Eigenvalue Problems",
+  "id": "https://openalex.org/W2740128767",
+  "doi": "https://doi.org/10.1137/17m1162032",
+  "published": "2018-01-01",
+  "venue": "SIAM Journal on Scientific Computing",
+  "cited_by": 27,
+  "authors": [
+   "Joscha Gedicke",
+   "Arbaz Khan"
+  ],
+  "query": "mixed projection constant eigenvalue graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Adaptive mixed FEM for the Stokes eigenvalue problem",
+  "id": "https://openalex.org/W4416886423",
+  "doi": "https://doi.org/10.1090/mcom/4151",
+  "published": "2025-12-01",
+  "venue": "Mathematics of Computation",
+  "cited_by": 1,
+  "authors": [
+   "Daniele Boffi",
+   "Arbaz Khan"
+  ],
+  "query": "mixed projection constant eigenvalue graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Cheeger Inequalities for Directed Graphs and Hypergraphs using Reweighted Eigenvalues",
+  "id": "https://openalex.org/W4376639658",
+  "doi": "https://doi.org/10.1145/3564246.3585139",
+  "published": "2023-05-16",
+  "venue": "ACM Symposium on Theory of Computing (STOC)",
+  "cited_by": 1,
+  "authors": [
+   "Lap Chi Lau",
+   "Kam Chuen Tung",
+   "Robert Wang"
+  ],
+  "query": "mixed projection constant eigenvalue graph"
+ },
+ {
+  "src": "openalex",
+  "title": "On the eigenvalues of the non-self-adjoint Robin Laplacian on bounded domains and compact quantum graphs",
+  "id": "https://openalex.org/W3196131820",
+  "doi": "https://doi.org/10.18419/opus-11428",
+  "published": "2021-01-01",
+  "venue": "OPUS Publication Server of the University of Stuttgart (University of Stuttgart)",
+  "cited_by": 0,
+  "authors": [
+   "Robin Lang"
+  ],
+  "query": "mixed projection constant eigenvalue graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Multi-facet graph mining with contextualized projections",
+  "id": "https://openalex.org/W3189524932",
+  "doi": null,
+  "published": "2020-12-01",
+  "venue": "Illinois Digital Environment for Access to Learning and Scholarship (University of Illinois at Urbana-Champaign)",
+  "cited_by": 1,
+  "authors": [
+   "Carl Yang"
+  ],
+  "query": "mixed projection constant eigenvalue graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Unit gain graphs with two distinct eigenvalues and systems of lines in complex space",
+  "id": "https://openalex.org/W4211085874",
+  "doi": "https://doi.org/10.1016/j.disc.2022.112827",
+  "published": "2022-02-09",
+  "venue": "Discrete Mathematics",
+  "cited_by": 9,
+  "authors": [
+   "Pepijn Wissing",
+   "Edwin van Dam"
+  ],
+  "query": "mixed projection constant eigenvalue graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Graphs of Hecke operators in mixed ramification",
+  "id": "https://openalex.org/W7161121991",
+  "doi": "https://doi.org/10.48550/arxiv.2605.13824",
+  "published": "2026-05-13",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 0,
+  "authors": [
+   "Rudrendra Kashyap",
+   "Vladyslav Zveryk"
+  ],
+  "query": "mixed projection constant eigenvalue graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Causal inference-integrated temporal graph convolutional networks for dynamic prediction and optimization of enterprise total factor productivity",
+  "id": "https://openalex.org/W7164504304",
+  "doi": "https://doi.org/10.1038/s41598-026-57633-9",
+  "published": "2026-06-12",
+  "venue": "Scientific Reports",
+  "cited_by": 0,
+  "authors": [
+   "Gaoyuan Fu"
+  ],
+  "query": "weighted sum lambda1 + 2 lambda2 graph extremal | maximum of lambda1 + k lambda2 graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Event-Aware Multimodal Time-Series Forecasting via Symmetry-Preserving Graph-Based Cross-Regional Transfer Learning",
+  "id": "https://openalex.org/W4415446242",
+  "doi": "https://doi.org/10.3390/sym17111788",
+  "published": "2025-10-22",
+  "venue": "Symmetry",
+  "cited_by": 0,
+  "authors": [
+   "Shu Cao",
+   "Can Zhou"
+  ],
+  "query": "weighted sum lambda1 + 2 lambda2 graph extremal"
+ },
+ {
+  "src": "openalex",
+  "title": "Percolation in Two-Dimensional Grain Boundary Structures and Polycrystal Property Closures",
+  "id": "https://openalex.org/W808631624",
+  "doi": null,
+  "published": "2005-01-01",
+  "venue": "ScholarsArchive  (Brigham Young University)",
+  "cited_by": 0,
+  "authors": [
+   "David T. Fullwood"
+  ],
+  "query": "weighted sum lambda1 + 2 lambda2 graph extremal"
+ },
+ {
+  "src": "openalex",
+  "title": "Random Variables, Their Properties, and Deviational Ellipses: In Map Point and Excel, v 4.0",
+  "id": "https://openalex.org/W1953806530",
+  "doi": null,
+  "published": "2014-12-06",
+  "venue": "Munich Personal RePEc Archive (Ludwig Maximilian University of Munich)",
+  "cited_by": 0,
+  "authors": [
+   "Roger L Goodwin"
+  ],
+  "query": "weighted sum lambda1 + 2 lambda2 graph extremal"
+ },
+ {
+  "src": "openalex",
+  "title": "Random Variables, Their Properties, and Deviational Ellipses: In Map Point and Excel, v 4.3",
+  "id": "https://openalex.org/W2917943602",
+  "doi": null,
+  "published": "2015-01-01",
+  "venue": "Munich Personal RePEc Archive (Ludwig Maximilian University of Munich)",
+  "cited_by": 0,
+  "authors": [
+   "Roger L Goodwin"
+  ],
+  "query": "weighted sum lambda1 + 2 lambda2 graph extremal"
+ },
+ {
+  "src": "openalex",
+  "title": "Symptoms Measurement, Community Sampling and the Zero-Problem: A Case for Two-Part Modeling",
+  "id": "https://openalex.org/W2912311851",
+  "doi": "https://doi.org/10.4172/2469-6676.100179",
+  "published": "2018-01-01",
+  "venue": "Acta Psychopathologica",
+  "cited_by": 0,
+  "authors": [
+   "Donald W. Drewes",
+   "Chia-Lin Ho",
+   "William E. Schlenger"
+  ],
+  "query": "weighted sum lambda1 + 2 lambda2 graph extremal"
+ },
+ {
+  "src": "openalex",
+  "title": "The impact of different estimation procedures on net monetary benefit in clinical trials",
+  "id": "https://openalex.org/W2256803723",
+  "doi": "https://doi.org/10.7282/t3df6r5x",
+  "published": "2008-01-01",
+  "venue": null,
+  "cited_by": 0,
+  "authors": [
+   "Luella Engelhart"
+  ],
+  "query": "weighted sum lambda1 + 2 lambda2 graph extremal"
+ },
+ {
+  "src": "openalex",
+  "title": "Computations of Gromov–Witten invariants of toric varieties",
+  "id": "https://openalex.org/W4395024303",
+  "doi": "https://doi.org/10.1016/j.jsc.2024.102330",
+  "published": "2024-04-23",
+  "venue": "Journal of Symbolic Computation",
+  "cited_by": 3,
+  "authors": [
+   "Giosuè Muratore"
+  ],
+  "query": "weighted sum lambda1 + 2 lambda2 graph extremal"
+ },
+ {
+  "src": "openalex",
+  "title": "Composição e morfologia de Feijão Gandu, Lab lab e mucuna",
+  "id": "https://openalex.org/W2214896353",
+  "doi": "https://doi.org/10.47749/t/unicamp.1993.65329",
+  "published": "1993-01-10",
+  "venue": null,
+  "cited_by": 0,
+  "authors": [
+   "Maria Silvia Seno"
+  ],
+  "query": "weighted sum lambda1 + 2 lambda2 graph extremal"
+ },
+ {
+  "src": "openalex",
+  "title": "Machine Learning Methods for Brain Lesion Delineation",
+  "id": "https://openalex.org/W3089465393",
+  "doi": "https://doi.org/10.20381/ruor-25380",
+  "published": "2020-10-02",
+  "venue": "uO Research (University of Ottawa)",
+  "cited_by": 0,
+  "authors": [
+   "Kevin Raina"
+  ],
+  "query": "weighted sum lambda1 + 2 lambda2 graph extremal"
+ },
+ {
+  "src": "openalex",
+  "title": "Integer-Valued Time Series Model via Copula-Based Bivariate Skellam Distribution",
+  "id": "https://openalex.org/W7118022592",
+  "doi": "https://doi.org/10.3390/jrfm19010027",
+  "published": "2026-01-02",
+  "venue": "Journal of risk and financial management",
+  "cited_by": 2,
+  "authors": [
+   "Mohammed Alqawba",
+   "Norou Diawara",
+   "Mame Mor Sene"
+  ],
+  "query": "weighted sum lambda1 + 2 lambda2 graph extremal"
+ },
+ {
+  "src": "openalex",
+  "title": "Convergent prediction–correction-based ADMM for multi-block separable convex programming",
+  "id": "https://openalex.org/W2774906082",
+  "doi": "https://doi.org/10.1016/j.cam.2017.11.033",
+  "published": "2017-12-09",
+  "venue": "Journal of Computational and Applied Mathematics",
+  "cited_by": 40,
+  "authors": [
+   "Xiaokai Chang",
+   "Sanyang Liu",
+   "Pengjun Zhao",
+   "Xu Li"
+  ],
+  "query": "weighted sum lambda1 + 2 lambda2 graph extremal"
+ },
+ {
+  "src": "openalex",
+  "title": "Digital Holography for Three Dimensional Tomographic and Topographic Measurements",
+  "id": "https://openalex.org/W2479318530",
+  "doi": null,
+  "published": "2014-01-01",
+  "venue": "OhioLink ETD Center (Ohio Library and Information Network)",
+  "cited_by": 1,
+  "authors": [
+   "Logan A. Williams"
+  ],
+  "query": "weighted sum lambda1 + 2 lambda2 graph extremal"
+ },
+ {
+  "src": "openalex",
+  "title": "The association of Adherence to the Mediterranean Diet with Mortality in the EPIC-Spain cohort using Flexible Parametric Survival Models",
+  "id": "https://openalex.org/W2517625252",
+  "doi": null,
+  "published": "2016-06-01",
+  "venue": "UPCommons institutional repository (Universitat Politècnica de Catalunya)",
+  "cited_by": 0,
+  "authors": [
+   "Yovaninna Alarcón‐Soto"
+  ],
+  "query": "weighted sum lambda1 + 2 lambda2 graph extremal"
+ },
+ {
+  "src": "openalex",
+  "title": "MyESL: A Software for Evolutionary Sparse Learning in Molecular Phylogenetics and Genomics",
+  "id": "https://openalex.org/W4414346933",
+  "doi": "https://doi.org/10.1093/molbev/msaf224",
+  "published": "2025-09-15",
+  "venue": "Molecular Biology and Evolution",
+  "cited_by": 3,
+  "authors": [
+   "Maxwell D. Sanderford",
+   "Sudip Sharma",
+   "Glen Stecher",
+   "Michael Suleski",
+   "Jun Liu",
+   "Jieping Ye"
+  ],
+  "query": "weighted sum lambda1 + 2 lambda2 graph extremal"
+ },
+ {
+  "src": "openalex",
+  "title": "Statistical Inference for a New Class of Skew T Distribution and Its Related Properties",
+  "id": "https://openalex.org/W2743432627",
+  "doi": null,
+  "published": "2017-01-01",
+  "venue": "OhioLink ETD Center (Ohio Library and Information Network)",
+  "cited_by": 1,
+  "authors": [
+   "Doaa Basalamah"
+  ],
+  "query": "weighted sum lambda1 + 2 lambda2 graph extremal"
+ },
+ {
+  "src": "openalex",
+  "title": "Static Pricing for a Network Service Provider",
+  "id": "https://openalex.org/W3121268967",
+  "doi": "https://doi.org/10.2139/ssrn.915806",
+  "published": "2006-01-01",
+  "venue": "SSRN Electronic Journal",
+  "cited_by": 3,
+  "authors": [
+   "Felipe Caro",
+   "David Simchi‐Levi"
+  ],
+  "query": "weighted sum lambda1 + 2 lambda2 graph extremal"
+ },
+ {
+  "src": "openalex",
+  "title": "New heavy resonances : from the electroweak to the planck scale",
+  "id": "https://openalex.org/W2208137313",
+  "doi": "https://doi.org/10.70675/9e735453z3421z473cz8bb8zf71072f2ad01",
+  "published": "2014-09-23",
+  "venue": null,
+  "cited_by": 1,
+  "authors": [
+   "F. Lyonnet"
+  ],
+  "query": "weighted sum lambda1 + 2 lambda2 graph extremal"
+ },
+ {
+  "src": "openalex",
+  "title": "Multiple Graph Structure Learning: a comparative analysis",
+  "id": "https://openalex.org/W3049592363",
+  "doi": "https://doi.org/10.6092/unibo/amsdottorato/9400",
+  "published": "2020-01-01",
+  "venue": "AMS Dottorato Institutional Doctoral Theses Repository (University of Bologna)",
+  "cited_by": 0,
+  "authors": [
+   "Violetta Zoffoli"
+  ],
+  "query": "maximum of lambda1 + k lambda2 graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Kolmogorov and Zabih’s Graph Cuts Stereo Matching Algorithm",
+  "id": "https://openalex.org/W2096165501",
+  "doi": "https://doi.org/10.5201/ipol.2014.97",
+  "published": "2014-10-15",
+  "venue": "Image Processing On Line",
+  "cited_by": 31,
+  "authors": [
+   "Vladimir Kolmogorov",
+   "Pascal Monasse",
+   "Pauline Tan"
+  ],
+  "query": "maximum of lambda1 + k lambda2 graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Continua of Interactions between Pairs of Atoms in Molecular Crystals",
+  "id": "https://openalex.org/W1987810615",
+  "doi": "https://doi.org/10.1002/chem.200500600",
+  "published": "2006-01-03",
+  "venue": "Chemistry - A European Journal",
+  "cited_by": 76,
+  "authors": [
+   "P.M. Dominiak",
+   "Anna Makal",
+   "P. R. Mallinson",
+   "Kinga Trzcińska",
+   "J. Eilmes",
+   "E. Grech"
+  ],
+  "query": "maximum of lambda1 + k lambda2 graph"
+ },
+ {
+  "src": "openalex",
+  "title": "A polynomial-time algorithm for learning nonparametric causal graphs",
+  "id": "https://openalex.org/W3036472816",
+  "doi": "https://doi.org/10.48550/arxiv.2006.11970",
+  "published": "2020-06-22",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 14,
+  "authors": [
+   "Ming Zhou Gao",
+   "Yi Ding",
+   "Bryon Aragam"
+  ],
+  "query": "maximum of lambda1 + k lambda2 graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Parameter Estimation in Nonlinear Mixed Effect Models Using saemix, an R Implementation of the SAEM Algorithm",
+  "id": "https://openalex.org/W2613469027",
+  "doi": "https://doi.org/10.18637/jss.v080.i03",
+  "published": "2017-01-01",
+  "venue": "Journal of Statistical Software",
+  "cited_by": 126,
+  "authors": [
+   "Emmanuelle Comets",
+   "Audrey Lavenu",
+   "Marc Lavielle"
+  ],
+  "query": "maximum of lambda1 + k lambda2 graph"
+ },
+ {
+  "src": "openalex",
+  "title": "sssvcqr: Sparse-Smooth Spatially Varying Coefficient Quantile Regression",
+  "id": "https://openalex.org/W7161300615",
+  "doi": "https://doi.org/10.32614/cran.package.sssvcqr",
+  "published": "2026-05-15",
+  "venue": null,
+  "cited_by": 0,
+  "authors": [
+   "Houjian Hou"
+  ],
+  "query": "maximum of lambda1 + k lambda2 graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Markov approach to evaluate the availability simulation model for power generation system in a thermal power plant",
+  "id": "https://openalex.org/W2102196067",
+  "doi": "https://doi.org/10.5267/j.ijiec.2012.08.003",
+  "published": "2012-08-22",
+  "venue": "International Journal of Industrial Engineering Computations",
+  "cited_by": 30,
+  "authors": [
+   "Ravinder Kumar",
+   "Avdhesh Kr. Sharma",
+   "P.C. Tewari"
+  ],
+  "query": "maximum of lambda1 + k lambda2 graph"
+ },
+ {
+  "src": "openalex",
+  "title": "geosmooth: Geometric Smoothing and Conditional Expectation Methods",
+  "id": "https://openalex.org/W7212393946",
+  "doi": "https://doi.org/10.32614/cran.package.geosmooth",
+  "published": "2026-09-12",
+  "venue": null,
+  "cited_by": 0,
+  "authors": [
+   "Paweł Gajer"
+  ],
+  "query": "maximum of lambda1 + k lambda2 graph"
+ },
+ {
+  "src": "openalex",
+  "title": "smurf: Sparse Multi-Type Regularized Feature Modeling",
+  "id": "https://openalex.org/W4399576467",
+  "doi": "https://doi.org/10.32614/cran.package.smurf",
+  "published": "2018-12-09",
+  "venue": null,
+  "cited_by": 0,
+  "authors": [
+   "Tom Reynkens",
+   "Sander Devriendt",
+   "Katrien Antonio"
+  ],
+  "query": "maximum of lambda1 + k lambda2 graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Mathematical Modeling and Optimal Control of Alternative Pest Management for Alfalfa Agroecosystems",
+  "id": "https://openalex.org/W2598528875",
+  "doi": null,
+  "published": "2015-01-01",
+  "venue": "Digital Commons - Ursinus (Ursinus College)",
+  "cited_by": 0,
+  "authors": [
+   "Cara Sulyok"
+  ],
+  "query": "maximum of lambda1 + k lambda2 graph"
+ },
+ {
+  "src": "openalex",
+  "title": "EstimateGroupNetwork: Perform the Joint Graphical Lasso and Selects Tuning Parameters",
+  "id": "https://openalex.org/W4399524719",
+  "doi": "https://doi.org/10.32614/cran.package.estimategroupnetwork",
+  "published": "2017-03-20",
+  "venue": null,
+  "cited_by": 21,
+  "authors": [
+   "Giulio Costantini, Nils Kappelmann, Sacha Epskamp"
+  ],
+  "query": "maximum of lambda1 + k lambda2 graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Molecular Dynamics Modeling of Mechanical Properties of Polymer Nanocomposites Reinforced by C7N6 Nanosheet",
+  "id": "https://openalex.org/W3196035752",
+  "doi": "https://doi.org/10.3390/surfaces4030019",
+  "published": "2021-08-24",
+  "venue": "Surfaces",
+  "cited_by": 9,
+  "authors": [
+   "Qinghua Zhang",
+   "Bohayra Mortazavi",
+   "Fadi Aldakheel"
+  ],
+  "query": "maximum of lambda1 + k lambda2 graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Statistical Model Checking",
+  "id": "https://openalex.org/W2979249584",
+  "doi": "https://doi.org/10.1007/978-3-319-91908-9_23",
+  "published": "2019-01-01",
+  "venue": "Lecture notes in computer science",
+  "cited_by": 111,
+  "authors": [
+   "Axel Legay",
+   "Anna Lukina",
+   "Louis‐Marie Traonouez",
+   "Junxing Yang",
+   "Scott A. Smolka",
+   "Radu Grosu"
+  ],
+  "query": "maximum of lambda1 + k lambda2 graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Predictions of leachate generation from minerals processing waste deposits",
+  "id": "https://openalex.org/W2907960712",
+  "doi": null,
+  "published": "1995-01-01",
+  "venue": "Open University of Cape Town (University of Cape Town)",
+  "cited_by": 0,
+  "authors": [
+   "Graham Mark Davies"
+  ],
+  "query": "maximum of lambda1 + k lambda2 graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Une introduction au contrôle optimal pour les systèmes d’équations différentielles ordinaires avec des applications en épidémiologie et en écologie.",
+  "id": "https://openalex.org/W7135313901",
+  "doi": null,
+  "published": "2024-06-13",
+  "venue": "Dépôt Institutionnel de lUniversité de Tlemcen",
+  "cited_by": 0,
+  "authors": [
+   "Mohammed Boudaoud"
+  ],
+  "query": "maximum of lambda1 + k lambda2 graph"
+ },
+ {
+  "src": "openalex",
+  "title": "IndTestPP: Tests of Independence and Analysis of Dependence Between Point Processes in Time",
+  "id": "https://openalex.org/W4399535855",
+  "doi": "https://doi.org/10.32614/cran.package.indtestpp",
+  "published": "2016-08-01",
+  "venue": null,
+  "cited_by": 1,
+  "authors": [
+   "Ana C. Cebrian"
+  ],
+  "query": "maximum of lambda1 + k lambda2 graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Incorporating Exponential Functions into an Optimal Control Model for a Chronic Wound",
+  "id": "https://openalex.org/W2510399865",
+  "doi": null,
+  "published": "2016-01-01",
+  "venue": "TopSCHOLAR (Western Kentucky University)",
+  "cited_by": 0,
+  "authors": [
+   "Peter Agaba"
+  ],
+  "query": "maximum of lambda1 + k lambda2 graph"
+ },
+ {
+  "src": "openalex",
+  "title": "Higher-Order Fluctuations and Inference for Motifs and Eigenvalues in Graphon Based Random Graphs",
+  "id": "https://openalex.org/W7135289918",
+  "doi": null,
+  "published": "2025-01-01",
+  "venue": "ScholarlyCommons (University of Pennsylvania)",
+  "cited_by": 0,
+  "authors": [
+   "Anirban Chatterjee"
+  ],
+  "query": "graphon eigenvalue sum extremal"
+ },
+ {
+  "src": "openalex",
+  "title": "Finitely forcible graphons",
+  "id": "https://openalex.org/W2949893036",
+  "doi": "https://doi.org/10.48550/arxiv.0901.0929",
+  "published": "2009-01-07",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 4,
+  "authors": [
+   "László Lovász",
+   "Balázs Szegedy"
+  ],
+  "query": "graphon eigenvalue sum extremal"
+ },
+ {
+  "src": "openalex",
+  "title": "Zagreb Indices on Graphons: Asymptotic Properties, Extremal Analysis, and Network Assortativity",
+  "id": "https://openalex.org/W7126372724",
+  "doi": "https://doi.org/10.46793/match.96-2.18125",
+  "published": "2026-01-30",
+  "venue": "match Communications in Mathematical and in Computer Chemistry",
+  "cited_by": 0,
+  "authors": [
+   "Mehdi Eliasi"
+  ],
+  "query": "graphon eigenvalue sum extremal"
+ },
+ {
+  "src": "openalex",
+  "title": "Graphon Filters: Graph Signal Processing in the Limit",
+  "id": "https://openalex.org/W3009604719",
+  "doi": "https://doi.org/10.1109/tsp.2021.3061575",
+  "published": "2021-01-01",
+  "venue": "IEEE Transactions on Signal Processing",
+  "cited_by": 28,
+  "authors": [
+   "Matthew W. Morency",
+   "Geert J. T. Leus"
+  ],
+  "query": "graphon eigenvalue sum extremal"
+ },
+ {
+  "src": "openalex",
+  "title": "Prescribed Graphon Symmetries and Flavors of Rigidity",
+  "id": "https://openalex.org/W4283653741",
+  "doi": "https://doi.org/10.3842/sigma.2026.073",
+  "published": "2026-08-10",
+  "venue": "Symmetry Integrability and Geometry Methods and Applications",
+  "cited_by": 0,
+  "authors": [
+   "Alexandru Chirvăsitu"
+  ],
+  "query": "graphon eigenvalue sum extremal"
+ },
+ {
+  "src": "openalex",
+  "title": "Finitely forcible graphons with an almost arbitrary structure",
+  "id": "https://openalex.org/W2892188524",
+  "doi": "https://doi.org/10.48550/arxiv.1809.05973",
+  "published": "2018-09-16",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 2,
+  "authors": [
+   "Daniel Král͏̌",
+   "Lovász, László Miklós",
+   "Jonathan A. Noel",
+   "Jakub Sosnovec"
+  ],
+  "query": "graphon eigenvalue sum extremal | graphon eigenvalue sum extremal"
+ },
+ {
+  "src": "openalex",
+  "title": "Fluctuations of subgraph counts in graphon based random graphs",
+  "id": "https://openalex.org/W4311971126",
+  "doi": "https://doi.org/10.1017/s0963548322000335",
+  "published": "2022-12-09",
+  "venue": "Combinatorics Probability Computing",
+  "cited_by": 11,
+  "authors": [
+   "Bhaswar B. Bhattacharya",
+   "Anirban Chatterjee",
+   "Svante Janson"
+  ],
+  "query": "graphon eigenvalue sum extremal"
+ },
+ {
+  "src": "openalex",
+  "title": "Local-density dependent Markov processes on graphons with epidemiological applications",
+  "id": "https://openalex.org/W3063213985",
+  "doi": "https://doi.org/10.1016/j.spa.2022.03.001",
+  "published": "2022-03-09",
+  "venue": "Stochastic Processes and their Applications",
+  "cited_by": 16,
+  "authors": [
+   "Dániel Keliger",
+   "Illés Antal Horváth",
+   "Bálint Máté Takács"
+  ],
+  "query": "graphon eigenvalue sum extremal"
+ },
+ {
+  "src": "openalex",
+  "title": "Graphon estimation in bipartite networks",
+  "id": "https://openalex.org/W4392769201",
+  "doi": "https://doi.org/10.70675/7d25dfedz1a61z4349zba8fz439aaddaa51c",
+  "published": "2023-11-23",
+  "venue": null,
+  "cited_by": 0,
+  "authors": [
+   "Etienne Donier-Meroz"
+  ],
+  "query": "graphon eigenvalue sum extremal"
+ },
+ {
+  "src": "openalex",
+  "title": "On a question of Vera T. Sós about size forcing of graphons",
+  "id": "https://openalex.org/W4287268256",
+  "doi": "https://doi.org/10.48550/arxiv.2103.09114",
+  "published": "2021-03-16",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 0,
+  "authors": [
+   "Oliver Cooley",
+   "Mihyun Kang",
+   "Oleg Pikhurko"
+  ],
+  "query": "graphon eigenvalue sum extremal"
+ },
+ {
+  "src": "openalex",
+  "title": "Modeling Sparse Graph Sequences and Signals Using Generalized Graphons",
+  "id": "https://openalex.org/W4403635680",
+  "doi": "https://doi.org/10.1109/tsp.2024.3482350",
+  "published": "2024-01-01",
+  "venue": "IEEE Transactions on Signal Processing",
+  "cited_by": 2,
+  "authors": [
+   "Feng Quan Ji",
+   "Xingchao Jian",
+   "Wee Peng Tay"
+  ],
+  "query": "graphon eigenvalue sum extremal"
+ },
+ {
+  "src": "openalex",
+  "title": "Attention Graphons: A Graph Limit Perspective on Graph Transformers",
+  "id": "https://openalex.org/W7214710155",
+  "doi": "https://doi.org/10.48550/arxiv.2609.35620",
+  "published": "2026-09-28",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 0,
+  "authors": [
+   "Caio F. Deberaldini Netto",
+   "Moshe Eliasof",
+   "Luana Ruiz"
+  ],
+  "query": "graphon eigenvalue sum extremal"
+ },
+ {
+  "src": "openalex",
+  "title": "Nordhaus–Gaddum and other bounds for the sum of squares of the positive eigenvalues of a graph",
+  "id": "https://openalex.org/W2489868914",
+  "doi": "https://doi.org/10.1016/j.laa.2017.05.013",
+  "published": "2017-05-11",
+  "venue": "Linear Algebra and its Applications",
+  "cited_by": 3,
+  "authors": [
+   "Clive H. Elphick",
+   "Mustapha Aouchiche"
+  ],
+  "query": "graphon eigenvalue sum extremal"
+ },
+ {
+  "src": "openalex",
+  "title": "Graphons de probabilités, limites de graphes pondérés aléatoires et chaînes de Markov branchantes cachées",
+  "id": "https://openalex.org/W4405296062",
+  "doi": "https://doi.org/10.70675/e92d16a3z356cz41edzbffezc2ad55a20a8b",
+  "published": "2024-11-08",
+  "venue": null,
+  "cited_by": 0,
+  "authors": [
+   "Julien Weibel"
+  ],
+  "query": "graphon eigenvalue sum extremal"
+ },
+ {
+  "src": "openalex",
+  "title": "Upper Tails for Edge Eigenvalues of Random Graphs",
+  "id": "https://openalex.org/W2900627769",
+  "doi": "https://doi.org/10.1137/18m1230852",
+  "published": "2020-01-01",
+  "venue": "SIAM Journal on Discrete Mathematics",
+  "cited_by": 19,
+  "authors": [
+   "Bhaswar B. Bhattacharya",
+   "Shirshendu Ganguly"
+  ],
+  "query": "graphon eigenvalue sum extremal"
+ },
+ {
+  "src": "openalex",
+  "title": "On graphs with large third eigenvalue",
+  "id": "https://openalex.org/W7143624388",
+  "doi": "https://doi.org/10.1016/j.laa.2026.03.031",
+  "published": "2026-03-31",
+  "venue": "Linear Algebra and its Applications",
+  "cited_by": 0,
+  "authors": [
+   "Giacomo Leonida",
+   "Li Sida"
+  ],
+  "query": "graphon eigenvalue sum extremal"
+ },
+ {
+  "src": "openalex",
+  "title": "Estimating Graph Dimension with Cross-validated Eigenvalues",
+  "id": "https://openalex.org/W3191848269",
+  "doi": "https://doi.org/10.48550/arxiv.2108.03336",
+  "published": "2021-08-06",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 4,
+  "authors": [
+   "Fan Chen",
+   "Sébastien Roch",
+   "Karl Rohe",
+   "Shuqi Yu"
+  ],
+  "query": "graphon eigenvalue sum extremal"
+ },
+ {
+  "src": "openalex",
+  "title": "Spectral extrema of 1-planar graphs with no short cycles or small cliques",
+  "id": "https://openalex.org/W7204250973",
+  "doi": "https://doi.org/10.48550/arxiv.2608.24519",
+  "published": "2026-08-25",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 0,
+  "authors": [
+   "Shuchao Li",
+   "M. Z. Wang",
+   "Qin Zhao"
+  ],
+  "query": "three block graph join two cliques spectral"
+ },
+ {
+  "src": "openalex",
+  "title": "Clique spectral extremal problem on disjoint color-critical graphs",
+  "id": "https://openalex.org/W7169193035",
+  "doi": "https://doi.org/10.48550/arxiv.2607.13861",
+  "published": "2026-07-15",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 0,
+  "authors": [
+   "Changjiang Bu",
+   "Peiyan Wei",
+   "Haotian Zeng"
+  ],
+  "query": "three block graph join two cliques spectral"
+ },
+ {
+  "src": "openalex",
+  "title": "The Distance Laplacian Spectral Radius of Clique Trees",
+  "id": "https://openalex.org/W3111081950",
+  "doi": "https://doi.org/10.1155/2020/8855987",
+  "published": "2020-12-09",
+  "venue": "Discrete Dynamics in Nature and Society",
+  "cited_by": 22,
+  "authors": [
+   "Xiao Zhang",
+   "Jiajia Zhou"
+  ],
+  "query": "three block graph join two cliques spectral"
+ },
+ {
+  "src": "openalex",
+  "title": "Stronger Spectral Bound for Clique Number",
+  "id": "https://openalex.org/W7222611900",
+  "doi": "https://doi.org/10.48550/arxiv.2610.21388",
+  "published": "2026-10-15",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 0,
+  "authors": [
+   "Hareshkumar Jadav",
+   "Sudipta Mallik",
+   "Akhilesh Panchangam",
+   "Ranveer Singh"
+  ],
+  "query": "three block graph join two cliques spectral"
+ },
+ {
+  "src": "openalex",
+  "title": "Eigenvalues of certain weighted graphs joined at their roots having cliques at some levels",
+  "id": "https://openalex.org/W2149276176",
+  "doi": "https://doi.org/10.1016/j.laa.2012.03.023",
+  "published": "2012-04-18",
+  "venue": "Linear Algebra and its Applications",
+  "cited_by": 1,
+  "authors": [
+   "Luis Medina",
+   "Óscar Rojo"
+  ],
+  "query": "three block graph join two cliques spectral"
+ },
+ {
+  "src": "openalex",
+  "title": "Unions of a clique and a co-clique as star complements for non-main graph eigenvalues",
+  "id": "https://openalex.org/W2935126743",
+  "doi": "https://doi.org/10.13001/1081-3810.3587",
+  "published": "2019-02-01",
+  "venue": "Electronic Journal of Linear Algebra",
+  "cited_by": 5,
+  "authors": [
+   "Zoran Stanić"
+  ],
+  "query": "three block graph join two cliques spectral"
+ },
+ {
+  "src": "openalex",
+  "title": "Inertia and spectral symmetry of eccentricity matrices of some clique trees",
+  "id": "https://openalex.org/W4295680096",
+  "doi": "https://doi.org/10.48550/arxiv.2209.05248",
+  "published": "2022-09-12",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 1,
+  "authors": [
+   "Li, Xiaohong",
+   "Jianfeng Wang",
+   "Maurizio Brunetti"
+  ],
+  "query": "three block graph join two cliques spectral"
+ },
+ {
+  "src": "openalex",
+  "title": "Spectral extrema of graphs with fixed size: Cycles and complete bipartite graphs",
+  "id": "https://openalex.org/W3135000689",
+  "doi": "https://doi.org/10.1016/j.ejc.2021.103322",
+  "published": "2021-02-27",
+  "venue": "European Journal of Combinatorics",
+  "cited_by": 87,
+  "authors": [
+   "Mingqing Zhai",
+   "Huiqiu Lin",
+   "Jinlong Shu"
+  ],
+  "query": "three block graph join two cliques spectral"
+ },
+ {
+  "src": "openalex",
+  "title": "k-Clique counting on large scale-graphs: a survey",
+  "id": "https://openalex.org/W4404491438",
+  "doi": "https://doi.org/10.7717/peerj-cs.2501",
+  "published": "2024-11-18",
+  "venue": "PeerJ Computer Science",
+  "cited_by": 2,
+  "authors": [
+   "Büşra Çalmaz",
+   "Belgin Ergenç Bostanoğlu"
+  ],
+  "query": "three block graph join two cliques spectral"
+ },
+ {
+  "src": "openalex",
+  "title": "Inertia and spectral symmetry of the eccentricity matrices of a class of bi-block graphs",
+  "id": "https://openalex.org/W4386501880",
+  "doi": "https://doi.org/10.48550/arxiv.2309.01358",
+  "published": "2023-09-04",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 0,
+  "authors": [
+   "T. Divyadevi",
+   "I. Jeyaraman"
+  ],
+  "query": "three block graph join two cliques spectral"
+ },
+ {
+  "src": "openalex",
+  "title": "The Generalized Distance Spectrum of the Join of Graphs",
+  "id": "https://openalex.org/W2999776972",
+  "doi": "https://doi.org/10.3390/sym12010169",
+  "published": "2020-01-15",
+  "venue": "Symmetry",
+  "cited_by": 24,
+  "authors": [
+   "Abdollah Alhevaz",
+   "Maryam Baghipur",
+   "Hilal A. Ganie",
+   "Yilun Shang"
+  ],
+  "query": "three block graph join two cliques spectral"
+ },
+ {
+  "src": "openalex",
+  "title": "On Spectral Graph Determination",
+  "id": "https://openalex.org/W4407252102",
+  "doi": "https://doi.org/10.3390/math13040549",
+  "published": "2025-02-07",
+  "venue": "Mathematics",
+  "cited_by": 3,
+  "authors": [
+   "Igal Sason",
+   "N. Ya. Krupnik",
+   "Suleiman Hamud",
+   "Abraham Berman"
+  ],
+  "query": "three block graph join two cliques spectral"
+ },
+ {
+  "src": "openalex",
+  "title": "Two spectral characterizations of regular, bipartite graphs with five eigenvalues",
+  "id": "https://openalex.org/W1976093481",
+  "doi": "https://doi.org/10.1016/j.laa.2011.04.032",
+  "published": "2011-05-21",
+  "venue": "Linear Algebra and its Applications",
+  "cited_by": 9,
+  "authors": [
+   "Dragan Stevanović"
+  ],
+  "query": "three block graph join two cliques spectral"
+ },
+ {
+  "src": "openalex",
+  "title": "Spectral characterizations of graphs",
+  "id": "https://openalex.org/W2253326923",
+  "doi": null,
+  "published": "2015-01-01",
+  "venue": "Research Publications (Maastricht University)",
+  "cited_by": 5,
+  "authors": [
+   "Aida Abiad"
+  ],
+  "query": "three block graph join two cliques spectral"
+ },
+ {
+  "src": "openalex",
+  "title": "Connected graphs with minimum adjacency spectral gap",
+  "id": "https://openalex.org/W7214944592",
+  "doi": "https://doi.org/10.48550/arxiv.2609.37774",
+  "published": "2026-09-29",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 0,
+  "authors": [
+   "Lele Liu",
+   "Michael Tait",
+   "Yi Wang"
+  ],
+  "query": "three block graph join two cliques spectral"
+ },
+ {
+  "src": "openalex",
+  "title": "Community Detection in Complex Networks via Clique Conductance",
+  "id": "https://openalex.org/W2807249408",
+  "doi": "https://doi.org/10.1038/s41598-018-23932-z",
+  "published": "2018-04-11",
+  "venue": "Scientific Reports",
+  "cited_by": 66,
+  "authors": [
+   "Zhenqi Lu",
+   "Johan Wahlström",
+   "Arye Nehorai"
+  ],
+  "query": "three block graph join two cliques spectral"
+ },
+ {
+  "src": "openalex",
+  "title": "Inertia and biclique decompositions of joins of graphs",
+  "id": "https://openalex.org/W2053364672",
+  "doi": "https://doi.org/10.1016/s0095-8956(02)00041-2",
+  "published": "2003-04-23",
+  "venue": "Journal of Combinatorial Theory Series B",
+  "cited_by": 24,
+  "authors": [
+   "David Alexander Gregory",
+   "Brenda Heyink",
+   "Kevin N. Vander Meulen"
+  ],
+  "query": "three block graph join two cliques spectral"
+ },
+ {
+  "src": "openalex",
+  "title": "Graph spectral techniques in computer sciences",
+  "id": "https://openalex.org/W1992874777",
+  "doi": "https://doi.org/10.2298/aadm111223025a",
+  "published": "2011-12-26",
+  "venue": "Applicable Analysis and Discrete Mathematics",
+  "cited_by": 31,
+  "authors": [
+   "Branko Arsić",
+   "Dragoš Cvetković",
+   "Slobodan Simić",
+   "Milan Skaric"
+  ],
+  "query": "three block graph join two cliques spectral"
+ },
+ {
+  "src": "openalex",
+  "title": "Exploiting The Structure of Bipartite Graphs for Algebraic and Spectral Graph Theory Applications",
+  "id": "https://openalex.org/W2041892506",
+  "doi": "https://doi.org/10.1080/15427951.2014.958250",
+  "published": "2014-10-22",
+  "venue": "Internet Mathematics",
+  "cited_by": 26,
+  "authors": [
+   "Jérôme Kunegis"
+  ],
+  "query": "three block graph join two cliques spectral"
+ },
+ {
+  "src": "openalex",
+  "title": "On the sum of k largest eigenvalues of graphs and symmetric matrices",
+  "id": "https://openalex.org/W2056219688",
+  "doi": "https://doi.org/10.1016/j.jctb.2008.07.001",
+  "published": "2008-08-01",
+  "venue": "Journal of Combinatorial Theory Series B",
+  "cited_by": 22,
+  "authors": [
+   "Bojan Mohar"
+  ],
+  "query": "Ebrahimi sum largest eigenvalues graphs"
+ },
+ {
+  "src": "openalex",
+  "title": "The sum of the first two largest signless Laplacian eigenvalues of trees and unicyclic graphs",
+  "id": "https://openalex.org/W2981898807",
+  "doi": "https://doi.org/10.13001/1081-3810.3405",
+  "published": "2019-02-01",
+  "venue": "Electronic Journal of Linear Algebra",
+  "cited_by": 4,
+  "authors": [
+   "Zhibin Du"
+  ],
+  "query": "Ebrahimi sum largest eigenvalues graphs"
+ },
+ {
+  "src": "openalex",
+  "title": "Sum of the k Largest Signless Laplacian Eigenvalues",
+  "id": "https://openalex.org/W2789077094",
+  "doi": "https://doi.org/10.5540/03.2018.006.01.0437",
+  "published": "2018-02-14",
+  "venue": "Proceeding Series of the Brazilian Society of Computational and Applied Mathematics",
+  "cited_by": 0,
+  "authors": [
+   "Guilherme Porto",
+   "Vilmar Trevisan"
+  ],
+  "query": "Ebrahimi sum largest eigenvalues graphs"
+ },
+ {
+  "src": "openalex",
+  "title": "Extrema of graph eigenvalues",
+  "id": "https://openalex.org/W1606332346",
+  "doi": "https://doi.org/10.1016/j.laa.2015.05.016",
+  "published": "2015-05-26",
+  "venue": "Linear Algebra and its Applications",
+  "cited_by": 20,
+  "authors": [
+   "Никифоров Владимир Олегович"
+  ],
+  "query": "Ebrahimi sum largest eigenvalues graphs"
+ },
+ {
+  "src": "openalex",
+  "title": "On the sum of k largest singular values of graphs and matrices",
+  "id": "https://openalex.org/W1967350693",
+  "doi": "https://doi.org/10.1016/j.laa.2010.08.014",
+  "published": "2010-10-13",
+  "venue": "Linear Algebra and its Applications",
+  "cited_by": 27,
+  "authors": [
+   "Никифоров Владимир Олегович"
+  ],
+  "query": "Ebrahimi sum largest eigenvalues graphs | Ebrahimi sum largest eigenvalues graphs"
+ },
+ {
+  "src": "openalex",
+  "title": "Bounds for Aα-eigenvalues",
+  "id": "https://openalex.org/W4386567785",
+  "doi": "https://doi.org/10.1051/ro/2023144",
+  "published": "2023-09-01",
+  "venue": "RAIRO - Operations Research",
+  "cited_by": 1,
+  "authors": [
+   "João Domingos Gomes da Silva",
+   "Carla Silva Oliveira",
+   "Liliana Manuela G. C. da Costa"
+  ],
+  "query": "Ebrahimi sum largest eigenvalues graphs"
+ },
+ {
+  "src": "openalex",
+  "title": "Bounds for a alpha-eigenvalues",
+  "id": "https://openalex.org/W4315588245",
+  "doi": "https://doi.org/10.48550/arxiv.2301.02733",
+  "published": "2023-01-06",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 0,
+  "authors": [
+   "João Domingos G. da Silva",
+   "Carla Silva Oliveira",
+   "Liliana Manuela G. C. da Costa"
+  ],
+  "query": "Ebrahimi sum largest eigenvalues graphs"
+ },
+ {
+  "src": "openalex",
+  "title": "A survey of automated conjectures in spectral graph theory",
+  "id": "https://openalex.org/W2011612721",
+  "doi": "https://doi.org/10.1016/j.laa.2009.06.015",
+  "published": "2009-07-08",
+  "venue": "Linear Algebra and its Applications",
+  "cited_by": 63,
+  "authors": [
+   "Mustapha Aouchiche",
+   "Pierre Hansen"
+  ],
+  "query": "Ebrahimi sum largest eigenvalues graphs"
+ },
+ {
+  "src": "openalex",
+  "title": "Extremal graphs for the $k$-th eigenvalue",
+  "id": "https://openalex.org/W7172509980",
+  "doi": "https://doi.org/10.48550/arxiv.2608.03196",
+  "published": "2026-08-04",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 0,
+  "authors": [
+   "Hitesh Kumar",
+   "Bojan Mohar",
+   "Seyed Ahmad Mojallal",
+   "Shivaramakrishna Pragada"
+  ],
+  "query": "Sivashankar Tang Wakhare graph eigenvalues projection constants"
+ },
+ {
+  "src": "openalex",
+  "title": "Generalized Nordhaus--Gaddum Inequalities for Eigenvalues",
+  "id": "https://openalex.org/W7169814005",
+  "doi": "https://doi.org/10.48550/arxiv.2607.15941",
+  "published": "2026-07-17",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 0,
+  "authors": [
+   "Sahil Agarwal",
+   "Carter Antley",
+   "Joseph Aulenbacher",
+   "George Brooks",
+   "Ian González",
+   "Luke Hawranick"
+  ],
+  "query": "Sivashankar Tang Wakhare graph eigenvalues projection constants"
+ },
+ {
+  "src": "openalex",
+  "title": "Strict Dirichlet Pólya Inequality for Simply Connected Planar Domains",
+  "id": "https://openalex.org/W7221569617",
+  "doi": "https://doi.org/10.48550/arxiv.2610.13139",
+  "published": "2026-10-09",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 0,
+  "authors": [
+   "Quanyu Tang",
+   "Zuoqin Wang"
+  ],
+  "query": "Sivashankar Tang Wakhare graph eigenvalues projection constants"
+ },
+ {
+  "src": "openalex",
+  "title": "How Powerful are Spectral Graph Neural Networks",
+  "id": "https://openalex.org/W4281490075",
+  "doi": "https://doi.org/10.48550/arxiv.2205.11172",
+  "published": "2022-05-23",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 109,
+  "authors": [
+   "Xiyuan Wang",
+   "Muhan Zhang"
+  ],
+  "query": "Huang Wei exact maximum spectral sum graphs"
+ },
+ {
+  "src": "openalex",
+  "title": "Spectral recognition of graphs",
+  "id": "https://openalex.org/W2010216136",
+  "doi": "https://doi.org/10.2298/yjor120925025c",
+  "published": "2012-01-01",
+  "venue": "Yugoslav journal of operations research",
+  "cited_by": 13,
+  "authors": [
+   "Dragoš Cvetković"
+  ],
+  "query": "Huang Wei exact maximum spectral sum graphs"
+ },
+ {
+  "src": "openalex",
+  "title": "BernNet: Learning Arbitrary Graph Spectral Filters via Bernstein Approximation",
+  "id": "https://openalex.org/W3175753490",
+  "doi": "https://doi.org/10.48550/arxiv.2106.10994",
+  "published": "2021-06-21",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 112,
+  "authors": [
+   "Mingguo He",
+   "Zhewei Wei",
+   "Zengfeng Huang",
+   "Hongteng Xu"
+  ],
+  "query": "Huang Wei exact maximum spectral sum graphs"
+ },
+ {
+  "src": "openalex",
+  "title": "Unsolved Problems in Spectral Graph Theory",
+  "id": "https://openalex.org/W4377161584",
+  "doi": "https://doi.org/10.48550/arxiv.2305.10290",
+  "published": "2023-05-17",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 10,
+  "authors": [
+   "Lele Liu",
+   "Bo Ning"
+  ],
+  "query": "Huang Wei exact maximum spectral sum graphs"
+ },
+ {
+  "src": "openalex",
+  "title": "Graph Persistence goes Spectral",
+  "id": "https://openalex.org/W7196970302",
+  "doi": "https://doi.org/10.52202/085713-5365",
+  "published": "2026-01-01",
+  "venue": "Aaltodoc (Aalto University)",
+  "cited_by": 0,
+  "authors": [
+   "Mattie Ji",
+   "Amauri H. Souza",
+   "Vikas Garg"
+  ],
+  "query": "Huang Wei exact maximum spectral sum graphs"
+ },
+ {
+  "src": "openalex",
+  "title": "SPA: A Graph Spectral Alignment Perspective for Domain Adaptation",
+  "id": "https://openalex.org/W7133217804",
+  "doi": "https://doi.org/10.52202/075280-1619",
+  "published": "2023-01-01",
+  "venue": "neural information processing systems",
+  "cited_by": 24,
+  "authors": [
+   "Zhiqing Xiao",
+   "Haobo Wang",
+   "Ying Jin",
+   "Lei Feng",
+   "Gang Chen",
+   "Fei Huang"
+  ],
+  "query": "Huang Wei exact maximum spectral sum graphs"
+ },
+ {
+  "src": "openalex",
+  "title": "Problems in spectral and extremal graph theory",
+  "id": "https://openalex.org/W7216986538",
+  "doi": null,
+  "published": "2025-01-01",
+  "venue": "Library, Museums and Press - UDSpace (University of Delaware)",
+  "cited_by": 0,
+  "authors": [
+   "Vishal Gupta"
+  ],
+  "query": "Huang Wei exact maximum spectral sum graphs"
+ },
+ {
+  "src": "openalex",
+  "title": "Spectral bipartiteness in generalized odd graphs of diameter three",
+  "id": "https://openalex.org/W7212268356",
+  "doi": "https://doi.org/10.48550/arxiv.2609.11729",
+  "published": "2026-09-10",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 0,
+  "authors": [
+   "Qi Zhou"
+  ],
+  "query": "Huang Wei exact maximum spectral sum graphs"
+ },
+ {
+  "src": "openalex",
+  "title": "A Spectral Framework for Evaluating Geodesic Distances Between Graphs",
+  "id": "https://openalex.org/W4399794249",
+  "doi": "https://doi.org/10.48550/arxiv.2406.10500",
+  "published": "2024-06-15",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 0,
+  "authors": [
+   "Soumen Sikder Shuvo",
+   "Ali Aghdaei",
+   "Zhuo Feng"
+  ],
+  "query": "Huang Wei exact maximum spectral sum graphs"
+ },
+ {
+  "src": "openalex",
+  "title": "Rank Is Not Capacity: Spectral Occupancy for Latent Graph Models",
+  "id": "https://openalex.org/W7161005664",
+  "doi": "https://doi.org/10.48550/arxiv.2605.11142",
+  "published": "2026-05-11",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 0,
+  "authors": [
+   "Nikolaos Nakis",
+   "Panagiotis Promponas",
+   "Κωνσταντίνος Τσίρκας",
+   "Katerina Mamali",
+   "Eftychia Makri",
+   "Leandros Tassiulas"
+  ],
+  "query": "Huang Wei exact maximum spectral sum graphs"
+ },
+ {
+  "src": "openalex",
+  "title": "Spectral Graph Neural Networks with Hermite Polynomials: A Comprehensive Study",
+  "id": "https://openalex.org/W7214381355",
+  "doi": "https://doi.org/10.48550/arxiv.2609.28979",
+  "published": "2026-09-24",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 0,
+  "authors": [
+   "Shuang Wu"
+  ],
+  "query": "Huang Wei exact maximum spectral sum graphs"
+ },
+ {
+  "src": "openalex",
+  "title": "Maximizing the signless Laplacian spectral radius of some theta graphs",
+  "id": "https://openalex.org/W4405306690",
+  "doi": "https://doi.org/10.48550/arxiv.2412.08417",
+  "published": "2024-12-11",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 0,
+  "authors": [
+   "Liu, Yuxiang",
+   "Ligong Wang"
+  ],
+  "query": "Huang Wei exact maximum spectral sum graphs"
+ },
+ {
+  "src": "openalex",
+  "title": "An Effective Universal Polynomial Basis for Spectral Graph Neural Networks",
+  "id": "https://openalex.org/W4389260902",
+  "doi": "https://doi.org/10.48550/arxiv.2311.18177",
+  "published": "2023-11-30",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 1,
+  "authors": [
+   "Keke Huang",
+   "Píetro Lió"
+  ],
+  "query": "Huang Wei exact maximum spectral sum graphs"
+ },
+ {
+  "src": "openalex",
+  "title": "Learning graphs from data and spectral clustering with applications to finance",
+  "id": "https://openalex.org/W2980948136",
+  "doi": null,
+  "published": "2019-05-27",
+  "venue": "UPCommons institutional repository (Universitat Politècnica de Catalunya)",
+  "cited_by": 3,
+  "authors": [
+   "Gallegos Saliner",
+   "Josep María"
+  ],
+  "query": "Huang Wei exact maximum spectral sum graphs"
+ },
+ {
+  "src": "openalex",
+  "title": "Spectral Reversal: Counteracting Singular Value Bias for Graph Prompting",
+  "id": "https://openalex.org/W7214805392",
+  "doi": "https://doi.org/10.48550/arxiv.2609.32143",
+  "published": "2026-09-26",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 0,
+  "authors": [
+   "Hanxu Yang",
+   "Yuhuan Zhao",
+   "Xiaodong He",
+   "Zhao Kang"
+  ],
+  "query": "Huang Wei exact maximum spectral sum graphs"
+ },
+ {
+  "src": "openalex",
+  "title": "Edge-spectral Turán theorems for color-critical graphs with applications",
+  "id": "https://openalex.org/W7106285655",
+  "doi": "https://doi.org/10.48550/arxiv.2511.15431",
+  "published": "2025-11-19",
+  "venue": "arXiv (Cornell University)",
+  "cited_by": 0,
+  "authors": [
+   "Li, Yongtao",
+   "Liu, Hong",
+   "Shengtong Zhang"
+  ],
+  "query": "Huang Wei exact maximum spectral sum graphs"
+ },
+ {
+  "src": "openalex",
+  "title": "Exact Verification of Graph Neural Networks with Incremental Constraint Solving",
+  "id": "https://openalex.org/W7161490872",
+  "doi": "https://doi.org/10.1007/978-3-032-26204-2_33",
+  "published": "2026-01-01",
+  "venue": "Lecture notes in computer science",
+  "cited_by": 1,
+  "authors": [
+   "Minghao Liu",
+   "Chia-Hsuan Lu",
+   "Marta Kwiatkowska"
+  ],
+  "query": "Huang Wei exact maximum spectral sum graphs"
+ }
+]

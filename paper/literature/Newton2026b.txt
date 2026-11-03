@@ -1,0 +1,1426 @@
+The Third Spectral Sum of Graphs:
+Exact Projection Equivalence, Pole–Pentagon Geometry,
+and Certified Carrier Reduction
+Tony Newton
+Newton Astro Labs*
+London, UK
+tony.newton79@gmail.com
+
+Abstract
+Let G be a finite simple graph of order n with adjacency eigenvalues λ1 (G) ≥ · · · ≥ λn (G), and write S3 (G) =
+λ1 (G) + λ2 (G) + λ3 (G) and M3 (n) = max|V (G)|=n S3 (G). The first result of this paper is an all-rank finite identity:
+for every 1 ≤ k ≤ n, maximizing the Ky Fan k-sum over simple graphs is exactly equivalent to maximizing the
+entrywise positive part of a rank-k orthogonal projection. Equivalently, if ηmix (k; n) denotes the finite mixed projection
+functional, then Mk (n) = n2 ηmix (k; n) − k. For k = 3 we derive an explicit closed-wheel (pole–pentagon) variational
+family and prove that its unique interior optimum has coefficient
+√
+√
+5
+35
+1
+α3 = +
++
+= 1.2815681968721678767 . . . ,
+2
+18
+9
+√
+√
+with exact orbit masses p∗ = (91 − 25 7)/126 and r∗ = (7 + 5 7)/126. This gives the unconditional asymptotic
+lower bound lim inf n M3 (n)/n ≥ α3 and ηmix (3) ≥ 2α3 . A compact computer-assisted certificate bank, when assumed
+complete, gives the matching upper bound M3 (n) ≤ α3 n − 3, the exact value ηmix (3) = 2α3 , and wheel rigidity for
+n ≥ 1742; the remaining replay dependencies are stated explicitly rather than suppressed. Beyond the coefficient
+calculation, we record self-contained second-order reductions: a Douglas-type range/contraction criterion, an exact
+two-gauge wedge-area test, an induced-P3 spanning theorem for the normalization tangent, global elimination of the
+minimal 2 + 2 Perron-silent carrier, and compression of the remaining rank-two signed frame problem to the irreducible
+(2, 3) and (3, 3) sectors. These reductions sharply delimit what is proved, what is certificate-dependent, and what
+remains open in a complete finite classification.
+
+Keywords. adjacency eigenvalues; Ky Fan sums; spectral graph theory; orthogonal projections; projection constants;
+Parseval frames; interval certification; semidefinite inequalities.
+2020 Mathematics Subject Classification. 05C50, 05C35, 15A18, 46B20, 52C17, 90C22.
+
+Introduction and prior literature
+
+1
+
+up to the exact finite formulation given
+√ in his paper [2]. At
+k = 3 this gives the coefficient (1 + 3)/2 = 1.3660254 . . ..
+A direct treatment of the third spectral sum already
+appeared in Ebrahimi Boroojeni’s 2008 master’s thesis,
+where the asymptotic coefficient was improved to
+
+For a graph G on n vertices let
+Λk (G) =
+
+k
+X
+i=1
+
+λi (G),
+
+Mk (n) =
+
+max Λk (G).
+
+τ3 := lim sup
+
+|V (G)|=n
+
+n→∞
+
+Partial adjacency spectral sums interpolate between
+spectral-radius problems, Ky Fan variational geometry,
+and graph-energy questions [1–4]. The graph constraint
+matters: after Ky Fan’s principle introduces a projection,
+the 0–1 off-diagonal entries of an adjacency matrix impose a sign-threshold operation absent from a general
+symmetric-matrix inequality.
+
+1.1
+
+M3 (n)
+3
+≤ √ = 1.3416407 . . . .
+n
+5
+
+This direct bound is due to Ebrahimi Boroojeni [5]. That
+thesis belongs to the same line of work as the twoeigenvalue paper of Ebrahimi, Mohar, Nikiforov, and
+Sheikh Ahmady [6].
+The second spectral sum has since been resolved much
+more sharply. Kumar, Liu, Monterde, Pragada, and
+Tait proved the conjectured coefficient 8/7 using graph
+limits, convex geometry, exterior algebra, and convex
+optimization [7]. Huang and Wei then determined the
+exact maximum for every n ≥ 5 and the equality graph
+[8]. These developments make k = 3 the next natural
+spectral-sum case rather than merely another instance of
+a general matrix bound.
+
+From the general k-sum bound to the
+third spectral sum
+
+Mohar proved the general estimate
+√
+1+ k
+Mk (n) ≤
+n,
+2
+∗ Newton Astro Labs is the trading name under which Tony
+Newton conducts independent computational research in the United
+Kingdom; it is not a limited company.
+
+1
+
+1.2
+
+Projection constants and the 2026
+comparison
+
+Projection constants originate in Banach-space geometry
+[9–13]. Sivashankar, Tang, and Wakhare recently connected graph eigenvalue bounds to absolute projection
+constants and, in their discussion of sums of largest eigenvalues, isolated the joint or mixed projection functional
+[14]. Their argument implies
+
+Exact graph–projection equivalence
+
+2.1
+
+The all-rank threshold identity
+
+Let Pk (n) denote the rank-k orthogonal projections
+in Rn×n . For a matrix P = (pij ), write P+ =
+(max{pij , 0})ij for its entrywise positive part.
+Theorem 2.1 (Exact all-rank graph–projection identity).
+For every 1 ≤ k ≤ n,
+
+Mk (n) = max 1T P+ 1 − k .
+(1)
+
+1 + γ(k)
+Λk (G) ≤
+n − k,
+2
+
+P ∈Pk (n)
+
+where γ(k) is the maximal absolute projection constant
+√
+of rank k. For k = 3 the classical value γ(3) = (1 + 5)/2
+gives the coefficient
+√
+1 + γ(3)
+3+ 5
+=
+= 1.3090169943 . . . .
+2
+4
+
+Proof. Ky Fan’s maximum principle gives
+Λk (A) = max tr(AP )
+P ∈Pk (n)
+
+for every real symmetric A [1, 22, 23]. Fix P = (pij ). For
+a simple adjacency matrix A = (aij ),
+X
+tr(AP ) = 2
+aij pij .
+
+The three-dimensional projection-constant value is classical [15–17]. The individual third-eigenvalue problem
+is different from the present λ1 + λ2 + λ3 problem; recent work on individual λ3 and closed blow-ups should
+therefore be regarded as neighboring, not interchangeable,
+prior art [18–21].
+
+1.3
+
+2
+
+1≤i<j≤n
+
+The binary variables aij ∈ {0, 1} are independent. Their
+maximizing choice is aij = 1 precisely when pij > 0 (ties
+at zero are irrelevant), so
+X
+max{pij , 0}.
+max tr(AP ) =
+
+Contributions and claim boundary
+
+A
+
+The paper has two logically distinct layers. The first is analytic and finite: an exact all-rank graph/projection identity, the pole–pentagon lower construction, and several
+second-order carrier reductions. The second is a computerassisted compact upper-bound programme. Some legacy
+source objects for that programme have not yet been
+restored to a completely independent referee-replay package. Accordingly, all conclusions that use the global upper
+certificate are stated under an explicit certificate hypothesis. In particular, this paper does not claim a complete
+all-order equality or uniqueness classification.
+The principal new structural conclusions recorded here
+are:
+(i) an exact all-k finite identity linking Mk (n) to a
+mixed projection functional;
+(ii) the exact one-variable pole–pentagon optimization
+giving α3 ;
+(iii) self-contained range/gain, wedge-area, and inducedP3 second-order reductions;
+(iv) a global exclusion of the minimal 2 + 2 Perron-silent
+carrier; and
+(v) a dimension-three coefficient compression reducing
+the remaining rank-two signed frame frontier to
+(2, 3) and (3, 3).
+A targeted literature search located the mixed-constant
+inequality of [14] but not the exact finite all-k equality in
+theorem 2.1. We therefore state the equality as a mathematical result while keeping the priority claim deliberately
+narrow.
+
+i̸=j
+
+Because an orthogonal
+P projection is positive semidefinite, pii ≥ 0, and i pii = tr P = k. Hence the last
+display equals 1T P+ 1 − k. Maximizing over P proves
+(1). Conversely, thresholding the off-diagonal signs of any
+maximizing P produces an honest simple graph, so no
+relaxation has been introduced.
+
+2.2
+
+Exact finite mixed projection form
+
+Entrywise, x+ = (|x| + x)/2. Therefore
+
+1
+1T P+ 1 = ∥P ∥1 + 1T P 1 ,
+(2)
+2
+P
+where ∥P ∥1 = i,j |pij | is the entrywise ℓ1 norm. Define
+the finite mixed projection functional
+ηmix (k; n) =
+
+
+1
+max ∥P ∥1 + 1T P 1 .
+n P ∈Pk (n)
+
+(3)
+
+Corollary 2.2 (Exact finite graph/mixed-projection
+equivalence). For every 1 ≤ k ≤ n,
+Mk (n) =
+
+n
+ηmix (k; n) − k.
+2
+
+(4)
+
+Consequently, if ηmix (k) = supn≥k ηmix (k; n), then
+Mk (n) + k
+.
+n
+n≥k
+
+ηmix (k) = 2 sup
+
+(5)
+
+Remark 2.3 (No Fekete step). Equation (5) is the unconditional asymptotic statement needed here. Disjoint union
+does not make Mk (n) + k additive or superadditive for
+fixed k, because the top k eigenvalues of two components
+are re-ordered after union. No Fekete-type limit argument
+is used in this paper.
+
+2
+
+Table 1: Selected upper coefficients relevant to the third spectral sum. The last row is the certificate-dependent
+candidate upper coefficient of the present work; its lower realization is unconditional.
+Source
+
+setting
+
+Mohar [2]
+Ebrahimi Boroojeni [5]
+Sivashankar–Tang–Wakhare [14]
+This work
+
+general k-sum bound at k = 3
+direct asymptotic S3 analysis
+mixed/absolute projection bound
+pole–pentagon coefficient
+
+coefficient for M3 (n)/n
+√
+(1 √
++ 3)/2 = 1.3660254 . . .
+3/ 5√= 1.3416407 . . .
+(3 + 5)/4 = 1.3090169 . . .
+α3 = 1.2815681 . . .
+
+rank-k Ky Fan projection P ∈ Pk (n)
+
+r∗
+
+threshold the off-diagonal signs: aij = 1[pij > 0]
+
+r∗
+
+r∗
+p∗
+
+simple graph GP
+r∗
+
+T
+
+tr(A(GP )P ) = 1 P+ 1 − k
+
+K1 ∨ C5 quotient
+p∗ + 5r ∗ = 1
+
+Figure 1: Exact graph–projection threshold mechanism.
+The graph is recovered from the same Ky Fan projection,
+so the variational reduction introduces no relaxation.
+
+2.3
+
+Figure 2: Pole–pentagon geometry of the closed-wheel
+quotient. In the blow-up construction each displayed type
+is replaced by a clique of the corresponding asymptotic
+mass.
+
+Parseval-frame interpretation
+
+Write P = XX T with X ∈ Rn×k and X T X = Ik . If xTi
+is the ith row of X, then
+pij = ⟨xi , xj ⟩,
+
+n
+X
+
+Its larger eigenvalue is
+
+xi xTi = Ik .
+
+λ+ (r) =
+
+i=1
+
+The threshold architecture is summarized in figure 1. Thus
+theorem 2.1 is an extremal problem over finite Parseval
+frames [24, 25]: select every positive pairwise inner product, subtract the trace k, and maximize under isotropy.
+For k = 3 this produces a three-dimensional commoncarrier problem in which radial mass, angular harmonics,
+and alignment with 1 cannot be optimized independently.
+Spherical-code and equiangular-line methods provide useful comparison geometry [26–30].
+
+3
+
+Pole–pentagon extremal geometry
+
+3.1
+
+Closed wheel quotient
+
+r∗
+
+1 − 2r +
+
+√
+
+1 + 4r − 36r2
+.
+2
+
+(7)
+
+Therefore the normalized top-three sum of the closedwheel family is
+F (r) =
+
+3.2
+
+1 √
+1p
++ 5r +
+1 + 4r − 36r2 .
+2
+2
+
+(8)
+
+Exact one-variable optimization
+
+Theorem 3.1 (Pole–pentagon variational optimum). On
+the feasible interval 0 < r < 1/5, F is strictly concave
+and has a unique critical point
+√
+√
+7+5 7
+91 − 25 7
+r∗ =
+,
+p∗ = 1 − 5r∗ =
+. (9)
+126
+126
+At this point
+√
+√
+1
+5
+35
+F (r ) = α3 := +
++
+.
+2
+18
+9
+
+Let W6 = K1 ∨ C5 be the six-vertex wheel with one hub
+and a pentagonal rim. Consider a closed blow-up: each
+of the six types is replaced by a clique, and two parts
+are completely joined exactly when their wheel types
+are adjacent. In normalized weighted form the relevant
+quotient is
+
+H(p, r) = D1/2 A(W6 ) + I D1/2 ,
+
+∗
+
+(10)
+
+Proof. Differentiation gives
+F ′′ (r) = −
+
+20
+<0
+(1 + 4r − 36r2 )3/2
+
+throughout the interior feasibility interval. The equation
+F ′ (r) = 0 reduces, after one exact squaring with the sign
+fixed by the unsquared stationarity equation, to
+
+D = diag(p, r, r, r, r, r).
+with p + 5r = 1 and 0 < r < 1/5.
+The quotient geometry is shown in figure 2. The pentagonal Fourier decomposition splits the quotient into
+an axial hub/uniform-rim block √
+and two conjugate pairs
+of rim modes. With ϕ = (1 + 5)/2, the two positive
+non-axial modes both equal rϕ. The axial block is
+
+√ 
+5pr
+√p
+.
+(6)
+5pr
+3r
+
+126r2 − 14r − 1 = 0.
+Its positive root is (9). Direct substitution gives 1 + 4r∗ −
+36(r∗ )2 = 5/7 and then (10).
+
+3
+
+3.3
+
+Unconditional asymptotic lower theorem
+
+Together with theorem 3.2, this yields
+lim
+
+Choose integer part sizes whose normalized masses converge to (p∗ , r∗ , . . . , r∗ ). The six-type quotient eigenvalues converge continuously to those of H(p∗ , r∗ ), while
+the within-part closed-blow-up modes contribute only
+bounded-order corrections. Hence:
+
+n→∞
+
+and
+
+n→∞
+
+M3 (n)
+≥ α3 .
+n
+
+(11)
+
+(12)
+
+The arithmetic comparison with the absolute-projection
+estimate is exact:
+√
+√
+√
+3+ 5
+9 + 7 5 − 4 35
+∆3 :=
+− α3 =
+> 0.
+(13)
+4
+36
+
+Certificate-dependent sharp upper bound
+
+4.1
+
+The compact certificate hypothesis
+
+4.3
+
+Theorem 4.4 (Wheel rigidity within the certificate
+boundary). Assume theorem 4.1 together with the orderspecific equality-collar certificates used in the finite programme. If n ≥ 1742 and G attains M3 (n), then G is a
+clique blow-up of K1 ∨ C5 .
+The threshold 1742 is therefore a certified rigidity
+threshold inside the universal certificate boundary. It
+is not used below as an unconditional input, and it does
+not settle the finite equality problem for 11 ≤ n ≤ 1741.
+
+5
+
+Second-order common-carrier
+architecture
+
+The remaining finite problem is not controlled by firstorder eigenvalue counts alone. A useful exact organization
+comes from the Hessian of the weighted template problem.
+Let M (w) = D√w HD√w , assume λ3 > λ4 , and let ua
+be an orthonormal eigenbasis. For a simplex tangent h
+put x = W −1 h, W = diag(w). The spectral perturbation
+formula separates the modes below the top-three cluster
+into positive and negative tail contributions [31–33].
+For a ≤ 3 < b, set vab = ua ◦ ub . The coefficient
+
+The hypothesis is mathematical, not a claim about
+archive completeness. The legacy replay ledger is discussed separately in section 8.
+
+Conditional sharp coefficient and
+mixed constant
+
+−
+
+Theorem 4.2 (Sharp rank-three coefficient conditional
+on C). Assume theorem 4.1. Then every simple graph G
+of order n ≥ 3 satisfies
+M3 (n) ≤ α3 n − 3.
+
+Conditional wheel rigidity
+
+The finite certificate architecture also contains an orderspecific entrance analysis into the equality collar and a
+wrong-chamber continuation.
+
+Certificate hypothesis 4.1 (Compact upper certificate
+C). All exact compact-region certificate objects used to
+exclude non-pole–pentagon rank-three projection states
+are valid and cover their declared domains, including the
+endpoint, continuation, Bernstein-sign, Fejer–Riesz, and
+rational-dual components needed for the universal upper
+estimate.
+
+S3 (G) ≤ α3 n − 3,
+
+(16)
+
+Proof. The two terms on the left are the deficits from the
+separate bounds 1T Q1 ≤ N and ∥Q∥1 ≤ γ(3)N . Their
+sum is (1 + γ(3))N − (∥Q∥1 + 1T Q1). Apply (16) and
+(13).
+
+The compact upper proof developed in the master S3
+programme uses exact rational positivity, interval continuation, endpoint congruence checks, Fejer–Riesz factorization, and rational positive-trace duals. To keep the logical
+status transparent we package only the global implication
+needed in this paper.
+
+4.2
+
+√
+5 2 35
+ηmix (3) = 2α3 = 1 +
++
+.
+9
+9
+
+and the coefficient 2∆3 is asymptotically sharp.
+
+Notice what (13) does and does not prove. It proves that
+the constructed lower coefficient lies strictly below the
+decoupled projection upper coefficient. It does not, by
+itself, prove ηmix (3) < 1 + γ(3); that strict mixed-constant
+conclusion needs the matching global upper certificate in
+the next section.
+
+4
+
+√
+
+Corollary 4.3 (Conditional rank-three coupling deficit).
+Assume theorem 4.1. For every Q ∈ P3 (N ),
+
+
+N − 1T Q1 + γ(3)N − ∥Q∥1 ≥ 2∆3 N,
+(17)
+
+Equivalently, by theorem 2.2,
+ηmix (3) ≥ 2α3 .
+
+(15)
+
+Proof. The certificate implication gives (14). The lower
+sequence in theorem 3.2 forces equality of the asymptotic
+coefficient. Finally (5) converts the same upper/lower
+pair into (16) without any disjoint-union argument.
+
+Corollary 3.2 (Pole–pentagon lower bound).
+lim inf
+
+M3 (n)
+= α3
+n
+
+4λa λb
+λa − λb
+
+is positive when λb < 0 and negative when 0 < λb < λ3 .
+Collecting the corresponding rank-one terms gives positive
+semidefinite Gram matrices N and P with R = N − P .
+
+(14)
+
+4
+
+R=N −P
+range C+ ̸⊆ range C−
+
+A+ =
+
+X
+
+A× =
+
+X
+
+j<ℓ
+
+range inclusion
+Γ = ∥K∥22
+
+strict saddle
+(range escape)
+
+(bj ∧ bℓ )2 ,
+(ai ∧ bj )2 .
+
+i,j
+
+2-gauge test: τ ≤ 2, 1 − τ + δ ≥ 0
+
+Γ≤1
+contractive survival
+
+Γ>1
+strict overload
+
+Cauchy–Binet and the two-dimensional Lagrange identity
+give
+A− = det NG ,
+A+ = det PG ,
+(22)
+A× = tr(adj(NG )PG ).
+
+Figure 3: Second-order decision structure behind the Douglas factorization. Range inclusion is necessary but not
+sufficient; the residual transfer must also be contractive.
+
+5.1
+
+Consequently:
+Corollary 5.4 (Wedge-area form). Under the hypotheses
+of theorem 5.3,
+
+Exact Hessian congruence and Douglas factorization
+
+ΓG ≤ 1
+
+Theorem 5.1 (Mass-tangent/all-tail congruence). At a
+stationary point with λ3 > λ4 ,
+1
+D2 S3 (w)[h, h] = − xT Rx,
+2
+x = W −1 h,
+R = N − P.
+
+(18)
+
+5.3
+
+The factorization of the survival condition is a finitedimensional instance of Douglas’s range/factorization theorem [34].
+
+C+ = C− K,
+
+pabc = ea + eb − 2ec .
+
+span{pabc : a − b − c induced} = 1⊥ .
+
+Two-gauge scalar and wedge-area criteria
+
+The logical role of range escape and gain overload is summarized in figure 3. When a boundary/closure reduction
+produces a two-dimensional gauge bank, the contraction
+T
+test is completely scalar. Let NG = C−,G C−,G
+≻ 0 and
+T
+PG = C+,G C+,G ⪰ 0, and assume range inclusion. Define
+−1
+τ = tr(NG
+PG ),
+
+δ=
+
+det PG
+.
+det NG
+
+Combining theorems 5.1 and 5.5 shows that any n − 1
+independent induced-P3 tangents form an exact local
+frame for the all-tail Hessian. A single negative diagonal
+of the corresponding R-matrix is a strict-saddle certificate.
+
+(20)
+
+5.4
+
+Theorem 5.3 (Two-gauge overload criterion). If ΓG is
+the largest generalized gain of (PG , NG ), then
+ΓG ≤ 1
+
+⇐⇒
+
+τ ≤ 2 and 1 − τ + δ ≥ 0.
+−1/2
+
+(25)
+
+Proof. Every pabc has coordinate sum zero. If y is orthogonal to both orientations of every induced P3 , then the
+two equations force ya = yb = yc on each such path. If
+an edge uv had yu =
+̸ yv , it could lie in no induced P3 ,
+so u and v would be true twins. A shortest path to a
+nonneighbor, or a nonedge joined through universal twins,
+then creates induced P3 ’s forcing yu = yv , a contradiction.
+Connectedness therefore makes y constant.
+
+Thus survival requires both range inclusion and contractive gain. Range inclusion alone is not sufficient.
+
+5.2
+
+(24)
+
+Lemma 5.5 (Induced-P3 spanning).
+
+(19)
+
+∥K∥2 ≤ 1 for some K.
+
+Induced-P3 tangent frame
+
+Let B be a connected noncomplete negative template.
+For an oriented induced path a − b − c put
+
+Proposition 5.2 (Range/contraction form). Let N =
+T
+T
+C− C−
+and P = C+ C+
+. Then
+⇐⇒
+
+A× ≤ 2A− and A× ≤ A− + A+ . (23)
+
+This exact local test is one of the main reductions
+of the higher-inertia branch. What remains open is a
+universal topology-to-area implication forcing one of these
+inequalities to fail (or forcing range escape) for every
+reduced above-line non-wheel carrier.
+
+Hence a positive second variation is exactly a failure of
+R ⪰ 0 on the normalization tangent.
+
+N −P ⪰0
+
+⇐⇒
+
+Tail-dispersion identity
+
+For p = pabc , let qi denote the top-three normalized row
+vectors and let rℓi denote the normalized row of tail mode
+ℓ > 3. Define
+
+(21)
+
+−1/2
+
+Proof. The eigenvalues µ1 , µ2 ≥ 0 of NG PG NG
+satisfy µ1 + µ2 = τ and µ1 µ2 = δ. Since 1 − τ + δ =
+(1 − µ1 )(1 − µ2 ), the two scalar signs are equivalent to
+max{µ1 , µ2 } ≤ 1.
+
+Op = ∥qa − 2qc ∥2 + ∥qb ∥2 ,
+
+Ap = qa qaT + qb qbT − 2qc qcT ,
+
+zℓ = rℓa qa + rℓb qb − 2rℓc qc ,
+
+ηℓ = λ2ℓ zℓT (Λ − λℓ I)−1 zℓ .
+
+Then the exact induced-P3 dispersion formula is
+X
+1 2
+D S3 [p, p] = Op − tr(ΛA2p ) +
+ηℓ ,
+2
+
+Let the negative-tail columns be ai ∈ R2 and the
+positive-tail columns bj ∈ R2 . With u ∧ v = det[u v],
+define
+X
+A− =
+(ai ∧ ak )2 ,
+
+ηℓ ≥ 0. (26)
+
+ℓ>3
+
+Thus any finite tail subset can provide a rigorous saddle
+certificate; a finite diagnostic census is not needed as a
+logical part of the identity.
+
+i<k
+
+5
+
+6
+
+Global closure of the minimal
+2 + 2 carrier
+
+arbitrary positive
+signed-frame support
+Veronese compression
+
+|K+ |, |K− | ≤ 3
+
+The second-order reduction leaves a Perron-silent ranktwo transverse carrier in which the positive and negative
+response Gram matrices agree. The smallest nontrivial
+support has two noncollinear generators on each sign side.
+The master analysis reduces its local attachment grammar
+to one singular seven-type family; the late continuation
+closes that family globally.
+
+6.1
+
+(2, 2)
+globally closed
+
+(2, 3)
+irreducible frontier
+
+(3, 3)
+irreducible frontier
+
+three-generator class: U T U = I3 − nnT
+irreducible iff n1 n2 n3 ̸= 0
+
+Figure 4: Exact support compression and the surviving
+Naimark frontier. The continuous frame equality alone
+reduces the problem to two sectors but does not discretize
+their incidence geometry.
+
+Exceptional local family
+
+For the canonical seven-type positive template on
+(a, b, p, q, c, d, x), exact characteristic-polynomial arithmetic gives
+
+This theorem is independent of the unresolved (2, 3)
+and (3, 3) higher-support sectors. It removes the entire
+lowest-support obstruction rather than a finite sample of
+its representatives.
+
+χP (λ) = λ(λ − 1)(λ + 1)(λ4 − 7λ3 + 13λ2 − λ − 8), (27)
+so a Sturm count yields
+inertia(P ) = (4, 2, 1),
+ker P = span{(1, 0, −2, −1, 1, 0, 1)T }.
+
+7
+
+Higher-support
+compression
+and Naimark frontier
+
+7.1
+
+Constructive compression in Sym2
+
+Positive diagonal congruence preserves this inertia and
+transports the kernel accordingly.
+
+6.2
+
+Global range saturation and twin forcing
+
+Suppose
+K+ =
+
+Let A = DP D with D positive diagonal. Because A already uses all four allowed positive directions, an exterior
+coupling vector r must be orthogonal to ker A: otherwise
+the compression to the kernel direction and the new exterior coordinate has negative determinant and contributes
+an additional positive direction. After the positive weights
+cancel, this is an exact combinatorial linear condition on
+the exterior incidence word.
+Combining it with the zero-level fourth-mode balance
+leaves only six of the 27 = 128 exterior negative-neighbor
+words. Their exact Schur complements are
+0, 0, 2, 0, 2, 1.
+
+K+ = K− ≻ 0,
+
+ai
+,
+hi >0 hi
+
+t = min
+
+(28)
+
+bj wj wjT = K− ,
+
+j
+
+(30)
+
+ai , bj > 0.
+
+a′i = ai − thi .
+
+Then all a′i ≥ 0, at least one coefficient vanishes, and the
+represented matrix is unchanged. Iteration terminates.
+Theorem 7.1 (Signed frame support compression). Every positive representation (30) can be replaced, without
+changing K+ = K− , by one satisfying
+|K+ | ≤ 3,
+
+The resulting weighted twin quotient admits a rational
+positive-trace majorant with exact positive-definiteness
+checks. Under the stationary weight relations it gives the
+uniform ceiling
+453077
+= 1.208205 . . . < α3 .
+375000
+
+X
+
+The vector space of real symmetric 2 × 2 matrices has
+dimension three. Under the Veronese map (x, y) 7→
+(x2 , xy, y 2 ), any side of (30) with more than three active generators has a nonzero coefficient-kernel direction.
+Orient such a direction h so some hi > 0 and set
+
+Uniform twin-quotient exclusion
+
+S3 ≤
+
+ai vi viT =
+
+i
+
+The positive values create a fifth positive direction; each
+zero value is a column already present in the quotient.
+Every globally legal exterior extension is therefore a zeroSchur twin of an existing type.
+
+6.3
+
+X
+
+|K− | ≤ 3.
+
+(31)
+
+If K has rank two, each nonzero sign class needs at least
+two generators. Modulo sign reversal and theorem 6.1, the
+only irreducible support cardinalities are therefore (2, 3)
+and (3, 3).
+
+(29)
+
+7.2
+
+Theorem 6.1 (Global minimal-carrier closure). The complete minimal 2 + 2 Perron-silent shared-edge carrier is
+globally excluded from the pole–pentagon extremal coefficient. The conclusion uses only the local singular-family
+classification, kernel-forced twin extension, and the exact
+rational ceiling (29).
+
+Three-generator Naimark coordinate
+
+Whiten a three-generator sign class so that U
+[u1 u2 u3 ] ∈ R2×3 and U U T = I2 . Put
+∆ij = det(ui , uj ),
+
+6
+
+n = (∆23 , ∆31 , ∆12 )T .
+
+=
+
+The Pluecker relation gives U n = 0, while Cauchy–Binet
+gives ∥n∥ = 1. Therefore
+U T U = I3 − nnT .
+
+yet restored; the historical Bernstein raw input is partial;
+and the canonical final rational-dual/Fejer–Riesz source
+bundle is incomplete. Therefore this release does not
+describe theorem 4.2 as an independently replay-complete
+theorem.
+The finite classification is also not complete. The
+minimal 2 + 2 carrier is closed, but the irreducible
+(2, 3) and (3, 3) frame sectors still require the incidence/Perron/stationarity constraints. The whole-core
+interval ledger and the universal topology-to-area implication outside the recovered low-inertia universe likewise
+remain active obligations. These are mathematical frontiers, not formatting qualifications.
+
+(32)
+
+If ui = (xi , yi )T , direct determinant expansion gives
+ 2
+
+x1
+x22
+x23
+det x1 y1 x2 y2 x3 y3  = −∆12 ∆23 ∆31 = −n1 n2 n3 .
+y32
+y12
+y22
+(33)
+Corollary 7.2 (Irreducible three-generator sector).
+A whitened three-generator sign class is coefficientcompressible to two exactly when at least one ni = 0.
+Its irreducible sector is therefore
+n1 n2 n3 ̸= 0.
+
+8.3
+
+(34)
+
+The paper does not claim the invention of Ky Fan’s variational principle, the mixed projection constant, the maximal absolute projection constant, the Douglas factorization theorem, or general Parseval-frame and sphericalcode machinery. Those ingredients are classical or recent
+prior art [1, 9, 14, 24, 34]. The original contribution asserted here is the specific graph-threshold exactification
+in theorem 2.1, the rank-three pole–pentagon evaluation
+and its integration with the S3 certificate programme,
+and the S3-specific carrier reductions in sections 5 to 7.
+The candidate universal coefficient is not labeled unconditional until the global certificate hypothesis is discharged
+in a fully replayable release.
+
+The complete support-routing picture is summarized
+in figure 4. This converts the remaining continuous frame
+layer into a compact Naimark modulus plus the discrete
+incidence, Perron, and stationarity equations. It also
+explains why a finite topology list cannot be justified
+from the frame equality alone.
+
+8
+
+Verification,
+reproducibility,
+and conclusion
+
+8.1
+
+Independent algebraic checks
+8.4
+
+The exact constants in section 3, the stationary quadratic
+126r2 − 14r − 1, the value F (r∗ ) = α3 , the second derivative of F , and the determinant identity (33) were independently recomputed by symbolic algebra for this release.
+The small-order graph check in section B exhausts the
+NetworkX graph atlas through order seven [35–39]. These
+checks are consistency tests; they are not substituted for
+analytic proofs or interval certificates.
+The computer-assisted parts use standard exact and
+validated-numerics tools: integer-preserving elimination
+[40], interval methods [41–44], numerical linear-algebra
+error control [45, 46], and polynomial/semidefinite positivity methods [47–52]. Fejer–Riesz factorization supplies
+the trigonometric positivity interface [53, 54].
+
+8.2
+
+Prior-art boundary
+
+Conclusion
+
+The third spectral sum admits a cleaner structure than
+a direct graph census suggests. The graph maximization can be performed exactly inside the Ky Fan variational principle, producing the finite identity Mk (n) =
+nηmix (k; n)/2 − k at every rank. At rank three the closed
+wheel reduces the candidate extremal geometry to one
+concave variable and yields the exact pole–pentagon coefficient α3 . The remaining obstruction is not a vague search
+over all graphs: the all-tail Hessian has a range/gain
+factorization, two-dimensional closure banks admit exact
+area inequalities, induced paths span the full normalization tangent, the minimal 2 + 2 carrier is globally
+eliminated, and higher signed frame support compresses
+to the two irreducible sectors (2, 3) and (3, 3).
+This is a substantial narrowing of the S3 problem while
+preserving the line between an unconditional theorem
+and a certificate-dependent conclusion. A complete release now has a precise target: finish the replay-complete
+compact upper certificate and close the residual highersupport incidence/stationarity sectors. If those gates
+are discharged, the same document immediately yields
+M3 (n) ≤ α3 n − 3 and ηmix (3) = 2α3 with no change to
+the unconditional derivations.
+
+Current certificate-release boundary
+
+The analytic graph/projection identities, pole–pentagon
+optimization, Douglas-type factorization, two-gauge algebra, induced-P3 spanning result, and higher-support
+compression are self-contained at the level stated here.
+The minimal 2 + 2 structural reduction is likewise analytic through twin forcing, while its final uniform quotient
+ceiling uses the finite exact rational majorant certified in
+the Version-62 S3 continuation; this local certificate is
+distinct from the unresolved legacy compact upper bank.
+By contrast, the complete compact universal upper proof
+still has partial replay dependencies: the later all-chart
+pass transcript has been recovered, but the complete endpoint source/input package for two desingularized charts
+is not; a rank-(4, 3) report records 7467 accepted continuation leaves, but its raw leaf archive/replayer is not
+
+A
+
+Exact constants and comparison algebra
+
+The constants used throughout satisfy
+α3 = 1.28156819687216787675243501399 . . . ,
+7
+
+= −(x1 y2 − x2 y1 )(x2 y3 − x3 y2 )(x3 y1 − x1 y3 ),
+
+2α3 = 2.56313639374433575350487002798 . . . ,
+√
+1+ 5
+γ(3) =
+= 1.6180339887498948482 . . . ,
+2
+1 + γ(3)
+= 1.3090169943749474241 . . . ,
+2
+
+which is −∆12 ∆23 ∆31 . This is precisely the criterion
+used in theorem 7.2: vanishing of one Pluecker coordinate
+makes the three Veronese columns dependent and permits
+coefficient compression to two generators.
+
+∆3 = 0.02744879750277954735 . . . ,
+
+References
+
+1 + γ(3) − 2α3 = 2∆3 .
+
+[1] Ky Fan. On a theorem of weyl concerning eigenvalues of linear transformations i. Proceedings of
+the National Academy of Sciences USA, 35:652–655,
+1949.
+
+For the pole–pentagon masses,
+p∗ = 0.19727156526496218 . . . ,
+r∗ = 0.16054568694700756 . . . .
+
+[2] Bojan Mohar. On the sum of k largest eigenvalues of
+graphs and symmetric matrices. Journal of Combinatorial Theory, Series B, 99(2):306–313, 2009. doi:
+10.1016/j.jctb.2008.07.001.
+
+and p∗ + 5r∗ = 1 exactly.
+
+B
+
+Exhaustive small-order sanity
+check
+
+[3] Kinkar Chandra Das, Seyed Ahmad Mojallal, and
+Shaowei Sun. On the sum of the k largest eigenvalues
+of graphs and maximal energy of bipartite graphs.
+Linear Algebra and its Applications, 569:175–194,
+2019.
+
+An exhaustive traversal of the standard graph atlas
+through order seven gives
+n
+
+M3 (n)
+
+3
+4
+5
+6
+7
+
+0
+√2
+1+ 5
+4.6855577203 . . .
+5.9376300962 . . .
+
+comment
+
+[4] Vladimir Nikiforov. Beyond graph energy: Norms of
+graphs and matrices. Linear Algebra and its Applications, 506:82–138, 2016.
+
+all three eigenvalues sum to zero
+exhaustive
+3.2360679775 . . ., exhaustive
+wheel degree sequence (5, 3, 3, 3, 3, 3)
+exhaustive
+
+[5] Javad Ebrahimi Boroojeni. Sum of the largest eigenvalues of symmetric matrices and graphs. M.sc. thesis,
+Simon Fraser University, 2008.
+
+These values lie below α3 n − 3 at the tested orders. The
+check is included only as a finite consistency audit; it does
+not establish the global upper bound.
+
+C
+
+[6] Javad Ebrahimi B., Bojan Mohar, Vladimir Nikiforov, and Azhvan Sheikh Ahmady. On the sum of
+two largest eigenvalues of a symmetric matrix. Linear
+Algebra and its Applications, 429:2781–2787, 2008.
+doi: 10.1016/j.laa.2008.06.016.
+
+Certificate dependency ledger
+
+[7] Hitesh Kumar, Lele Liu, Hermie Monterde, Shivaramakrishna Pragada, and Michael Tait. Maximum
+spectral sum of graphs, 2026. arXiv:2604.00512.
+
+For publication purposes the global status can be compressed to four rows:
+Object
+
+Current status
+
+Analytic S3
+reductions
+Compact universal
+upper bank
+
+Self-contained in the mathematical argument.
+Mathematical implication retained under C; independent legacy replay still
+partial.
+Globally closed by exact twin forcing
+and rational quotient ceiling.
+Reduced to irreducible (2, 3) and (3, 3)
+sectors; complete finite uniqueness withheld.
+
+Finite 2 + 2 carrier
+Higher-support
+finite frontier
+
+D
+
+Determinant check
+Naimark sector
+
+for
+
+[8] Jing Huang and Wei Wei. The exact maximum of
+the spectral sum of graphs, 2026. arXiv:2607.23081.
+[9] Branko Grünbaum. Projection constants. Transactions of the American Mathematical Society, 95:
+451–465, 1960.
+[10] Hermann König and Nicole Tomczak-Jaegermann.
+Norms of minimal projections. Journal of Functional
+Analysis, 119(2):253–280, 1994.
+[11] Hermann König and Nicole Tomczak-Jaegermann.
+Spaces with maximal projection constants. Studia
+Mathematica, 159(3):357–372, 2003.
+
+the
+
+[12] Giuliano Basso. Computation of maximal projection
+constants. Journal of Functional Analysis, 277:3560–
+3585, 2019.
+
+For ui = (xi , yi )T , expansion of the Veronese determinant
+gives
+ 2
+
+x1
+x22
+x23
+det x1 y1 x2 y2 x3 y3 
+y12
+y22
+y32
+
+[13] Tomasz Kobos. Spaces with the maximal projection
+constant revisited, 2025. arXiv:2505.24526.
+
+8
+
+[14] Varun Sivashankar, Quanyu Tang, and Tanay
+Wakhare. Graph eigenvalues and projection constants, 2026. arXiv:2608.02429.
+
+[32] G. W. Stewart and Ji-guang Sun. Matrix Perturbation Theory. Academic Press, 1990.
+[33] Tosio Kato. Perturbation Theory for Linear Operators. Springer, 2 edition, 1995.
+
+[15] Bruce L. Chalmers and Grzegorz Lewicki. Threedimensional subspace of ℓ5∞ with maximal projection
+constant. Journal of Functional Analysis, 257:553–
+592, 2009.
+
+[34] Ronald G. Douglas. On majorization, factorization, and range inclusion of operators on hilbert
+space. Proceedings of the American Mathematical Society, 17:413–415, 1966. doi: 10.1090/
+S0002-9939-1966-0203464-1.
+
+[16] Bruce L. Chalmers and Grzegorz Lewicki. A proof of
+the grünbaum conjecture. Studia Mathematica, 200:
+103–129, 2010.
+
+[35] Aric A. Hagberg, Daniel A. Schult, and Pieter J.
+Swart. Exploring network structure, dynamics, and
+function using networkx. In Proceedings of the 7th
+Python in Science Conference, pages 11–15, 2008.
+
+[17] Beata Deręgowska and Beata Lewandowska. A simple proof of the grünbaum conjecture. Journal of
+Functional Analysis, 285:109950, 2023.
+
+[36] Brendan D. McKay. Practical graph isomorphism.
+Congressus Numerantium, 30:45–87, 1981.
+
+[18] William Linz. Improved lower bounds on the extrema
+of eigenvalues of graphs. Graphs and Combinatorics,
+39(4):82, 2023. doi: 10.1007/s00373-023-02678-0.
+
+[37] Brendan D. McKay and Adolfo Piperno. Practical
+graph isomorphism, ii. Journal of Symbolic Computation, 60:94–112, 2014.
+
+[19] Sida Li. Strengthened upper bound on the third
+eigenvalue of graphs, 2025. arXiv:2501.07494.
+
+[38] Ronald C. Read. Every one a winner or how to avoid
+isomorphism search when cataloguing combinatorial
+configurations. Annals of Discrete Mathematics, 2:
+107–120, 1978.
+
+[20] Giacomo Leonida and Sida Li. On graphs with large
+third eigenvalue. Linear Algebra and its Applications,
+741:66–96, 2026. doi: 10.1016/j.laa.2026.03.031.
+[21] Vladimir Nikiforov. Extrema of graph eigenvalues.
+Linear Algebra and its Applications, 482:158–190,
+2015.
+
+[39] I. A. Faradžev. Constructive enumeration of combinatorial objects. In Problèmes combinatoires et
+théorie des graphes, pages 131–135, 1978.
+
+[22] Roger A. Horn and Charles R. Johnson. Matrix
+Analysis. Cambridge University Press, 2 edition,
+2013.
+
+[40] Erwin H. Bareiss. Sylvester’s identity and multistep
+integer-preserving gaussian elimination. Mathematics
+of Computation, 22:565–578, 1968.
+
+[23] Rajendra Bhatia. Matrix Analysis. Springer, 1997.
+[41] Ramon E. Moore. Interval Analysis. Prentice-Hall,
+1966.
+
+[24] John J. Benedetto and Matthew Fickus. Finite normalized tight frames. Advances in Computational
+Mathematics, 18:357–385, 2003.
+
+[42] Rudolf Krawczyk. Newton-algorithmen zur bestimmung von nullstellen mit fehlerschranken. Computing,
+4:187–201, 1969.
+
+[25] Peter G. Casazza and Gitta Kutyniok, editors. Finite
+Frames: Theory and Applications. Birkhäuser, 2013.
+
+[43] Arnold Neumaier. Interval Methods for Systems of
+Equations. Cambridge University Press, 1990.
+
+[26] I. J. Schoenberg. Positive definite functions on
+spheres. Duke Mathematical Journal, 9:96–108, 1942.
+
+[44] Siegfried M. Rump. Verification methods: Rigorous
+results using floating-point arithmetic. Acta Numerica, 19:287–449, 2010.
+
+[27] Philippe Delsarte, Jean-Marie Goethals, and Johan J.
+Seidel. Spherical codes and designs. Geometriae
+Dedicata, 6:363–388, 1977.
+
+[45] Nicholas J. Higham. Accuracy and Stability of Numerical Algorithms. SIAM, 2 edition, 2002.
+
+[28] P. W. H. Lemmens and J. J. Seidel. Equiangular
+lines. Journal of Algebra, 24:494–512, 1973.
+
+[46] Lloyd N. Trefethen and David III Bau. Numerical
+Linear Algebra. SIAM, 1997.
+
+[29] John H. Conway, Ronald H. Hardin, and Neil J. A.
+Sloane. Packing lines, planes, etc.: Packings in grassmannian spaces. Experimental Mathematics, 5:139–
+159, 1996.
+
+[47] Mihai Putinar. Positive polynomials on compact
+semi-algebraic sets. Indiana University Mathematics
+Journal, 42:969–984, 1993.
+
+[30] Matthew Fickus, John Jasper, and Dustin G. Mixon.
+Packings in real projective spaces. SIAM Journal on
+Applied Algebra and Geometry, 2:377–409, 2018.
+
+[48] Jean B. Lasserre. Global optimization with polynomials and the problem of moments. SIAM Journal
+on Optimization, 11:796–817, 2001.
+
+[31] Chandler Davis and William M. Kahan. The rotation
+of eigenvectors by a perturbation. iii. SIAM Journal
+on Numerical Analysis, 7:1–46, 1970.
+
+[49] Pablo A. Parrilo. Semidefinite programming relaxations for semialgebraic problems. Mathematical
+Programming, 96:293–320, 2003.
+9
+
+[50] Monique Laurent. Sums of squares, moment matrices
+and optimization over polynomials. In Emerging
+Applications of Algebraic Geometry, volume 149 of
+IMA Volumes in Mathematics and its Applications,
+pages 157–270. Springer, 2009.
+[51] Christine Bachoc and Frank Vallentin. New upper
+bounds for kissing numbers from semidefinite programming. Journal of the American Mathematical
+Society, 21:909–924, 2008.
+[52] David de Laat and Frank Vallentin. A semidefinite
+programming hierarchy for packing problems in discrete geometry. Mathematical Programming, 151:
+529–553, 2015.
+[53] Lipót Fejér. über trigonometrische polynome. Journal für die reine und angewandte Mathematik, 1915.
+[54] Frigyes Riesz.
+über ein problem des herrn
+carathéodory. Journal für die reine und angewandte
+Mathematik, 1916.
+
+10
+
+

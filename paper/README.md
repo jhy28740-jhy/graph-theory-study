@@ -3,8 +3,8 @@
 本文件夹是这篇论文的**唯一完整入口**，论文本体、参考文献、汇报材料、审核报告全部在这里。
 
 - 题目：**A joint moment bound for the three largest graph eigenvalues**
-- 作者：Haoyang Ji 日期：November 2, 2026
-- 篇幅：20 页 A4，编译器 **pdflatex**（不是 xelatex）
+- 作者：Haoyang Ji 日期：November 3, 2026
+- 篇幅：22 页 A4，编译器 **pdflatex**（不是 xelatex）
 - 在线 PDF：https://github.com/jhy28740-jhy/graph-theory-study/blob/main/paper/top3_joint_moment_bound.pdf
 
 ## 主结果
@@ -24,19 +24,35 @@
 诚实标注：**最优系数与极图均未确定**。
 已知数值天花板 (29+10√5)/40 = 1.284016994374948（比 c 小 0.000656261）；
 数值锚点 ρ₀ = (9+√5+2√35)/18 = 1.281568196872168（K₁∨C₅ 吹起族的极限）。
+**无条件缺口 c − ρ₀ = 0.003105058851750628**（论文 §12 已明确写出）。
+
+### 查新状态（2026-11-03 第二次复核，详见 `参考文献链接.md` §七）
+
+- **主定理新颖性安全**：主流文献中无人改进过 STW Proposition 6.1 的 (3+√5)/4，c 仍是公开可查的最好系数。
+- **必须引用的先行记录**：Zenodo 上 T. Newton 的两条自存档
+  （doi:10.5281/zenodo.21785906，2026-08-04；doi:10.5281/zenodo.22082842，2026-08-24）
+  以「pole–pentagon law」提出了**完全相同**的常数 α₃ = 1/2+√5/18+√35/9 = ρ₀
+  与**完全相同**的权重 (7+5√7)/126，并声称 Λ₃ ≤ α₃n − 3；但该声称**明确是条件性的**
+  （定理标题为 *Candidate*，依赖机器证书链，作者自请独立审计），且未经同行评审。
+  论文已新增 `Remark 3.2` 如实说明，本文**不主张该常数的优先权**，
+  Theorem 1.1 的无条件性与自足性不受影响。
+- 本次修订新增 4 条引用：`HW`（Huang–Wei，S₂ 精确解）、`Paulin`（二次不等式）、`Newton1`、`Newton2`。
 
 ## 文件夹内容
 
 | 路径 | 说明 |
 |---|---|
-| `top3_joint_moment_bound.tex` | 论文源码，1447 行 |
-| `top3_joint_moment_bound.pdf` | 论文成品，20 页 |
-| `参考文献链接.md` | **全部链接清单**：12 条参考文献 + 已下载未引用文献 + 汇报材料 + 待办 R1 |
+| `top3_joint_moment_bound.tex` | 论文源码，1534 行 |
+| `top3_joint_moment_bound.pdf` | 论文成品，22 页 |
+| `参考文献链接.md` | **全部链接清单**：16 条参考文献 + 已下载未引用文献 + 汇报材料 + R1 结论 + §七 第二次查新复核 |
 | `literature/` | arXiv 原文 PDF 与纯文本抽取（STW、KLMPT、Tang λ₃、Huang–Wei 谱和、Paulin、Ebrahimi 2008 等），共 18 个文件 |
 | `literature/weighted_spectral_literature_audit/` | 加权谱极值的查新审计报告（tex + pdf + 4 张复核截图 + 3 篇笔记 + 检索脚本） |
 | `reports/汇报_前三大特征值上界_20261102/` | 24 页自编译汇报 PPT（pptx + pdf）、16 页讲稿与排版建议（tex + pdf）、PPT 生成脚本与图表资源 |
 | `reports/审核报告_top3_joint_moment_bound_20261102/` | 33 页详细审核报告（tex + pdf）：逐节复核、符号验证、数值验证、问题清单 G1/G2、表述建议 S1–S7、松弛量八项分解、天花板分析、优先级排序 |
 | `reports/进展报告_前三大特征值上界_20261027/` | 早期进展报告（tex + pdf）与 24 个 `证书_*.py` 可复现证书脚本 |
+| `reports/查新复核报告_前三大特征值上界_20261103/` | **7 页第二次查新复核报告（tex + pdf）**：文献比对表、Newton Zenodo 记录逐项核验与原文引文、时间线与优先权判断、风险评级、λ₁+2λ₂ 副线查新、给导师的一句话说明 |
+| `literature/novelty_20261103/` | 本次查新的原始抓取数据（5 个 json/log）与 4 个检索脚本 |
+| `literature/Newton2026a.pdf` / `Newton2026b.pdf` | 两条 Zenodo 记录的 PDF 原件与纯文本抽取 |
 
 ## 重新编译
 

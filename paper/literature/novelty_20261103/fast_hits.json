@@ -1,0 +1,5942 @@
+[
+ {
+  "src": "openalex",
+  "q": "sum of three largest eigenvalues graph",
+  "title": "On sums of graph eigenvalues",
+  "doi": "https://doi.org/10.1016/j.laa.2014.05.001",
+  "date": "2014-05-23",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 10,
+  "authors": [
+   "Evans M. Harrell",
+   "Joachim Stubbe"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of three largest eigenvalues graph",
+  "title": "On sums of graph eigenvalues",
+  "doi": "https://doi.org/10.48550/arxiv.1308.5340",
+  "date": "2013-08-24",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Evans M. Harrell",
+   "Joachim Stubbe"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of three largest eigenvalues graph",
+  "title": "Sum of the largest eigenvalues of symmetric matrices and graphs",
+  "doi": null,
+  "date": "2008-01-01",
+  "venue": "Summit (Simon Fraser University)",
+  "cited": 0,
+  "authors": [
+   "Javad B. Ebrahimi"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of three largest eigenvalues graph",
+  "title": "The largest eigenvalue of nonregular graphs",
+  "doi": "https://doi.org/10.1016/j.jctb.2003.12.002",
+  "date": "2004-01-23",
+  "venue": "Journal of Combinatorial Theory Series B",
+  "cited": 54,
+  "authors": [
+   "Dragan Stevanović"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of three largest eigenvalues graph",
+  "title": "On the sum of Laplacian eigenvalues of graphs",
+  "doi": "https://doi.org/10.1016/j.laa.2009.03.038",
+  "date": "2009-04-29",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 59,
+  "authors": [
+   "Willem H. Haemers",
+   "Ali Mohammadian",
+   "Behruz Tayfeh‐Rezaie"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of three largest eigenvalues graph",
+  "title": "Graphs with three distinct eigenvalues and largest eigenvalue less than 8",
+  "doi": "https://doi.org/10.1016/j.laa.2008.11.028",
+  "date": "2009-01-05",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 23,
+  "authors": [
+   "H. Chuang",
+   "G.R. Omidi"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of three largest eigenvalues graph",
+  "title": "Extremal graphs for the sum of two largest eigenvalues",
+  "doi": "https://doi.org/10.3934/math.2026618",
+  "date": "2026-01-01",
+  "venue": "AIMS Mathematics",
+  "cited": 0,
+  "authors": [
+   "Shaowei Sun",
+   "Yaping Min",
+   "Kinkar Chandra Das"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of three largest eigenvalues graph",
+  "title": "On the sum of k largest distance eigenvalues of graphs",
+  "doi": "https://doi.org/10.1016/j.dam.2018.12.031",
+  "date": "2019-01-21",
+  "venue": "Discrete Applied Mathematics",
+  "cited": 10,
+  "authors": [
+   "Huiqiu Lin"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of three largest eigenvalues graph",
+  "title": "On the sum of signless Laplacian eigenvalues of a graph",
+  "doi": "https://doi.org/10.1016/j.laa.2013.01.023",
+  "date": "2013-03-08",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 30,
+  "authors": [
+   "Firouzeh Ashraf",
+   "G.R. Omidi",
+   "Behruz Tayfeh‐Rezaie"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of three largest eigenvalues graph",
+  "title": "On the sum of the k largest eigenvalues of graphs and maximal energy of bipartite graphs",
+  "doi": "https://doi.org/10.1016/j.laa.2019.01.016",
+  "date": "2019-01-28",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 16,
+  "authors": [
+   "Kinkar Chandra Das",
+   "Seyed Ahmad Mojallal",
+   "Shaowei Sun"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of three largest eigenvalues graph",
+  "title": "Largest eigenvalues of sparse inhomogeneous Erdős–Rényi graphs",
+  "doi": "https://doi.org/10.1214/18-aop1293",
+  "date": "2019-05-01",
+  "venue": "The Annals of Probability",
+  "cited": 59,
+  "authors": [
+   "Florent Benaych-Georges",
+   "Charles Bordenave",
+   "Antti Knowles"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of three largest eigenvalues graph",
+  "title": "On the second largest Laplacian eigenvalues of graphs",
+  "doi": "https://doi.org/10.1016/j.laa.2012.10.047",
+  "date": "2012-12-11",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 53,
+  "authors": [
+   "Jianxi Li",
+   "Ji‐Ming Guo",
+   "Wai Chee Shiu"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of three largest eigenvalues graph",
+  "title": "On the sum of the two largest Laplacian eigenvalues of unicyclic graphs",
+  "doi": "https://doi.org/10.1186/s13660-015-0794-1",
+  "date": "2015-09-17",
+  "venue": "Journal of Inequalities and Applications",
+  "cited": 6,
+  "authors": [
+   "Yirong Zheng",
+   "An Chang",
+   "Jianxi Li"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of three largest eigenvalues graph",
+  "title": "On the eigenvalues of eccentricity matrix of graphs",
+  "doi": "https://doi.org/10.1016/j.dam.2021.02.029",
+  "date": "2021-03-13",
+  "venue": "Discrete Applied Mathematics",
+  "cited": 27,
+  "authors": [
+   "Xingyu Lei",
+   "Jianfeng Wang",
+   "Guozheng Li"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of three largest eigenvalues graph",
+  "title": "On the sum of $k$-th largest distance eigenvalues of graphs",
+  "doi": "https://doi.org/10.48550/arxiv.1805.09661",
+  "date": "2018-05-24",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Huiqiu Lin"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of three largest eigenvalues graph",
+  "title": "Extremal graphs for the sum of the two largest signless Laplacian eigenvalues",
+  "doi": "https://doi.org/10.13001/1081-3810.3143",
+  "date": "2015-02-08",
+  "venue": "Electronic Journal of Linear Algebra",
+  "cited": 6,
+  "authors": [
+   "Carla Silva Oliveira",
+   "Leonardo de Lima",
+   "Paula Rama",
+   "Paula Carvalho"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of three largest eigenvalues graph",
+  "title": "On the sum of the first two largest signless Laplacian eigenvalues of a graph",
+  "doi": "https://doi.org/10.1016/j.disc.2024.114035",
+  "date": "2024-05-02",
+  "venue": "Discrete Mathematics",
+  "cited": 2,
+  "authors": [
+   "Zi-Ming Zhou",
+   "Chang-Xiang He",
+   "Haiying Shan"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of three largest eigenvalues graph",
+  "title": "Computing the Sum of k Largest Laplacian Eigenvalues of Tricyclic Graphs",
+  "doi": "https://doi.org/10.47443/dml.2022.085",
+  "date": "2022-09-20",
+  "venue": "Discrete Mathematics Letters",
+  "cited": 2,
+  "authors": [
+   "Pawan Kumar",
+   "S. Merajuddin",
+   "S. Pirzada"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of three largest eigenvalues graph",
+  "title": "Sharp bounds for the largest eigenvalue of the signless Laplacian of a graph",
+  "doi": "https://doi.org/10.1016/j.laa.2010.04.026",
+  "date": "2010-05-06",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 22,
+  "authors": [
+   "Yanqing Chen",
+   "Ligong Wang"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of three largest eigenvalues graph",
+  "title": "Some bounds on the largest eigenvalues of graphs",
+  "doi": "https://doi.org/10.1016/j.aml.2011.09.009",
+  "date": "2011-09-16",
+  "venue": "Applied Mathematics Letters",
+  "cited": 3,
+  "authors": [
+   "Shuchao Li",
+   "Yi Tian"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of three largest eigenvalues graph",
+  "title": "Eigenvalues of graphs",
+  "doi": "https://doi.org/10.11575/prism/21350",
+  "date": "1970-01-01",
+  "venue": "Libraries and Cultural Resources (University of Calgary)",
+  "cited": 104,
+  "authors": [
+   "Eva Nosal"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of three largest eigenvalues graph",
+  "title": "Biregular graphs with three eigenvalues",
+  "doi": "https://doi.org/10.1016/j.ejc.2016.03.004",
+  "date": "2016-04-29",
+  "venue": "European Journal of Combinatorics",
+  "cited": 37,
+  "authors": [
+   "Xi-Ming Cheng",
+   "Alexander L. Gavrilyuk",
+   "Gary R. W. Greaves",
+   "Jack H. Koolen"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of three largest eigenvalues graph",
+  "title": "On the sum of the two largest eigenvalues of the curl-curl operator on graphs",
+  "doi": "https://doi.org/10.48550/arxiv.2606.26512",
+  "date": "2026-06-25",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Yueli Han",
+   "Lu Lu",
+   "Jianfeng Wang"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of three largest eigenvalues graph",
+  "title": "Hoffman-type Results for the Sum of k Largest Eigenvalues of a Graph",
+  "doi": "https://doi.org/10.48550/arxiv.2609.23707",
+  "date": "2026-09-20",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Shaowei Sun",
+   "Mengyao Guo",
+   "Hongyan Ge",
+   "Kinkar Chandra Das"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of three largest eigenvalues graph",
+  "title": "Variation of sum of two largest eigenvalues of the distance matrices of four-leaf graph",
+  "doi": "https://doi.org/10.7535/hbkd.2020yx02000",
+  "date": "2020-04-01",
+  "venue": "DOAJ (DOAJ: Directory of Open Access Journals)",
+  "cited": 0,
+  "authors": [
+   "Zhe LYU",
+   "Yubin Gao"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "three largest adjacency eigenvalues upper bound",
+  "title": "NEW UPPER BOUND ON THE LARGEST LAPLACIAN EIGENVALUE OF GRAPHS",
+  "doi": "https://doi.org/10.22190/fumi2002533t",
+  "date": "2020-05-28",
+  "venue": "Facta Universitatis Series Mathematics and Informatics",
+  "cited": 3,
+  "authors": [
+   "Hassan Taheri",
+   "Gholam Hossein Fath-Tabar"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "three largest adjacency eigenvalues upper bound",
+  "title": "Graphs with three distinct eigenvalues and largest eigenvalue less than 8",
+  "doi": "https://doi.org/10.1016/j.laa.2008.11.028",
+  "date": "2009-01-05",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 23,
+  "authors": [
+   "H. Chuang",
+   "G.R. Omidi"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "three largest adjacency eigenvalues upper bound",
+  "title": "The largest eigenvalue of nonregular graphs",
+  "doi": "https://doi.org/10.1016/j.jctb.2003.12.002",
+  "date": "2004-01-23",
+  "venue": "Journal of Combinatorial Theory Series B",
+  "cited": 54,
+  "authors": [
+   "Dragan Stevanović"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "three largest adjacency eigenvalues upper bound",
+  "title": "On the Two Largest Eigenvalues of Trees",
+  "doi": "https://doi.org/10.1016/s0024-3795(96)00249-2",
+  "date": "1997-07-01",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 43,
+  "authors": [
+   "Michael Hofmeister"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "three largest adjacency eigenvalues upper bound",
+  "title": "Upper bounds of the second largest eigenvalue of graphs",
+  "doi": "https://doi.org/10.48550/arxiv.2606.11633",
+  "date": "2026-06-10",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Zhiwen Wang",
+   "Zihao Geng",
+   "Ji-Ming Guo"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "three largest adjacency eigenvalues upper bound",
+  "title": "On conjectures involving second largest signless Laplacian eigenvalue of graphs",
+  "doi": "https://doi.org/10.1016/j.laa.2010.01.005",
+  "date": "2010-02-05",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 111,
+  "authors": [
+   "Kinkar Chandra Das"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "three largest adjacency eigenvalues upper bound",
+  "title": "Sharp bounds for the largest eigenvalue of the signless Laplacian of a graph",
+  "doi": "https://doi.org/10.1016/j.laa.2010.04.026",
+  "date": "2010-05-06",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 22,
+  "authors": [
+   "Yanqing Chen",
+   "Ligong Wang"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "three largest adjacency eigenvalues upper bound",
+  "title": "On sums of graph eigenvalues",
+  "doi": "https://doi.org/10.1016/j.laa.2014.05.001",
+  "date": "2014-05-23",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 10,
+  "authors": [
+   "Evans M. Harrell",
+   "Joachim Stubbe"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "three largest adjacency eigenvalues upper bound",
+  "title": "Upper bounds for the largest eigenvalues of a bipartite graph",
+  "doi": "https://doi.org/10.13001/1081-3810.1647",
+  "date": "2013-01-01",
+  "venue": "Electronic Journal of Linear Algebra",
+  "cited": 1,
+  "authors": [
+   "Jorma Kaarlo Merikoski",
+   "Ravinder Kumar",
+   "Ram Rajput"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "three largest adjacency eigenvalues upper bound",
+  "title": "Bounds on the largest eigenvalues of trees with a given size of matching",
+  "doi": "https://doi.org/10.1016/s0024-3795(01)00465-7",
+  "date": "2002-02-01",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 75,
+  "authors": [
+   "Yaoping Hou",
+   "Jiong-Sheng Li"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "three largest adjacency eigenvalues upper bound",
+  "title": "On the largest eigenvalues of trees",
+  "doi": "https://doi.org/10.1016/j.disc.2004.01.012",
+  "date": "2004-06-25",
+  "venue": "Discrete Mathematics",
+  "cited": 1,
+  "authors": [
+   "Xiang En Chen"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "three largest adjacency eigenvalues upper bound",
+  "title": "Automated conjectures on upper bounds for the largest Laplacian eigenvalue of graphs",
+  "doi": "https://doi.org/10.1016/j.laa.2005.10.017",
+  "date": "2005-12-10",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 15,
+  "authors": [
+   "Vladimir Brankov",
+   "Pierre Hansen",
+   "Dragan Stevanović"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "three largest adjacency eigenvalues upper bound",
+  "title": "A lower bound for the second largest Laplacian eigenvalue of weighted graphs",
+  "doi": "https://doi.org/10.13001/1081-3810.1501",
+  "date": "2011-01-01",
+  "venue": "Electronic Journal of Linear Algebra",
+  "cited": 9,
+  "authors": [
+   "Abraham Berman",
+   "Miriam Farber"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "three largest adjacency eigenvalues upper bound",
+  "title": "Variable neighborhood search for extremal graphs. 16. Some conjectures related to the largest eigenvalue of a graph",
+  "doi": "https://doi.org/10.1016/j.ejor.2006.12.059",
+  "date": "2007-02-17",
+  "venue": "European Journal of Operational Research",
+  "cited": 54,
+  "authors": [
+   "Mustapha Aouchiche",
+   "Francis K. Bell",
+   "Dragoš Cvetković",
+   "Pierre Hansen",
+   "Peter Rowlinson"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "three largest adjacency eigenvalues upper bound",
+  "title": "Proof of conjectures on adjacency eigenvalues of graphs",
+  "doi": "https://doi.org/10.1016/j.disc.2012.09.017",
+  "date": "2012-10-09",
+  "venue": "Discrete Mathematics",
+  "cited": 32,
+  "authors": [
+   "Kinkar Chandra Das"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "three largest adjacency eigenvalues upper bound",
+  "title": "de Caen's inequality and bounds on the largest Laplacian eigenvalue of a graph",
+  "doi": "https://doi.org/10.1016/s0024-3795(00)00307-4",
+  "date": "2001-05-01",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 58,
+  "authors": [
+   "Jiong-Sheng Li",
+   "Yong-Liang Pan"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "three largest adjacency eigenvalues upper bound",
+  "title": "Sharp upper bounds for the Laplacian graph eigenvalues",
+  "doi": "https://doi.org/10.1016/s0024-3795(02)00353-1",
+  "date": "2002-10-11",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 57,
+  "authors": [
+   "Yong-Liang Pan"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "three largest adjacency eigenvalues upper bound",
+  "title": "On the second largest adjacency eigenvalue of trees with given diameter",
+  "doi": "https://doi.org/10.1080/03081087.2025.2484265",
+  "date": "2025-04-23",
+  "venue": "Linear and Multilinear Algebra",
+  "cited": 1,
+  "authors": [
+   "Hitesh Kumar",
+   "Bojan Mohar",
+   "Shivaramakrishna Pragada",
+   "Hanmeng Zhan"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "three largest adjacency eigenvalues upper bound",
+  "title": "Some bounds on the largest eigenvalues of graphs",
+  "doi": "https://doi.org/10.1016/j.aml.2011.09.009",
+  "date": "2011-09-16",
+  "venue": "Applied Mathematics Letters",
+  "cited": 3,
+  "authors": [
+   "Shuchao Li",
+   "Yi Tian"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "three largest adjacency eigenvalues upper bound",
+  "title": "On the second largest Laplacian eigenvalue of trees",
+  "doi": "https://doi.org/10.1016/j.laa.2005.02.031",
+  "date": "2005-04-21",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 48,
+  "authors": [
+   "Ji‐Ming Guo"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "three largest adjacency eigenvalues upper bound",
+  "title": "On the second largest A-eigenvalues of graphs",
+  "doi": "https://doi.org/10.1016/j.laa.2019.06.027",
+  "date": "2019-06-28",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 33,
+  "authors": [
+   "Yuanyuan Chen",
+   "Dan Li",
+   "Jixiang Meng"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "three largest adjacency eigenvalues upper bound",
+  "title": "On the Sum of the Largest and Smallest Eigenvalue of Odd-Cycle Free Fraphs",
+  "doi": "https://doi.org/10.37236/14427",
+  "date": "2026-05-08",
+  "venue": "The Electronic Journal of Combinatorics",
+  "cited": 0,
+  "authors": [
+   "Aida Abiad",
+   "Vladislav Taranchuk",
+   "Thijs van Veluw"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "three largest adjacency eigenvalues upper bound",
+  "title": "A new type of lower bound for the largest eigenvalue of a symmetric matrix",
+  "doi": "https://doi.org/10.1016/j.laa.2007.06.027",
+  "date": "2007-08-15",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 10,
+  "authors": [
+   "Piet Van Mieghem"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "three largest adjacency eigenvalues upper bound",
+  "title": "On sums of graph eigenvalues",
+  "doi": "https://doi.org/10.48550/arxiv.1308.5340",
+  "date": "2013-08-24",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Evans M. Harrell",
+   "Joachim Stubbe"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "three largest adjacency eigenvalues upper bound",
+  "title": "The largest Laplacian and signless Laplacian H-eigenvalues of a uniform hypergraph",
+  "doi": "https://doi.org/10.1016/j.laa.2014.11.020",
+  "date": "2014-11-28",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 73,
+  "authors": [
+   "Shenglong Hu",
+   "Liqun Qi",
+   "Jinshan Xie"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of largest eigenvalues of graphs",
+  "title": "Bounding the sum of the largest Laplacian eigenvalues of graphs",
+  "doi": "https://doi.org/10.1016/j.dam.2014.01.023",
+  "date": "2014-02-19",
+  "venue": "Discrete Applied Mathematics",
+  "cited": 25,
+  "authors": [
+   "Israel Rocha",
+   "Vilmar Trevisan"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of largest eigenvalues of graphs",
+  "title": "On the sum of k largest eigenvalues of graphs and symmetric matrices",
+  "doi": "https://doi.org/10.1016/j.jctb.2008.07.001",
+  "date": "2008-08-01",
+  "venue": "Journal of Combinatorial Theory Series B",
+  "cited": 22,
+  "authors": [
+   "Bojan Mohar"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of largest eigenvalues of graphs",
+  "title": "Sum of the largest eigenvalues of symmetric matrices and graphs",
+  "doi": null,
+  "date": "2008-01-01",
+  "venue": "Summit (Simon Fraser University)",
+  "cited": 0,
+  "authors": [
+   "Javad B. Ebrahimi"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of largest eigenvalues of graphs",
+  "title": "On the sum of the largest $A_α$-eigenvalues of graphs",
+  "doi": "https://doi.org/10.48550/arxiv.2012.11177",
+  "date": "2020-12-21",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Z. Lin",
+   "Lianying Miao",
+   "Shuguang Guo"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of largest eigenvalues of graphs",
+  "title": "On the sum of the k largest eigenvalues of graphs and maximal energy of bipartite graphs",
+  "doi": "https://doi.org/10.1016/j.laa.2019.01.016",
+  "date": "2019-01-28",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 16,
+  "authors": [
+   "Kinkar Chandra Das",
+   "Seyed Ahmad Mojallal",
+   "Shaowei Sun"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of largest eigenvalues of graphs",
+  "title": "Extremal graphs for the sum of two largest eigenvalues",
+  "doi": "https://doi.org/10.3934/math.2026618",
+  "date": "2026-01-01",
+  "venue": "AIMS Mathematics",
+  "cited": 0,
+  "authors": [
+   "Shaowei Sun",
+   "Yaping Min",
+   "Kinkar Chandra Das"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of largest eigenvalues of graphs",
+  "title": "The sum of the k largest distance eigenvalues of graphs",
+  "doi": "https://doi.org/10.1016/j.disc.2023.113696",
+  "date": "2023-09-11",
+  "venue": "Discrete Mathematics",
+  "cited": 0,
+  "authors": [
+   "Yuke Zhang",
+   "Huiqiu Lin"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of largest eigenvalues of graphs",
+  "title": "On the sum of k largest distance eigenvalues of graphs",
+  "doi": "https://doi.org/10.1016/j.dam.2018.12.031",
+  "date": "2019-01-21",
+  "venue": "Discrete Applied Mathematics",
+  "cited": 10,
+  "authors": [
+   "Huiqiu Lin"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of largest eigenvalues of graphs",
+  "title": "Bounds for the largest eigenvalue and sum of Laplacian eigenvalues of signed graphs",
+  "doi": "https://doi.org/10.1016/j.disc.2026.115333",
+  "date": "2026-07-14",
+  "venue": "Discrete Mathematics",
+  "cited": 0,
+  "authors": [
+   "Lingli Xie",
+   "Xiaogang Liu"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of largest eigenvalues of graphs",
+  "title": "On the sum of the largest $ A_{\\alpha} $-eigenvalues of graphs",
+  "doi": "https://doi.org/10.3934/math.2022825",
+  "date": "2022-01-01",
+  "venue": "AIMS Mathematics",
+  "cited": 0,
+  "authors": [
+   "Zhen Lin"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of largest eigenvalues of graphs",
+  "title": "On the Sum of k Largest Laplacian Eigenvalues of a Graph and Clique Number",
+  "doi": "https://doi.org/10.1007/s00009-020-01676-3",
+  "date": "2021-01-06",
+  "venue": "Mediterranean Journal of Mathematics",
+  "cited": 17,
+  "authors": [
+   "Hilal A. Ganie",
+   "S. Pirzada",
+   "Vilmar Trevisan"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of largest eigenvalues of graphs",
+  "title": "On the sum of the two largest Laplacian eigenvalues of unicyclic graphs",
+  "doi": "https://doi.org/10.1186/s13660-015-0794-1",
+  "date": "2015-09-17",
+  "venue": "Journal of Inequalities and Applications",
+  "cited": 6,
+  "authors": [
+   "Yirong Zheng",
+   "An Chang",
+   "Jianxi Li"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of largest eigenvalues of graphs",
+  "title": "On Brouwer's conjecture for the sum of k largest Laplacian eigenvalues of graphs",
+  "doi": "https://doi.org/10.1016/j.laa.2019.05.029",
+  "date": "2019-05-28",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 20,
+  "authors": [
+   "Xiaodan Chen"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of largest eigenvalues of graphs",
+  "title": "Hoffman-type Results for the Sum of k Largest Eigenvalues of a Graph",
+  "doi": "https://doi.org/10.48550/arxiv.2609.23707",
+  "date": "2026-09-20",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Shaowei Sun",
+   "Mengyao Guo",
+   "Hongyan Ge",
+   "Kinkar Chandra Das"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of largest eigenvalues of graphs",
+  "title": "On the sum of $k$-th largest distance eigenvalues of graphs",
+  "doi": "https://doi.org/10.48550/arxiv.1805.09661",
+  "date": "2018-05-24",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Huiqiu Lin"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of largest eigenvalues of graphs",
+  "title": "Bounding the sum of the largest signless Laplacian eigenvalues of a graph",
+  "doi": "https://doi.org/10.1016/j.dam.2023.07.016",
+  "date": "2023-08-07",
+  "venue": "Discrete Applied Mathematics",
+  "cited": 2,
+  "authors": [
+   "Aida Abiad",
+   "Leonardo de Lima",
+   "Sina Kalantarzadeh",
+   "Mona Mohammadi",
+   "Carla Silva Oliveira"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of largest eigenvalues of graphs",
+  "title": "Bicyclic graphs with maximum sum of the two largest Laplacian eigenvalues",
+  "doi": "https://doi.org/10.1186/s13660-016-1235-5",
+  "date": "2016-11-18",
+  "venue": "Journal of Inequalities and Applications",
+  "cited": 6,
+  "authors": [
+   "Yirong Zheng",
+   "An Chang",
+   "Jianxi Li",
+   "Sa Rula"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of largest eigenvalues of graphs",
+  "title": "Brouwer's conjecture for the sum of the k largest Laplacian eigenvalues of some graphs",
+  "doi": "https://doi.org/10.1515/math-2024-0062",
+  "date": "2024-01-01",
+  "venue": "Open Mathematics",
+  "cited": 1,
+  "authors": [
+   "Ke Wang",
+   "Zhen Lin",
+   "Shumin Zhang",
+   "Chengfu Ye"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of largest eigenvalues of graphs",
+  "title": "On the sum of the first two largest signless Laplacian eigenvalues of a graph",
+  "doi": "https://doi.org/10.1016/j.disc.2024.114035",
+  "date": "2024-05-02",
+  "venue": "Discrete Mathematics",
+  "cited": 2,
+  "authors": [
+   "Zi-Ming Zhou",
+   "Chang-Xiang He",
+   "Haiying Shan"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of largest eigenvalues of graphs",
+  "title": "On the sum of the two largest eigenvalues of the curl-curl operator on graphs",
+  "doi": "https://doi.org/10.48550/arxiv.2606.26512",
+  "date": "2026-06-25",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Yueli Han",
+   "Lu Lu",
+   "Jianfeng Wang"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of largest eigenvalues of graphs",
+  "title": "On the sum of the largest and smallest eigenvalues of odd-cycle free graphs",
+  "doi": "https://doi.org/10.48550/arxiv.2507.17492",
+  "date": "2025-07-23",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Aida Abiad",
+   "Vladislav Taranchuk",
+   "Thijs van Veluw"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of largest eigenvalues of graphs",
+  "title": "Extremal graphs for the sum of the first two largest signless Laplacian eigenvalues",
+  "doi": "https://doi.org/10.1016/j.dam.2025.12.046",
+  "date": "2026-01-07",
+  "venue": "Discrete Applied Mathematics",
+  "cited": 2,
+  "authors": [
+   "Zi-Ming Zhou",
+   "Zhi-Bin Du",
+   "Chang-Xiang He"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of largest eigenvalues of graphs",
+  "title": "The sum of the first two largest signless Laplacian eigenvalues of trees and unicyclic graphs",
+  "doi": "https://doi.org/10.13001/1081-3810.3405",
+  "date": "2019-02-01",
+  "venue": "Electronic Journal of Linear Algebra",
+  "cited": 4,
+  "authors": [
+   "Zhibin Du"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of largest eigenvalues of graphs",
+  "title": "A short note on the sum of k largest distance eigenvalues of bipartite graphs",
+  "doi": "https://doi.org/10.1016/j.dam.2022.03.007",
+  "date": "2022-03-27",
+  "venue": "Discrete Applied Mathematics",
+  "cited": 1,
+  "authors": [
+   "Junying Lu",
+   "Lu Lu"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of largest eigenvalues of graphs",
+  "title": "The sum of the largest and smallest signless laplacian eigenvalues and some Hamiltonian properties of graphs",
+  "doi": "https://doi.org/10.33434/cams.443347",
+  "date": "2018-09-30",
+  "venue": "Communications in Advanced Mathematical Sciences",
+  "cited": 0,
+  "authors": [
+   "Rao Li"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral sum of graphs",
+  "title": "Maximum spectral sum of graphs",
+  "doi": "https://doi.org/10.48550/arxiv.2604.00512",
+  "date": "2026-04-01",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Hitesh Kumar",
+   "Lele Liu",
+   "Hermie Monterde",
+   "Shivaramakrishna Pragada",
+   "Michael Tait"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral sum of graphs",
+  "title": "The Exact Maximum of the Spectral Sum of Graphs",
+  "doi": "https://doi.org/10.48550/arxiv.2607.23081",
+  "date": "2026-07-25",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Jing Huang",
+   "Wei Wei"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral sum of graphs",
+  "title": "The Third Spectral Sum of Graphs: An Exact Universal Bound, Pole–Pentagon Extremality, and Resolution of the 𝑆3 Extremal Problem",
+  "doi": "https://doi.org/10.5281/zenodo.21785905",
+  "date": "2026-08-04",
+  "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+  "cited": 0,
+  "authors": [
+   "Tony Newton"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral sum of graphs",
+  "title": "The Third Spectral Sum of Graphs: Exact Projection Equivalence, Pole–Pentagon Geometry, and Certified Carrier Reduction",
+  "doi": "https://doi.org/10.5281/zenodo.22082841",
+  "date": "2026-08-24",
+  "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+  "cited": 0,
+  "authors": [
+   "Tony Newton"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral sum of graphs",
+  "title": "The Spectral Radius of a Graph and Upper Bound on Sum of the Spectral Radius of a Graph and its Complement",
+  "doi": null,
+  "date": "2006-01-01",
+  "venue": "Journal of Tangshan Teachers College",
+  "cited": 0,
+  "authors": [
+   "XU San-xing"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral sum of graphs",
+  "title": "The spectral radius of a graph and upper bounds on sum of the spectral radius of a graph and its complement",
+  "doi": null,
+  "date": "2006-01-01",
+  "venue": "Journal of Guangxi University of Technology",
+  "cited": 0,
+  "authors": [
+   "XU San-xing"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral sum of graphs",
+  "title": "Spectral properties of inverse sum indeg index of graphs",
+  "doi": "https://doi.org/10.1007/s10910-020-01170-x",
+  "date": "2020-09-10",
+  "venue": "Journal of Mathematical Chemistry",
+  "cited": 13,
+  "authors": [
+   "Fengwei Li",
+   "Xueliang Li",
+   "Hajo J. Broersma"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral sum of graphs",
+  "title": "Bounds of the Sum of the Q Spectral Radius of A Graph and Its Complement",
+  "doi": null,
+  "date": "2002-01-01",
+  "venue": "Journal of Zhangzhou Normal University",
+  "cited": 0,
+  "authors": [
+   "Huang Xiao-nong"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral sum of graphs",
+  "title": "Upper Bound on Sum of the Spectral Radius of a Graph and Its Complement",
+  "doi": null,
+  "date": "2008-01-01",
+  "venue": "Journal of Liaoning University of Petroleum & Chemical Technology",
+  "cited": 0,
+  "authors": [
+   "Song Dai-cai"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral sum of graphs",
+  "title": "On the atom-bond sum-connectivity spectral radius of unicyclic graphs",
+  "doi": "https://doi.org/10.47443/dml.2025.015",
+  "date": "2025-05-06",
+  "venue": "Discrete Mathematics Letters",
+  "cited": 1,
+  "authors": [
+   "Zhen Lin",
+   "Yingke Liu"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral sum of graphs",
+  "title": "On the sum-connectivity spectral radius and sum-connectivity Estrada index of graphs.",
+  "doi": null,
+  "date": "2016-01-01",
+  "venue": "Ars Combinatoria",
+  "cited": 0,
+  "authors": [
+   "Zhan Fu-qin",
+   "Qiao You-fu"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral sum of graphs",
+  "title": "The spectral radius of signless Laplacian matrix and sum-connectivity index of graphs",
+  "doi": "https://doi.org/10.1080/09728600.2022.2093686",
+  "date": "2022-07-06",
+  "venue": "AKCE International Journal of Graphs and Combinatorics",
+  "cited": 0,
+  "authors": [
+   "Akbar Jahanbani",
+   "Seyed Mahmoud Sheikholeslami"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral sum of graphs",
+  "title": "Upper Bound on the Sum of the Q Spectral Radius of a Graph and Its Complement",
+  "doi": null,
+  "date": "2008-01-01",
+  "venue": "Journal of Liaoning University of Petroleum & Chemical Technology",
+  "cited": 0,
+  "authors": [
+   "Pei Fang-fang"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral sum of graphs",
+  "title": "Polynomial Selection in Spectral Graph Neural Networks: An Error-Sum of Function Slices Approach",
+  "doi": "https://doi.org/10.82419/15",
+  "date": "2025-01-01",
+  "venue": "MBZUAI iRep",
+  "cited": 0,
+  "authors": [
+   "Li, Guoming"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral sum of graphs",
+  "title": "Evaluating $\\mathrm SU}(3)$ Verlinde sums using spectral graph theory",
+  "doi": "https://doi.org/10.2139/ssrn.7583658",
+  "date": "2026-01-01",
+  "venue": "SSRN Electronic Journal",
+  "cited": 0,
+  "authors": [
+   "Anders Karlsson",
+   "Jay A. Jorgenson",
+   "Lejla Smajlović"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral sum of graphs",
+  "title": "Evaluating $\\mathrm {SU}(3)$ Verlinde sums using spectral graph theory",
+  "doi": "https://doi.org/10.48550/arxiv.2609.28265",
+  "date": "2026-09-23",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Jay A. Jorgenson",
+   "Anders Karlsson",
+   "Lejla Smajlović"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral sum of graphs",
+  "title": "Polynomial Selection in Spectral Graph Neural Networks: An Error-Sum of Function Slices Approach",
+  "doi": "https://doi.org/10.1145/3696410.3714760",
+  "date": "2025-04-22",
+  "venue": "International World Wide Web Conference (WWW)",
+  "cited": 2,
+  "authors": [
+   "Guoming Li",
+   "Jian Yang",
+   "Shangsong Liang",
+   "Dongsheng Luo"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral sum of graphs",
+  "title": "Distributed Graph Neural Network Design for Sum Ergodic Spectral Efficiency Maximization in Cell-Free Massive MIMO",
+  "doi": "https://doi.org/10.1109/tvt.2024.3493235",
+  "date": "2024-11-11",
+  "venue": "IEEE Transactions on Vehicular Technology",
+  "cited": 12,
+  "authors": [
+   "Nguyen Xuan Tung",
+   "Trinh Van Chien",
+   "Hien Quoc Ngo",
+   "Won–Joo Hwang"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral sum of graphs",
+  "title": "Extremal graphs for the sum of two largest eigenvalues",
+  "doi": "https://doi.org/10.3934/math.2026618",
+  "date": "2026-01-01",
+  "venue": "AIMS Mathematics",
+  "cited": 0,
+  "authors": [
+   "Shaowei Sun",
+   "Yaping Min",
+   "Kinkar Chandra Das"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral sum of graphs",
+  "title": "On the spectral radius of graphs",
+  "doi": "https://doi.org/10.1016/j.laa.2004.01.020",
+  "date": "2004-04-21",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 111,
+  "authors": [
+   "Aimei Yu",
+   "Mei Lu",
+   "Feng Tian"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral sum of graphs",
+  "title": "Wavelets on graphs via spectral graph theory",
+  "doi": "https://doi.org/10.1016/j.acha.2010.04.005",
+  "date": "2010-04-29",
+  "venue": "Applied and Computational Harmonic Analysis",
+  "cited": 2186,
+  "authors": [
+   "David Kenric Hammond",
+   "Pierre Vandergheynst",
+   "Rémi Gribonval"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral sum of graphs",
+  "title": "Spectral Sparsification of Graphs",
+  "doi": "https://doi.org/10.1137/08074489x",
+  "date": "2011-01-01",
+  "venue": "SIAM Journal on Computing",
+  "cited": 416,
+  "authors": [
+   "Daniel Alan Spielman",
+   "Shang‐Hua Teng"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral sum of graphs",
+  "title": "Bounds on the (Laplacian) spectral radius of graphs",
+  "doi": "https://doi.org/10.1016/j.laa.2006.12.003",
+  "date": "2007-02-03",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 49,
+  "authors": [
+   "Lingsheng Shi"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral sum of graphs",
+  "title": "On sums of graph eigenvalues",
+  "doi": "https://doi.org/10.1016/j.laa.2014.05.001",
+  "date": "2014-05-23",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 10,
+  "authors": [
+   "Evans M. Harrell",
+   "Joachim Stubbe"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral sum of graphs",
+  "title": "Quantum algorithms for spectral sums",
+  "doi": "https://doi.org/10.48550/arxiv.2011.06475",
+  "date": "2020-11-12",
+  "venue": "arXiv (Cornell University)",
+  "cited": 2,
+  "authors": [
+   "Alessandro Luongo",
+   "Changpeng Shao"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "absolute projection constant",
+  "title": "Some Results on Absolute Projection Constants",
+  "doi": "https://doi.org/10.1080/01630563.2018.1486327",
+  "date": "2019-01-02",
+  "venue": "Numerical Functional Analysis and Optimization",
+  "cited": 3,
+  "authors": [
+   "Alberto Castejón",
+   "Grzegorz Lewicki",
+   "Alberto Martín"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "absolute projection constant",
+  "title": "Minimal projections and absolute projections constants",
+  "doi": null,
+  "date": "None",
+  "venue": "Jagiellonian University Repository (Jagiellonian University)",
+  "cited": 0,
+  "authors": [
+   "Filip Sokołowski"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "absolute projection constant",
+  "title": "ASYMPTOTIC ESTIMATE OF ABSOLUTE PROJECTION CONSTANTS",
+  "doi": "https://doi.org/10.4467/20843828am.13.004.2280",
+  "date": "2015-10-02",
+  "venue": "Jagiellonian University Repository (Jagiellonian University)",
+  "cited": 3,
+  "authors": [
+   "Grzegorz Lewicki"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "absolute projection constant",
+  "title": "Absolute projection constant of the linear functions in a Lebesgue space",
+  "doi": "https://doi.org/10.1007/bf02075451",
+  "date": "1988-12-01",
+  "venue": "Constructive Approximation",
+  "cited": 2,
+  "authors": [
+   "Bruce L. Chalmers"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "absolute projection constant",
+  "title": "Absolute projection constants via absolute minimal projections",
+  "doi": "https://doi.org/10.1007/bfb0074688",
+  "date": "1985-01-01",
+  "venue": "Lecture notes in mathematics",
+  "cited": 1,
+  "authors": [
+   "Bruce L. Chalmers"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "absolute projection constant",
+  "title": "Minimal Projections and Absolute Projection Constants for Regular Polyhedral Spaces",
+  "doi": "https://doi.org/10.1090/s0002-9939-1985-0806085-4",
+  "date": "1985-11-01",
+  "venue": "Proceedings of the American Mathematical Society",
+  "cited": 5,
+  "authors": [
+   "Bruce L. Chalmers",
+   "Boris Shekhtman"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "absolute projection constant",
+  "title": "Zur Berechnung der Absoluten Projektionskonstanten Endlich - Dimensionaler Normierter Vektorräume: On the calculation of absolute projection constants in finite-dimensional normed vector spaces",
+  "doi": null,
+  "date": "1975-08-01",
+  "venue": "Journal of Numerical Analysis and Approximation Theory",
+  "cited": 0,
+  "authors": [
+   "Peter Pottinger"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "absolute projection constant",
+  "title": "Absolute Lipschitz extendability and linear projection constants",
+  "doi": "https://doi.org/10.4064/sm210708-21-9",
+  "date": "2022-01-01",
+  "venue": "Studia Mathematica",
+  "cited": 3,
+  "authors": [
+   "Giuliano Basso"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "absolute projection constant",
+  "title": "Projection constants of symmetric spaces",
+  "doi": "https://doi.org/10.1007/bf01152779",
+  "date": "1974-05-01",
+  "venue": "Mathematical Notes",
+  "cited": 6,
+  "authors": [
+   "E. D. Positsel'skii"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "absolute projection constant",
+  "title": "Graph Eigenvalues and Projection Constants",
+  "doi": "https://doi.org/10.48550/arxiv.2603.29280",
+  "date": "2026-03-31",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Tanay V. Wakhare"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "absolute projection constant",
+  "title": "Graph Eigenvalues and Projection Constants",
+  "doi": "https://doi.org/10.48550/arxiv.2608.02429",
+  "date": "2026-08-03",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Varun Sivashankar",
+   "Quanyu Tang",
+   "Tanay V. Wakhare"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "absolute projection constant",
+  "title": "Two illustrative examples of spaces with maximal projection constant",
+  "doi": null,
+  "date": "2008-01-01",
+  "venue": null,
+  "cited": 1,
+  "authors": [
+   "Bruce L. Chalmers",
+   "Grzegorz Lewicki"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "absolute projection constant",
+  "title": "Some Comments on the Comparison Between Condition Numbers and Projection Constants",
+  "doi": null,
+  "date": "2007-01-01",
+  "venue": null,
+  "cited": 1,
+  "authors": [
+   "Simon Foucart"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "absolute projection constant",
+  "title": "Projection Constants and Banach-Mazur Distance in Codimension Two",
+  "doi": "https://doi.org/10.48550/arxiv.2610.06141",
+  "date": "2026-10-05",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Beata Derȩgowska",
+   "Barbara Lewandowska"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "absolute projection constant",
+  "title": "Spaces with the maximal projection constant revisited",
+  "doi": "https://doi.org/10.48550/arxiv.2505.24526",
+  "date": "2025-05-30",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Tomasz Kobos"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "absolute projection constant",
+  "title": "Two-dimensional real symmetric spaces with maximal projection constant",
+  "doi": "https://doi.org/10.4064/ap-73-2-119-134",
+  "date": "2000-01-01",
+  "venue": "Annales Polonici Mathematici",
+  "cited": 7,
+  "authors": [
+   "Bruce L. Chalmers",
+   "Grzegorz Lewicki"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "absolute projection constant",
+  "title": "Maximal Projection Constants and Extremal Vector Configurations: Some Conjectures and Examples",
+  "doi": "https://doi.org/10.48550/arxiv.2608.08695",
+  "date": "2026-08-09",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Beata Derȩgowska",
+   "Barbara Lewandowska"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "absolute projection constant",
+  "title": "Subspaces of codimension two with large projection constants",
+  "doi": "https://doi.org/10.1016/j.jmaa.2014.06.067",
+  "date": "2014-06-26",
+  "venue": "Journal of Mathematical Analysis and Applications",
+  "cited": 6,
+  "authors": [
+   "Alberto Castejón",
+   "Grzegorz Lewicki"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "absolute projection constant",
+  "title": "On the value of the fifth maximal projection constant",
+  "doi": "https://doi.org/10.1016/j.jfa.2022.109634",
+  "date": "2022-07-20",
+  "venue": "Journal of Functional Analysis",
+  "cited": 5,
+  "authors": [
+   "Beata Derȩgowska",
+   "Matthew C. Fickus",
+   "Simon Foucart",
+   "Barbara Lewandowska"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "absolute projection constant",
+  "title": "Stability of maximal relative projection constants",
+  "doi": "https://doi.org/10.48550/arxiv.2609.03200",
+  "date": "2026-09-02",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Hitesh Kumar",
+   "Bojan Mohar",
+   "Seyed Ahmad Mojallal",
+   "Shivaramakrishna Pragada"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "absolute projection constant",
+  "title": "Minimal Projections onto Subspaces with Codimension 2",
+  "doi": "https://doi.org/10.1080/01630563.2016.1266655",
+  "date": "2016-12-08",
+  "venue": "Numerical Functional Analysis and Optimization",
+  "cited": 7,
+  "authors": [
+   "Filip Sokołowski"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "absolute projection constant",
+  "title": "Three-dimensional subspace of l∞(5) with maximal projection constant",
+  "doi": "https://doi.org/10.1016/j.jfa.2009.01.005",
+  "date": "2009-02-17",
+  "venue": "Journal of Functional Analysis",
+  "cited": 23,
+  "authors": [
+   "Bruce L. Chalmers",
+   "Grzegorz Lewicki"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "absolute projection constant",
+  "title": "Minimal projections onto subspaces generated by sign-matrices",
+  "doi": "https://doi.org/10.1016/j.jat.2024.106084",
+  "date": "2024-07-26",
+  "venue": "Journal of Approximation Theory",
+  "cited": 1,
+  "authors": [
+   "Beata Derȩgowska",
+   "Barbara Lewandowska",
+   "Grzegorz Lewicki"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "absolute projection constant",
+  "title": "The Fourier projection is minimal for regular polyhedral spaces",
+  "doi": "https://doi.org/10.1016/0021-9045(86)90004-3",
+  "date": "1986-10-01",
+  "venue": "Journal of Approximation Theory",
+  "cited": 2,
+  "authors": [
+   "Bruce L. Chalmers"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "absolute projection constant",
+  "title": "Absolute projektionskostanten endlichdimensionaler teilräume von \\(C^{k}(I)\\): Absolute projection costants of finite-dimensional subspaces of \\(C^{k}(I)\\)",
+  "doi": null,
+  "date": "2001-08-01",
+  "venue": "Journal of Numerical Analysis and Approximation Theory",
+  "cited": 0,
+  "authors": [
+   "Peter Pottinger"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "projection constant rank three Banach space",
+  "title": "On measurable projections in Banach spaces",
+  "doi": "https://doi.org/10.2140/pjm.1981.97.453",
+  "date": "1981-12-01",
+  "venue": "Pacific Journal of Mathematics",
+  "cited": 27,
+  "authors": [
+   "Elias Saab"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "projection constant rank three Banach space",
+  "title": "NORM-ONE PROJECTIONS IN BANACH SPACES",
+  "doi": "https://doi.org/10.11650/twjm/1500574888",
+  "date": "2001-03-01",
+  "venue": "Taiwanese Journal of Mathematics",
+  "cited": 40,
+  "authors": [
+   "Beata Randrianantoanina"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "projection constant rank three Banach space",
+  "title": "History of Banach Spaces and Linear Operators",
+  "doi": "https://doi.org/10.1007/978-0-8176-4596-0",
+  "date": "2007-01-01",
+  "venue": "Birkhäuser Boston eBooks",
+  "cited": 295,
+  "authors": [
+   "Albrecht Pietsch"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "projection constant rank three Banach space",
+  "title": "Lipschitz-free Banach spaces",
+  "doi": "https://doi.org/10.4064/sm159-1-6",
+  "date": "2003-01-01",
+  "venue": "Studia Mathematica",
+  "cited": 275,
+  "authors": [
+   "Gilles Godefroy",
+   "N. J. Kalton"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "projection constant rank three Banach space",
+  "title": "The Nonlinear Geometry of Banach Spaces",
+  "doi": "https://doi.org/10.5209/rev_rema.2008.v21.n1.16426",
+  "date": "2008-04-15",
+  "venue": "Revista Matemática Complutense",
+  "cited": 79,
+  "authors": [
+   "N. J. Kalton"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "projection constant rank three Banach space",
+  "title": "Banach spaces with the Daugavet property",
+  "doi": "https://doi.org/10.1090/s0002-9947-99-02377-6",
+  "date": "1999-09-17",
+  "venue": "Transactions of the American Mathematical Society",
+  "cited": 159,
+  "authors": [
+   "Vladimir M. Kadets",
+   "Roman V. Shvidkoy",
+   "Gleb Sirotkin",
+   "Dirk Werner"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "projection constant rank three Banach space",
+  "title": "Projection Constants and Banach-Mazur Distance in Codimension Two",
+  "doi": "https://doi.org/10.48550/arxiv.2610.06141",
+  "date": "2026-10-05",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Beata Derȩgowska",
+   "Barbara Lewandowska"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "projection constant rank three Banach space",
+  "title": "Spaces with maximal projection constants",
+  "doi": "https://doi.org/10.4064/sm159-3-2",
+  "date": "2003-01-01",
+  "venue": "Studia Mathematica",
+  "cited": 4,
+  "authors": [
+   "Hermann König",
+   "Nicole Tomczak-jaegermann B"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "projection constant rank three Banach space",
+  "title": "Representations of a semisimple Lie group on a Banach space. I",
+  "doi": "https://doi.org/10.1090/s0002-9947-1953-0056610-2",
+  "date": "1953-01-01",
+  "venue": "Transactions of the American Mathematical Society",
+  "cited": 268,
+  "authors": [
+   "Harish-chandra Harish-Chandra"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "projection constant rank three Banach space",
+  "title": "FUNCTORS IN CATEGORIES OF BANACH SPACES",
+  "doi": "https://doi.org/10.1070/rm1964v019n02abeh001146",
+  "date": "1964-04-30",
+  "venue": "Russian Mathematical Surveys",
+  "cited": 45,
+  "authors": [
+   "Boris Samuilovich Mityagin",
+   "A. S. Shvart︠s︡"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "projection constant rank three Banach space",
+  "title": "On perturbations for oblique projection generalized inverses of closed linear operators in Banach spaces",
+  "doi": "https://doi.org/10.1016/j.laa.2010.12.033",
+  "date": "2011-01-27",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 12,
+  "authors": [
+   "Qianglian Huang"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "projection constant rank three Banach space",
+  "title": "Characterizations of Banach spaces not containing $L 1$",
+  "doi": null,
+  "date": "1989-01-01",
+  "venue": "Data Archiving and Networked Services (DANS)",
+  "cited": 86,
+  "authors": [
+   "D. van Dulst"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "projection constant rank three Banach space",
+  "title": "Projection constants for spaces of multivariate polynomials",
+  "doi": "https://doi.org/10.48550/arxiv.2208.06467",
+  "date": "2022-08-12",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Andreas Defant",
+   "Daniel Galicer",
+   "Martín Mansilla",
+   "Mieczysław Mastyło",
+   "Santiago Muro"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "projection constant rank three Banach space",
+  "title": "Local constants and Bohr’s phenomenon for Banach spaces of analytic polynomials",
+  "doi": "https://doi.org/10.1090/tran/9643",
+  "date": "2026-05-01",
+  "venue": "Transactions of the American Mathematical Society",
+  "cited": 0,
+  "authors": [
+   "Andreas Defant",
+   "D. Galicer",
+   "M. Mansilla",
+   "Mieczysław Mastyło",
+   "S. Muro"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "projection constant rank three Banach space",
+  "title": "Classification of Ideals in Banach Spaces",
+  "doi": "https://doi.org/10.9734/arjom/2023/v19i11760",
+  "date": "2023-11-17",
+  "venue": "Asian Research Journal of Mathematics",
+  "cited": 0,
+  "authors": [
+   "Wanjala Patrick Makila",
+   "Ojiema Michael Onyango",
+   "Achiles Nyongesa Simiyu"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "projection constant rank three Banach space",
+  "title": "Convex optimization in sums of Banach spaces",
+  "doi": "https://doi.org/10.1016/j.acha.2021.07.002",
+  "date": "2021-07-28",
+  "venue": "Applied and Computational Harmonic Analysis",
+  "cited": 15,
+  "authors": [
+   "Michael A. Unser",
+   "Shayan Aziznejad"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "projection constant rank three Banach space",
+  "title": "Holomorphic functions on Banach spaces",
+  "doi": "https://doi.org/10.1285/i15900932v25n2p113",
+  "date": "2009-09-18",
+  "venue": "Note di matematica/Note di matematica - Università degli studi di Lecce",
+  "cited": 7,
+  "authors": [
+   "Jorge Mújica"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "projection constant rank three Banach space",
+  "title": "Actions of higher rank groups on uniformly convex Banach spaces",
+  "doi": "https://doi.org/10.48550/arxiv.2303.01405",
+  "date": "2023-03-02",
+  "venue": "arXiv (Cornell University)",
+  "cited": 2,
+  "authors": [
+   "Tim de Laat",
+   "Mikael DE LA SALLE"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "projection constant rank three Banach space",
+  "title": "Local duality for Banach spaces",
+  "doi": "https://doi.org/10.1016/j.exmath.2014.04.002",
+  "date": "2014-04-21",
+  "venue": "Expositiones Mathematicae",
+  "cited": 3,
+  "authors": [
+   "Manuel González",
+   "Antonio Martínez-Abejón"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "projection constant rank three Banach space",
+  "title": "The bidual of a tensor product of Banach spaces",
+  "doi": "https://doi.org/10.4171/rmi/437",
+  "date": "2005-12-31",
+  "venue": "Revista Matemática Iberoamericana",
+  "cited": 13,
+  "authors": [
+   "Félix Cabello Sánchez",
+   "Ricardo García"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "projection constant rank three Banach space",
+  "title": "Tensor products of banach spaces",
+  "doi": null,
+  "date": "1974-01-01",
+  "venue": "ERA",
+  "cited": 0,
+  "authors": [
+   "Hamish K. Milne"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "projection constant rank three Banach space",
+  "title": "Spaces with the maximal projection constant revisited",
+  "doi": "https://doi.org/10.48550/arxiv.2505.24526",
+  "date": "2025-05-30",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Tomasz Kobos"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "projection constant rank three Banach space",
+  "title": "Free Objects in Banach Space Theory",
+  "doi": "https://doi.org/10.1007/978-3-031-62025-6_6",
+  "date": "2024-01-01",
+  "venue": "RSME Springer series",
+  "cited": 3,
+  "authors": [
+   "Enrique García-Sánchez",
+   "David de Hevia",
+   "Pedro Tradacete"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "projection constant rank three Banach space",
+  "title": "Coefficient quantization for frames in Banach spaces",
+  "doi": "https://doi.org/10.1016/j.jmaa.2008.06.055",
+  "date": "2008-07-11",
+  "venue": "Journal of Mathematical Analysis and Applications",
+  "cited": 50,
+  "authors": [
+   "Peter G. Casazza",
+   "S. J. Dilworth",
+   "Edward William Odell",
+   "Th. Schlumprecht",
+   "András Zsák"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "projection constant rank three Banach space",
+  "title": "A note on Banach spaces of Lipschitz functions",
+  "doi": "https://doi.org/10.2140/pjm.1975.58.475",
+  "date": "1975-06-01",
+  "venue": "Pacific Journal of Mathematics",
+  "cited": 48,
+  "authors": [
+   "Jerry A. Johnson"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "joint moment bound eigenvalues graph",
+  "title": "Bulk eigenvalue statistics for random regular graphs",
+  "doi": "https://doi.org/10.1214/16-aop1145",
+  "date": "2017-11-01",
+  "venue": "The Annals of Probability",
+  "cited": 54,
+  "authors": [
+   "Roland Bauerschmidt",
+   "Jiaoyang Huang",
+   "Antti Knowles",
+   "Horng‐Tzer Yau"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "joint moment bound eigenvalues graph",
+  "title": "Upper Tails for Edge Eigenvalues of Random Graphs",
+  "doi": "https://doi.org/10.1137/18m1230852",
+  "date": "2020-01-01",
+  "venue": "SIAM Journal on Discrete Mathematics",
+  "cited": 19,
+  "authors": [
+   "Bhaswar B. Bhattacharya",
+   "Shirshendu Ganguly"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "joint moment bound eigenvalues graph",
+  "title": "High eigenvalues of sparse random graphs",
+  "doi": null,
+  "date": "2019-09-30",
+  "venue": "theses.fr (ABES)",
+  "cited": 0,
+  "authors": [
+   "Simon Coste"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "joint moment bound eigenvalues graph",
+  "title": "Optimizing Extremal Eigenvalues of Weighted Graph Laplacians and Associated Graph Realizations",
+  "doi": null,
+  "date": "2012-03-23",
+  "venue": "Qucosa (Saxon State and University Library Dresden)",
+  "cited": 2,
+  "authors": [
+   "Susanna Reiß"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "joint moment bound eigenvalues graph",
+  "title": "Optimal Eigenvalue Rigidity of Random Regular Graphs",
+  "doi": "https://doi.org/10.48550/arxiv.2405.12161",
+  "date": "2024-05-20",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Jiaoyang Huang",
+   "Theo McKenzie",
+   "Horng‐Tzer Yau"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "joint moment bound eigenvalues graph",
+  "title": "Low eigenvalues of Laplacian matrices of large random graphs",
+  "doi": "https://doi.org/10.1007/s00440-011-0357-4",
+  "date": "2011-03-19",
+  "venue": "Probability Theory and Related Fields",
+  "cited": 10,
+  "authors": [
+   "Tiefeng Jiang"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "joint moment bound eigenvalues graph",
+  "title": "Joint EigenValue Decomposition for Quantum Information Theory and Processing",
+  "doi": "https://doi.org/10.5772/intechopen.102899",
+  "date": "2022-04-12",
+  "venue": "IntechOpen eBooks",
+  "cited": 0,
+  "authors": [
+   "Gilles Burel",
+   "Hugo Pillin",
+   "Paul Baird",
+   "El-Houssaïn Baghious",
+   "Roland Gautier"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "joint moment bound eigenvalues graph",
+  "title": "Eigenvalue distribution of bipartite large weighted random graphs. Resolvent approach",
+  "doi": "https://doi.org/10.48550/arxiv.1507.07529",
+  "date": "2015-07-27",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Valentin Vengerovsky"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "joint moment bound eigenvalues graph",
+  "title": "Central limit theorems for eigenvalues in a spiked population model",
+  "doi": null,
+  "date": "2008-01-01",
+  "venue": "HAL",
+  "cited": 133,
+  "authors": [
+   "Bai, Zhidong",
+   "Jianfeng Yao"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "joint moment bound eigenvalues graph",
+  "title": "Eigenvalue Distribution of Bipartite Large Weighted Random Graphs. Resolvent Approach",
+  "doi": "https://doi.org/10.15407/mag12.01.078",
+  "date": "2016-03-25",
+  "venue": "Zurnal matematiceskoj fiziki analiza geometrii",
+  "cited": 1,
+  "authors": [
+   "Valentin Vengerovsky"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "joint moment bound eigenvalues graph",
+  "title": "A sharp two-disk bound for the second positive Neumann eigenvalue under a curvature upper bound",
+  "doi": "https://doi.org/10.48550/arxiv.2609.26609",
+  "date": "2026-09-22",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Meiqi Liu",
+   "Zhouyu Long",
+   "Wenming Zou"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "joint moment bound eigenvalues graph",
+  "title": "On Eigenvalue Distribution of Random Matrices of Ihara Zeta Function of Large Random Graphs",
+  "doi": "https://doi.org/10.15407/mag13.03.268",
+  "date": "2017-09-11",
+  "venue": "Zurnal matematiceskoj fiziki analiza geometrii",
+  "cited": 4,
+  "authors": [
+   "Oleksiy Khorunzhiy"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "joint moment bound eigenvalues graph",
+  "title": "Return probability on Bienaymé-Galton-Watson trees and spectral asymptotics of sparse Erdős-Rényi random graphs",
+  "doi": "https://doi.org/10.48550/arxiv.2603.00344",
+  "date": "2026-02-27",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Markus Heydenreich",
+   "Peter Müller",
+   "Sara Terveer"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "joint moment bound eigenvalues graph",
+  "title": "RANDOM MATRICES: SHARP CONCENTRATION OF EIGENVALUES",
+  "doi": "https://doi.org/10.1142/s201032631350007x",
+  "date": "2013-07-01",
+  "venue": "Random Matrices Theory and Application",
+  "cited": 37,
+  "authors": [
+   "Terence Tao",
+   "Van Vu"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "joint moment bound eigenvalues graph",
+  "title": "Moment of a subspace and joint numerical range",
+  "doi": "https://doi.org/10.1080/03081087.2022.2064967",
+  "date": "2022-04-28",
+  "venue": "Linear and Multilinear Algebra",
+  "cited": 2,
+  "authors": [
+   "Abel H. Klobouk",
+   "Alejandro Varela"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "joint moment bound eigenvalues graph",
+  "title": "On eigenvalue distribution of random matrices of Ihara zeta function of large random graphs",
+  "doi": "https://doi.org/10.48550/arxiv.1508.07839",
+  "date": "2015-08-31",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Oleksiy Khorunzhiy"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "joint moment bound eigenvalues graph",
+  "title": "Asymptotic Joint Distribution of Extreme Sample Eigenvalues and Eigenvectors in the Spiked Population Model",
+  "doi": "https://doi.org/10.48550/arxiv.1304.6113",
+  "date": "2013-04-22",
+  "venue": "arXiv (Cornell University)",
+  "cited": 5,
+  "authors": [
+   "Dai Shi"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "joint moment bound eigenvalues graph",
+  "title": "Eigenvalues for the minors of Wigner matrices",
+  "doi": "https://doi.org/10.1214/21-aihp1226",
+  "date": "2022-10-07",
+  "venue": "Annales de l Institut Henri Poincaré Probabilités et Statistiques",
+  "cited": 5,
+  "authors": [
+   "Jiaoyang Huang"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "joint moment bound eigenvalues graph",
+  "title": "Wegner estimate and upper bound on the eigenvalue condition number of non‐Hermitian random matrices",
+  "doi": "https://doi.org/10.1002/cpa.22201",
+  "date": "2024-05-03",
+  "venue": "Communications on Pure and Applied Mathematics",
+  "cited": 8,
+  "authors": [
+   "László Erdős",
+   "Hong Chang Ji"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "joint moment bound eigenvalues graph",
+  "title": "Optimizing the Induced Correlation in Omnibus Joint Graph Embeddings",
+  "doi": "https://doi.org/10.48550/arxiv.2409.17544",
+  "date": "2024-09-26",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Konstantinos Pantazis",
+   "Michael W. Trosset",
+   "William N. Frost",
+   "Carey E. Priebe",
+   "Vince Lyzinski"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "joint moment bound eigenvalues graph",
+  "title": "Entropic diagram characterization of quantum coherence: Degenerate distillation and the maximum eigenvalue uncertainty bound",
+  "doi": "https://doi.org/10.1103/physrevresearch.7.023221",
+  "date": "2025-06-02",
+  "venue": "Physical Review Research",
+  "cited": 7,
+  "authors": [
+   "Tariq Aziz",
+   "Meng-Long Song",
+   "Ye Liu",
+   "Dong Wang"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "joint moment bound eigenvalues graph",
+  "title": "The Oriented Chromatic Number of Random Graphs of Bounded Degree",
+  "doi": "https://doi.org/10.1002/jgt.70137",
+  "date": "2026-09-28",
+  "venue": "Journal of Graph Theory",
+  "cited": 0,
+  "authors": [
+   "Karen Gunderson",
+   "JD Nir"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "joint moment bound eigenvalues graph",
+  "title": "Expander graphs and their applications",
+  "doi": "https://doi.org/10.1090/s0273-0979-06-01126-8",
+  "date": "2006-08-07",
+  "venue": "Bulletin of the American Mathematical Society",
+  "cited": 1728,
+  "authors": [
+   "Shlomo Hoory",
+   "Nathan Linial",
+   "Avi Wigderson"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "joint moment bound eigenvalues graph",
+  "title": "Spectral Extremal 1-Planar Graphs with Bounded Pentagon Packing",
+  "doi": "https://doi.org/10.48550/arxiv.2610.08888",
+  "date": "2026-10-06",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Zhanhe Zhang"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "joint moment bound eigenvalues graph",
+  "title": "Joint Independence Testing for Latent Position Random Graphs",
+  "doi": "https://doi.org/10.48550/arxiv.2610.34544",
+  "date": "2026-10-25",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Xiaoyi Wen",
+   "Zoltan Szabo"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "graphon eigenvalue extremal problem",
+  "title": "Zagreb Indices on Graphons: Asymptotic Properties, Extremal Analysis, and Network Assortativity",
+  "doi": "https://doi.org/10.46793/match.96-2.18125",
+  "date": "2026-01-30",
+  "venue": "match Communications in Mathematical and in Computer Chemistry",
+  "cited": 0,
+  "authors": [
+   "Mehdi Eliasi"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "graphon eigenvalue extremal problem",
+  "title": "Fluctuation of the largest eigenvalue of a kernel matrix with application in graphon-based random graphs",
+  "doi": "https://doi.org/10.1214/25-aap2220",
+  "date": "2025-11-24",
+  "venue": "The Annals of Applied Probability",
+  "cited": 2,
+  "authors": [
+   "Anirban Chatterjee",
+   "Jiaoyang Huang"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "graphon eigenvalue extremal problem",
+  "title": "Finitely forcible graphons",
+  "doi": "https://doi.org/10.48550/arxiv.0901.0929",
+  "date": "2009-01-07",
+  "venue": "arXiv (Cornell University)",
+  "cited": 4,
+  "authors": [
+   "László Lovász",
+   "Balázs Szegedy"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "graphon eigenvalue extremal problem",
+  "title": "Graphon Filters: Graph Signal Processing in the Limit",
+  "doi": "https://doi.org/10.1109/tsp.2021.3061575",
+  "date": "2021-01-01",
+  "venue": "IEEE Transactions on Signal Processing",
+  "cited": 28,
+  "authors": [
+   "Matthew W. Morency",
+   "Geert J. T. Leus"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "graphon eigenvalue extremal problem",
+  "title": "Graphon as a Bridge between Graphs and Manifolds",
+  "doi": "https://doi.org/10.48550/arxiv.2607.20213",
+  "date": "2026-07-22",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Dong Zhang"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "graphon eigenvalue extremal problem",
+  "title": "Prescribed Graphon Symmetries and Flavors of Rigidity",
+  "doi": "https://doi.org/10.3842/sigma.2026.073",
+  "date": "2026-08-10",
+  "venue": "Symmetry Integrability and Geometry Methods and Applications",
+  "cited": 0,
+  "authors": [
+   "Alexandru Chirvăsitu"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "graphon eigenvalue extremal problem",
+  "title": "Finitely forcible graphons with an almost arbitrary structure",
+  "doi": "https://doi.org/10.48550/arxiv.1809.05973",
+  "date": "2018-09-16",
+  "venue": "arXiv (Cornell University)",
+  "cited": 2,
+  "authors": [
+   "Daniel Král͏̌",
+   "Lovász, László Miklós",
+   "Jonathan A. Noel",
+   "Jakub Sosnovec"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "graphon eigenvalue extremal problem",
+  "title": "Fluctuations of subgraph counts in graphon based random graphs",
+  "doi": "https://doi.org/10.1017/s0963548322000335",
+  "date": "2022-12-09",
+  "venue": "Combinatorics Probability Computing",
+  "cited": 11,
+  "authors": [
+   "Bhaswar B. Bhattacharya",
+   "Anirban Chatterjee",
+   "Svante Janson"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "graphon eigenvalue extremal problem",
+  "title": "The dual Cheeger–Buser inequality for graphons and graphings",
+  "doi": "https://doi.org/10.1007/s00209-026-04069-6",
+  "date": "2026-07-08",
+  "venue": "Mathematische Zeitschrift",
+  "cited": 0,
+  "authors": [
+   "Mugdha Mahesh Pokharanakar"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "graphon eigenvalue extremal problem",
+  "title": "Finitely forcible graphons with an almost arbitrary structure",
+  "doi": "https://doi.org/10.19086/da.12058",
+  "date": "2020-01-01",
+  "venue": "Discrete Analysis",
+  "cited": 1,
+  "authors": [
+   "Jonathan A. Noel",
+   "Daniel Král͏̌",
+   "Laszlo Miklos Lovasz",
+   "Jakub Sosnovec"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "graphon eigenvalue extremal problem",
+  "title": "Gradient Flows on Graphons: Existence, Convergence, Continuity Equations",
+  "doi": "https://doi.org/10.1007/s10959-023-01271-8",
+  "date": "2023-07-03",
+  "venue": "Journal of Theoretical Probability",
+  "cited": 2,
+  "authors": [
+   "Sewoong Oh",
+   "Soumik Pal",
+   "Raghav Somani",
+   "Raghavendra Tripathi"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "graphon eigenvalue extremal problem",
+  "title": "Graphon estimation in bipartite networks",
+  "doi": "https://doi.org/10.70675/7d25dfedz1a61z4349zba8fz439aaddaa51c",
+  "date": "2023-11-23",
+  "venue": null,
+  "cited": 0,
+  "authors": [
+   "Etienne Donier-Meroz"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "graphon eigenvalue extremal problem",
+  "title": "Cheeger constants and bipartiteness ratios of Cayley graphons",
+  "doi": "https://doi.org/10.48550/arxiv.2610.01745",
+  "date": "2026-10-01",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Mugdha Mahesh Pokharanakar"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "graphon eigenvalue extremal problem",
+  "title": "On a question of Vera T. Sós about size forcing of graphons",
+  "doi": "https://doi.org/10.48550/arxiv.2103.09114",
+  "date": "2021-03-16",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Oliver Cooley",
+   "Mihyun Kang",
+   "Oleg Pikhurko"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "graphon eigenvalue extremal problem",
+  "title": "Modeling Sparse Graph Sequences and Signals Using Generalized Graphons",
+  "doi": "https://doi.org/10.1109/tsp.2024.3482350",
+  "date": "2024-01-01",
+  "venue": "IEEE Transactions on Signal Processing",
+  "cited": 2,
+  "authors": [
+   "Feng Quan Ji",
+   "Xingchao Jian",
+   "Wee Peng Tay"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "graphon eigenvalue extremal problem",
+  "title": "Central limit theorems for linear spectral statistics of inhomogeneous random graphs with graphon limits",
+  "doi": "https://doi.org/10.48550/arxiv.2412.19352",
+  "date": "2024-12-26",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Xiangyi Zhu",
+   "Yizhe Zhu"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "graphon eigenvalue extremal problem",
+  "title": "Two problems in extremal combinatorics",
+  "doi": "https://doi.org/10.31274/etd-20210609-132",
+  "date": "2021-01-01",
+  "venue": null,
+  "cited": 3,
+  "authors": [
+   "Alexander W. N. Riasanovsky"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "graphon eigenvalue extremal problem",
+  "title": "Emergence in graphs with near-extreme constraints",
+  "doi": "https://doi.org/10.48550/arxiv.2411.14556",
+  "date": "2024-11-21",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Charles Radin",
+   "Lorenzo A. Sadun"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "graphon eigenvalue extremal problem",
+  "title": "Upper Tails for Edge Eigenvalues of Random Graphs",
+  "doi": "https://doi.org/10.1137/18m1230852",
+  "date": "2020-01-01",
+  "venue": "SIAM Journal on Discrete Mathematics",
+  "cited": 19,
+  "authors": [
+   "Bhaswar B. Bhattacharya",
+   "Shirshendu Ganguly"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "graphon eigenvalue extremal problem",
+  "title": "On graphs with large third eigenvalue",
+  "doi": "https://doi.org/10.1016/j.laa.2026.03.031",
+  "date": "2026-03-31",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 0,
+  "authors": [
+   "Giacomo Leonida",
+   "Li Sida"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "graphon eigenvalue extremal problem",
+  "title": "An extremal problem motivated by triangle-free strongly regular graphs",
+  "doi": "https://doi.org/10.1016/j.jctb.2022.02.001",
+  "date": "2022-02-21",
+  "venue": "Journal of Combinatorial Theory Series B",
+  "cited": 1,
+  "authors": [
+   "Alexander Alexandrovich Razborov"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "graphon eigenvalue extremal problem",
+  "title": "Estimating Graph Dimension with Cross-validated Eigenvalues",
+  "doi": "https://doi.org/10.48550/arxiv.2108.03336",
+  "date": "2021-08-06",
+  "venue": "arXiv (Cornell University)",
+  "cited": 4,
+  "authors": [
+   "Fan Chen",
+   "Sébastien Roch",
+   "Karl Rohe",
+   "Shuqi Yu"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "graphon eigenvalue extremal problem",
+  "title": "Largest eigenvalue and top eigenvector statistics of large Euclidean random matrices",
+  "doi": "https://doi.org/10.1088/1751-8121/ae941c",
+  "date": "2026-08-03",
+  "venue": "Journal of Physics A Mathematical and Theoretical",
+  "cited": 0,
+  "authors": [
+   "Pasquale Casaburi",
+   "Pierpaolo Vivo"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "graphon eigenvalue extremal problem",
+  "title": "Two conjectures in spectral graph theory involving the linear combinations of graph eigenvalues",
+  "doi": "https://doi.org/10.48550/arxiv.2206.03723",
+  "date": "2022-06-08",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Lele Liu"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "graphon eigenvalue extremal problem",
+  "title": "Nordhaus–Gaddum and other bounds for the sum of squares of the positive eigenvalues of a graph",
+  "doi": "https://doi.org/10.1016/j.laa.2017.05.013",
+  "date": "2017-05-11",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 3,
+  "authors": [
+   "Clive H. Elphick",
+   "Mustapha Aouchiche"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "moments of isotropic measures optimal projective codes",
+  "title": "Moments of isotropic measures and optimal projective codes",
+  "doi": "https://doi.org/10.48550/arxiv.1904.11159",
+  "date": "2019-04-25",
+  "venue": "arXiv (Cornell University)",
+  "cited": 5,
+  "authors": [
+   "Alexey Alexandrovich Glazyrin"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "moments of isotropic measures optimal projective codes",
+  "title": "Chiral moments make chiral measures",
+  "doi": "https://doi.org/10.48550/arxiv.2603.26793",
+  "date": "2026-03-25",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Emilio Pisanty",
+   "Nicola Mayer",
+   "Andrés Ordóñez",
+   "Alexander Gabriel Löhr",
+   "Margarita Khokhlova"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "moments of isotropic measures optimal projective codes",
+  "title": "An optimal in situ multipole algorithm for the isotropic three-point correlation function",
+  "doi": "https://doi.org/10.1093/mnras/staf2275",
+  "date": "2025-12-24",
+  "venue": "Monthly Notices of the Royal Astronomical Society",
+  "cited": 0,
+  "authors": [
+   "Wenjie Ju",
+   "Longlong Feng",
+   "Zhiqi Huang",
+   "Xin Sun",
+   "Weishan Zhu"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "moments of isotropic measures optimal projective codes",
+  "title": "Design of Optimal Quincunx Filter Banks for Image Coding",
+  "doi": "https://doi.org/10.1155/2007/83858",
+  "date": "2006-11-05",
+  "venue": "EURASIP Journal on Advances in Signal Processing",
+  "cited": 25,
+  "authors": [
+   "Yi Chen",
+   "Michael D. Adams",
+   "Wu-Sheng Lu"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "moments of isotropic measures optimal projective codes",
+  "title": "Optimal measures for $p$-frame energies on spheres",
+  "doi": "https://doi.org/10.4171/rmi/1329",
+  "date": "2022-01-03",
+  "venue": "Revista Matemática Iberoamericana",
+  "cited": 10,
+  "authors": [
+   "Dmitriy Bilyk",
+   "Alexey Alexandrovich Glazyrin",
+   "Ryan Matzke",
+   "Josiah Park",
+   "Oleksandr Vlasiuk"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "moments of isotropic measures optimal projective codes",
+  "title": "Electromagnetic dipole moments of fermions",
+  "doi": "https://doi.org/10.5167/uzh-164371",
+  "date": "2014-01-01",
+  "venue": "Padua@research (University of Padova)",
+  "cited": 9,
+  "authors": [
+   "Matteo Fael"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "moments of isotropic measures optimal projective codes",
+  "title": "Depth selectivity in time-domain fNIRS by analyzing moments and time windows",
+  "doi": "https://doi.org/10.1117/12.2578518",
+  "date": "2021-03-03",
+  "venue": "Optical Tomography and Spectroscopy of Tissue",
+  "cited": 4,
+  "authors": [
+   "Aleh Sudakou",
+   "Heidrun Wabnitz",
+   "Lin Yang",
+   "Davide Contini",
+   "Lorenzo Spinelli"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "moments of isotropic measures optimal projective codes",
+  "title": "Readout-Rank Laws for Isotropic Quantum Tangents",
+  "doi": "https://doi.org/10.48550/arxiv.2608.07628",
+  "date": "2026-08-07",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Marwan Ait Haddou"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "moments of isotropic measures optimal projective codes",
+  "title": "The EGS5 Code System",
+  "doi": "https://doi.org/10.2172/877459",
+  "date": "2005-12-20",
+  "venue": null,
+  "cited": 425,
+  "authors": [
+   "Hideo Hirayama",
+   "Yoshihito Namito",
+   "Alex F. Bielajew",
+   "S.J. Wilderman",
+   "U. Michigan"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "moments of isotropic measures optimal projective codes",
+  "title": "Neural population geometry and optimal coding of tasks with shared latent structure",
+  "doi": "https://doi.org/10.1038/s41593-025-02183-y",
+  "date": "2026-02-04",
+  "venue": "Nature Neuroscience",
+  "cited": 6,
+  "authors": [
+   "Albert J. Wakhloo",
+   "Will Slatton",
+   "SueYeon Chung"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "moments of isotropic measures optimal projective codes",
+  "title": "Biased Moments of Undersampled Sources",
+  "doi": "https://doi.org/10.48550/arxiv.2012.05528",
+  "date": "2020-12-10",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Andrew Bradshaw"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "moments of isotropic measures optimal projective codes",
+  "title": "Polyconvexity with Moments and Sums of Squares",
+  "doi": "https://doi.org/10.48550/arxiv.2604.11124",
+  "date": "2026-04-13",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Giovanni Fantuzzi",
+   "Didier Henrion",
+   "Martin Kružík",
+   "Ajay Murali",
+   "Stephan Weis"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "moments of isotropic measures optimal projective codes",
+  "title": "Mutually unbiased bases as extremal probes of isotropic random Hamiltonians",
+  "doi": "https://doi.org/10.48550/arxiv.2605.16060",
+  "date": "2026-05-15",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Abed Semre",
+   "Steven Frankel"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "moments of isotropic measures optimal projective codes",
+  "title": "Topology optimization of isotropic beam cross section accounting for stiffness and strength constraints",
+  "doi": "https://doi.org/10.1007/s00158-025-04185-7",
+  "date": "2025-11-15",
+  "venue": "Structural and Multidisciplinary Optimization",
+  "cited": 1,
+  "authors": [
+   "Zaiwei Lin",
+   "Marco Morandini"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "moments of isotropic measures optimal projective codes",
+  "title": "Six-dimensional single-molecule imaging with isotropic resolution using a multi-view reflector microscope",
+  "doi": "https://doi.org/10.1038/s41566-022-01116-6",
+  "date": "2022-12-05",
+  "venue": "Nature Photonics",
+  "cited": 62,
+  "authors": [
+   "Oumeng Zhang",
+   "Zijian Guo",
+   "Yuanyuan He",
+   "Tingting Wu",
+   "Michael D. Vahey"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "moments of isotropic measures optimal projective codes",
+  "title": "Revisiting the role of magnetic moments in heliospheric plasmas",
+  "doi": "https://doi.org/10.1051/0004-6361/201220965",
+  "date": "2013-02-18",
+  "venue": "Astronomy and Astrophysics",
+  "cited": 8,
+  "authors": [
+   "H. J. Fahr",
+   "M. Siewert"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "moments of isotropic measures optimal projective codes",
+  "title": "The RAGE radiation-hydrodynamic code",
+  "doi": "https://doi.org/10.1088/1749-4699/1/1/015005",
+  "date": "2008-11-20",
+  "venue": "Computational Science & Discovery",
+  "cited": 389,
+  "authors": [
+   "Michael Gittings",
+   "Robert Weaver",
+   "Michael Clover",
+   "Thomas Betlach",
+   "Nelson Byrne"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "moments of isotropic measures optimal projective codes",
+  "title": "Elucidating subcellular architecture and dynamics at isotropic 100-nm resolution with 4Pi-SIM",
+  "doi": "https://doi.org/10.1038/s41592-024-02515-z",
+  "date": "2024-12-23",
+  "venue": "Nature Methods",
+  "cited": 36,
+  "authors": [
+   "Zijing Ouyang",
+   "Qian Wang",
+   "Xiaoyu Li",
+   "Qiuyang Dai",
+   "Muyuan Tang"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "moments of isotropic measures optimal projective codes",
+  "title": "Shapes and Shears, Stars and Smears: Optimal Measurements for Weak Lensing",
+  "doi": "https://doi.org/10.1086/338085",
+  "date": "2002-02-01",
+  "venue": "The Astronomical Journal",
+  "cited": 521,
+  "authors": [
+   "G. M. Bernstein",
+   "M. Jarvis"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "moments of isotropic measures optimal projective codes",
+  "title": "Energy-Flow Moments for Elliptic Gluon Wigner Tomography",
+  "doi": "https://doi.org/10.48550/arxiv.2606.31708",
+  "date": "2026-06-30",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Lei Wang"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "moments of isotropic measures optimal projective codes",
+  "title": "Turbulence Statistics of Arbitrary Moments of Wall-Bounded Shear Flows: A Symmetry Approach",
+  "doi": "https://doi.org/10.1103/physrevlett.128.024502",
+  "date": "2022-01-10",
+  "venue": "Physical Review Letters",
+  "cited": 53,
+  "authors": [
+   "Martin Oberlack",
+   "Sergio Hoyas",
+   "Stefanie V. Kraheberger",
+   "Francisco Alcántara-Ávila",
+   "Jonathan Laux"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "moments of isotropic measures optimal projective codes",
+  "title": "Statistical Dynamics and Subgrid Modelling of Turbulence: From Isotropic to Inhomogeneous",
+  "doi": "https://doi.org/10.3390/atmos15080921",
+  "date": "2024-07-31",
+  "venue": "Atmosphere",
+  "cited": 3,
+  "authors": [
+   "Jorgen Segerlund Frederiksen",
+   "Vassili Kitsios",
+   "T. Okane"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "moments of isotropic measures optimal projective codes",
+  "title": "Isotropic stochastic gravitational wave background reconstruction for Taiji constellation",
+  "doi": "https://doi.org/10.48550/arxiv.2601.00169",
+  "date": "2026-01-01",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Yang Jiang",
+   "Qing-Guo Huang"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "moments of isotropic measures optimal projective codes",
+  "title": "Toward a Lattice Boltzmann Method for Solids—Application to Static Equilibrium of Isotropic Materials",
+  "doi": "https://doi.org/10.3390/app12094627",
+  "date": "2022-05-04",
+  "venue": "Applied Sciences",
+  "cited": 8,
+  "authors": [
+   "Tristan Maquart",
+   "Romain Noël",
+   "Guy Courbebaisse",
+   "Laurent Navarro"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "moments of isotropic measures optimal projective codes",
+  "title": "Diagonally-Weighted Generalized Method of Moments Estimation for Gaussian Mixture Modeling",
+  "doi": "https://doi.org/10.48550/arxiv.2507.20459",
+  "date": "2025-07-28",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Liu Zhang",
+   "Oscar Mickelin",
+   "Sheng Hua Xu",
+   "Amit Singer"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum graphs",
+  "title": "The Exact Maximum of the Spectral Sum of Graphs",
+  "doi": "https://doi.org/10.48550/arxiv.2607.23081",
+  "date": "2026-07-25",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Jing Huang",
+   "Wei Wei"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum graphs",
+  "title": "Maximum spectral sum of graphs",
+  "doi": "https://doi.org/10.48550/arxiv.2604.00512",
+  "date": "2026-04-01",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Hitesh Kumar",
+   "Lele Liu",
+   "Hermie Monterde",
+   "Shivaramakrishna Pragada",
+   "Michael Tait"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum graphs",
+  "title": "Wavelets on graphs via spectral graph theory",
+  "doi": "https://doi.org/10.1016/j.acha.2010.04.005",
+  "date": "2010-04-29",
+  "venue": "Applied and Computational Harmonic Analysis",
+  "cited": 2186,
+  "authors": [
+   "David Kenric Hammond",
+   "Pierre Vandergheynst",
+   "Rémi Gribonval"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum graphs",
+  "title": "Spectral Sparsification of Graphs",
+  "doi": "https://doi.org/10.1137/08074489x",
+  "date": "2011-01-01",
+  "venue": "SIAM Journal on Computing",
+  "cited": 416,
+  "authors": [
+   "Daniel Alan Spielman",
+   "Shang‐Hua Teng"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum graphs",
+  "title": "Joint Spectral Radius and Path-Complete Graph Lyapunov Functions",
+  "doi": "https://doi.org/10.1137/110855272",
+  "date": "2014-01-01",
+  "venue": "SIAM Journal on Control and Optimization",
+  "cited": 114,
+  "authors": [
+   "Amir Ali Ahmadi",
+   "Raphaël M. Jungers",
+   "Pablo A. Parrilo",
+   "Mardavij Roozbehani"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum graphs",
+  "title": "The Spectral Radius and the Maximum Degree of Irregular Graphs",
+  "doi": "https://doi.org/10.37236/956",
+  "date": "2007-05-23",
+  "venue": "The Electronic Journal of Combinatorics",
+  "cited": 50,
+  "authors": [
+   "Sebastian M. Cioabă"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum graphs",
+  "title": "The Maximum Spectral Radius of Graphs Without Friendship Subgraphs",
+  "doi": "https://doi.org/10.37236/9179",
+  "date": "2020-10-30",
+  "venue": "The Electronic Journal of Combinatorics",
+  "cited": 75,
+  "authors": [
+   "Sebastian M. Cioabă",
+   "Lihua Feng",
+   "Michael Tait",
+   "Xiao‐Dong Zhang"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum graphs",
+  "title": "On the spectral radius of graphs",
+  "doi": "https://doi.org/10.1016/j.laa.2004.01.020",
+  "date": "2004-04-21",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 111,
+  "authors": [
+   "Aimei Yu",
+   "Mei Lu",
+   "Feng Tian"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum graphs",
+  "title": "A Proof of a Conjecture on the Distance Spectral Radius and Maximum Transmission of Graphs",
+  "doi": "https://doi.org/10.1007/s00373-021-02455-x",
+  "date": "2022-02-01",
+  "venue": "Graphs and Combinatorics",
+  "cited": 2,
+  "authors": [
+   "Lele Liu",
+   "Haiying Shan",
+   "Changxiang He"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum graphs",
+  "title": "Distance spectral radius of trees with fixed maximum degree",
+  "doi": "https://doi.org/10.13001/1081-3810.1366",
+  "date": "2010-01-01",
+  "venue": "Electronic Journal of Linear Algebra",
+  "cited": 86,
+  "authors": [
+   "Dragan Stevanović",
+   "Aleksandar Ilić"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum graphs",
+  "title": "On the atom-bond sum-connectivity spectral radius of unicyclic graphs",
+  "doi": "https://doi.org/10.47443/dml.2025.015",
+  "date": "2025-05-06",
+  "venue": "Discrete Mathematics Letters",
+  "cited": 1,
+  "authors": [
+   "Zhen Lin",
+   "Yingke Liu"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum graphs",
+  "title": "The spectral radius of signless Laplacian matrix and sum-connectivity index of graphs",
+  "doi": "https://doi.org/10.1080/09728600.2022.2093686",
+  "date": "2022-07-06",
+  "venue": "AKCE International Journal of Graphs and Combinatorics",
+  "cited": 0,
+  "authors": [
+   "Akbar Jahanbani",
+   "Seyed Mahmoud Sheikholeslami"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum graphs",
+  "title": "Developments on spectral characterizations of graphs",
+  "doi": "https://doi.org/10.1016/j.disc.2008.08.019",
+  "date": "2008-09-22",
+  "venue": "Discrete Mathematics",
+  "cited": 250,
+  "authors": [
+   "Edwin van Dam",
+   "Willem H. Haemers"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum graphs",
+  "title": "Spectral Clustering with Graph Neural Networks for Graph Pooling",
+  "doi": "https://doi.org/10.48550/arxiv.1907.00481",
+  "date": "2019-06-30",
+  "venue": "arXiv (Cornell University)",
+  "cited": 285,
+  "authors": [
+   "Filippo Maria Bianchi",
+   "Daniele Grattarola",
+   "Cesare Alippi"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum graphs",
+  "title": "Graph Spectral Image Processing",
+  "doi": "https://doi.org/10.1109/jproc.2018.2799702",
+  "date": "2018-04-09",
+  "venue": "Proceedings of the IEEE",
+  "cited": 253,
+  "authors": [
+   "Gene Cheung",
+   "Enrico Magli",
+   "Yuichi Tanaka",
+   "Michael K. Ng"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum graphs",
+  "title": "Spectral radius and spanning trees of graphs",
+  "doi": "https://doi.org/10.1016/j.disc.2023.113400",
+  "date": "2023-03-07",
+  "venue": "Discrete Mathematics",
+  "cited": 11,
+  "authors": [
+   "Guoyan Ao",
+   "Ruifang Liu",
+   "Jinjiang Yuan"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum graphs",
+  "title": "Extremal graphs for the sum of two largest eigenvalues",
+  "doi": "https://doi.org/10.3934/math.2026618",
+  "date": "2026-01-01",
+  "venue": "AIMS Mathematics",
+  "cited": 0,
+  "authors": [
+   "Shaowei Sun",
+   "Yaping Min",
+   "Kinkar Chandra Das"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum graphs",
+  "title": "Maximum spectral gaps of graphs",
+  "doi": "https://doi.org/10.1016/j.laa.2025.10.024",
+  "date": "2025-10-24",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 0,
+  "authors": [
+   "George Brooks",
+   "William Linz",
+   "Linyuan Lü"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum graphs",
+  "title": "Spectral Graph Theory of the Hypercube",
+  "doi": null,
+  "date": "2008-12-01",
+  "venue": "Calhoun: The Naval Postgraduate School Institutional Archive (Naval Postgraduate School)",
+  "cited": 11,
+  "authors": [
+   "Stanley Florkowski"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum graphs",
+  "title": "Spectrally symmetric orientations of graphs",
+  "doi": "https://doi.org/10.48550/arxiv.2512.08049",
+  "date": "2025-12-08",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Akbari, Saieed",
+   "Aloni, Jonathan",
+   "Levit, Maxwell",
+   "Mohar, Bojan",
+   "Xia, Steven"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum graphs",
+  "title": "Ordering unicyclic graphs and bicyclic graphs by their \\(ABS\\) spectral radii",
+  "doi": "https://doi.org/10.30538/psrp-odam2025.0121",
+  "date": "2025-12-28",
+  "venue": "Open Journal of Discrete Applied Mathematics",
+  "cited": 0,
+  "authors": [
+   "Yingke Liu",
+   "Zhen Lin"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum graphs",
+  "title": "Spectral Characterization of Families of Split Graphs",
+  "doi": "https://doi.org/10.1007/s00373-013-1387-8",
+  "date": "2013-12-06",
+  "venue": "Graphs and Combinatorics",
+  "cited": 2,
+  "authors": [
+   "Milica Anđelić",
+   "Domingos M. Cardoso"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum graphs",
+  "title": "The maximum spectral radius of wheel-free graphs",
+  "doi": "https://doi.org/10.1016/j.disc.2021.112341",
+  "date": "2021-02-20",
+  "venue": "Discrete Mathematics",
+  "cited": 17,
+  "authors": [
+   "Yanhua Zhao",
+   "Xueyi Huang",
+   "Huiqiu Lin"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum graphs",
+  "title": "Spectral radius and Hamiltonicity of graphs",
+  "doi": "https://doi.org/10.1016/j.laa.2009.01.005",
+  "date": "2009-02-14",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 127,
+  "authors": [
+   "Miroslav Fiedler",
+   "Никифоров Владимир Олегович"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum graphs",
+  "title": "Rethinking Graph Transformers with Spectral Attention",
+  "doi": "https://doi.org/10.48550/arxiv.2106.03893",
+  "date": "2021-06-07",
+  "venue": "arXiv (Cornell University)",
+  "cited": 221,
+  "authors": [
+   "Devin Kreuzer",
+   "Dominique Beaini",
+   "William L. Hamilton",
+   "Vincent Létourneau",
+   "Prudencio Tossou"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "weighted sum of two largest eigenvalues graph",
+  "title": "Largest eigenvalues of sparse inhomogeneous Erdős–Rényi graphs",
+  "doi": "https://doi.org/10.1214/18-aop1293",
+  "date": "2019-05-01",
+  "venue": "The Annals of Probability",
+  "cited": 59,
+  "authors": [
+   "Florent Benaych-Georges",
+   "Charles Bordenave",
+   "Antti Knowles"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "weighted sum of two largest eigenvalues graph",
+  "title": "A nontrivial upper bound on the largest Laplacian eigenvalue of weighted graphs",
+  "doi": "https://doi.org/10.1016/j.laa.2006.08.022",
+  "date": "2006-10-11",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 16,
+  "authors": [
+   "Óscar Rojo"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "weighted sum of two largest eigenvalues graph",
+  "title": "A lower bound for the second largest Laplacian eigenvalue of weighted graphs",
+  "doi": "https://doi.org/10.13001/1081-3810.1501",
+  "date": "2011-01-01",
+  "venue": "Electronic Journal of Linear Algebra",
+  "cited": 9,
+  "authors": [
+   "Abraham Berman",
+   "Miriam Farber"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "weighted sum of two largest eigenvalues graph",
+  "title": "Interlacing eigenvalues and graphs",
+  "doi": "https://doi.org/10.1016/0024-3795(95)00199-2",
+  "date": "1995-09-01",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 467,
+  "authors": [
+   "Willem H. Haemers"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "weighted sum of two largest eigenvalues graph",
+  "title": "Weighted graphs: Eigenvalues and chromatic number",
+  "doi": "https://doi.org/10.5614/ejgta.2016.4.1.2",
+  "date": "2016-04-01",
+  "venue": "Electronic Journal of Graph Theory and Applications",
+  "cited": 1,
+  "authors": [
+   "Charles Delorme"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "weighted sum of two largest eigenvalues graph",
+  "title": "Hoffman-type Results for the Sum of k Largest Eigenvalues of a Graph",
+  "doi": "https://doi.org/10.48550/arxiv.2609.23707",
+  "date": "2026-09-20",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Shaowei Sun",
+   "Mengyao Guo",
+   "Hongyan Ge",
+   "Kinkar Chandra Das"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "weighted sum of two largest eigenvalues graph",
+  "title": "Powers' Conjecture on the Third Largest Eigenvalue of a Graph",
+  "doi": "https://doi.org/10.31979/etd.kkej-tu27",
+  "date": "2026-09-25",
+  "venue": null,
+  "cited": 0,
+  "authors": [
+   "Kevin Schmidt"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "weighted sum of two largest eigenvalues graph",
+  "title": "On the sum of Laplacian eigenvalues of a signed graph",
+  "doi": "https://doi.org/10.1016/j.laa.2018.06.005",
+  "date": "2018-06-06",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 2,
+  "authors": [
+   "Dijian Wang",
+   "Yaoping Hou"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "weighted sum of two largest eigenvalues graph",
+  "title": "On the sum of the Laplacian eigenvalues of a tree",
+  "doi": "https://doi.org/10.1016/j.laa.2011.01.036",
+  "date": "2011-02-25",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 87,
+  "authors": [
+   "Eliseu Fritscher",
+   "Carlos Hoppen",
+   "Israel Rocha",
+   "Vilmar Trevisan"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "weighted sum of two largest eigenvalues graph",
+  "title": "Eigenvalues and expansion of regular graphs",
+  "doi": "https://doi.org/10.1145/210118.210136",
+  "date": "1995-09-01",
+  "venue": "Journal of the ACM",
+  "cited": 106,
+  "authors": [
+   "Nabil Kahalé"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "weighted sum of two largest eigenvalues graph",
+  "title": "Fluctuation of the largest eigenvalue of a kernel matrix with application in graphon-based random graphs",
+  "doi": "https://doi.org/10.1214/25-aap2220",
+  "date": "2025-11-24",
+  "venue": "The Annals of Applied Probability",
+  "cited": 2,
+  "authors": [
+   "Anirban Chatterjee",
+   "Jiaoyang Huang"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "weighted sum of two largest eigenvalues graph",
+  "title": "Optimizing Extremal Eigenvalues of Weighted Graph Laplacians and Associated Graph Realizations",
+  "doi": null,
+  "date": "2012-03-23",
+  "venue": "Qucosa (Saxon State and University Library Dresden)",
+  "cited": 2,
+  "authors": [
+   "Susanna Reiß"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "weighted sum of two largest eigenvalues graph",
+  "title": "Conic programming to understand sums of squares of eigenvalues of graphs",
+  "doi": "https://doi.org/10.48550/arxiv.2411.08184",
+  "date": "2024-11-12",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Gabriel Coutinho",
+   "Thomás Jung Spier",
+   "Shengtong Zhang"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "weighted sum of two largest eigenvalues graph",
+  "title": "Graph invertibility and median eigenvalues",
+  "doi": "https://doi.org/10.1016/j.laa.2016.10.020",
+  "date": "2016-10-26",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 22,
+  "authors": [
+   "Dong Ye",
+   "Yujun Yang",
+   "Bholanath Mandal",
+   "Douglas J. Klein"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "weighted sum of two largest eigenvalues graph",
+  "title": "Upper Tails for Edge Eigenvalues of Random Graphs",
+  "doi": "https://doi.org/10.1137/18m1230852",
+  "date": "2020-01-01",
+  "venue": "SIAM Journal on Discrete Mathematics",
+  "cited": 19,
+  "authors": [
+   "Bhaswar B. Bhattacharya",
+   "Shirshendu Ganguly"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "weighted sum of two largest eigenvalues graph",
+  "title": "A Combinatorial Algorithm for Minimizing the Maximum Laplacian Eigenvalue of Weighted Bipartite Graphs",
+  "doi": null,
+  "date": "2015-11-13",
+  "venue": "Qucosa (Saxon State and University Library Dresden)",
+  "cited": 0,
+  "authors": [
+   "Christoph Helmberg",
+   "Israel Rocha",
+   "Uwe Schwerdtfeger"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "weighted sum of two largest eigenvalues graph",
+  "title": "On the Sum of the Largest and Smallest Eigenvalue of Odd-Cycle Free Fraphs",
+  "doi": "https://doi.org/10.37236/14427",
+  "date": "2026-05-08",
+  "venue": "The Electronic Journal of Combinatorics",
+  "cited": 0,
+  "authors": [
+   "Aida Abiad",
+   "Vladislav Taranchuk",
+   "Thijs van Veluw"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "weighted sum of two largest eigenvalues graph",
+  "title": "On reciprocal eigenvalue property of weighted trees",
+  "doi": "https://doi.org/10.1016/j.laa.2011.09.017",
+  "date": "2011-10-15",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 19,
+  "authors": [
+   "Michael Neumann",
+   "Sukanta Pati"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "weighted sum of two largest eigenvalues graph",
+  "title": "Eigenvalues of Matrices and Graphs",
+  "doi": null,
+  "date": "2012-08-31",
+  "venue": "Qucosa (Saxon State and University Library Dresden)",
+  "cited": 6,
+  "authors": [
+   "Mario Thüne"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "weighted sum of two largest eigenvalues graph",
+  "title": "Laplacian eigenvalues of the zero divisor graph of the ring Z n",
+  "doi": "https://doi.org/10.1016/j.laa.2019.08.015",
+  "date": "2019-08-20",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 80,
+  "authors": [
+   "Sriparna Chattopadhyay",
+   "Kamal Lochan Patra",
+   "Binod Kumar Sahoo"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "weighted sum of two largest eigenvalues graph",
+  "title": "On graphs with large third eigenvalue",
+  "doi": "https://doi.org/10.1016/j.laa.2026.03.031",
+  "date": "2026-03-31",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 0,
+  "authors": [
+   "Giacomo Leonida",
+   "Li Sida"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "weighted sum of two largest eigenvalues graph",
+  "title": "Estimates of the first Dirichlet eigenvalue of graphs",
+  "doi": "https://doi.org/10.48550/arxiv.2510.04557",
+  "date": "2025-10-06",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Huiqiu Lin",
+   "L. Liu",
+   "Zhe You",
+   "Zhao Da"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "weighted sum of two largest eigenvalues graph",
+  "title": "Sharp upper bounds for the Laplacian graph eigenvalues",
+  "doi": "https://doi.org/10.1016/s0024-3795(02)00353-1",
+  "date": "2002-10-11",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 57,
+  "authors": [
+   "Yong-Liang Pan"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "weighted sum of two largest eigenvalues graph",
+  "title": "At the end of the spectrum: chromatic bounds for the largest eigenvalue of the normalized Laplacian",
+  "doi": "https://doi.org/10.1088/2632-072x/adcc71",
+  "date": "2025-04-14",
+  "venue": "Journal of Physics Complexity",
+  "cited": 1,
+  "authors": [
+   "Lies Beers",
+   "Raffaella Mulas"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "weighted sum of two largest eigenvalues graph",
+  "title": "Maximum spectral sum of graphs",
+  "doi": "https://doi.org/10.48550/arxiv.2604.00512",
+  "date": "2026-04-01",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Hitesh Kumar",
+   "Lele Liu",
+   "Hermie Monterde",
+   "Shivaramakrishna Pragada",
+   "Michael Tait"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "lambda1 plus twice lambda2 graph",
+  "title": "IL-4 enhances IFN-λ1 (IL-29) production by plasmacytoid DCs via monocyte secretion of IL-1Ra",
+  "doi": "https://doi.org/10.1182/blood-2009-09-246157",
+  "date": "2010-03-17",
+  "venue": "Blood",
+  "cited": 41,
+  "authors": [
+   "Nicholas J. Megjugorac",
+   "Grant E. Gallagher",
+   "Grant E. Gallagher"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "lambda1 plus twice lambda2 graph",
+  "title": "Machine Learning Methods for Brain Lesion Delineation",
+  "doi": "https://doi.org/10.20381/ruor-25380",
+  "date": "2020-10-02",
+  "venue": "uO Research (University of Ottawa)",
+  "cited": 0,
+  "authors": [
+   "Kevin Raina"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "lambda1 plus twice lambda2 graph",
+  "title": "Differential expression of interferon-lambda receptor 1 splice variants determines the magnitude of the antiviral response induced by interferon-lambda 3 in human immune cells",
+  "doi": "https://doi.org/10.1371/journal.ppat.1008515",
+  "date": "2020-04-30",
+  "venue": "PLoS Pathogens",
+  "cited": 61,
+  "authors": [
+   "Deanna M. Santer",
+   "Gillian E. S. Minty",
+   "Dominic P. Golec",
+   "Julia Lu",
+   "Julia F. May"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "lambda1 plus twice lambda2 graph",
+  "title": "Development of the D-Optimality-Based Coordinate-Exchange Algorithm for an Irregular Design Space and the Mixed-Integer Nonlinear Robust Parameter Design Optimization",
+  "doi": null,
+  "date": "2017-01-01",
+  "venue": "TigerPrints (Clemson University)",
+  "cited": 0,
+  "authors": [
+   "Akın Özdemir"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "lambda1 plus twice lambda2 graph",
+  "title": "Inter-loop optimization in RAJA using loop chains",
+  "doi": "https://doi.org/10.1145/3447818.3461665",
+  "date": "2021-06-03",
+  "venue": "International Conference on Supercomputing",
+  "cited": 2,
+  "authors": [
+   "Brandon Neth",
+   "Tom Scogland",
+   "Bronis R. de Supinski",
+   "Michelle Mills Strout"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "lambda1 plus twice lambda2 graph",
+  "title": "Temperature-sensitive mutants in the vaccinia virus 4b virion structural protein assemble malformed, transcriptionally inactive intracellular mature virions",
+  "doi": "https://doi.org/10.1016/j.virol.2004.08.038",
+  "date": "2004-10-21",
+  "venue": "Virology",
+  "cited": 25,
+  "authors": [
+   "Sayuri E. M. Kato",
+   "Audra L. Strahl",
+   "Nissin Moussatché",
+   "RICHARD C. CONDIT"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "lambda1 plus twice lambda2 graph",
+  "title": "HiRel: Hybrid Automated Reliability Predictor (HARP) integrated reliability tool system, (version 7.0). Volume 2: HARP tutorial",
+  "doi": null,
+  "date": "1994-11-01",
+  "venue": "NASA Technical Reports Server (NASA)",
+  "cited": 13,
+  "authors": [
+   "Elizabeth Rothmann",
+   "J.B. Dugan",
+   "Kishor Shridharbhai Trivedi",
+   "Nitin Mittal",
+   "Salvatore J. Bavuso"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "lambda1 plus twice lambda2 graph",
+  "title": "Design and applications of a tunable multi-wavelength SFL",
+  "doi": "https://doi.org/10.82308/13096",
+  "date": "2006-01-01",
+  "venue": "eScholarship@McGill (McGill)",
+  "cited": 0,
+  "authors": [
+   "Véronique. Pagé"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "lambda1 plus twice lambda2 graph",
+  "title": "Digital Holography for Three Dimensional Tomographic and Topographic Measurements",
+  "doi": null,
+  "date": "2014-01-01",
+  "venue": "OhioLink ETD Center (Ohio Library and Information Network)",
+  "cited": 1,
+  "authors": [
+   "Logan A. Williams"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "lambda1 plus twice lambda2 graph",
+  "title": "The association of Adherence to the Mediterranean Diet with Mortality in the EPIC-Spain cohort using Flexible Parametric Survival Models",
+  "doi": null,
+  "date": "2016-06-01",
+  "venue": "UPCommons institutional repository (Universitat Politècnica de Catalunya)",
+  "cited": 0,
+  "authors": [
+   "Yovaninna Alarcón‐Soto"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "lambda1 plus twice lambda2 graph",
+  "title": "Modelling the load curve of aggregate electricity consumption using principal components",
+  "doi": "https://doi.org/10.1016/j.envsoft.2004.09.019",
+  "date": "2005-01-04",
+  "venue": "Environmental Modelling & Software",
+  "cited": 80,
+  "authors": [
+   "Matteo Manera",
+   "Angelo Marzullo"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "lambda1 plus twice lambda2 graph",
+  "title": "The design of a neural network compiler",
+  "doi": null,
+  "date": "1994-01-01",
+  "venue": "Loughborough University Research Repository (Loughborough University)",
+  "cited": 0,
+  "authors": [
+   "Md. Nasir Sulaiman"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "lambda1 plus twice lambda2 graph",
+  "title": "SciBench: Evaluating College-Level Scientific Problem-Solving Abilities of Large Language Models",
+  "doi": "https://doi.org/10.48550/arxiv.2307.10635",
+  "date": "2023-07-20",
+  "venue": "arXiv (Cornell University)",
+  "cited": 23,
+  "authors": [
+   "Xiaoxuan Wang",
+   "Ziniu Hu",
+   "Lu, Pan",
+   "Yanqiao Zhu",
+   "Jieyu Zhang"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "lambda1 plus twice lambda2 graph",
+  "title": "MBESS: The MBESS R Package",
+  "doi": "https://doi.org/10.32614/cran.package.mbess",
+  "date": "2006-05-06",
+  "venue": null,
+  "cited": 4,
+  "authors": [
+   "Ken Kelley"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "lambda1 plus twice lambda2 graph",
+  "title": "INFLATION TARGETING UNDER IMPERFECT CREDIBILITY: LESSONS FROM INDONESIAN EXPERIENCE",
+  "doi": "https://doi.org/10.21098/bemp.v13i3.394",
+  "date": "2011-05-30",
+  "venue": "Bulletin of Monetary Economics and Banking",
+  "cited": 8,
+  "authors": [
+   "Harmanta Harmanta",
+   "M. Barik Bathaluddin",
+   "Jati Waluyo"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "lambda1 plus twice lambda2 graph",
+  "title": "Rare-Earth Doped Wide Bandgap Oxide Semiconductor Materials and Devices",
+  "doi": null,
+  "date": "2009-09-16",
+  "venue": "NCSU Libraries Repository (North Carolina State University Libraries)",
+  "cited": 0,
+  "authors": [
+   "Patrick Wellenius"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "lambda1 plus twice lambda2 graph",
+  "title": "Faculty Opinions recommendation of Skin-resident innate lymphoid cells converge on a pathogenic effector state.",
+  "doi": "https://doi.org/10.3410/f.739476912.793584254",
+  "date": "2021-03-31",
+  "venue": "Faculty Opinions – Post-Publication Peer Review of the Biomedical Literature",
+  "cited": 0,
+  "authors": [
+   "Taylor Alan Doherty",
+   "Kellen J. Cavagnero"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "lambda1 plus twice lambda2 graph",
+  "title": "PENALIZED REGRESSION: BOOTSTRAP CONFIDENCE INTERVALS AND VARIABLE SELECTION FOR HIGH-DIMENSIONAL DATA SETS",
+  "doi": "https://doi.org/10.13130/sartori-samantha_phd2011-02-04",
+  "date": "2011-02-04",
+  "venue": "Archivio Istituzionale della Ricerca (Universita Degli Studi Di Milano)",
+  "cited": 11,
+  "authors": [
+   "Samantha Sartori"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "lambda1 plus twice lambda2 graph",
+  "title": "Open-Psa Model Exchange Formal",
+  "doi": "https://doi.org/10.5281/zenodo.44224",
+  "date": "2015-12-31",
+  "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+  "cited": 0,
+  "authors": [
+   "Antoine B. Rauzy",
+   "Epstein, Steven"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum of graphs exact",
+  "title": "The Exact Maximum of the Spectral Sum of Graphs",
+  "doi": "https://doi.org/10.48550/arxiv.2607.23081",
+  "date": "2026-07-25",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Jing Huang",
+   "Wei Wei"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum of graphs exact",
+  "title": "Maximum spectral sum of graphs",
+  "doi": "https://doi.org/10.48550/arxiv.2604.00512",
+  "date": "2026-04-01",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Hitesh Kumar",
+   "Lele Liu",
+   "Hermie Monterde",
+   "Shivaramakrishna Pragada",
+   "Michael Tait"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum of graphs exact",
+  "title": "Wavelets on graphs via spectral graph theory",
+  "doi": "https://doi.org/10.1016/j.acha.2010.04.005",
+  "date": "2010-04-29",
+  "venue": "Applied and Computational Harmonic Analysis",
+  "cited": 2186,
+  "authors": [
+   "David Kenric Hammond",
+   "Pierre Vandergheynst",
+   "Rémi Gribonval"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum of graphs exact",
+  "title": "The Spectral Radius and the Maximum Degree of Irregular Graphs",
+  "doi": "https://doi.org/10.37236/956",
+  "date": "2007-05-23",
+  "venue": "The Electronic Journal of Combinatorics",
+  "cited": 50,
+  "authors": [
+   "Sebastian M. Cioabă"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum of graphs exact",
+  "title": "Graph Spectral Image Processing",
+  "doi": "https://doi.org/10.1109/jproc.2018.2799702",
+  "date": "2018-04-09",
+  "venue": "Proceedings of the IEEE",
+  "cited": 253,
+  "authors": [
+   "Gene Cheung",
+   "Enrico Magli",
+   "Yuichi Tanaka",
+   "Michael K. Ng"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum of graphs exact",
+  "title": "Maximum spectral gaps of graphs",
+  "doi": "https://doi.org/10.1016/j.laa.2025.10.024",
+  "date": "2025-10-24",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 0,
+  "authors": [
+   "George Brooks",
+   "William Linz",
+   "Linyuan Lü"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum of graphs exact",
+  "title": "Spectral Alignment of Graphs",
+  "doi": "https://doi.org/10.1109/tnse.2019.2913233",
+  "date": "2019-04-25",
+  "venue": "IEEE Transactions on Network Science and Engineering",
+  "cited": 57,
+  "authors": [
+   "Soheil Feizi",
+   "Gerald Quon",
+   "Mariana Recamonde‐Mendoza",
+   "Muriel Médard",
+   "M Kellis"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum of graphs exact",
+  "title": "Infinite Lewis Weights in Spectral Graph Theory",
+  "doi": "https://doi.org/10.48550/arxiv.2302.05966",
+  "date": "2023-02-12",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Amit Suliman",
+   "Omri Weinstein"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum of graphs exact",
+  "title": "Asymptotic maximum spectral radius of nonregular graphs",
+  "doi": "https://doi.org/10.48550/arxiv.2610.04947",
+  "date": "2026-10-04",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Hangxi Cha",
+   "Haiying Shan"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum of graphs exact",
+  "title": "Decreasing the spectral radius of a graph by link removals",
+  "doi": "https://doi.org/10.1103/physreve.84.016101",
+  "date": "2011-07-06",
+  "venue": "Physical Review E",
+  "cited": 186,
+  "authors": [
+   "Piet Van Mieghem",
+   "Dragan Stevanović",
+   "Fernando A. Kuipers",
+   "Cong Li",
+   "Ruud van de Bovenkamp"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum of graphs exact",
+  "title": "Two-point spectral correlations for star graphs",
+  "doi": "https://doi.org/10.1088/0305-4470/32/45/302",
+  "date": "1999-10-28",
+  "venue": "Journal of Physics A Mathematical and General",
+  "cited": 76,
+  "authors": [
+   "Gregory Berkolaiko",
+   "Jonathan P. Keating"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum of graphs exact",
+  "title": "Exact variance-energy relations and optimal spectral bounds for graphs",
+  "doi": "https://doi.org/10.30538/oms2025.0261",
+  "date": "2025-10-16",
+  "venue": "Open Journal of Mathematical Sciences",
+  "cited": 1,
+  "authors": [
+   "Akbar Jahanbani",
+   "İvan Gutman"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum of graphs exact",
+  "title": "Nonregular graphs of odd maximum degree with maximum spectral radius",
+  "doi": "https://doi.org/10.48550/arxiv.2609.28706",
+  "date": "2026-09-23",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Liangdong Fan",
+   "Liying Kang",
+   "Yaojun Chen"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum of graphs exact",
+  "title": "Spectrally approximating large graphs with smaller graphs",
+  "doi": "https://doi.org/10.48550/arxiv.1802.07510",
+  "date": "2018-02-21",
+  "venue": "arXiv (Cornell University)",
+  "cited": 52,
+  "authors": [
+   "Andreas Loukas",
+   "Pierre Vandergheynst"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum of graphs exact",
+  "title": "Multi-graph fusion for multi-view spectral clustering",
+  "doi": "https://doi.org/10.1016/j.knosys.2019.105102",
+  "date": "2019-10-18",
+  "venue": "Knowledge-Based Systems",
+  "cited": 300,
+  "authors": [
+   "Zhao Kang",
+   "Guoxin Shi",
+   "Shudong Huang",
+   "Wenyu Chen",
+   "Xiaorong Pu"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum of graphs exact",
+  "title": "The maximum spectral radius of connected graphs with prescribed order and size",
+  "doi": "https://doi.org/10.48550/arxiv.2610.34905",
+  "date": "2026-10-25",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Dragan Stevanović"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum of graphs exact",
+  "title": "Nonregular graphs with a given maximum degree attaining the maximum spectral radius",
+  "doi": "https://doi.org/10.1016/j.jcta.2026.106271",
+  "date": "2026-10-08",
+  "venue": "Journal of Combinatorial Theory Series A",
+  "cited": 0,
+  "authors": [
+   "Zejun Huang",
+   "Jiahui Liu",
+   "Chenxi Yang"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum of graphs exact",
+  "title": "The spectral radius of graphs without paths and cycles of specified length",
+  "doi": "https://doi.org/10.1016/j.laa.2009.05.023",
+  "date": "2009-09-09",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 174,
+  "authors": [
+   "Никифоров Владимир Олегович"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum of graphs exact",
+  "title": "Joint Spectral Radius and Path-Complete Graph Lyapunov Functions",
+  "doi": "https://doi.org/10.1137/110855272",
+  "date": "2014-01-01",
+  "venue": "SIAM Journal on Control and Optimization",
+  "cited": 114,
+  "authors": [
+   "Amir Ali Ahmadi",
+   "Raphaël M. Jungers",
+   "Pablo A. Parrilo",
+   "Mardavij Roozbehani"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum of graphs exact",
+  "title": "Spectral graph theory of brain oscillations",
+  "doi": "https://doi.org/10.1002/hbm.24991",
+  "date": "2020-03-23",
+  "venue": "Human Brain Mapping",
+  "cited": 66,
+  "authors": [
+   "Ashish Raj",
+   "Chang Cai",
+   "Xihe Xie",
+   "Eva M. Palacios",
+   "Julia P. Owen"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum of graphs exact",
+  "title": "On the eccentric distance sum of graphs",
+  "doi": "https://doi.org/10.1016/j.jmaa.2011.02.086",
+  "date": "2011-03-07",
+  "venue": "Journal of Mathematical Analysis and Applications",
+  "cited": 102,
+  "authors": [
+   "Aleksandar Ilić",
+   "Guihai Yu",
+   "Lihua Feng"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum of graphs exact",
+  "title": "The spectral inducibility of graphs",
+  "doi": "https://doi.org/10.48550/arxiv.2605.30821",
+  "date": "2026-05-29",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Liying Kang",
+   "Xizhi Liu",
+   "Yongchun Lu"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum of graphs exact",
+  "title": "Spectral recognition of graphs",
+  "doi": "https://doi.org/10.2298/yjor120925025c",
+  "date": "2012-01-01",
+  "venue": "Yugoslav journal of operations research",
+  "cited": 13,
+  "authors": [
+   "Dragoš Cvetković"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum of graphs exact",
+  "title": "How Powerful are Spectral Graph Neural Networks",
+  "doi": "https://doi.org/10.48550/arxiv.2205.11172",
+  "date": "2022-05-23",
+  "venue": "arXiv (Cornell University)",
+  "cited": 109,
+  "authors": [
+   "Xiyuan Wang",
+   "Muhan Zhang"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "maximum spectral sum of graphs exact",
+  "title": "Quantum algorithms for spectral sums",
+  "doi": "https://doi.org/10.48550/arxiv.2011.06475",
+  "date": "2020-11-12",
+  "venue": "arXiv (Cornell University)",
+  "cited": 2,
+  "authors": [
+   "Alessandro Luongo",
+   "Changpeng Shao"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of k largest eigenvalues graph Mohar",
+  "title": "Sum of the $k$ Largest Eigenvalues of Symmetric Matrices: Theory and Applications",
+  "doi": "https://doi.org/10.48550/arxiv.2605.26707",
+  "date": "2026-05-26",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Shaowei Sun",
+   "Yaping Min",
+   "Kinkar Chandra Das"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of k largest eigenvalues graph Mohar",
+  "title": "On the sum of k largest eigenvalues of graphs and symmetric matrices",
+  "doi": "https://doi.org/10.1016/j.jctb.2008.07.001",
+  "date": "2008-08-01",
+  "venue": "Journal of Combinatorial Theory Series B",
+  "cited": 22,
+  "authors": [
+   "Bojan Mohar"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of k largest eigenvalues graph Mohar",
+  "title": "On the sum of k largest distance eigenvalues of graphs",
+  "doi": "https://doi.org/10.1016/j.dam.2018.12.031",
+  "date": "2019-01-21",
+  "venue": "Discrete Applied Mathematics",
+  "cited": 10,
+  "authors": [
+   "Huiqiu Lin"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of k largest eigenvalues graph Mohar",
+  "title": "Sum of the largest eigenvalues of symmetric matrices and graphs",
+  "doi": null,
+  "date": "2008-01-01",
+  "venue": "Summit (Simon Fraser University)",
+  "cited": 0,
+  "authors": [
+   "Javad B. Ebrahimi"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of k largest eigenvalues graph Mohar",
+  "title": "On the sum of the k largest eigenvalues of graphs and maximal energy of bipartite graphs",
+  "doi": "https://doi.org/10.1016/j.laa.2019.01.016",
+  "date": "2019-01-28",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 16,
+  "authors": [
+   "Kinkar Chandra Das",
+   "Seyed Ahmad Mojallal",
+   "Shaowei Sun"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of k largest eigenvalues graph Mohar",
+  "title": "On the sum of the largest $A_α$-eigenvalues of graphs",
+  "doi": "https://doi.org/10.48550/arxiv.2012.11177",
+  "date": "2020-12-21",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Z. Lin",
+   "Lianying Miao",
+   "Shuguang Guo"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of k largest eigenvalues graph Mohar",
+  "title": "On the sum of $k$-th largest distance eigenvalues of graphs",
+  "doi": "https://doi.org/10.48550/arxiv.1805.09661",
+  "date": "2018-05-24",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Huiqiu Lin"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of k largest eigenvalues graph Mohar",
+  "title": "Extremal graphs for the sum of two largest eigenvalues",
+  "doi": "https://doi.org/10.3934/math.2026618",
+  "date": "2026-01-01",
+  "venue": "AIMS Mathematics",
+  "cited": 0,
+  "authors": [
+   "Shaowei Sun",
+   "Yaping Min",
+   "Kinkar Chandra Das"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of k largest eigenvalues graph Mohar",
+  "title": "On the sum of signless Laplacian eigenvalues of a graph",
+  "doi": "https://doi.org/10.1016/j.laa.2013.01.023",
+  "date": "2013-03-08",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 30,
+  "authors": [
+   "Firouzeh Ashraf",
+   "G.R. Omidi",
+   "Behruz Tayfeh‐Rezaie"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of k largest eigenvalues graph Mohar",
+  "title": "On sum of powers of the Laplacian eigenvalues of graphs",
+  "doi": "https://doi.org/10.1016/j.laa.2008.06.023",
+  "date": "2008-08-04",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 89,
+  "authors": [
+   "Bo Zhou"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of k largest eigenvalues graph Mohar",
+  "title": "Hoffman-type Results for the Sum of k Largest Eigenvalues of a Graph",
+  "doi": "https://doi.org/10.48550/arxiv.2609.23707",
+  "date": "2026-09-20",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Shaowei Sun",
+   "Mengyao Guo",
+   "Hongyan Ge",
+   "Kinkar Chandra Das"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of k largest eigenvalues graph Mohar",
+  "title": "Interlacing eigenvalues and graphs",
+  "doi": "https://doi.org/10.1016/0024-3795(95)00199-2",
+  "date": "1995-09-01",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 467,
+  "authors": [
+   "Willem H. Haemers"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of k largest eigenvalues graph Mohar",
+  "title": "On the sum of two largest eigenvalues of a symmetric matrix",
+  "doi": "https://doi.org/10.1016/j.laa.2008.06.016",
+  "date": "2008-07-30",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 21,
+  "authors": [
+   "Javad B. Ebrahimi",
+   "Bojan Mohar",
+   "Никифоров Владимир Олегович",
+   "Azhvan Sheikh Ahmady"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of k largest eigenvalues graph Mohar",
+  "title": "Sum of the k Largest Signless Laplacian Eigenvalues",
+  "doi": "https://doi.org/10.5540/03.2018.006.01.0437",
+  "date": "2018-02-14",
+  "venue": "Proceeding Series of the Brazilian Society of Computational and Applied Mathematics",
+  "cited": 0,
+  "authors": [
+   "Guilherme Porto",
+   "Vilmar Trevisan"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of k largest eigenvalues graph Mohar",
+  "title": "Extremal graphs for the sum of the two largest signless Laplacian eigenvalues",
+  "doi": "https://doi.org/10.13001/1081-3810.3143",
+  "date": "2015-02-08",
+  "venue": "Electronic Journal of Linear Algebra",
+  "cited": 6,
+  "authors": [
+   "Carla Silva Oliveira",
+   "Leonardo de Lima",
+   "Paula Rama",
+   "Paula Carvalho"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of k largest eigenvalues graph Mohar",
+  "title": "On the sum of k largest singular values of graphs and matrices",
+  "doi": "https://doi.org/10.1016/j.laa.2010.08.014",
+  "date": "2010-10-13",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 27,
+  "authors": [
+   "Никифоров Владимир Олегович"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of k largest eigenvalues graph Mohar",
+  "title": "On the sum of powers of Laplacian eigenvalues of bipartite graphs",
+  "doi": "https://doi.org/10.1007/s10587-010-0081-8",
+  "date": "2010-11-13",
+  "venue": "Czechoslovak Mathematical Journal",
+  "cited": 23,
+  "authors": [
+   "Bo Zhou",
+   "Aleksandar Ilić"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of k largest eigenvalues graph Mohar",
+  "title": "de Caen's inequality and bounds on the largest Laplacian eigenvalue of a graph",
+  "doi": "https://doi.org/10.1016/s0024-3795(00)00307-4",
+  "date": "2001-05-01",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 58,
+  "authors": [
+   "Jiong-Sheng Li",
+   "Yong-Liang Pan"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of k largest eigenvalues graph Mohar",
+  "title": "Quadratic inequalities between the largest eigenvalues of a graph",
+  "doi": "https://doi.org/10.48550/arxiv.2609.37980",
+  "date": "2026-09-29",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Roland Paulin"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of k largest eigenvalues graph Mohar",
+  "title": "Partial sum of eigenvalues of random graphs",
+  "doi": "https://doi.org/10.21136/am.2020.0352-19",
+  "date": "2020-09-04",
+  "venue": "Applications of Mathematics",
+  "cited": 0,
+  "authors": [
+   "Israel Rocha"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of k largest eigenvalues graph Mohar",
+  "title": "The sum of the first two largest signless Laplacian eigenvalues of trees and unicyclic graphs",
+  "doi": "https://doi.org/10.13001/1081-3810.3405",
+  "date": "2019-02-01",
+  "venue": "Electronic Journal of Linear Algebra",
+  "cited": 4,
+  "authors": [
+   "Zhibin Du"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of k largest eigenvalues graph Mohar",
+  "title": "On the sum of the Laplacian eigenvalues of a tree",
+  "doi": "https://doi.org/10.1016/j.laa.2011.01.036",
+  "date": "2011-02-25",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 87,
+  "authors": [
+   "Eliseu Fritscher",
+   "Carlos Hoppen",
+   "Israel Rocha",
+   "Vilmar Trevisan"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of k largest eigenvalues graph Mohar",
+  "title": "Characterization of extremal graphs from Laplacian eigenvalues and the sum of powers of the Laplacian eigenvalues of graphs",
+  "doi": "https://doi.org/10.1016/j.disc.2015.02.006",
+  "date": "2015-03-07",
+  "venue": "Discrete Mathematics",
+  "cited": 8,
+  "authors": [
+   "Xiaodan Chen",
+   "Kinkar Chandra Das"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of k largest eigenvalues graph Mohar",
+  "title": "Eigenvalues and domination in graphs",
+  "doi": null,
+  "date": "1996-01-01",
+  "venue": "Czech digital mathematics library",
+  "cited": 9,
+  "authors": [
+   "Clemens W. Brand",
+   "Norbert Seifter"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "sum of k largest eigenvalues graph Mohar",
+  "title": "On the sum of the k largest absolute values of Laplacian eigenvalues of digraphs",
+  "doi": "https://doi.org/10.13001/ela.2023.7503",
+  "date": "2023-07-20",
+  "venue": "Electronic Journal of Linear Algebra",
+  "cited": 0,
+  "authors": [
+   "Xiuwen Yang",
+   "Xiaogang Liu",
+   "Ligong Wang"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral radius and second largest eigenvalue sum extremal graph",
+  "title": "Extremal results on the second largest eigenvalue of graphs with given order",
+  "doi": "https://doi.org/10.48550/arxiv.2606.11623",
+  "date": "2026-06-10",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Zhiwen Wang",
+   "Ji-Ming Guo"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral radius and second largest eigenvalue sum extremal graph",
+  "title": "On the second largest Laplacian eigenvalues of graphs",
+  "doi": "https://doi.org/10.1016/j.laa.2012.10.047",
+  "date": "2012-12-11",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 53,
+  "authors": [
+   "Jianxi Li",
+   "Ji‐Ming Guo",
+   "Wai Chee Shiu"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral radius and second largest eigenvalue sum extremal graph",
+  "title": "Distance signless Laplacian eigenvalues of graphs",
+  "doi": "https://doi.org/10.1007/s11464-019-0779-3",
+  "date": "2019-07-26",
+  "venue": "Frontiers of Mathematics",
+  "cited": 7,
+  "authors": [
+   "Kinkar Chandra Das",
+   "Huiqiu Lin",
+   "Ji‐Ming Guo"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral radius and second largest eigenvalue sum extremal graph",
+  "title": "Extremal $ABS$ Spectral Radius in Bicyclic and Bipartite Unicyclic Graphs",
+  "doi": "https://doi.org/10.48550/arxiv.2512.23209",
+  "date": "2025-12-29",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Swathi Shetty",
+   "B. R. Rakshith",
+   "N. V. Sayinath Udupa"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral radius and second largest eigenvalue sum extremal graph",
+  "title": "On the sum of k largest distance eigenvalues of graphs",
+  "doi": "https://doi.org/10.1016/j.dam.2018.12.031",
+  "date": "2019-01-21",
+  "venue": "Discrete Applied Mathematics",
+  "cited": 10,
+  "authors": [
+   "Huiqiu Lin"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral radius and second largest eigenvalue sum extremal graph",
+  "title": "On the sum of the largest $A_α$-eigenvalues of graphs",
+  "doi": "https://doi.org/10.48550/arxiv.2012.11177",
+  "date": "2020-12-21",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Z. Lin",
+   "Lianying Miao",
+   "Shuguang Guo"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral radius and second largest eigenvalue sum extremal graph",
+  "title": "On minimally 2-(edge)-connected graphs with extremal spectral radius",
+  "doi": "https://doi.org/10.1016/j.disc.2019.04.002",
+  "date": "2019-04-30",
+  "venue": "Discrete Mathematics",
+  "cited": 10,
+  "authors": [
+   "Xiaodan Chen",
+   "L. B. Guo"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral radius and second largest eigenvalue sum extremal graph",
+  "title": "Bounds for the largest eigenvalue and sum of Laplacian eigenvalues of signed graphs",
+  "doi": "https://doi.org/10.1016/j.disc.2026.115333",
+  "date": "2026-07-14",
+  "venue": "Discrete Mathematics",
+  "cited": 0,
+  "authors": [
+   "Lingli Xie",
+   "Xiaogang Liu"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral radius and second largest eigenvalue sum extremal graph",
+  "title": "Extreme Sombor Spectral Radius of Unicyclic Graphs",
+  "doi": "https://doi.org/10.46793/match.90-2.513m",
+  "date": "2023-04-01",
+  "venue": "match Communications in Mathematical and in Computer Chemistry",
+  "cited": 4,
+  "authors": [
+   "Yinzhen Mei",
+   "Huifeng Fu",
+   "Hongli Miao",
+   "Yubin Gao"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral radius and second largest eigenvalue sum extremal graph",
+  "title": "Extremal graphs minimizing the normalized Laplacian spectral radius",
+  "doi": "https://doi.org/10.61091/um128-08",
+  "date": "2026-07-22",
+  "venue": "Utilitas Mathematica",
+  "cited": 0,
+  "authors": [
+   "Siyu Ou",
+   "Zhengping Qiu",
+   "Zikai Tang"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral radius and second largest eigenvalue sum extremal graph",
+  "title": "The Spectral Radius and the Maximum Degree of Irregular Graphs",
+  "doi": "https://doi.org/10.37236/956",
+  "date": "2007-05-23",
+  "venue": "The Electronic Journal of Combinatorics",
+  "cited": 50,
+  "authors": [
+   "Sebastian M. Cioabă"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral radius and second largest eigenvalue sum extremal graph",
+  "title": "On the α-spectral radius of graphs",
+  "doi": "https://doi.org/10.2298/aadm180210022g",
+  "date": "2020-01-01",
+  "venue": "Applicable Analysis and Discrete Mathematics",
+  "cited": 37,
+  "authors": [
+   "Haiyan Guo",
+   "Bo Zhou"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral radius and second largest eigenvalue sum extremal graph",
+  "title": "On the second largest distance eigenvalue of a block graph",
+  "doi": "https://doi.org/10.1016/j.laa.2020.01.014",
+  "date": "2020-01-13",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 10,
+  "authors": [
+   "Jie Xue",
+   "Huiqiu Lin",
+   "Jinlong Shu"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral radius and second largest eigenvalue sum extremal graph",
+  "title": "Hoffman-type Results for the Sum of k Largest Eigenvalues of a Graph",
+  "doi": "https://doi.org/10.48550/arxiv.2609.23707",
+  "date": "2026-09-20",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Shaowei Sun",
+   "Mengyao Guo",
+   "Hongyan Ge",
+   "Kinkar Chandra Das"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral radius and second largest eigenvalue sum extremal graph",
+  "title": "On the sum of $k$-th largest distance eigenvalues of graphs",
+  "doi": "https://doi.org/10.48550/arxiv.1805.09661",
+  "date": "2018-05-24",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Huiqiu Lin"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral radius and second largest eigenvalue sum extremal graph",
+  "title": "Extremal spectral radius of weighted adjacency matrices of bicyclic graphs",
+  "doi": "https://doi.org/10.48550/arxiv.2303.12563",
+  "date": "2023-03-22",
+  "venue": "arXiv (Cornell University)",
+  "cited": 2,
+  "authors": [
+   "Jiachang Ye",
+   "Junli Hu",
+   "Xiaodan Chen"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral radius and second largest eigenvalue sum extremal graph",
+  "title": "The signless Laplacian spectral radius of graphs with given degree sequences",
+  "doi": "https://doi.org/10.1016/j.dam.2009.02.022",
+  "date": "2009-04-11",
+  "venue": "Discrete Applied Mathematics",
+  "cited": 67,
+  "authors": [
+   "Xiao‐Dong Zhang"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral radius and second largest eigenvalue sum extremal graph",
+  "title": "Spectral radius of bipartite graphs",
+  "doi": "https://doi.org/10.1016/j.laa.2015.01.040",
+  "date": "2015-02-18",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 22,
+  "authors": [
+   "Chia-an Liu",
+   "Chih-wen Weng"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral radius and second largest eigenvalue sum extremal graph",
+  "title": "On the Aα-spectral radius of connected graphs",
+  "doi": "https://doi.org/10.26493/1855-3974.2697.43a",
+  "date": "2022-08-18",
+  "venue": "Ars Mathematica Contemporanea",
+  "cited": 4,
+  "authors": [
+   "Abdollah Alhevaz",
+   "Maryam Baghipur",
+   "Hilal A. Ganie",
+   "Kinkar Chandra Das"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral radius and second largest eigenvalue sum extremal graph",
+  "title": "On the sum of the k largest eigenvalues of graphs and maximal energy of bipartite graphs",
+  "doi": "https://doi.org/10.1016/j.laa.2019.01.016",
+  "date": "2019-01-28",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 16,
+  "authors": [
+   "Kinkar Chandra Das",
+   "Seyed Ahmad Mojallal",
+   "Shaowei Sun"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral radius and second largest eigenvalue sum extremal graph",
+  "title": "On the spectral radius of quasi-k-cyclic graphs",
+  "doi": "https://doi.org/10.1016/j.laa.2010.06.007",
+  "date": "2010-07-07",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 6,
+  "authors": [
+   "Xianya Geng",
+   "Shuchao Li",
+   "Slobodan K. Simić"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral radius and second largest eigenvalue sum extremal graph",
+  "title": "Essential connectivity and spectral radius of graphs",
+  "doi": "https://doi.org/10.1080/03081087.2026.2641185",
+  "date": "2026-03-09",
+  "venue": "Linear and Multilinear Algebra",
+  "cited": 0,
+  "authors": [
+   "Wenxiu Ding",
+   "D. M. Li",
+   "Yu Wang",
+   "Jixiang Meng"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral radius and second largest eigenvalue sum extremal graph",
+  "title": "Extremal eigenvalues with respect to graph minors",
+  "doi": "https://doi.org/10.48550/arxiv.2404.13389",
+  "date": "2024-04-20",
+  "venue": "arXiv (Cornell University)",
+  "cited": 2,
+  "authors": [
+   "Mingqing Zhai",
+   "Longfei Fang",
+   "Huiqiu Lin"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral radius and second largest eigenvalue sum extremal graph",
+  "title": "A note on the Nordhaus-Gaddum type inequality to the second largest eigenvalue of a graph",
+  "doi": "https://doi.org/10.2298/aadm1701123a",
+  "date": "2017-01-01",
+  "venue": "Applicable Analysis and Discrete Mathematics",
+  "cited": 4,
+  "authors": [
+   "Nair Maria Maia de Abreu",
+   "André Ebling Brondani",
+   "Lima Júnior Dorgival Morais de",
+   "Carla Silva Oliveira"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "spectral radius and second largest eigenvalue sum extremal graph",
+  "title": "Maximum spectral sum of graphs",
+  "doi": "https://doi.org/10.48550/arxiv.2604.00512",
+  "date": "2026-04-01",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Hitesh Kumar",
+   "Lele Liu",
+   "Hermie Monterde",
+   "Shivaramakrishna Pragada",
+   "Michael Tait"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "join of two cliques extremal spectral graph",
+  "title": "Spectral Extremal Graphs for Disjoint Cliques",
+  "doi": "https://doi.org/10.37236/11516",
+  "date": "2023-01-27",
+  "venue": "The Electronic Journal of Combinatorics",
+  "cited": 17,
+  "authors": [
+   "Zhenyu Ni",
+   "Jing Wang",
+   "Liying Kang"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "join of two cliques extremal spectral graph",
+  "title": "Spectral extremal problems for graphs with bounded clique number",
+  "doi": "https://doi.org/10.1016/j.laa.2025.01.043",
+  "date": "2025-02-04",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 1,
+  "authors": [
+   "Tingting Wang",
+   "Lihua Feng",
+   "Lu Lu"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "join of two cliques extremal spectral graph",
+  "title": "Spectral extremal graphs for fan graphs",
+  "doi": "https://doi.org/10.1016/j.disc.2024.114391",
+  "date": "2025-01-08",
+  "venue": "Discrete Mathematics",
+  "cited": 12,
+  "authors": [
+   "Lou-Jun Yu",
+   "Yongtao Li",
+   "Yuejian Peng"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "join of two cliques extremal spectral graph",
+  "title": "Strict spectral supersaturation for cliques: extremal graphs and sharp thresholds",
+  "doi": "https://doi.org/10.48550/arxiv.2610.03337",
+  "date": "2026-10-02",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Qi Wu",
+   "Yong Lu"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "join of two cliques extremal spectral graph",
+  "title": "Graph Limits and Spectral Extremal Problems for Graphs",
+  "doi": "https://doi.org/10.1137/22m1508807",
+  "date": "2024-01-31",
+  "venue": "SIAM Journal on Discrete Mathematics",
+  "cited": 2,
+  "authors": [
+   "Lele Liu"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "join of two cliques extremal spectral graph",
+  "title": "Clique spectral extremal problem on disjoint color-critical graphs",
+  "doi": "https://doi.org/10.48550/arxiv.2607.13861",
+  "date": "2026-07-15",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Changjiang Bu",
+   "Peiyan Wei",
+   "Haotian Zeng"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "join of two cliques extremal spectral graph",
+  "title": "Extremal Problems for the $p$-Spectral Radius of Graphs",
+  "doi": "https://doi.org/10.37236/4113",
+  "date": "2014-08-06",
+  "venue": "The Electronic Journal of Combinatorics",
+  "cited": 8,
+  "authors": [
+   "Liying Kang",
+   "Никифоров Владимир Олегович"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "join of two cliques extremal spectral graph",
+  "title": "The minimum spectral radius of graphs with a given clique number",
+  "doi": "https://doi.org/10.13001/1081-3810.1253",
+  "date": "2008-01-01",
+  "venue": "Electronic Journal of Linear Algebra",
+  "cited": 31,
+  "authors": [
+   "Dragan Stevanović",
+   "Pierre Hansen"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "join of two cliques extremal spectral graph",
+  "title": "Sharp bounds for the signless Laplacian spectral radius in terms of clique number",
+  "doi": "https://doi.org/10.1016/j.laa.2011.10.008",
+  "date": "2011-11-08",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 56,
+  "authors": [
+   "Bian He",
+   "Ya-Lei Jin",
+   "Xiao‐Dong Zhang"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "join of two cliques extremal spectral graph",
+  "title": "Quotient of spectral radius, (signless) Laplacian spectral radius and clique number of graphs",
+  "doi": "https://doi.org/10.1007/s10587-016-0308-4",
+  "date": "2016-09-01",
+  "venue": "Czechoslovak Mathematical Journal",
+  "cited": 0,
+  "authors": [
+   "Kinkar Chandra Das",
+   "Muhuo Liu"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "join of two cliques extremal spectral graph",
+  "title": "Spectral extrema of 1-planar graphs with no short cycles or small cliques",
+  "doi": "https://doi.org/10.48550/arxiv.2608.24519",
+  "date": "2026-08-25",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Shuchao Li",
+   "M. Z. Wang",
+   "Qin Zhao"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "join of two cliques extremal spectral graph",
+  "title": "Spectral extrema of graphs with bounded clique number and matching number",
+  "doi": "https://doi.org/10.1016/j.laa.2023.03.026",
+  "date": "2023-03-31",
+  "venue": "Linear Algebra and its Applications",
+  "cited": 10,
+  "authors": [
+   "Hongyu Wang",
+   "Xinmin Hou",
+   "Yue Ma"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "join of two cliques extremal spectral graph",
+  "title": "Two conjectures in spectral graph theory involving the linear combinations of graph eigenvalues",
+  "doi": "https://doi.org/10.48550/arxiv.2206.03723",
+  "date": "2022-06-08",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Lele Liu"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "join of two cliques extremal spectral graph",
+  "title": "Clique and chromatic numbers of graph powers: spectral bounds and anticodes",
+  "doi": "https://doi.org/10.48550/arxiv.2610.13852",
+  "date": "2026-10-09",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Aida Abiad",
+   "Gabriel Coutinho",
+   "Hitesh Kumar",
+   "Emanuel Juliano",
+   "Michael Tait"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "join of two cliques extremal spectral graph",
+  "title": "Extremal Spectral Invariants of Graphs",
+  "doi": null,
+  "date": "2017-01-01",
+  "venue": "eScholarship (California Digital Library)",
+  "cited": 0,
+  "authors": [
+   "Robin Joshua Tobin"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "join of two cliques extremal spectral graph",
+  "title": "Spectral Applications of Vertex-Clique Incidence Matrices Associated with a Graph",
+  "doi": "https://doi.org/10.3390/math11163595",
+  "date": "2023-08-19",
+  "venue": "Mathematics",
+  "cited": 1,
+  "authors": [
+   "Shaun Fallat",
+   "Seyed Ahmad Mojallal"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "join of two cliques extremal spectral graph",
+  "title": "Extremal 1-planar graphs without k-cliques",
+  "doi": "https://doi.org/10.48550/arxiv.2604.21589",
+  "date": "2026-04-23",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Licheng Zhang",
+   "Yuanqiu Huang",
+   "Fengming Dong"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "join of two cliques extremal spectral graph",
+  "title": "Spectral Extremal Graphs without Intersecting Triangles as a Minor",
+  "doi": "https://doi.org/10.37236/11808",
+  "date": "2024-07-26",
+  "venue": "The Electronic Journal of Combinatorics",
+  "cited": 6,
+  "authors": [
+   "Xiaocong He",
+   "Yongtao Li",
+   "Lihua Feng"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "join of two cliques extremal spectral graph",
+  "title": "Spectral extremal graphs for even factors",
+  "doi": "https://doi.org/10.48550/arxiv.2606.15584",
+  "date": "2026-06-14",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Zeyuan Wu",
+   "Hongzhang Chen",
+   "Xinting Shi",
+   "Jianxi Li"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "join of two cliques extremal spectral graph",
+  "title": "The Distance Laplacian Spectral Radius of Clique Trees",
+  "doi": "https://doi.org/10.1155/2020/8855987",
+  "date": "2020-12-09",
+  "venue": "Discrete Dynamics in Nature and Society",
+  "cited": 22,
+  "authors": [
+   "Xiao Zhang",
+   "Jiajia Zhou"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "join of two cliques extremal spectral graph",
+  "title": "The Algebraic Connectivity and the Clique Number of Graphs",
+  "doi": "https://doi.org/10.48550/arxiv.1307.0168",
+  "date": "2013-06-30",
+  "venue": "arXiv (Cornell University)",
+  "cited": 3,
+  "authors": [
+   "Ya-Lei Jin",
+   "Xiao‐Dong Zhang"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "join of two cliques extremal spectral graph",
+  "title": "Spectral Extremal Graphs without a $K_k$-Factor",
+  "doi": "https://doi.org/10.48550/arxiv.2609.21529",
+  "date": "2026-09-18",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Cunxiang Duan",
+   "Tingting Han",
+   "Lin-Peng Zhang"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "join of two cliques extremal spectral graph",
+  "title": "Spectral Extremal Graphs of Planar Graphs with Fixed Size",
+  "doi": "https://doi.org/10.48550/arxiv.2410.00310",
+  "date": "2024-10-01",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Fan, Liangdong",
+   "Liying Kang",
+   "Jiadong Wu"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "join of two cliques extremal spectral graph",
+  "title": "Generalized spectral Turán problems for disjoint cliques",
+  "doi": "https://doi.org/10.48550/arxiv.2604.17242",
+  "date": "2026-04-19",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Yi Xu",
+   "Yi-Zheng Fan"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "join of two cliques extremal spectral graph",
+  "title": "Spectral extremal graphs for F6-free graphs with even size",
+  "doi": "https://doi.org/10.1016/j.disc.2026.115446",
+  "date": "2026-09-24",
+  "venue": "Discrete Mathematics",
+  "cited": 0,
+  "authors": [
+   "Lou-Jun Yu",
+   "Yuejian Peng"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "stability of maximal relative projection constants",
+  "title": "Stability of maximal relative projection constants",
+  "doi": "https://doi.org/10.48550/arxiv.2609.03200",
+  "date": "2026-09-02",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Hitesh Kumar",
+   "Bojan Mohar",
+   "Seyed Ahmad Mojallal",
+   "Shivaramakrishna Pragada"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "stability of maximal relative projection constants",
+  "title": "Spaces with the maximal projection constant revisited",
+  "doi": "https://doi.org/10.48550/arxiv.2505.24526",
+  "date": "2025-05-30",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Tomasz Kobos"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "stability of maximal relative projection constants",
+  "title": "HYPERPLANES OF FINITE-DIMENSIONAL NORMED SPACES WITH THE MAXIMAL RELATIVE PROJECTION CONSTANT",
+  "doi": "https://doi.org/10.1017/s0004972715000088",
+  "date": "2015-03-02",
+  "venue": "Bulletin of the Australian Mathematical Society",
+  "cited": 3,
+  "authors": [
+   "TOMASZ KOBOS"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "stability of maximal relative projection constants",
+  "title": "Graph Eigenvalues and Projection Constants",
+  "doi": "https://doi.org/10.48550/arxiv.2608.02429",
+  "date": "2026-08-03",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Varun Sivashankar",
+   "Quanyu Tang",
+   "Tanay V. Wakhare"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "stability of maximal relative projection constants",
+  "title": "Relative K-stability of extremal metrics",
+  "doi": "https://doi.org/10.4171/jems/270",
+  "date": "2011-05-13",
+  "venue": "Journal of the European Mathematical Society",
+  "cited": 50,
+  "authors": [
+   "Jacopo Stoppa",
+   "Gábor Székelyhidi"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "stability of maximal relative projection constants",
+  "title": "Lectures on Stability and Constant Scalar Curvature",
+  "doi": "https://doi.org/10.4310/cdm.2007.v2007.n1.a4",
+  "date": "2007-01-01",
+  "venue": "Current Developments in Mathematics",
+  "cited": 90,
+  "authors": [
+   "D. H. Phong",
+   "Jacob Sturm"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "stability of maximal relative projection constants",
+  "title": "Diametrically Maximal and Constant Width Sets in Banach Spaces",
+  "doi": "https://doi.org/10.4153/cjm-2006-033-1",
+  "date": "2006-08-01",
+  "venue": "Canadian Journal of Mathematics",
+  "cited": 35,
+  "authors": [
+   "José Pedro Moreno",
+   "Pier Luigi Papini",
+   "R. R. Phelps"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "stability of maximal relative projection constants",
+  "title": "Relative K-stability for Kähler manifolds",
+  "doi": "https://doi.org/10.1007/s00208-017-1592-5",
+  "date": "2017-09-08",
+  "venue": "Mathematische Annalen",
+  "cited": 29,
+  "authors": [
+   "Ruadhaí Dervan"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "stability of maximal relative projection constants",
+  "title": "Finite relative determination and relative stability",
+  "doi": "https://doi.org/10.2140/pjm.2000.192.315",
+  "date": "2000-02-01",
+  "venue": "Pacific Journal of Mathematics",
+  "cited": 8,
+  "authors": [
+   "León Kushner",
+   "Brasil Terra Leme"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "stability of maximal relative projection constants",
+  "title": "Auerbach Bases, Projection Constants, and the Joint Spectral Radius of Principal Submatrices",
+  "doi": "https://doi.org/10.1137/25m1755151",
+  "date": "2026-07-07",
+  "venue": "SIAM Journal on Matrix Analysis and Applications",
+  "cited": 0,
+  "authors": [
+   "Jeremias Epperlein",
+   "Fabian R. Wirth"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "stability of maximal relative projection constants",
+  "title": "Measuring the stability of fundamental constants with a network of clocks",
+  "doi": "https://doi.org/10.1140/epjqt/s40507-022-00130-5",
+  "date": "2022-05-11",
+  "venue": "EPJ Quantum Technology",
+  "cited": 63,
+  "authors": [
+   "Giovanni Barontini",
+   "Laura Blackburn",
+   "Vincent Boyer",
+   "Filip Butuc-Mayer",
+   "Xavier Calmet A"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "stability of maximal relative projection constants",
+  "title": "Relative stability and extremal metrics",
+  "doi": "https://doi.org/10.2969/jmsj/06620535",
+  "date": "2014-04-01",
+  "venue": "Journal of the Mathematical Society of Japan",
+  "cited": 12,
+  "authors": [
+   "Toshiki Mabuchi"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "stability of maximal relative projection constants",
+  "title": "On Maximal Delay of Stability Loss for Dynamical Bifurcations",
+  "doi": "https://doi.org/10.48550/arxiv.2606.07662",
+  "date": "2026-06-03",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Анатолий Исерович Нейштадт"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "stability of maximal relative projection constants",
+  "title": "Relative Chow stability and extremal metrics",
+  "doi": "https://doi.org/10.1016/j.aim.2017.06.031",
+  "date": "2017-06-30",
+  "venue": "Advances in Mathematics",
+  "cited": 14,
+  "authors": [
+   "Reza Seyyedali"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "stability of maximal relative projection constants",
+  "title": "Stability properties for the constant of hyperreflexivity",
+  "doi": null,
+  "date": "1994-01-01",
+  "venue": "University of New Hampshire Scholars Repository (University of New Hampshire at Manchester)",
+  "cited": 0,
+  "authors": [
+   "Ileana Ionaşcu"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "stability of maximal relative projection constants",
+  "title": "Phase retrieval by iterated projections",
+  "doi": "https://doi.org/10.1364/josaa.20.000040",
+  "date": "2003-01-01",
+  "venue": "Journal of the Optical Society of America A",
+  "cited": 736,
+  "authors": [
+   "Veit Elser"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "stability of maximal relative projection constants",
+  "title": "Relative K-stability and modified K-energy on toric manifolds",
+  "doi": "https://doi.org/10.1016/j.aim.2008.06.016",
+  "date": "2008-07-23",
+  "venue": "Advances in Mathematics",
+  "cited": 71,
+  "authors": [
+   "Bin Zhou",
+   "Xiaohua Zhu"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "stability of maximal relative projection constants",
+  "title": "Local strong maximal monotonicity and full stability for parametric variational systems",
+  "doi": "https://doi.org/10.48550/arxiv.1409.2018",
+  "date": "2014-09-06",
+  "venue": "arXiv (Cornell University)",
+  "cited": 4,
+  "authors": [
+   "Boris S. Mordukhovich",
+   "T. T. A. Nghia"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "stability of maximal relative projection constants",
+  "title": "Convergence and Stability of a Catching-Up Algorithm for Differential Inclusions with Maximal Monotone Operators",
+  "doi": "https://doi.org/10.48550/arxiv.2604.10774",
+  "date": "2026-04-12",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Tan H. Cao",
+   "Hassan Saoud"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "stability of maximal relative projection constants",
+  "title": "Smoothed projections and mixed boundary conditions",
+  "doi": "https://doi.org/10.1090/mcom/3330",
+  "date": "2017-10-18",
+  "venue": "Mathematics of Computation",
+  "cited": 21,
+  "authors": [
+   "Martin W. Licht"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "stability of maximal relative projection constants",
+  "title": "Mabuchi's soliton metric and relative D-stability",
+  "doi": "https://doi.org/10.1353/ajm.2023.a897496",
+  "date": "2023-06-01",
+  "venue": "American Journal of Mathematics",
+  "cited": 14,
+  "authors": [
+   "Tomoyuki Hisamoto"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "stability of maximal relative projection constants",
+  "title": "Relative Chow stability and extremal metrics",
+  "doi": "https://doi.org/10.48550/arxiv.1610.07555",
+  "date": "2016-10-24",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Reza Seyyedali"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "stability of maximal relative projection constants",
+  "title": "Relative Stability Conditions on Triangulated Categories",
+  "doi": "https://doi.org/10.48550/arxiv.2411.01502",
+  "date": "2024-11-03",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Bowen Liu",
+   "Dongjian Wu"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "stability of maximal relative projection constants",
+  "title": "A Constant Step Forward-Backward Algorithm Involving Random Maximal Monotone Operators",
+  "doi": "https://doi.org/10.68381/jca26021",
+  "date": "2019-01-01",
+  "venue": "Journal of convex analysis",
+  "cited": 5,
+  "authors": [
+   "Pascal Bianchi",
+   "Walid Hachem",
+   "Adil Salim"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "stability of maximal relative projection constants",
+  "title": "Weighted Projective Embeddings, Stability of Orbifolds, and Constant Scarla Curvature Kär Metrics",
+  "doi": "https://doi.org/10.4310/jdg/1317758871",
+  "date": "2011-05-01",
+  "venue": "Journal of Differential Geometry",
+  "cited": 78,
+  "authors": [
+   "Julius Ross",
+   "Richard P. Thomas"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "exact maximum spectral sum graph three block",
+  "title": "The Exact Maximum of the Spectral Sum of Graphs",
+  "doi": "https://doi.org/10.48550/arxiv.2607.23081",
+  "date": "2026-07-25",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Jing Huang",
+   "Wei Wei"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "exact maximum spectral sum graph three block",
+  "title": "Graph Spectral Image Processing",
+  "doi": "https://doi.org/10.1109/jproc.2018.2799702",
+  "date": "2018-04-09",
+  "venue": "Proceedings of the IEEE",
+  "cited": 253,
+  "authors": [
+   "Gene Cheung",
+   "Enrico Magli",
+   "Yuichi Tanaka",
+   "Michael K. Ng"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "exact maximum spectral sum graph three block",
+  "title": "Spectral Alignment of Graphs",
+  "doi": "https://doi.org/10.1109/tnse.2019.2913233",
+  "date": "2019-04-25",
+  "venue": "IEEE Transactions on Network Science and Engineering",
+  "cited": 57,
+  "authors": [
+   "Soheil Feizi",
+   "Gerald Quon",
+   "Mariana Recamonde‐Mendoza",
+   "Muriel Médard",
+   "M Kellis"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "exact maximum spectral sum graph three block",
+  "title": "Two-point spectral correlations for star graphs",
+  "doi": "https://doi.org/10.1088/0305-4470/32/45/302",
+  "date": "1999-10-28",
+  "venue": "Journal of Physics A Mathematical and General",
+  "cited": 76,
+  "authors": [
+   "Gregory Berkolaiko",
+   "Jonathan P. Keating"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "exact maximum spectral sum graph three block",
+  "title": "Spectrally approximating large graphs with smaller graphs",
+  "doi": "https://doi.org/10.48550/arxiv.1802.07510",
+  "date": "2018-02-21",
+  "venue": "arXiv (Cornell University)",
+  "cited": 52,
+  "authors": [
+   "Andreas Loukas",
+   "Pierre Vandergheynst"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "exact maximum spectral sum graph three block",
+  "title": "Multi-graph fusion for multi-view spectral clustering",
+  "doi": "https://doi.org/10.1016/j.knosys.2019.105102",
+  "date": "2019-10-18",
+  "venue": "Knowledge-Based Systems",
+  "cited": 300,
+  "authors": [
+   "Zhao Kang",
+   "Guoxin Shi",
+   "Shudong Huang",
+   "Wenyu Chen",
+   "Xiaorong Pu"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "exact maximum spectral sum graph three block",
+  "title": "Block-based spectral image reconstruction for compressive spectral imaging using smoothness on graphs",
+  "doi": "https://doi.org/10.1364/oe.445938",
+  "date": "2021-12-23",
+  "venue": "Optics Express",
+  "cited": 9,
+  "authors": [
+   "Juan F. Florez-Ospina",
+   "Abdullah K. Alrushud",
+   "Daniel L. Lau",
+   "Gonzalo R. Arce"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "exact maximum spectral sum graph three block",
+  "title": "Nonregular graphs with a given maximum degree attaining the maximum spectral radius",
+  "doi": "https://doi.org/10.1016/j.jcta.2026.106271",
+  "date": "2026-10-08",
+  "venue": "Journal of Combinatorial Theory Series A",
+  "cited": 0,
+  "authors": [
+   "Zejun Huang",
+   "Jiahui Liu",
+   "Chenxi Yang"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "exact maximum spectral sum graph three block",
+  "title": "Quantum algorithms for spectral sums",
+  "doi": "https://doi.org/10.48550/arxiv.2011.06475",
+  "date": "2020-11-12",
+  "venue": "arXiv (Cornell University)",
+  "cited": 2,
+  "authors": [
+   "Alessandro Luongo",
+   "Changpeng Shao"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "exact maximum spectral sum graph three block",
+  "title": "Exact local spectral thresholds for perfect matchings in $3$-graphs and $3$-partite $3$-graphs",
+  "doi": "https://doi.org/10.48550/arxiv.2609.26832",
+  "date": "2026-09-21",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Pei Liu",
+   "Suil O"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "exact maximum spectral sum graph three block",
+  "title": "Quantum Algorithms for Spectral Sums",
+  "doi": "https://doi.org/10.1609/aaai.v40i29.39597",
+  "date": "2026-03-14",
+  "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+  "cited": 0,
+  "authors": [
+   "Alessandro Luongo",
+   "Changpeng Shao"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "exact maximum spectral sum graph three block",
+  "title": "Graph Coarsening with Preserved Spectral Properties",
+  "doi": "https://doi.org/10.48550/arxiv.1802.04447",
+  "date": "2018-02-13",
+  "venue": "arXiv (Cornell University)",
+  "cited": 32,
+  "authors": [
+   "Yu Jin",
+   "Andreas Loukas",
+   "Joseph F. JáJá"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "exact maximum spectral sum graph three block",
+  "title": "On spectral partitioning of signed graphs",
+  "doi": "https://doi.org/10.1137/1.9781611975215.2",
+  "date": "2018-01-01",
+  "venue": "Society for Industrial and Applied Mathematics eBooks",
+  "cited": 15,
+  "authors": [
+   "Andrew Knyazev"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "exact maximum spectral sum graph three block",
+  "title": "Three observations on the Colin de Verdière spectral graph parameter",
+  "doi": "https://doi.org/10.48550/arxiv.2410.21226",
+  "date": "2024-10-28",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Vojtêch Kaluẑa",
+   "Vadym Koval"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "exact maximum spectral sum graph three block",
+  "title": "Efficient eigen-updating for spectral graph clustering",
+  "doi": "https://doi.org/10.1016/j.neucom.2013.11.015",
+  "date": "2014-01-11",
+  "venue": "Neurocomputing",
+  "cited": 46,
+  "authors": [
+   "Charanpal Dhanjal",
+   "Romaric Gaudel",
+   "Stéphan Clémençon"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "exact maximum spectral sum graph three block",
+  "title": "Graph Signal Processing -- Part I: Graphs, Graph Spectra, and Spectral Clustering",
+  "doi": "https://doi.org/10.48550/arxiv.1907.03467",
+  "date": "2019-07-08",
+  "venue": "arXiv (Cornell University)",
+  "cited": 22,
+  "authors": [
+   "Ljubiša Stanković",
+   "Danilo P. Mandic",
+   "Miloš Daković",
+   "Miloš Brajović",
+   "Bruno Scalzo"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "exact maximum spectral sum graph three block",
+  "title": "A review of stochastic block models and extensions for graph clustering",
+  "doi": "https://doi.org/10.1007/s41109-019-0232-2",
+  "date": "2019-12-01",
+  "venue": "Applied Network Science",
+  "cited": 235,
+  "authors": [
+   "Clement Lee",
+   "Darren J. Wilkinson"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "exact maximum spectral sum graph three block",
+  "title": "Spectral clustering in the dynamic stochastic block model",
+  "doi": "https://doi.org/10.1214/19-ejs1533",
+  "date": "2019-01-01",
+  "venue": "Electronic Journal of Statistics",
+  "cited": 64,
+  "authors": [
+   "Marianna Pensky",
+   "Teng Zhang"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "exact maximum spectral sum graph three block",
+  "title": "Neural Network Spectral Robustness under Perturbations of the Underlying Graph",
+  "doi": "https://doi.org/10.1162/neco_a_00798",
+  "date": "2015-12-22",
+  "venue": "Neural Computation",
+  "cited": 52,
+  "authors": [
+   "Anca Rǎdulescu"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "exact maximum spectral sum graph three block",
+  "title": "Exploiting The Structure of Bipartite Graphs for Algebraic and Spectral Graph Theory Applications",
+  "doi": "https://doi.org/10.1080/15427951.2014.958250",
+  "date": "2014-10-22",
+  "venue": "Internet Mathematics",
+  "cited": 26,
+  "authors": [
+   "Jérôme Kunegis"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "exact maximum spectral sum graph three block",
+  "title": "Spectral extremal graphs for $W_5$-free graphs with odd size",
+  "doi": "https://doi.org/10.48550/arxiv.2609.28556",
+  "date": "2026-09-23",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Jing Gao",
+   "Xianya Geng",
+   "Li Shuchao"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "exact maximum spectral sum graph three block",
+  "title": "Algorithm Design Using Spectral Graph Theory",
+  "doi": "https://doi.org/10.1184/r1/6714635",
+  "date": "2013-01-01",
+  "venue": "Figshare",
+  "cited": 22,
+  "authors": [
+   "Richard Peng"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "exact maximum spectral sum graph three block",
+  "title": "Spectral gap in random bipartite biregular graphs and applications",
+  "doi": "https://doi.org/10.1017/s0963548321000249",
+  "date": "2021-07-23",
+  "venue": "Combinatorics Probability Computing",
+  "cited": 23,
+  "authors": [
+   "Gerandy Brito",
+   "Ioana Dumitriu",
+   "Kameron Decker Harris"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "exact maximum spectral sum graph three block",
+  "title": "TwinS-GCN: Spectral conjugate for Spectral Graph Convolutional Networks",
+  "doi": "https://doi.org/10.48550/arxiv.2609.32940",
+  "date": "2026-09-26",
+  "venue": "arXiv (Cornell University)",
+  "cited": 0,
+  "authors": [
+   "Chun Hei Michael Chan",
+   "Flavia Petruso",
+   "Dimitri Van De Ville"
+  ]
+ },
+ {
+  "src": "openalex",
+  "q": "exact maximum spectral sum graph three block",
+  "title": "Exact complexity: The spectral decomposition of intrinsic computation",
+  "doi": "https://doi.org/10.1016/j.physleta.2016.01.008",
+  "date": "2016-01-11",
+  "venue": "Physics Letters A",
+  "cited": 37,
+  "authors": [
+   "James P. Crutchfield",
+   "Christopher J. Ellison",
+   "Paul M. Riechers"
+  ]
+ }
+]

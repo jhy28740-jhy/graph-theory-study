@@ -25,7 +25,7 @@
 \numberwithin{equation}{section}
 \title{A joint moment bound for the three largest graph eigenvalues}
 \author{Haoyang Ji}
-\date{November 2, 2026}
+\date{November 3, 2026}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -107,6 +107,31 @@ assert that $c$ is optimal. For completeness we record the full chain of
 explicit coefficients: $3/\sqrt5=1.341640786\ldots$
 from~\cite[Theorem~3.4.1]{Ebrahimi}, then $(3+\sqrt5)/4$
 from~\cite[Proposition~6.1]{STW}, and finally $c$.
+
+Two adjacent results frame the standing of~\eqref{main-bound}. For the
+two-term sum $S_2=\lambda_1+\lambda_2$, Huang and Wei~\cite{HW} determine
+the exact maximum together with its unique extremal graph, whose three part
+sizes are governed by $n$ modulo $7$; Paulin~\cite{Paulin} determines the
+closures of the rescaled pairs
+$\bigl((\lambda_1+1)/n,(\lambda_2+1)/n\bigr)$ and
+$\bigl((\lambda_2+1)/n,(\lambda_3+1)/n\bigr)$, giving
+$\lambda_1+\lambda_2\le8n/7-2$, $\lambda_3\le n/3-1$ and
+$\lambda_2+\lambda_3\le2n/3-2$. Neither settles the three-term sum, because
+the reduction behind~\eqref{stw-bound} couples two quantities, and it is
+their joint control that forces the different geometry analysed here.
+
+One prior announcement bears directly on our lower bound, and we record it
+here rather than in a footnote. The self-archived Zenodo
+deposits~\cite{Newton1,Newton2} of Newton, dated 4~and 24~August 2026 and
+therefore earlier than this work, introduce the same extremal constant
+$\cstar$ under the name of a pole--pentagon law, together with the same
+optimising weight, and assert the matching upper bound
+$\Lambda_3(G)\le\cstar n-3$; the assertion is conditional by its own terms,
+since the final positivity layer is a machine certificate whose
+admissibility the author explicitly leaves to independent audit
+(Remark~\ref{rem-newton}). We claim no priority for the constant.
+Theorem~\ref{main} is unconditional and self-contained, and is weaker in
+the coefficient by $c-\cstar=0.003105058851750628\ldots$.
 
 We use graphons to pass to an attained maximum. For a symmetric measurable
 kernel $W:[0,1]^2\to[0,1]$, let
@@ -274,6 +299,35 @@ relabeling. Cut-metric compactness~\cite{LS} therefore gives a maximizer.
 Finally Lemma~\ref{ranktwo} implies
 $\lambda_3\ge\cstar-7/6>0$ at each maximizer.
 \end{proof}
+
+\begin{remark}\label{rem-newton}
+Priority for the constant $\cstar$. The template $K_1\vee C_5$ of
+Lemma~\ref{attainment} is the ``pole--pentagon'' law of the self-archived
+Zenodo deposits~\cite{Newton1,Newton2}, which appeared about two and a half
+months before the first version of the present paper. Writing the apex mass
+as $p^*=(91-25\sqrt7)/126$ and each of the five rim masses as
+$r^*=(7+5\sqrt7)/126$, so that $p^*+5r^*=1$, those deposits obtain the
+identical value
+\[
+ \alpha_3=\frac12+\frac{\sqrt5}{18}+\frac{\sqrt{35}}9
+        =\frac{9+\sqrt5+2\sqrt{35}}{18}=\cstar
+\]
+at the identical optimising weight, and they further assert
+$\Lambda_3(G)\le\alpha_3n-3$ for every $n\ge3$. That assertion is
+conditional. Its theorem is titled a \emph{candidate} universal $S_3$
+theorem, it is stated to hold ``within the exact analytic and
+proof-carrying certificate chain'', and the text declares that acceptance
+``properly remains subject to independent mathematical audit of the
+admissibility of the archived dual payments, the global sector partition and
+the exact verifier implementation''. No refereed version is available. By
+contrast, the computation in Lemma~\ref{attainment} is an ordinary quotient
+calculation for a join and uses none of that machinery, so the lower bound
+$\cstar\le\mathcal M$ stands independently; we cite~\cite{Newton1,Newton2}
+for the constant and for the naming and claim no priority for either.
+Nothing else in this paper depends on the unverified upper bound. Should it
+later be confirmed unconditionally, then $\mathcal M=\cstar$ and the
+interval displayed in \S\ref{sec-further} collapses to a point.
+\end{remark}
 
 Fix a maximizing $W$ and a top-three orthonormal eigenframe $F$, taking
 $f_1\ge0$. Write $L=\diag(\lambda_1,\lambda_2,\lambda_3)$.
@@ -1328,14 +1382,24 @@ $\lambda_3(G)$ is used; repeated eigenvalues, zero rows and $n=3$ cause
 no exception.
 \end{proof}
 
-\section{Further questions}
+\section{Further questions}\label{sec-further}
 The explicit construction in Lemma~\ref{attainment} leaves the interval
 \[
  \frac{9+\sqrt5+2\sqrt{35}}{18}\le\mathcal M
        \le1.284673255723918505\ldots.
 \]
 The lower endpoint comes from a weighted wheel, but its global optimality
-is not established here. The support bound reduces the structure of every
+is not established here. Its provenance is the subject of
+Remark~\ref{rem-newton}: the same constant and the same optimising weight
+were announced earlier, conditionally, in~\cite{Newton1,Newton2}, whose
+certificate argument would close the interval at the lower endpoint were it
+to survive the independent audit that its author requests. Independently of
+that outcome, the unconditional question left open here is the gap
+\[
+ c-\cstar=0.003105058851750628\ldots,
+\]
+and removing it is the natural next problem. The support bound reduces the
+structure of every
 maximizer to finitely many positive-mass types without classifying the
 possible templates. It does not imply that the binary matrix $B$ is
 nonsingular, that every maximizer has six types, or that individual masses
@@ -1418,6 +1482,10 @@ M.Sc. thesis, Simon Fraser University, 2008.
 A. Glazyrin,
 Moments of isotropic measures and optimal projective codes,
 \href{https://arxiv.org/abs/1904.11159v2}{arXiv:1904.11159v2} (2020).
+\bibitem{HW}
+J. Huang and W. Wei,
+The exact maximum of the spectral sum of graphs,
+\href{https://arxiv.org/abs/2607.23081v1}{arXiv:2607.23081v1} (2026).
 \bibitem{KLMPT}
 H. Kumar, L. Liu, H. Monterde, S. Pragada and M. Tait,
 Maximum spectral sum of graphs,
@@ -1439,6 +1507,25 @@ B. Mohar,
 On the sum of $k$ largest eigenvalues of graphs and symmetric matrices,
 \emph{Journal of Combinatorial Theory, Series B} \textbf{99} (2009), 306--313.
 \href{https://doi.org/10.1016/j.jctb.2008.07.001}{doi:10.1016/j.jctb.2008.07.001}.
+\bibitem{Newton1}
+T. Newton,
+The third spectral sum of graphs: an exact universal bound, pole--pentagon
+extremality, and resolution of the $S_3$ extremal problem,
+Zenodo deposit, 4 August 2026, 24~pp.
+\href{https://doi.org/10.5281/zenodo.21785906}{doi:10.5281/zenodo.21785906}.
+Self-archived; not refereed. The stated bound is conditional on a machine
+certificate that the author asks to be audited independently.
+\bibitem{Newton2}
+T. Newton,
+The third spectral sum of graphs: exact projection equivalence,
+pole--pentagon geometry, and certified carrier reduction,
+Zenodo deposit, 24 August 2026, 10~pp.
+\href{https://doi.org/10.5281/zenodo.22082842}{doi:10.5281/zenodo.22082842}.
+Self-archived; not refereed.
+\bibitem{Paulin}
+R. Paulin,
+Quadratic inequalities between the largest eigenvalues of a graph,
+\href{https://arxiv.org/abs/2609.37980v1}{arXiv:2609.37980v1} (2026).
 \bibitem{STW}
 V. Sivashankar, Q. Tang and T. Wakhare,
 Graph eigenvalues and projection constants,

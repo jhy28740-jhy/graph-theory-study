@@ -1,0 +1,1132 @@
+{
+ "openalex": {
+  "lambda_1 + 2 lambda_2 graph eigenvalues extremal": [
+   {
+    "title": "A Spectral Extremal Problem on Non-Bipartite Triangle-Free Graphs",
+    "year": 2024,
+    "doi": "https://doi.org/10.37236/12009",
+    "venue": "The Electronic Journal of Combinatorics",
+    "cites": 12,
+    "auth": [
+     "Yongtao Li",
+     "Lihua Feng",
+     "Yuejian Peng"
+    ]
+   },
+   {
+    "title": "Explorations in Extremal Combinatorics: Graph Spectra, Codegree Squared Sum of Hypergraphs and Lin-Lu-Yau Ricci Curvature",
+    "year": 2025,
+    "doi": null,
+    "venue": "Scholar Commons (University of South Carolina)",
+    "cites": 0,
+    "auth": [
+     "Brooks, George Henry"
+    ]
+   },
+   {
+    "title": "The combinatorial inverse eigenvalue problem II: all cases for small graphs",
+    "year": 2014,
+    "doi": "https://doi.org/10.13001/1081-3810.1938",
+    "venue": "Electronic Journal of Linear Algebra",
+    "cites": 11,
+    "auth": [
+     "Wayne W. Barrett",
+     "Curtis Nelson",
+     "John Sinkovic",
+     "Tianyi Yang"
+    ]
+   },
+   {
+    "title": "Minimizing the least eigenvalue of unbalanced signed unicyclic graphs with given girth or pendant vertices",
+    "year": 2024,
+    "doi": "https://doi.org/10.13001/ela.2024.7947",
+    "venue": "Electronic Journal of Linear Algebra",
+    "cites": 3,
+    "auth": [
+     "Minghui Yan",
+     "Dan Li",
+     "Yongang Wang",
+     "Jixiang Meng"
+    ]
+   },
+   {
+    "title": "Ricci-Flat Metrics on Canonical Bundles",
+    "year": 2023,
+    "doi": null,
+    "venue": "SDL",
+    "cites": 0,
+    "auth": [
+     "Umar Shahzad"
+    ]
+   },
+   {
+    "title": "Teichmüller discs with completely degenerate Kontsevich–Zorich spectrum",
+    "year": 2015,
+    "doi": "https://doi.org/10.4171/cmh/365",
+    "venue": "Commentarii Mathematici Helvetici",
+    "cites": 11,
+    "auth": [
+     "David Aulicino"
+    ]
+   },
+   {
+    "title": "ArrowSpace: Spectral Indexing of Embeddings using taumode (λτ)",
+    "year": 2025,
+    "doi": "https://doi.org/10.36227/techrxiv.175751921.18542359/v1",
+    "venue": null,
+    "cites": 1,
+    "auth": [
+     "Lorenzo Moriondo"
+    ]
+   },
+   {
+    "title": "PYDAC: A DISTRIBUTED RUNTIME SYSTEM AND PROGRAMMING MODEL FOR A HETEROGENEOUS MANY-CORE ARCHITECTURE",
+    "year": 2014,
+    "doi": null,
+    "venue": "NC Digital Online Collection of Knowledge and Scholarship (The University of North Carolina at Greensboro)",
+    "cites": 0,
+    "auth": [
+     "Bin Huang",
+     "NC DOCKS at The University of North Carolina at Charlotte"
+    ]
+   },
+   {
+    "title": "Part A Mathematical Foundations Series",
+    "year": null,
+    "doi": null,
+    "venue": "PhilPapers (PhilPapers Foundation)",
+    "cites": 0,
+    "auth": [
+     "Jim Erhart"
+    ]
+   },
+   {
+    "title": "An introduction to the Hilbert-Schmidt SVD using iterated Brownian bridge kernels",
+    "year": 2014,
+    "doi": "https://doi.org/10.1007/s11075-014-9850-z",
+    "venue": "Numerical Algorithms",
+    "cites": 67,
+    "auth": [
+     "Roberto Cavoretto",
+     "Gregory E. Fasshauer",
+     "Michael McCourt"
+    ]
+   },
+   {
+    "title": "Reilly's inequality, stable domains, and polyharmonic Dirichlet problems",
+    "year": 2025,
+    "doi": "https://doi.org/10.70675/27e13b44z61d1z45e3z9a2cza06b8e01e91f",
+    "venue": null,
+    "cites": 0,
+    "auth": [
+     "Rémy Mougenot"
+    ]
+   },
+   {
+    "title": "Reilly's inequality, stable domains, and polyharmonic Dirichlet problems",
+    "year": 2025,
+    "doi": "https://doi.org/10.70675/27e13b44z61d1z45e3z9a2cza06b8e01e91f",
+    "venue": "HAL",
+    "cites": 0,
+    "auth": [
+     "Rémy Mougenot"
+    ]
+   },
+   {
+    "title": "Sparse Linear Models and Proximal Optimization",
+    "year": 2013,
+    "doi": null,
+    "venue": "Biblos-e Archivo (Universidad Autónoma de Madrid)",
+    "cites": 0,
+    "auth": [
+     "Alberto Torres‐Barrán"
+    ]
+   }
+  ],
+  "weighted sum of the largest and second largest adjacency eigenvalue": [
+   {
+    "title": "A lower bound for the second largest Laplacian eigenvalue of weighted graphs",
+    "year": 2011,
+    "doi": "https://doi.org/10.13001/1081-3810.1501",
+    "venue": "Electronic Journal of Linear Algebra",
+    "cites": 9,
+    "auth": [
+     "Abraham Berman",
+     "Miriam Farber"
+    ]
+   },
+   {
+    "title": "On the Sum of the Largest and Smallest Eigenvalue of Odd-Cycle Free Fraphs",
+    "year": 2026,
+    "doi": "https://doi.org/10.37236/14427",
+    "venue": "The Electronic Journal of Combinatorics",
+    "cites": 0,
+    "auth": [
+     "Aida Abiad",
+     "Vladislav Taranchuk",
+     "Thijs van Veluw"
+    ]
+   },
+   {
+    "title": "A nontrivial upper bound on the largest Laplacian eigenvalue of weighted graphs",
+    "year": 2006,
+    "doi": "https://doi.org/10.1016/j.laa.2006.08.022",
+    "venue": "Linear Algebra and its Applications",
+    "cites": 16,
+    "auth": [
+     "Óscar Rojo"
+    ]
+   },
+   {
+    "title": "Largest eigenvalue statistics of sparse random adjacency matrices",
+    "year": 2023,
+    "doi": "https://doi.org/10.48550/arxiv.2305.13465",
+    "venue": "HAL",
+    "cites": 1,
+    "auth": [
+     "Slavov, Bogdan",
+     "Kirill Polovnikov",
+     "Sergei Nechaev",
+     "Nikita Pospelov"
+    ]
+   },
+   {
+    "title": "Largest eigenvalues of sparse inhomogeneous Erdős–Rényi graphs",
+    "year": 2019,
+    "doi": "https://doi.org/10.1214/18-aop1293",
+    "venue": "The Annals of Probability",
+    "cites": 59,
+    "auth": [
+     "Florent Benaych-Georges",
+     "Charles Bordenave",
+     "Antti Knowles"
+    ]
+   },
+   {
+    "title": "Hoffman-type Results for the Sum of k Largest Eigenvalues of a Graph",
+    "year": 2026,
+    "doi": "https://doi.org/10.48550/arxiv.2609.23707",
+    "venue": "arXiv (Cornell University)",
+    "cites": 0,
+    "auth": [
+     "Shaowei Sun",
+     "Mengyao Guo",
+     "Hongyan Ge",
+     "Kinkar Chandra Das"
+    ]
+   },
+   {
+    "title": "On the sum of the Laplacian eigenvalues of a tree",
+    "year": 2011,
+    "doi": "https://doi.org/10.1016/j.laa.2011.01.036",
+    "venue": "Linear Algebra and its Applications",
+    "cites": 87,
+    "auth": [
+     "Eliseu Fritscher",
+     "Carlos Hoppen",
+     "Israel Rocha",
+     "Vilmar Trevisan"
+    ]
+   },
+   {
+    "title": "Powers' Conjecture on the Third Largest Eigenvalue of a Graph",
+    "year": 2026,
+    "doi": "https://doi.org/10.31979/etd.kkej-tu27",
+    "venue": null,
+    "cites": 0,
+    "auth": [
+     "Kevin Schmidt"
+    ]
+   },
+   {
+    "title": "At the end of the spectrum: chromatic bounds for the largest eigenvalue of the normalized Laplacian",
+    "year": 2025,
+    "doi": "https://doi.org/10.1088/2632-072x/adcc71",
+    "venue": "Journal of Physics Complexity",
+    "cites": 1,
+    "auth": [
+     "Lies Beers",
+     "Raffaella Mulas"
+    ]
+   },
+   {
+    "title": "Large deviations of the largest eigenvalue of supercritical sparse Wigner matrices",
+    "year": 2026,
+    "doi": "https://doi.org/10.1214/25-aop1770",
+    "venue": "The Annals of Probability",
+    "cites": 2,
+    "auth": [
+     "Fanny Augeri",
+     "Anirban Basak"
+    ]
+   },
+   {
+    "title": "Second largest eigenpair statistics for sparse graphs",
+    "year": 2020,
+    "doi": "https://doi.org/10.1088/1751-8121/abcbad",
+    "venue": "Journal of Physics A Mathematical and Theoretical",
+    "cites": 18,
+    "auth": [
+     "Vito A R Susca",
+     "Pierpaolo Vivo",
+     "Reimer Kühn"
+    ]
+   },
+   {
+    "title": "On reciprocal eigenvalue property of weighted trees",
+    "year": 2011,
+    "doi": "https://doi.org/10.1016/j.laa.2011.09.017",
+    "venue": "Linear Algebra and its Applications",
+    "cites": 19,
+    "auth": [
+     "Michael Neumann",
+     "Sukanta Pati"
+    ]
+   },
+   {
+    "title": "Fluctuation of the largest eigenvalue of a kernel matrix with application in graphon-based random graphs",
+    "year": 2025,
+    "doi": "https://doi.org/10.1214/25-aap2220",
+    "venue": "The Annals of Applied Probability",
+    "cites": 2,
+    "auth": [
+     "Anirban Chatterjee",
+     "Jiaoyang Huang"
+    ]
+   },
+   {
+    "title": "Nonpositive eigenvalues of the adjacency matrix and lower bounds for Laplacian eigenvalues",
+    "year": 2013,
+    "doi": "https://doi.org/10.1016/j.disc.2013.03.010",
+    "venue": "Discrete Mathematics",
+    "cites": 3,
+    "auth": [
+     "Zachary Charles",
+     "Miriam Farber",
+     "Charles R. Johnson",
+     "Lee Kennedy‐Shaffer"
+    ]
+   },
+   {
+    "title": "Largest Eigenvalues of the Conjugate Kernel of Single-Layered Neural Networks",
+    "year": 2022,
+    "doi": "https://doi.org/10.48550/arxiv.2201.04753",
+    "venue": "arXiv (Cornell University)",
+    "cites": 1,
+    "auth": [
+     "Lucas Benigni",
+     "Sandrine Péché"
+    ]
+   }
+  ],
+  "maximum of lambda_1 + 2 lambda_2 over graphs": [
+   {
+    "title": "Explorations in Extremal Combinatorics: Graph Spectra, Codegree Squared Sum of Hypergraphs and Lin-Lu-Yau Ricci Curvature",
+    "year": 2025,
+    "doi": null,
+    "venue": "Scholar Commons (University of South Carolina)",
+    "cites": 0,
+    "auth": [
+     "Brooks, George Henry"
+    ]
+   },
+   {
+    "title": "A New Construction of Strongly Regular Graphs with Parameters of the Complement Symplectic Graph",
+    "year": 2023,
+    "doi": "https://doi.org/10.37236/11343",
+    "venue": "The Electronic Journal of Combinatorics",
+    "cites": 8,
+    "auth": [
+     "V. V. Kabanov"
+    ]
+   },
+   {
+    "title": "Exact variance-energy relations and optimal spectral bounds for graphs",
+    "year": 2025,
+    "doi": "https://doi.org/10.30538/oms2025.0261",
+    "venue": "Open Journal of Mathematical Sciences",
+    "cites": 1,
+    "auth": [
+     "Akbar Jahanbani",
+     "İvan Gutman"
+    ]
+   },
+   {
+    "title": "A note on the least (normalized) laplacian eighva;ue of signed graphs",
+    "year": 2016,
+    "doi": "https://doi.org/10.5556/j.tkjm.47.2016.1942",
+    "venue": "Tamkang Journal of Mathematics",
+    "cites": 1,
+    "auth": [
+     "Hui Shu Li",
+     "Hong Hai Li"
+    ]
+   },
+   {
+    "title": "A Spectral Extremal Problem on Non-Bipartite Triangle-Free Graphs",
+    "year": 2024,
+    "doi": "https://doi.org/10.37236/12009",
+    "venue": "The Electronic Journal of Combinatorics",
+    "cites": 12,
+    "auth": [
+     "Yongtao Li",
+     "Lihua Feng",
+     "Yuejian Peng"
+    ]
+   },
+   {
+    "title": "Ricci-Flat Metrics on Canonical Bundles",
+    "year": 2023,
+    "doi": null,
+    "venue": "SDL",
+    "cites": 0,
+    "auth": [
+     "Umar Shahzad"
+    ]
+   },
+   {
+    "title": "Cuts, cats, and complete graphs",
+    "year": 2025,
+    "doi": "https://doi.org/10.1016/j.tcs.2025.115393",
+    "venue": "Theoretical Computer Science",
+    "cites": 0,
+    "auth": [
+     "Rylo Ashmore",
+     "Danny Dyer",
+     "Trent G. Marbach",
+     "Rebecca Milley"
+    ]
+   },
+   {
+    "title": "On the Kronecker Product $s_{(n-p,p)}\\ast s_{\\lambda}$",
+    "year": 2005,
+    "doi": "https://doi.org/10.37236/1925",
+    "venue": "The Electronic Journal of Combinatorics",
+    "cites": 9,
+    "auth": [
+     "Cristina Ballantine",
+     "Rosa Orellana"
+    ]
+   },
+   {
+    "title": "Evaluating graph connectivity algorithms for sparse networks with applications to Aegean Island tourism demand cycles",
+    "year": 2025,
+    "doi": "https://doi.org/10.22271/maths.2025.v10.i4c.2420",
+    "venue": "International Journal of Statistics and Applied Mathematics",
+    "cites": 0,
+    "auth": [
+     "Sonia Shivhare"
+    ]
+   },
+   {
+    "title": "Capacity Threshold for the Ising Perceptron",
+    "year": 2024,
+    "doi": "https://doi.org/10.1109/focs61266.2024.00074",
+    "venue": "Annual Symposium on Foundations of Computer Science",
+    "cites": 4,
+    "auth": [
+     "Brice Huang"
+    ]
+   },
+   {
+    "title": "ON SEQUENCES OF ELEMENTARY TRANSFORMATIONS IN THE INTEGER PARTITIONS LATTICE",
+    "year": 2023,
+    "doi": "https://doi.org/10.15826/umj.2023.2.003",
+    "venue": "Ural mathematical journal",
+    "cites": 0,
+    "auth": [
+     "Vitaly A. Baransky",
+     "Tatiana A. Senchonok"
+    ]
+   },
+   {
+    "title": "AROUND THE ERDÖS–GALLAI CRITERION",
+    "year": 2023,
+    "doi": "https://doi.org/10.15826/umj.2023.1.003",
+    "venue": "Ural mathematical journal",
+    "cites": 2,
+    "auth": [
+     "Vitaly A. Baransky",
+     "Tatiana A. Senchonok"
+    ]
+   },
+   {
+    "title": "HGCLIP: Exploring Vision-Language Models with Graph Representations for Hierarchical Understanding",
+    "year": 2023,
+    "doi": "https://doi.org/10.48550/arxiv.2311.14064",
+    "venue": "arXiv (Cornell University)",
+    "cites": 2,
+    "auth": [
+     "Peng Xia",
+     "Xingtong Yu",
+     "Hu, Ming",
+     "Lie Ju",
+     "Zhiyong Wang"
+    ]
+   },
+   {
+    "title": "Uniform Large Deviations, Barrier Identity and the Néel--Arrhenius Law for the One-Dimensional Stochastic Landau--Lifshitz--Gilbert Equation",
+    "year": 2026,
+    "doi": "https://doi.org/10.48550/arxiv.2610.34823",
+    "venue": "arXiv (Cornell University)",
+    "cites": 0,
+    "auth": [
+     "Zdzisław Brzeźniak",
+     "Fan Gu",
+     "Liang Li"
+    ]
+   },
+   {
+    "title": "The Fundamental Gap of Simplices",
+    "year": 2013,
+    "doi": "https://doi.org/10.1007/s00220-013-1670-9",
+    "venue": "Communications in Mathematical Physics",
+    "cites": 3,
+    "auth": [
+     "Zhiqin Lu",
+     "Julie Rowlett"
+    ]
+   }
+  ],
+  "spectral sum lambda1 plus two lambda2 extremal graph": [
+   {
+    "title": "OH Absorption Spectroscopy to Investigate Light-Load HCCI Combustion",
+    "year": 2009,
+    "doi": null,
+    "venue": "Minds at UW (University of Wisconsin)",
+    "cites": 3,
+    "auth": [
+     "Sean J. Younger"
+    ]
+   },
+   {
+    "title": "Random Variables, Their Properties, and Deviational Ellipses: In Map Point and Excel, v 4.0",
+    "year": 2014,
+    "doi": null,
+    "venue": "Munich Personal RePEc Archive (Ludwig Maximilian University of Munich)",
+    "cites": 0,
+    "auth": [
+     "Roger L Goodwin"
+    ]
+   },
+   {
+    "title": "Composição e morfologia de Feijão Gandu, Lab lab e mucuna",
+    "year": 1993,
+    "doi": "https://doi.org/10.47749/t/unicamp.1993.65329",
+    "venue": null,
+    "cites": 0,
+    "auth": [
+     "Maria Silvia Seno"
+    ]
+   },
+   {
+    "title": "Digital Holography for Three Dimensional Tomographic and Topographic Measurements",
+    "year": 2014,
+    "doi": null,
+    "venue": "OhioLink ETD Center (Ohio Library and Information Network)",
+    "cites": 1,
+    "auth": [
+     "Logan A. Williams"
+    ]
+   },
+   {
+    "title": "Feasibility of Nuclear Plasma Interaction studies with the Activation Technique",
+    "year": 2018,
+    "doi": null,
+    "venue": "UWC Research Repository (University of the Western Cape)",
+    "cites": 0,
+    "auth": [
+     "Thembalethu Nogwanya"
+    ]
+   }
+  ],
+  "convex combination first and second adjacency eigenvalues": [
+   {
+    "title": "Convex combination of first and second eigenvalues of trees",
+    "year": 2026,
+    "doi": "https://doi.org/10.48550/arxiv.2601.10036",
+    "venue": "arXiv (Cornell University)",
+    "cites": 0,
+    "auth": [
+     "Hitesh Kumar",
+     "Bojan Mohar",
+     "Shivaramakrishna Pragada",
+     "Hanmeng Zhan"
+    ]
+   },
+   {
+    "title": "Bounds on Aα-eigenvalues using graph invariants",
+    "year": 2026,
+    "doi": "https://doi.org/10.26493/1855-3974.3524.ba3",
+    "venue": "Ars Mathematica Contemporanea",
+    "cites": 0,
+    "auth": [
+     "João Domingos Gomes da Silva",
+     "Carla Silva Oliveira",
+     "Liliana Costa"
+    ]
+   },
+   {
+    "title": "On the First Eigenvalue of Bipartite Graphs",
+    "year": 2008,
+    "doi": "https://doi.org/10.37236/868",
+    "venue": "The Electronic Journal of Combinatorics",
+    "cites": 83,
+    "auth": [
+     "Amitava Bhattacharya",
+     "Shmuel Friedland",
+     "Uri N. Peled"
+    ]
+   },
+   {
+    "title": "Anosov Representations, Strongly Convex Cocompact Groups and Eigenvalue Gaps",
+    "year": 2021,
+    "doi": "https://doi.org/10.7302/2716",
+    "venue": "Deep Blue (University of Michigan)",
+    "cites": 0,
+    "auth": [
+     "Konstantinos Tsouvalas"
+    ]
+   },
+   {
+    "title": "Convex Optimization: Algorithms and Complexity",
+    "year": 2015,
+    "doi": "https://doi.org/10.1561/2200000050",
+    "venue": "Foundations and Trends® in Machine Learning",
+    "cites": 1245,
+    "auth": [
+     "Sébastien Bubeck"
+    ]
+   },
+   {
+    "title": "Bounds for a alpha-eigenvalues",
+    "year": 2023,
+    "doi": "https://doi.org/10.48550/arxiv.2301.02733",
+    "venue": "arXiv (Cornell University)",
+    "cites": 0,
+    "auth": [
+     "João Domingos G. da Silva",
+     "Carla Silva Oliveira",
+     "Liliana Manuela G. C. da Costa"
+    ]
+   },
+   {
+    "title": "Bounds for Aα-eigenvalues",
+    "year": 2023,
+    "doi": "https://doi.org/10.1051/ro/2023144",
+    "venue": "RAIRO - Operations Research",
+    "cites": 1,
+    "auth": [
+     "João Domingos Gomes da Silva",
+     "Carla Silva Oliveira",
+     "Liliana Manuela G. C. da Costa"
+    ]
+   },
+   {
+    "title": "Convex Graph Invariants",
+    "year": 2012,
+    "doi": "https://doi.org/10.1109/ciss.2012.6310764",
+    "venue": "Conference on Information Sciences and Systems",
+    "cites": 14,
+    "auth": [
+     "Venkat Chandrasekaran",
+     "Pablo A. Parrilo",
+     "Alan S. Willsky"
+    ]
+   },
+   {
+    "title": "Eigenvalue techniques in design and graph theory",
+    "year": 1979,
+    "doi": "https://doi.org/10.6100/ir41103",
+    "venue": "Centrum Wiskunde & Informatica (CWI), the national research institute for mathematics and computer science in the Netherlands",
+    "cites": 164,
+    "auth": [
+     "Willem H. Haemers"
+    ]
+   },
+   {
+    "title": "Problems of distance geometry and convex properties of quadratic maps",
+    "year": 1995,
+    "doi": "https://doi.org/10.1007/bf02574037",
+    "venue": "Discrete & Computational Geometry",
+    "cites": 225,
+    "auth": [
+     "Alexander I. Barvinok"
+    ]
+   },
+   {
+    "title": "Spectral gap of convex combination of a random permutation and a bistochastic matrix",
+    "year": 2023,
+    "doi": "https://doi.org/10.48550/arxiv.2310.16434",
+    "venue": "arXiv (Cornell University)",
+    "cites": 0,
+    "auth": [
+     "Sarah Timhadjelt"
+    ]
+   },
+   {
+    "title": "Spectral gap of a convex combination of a random permutation and a deterministic matrix",
+    "year": 2026,
+    "doi": "https://doi.org/10.1214/26-ejp1510",
+    "venue": "Electronic Journal of Probability",
+    "cites": 0,
+    "auth": [
+     "Sarah Timhadjelt"
+    ]
+   },
+   {
+    "title": "Distributed Continuous-Time Convex Optimization on Weight-Balanced Digraphs",
+    "year": 2014,
+    "doi": "https://doi.org/10.1109/tac.2013.2278132",
+    "venue": "IEEE Transactions on Automatic Control",
+    "cites": 834,
+    "auth": [
+     "Bahman Gharesifard",
+     "Jorge Cortés"
+    ]
+   },
+   {
+    "title": "Second‐order convex maximum entropy approximants with applications to high‐order PDE",
+    "year": 2012,
+    "doi": "https://doi.org/10.1002/nme.4443",
+    "venue": "International Journal for Numerical Methods in Engineering",
+    "cites": 40,
+    "auth": [
+     "Adrian Rosolen",
+     "Daniel Millán",
+     "Marino Arroyo"
+    ]
+   },
+   {
+    "title": "Bicliques and Eigenvalues",
+    "year": 2001,
+    "doi": "https://doi.org/10.1006/jctb.2000.2020",
+    "venue": "Journal of Combinatorial Theory Series B",
+    "cites": 20,
+    "auth": [
+     "Willem H. Haemers"
+    ]
+   }
+  ],
+  "extremal graphs for weighted spectral sums threshold graphs": [
+   {
+    "title": "Wavelets on graphs via spectral graph theory",
+    "year": 2010,
+    "doi": "https://doi.org/10.1016/j.acha.2010.04.005",
+    "venue": "Applied and Computational Harmonic Analysis",
+    "cites": 2186,
+    "auth": [
+     "David Kenric Hammond",
+     "Pierre Vandergheynst",
+     "Rémi Gribonval"
+    ]
+   },
+   {
+    "title": "The Exact Maximum of the Spectral Sum of Graphs",
+    "year": 2026,
+    "doi": "https://doi.org/10.48550/arxiv.2607.23081",
+    "venue": "arXiv (Cornell University)",
+    "cites": 0,
+    "auth": [
+     "Jing Huang",
+     "Wei Wei"
+    ]
+   },
+   {
+    "title": "Spectral properties of Sombor matrix of threshold graphs",
+    "year": 2024,
+    "doi": "https://doi.org/10.1051/ro/2024111",
+    "venue": "RAIRO - Operations Research",
+    "cites": 4,
+    "auth": [
+     "Bilal Ahmad Rather",
+     "Muhammad Imran",
+     "Zahid Raza",
+     "Fozia Bashir Farooq"
+    ]
+   },
+   {
+    "title": "Strict spectral supersaturation for cliques: extremal graphs and sharp thresholds",
+    "year": 2026,
+    "doi": "https://doi.org/10.48550/arxiv.2610.03337",
+    "venue": "arXiv (Cornell University)",
+    "cites": 0,
+    "auth": [
+     "Qi Wu",
+     "Yong Lu"
+    ]
+   },
+   {
+    "title": "The Spectral Theory of Threshold Graphs: A Survey",
+    "year": 2026,
+    "doi": "https://doi.org/10.48550/arxiv.2610.22838",
+    "venue": "arXiv (Cornell University)",
+    "cites": 0,
+    "auth": [
+     "Pallabi Manna",
+     "Santanu Mandal",
+     "Fernando Tura"
+    ]
+   },
+   {
+    "title": "Extremal spectral behavior of weighted random $d$-regular graphs",
+    "year": 2023,
+    "doi": "https://doi.org/10.48550/arxiv.2306.03479",
+    "venue": "arXiv (Cornell University)",
+    "cites": 0,
+    "auth": [
+     "Jaehun Lee",
+     "Kyeongsik Nam"
+    ]
+   },
+   {
+    "title": "Extremal spectral properties of random graphs",
+    "year": 2026,
+    "doi": "https://doi.org/10.1103/7yff-fsjy",
+    "venue": "Physical review. E",
+    "cites": 0,
+    "auth": [
+     "C. T. Martínez-Martínez",
+     "Jose  Antonio Mendez-Bermudez"
+    ]
+   },
+   {
+    "title": "Spectral graph theory of brain oscillations",
+    "year": 2020,
+    "doi": "https://doi.org/10.1002/hbm.24991",
+    "venue": "Human Brain Mapping",
+    "cites": 66,
+    "auth": [
+     "Ashish Raj",
+     "Chang Cai",
+     "Xihe Xie",
+     "Eva M. Palacios",
+     "Julia P. Owen"
+    ]
+   },
+   {
+    "title": "Extremal cuts of sparse random graphs",
+    "year": 2017,
+    "doi": "https://doi.org/10.1214/15-aop1084",
+    "venue": "The Annals of Probability",
+    "cites": 98,
+    "auth": [
+     "Amir Dembo",
+     "Andrea Montanari A",
+     "Subhabrata Sen"
+    ]
+   },
+   {
+    "title": "Recovery thresholds for hidden weighted sparse graphs",
+    "year": 2026,
+    "doi": "https://doi.org/10.48550/arxiv.2606.14335",
+    "venue": "arXiv (Cornell University)",
+    "cites": 0,
+    "auth": [
+     "Zhe Hou",
+     "Jingcheng Liu"
+    ]
+   },
+   {
+    "title": "Extremal results in sparse pseudorandom graphs",
+    "year": 2014,
+    "doi": "https://doi.org/10.1016/j.aim.2013.12.004",
+    "venue": "Advances in Mathematics",
+    "cites": 60,
+    "auth": [
+     "David Conlon",
+     "Jacob Fox",
+     "Yufei Zhao"
+    ]
+   },
+   {
+    "title": "Graph spectral techniques in computer sciences",
+    "year": 2011,
+    "doi": "https://doi.org/10.2298/aadm111223025a",
+    "venue": "Applicable Analysis and Discrete Mathematics",
+    "cites": 31,
+    "auth": [
+     "Branko Arsić",
+     "Dragoš Cvetković",
+     "Slobodan Simić",
+     "Milan Skaric"
+    ]
+   },
+   {
+    "title": "Global synchronization beyond dense graphs: the case of threshold graphs",
+    "year": 2025,
+    "doi": "https://doi.org/10.48550/arxiv.2511.12646",
+    "venue": "arXiv (Cornell University)",
+    "cites": 0,
+    "auth": [
+     "Wu, Hongjin",
+     "Ulrik Brandes"
+    ]
+   },
+   {
+    "title": "Spectrally symmetric orientations of graphs",
+    "year": 2025,
+    "doi": "https://doi.org/10.48550/arxiv.2512.08049",
+    "venue": "arXiv (Cornell University)",
+    "cites": 0,
+    "auth": [
+     "Akbari, Saieed",
+     "Aloni, Jonathan",
+     "Levit, Maxwell",
+     "Mohar, Bojan",
+     "Xia, Steven"
+    ]
+   },
+   {
+    "title": "Single-Cluster Spectral Graph Partitioning for Robotics Applications",
+    "year": 2005,
+    "doi": "https://doi.org/10.15607/rss.2005.i.035",
+    "venue": "Robotics: Science and Systems",
+    "cites": 51,
+    "auth": [
+     "Edwin Olson",
+     "Matthew R. Walter",
+     "Seth J. Teller",
+     "John J. Leonard"
+    ]
+   }
+  ],
+  "three-block graph spectral radius second eigenvalue exact maximum": [
+   {
+    "title": "The Exact Maximum of the Spectral Sum of Graphs",
+    "year": 2026,
+    "doi": "https://doi.org/10.48550/arxiv.2607.23081",
+    "venue": "arXiv (Cornell University)",
+    "cites": 0,
+    "auth": [
+     "Jing Huang",
+     "Wei Wei"
+    ]
+   },
+   {
+    "title": "The minimum spectral radius of maximal outerplanar graphs",
+    "year": 2026,
+    "doi": "https://doi.org/10.48550/arxiv.2609.33333",
+    "venue": "arXiv (Cornell University)",
+    "cites": 0,
+    "auth": [
+     "O Suil"
+    ]
+   },
+   {
+    "title": "The spectral radius of $k$-chromatic $r$-graphs",
+    "year": 2026,
+    "doi": "https://doi.org/10.48550/arxiv.2605.14755",
+    "venue": "arXiv (Cornell University)",
+    "cites": 0,
+    "auth": [
+     "Xizhi Liu",
+     "Junchi Luo"
+    ]
+   },
+   {
+    "title": "Bounds on the spectral radius of graphs via subgraph deletion and coalescence",
+    "year": 2026,
+    "doi": "https://doi.org/10.13001/ela.2026.10630",
+    "venue": "Electronic Journal of Linear Algebra",
+    "cites": 0,
+    "auth": [
+     "Hongzhang Chen",
+     "Jianxi Li"
+    ]
+   },
+   {
+    "title": "Exact local spectral thresholds for perfect matchings in $3$-graphs and $3$-partite $3$-graphs",
+    "year": 2026,
+    "doi": "https://doi.org/10.48550/arxiv.2609.26832",
+    "venue": "arXiv (Cornell University)",
+    "cites": 0,
+    "auth": [
+     "Pei Liu",
+     "Suil O"
+    ]
+   },
+   {
+    "title": "The maximum spectral radius of outerplanar and planar $k$-uniform hypergraphs",
+    "year": 2026,
+    "doi": "https://doi.org/10.48550/arxiv.2609.10660",
+    "venue": "arXiv (Cornell University)",
+    "cites": 0,
+    "auth": [
+     "Pei Liu",
+     "O Suil"
+    ]
+   },
+   {
+    "title": "Challenges in random graph models with degree heterogeneity: existence, enumeration and asymptotics of the spectral radius",
+    "year": 2016,
+    "doi": null,
+    "venue": "D-Scholarship@Pitt (University of Pittsburgh)",
+    "cites": 0,
+    "auth": [
+     "David Burstein"
+    ]
+   },
+   {
+    "title": "Precise asymptotics for the spectral radius of a large random matrix",
+    "year": 2024,
+    "doi": "https://doi.org/10.1063/5.0209705",
+    "venue": "Journal of Mathematical Physics",
+    "cites": 4,
+    "auth": [
+     "Giorgio Cipolloni",
+     "László Erdős",
+     "Yuanyuan Xu"
+    ]
+   },
+   {
+    "title": "Degree sequences of spectrally extremal connected nonregular graphs with prescribed maximum degree: the dense case",
+    "year": 2026,
+    "doi": "https://doi.org/10.48550/arxiv.2610.02272",
+    "venue": "arXiv (Cornell University)",
+    "cites": 0,
+    "auth": [
+     "Zejun Huang",
+     "Chenxi Yang"
+    ]
+   },
+   {
+    "title": "Spectral analysis of sparse random graphs and hypergraphs",
+    "year": 2021,
+    "doi": null,
+    "venue": "eScholarship (California Digital Library)",
+    "cites": 0,
+    "auth": [
+     "Yizhe Zhu"
+    ]
+   },
+   {
+    "title": "The maximum spectral radius of uniform hypergraphs whose shadow excludes a complete or complete bipartite minor",
+    "year": 2026,
+    "doi": "https://doi.org/10.48550/arxiv.2609.22370",
+    "venue": "arXiv (Cornell University)",
+    "cites": 0,
+    "auth": [
+     "Pei Liu",
+     "O Suil"
+    ]
+   },
+   {
+    "title": "Spectral Graph Forge: Graph Generation Targeting Modularity",
+    "year": 2018,
+    "doi": "https://doi.org/10.1109/infocom.2018.8485916",
+    "venue": "IEEE Conference on Computer Communications (INFOCOM)",
+    "cites": 12,
+    "auth": [
+     "Luca Baldesi",
+     "Carter T. Butts",
+     "Athina P. Markopoulou"
+    ]
+   },
+   {
+    "title": "Spectral extremal graphs for $W_5$-free graphs with odd size",
+    "year": 2026,
+    "doi": "https://doi.org/10.48550/arxiv.2609.28556",
+    "venue": "arXiv (Cornell University)",
+    "cites": 0,
+    "auth": [
+     "Jing Gao",
+     "Xianya Geng",
+     "Li Shuchao"
+    ]
+   },
+   {
+    "title": "Spectral extrema of 1-planar graphs with no short cycles or small cliques",
+    "year": 2026,
+    "doi": "https://doi.org/10.48550/arxiv.2608.24519",
+    "venue": "arXiv (Cornell University)",
+    "cites": 0,
+    "auth": [
+     "Shuchao Li",
+     "M. Z. Wang",
+     "Qin Zhao"
+    ]
+   },
+   {
+    "title": "The Spectral Theory of Threshold Graphs: A Survey",
+    "year": 2026,
+    "doi": "https://doi.org/10.48550/arxiv.2610.22838",
+    "venue": "arXiv (Cornell University)",
+    "cites": 0,
+    "auth": [
+     "Pallabi Manna",
+     "Santanu Mandal",
+     "Fernando Tura"
+    ]
+   }
+  ]
+ },
+ "arxiv": {
+  "all:\"lambda_1+2\\lambda_2\"": [
+   {
+    "id": "http://arxiv.org/abs/2610.34823v1",
+    "title": "Uniform Large Deviations, Barrier Identity and the Néel--Arrhenius Law for the One-Dimensional Stochastic Landau--Lifshitz--Gilbert Equation",
+    "pub": "2026-10-26",
+    "auth": [
+     "Zdzisław Brzeźniak",
+     "Fan Gu",
+     "Liang Li"
+    ]
+   }
+  ],
+  "abs:\"second largest eigenvalue\" AND abs:\"weighted\" AND abs:\"extremal graph\"": [],
+  "abs:\"threshold graph\" AND abs:\"eigenvalues\" AND abs:\"extremal\"": [
+   {
+    "id": "http://arxiv.org/abs/1602.02069v2",
+    "title": "Spectral properties of cographs and $P_5$-free graphs",
+    "pub": "2016-02-05",
+    "auth": [
+     "Ebrahim Ghorbani"
+    ]
+   }
+  ],
+  "abs:\"spectral sum\" AND cat:math.CO": [
+   {
+    "id": "http://arxiv.org/abs/2607.23081v1",
+    "title": "The Exact Maximum of the Spectral Sum of Graphs",
+    "pub": "2026-07-25",
+    "auth": [
+     "Jing Huang",
+     "Wei Wei"
+    ]
+   },
+   {
+    "id": "http://arxiv.org/abs/2606.30996v1",
+    "title": "Path-Minimality for Positive $p$-Energies, Laplacian-Type Spectra, and Line Graphs",
+    "pub": "2026-06-30",
+    "auth": [
+     "Yinchen Liu",
+     "Quanyu Tang"
+    ]
+   },
+   {
+    "id": "http://arxiv.org/abs/2604.00512v2",
+    "title": "Maximum spectral sum of graphs",
+    "pub": "2026-04-01",
+    "auth": [
+     "Hitesh Kumar",
+     "Lele Liu",
+     "Hermie Monterde",
+     "Shivaramakrishna Pragada"
+    ]
+   },
+   {
+    "id": "http://arxiv.org/abs/2601.10036v2",
+    "title": "Convex combination of first and second eigenvalues of trees",
+    "pub": "2026-01-15",
+    "auth": [
+     "Hitesh Kumar",
+     "Bojan Mohar",
+     "Shivaramakrishna Pragada",
+     "Hanmeng Zhan"
+    ]
+   }
+  ],
+  "abs:\"lambda_1\" AND abs:\"lambda_2\" AND abs:\"exact maximum\" AND cat:math.CO": []
+ }
+}

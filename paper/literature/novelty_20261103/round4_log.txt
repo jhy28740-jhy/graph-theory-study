@@ -1,0 +1,72 @@
+########## Zenodo record metadata ##########
+
+--- 21785905 ---
+ doi: 10.5281/zenodo.21785906 | related doi: 10.5281/zenodo.21785906
+ title: The Third Spectral Sum of Graphs: An Exact Universal Bound, Pole–Pentagon Extremality, and Resolution of the 𝑆3 Extremal Problem
+ pubdate: 2026-08-04 | created: 2026-08-04T06:22:21.865710+00:00 | updated: 2026-08-04T06:22:22.165112+00:00
+ creators: [('Newton, Tony', None)]
+ stats: {'downloads': 0, 'unique_downloads': 0, 'views': 20, 'unique_views': 19, 'version_downloads': 0, 'version_unique_downloads': 0, 'version_unique_views': 19, 'version_views': 20}
+ versions: "https://zenodo.org/api/records/21785906/versions"
+ conceptrecid: https://zenodo.org/api/records/21785906/versions/latest | {'version': [{'index': 0, 'is_last': True, 'parent': {'pid_type': 'recid', 'pid_value': '21785905'}}]}
+
+--- 21785906 ---
+ doi: 10.5281/zenodo.21785906 | related doi: 10.5281/zenodo.21785906
+ title: The Third Spectral Sum of Graphs: An Exact Universal Bound, Pole–Pentagon Extremality, and Resolution of the 𝑆3 Extremal Problem
+ pubdate: 2026-08-04 | created: 2026-08-04T06:22:21.865710+00:00 | updated: 2026-08-04T06:22:22.165112+00:00
+ creators: [('Newton, Tony', None)]
+ stats: {'downloads': 0, 'unique_downloads': 0, 'views': 20, 'unique_views': 19, 'version_downloads': 0, 'version_unique_downloads': 0, 'version_unique_views': 19, 'version_views': 20}
+ versions: "https://zenodo.org/api/records/21785906/versions"
+ conceptrecid: https://zenodo.org/api/records/21785906/versions/latest | {'version': [{'index': 0, 'is_last': True, 'parent': {'pid_type': 'recid', 'pid_value': '21785905'}}]}
+
+--- 22082841 ---
+ doi: 10.5281/zenodo.22082842 | related doi: 10.5281/zenodo.22082842
+ title: The Third Spectral Sum of Graphs: Exact Projection Equivalence, Pole–Pentagon Geometry, and Certified Carrier Reduction
+ pubdate: 2026-08-24 | created: 2026-08-24T14:43:32.719084+00:00 | updated: 2026-08-24T14:43:32.966847+00:00
+ creators: [('Newton, Tony', None)]
+ stats: {'downloads': 2, 'unique_downloads': 2, 'views': 8, 'unique_views': 8, 'version_downloads': 2, 'version_unique_downloads': 2, 'version_unique_views': 8, 'version_views': 8}
+ versions: "https://zenodo.org/api/records/22082842/versions"
+ conceptrecid: https://zenodo.org/api/records/22082842/versions/latest | {'version': [{'index': 0, 'is_last': True, 'parent': {'pid_type': 'recid', 'pid_value': '22082841'}}]}
+
+--- 22082842 ---
+ doi: 10.5281/zenodo.22082842 | related doi: 10.5281/zenodo.22082842
+ title: The Third Spectral Sum of Graphs: Exact Projection Equivalence, Pole–Pentagon Geometry, and Certified Carrier Reduction
+ pubdate: 2026-08-24 | created: 2026-08-24T14:43:32.719084+00:00 | updated: 2026-08-24T14:43:32.966847+00:00
+ creators: [('Newton, Tony', None)]
+ stats: {'downloads': 2, 'unique_downloads': 2, 'views': 8, 'unique_views': 8, 'version_downloads': 2, 'version_unique_downloads': 2, 'version_unique_views': 8, 'version_views': 8}
+ versions: "https://zenodo.org/api/records/22082842/versions"
+ conceptrecid: https://zenodo.org/api/records/22082842/versions/latest | {'version': [{'index': 0, 'is_last': True, 'parent': {'pid_type': 'recid', 'pid_value': '22082841'}}]}
+
+
+########## OpenAlex title.search (lam1+2lam2 variants) ##########
+
+## first and second largest eigenvalues graphs
+   count: 0
+
+## eigenvalue sum extremal graph exact
+   count: 0
+
+## weighted eigenvalue sum graph maximum
+   count: 0
+
+## spectral extremal problem weighted eigenvalues
+   count: 0
+
+## three block graph eigenvalues
+   count: 0
+
+## stair graph eigenvalues extremal
+   count: 0
+
+## second largest eigenvalue maximum graphs exact
+   count: 0
+
+## Pell equation spectral graph theory
+   count: 0
+
+## pole pentagon spectral sum
+   count: 2
+   - [2026] The Third Spectral Sum of Graphs: Exact Projection Equivalence, Pole–Pentagon Geometry, and Cer | Zenodo (CERN European Organization for Nuclear Research)
+   - [2026] The Third Spectral Sum of Graphs: An Exact Universal Bound, Pole–Pentagon Extremality, and Reso | Zenodo (CERN European Organization for Nuclear Research)
+
+## third largest eigenvalue sum graphs
+   count: 0

@@ -1,0 +1,350 @@
+\documentclass[UTF8,11pt]{ctexart}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array,geometry,enumitem}
+\usepackage{xcolor}
+\definecolor{linkblue}{rgb}{0.10,0.20,0.45}
+\usepackage[colorlinks=true,linkcolor=linkblue,citecolor=linkblue,urlcolor=linkblue]{hyperref}
+\geometry{a4paper,margin=2.3cm}
+\setlength{\parskip}{4pt}
+\setlength{\emergencystretch}{3em}
+\sloppy
+\newcommand{\Lam}{\Lambda}
+\newcommand{\cst}{c_\ast}
+\newcommand{\ok}{\textcolor[rgb]{0.05,0.45,0.15}{\bfseries [已核]}}
+\newcommand{\warn}{\textcolor[rgb]{0.72,0.28,0.02}{\bfseries [须处理]}}
+\newcommand{\gap}{\textcolor[rgb]{0.55,0.10,0.10}{\bfseries [缺口]}}
+
+\title{\bfseries 第二次查新复核报告\\[4pt]
+\large 前三大特征值之和的精确上界\;$\Lam_3=\lambda_1+\lambda_2+\lambda_3$\\[2pt]
+\normalsize 兼及副线 $\lambda_1+2\lambda_2$ 的极图分类}
+\author{Haoyang Ji}
+\date{2026 年 11 月 3 日}
+
+\begin{document}
+\maketitle
+
+\section*{摘要与结论}
+
+本报告记录 2026 年 11 月 3 日对主论文
+\emph{A joint moment bound for the three largest graph eigenvalues}
+所做的一次独立查新复核，以及据此对论文正文实施的修改。三条结论如下。
+
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em]
+\item \ok\ \textbf{主定理的新颖性安全。}
+在可检索的主流文献（arXiv math.CO、OpenAlex 索引的期刊与学位论文、Zenodo）中，
+\emph{没有任何工作改进过} Sivashankar--Tang--Wakhare（下称 STW，arXiv:2608.02429）
+Proposition 6.1 给出的系数 $\frac{3+\sqrt5}{4}=1.309016994374947\ldots$。
+本文的
+\[
+ c=\frac{106106902139519}{107310156800000}+\frac{41\sqrt3}{240}-\frac{53}{9000000}
+  =1.284673255723918505\ldots
+\]
+仍是公开可查的最好系数，且证明是无条件的、自足的。
+
+\item \warn\ \textbf{但下界常数已被一条时间更早、带 DOI 的自存档记录提出，必须引用。}
+Zenodo 上署名 ``Tony Newton / Newton Astro Labs'' 的两条记录
+（doi:10.5281/zenodo.21785906，2026-08-04；doi:10.5281/zenodo.22082842，2026-08-24）
+以 ``pole--pentagon law''（极点--五边形律）的名义给出了与本文 \emph{完全相同}的常数与权重，
+并进一步声称 $\Lam_3(G)\le\alpha_3n-3$。
+该声称\textbf{依其自身表述是条件性的}：定理标题为 \emph{Candidate} universal $S_3$ theorem，
+依赖一条机器证书链，作者明确要求独立审计。
+论文已新增注 3.2 与两条参考文献如实处理，\textbf{本文不主张该常数的优先权}。
+
+\item \ok\ \textbf{副线 $\lambda_1+2\lambda_2$ 未被抢先。}
+所有针对加权谱和的标题级与全文级检索均无命中；
+最近邻的三篇（树的凸组合、$S_2$ 精确解、阈图谱综述）都不覆盖本问题。
+该章节可安全作为学位论文的独立成果。
+\end{enumerate}
+
+\section{检索方法、覆盖范围与局限}
+
+\textbf{数据源。} arXiv 官方 API（\texttt{export.arxiv.org}，摘要级与全文级检索式）；
+OpenAlex（\texttt{api.openalex.org}，\texttt{title.search} 与 \texttt{search} 两种过滤）；
+Zenodo API（记录元数据、DOI 解析、版本关系、下载与浏览统计）；
+arXiv 原文 LaTeX 源码（对关键近邻逐句核对）。
+Crossref 在本次会话中不可达，Semantic Scholar 间歇性失败，
+故以 OpenAlex 为主索引、以 arXiv 原文为最终裁决。
+
+\textbf{检索式（节选）。} 主线：\texttt{"third spectral sum"}、
+\texttt{"sum of the largest"} + \texttt{math.CO}、
+\texttt{lambda\_1 lambda\_2 extremal}、\texttt{weighted spectral sum graphs}、
+\texttt{pole pentagon spectral sum}、\texttt{three block graph eigenvalues}。
+副线：\texttt{lambda\_1+2\textbackslash lambda\_2}、
+\texttt{convex combination first and second eigenvalues}、
+\texttt{stair graph eigenvalues extremal}、\texttt{Pell equation spectral graph theory}、
+\texttt{second largest eigenvalue maximum graphs exact}。
+
+\textbf{局限（须向导师说明）。}
+(i)~Zenodo 的站内关键词检索接口在本次会话中已失效
+（任意查询均返回全站四万余条记录），因此 Zenodo 一侧的排查改为
+``OpenAlex 标题索引反查 + 已知 DOI 直接核验''的组合，
+不能排除 Zenodo 上存在未被 OpenAlex 收录的同类自存档。
+(ii)~尚未出版的会议论文与在投期刊稿件不可检索。
+(iii)~中文文献库（CNKI、万方）未纳入本次检索。
+
+\section{主线：$\Lam_3$ 上界的文献比对}
+
+表~\ref{tab:main} 汇总了所有与 $\Lam_3$ 上界相关、且本次已核验原文或摘要的工作。
+其中 Tang（2603.21181）、Sivashankar（2603.28738）、Wakhare（2603.29280）
+三项早期预印本的结果均被 STW 的 Proposition 6.1 涵盖；
+本文的 $c$ 严格优于 STW。
+
+\begin{table}[htbp]
+\centering\small
+\caption{与 $\Lam_3$ 上界相关的已核验文献}\label{tab:main}
+\begin{longtable}{@{}p{4.6cm}p{6.4cm}p{4.2cm}@{}}
+\toprule
+文献 & 结果 & 与本文关系\\
+\midrule
+\endfirsthead
+\toprule
+文献 & 结果 & 与本文关系\\
+\midrule
+\endhead
+Ebrahimi, SFU 硕士论文 (2008), Thm 3.4.1 &
+$\tau_3\le3/\sqrt5=1.341640786\ldots$（补图 + Weyl + Cauchy--Schwarz） &
+本文已引，为系数链第一环\\
+Tang, arXiv:2603.21181 & $\lambda_3\le n/3-1$ & 单项，被 STW 涵盖\\
+Sivashankar, arXiv:2603.28738 & $\Lam_3$ 型上界 & 被 STW 涵盖\\
+Wakhare, arXiv:2603.29280 & $\Lam_3$ 型上界 & 被 STW 涵盖\\
+KLMPT, arXiv:2604.00512 & $\lambda_1+\lambda_2\le8n/7$ & 两项和的普适上界\\
+STW, arXiv:2608.02429, Prop.\ 6.1 &
+$\Lam_k\le\frac{1+\gamma(k)}2n-k$；$k=3$ 给出 $\frac{3+\sqrt5}4n-3$；
+并引入混合投影常数 $\eta_{\mathrm{mix}}(k)$ &
+\textbf{本文的直接改进对象}\\
+\textbf{Huang--Wei, arXiv:2607.23081} &
+$S_2=\lambda_1+\lambda_2$ 的\textbf{精确}最大值与\textbf{唯一}极图 $K_n^\star$
+（三部图，部大小由 $n\bmod7$ 决定），$S_2\le8n/7-2$，$7\mid n$ 时取等；
+证明用 Ky Fan 变分 + 加权 Ferrers 商的谱不等式 &
+两项问题已解决；\textbf{本次已补引}\\
+\textbf{Paulin, arXiv:2609.37980} &
+$\lambda_1,\lambda_2$ 的锐二次不等式与 $\lambda_2,\lambda_3$ 的二次不等式；
+推出 $\lambda_1+\lambda_2\le8n/7-2$、$\lambda_3\le n/3-1$、$\lambda_2+\lambda_3\le2n/3-2$；
+确定两组归一化特征值对的闭包 &
+最近邻的二次不等式路线；\textbf{本次已补引}\\
+Sun--Guo--Ge--Das, arXiv:2609.23707 &
+$S_k$ 的 Hoffman 型结果：刻画 $S_k<2k$ 的连通图，$P_n$ 为唯一极小图 &
+属``极小/下界''方向，与本文不冲突\\
+Kumar--Mohar--Mojallal--Pragada, arXiv:2609.03200 &
+极大相对投影常数的稳定性 & 本文已引 \texttt{KMMP}\\
+Leonida--Li, LAA, doi:10.1016/j.laa.2026.03.031 &
+线性型幂的最小依赖 & 与本文 \texttt{LiLiu} 同方向\\
+Schmidt, SJSU 硕士论文, doi:10.31979/etd.kkej-tu27 &
+Powers 关于第三大特征值的猜想 & 单项 $\lambda_3$ 方向\\
+\bottomrule
+\end{longtable}
+\end{table}
+
+\section{须处理的先行记录：Zenodo ``Tony Newton''}
+
+\subsection{记录本身}
+
+\begin{itemize}[leftmargin=1.4em]
+\item \textbf{记录 A}：doi:10.5281/zenodo.21785906，上传时间
+2026-08-04T06:22:21Z，24 页，标题
+\emph{The Third Spectral Sum of Graphs: An Exact Universal Bound,
+Pole--Pentagon Extremality, and Resolution of the $S_3$ Extremal Problem}。
+\item \textbf{记录 B}：doi:10.5281/zenodo.22082842，上传时间
+2026-08-24T14:43:32Z，10 页，标题
+\emph{The Third Spectral Sum of Graphs: Exact Projection Equivalence,
+Pole--Pentagon Geometry, and Certified Carrier Reduction}。
+\item \textbf{作者信息}：``Newton, Tony''，署名单位 ``Newton Astro Labs''，
+联系邮箱 \texttt{tony.newton79@gmail.com}，ORCID 0009-0009-9189-6431；
+API 返回的 \texttt{affiliations} 字段为空，即\textbf{无机构署名}。
+许可 CC-BY-4.0。
+\item \textbf{传播情况}：记录 A 下载 0 次、浏览 20 次（独立 19）；
+记录 B 下载 2 次、浏览 8 次。被引数 0。
+\item \textbf{账号行为模式}：同一账号批量上传彼此完全无关的主题
+（Navier--Stokes、Erd\H{o}s--Straus、Goldbach 型问题等），
+属典型的非策展式自存档，而非某个研究组的常规预印本发布。
+\end{itemize}
+
+\subsection{逐项重合点（已用 60 位十进制精度核验）}
+
+\begin{center}\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+量 & 该记录的写法 & 本文的写法\\
+\midrule
+极值常数 &
+$\alpha_3=\dfrac12+\dfrac{\sqrt5}{18}+\dfrac{\sqrt{35}}9=1.281568196872168\ldots$ &
+$\cst=\dfrac{9+\sqrt5+2\sqrt{35}}{18}$\\[2pt]
+顶点权重 & $p^\ast=\dfrac{91-25\sqrt7}{126}$ & $a=1-5b$\\[2pt]
+环点权重 & $r^\ast=\dfrac{7+5\sqrt7}{126}$ & $b=\dfrac{7+5\sqrt7}{126}$\\[2pt]
+极图模板 & axial pole $+$ regular pentagonal orbit & $K_1\vee C_5$ 六部核\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+两个常数在代数上恒等：
+$\frac12+\frac{\sqrt5}{18}+\frac{\sqrt{35}}9
+ =\frac{9+\sqrt5+2\sqrt{35}}{18}$，
+数值同为 $1.28156819687216787675243501399191724068\ldots$；
+权重 $r^\ast$ 与本文的 $b$ 逐字相同，且 $p^\ast+5r^\ast=1$ 与本文 $a+5b=1$ 一致。
+``极点--五边形''即本文的锥点 $K_1$ 加五边形环 $C_5$。
+
+\subsection{该记录额外声称了什么，以及为什么它是条件性的}
+
+记录 A 断言 $M_3(n)=\max_{|V(G)|=n}\Lam_3(G)\le\alpha_3n-3$ 对每个 $n$ 成立，
+即它把 $\alpha_3$ 同时当作上界与下界，从而宣称 $S_3$ 极值问题已解决。
+但同一份文本在三处明确限定该断言的地位：
+
+\begin{quote}\small
+\begin{enumerate}[label=(\alph*),leftmargin=1.8em]
+\item 定理标题本身即为
+``\emph{Theorem 1.1 (Candidate universal $S_3$ theorem -- exact certificate closure)}''；
+\item 定理前提写作 ``\emph{Within the exact analytic and proof-carrying certificate chain}''；
+\item 结论段落写作 ``\emph{Externally the responsible description remains
+`Candidate Universal $S_3$ Theorem -- Exact Certificate Closure' until independent
+specialists have audited the admissibility of the archived payments and replayed the
+exact certificate stack}''，并在摘要中说明验收
+``\emph{properly remains subject to independent mathematical audit of the admissibility
+of the archived dual payments, the global sector partition and the exact verifier
+implementation}''。
+\end{enumerate}
+\end{quote}
+
+记录 B 同样把证书库描述为 ``\emph{when assumed complete}''，
+并自设一节 ``\emph{Independent audit target}''。
+换言之，\textbf{作者本人不主张该上界已被无条件证明}。
+此外，两条记录都不含 graphon 方法、不含``每个极大化 graphon 的典范律至多 24 个支撑点''
+这类结构定理，也不含本文的 $c=1.284673255723918505\ldots$。
+
+\subsection{时间线与优先权判断}
+
+本仓库 $\Lam_3$ 研究的首次提交为 \texttt{308390d}（2026-10-27），
+晚于记录 A 约 \textbf{2.5 个月}、晚于记录 B 约 \textbf{2.1 个月}。
+因此在下界常数 $\cst$、最优权重 $b$ 与 $K_1\vee C_5$ 模板这三项上，
+\textbf{本文不构成首次提出}。而在无条件上界 $c$、
+graphon 极大化的 24 支撑点结构定理、以及全部证书化正性验证这三项上，
+未见任何在先公开材料，\textbf{本文构成首次}。
+
+\subsection{已落实的处置}
+
+\begin{enumerate}[label=(\roman*),leftmargin=2.2em]
+\item 正文 §1 系数链之后新增两段：一段交代 Huang--Wei 与 Paulin 两项相邻结果
+（说明为何三项和需要不同几何），一段直接点名 Newton 的两条 Zenodo 记录、
+其条件性质、以及本文不主张常数优先权。
+\item 引理 3.1（\texttt{attainment}）证明之后新增
+\textbf{注 3.2}（\texttt{rem-newton}），标题即``$\cst$ 的优先权''，
+逐字引用该记录对自身的限定语，并说明本文的下界只依赖 join 的常规商矩阵计算，
+不需要其证书机制。
+\item §12（Further questions）把无条件缺口
+\[
+ c-\cst=0.003105058851750628\ldots
+\]
+显式列出，并说明：若该记录的证书论证日后通过独立审计，则 $\mathcal M=\cst$，
+区间收缩为一点；本文的定理与该结果无关。
+\item 参考文献新增 4 条：\texttt{HW}、\texttt{Newton1}、\texttt{Newton2}、\texttt{Paulin}；
+两条 Newton 条目在文献项内即注明``Zenodo 自存档、未经同行评审、结论条件性''，
+使任何读者在参考文献表中就能看到限定。
+\item 论文日期更新为 November 3, 2026；篇幅由 20 页增至 22 页。
+\end{enumerate}
+
+\subsection{风险评级}
+
+\begin{center}\small
+\begin{tabular}{@{}p{4.2cm}p{2.0cm}p{8.6cm}@{}}
+\toprule
+风险 & 等级 & 说明\\
+\midrule
+主定理被抢先 & \textcolor[rgb]{0.05,0.45,0.15}{低} &
+无任何无条件改进 STW 的公开结果；本文的 $c$ 仍是公开最好系数\\
+下界常数被抢先 & \textcolor[rgb]{0.72,0.28,0.02}{已发生，已处置} &
+通过引用 + 明确让渡优先权 + 强调本文下界证明独立，风险已消除\\
+被指学术不端 & \textcolor[rgb]{0.05,0.45,0.15}{低} &
+论文现在主动、显著地披露了这条在先记录，而非回避\\
+$\alpha_3$ 最终被证实 & \textcolor[rgb]{0.05,0.25,0.55}{不影响本文} &
+本文从未主张 $c$ 最优；届时结论变为``本文给出无条件上界，
+真实值为 $\cst$，缺口 $0.003105\ldots$ 由他人闭合''\\
+$\alpha_3$ 被证伪 & \textcolor[rgb]{0.05,0.45,0.15}{不影响本文} &
+本文的下界与上界均不依赖它\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{副线：$\lambda_1+2\lambda_2$ 的极图分类}
+
+\subsection{检索结果}
+
+针对该问题设计的 10 组 OpenAlex 标题级检索全部返回 \textbf{0 条}：
+\texttt{weighted spectral sum graphs}、\texttt{lambda1 plus two lambda2}、
+\texttt{exact maximum weighted combination adjacency eigenvalues}、
+\texttt{first and second largest eigenvalues graphs}、
+\texttt{eigenvalue sum extremal graph exact}、\texttt{three block graph eigenvalues}、
+\texttt{stair graph eigenvalues extremal}、
+\texttt{second largest eigenvalue maximum graphs exact}、
+\texttt{Pell equation spectral graph theory}、
+\texttt{spectral extremal problem weighted eigenvalues}。
+arXiv 侧以 \texttt{all:"lambda\_1+2\textbackslash lambda\_2"} 检索，
+唯一命中是一篇一维随机 Landau--Lifshitz 链的物理论文，与图论无关；
+以 \texttt{abs:"spectral sum"} + \texttt{math.CO} 检索仅得 4 篇，
+全部已在表~\ref{tab:main} 中列出。
+Zenodo 侧以 \texttt{pole pentagon spectral sum} 反查，仅得上述两条 Newton 记录，
+无任何 $\lambda_1+2\lambda_2$ 条目。
+
+\subsection{最近邻文献与其不覆盖的理由}
+
+\begin{center}\small
+\begin{longtable}{@{}p{4.4cm}p{5.4cm}p{5.0cm}@{}}
+\toprule
+文献 & 结果 & 为何不构成抢先\\
+\midrule
+\endfirsthead
+\toprule
+文献 & 结果 & 为何不构成抢先\\
+\midrule
+\endhead
+Kumar--Mohar--Pragada, arXiv:2601.10036v2（v1 2026-01-15，v2 2026-08-07） &
+对\textbf{树}确定 $\alpha\lambda_1+(1-\alpha)\lambda_2$ 的极大与极小极值树，
+$\alpha\in[0,1]$ &
+类限制为树；且 $\lambda_1+2\lambda_2=3\bigl(\tfrac13\lambda_1+\tfrac23\lambda_2\bigr)$
+中 $\lambda_2$ 的权重为 2，超出其凸组合范围\\
+Huang--Wei, arXiv:2607.23081 &
+$S_2$ 的精确最大值与唯一极图 & $k=1$ 情形；方法学最接近，结论不同\\
+Manna--Mandal--Tura, arXiv:2610.22838（2026-10-16） &
+阈图（$\{P_4,C_4,2K_2\}$-free）在邻接、Laplacian、符号 Laplacian、距离、
+距离 Laplacian、距离符号 Laplacian、偏心、Seidel、归一化等 7 类矩阵下的谱综述
++ 开放问题清单 &
+综述，无 $\lambda_1+2\lambda_2$ 结果；但阶梯图即阈图，\textbf{须作为该类图的标准引用}\\
+arXiv:1602.02069 & cograph 与 $P_5$-free 图的谱性质、特征值重数上界猜想 &
+背景引用\\
+Paulin, arXiv:2609.37980 & 归一化特征值对的区域闭包 & 区域型结果，未涉及权重 2\\
+\bottomrule
+\end{longtable}
+\end{center}
+
+\subsection{章节写作时的引用义务}
+
+在学位论文的 $\lambda_1+2\lambda_2$ 章节中，以下四点必须写明：
+(i)~把 $C=\frac{5+4\sqrt2}{7}=1.522407\ldots$ 与 Huang--Wei 的 $\frac87$ 并列，
+说明权重 2 使系数跨过 1.5；
+(ii)~指出 Kumar--Mohar--Pragada 只处理树且只处理凸组合，本问题是全体图上的非凸加权；
+(iii)~把阶梯图类明确等同于阈图，并引用 arXiv:2610.22838 综述；
+(iv)~说明 Pell 型并列 $k^2-2n^2=-7$ 是本问题特有的算术现象，
+在已检索文献中未见对应先例。
+
+\section{给导师的一句话说明}
+
+本文对 $\Lam_3$ 给出的无条件上界 $cn-3$ 是公开的最好结果，未被抢先；
+下界常数 $\cst$ 与 $K_1\vee C_5$ 极图模板在本文之前约两个半月
+由一条 Zenodo 自存档记录以``极点--五边形律''的名义提出过，
+该记录同时声称（条件性地、依赖未经审计的机器证书）这就是精确值，
+本文已在注 3.2 与参考文献中如实披露并让渡该常数的优先权，
+主定理的证明不依赖它；副线 $\lambda_1+2\lambda_2$ 经检索未被抢先。
+
+\section{本次查新的原始数据}
+
+全部抓取结果与检索脚本已入库，路径
+\texttt{paper/literature/novelty\_20261103/}：
+\texttt{raw\_hits.json}、\texttt{fast\_hits.json}、\texttt{lam12lam2\_hits.json}、
+\texttt{round3\_log.txt}、\texttt{round4\_log.txt}，
+以及 \texttt{\_search\_lam12.py}、\texttt{\_search\_round2.py}、
+\texttt{\_search\_round3.py}、\texttt{\_search\_round4.py}。
+两条 Newton 记录的 PDF 与纯文本抽取为
+\texttt{paper/literature/Newton2026a.pdf}/\texttt{.txt} 与
+\texttt{Newton2026b.pdf}/\texttt{.txt}；
+STW 与 Huang--Wei 的 arXiv LaTeX 全文分别为
+\texttt{STW\_src.tex.txt} 与 \texttt{HuangWei\_src.tex.txt}。
+
+\end{document}

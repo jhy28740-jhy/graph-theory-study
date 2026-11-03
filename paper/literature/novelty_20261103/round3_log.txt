@@ -1,0 +1,112 @@
+########## ZENODO ##########
+
+## "spectral sum" graph eigenvalue
+   total: 41179
+   - 23908795 | 2026-10-15 | Three new species and a new genus of chrysilline jumping spiders (Araneae: Salticidae) from tea-grow | ['Yang, Zhiyong', 'Li, Tao', 'Ni, Yi']
+   - 23907529 | 2026-10-06 | КЛИНИЧЕСКОЕ МЫШЛЕНИЕ БОЛЬШИХ ЯЗЫКОВЫХ МОДЕЛЕЙ:  ОБЗОР АКТУАЛЬНЫХ МЕТОДОВ, ПОДХОДОВ К ОЦЕНКЕ, ПРОБЛЕМ | ['Адылова Фатима Туйчиевна', 'Давронов Рифкат Рахимович']
+   - 23906799 | 2026-11-03 | GESSO: Spatial Gene Set Activity Analysis | ['Yang, Andrew J.', 'Tan, Chichun', 'Ma, Ying']
+   - 23906381 | 2026-11-03 | Firmenstein: Scaling Dynamic Analysis for Linux-Based Firmware Services via API-Centric Intervention | ['Wang, Yanzhong']
+   - 23905306 | 2026-11-03 | ttl3d: a self-contained 3D and 2D HTML viewer for RDF graphs, SPARQL results and tables | ['Abadifard, Soheil']
+   - 23874599 | 2026-11-03 | Code and split files for: Leakage-Controlled Evaluation of Temporal and Graph Models for Ransomware  | ['Asshad, Muhammad', 'Abdollah, Mohd Faizal', 'Yassin, Warusia']
+   - 23902838 | 2026-11-03 | Physics Inspired Neural Networks Enable Efficient Graph Coloring - code | ['Giagu, Stefano', 'colantonio, lorenzo']
+   - 23903301 | 2026-11-03 | OEIS A209723: Barker's conjectures on distinct clockwise edge differences | ['Ma, Haobo', 'Zhang, Wenlin']
+   - 23902654 | 2026-09-30 | FIGURE 8 in A catalogue and updated checklist of Dacini fruit flies from India (Diptera: Tephritidae | ['Abhishek, Venkateshaiah', 'David, Karamankodu Jacob']
+   - 23902651 | 2026-09-30 | FIGURE 7 in A catalogue and updated checklist of Dacini fruit flies from India (Diptera: Tephritidae | ['Abhishek, Venkateshaiah', 'David, Karamankodu Jacob']
+   - 23902172 | 2026-11-03 | Isurwars/Correlation: Correlation 4.2.0 | ['Isaías Rodríguez Aguirre', 'Mineralwater Xu']
+   - 23902114 | 2026-11-03 | Physics-Informed Network Reshaping (PINR) for Western Grid Resilience | ['Andrew Sundstrom']
+   - 23753889 | 2026-10-29 | Certificate data for "A Bound Helium Dianion Does Not Exist" | ['Shelley, Alec', 'Tartakovsky, Daniel M.']
+   - 23754394 | 2026-10-29 | Code for "A Bound Helium Dianion Does Not Exist" (he2minus-code v1.0.0) | ['Shelley, Alec', 'Tartakovsky, Daniel M.']
+   - 23901585 | 2026-11-03 | KGRAG: Knowledge Graph Orchestration & Retrieval Framework | ['Suchanek, Eric G., PhD']
+   - 23900929 | 2026-11-03 | KDE-GR: A Density-Aware Graph-Guided Resampling Framework for Imbalanced Brain Stroke Prediction — S | ['M. Ibrahim, Dina', 'El-Ghaish, Hany']
+   - 23874403 | 2026-11-02 | Benchmark dataset and analysis scripts for OrganelleCleaner: identification and removal of organella | ['Jeon, Donghyun']
+   - 23899846 | 2026-11-02 | Doppie volute scitiche di Luigi Usai presenti in Asia | ['Usai, Luigi']
+   - 23899015 | 2026-11-02 | Reproducibility Package for What Information Can Be Discarded | ['Bsmpx']
+   - 23898676 | 2026-11-02 | iSamples Query Substrate — Snapshot 202609 | ['Internet of Samples (iSamples)']
+
+## "lambda_1" "lambda_2" graph extremal
+   total: 38260
+   - 23908795 | 2026-10-15 | Three new species and a new genus of chrysilline jumping spiders (Araneae: Salticidae) from tea-grow | ['Yang, Zhiyong', 'Li, Tao', 'Ni, Yi']
+   - 23907529 | 2026-10-06 | КЛИНИЧЕСКОЕ МЫШЛЕНИЕ БОЛЬШИХ ЯЗЫКОВЫХ МОДЕЛЕЙ:  ОБЗОР АКТУАЛЬНЫХ МЕТОДОВ, ПОДХОДОВ К ОЦЕНКЕ, ПРОБЛЕМ | ['Адылова Фатима Туйчиевна', 'Давронов Рифкат Рахимович']
+   - 23906799 | 2026-11-03 | GESSO: Spatial Gene Set Activity Analysis | ['Yang, Andrew J.', 'Tan, Chichun', 'Ma, Ying']
+   - 23906381 | 2026-11-03 | Firmenstein: Scaling Dynamic Analysis for Linux-Based Firmware Services via API-Centric Intervention | ['Wang, Yanzhong']
+   - 23905306 | 2026-11-03 | ttl3d: a self-contained 3D and 2D HTML viewer for RDF graphs, SPARQL results and tables | ['Abadifard, Soheil']
+   - 23874599 | 2026-11-03 | Code and split files for: Leakage-Controlled Evaluation of Temporal and Graph Models for Ransomware  | ['Asshad, Muhammad', 'Abdollah, Mohd Faizal', 'Yassin, Warusia']
+   - 23902838 | 2026-11-03 | Physics Inspired Neural Networks Enable Efficient Graph Coloring - code | ['Giagu, Stefano', 'colantonio, lorenzo']
+   - 23903301 | 2026-11-03 | OEIS A209723: Barker's conjectures on distinct clockwise edge differences | ['Ma, Haobo', 'Zhang, Wenlin']
+   - 23902654 | 2026-09-30 | FIGURE 8 in A catalogue and updated checklist of Dacini fruit flies from India (Diptera: Tephritidae | ['Abhishek, Venkateshaiah', 'David, Karamankodu Jacob']
+   - 23902651 | 2026-09-30 | FIGURE 7 in A catalogue and updated checklist of Dacini fruit flies from India (Diptera: Tephritidae | ['Abhishek, Venkateshaiah', 'David, Karamankodu Jacob']
+   - 23902172 | 2026-11-03 | Isurwars/Correlation: Correlation 4.2.0 | ['Isaías Rodríguez Aguirre', 'Mineralwater Xu']
+   - 23902114 | 2026-11-03 | Physics-Informed Network Reshaping (PINR) for Western Grid Resilience | ['Andrew Sundstrom']
+   - 23901585 | 2026-11-03 | KGRAG: Knowledge Graph Orchestration & Retrieval Framework | ['Suchanek, Eric G., PhD']
+   - 23900929 | 2026-11-03 | KDE-GR: A Density-Aware Graph-Guided Resampling Framework for Imbalanced Brain Stroke Prediction — S | ['M. Ibrahim, Dina', 'El-Ghaish, Hany']
+   - 23874403 | 2026-11-02 | Benchmark dataset and analysis scripts for OrganelleCleaner: identification and removal of organella | ['Jeon, Donghyun']
+   - 23899846 | 2026-11-02 | Doppie volute scitiche di Luigi Usai presenti in Asia | ['Usai, Luigi']
+   - 23899015 | 2026-11-02 | Reproducibility Package for What Information Can Be Discarded | ['Bsmpx']
+   - 23898676 | 2026-11-02 | iSamples Query Substrate — Snapshot 202609 | ['Internet of Samples (iSamples)']
+   - 23898441 | 2026-10-02  | Simulated CIGRE MV datasets for physics-informed distribution system state estimation | ['Velasco Ayuso, David', 'Román-Gallego, Jesús-Ángel', 'Zato, Carolina']
+   - 23898579 | 2026-11-02 | GenealogyKG: Genealogical Knowledge Graph | ['Suchanek, Eric G., PhD']
+
+## third spectral sum graphs
+   total: 220807
+   - 23908193 | 2026-11-03 | MQG test 5: a prospective discrimination test at self-interaction strength μ = 3 (public plan) | ['Chen, Ren']
+   - 23908773 | 2026-10-15 | Myxia quesadai Bahder & Bartlett 2026, sp. nov. | ['Barrantes Barrantes, Edwin A.', 'Zumbado Echavarria, Marco A.', 'Vega, Jefferson Orozco']
+   - 23908650 | 2026-10-14 | Oeogonalia youngi Mejdalani, Timóteo, Quintas, Alasmar, Felix & Takiya, 2026, sp. nov. | ['Mejdalani, Gabriel', 'Timóteo, Ágatha', 'Quintas, Victor']
+   - 23908069 | 2026-10-14 | FIGURE 4 in Exploring an unrecorded drainage system: the first inventory of Aegla (Crustacea, Anomur | ['Frazato, Priscila S. R.', 'Arantes, Tiago', 'Souza-Shibatta, Lenice']
+   - 23907529 | 2026-10-06 | КЛИНИЧЕСКОЕ МЫШЛЕНИЕ БОЛЬШИХ ЯЗЫКОВЫХ МОДЕЛЕЙ:  ОБЗОР АКТУАЛЬНЫХ МЕТОДОВ, ПОДХОДОВ К ОЦЕНКЕ, ПРОБЛЕМ | ['Адылова Фатима Туйчиевна', 'Давронов Рифкат Рахимович']
+   - 23907075 | 2026-10-06 | АЛГОРИТМ ПРЕДВАРИТЕЛЬНОЙ ФИЛЬТРАЦИИ ОБЛАКОВ ТОЧЕК  ДЛЯ ПОВЫШЕНИЯ ТОЧНОСТИ РЕГИСТРАЦИИ ИНЖЕНЕРНЫХ  ОБ | ['Кудратов Султан Гуламович']
+   - 23755357 | 2026-10-30 | Code for Optimal spectral shrinkage via Krylov approximation | ['Lu, Tianfeng']
+   - 23900700 | 2026-11-03 | Human Trafficking Networks Extracted from Trafficking in Persons Reports, Anti-Trafficking Laws, and | ['Chen, Ted Hsuan Yun', 'Wang, Jeffery Shih-Chieh', 'Koren, Ore']
+   - 23906285 | 2026-10-12 | Epitonga adelinae Gnezdilov, 2026, sp. nov. | ['Gnezdilov, Vladimir M.']
+   - 23906279 | 2026-10-12 | Epitonga roseobrachia Gnezdilov, 2026, sp. nov. | ['Gnezdilov, Vladimir M.']
+   - 23906155 | 2026-10-12 | Extending northward and underground: a new cave-dwelling species of Eidmanacris Chopard, 1956 (Ortho | ['Caldeira, Eros C.', 'Mendes-Carvalho, Pedro H.', 'Ferreira, Rodrigo L.']
+   - 23905375 | 2026-11-03 | TQH-C2: An Encrypted Command-and-Control Traffic Dataset Across Protocols and Encryption Layers | ['Jeon, Deokjo', 'Park, DongGue']
+   - 23905790 | 2026-10-12 | Paleolelaps Tselikh & Rasplus 2026, gen. nov. | ['Tselikh, Ekaterina V.', 'Rasplus, Jean-Yves', 'Chemyreva, Vasilisa G.']
+   - 23905735 | 2026-10-09 | FIGURE 4 in Redescription of Bangana cirrhinoides (Teleostei: Cyprinidae: Labeoninae) from China | ['Ciccotto, Patrick J.', 'Cao, Liang', 'Zhang, E.']
+   - 23905540 | 2026-10-09 | Polistes (Polistella) albidus Nguyen & Carpenter 2026, sp. nov. | ['Nguyen, Lien Thi Phuong', 'Carpenter, James M.']
+   - 23905306 | 2026-11-03 | ttl3d: a self-contained 3D and 2D HTML viewer for RDF graphs, SPARQL results and tables | ['Abadifard, Soheil']
+   - 23904789 | 2026-11-02 | bdfit | ['Betti, Sarah']
+   - 23874599 | 2026-11-03 | Code and split files for: Leakage-Controlled Evaluation of Temporal and Graph Models for Ransomware  | ['Asshad, Muhammad', 'Abdollah, Mohd Faizal', 'Yassin, Warusia']
+   - 23904991 | 2026-10-08 | Macrostylopyga bathycycla Miyata & Hayashi & Chouangthavy & Eguchi 2026, sp. nov. | ['Miyata, Ryo', 'Hayashi, Koki', 'Chouangthavy, Bounsanong']
+   - 23904867 | 2026-11-02 | On Langlands Conjectures: Probabilistic Methods | ['Polson, Nick', 'Sokolov, Vadim']
+
+## threshold graph eigenvalues extremal weighted
+   total: 103845
+   - 23908769 | 2026-08-25 | OPTIMIZING GENERATOR SET MAINTENANCE FOR EMERGENCY BACKUP POWER SUPPLY AT BAROMBONG POLYTECHNIC OF M | ["Ariswanto Sa'pang", 'Supardi', 'Paulus Banto']
+   - 23908795 | 2026-10-15 | Three new species and a new genus of chrysilline jumping spiders (Araneae: Salticidae) from tea-grow | ['Yang, Zhiyong', 'Li, Tao', 'Ni, Yi']
+   - 23908342 | 2026-11-03 | Teachers' Readiness for the Implementation of Inclusive Education Practices in General Education Cla | ['Jherralyn J., Sasan']
+   - 23908095 | 2026-10-06 | РАЗРАБОТКА УСОВЕРШЕНСТВОВАННОГО МЕТОДА  ДИАГНОСТИКИ СОСТОЯНИЯ ПРОЛЁТНЫХ КОНСТРУКЦИЙ | ['Алимджанов Хаёт Фархадович']
+   - 23908041 | 2026-11-03 | Evaluating Teachers' Readiness in Implementing Inclusive Education Practices | ['Rosemarie P., Mendez']
+   - 23907696 | 2026-10-06 | DEVICE FOR REMOTE MONITORING OF GROUNDWATER LEVEL  INDICATORS AND ITS OPERATING ALGORITHM | ['Memonova Gulrux Nazrikulovna', 'Isroilov Jamshid Dilshodovich']
+   - 23907459 | 2026-11-03 | Borrowed Youth: Demographic Change and Multinational Location Advantage | ['Wright, Craig']
+   - 23907529 | 2026-10-06 | КЛИНИЧЕСКОЕ МЫШЛЕНИЕ БОЛЬШИХ ЯЗЫКОВЫХ МОДЕЛЕЙ:  ОБЗОР АКТУАЛЬНЫХ МЕТОДОВ, ПОДХОДОВ К ОЦЕНКЕ, ПРОБЛЕМ | ['Адылова Фатима Туйчиевна', 'Давронов Рифкат Рахимович']
+   - 23907456 | 2026-10-06 | APPLICATION OF CELLULAR AUTOMATA IN MONITORING  OF DISTRIBUTED COMPUTING SYSTEMS | ['Redjepov Shavkat Bakhtiyarovich', 'Makhkamov Bakhtiyor Shukhratovich']
+   - 23907221 | 2026-11-03 | Meta-Analysis: Prescription Opioid and Morphine Use and Risk of Stroke | ['Ibrahim Krenawi', 'Mimoun Azizi']
+   - 23907021 | 2026-11-03 | INFORMATIVITY-AWARE WEIGHTED CNN ENSEMBLE FOR UTERINE FIBROID ULTRASOUND IMAGE CLASSIFICATION | ['Nishanov Akhram Khasanovich', 'Mamatov Maxtumkuli Jumanazarovich', 'Worldly Knowledge Publishing Centre']
+   - 23906799 | 2026-11-03 | GESSO: Spatial Gene Set Activity Analysis | ['Yang, Andrew J.', 'Tan, Chichun', 'Ma, Ying']
+   - 23906381 | 2026-11-03 | Firmenstein: Scaling Dynamic Analysis for Linux-Based Firmware Services via API-Centric Intervention | ['Wang, Yanzhong']
+   - 23905306 | 2026-11-03 | ttl3d: a self-contained 3D and 2D HTML viewer for RDF graphs, SPARQL results and tables | ['Abadifard, Soheil']
+   - 23905021 | 2026-11-03 | Benchmark-level reliability evaluation for AI-assisted pneumonia screening: calibration, explainabil | ['Mallek, Fatma', 'Altamimi, Ahmed', 'Guizani, Sghaier']
+   - 23874599 | 2026-11-03 | Code and split files for: Leakage-Controlled Evaluation of Temporal and Graph Models for Ransomware  | ['Asshad, Muhammad', 'Abdollah, Mohd Faizal', 'Yassin, Warusia']
+   - 23904741 | 2026-11-03 | Gendered security sector reform and women's political participation in post-conflict legislatures: a | ['Mwenda-Kasyuka, Baraka']
+   - 23904930 | 2026-11-03 | Paramilitary reintegration payouts and ex-combatant political violence in Nigeria's Niger Delta: a f | ['Eze, Chinonso Nwachukwu']
+   - 23904867 | 2026-11-02 | On Langlands Conjectures: Probabilistic Methods | ['Polson, Nick', 'Sokolov, Vadim']
+   - 23904733 | 2026-11-03 | Community policing councils and vigilante accountability in Kenya's informal settlements: a regressi | ["Odera-Nyong'o, Achieng'"]
+
+## "Newton Astro Labs"
+   total: 0
+
+
+########## OPENALEX title-only ##########
+
+## weighted spectral sum graphs
+   count: 0
+
+## lambda1 plus two lambda2
+   count: 0
+
+## exact maximum weighted combination adjacency eigenvalues
+   count: 0
+
+## third spectral sum graphs exact bound
+   count: 1
+   - [2026] The Third Spectral Sum of Graphs: An Exact Universal Bound, Pole–Pentagon Extremality, and Resolutio | Zenodo (CERN European Organization for Nuclear Research) | https://doi.org/10.5281/zenodo.21785905
