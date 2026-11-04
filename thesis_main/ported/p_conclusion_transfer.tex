@@ -1,0 +1,38 @@
+% Ported verbatim from paper/top3_joint_moment_bound.tex lines 1348-1384.
+% Only cross-reference wording was adapted; no mathematics was altered.
+\begin{proof}[Proof of Theorem~\ref{main}]
+Any Borel law on $\R^3$ can be realized on a standard nonatomic probability
+space, by adjoining an independent uniform variable if necessary.
+For its isotropic $X$, the coordinates are an orthonormal three-frame and
+$W_X=\mathbf1_{\{X\cdot X'>0\}}$ is a measurable symmetric binary kernel.
+Therefore
+\[
+ \frac{\E|X\cdot X'|+|\E X|^2}{2}
+   =\iint W_X X\cdot X'
+   \le\Sigma_3(W_X)\le\mathcal M\le c.
+\]
+This proves~\eqref{law-bound}, including zero vectors and unbounded radii.
+The radial restriction was used only for a maximizing canonical law.
+
+For a finite graph, the exact-rank Ky Fan formula reads
+\[
+ \Lambda_3(G)=\max_{Q=Q^T=Q^2,\ \tr Q=3}\tr(A_GQ).
+\]
+Factor $Q=YY^T$ with orthonormal columns, let $y_i$ be its rows, and let
+$X$ be uniform on $\sqrt n\,y_1,\ldots,\sqrt n\,y_n$. Then
+\[
+ \E XX^T=I_3,\qquad
+ \E|X\cdot X'|=\|Q\|_1/n,\qquad
+ |\E X|^2=\boldsymbol1^TQ\boldsymbol1/n,
+\]
+where $\|Q\|_1$ denotes the entrywise absolute sum.
+Since $Q_{ii}\ge0$ and $\sum_iQ_{ii}=3$, the zero adjacency diagonal gives
+\[
+ \tr(A_GQ)\le\sum_{i\ne j}(Q_{ij})_+
+ =\frac{\|Q\|_1+\boldsymbol1^TQ\boldsymbol1}{2}-3
+ \le cn-3.
+\]
+Taking the maximum proves~\eqref{main-bound}. No positivity assumption on
+$\lambda_3(G)$ is used; repeated eigenvalues, zero rows and $n=3$ cause
+no exception.
+\end{proof}

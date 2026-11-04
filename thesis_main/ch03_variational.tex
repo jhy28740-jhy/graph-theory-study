@@ -1,0 +1,29 @@
+\chapter{The graphon variational problem}\label{ch-variational}\label{sec-variational}
+
+The bound of Theorem~\ref{main} is proved by passing from graphs to graphons,
+solving an attained variational problem there, and transferring the answer
+back. This chapter carries out the first two steps. Section~\ref{sec-notation}
+and Chapter~\ref{ch-prelim} have fixed the meaning of $\Sigma_3(W)$ and
+$\mathcal M=\sup_W\Sigma_3(W)$; here we establish that $\mathcal M$ is
+attained, locate it between two explicit constants, and extract from
+maximality every structural consequence that the later chapters consume.
+
+The reason for working with graphons rather than with graphs of growing order
+is that $\Lambda_3$ is not continuous in any elementary graph metric, whereas
+$\Sigma_3$ is continuous in the cut metric by~\eqref{cut-eigen}. Attainment
+then supplies an object to which calculus can be applied: a maximiser has a
+canonical eigenframe, and perturbing that frame inside the space of graphons
+produces exact first- and second-order identities. Those identities, and not
+any counting argument on finite graphs, are what make the structural results
+of this chapter and of Chapter~\ref{ch-support} possible.
+
+Two warnings about the logical order of the argument. First, no eigenvalue
+simplicity is assumed at the outset; the relations $\lambda_1>\lambda_2$ and
+$\lambda_3>\lambda_4$ are consequences, and they are derived in
+Lemma~\ref{ellipse-structure} and Lemma~\ref{contact-structure} by comparing
+genuinely different orthonormal frames. Second, the lower bound
+$\cstar\le\mathcal M$ is proved by an ordinary quotient computation for a
+join and is independent of the priority question discussed in
+Remark~\ref{rem-newton}.
+
+\input{ported/p_variational}

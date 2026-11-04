@@ -1,0 +1,100 @@
+% Ported verbatim from paper/top3_joint_moment_bound.tex lines 718-816.
+% Only cross-reference wording was adapted; no mathematics was altered.
+We now turn to the numerical estimate. Throughout this section the law
+is arbitrary and isotropic. Bounded positive radii will be imposed only
+when a radial comparison requires them. For later bookkeeping define
+\begin{equation}\label{constants}
+ d_0=-\frac{25624284539519}{53655078400000}
+                  +\frac{\sqrt5}{2}-\frac{41\sqrt3}{120},\qquad
+ d_1=d_0+\frac{103}{9000000},\qquad
+ d=d_1+\frac1{3000000}.
+\end{equation}
+Then $d=(3+\sqrt5)/2-2c$, with $c$ as in~\eqref{main-constant}.
+The intermediate constants separate the joint moment estimate from
+the final atomic term.
+Fix $\E XX^T=I_3$, let $R=|X|$, and put $U=X/R$ when $R>0$.
+At $R=0$ choose any fixed unit vector for $U$. Define
+\[
+ \begin{gathered}
+ C=\E R,\quad V=3-C^2,\quad \mathbf m=\E X,\quad B=|\mathbf m|^2,\quad e=1-B,\\
+ A=\E|X\cdot X'|,\qquad D=\frac{3+\sqrt5}{2}-A-B.
+ \end{gathered}
+\]
+Here $V,e\ge0$: $\E R^2=3$ and Cauchy--Schwarz gives
+$(v\cdot \mathbf m)^2\le\E(v\cdot X)^2=1$ for every unit $v$.
+All pair expectations below are over independent copies of this same law.
+Set
+\[
+ M=\E[R UU^T]=\frac C3I_3+Z,\qquad
+ J=1-\tr(M^2)=\frac V3-\|Z\|_F^2.
+\]
+The regression vector $\xi=U-MX$ satisfies
+\begin{equation}\label{regression}
+ \E[X\xi^T]=0,\quad \E\|\xi\|^2=J\ge0,\quad
+ \E UU^T=M^2+\E[\xi\xi^T].
+\end{equation}
+In particular $J$ is an actual regression error, not a freely chosen moment.
+
+Here are the harmonic normalizations used throughout. All tensor inner
+products sum over all ordered indices. Put
+\[
+ \Omega_{ijkl}=\frac{\delta_{ij}\delta_{kl}+\delta_{ik}\delta_{jl}
+                           +\delta_{il}\delta_{jk}}{15},
+ \qquad
+ ({\cal L}_3(y))_{ijk}
+       =\frac{y_i\delta_{jk}+y_j\delta_{ik}+y_k\delta_{ij}}5.
+\]
+For symmetric traceless $Z$, put
+\[
+ ({\cal L}_4(Z))_{ijkl}=\frac17(\delta_{ij}Z_{kl}+\delta_{ik}Z_{jl}
+ +\delta_{il}Z_{jk}+\delta_{jk}Z_{il}+\delta_{jl}Z_{ik}+\delta_{kl}Z_{ij}).
+\]
+For unit $u$, set
+\[
+ \begin{gathered}
+ \Psi_3(u)=u^{\otimes3}-{\cal L}_3(u),\qquad
+ \Psi_4(u)=u^{\otimes4}-\Omega-{\cal L}_4(uu^T-I_3/3),\\
+ T_i=\E[R\Psi_i(U)],\qquad H=\|T_3\|_F,\qquad K=\|T_4\|_F.
+ \end{gathered}
+\]
+Contraction in two indices gives the orthogonal decompositions
+\[
+ \E[R U^{\otimes3}]=T_3+{\cal L}_3(\mathbf m),\qquad
+ \E[R U^{\otimes4}]=T_4+C\Omega+{\cal L}_4(Z).
+\]
+Indeed $\operatorname{ct}\Omega=I_3/3$, $\|\Omega\|^2=1/5$,
+$\operatorname{ct}{\cal L}_4(Z)=Z$, and
+$\langle T,{\cal L}_4(Z)\rangle=(6/7)\langle\operatorname{ct}T,Z\rangle$.
+Also $\operatorname{ct}{\cal L}_3(y)=y$ and
+$\langle N,{\cal L}_3(y)\rangle=(3/5)\operatorname{ct}N\cdot y$.
+It follows directly that
+\begin{align}\label{harmonics}
+ \langle\Psi_3(u),\Psi_3(v)\rangle&=g_3(u\cdot v),&
+ g_3(t)&=t^3-3t/5,&\|\Psi_3(v)\|^2&=2/5,\notag\\
+ \langle\Psi_4(u),\Psi_4(v)\rangle&=g_4(u\cdot v),&
+ g_4(t)&=t^4-6t^2/7+3/35,&\|\Psi_4(v)\|^2&=8/35.
+\end{align}
+The tensor moments involve $R$, not $R^3$ or $R^4$, and are integrable
+under $\E R^2=3$.
+
+Write $s=\sqrt5$ and define the scalar absolute-value majorant and its slack by
+\[
+ a=\frac{1+s}{6},\quad b=\frac{7s-5}{8},\quad\rho=\frac{15s-25}{16},
+ \qquad h_0(z)=\frac{(1-z)(sz-1)^2(sz+s+2)}{2(s+1)^2}.
+\]
+Expansion gives, for $|t|\le1$,
+\[
+ a+b(t^2-1/3)-\rho(t^4-1/5)-|t|=h_0(|t|)\ge0.
+\]
+This majorant is from~\cite[Lemma 4.4]{STW}.
+Let $S=\E[RR'h_0(|U\cdot U'|)]$. The decompositions above give
+\[
+ A=aC^2+b\|Z\|^2-\rho\left(K^2+\frac67\|Z\|^2\right)-S.
+\]
+Consequently
+\begin{equation}\label{budget4}
+ D=e+\alpha V+\beta J+\rho K^2+S,
+ \qquad \alpha=\frac{2s-1}{14},\quad\beta=\frac{s+10}{14}.
+\end{equation}
+Useful rational bounds are $\alpha\ge26/105$, $\beta\ge6/7$,
+and $\rho\ge1/2$, using $s>67/30$, $s\ge2$, and $s\ge11/5$.

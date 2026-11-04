@@ -1,0 +1,45 @@
+% Ported verbatim from paper/top3_joint_moment_bound.tex lines 444-487.
+% Only cross-reference wording was adapted; no mathematics was altered.
+Continue with the maximizing graphon and canonical law of the previous
+section, and write $h_v(w)=\mathbf1_{\{v\cdot w>0\}}$. Define continuous symmetric kernels on $S\times S$ by
+\[
+ A(v,w)=(v\cdot w)_+,\qquad
+ D(v,w)=(v\cdot w)(v^TLw),\qquad K=A-D.
+\]
+\begin{theorem}[Second variation on the actual support]\label{negative}
+For every finite list $v_1,\ldots,v_s\in S$ and every real list $a_1,\ldots,a_s$,
+\begin{equation}
+ \sum_{i,j}a_i a_j K(v_i,v_j)\le0. \label{nsd}
+\end{equation}
+The assertion concerns only the actual canonical support.
+\end{theorem}
+\begin{proof}
+For any bounded measurable real $g$ on $S$ with $\int g\,d\nu=0$, use the legitimate density
+$1+tg(F(x))$ for both signs of sufficiently small $t$.
+Set
+\[
+ Q=\int g(v)vv^T\,d\nu(v),\qquad
+ R=\iint h_v(w)vw^Tg(v)g(w)\,d\nu(v)d\nu(w).
+\]
+The unchanged three coordinate functions have the complete Gram $G_t=I+tQ$
+and numerator matrix $N_t=L+t(QL+LQ)+t^2R$ in this changed measure.
+For small $t$, $G_t$ is positive definite; multiplying the frame by $G_t^{-1/2}$
+is a genuine common orthonormalization. Since
+$N_t=G_tLG_t+t^2(R-QLQ)$ and $\tr(LQ)=\mathcal M\int g=0$, its exact trace is
+\begin{equation}
+ \tr(G_t^{-1}N_t)=\mathcal M+t^2\tr\bigl(G_t^{-1}(R-QLQ)\bigr)\le \mathcal M. \label{density}
+\end{equation}
+Letting $t\to0$ gives $\iint K(v,w)g(v)g(w)\,d\nu(v)d\nu(w)\le0$.
+There is no discarded remainder or varying-scheme constant in this calculation.
+By Lemma~\ref{ellipse-structure} and~\eqref{all-rows}, $\int K(v,w)d\nu(w)=\mathcal M-\mathcal M=0$ for every $v\in S$.
+Subtracting the mean therefore proves the same inequality for every bounded $g$.
+To obtain \eqref{nsd}, combine repeated points and take disjoint shrinking
+neighborhoods of the remaining points. Each has positive $\nu$-mass by full support.
+Use $g=\sum_i a_i1_{U_i}/\nu(U_i)$, separately for each neighborhood size.
+This auxiliary $g$ is bounded but need not have mean zero. The legal probability
+density direction is $g-\int g\,d\nu$; centering leaves the $K$ quadratic form unchanged.
+Its bound need not be uniform across neighborhood sizes.
+Continuity of $K$ on compact $S\times S$ gives \eqref{nsd} in the limit.
+This limiting step needs no uniform permissible size of $t$.
+No eigenvalue differentiation is used, including when $\lambda_2=\lambda_3$.
+\end{proof}

@@ -1,0 +1,116 @@
+\chapter{The coefficient bound and its transfer}\label{ch-bound}
+
+The exact identity~\eqref{budget7} is now converted into a lower bound for
+the defect $D=(3+\sqrt5)/2-A-B$, which by Section~\ref{sec-conclusion} equals
+$(3+\sqrt5)/2-2\mathcal M$ for the canonical law of a maximiser. Three
+ingredients are combined: directional Hermite inequalities that pay for the
+harmonic moments $H^2$ and $K^2$, a radial comparison that turns the slack
+moment $P$ into a linear payment in $V$ and $J$, and an atomic term supplied
+by the finite support theorem of Chapter~\ref{ch-support}. Each ingredient
+leaves a nonnegative remainder, and the point of the construction is that all
+of them are kept in one identity rather than discarded.
+
+Section~\ref{sec-directional} carries out the directional step and produces
+the intermediate certificate~\eqref{certificate-start} with coefficient $d_0$.
+Section~\ref{sec-reserve} finds a reserve inside the quartic slack by means of
+the cubic-free contact polynomial $z_*$, improving $d_0$ to $d_1$.
+Section~\ref{sec-conclusion} verifies the radial hypothesis for an actual
+maximiser, adds the positive-mass self-pair term, and reaches the final
+constant $d$, equivalently $\mathcal M\le c$; it then transfers the bound to
+all isotropic laws and to finite graphs, proving Theorem~\ref{main}, and
+records the exact scope of the result.
+
+\section{Directional and radial control}\label{sec-directional}
+\input{ported/p_directional}
+
+\section{A reserve in the quartic slack}\label{sec-reserve}
+\input{ported/p_reserve_a}
+
+\subsection{A contact polynomial without a cubic term}
+\input{ported/p_reserve_contact}
+
+\subsection{The full joint certificate}
+\input{ported/p_reserve_cert}
+
+\section{Transfer to graphs and proof of the main theorem}\label{sec-conclusion}
+\input{ported/p_conclusion_a}
+
+\subsection{Positive-mass self-pairs}
+\input{ported/p_conclusion_atoms}
+
+\subsection{All isotropic laws and the exact finite shift}
+\input{ported/p_conclusion_transfer}
+
+\section{Exact scope of the bound}\label{sec-weighted}
+
+The transfer argument above uses two properties of $A_G$ only: its diagonal is
+zero, and its off-diagonal entries lie in $[0,1]$. Both are shared by a larger
+class, and the bound therefore holds there without further work. The scope of such a statement is easy to mis-state, so we record it
+precisely, and we record at the same time that no novelty is claimed for it:
+the same observation underlies the proof of~\cite[Proposition 6.1]{STW}, and
+the matrix setting is explicit in the title and content of~\cite{Mohar}.
+
+\begin{proposition}[Weighted form]\label{weighted-form}
+Let $n\ge3$ and let $A\in\R^{n\times n}$ be symmetric with $A_{ii}=0$ and
+$0\le A_{ij}\le1$ for $i\ne j$. Then
+\[
+ \lambda_1(A)+\lambda_2(A)+\lambda_3(A)\le cn-3,
+\]
+with the constant $c$ of~\eqref{main-constant}.
+\end{proposition}
+\begin{proof}
+Apply Lemma~\ref{bridge} with $r=3$. The isotropic law produced there is
+built from the rows of a rank-three projection and satisfies no radial
+hypothesis, so Theorem~\ref{main} applies to it and gives $\Gamma_3\le c$.
+The constant term is $-r=-3$ and is unchanged.
+\end{proof}
+\begin{remark}\label{weighted-scope}
+Proposition~\ref{weighted-form} covers $[0,1]$-weighted loopless graphs, hence
+also every graph with edge weights in $[0,1]$ arising from a discretised
+graphon. It fails for weights above $1$ and for multiple edges: if $A=2A_G$
+then $\Lambda_3(A)=2\Lambda_3(G)$, which exceeds $cn-3$ for large $n$
+whenever $\Lambda_3(G)/n> c/2$. The numerical tests of
+Section~\ref{sec-num-weighted} are consistent with this.
+\end{remark}
+
+Weights cannot improve the asymptotic constant either, so the extremal
+problem does not become easier by relaxation.
+\begin{proposition}[Weights give no asymptotic gain]\label{no-gain}
+Let $\mathcal M_{\rm w}(n)$ be the supremum of $\Lambda_3(A)$ over symmetric
+$A\in\R^{n\times n}$ with $A_{ii}=0$ and $0\le A_{ij}\le1$. Then
+\[
+ \frac{\mathcal M_{\rm w}(n)}n\ \longrightarrow\ \mathcal M
+ \qquad(n\to\infty),
+\]
+the same limit as for unweighted graphs.
+\end{proposition}
+\begin{proof}
+Every such $A$ defines a step graphon $W_A$ with $T_{W_A}=A/n$, so by
+\eqref{wg-spectrum} $\Lambda_3(A)\le n\Sigma_3(W_A)\le n\mathcal M$; hence
+$\limsup_n\mathcal M_{\rm w}(n)/n\le\mathcal M$. For the reverse inequality,
+$\mathcal M$ is attained by some graphon $W$ by Lemma~\ref{attainment}. By the
+compactness and density statements of Section~\ref{sec-graphons} there are
+graphs $G_m$ with $\delta_\square(W_{G_m},W)\to0$, and $\Sigma_3$ is
+continuous in $\delta_\square$ because
+$|\Sigma_3(W_1)-\Sigma_3(W_2)|\le3\|T_D\|_{2\to2}\le3(4\|D\|_\square)^{1/3}$
+by~\eqref{cut-eigen}. Writing $n_m=|V(G_m)|$, the identity
+$\Lambda_3(G_m)=n_m\Sigma_3(W_{G_m})+\sum_{i\le3}\min(\lambda_i(G_m),0)$
+and the bound $\lambda_i(G_m)\ge-(n_m-1)$ give
+\[
+ \frac{\mathcal M_{\rm w}(n_m)}{n_m}
+   \ge\frac{\Lambda_3(G_m)}{n_m}
+   \ge\Sigma_3(W_{G_m})-3\,\frac{n_m-1}{n_m}
+   \longrightarrow\mathcal M .
+\]
+Replacing $G_m$ by a blow-up if necessary, which does not change its graphon,
+we may assume $n_m\to\infty$. Since $\mathcal M_{\rm w}(n)/n\le\mathcal M$
+for every $n$, the limit exists and equals $\mathcal M$.
+\end{proof}
+\begin{remark}\label{padding-note}
+The padding term is nonnegative: by~\eqref{wg-spectrum},
+\[
+ n\Sigma_3(W_G)-\Lambda_3(G)=-\sum_{i\le3}\min(\lambda_i(G),0)\ge0 .
+\]
+It is therefore harmless in the direction used above, where only a lower bound
+for $\mathcal M_{\rm w}(n)$ is needed.
+\end{remark}

@@ -1,0 +1,56 @@
+\chapter{Finite canonical support}\label{ch-support}\label{sec-finite}
+
+Lemma~\ref{contact-structure} identifies a maximising graphon almost
+everywhere with the binary threshold kernel $\mathbf1_{\{F(x)\cdot F(y)>0\}}$
+built from its own canonical frame. The canonical law $\nu=F_\#dx$ is a
+priori an arbitrary Borel probability measure on the ellipsoid
+$\{v:v^TLv=\mathcal M\}$, so the kernel could still be supported on a
+continuum of frame values. This chapter proves that it is not: every maximiser
+has a canonical law with at most $24$ atoms, all of positive mass. That is
+Theorem~\ref{structure-main}, whose proof is assembled here from four steps.
+
+The first step, Theorem~\ref{negative}, is a second-variation inequality.
+Multiplying the underlying measure by $1+tg(F(x))$ with $\int g\,d\nu=0$ is a
+legitimate change of graphon for small $|t|$, and maximality forces the
+second-order term to be nonpositive. The resulting kernel
+$K(v,w)=(v\cdot w)_+- (v\cdot w)(v^TLw)$ is negative semidefinite \emph{on the
+actual support}; no extension to the whole sphere is claimed or needed.
+
+The second step, Lemma~\ref{propagate}, converts null vectors of that kernel
+into vector identities. On a set of mutually positively correlated points, a
+relation $\sum_i a_iv_iv_i^T=0$ forces both $\sum_ia_iv_i=0$ and
+$\sum_ia_iA(v_i,w)=0$ for every $w$. Since the space of symmetric $3\times3$
+matrices has dimension six and the sphere splits into four sign regions on
+which all dot products are positive, this bounds the dimension of the row
+space of $A$ by $24$ and provides actual anchor points $z_j\in S$.
+
+The third step, Lemma~\ref{descent} and Theorem~\ref{finite}, turns the
+dimension bound into a cardinality bound. Inside a single sign region of the
+anchor equators the rows $A(v,\cdot)$ are linear functions of $v$, so
+Lemma~\ref{descent} applies and gives at most $2^{d-1}\le4$ points per region;
+the number of regions of $r$ lines is at most $1+r(r+1)/2$. This yields the
+intermediate bound $|S|\le1204$.
+
+The fourth step, Section~\ref{sec-separation}, improves $1204$ to $24$ by
+excluding minimal second-moment dependencies on positive cliques.
+Lemma~\ref{binary} is an elementary circuit argument that uses a separating
+family of binary observations; the actual rows $B_{ki}$ of the maximiser
+supply such a family. The conclusion, Theorem~\ref{six}, is that on every
+positive clique the map $a\mapsto\sum_{i\in J}a_iv_iv_i^T$ is injective, so a
+clique has at most six types; four sign regions then give
+$|S|\le4\cdot6=24$.
+
+\section{A negative semidefinite kernel on the actual support}
+\input{ported/p_finite_a}
+
+\section{Propagation of moment relations}\label{sec-propagation}
+\input{ported/p_finite_propagation}
+
+\section{Sign regions and finite support}\label{sec-signregions}
+\input{ported/p_finite_signregions}
+
+\section{Separating binary observations}\label{sec-separation}
+\input{ported/p_separation_a}
+
+\subsection{A separating observation lemma}
+\input{ported/p_separation_b}

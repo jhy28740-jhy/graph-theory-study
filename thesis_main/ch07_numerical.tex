@@ -1,0 +1,248 @@
+\chapter{Numerical verification and scope}\label{ch-numerical}
+
+This chapter reports computations. They play no role in any proof: every
+theorem in this thesis is proved from the axioms, and the experiments are
+recorded because they locate the extremal graphs, because they quantify how
+much slack the bound has at small orders, and because they delimit the class
+of matrices to which the bound extends. Each table is labelled
+\emph{numerical} in the sense of Section~\ref{sec-notation}, except where an
+exact identity is stated and proved alongside it.
+
+\section{Protocol}\label{sec-protocol}
+Three kinds of computation were run, with deliberately separated roles.
+
+\emph{Exact arithmetic.} Every displayed identity, factorisation, completion
+of squares and positivity assertion in Chapters~\ref{ch-moment}
+and~\ref{ch-bound} was re-checked with exact rationals and with elements of
+the quadratic fields $\mathbb Q(\sqrt3)$ and $\mathbb Q(\sqrt5)$ represented
+as pairs of rationals, never in floating point. The constants $c$, $\cstar$,
+$(3+\sqrt5)/4$ and $3/\sqrt5$ were recomputed to sixty decimal places:
+\begin{align*}
+ c&=1.284673255723918505060732785864589260927238391290291280182\ldots,\\
+ \cstar&=1.281568196872167876752435013991917240681756712288900353890\ldots,\\
+ (3+\sqrt5)/4&=1.309016994374947424102293417182819058860154589902881431067\ldots,\\
+ 3/\sqrt5&=1.341640786499873817845504201238765741264371015766915434562\ldots,
+\end{align*}
+from which $c-\cstar=0.0031050588517506283082977718726720202454816\ldots$ and
+$(3+\sqrt5)/4-c=0.024343738651028919041560631318229797932916\ldots$. The
+six-part quotient value at the optimising weight was confirmed equal to
+$\cstar$ to forty digits.
+
+\emph{Exhaustive enumeration.} For $3\le n\le7$ all $2^{n(n-1)/2}$ labelled
+graphs were enumerated, $\Lambda_3$ was computed with a symmetric eigensolver
+in double precision, and the result was compared with $cn-3$ evaluated from
+the exact expression for $c$. A $7\times7$ symmetric eigenvalue computation in
+double precision has backward error of order $10^{-15}$, while the smallest
+margin encountered is $2.2\times10^{-2}$; the conclusions are therefore
+insensitive to rounding.
+
+\emph{Randomised sampling.} For the weighted tests, symmetric matrices with
+zero diagonal and independent uniform $[0,1]$ upper-triangular entries were
+sampled with a fixed seed, so the runs are reproducible.
+
+\section{Exhaustive verification for $n\le7$}\label{sec-exhaustive}
+The total number of labelled graphs examined is
+$8+64+1024+32768+2097152=2\,131\,016$. There were no violations. The extremal
+values, the extremal graphs up to isomorphism and the number of labelled
+copies are in Table~\ref{tab-exhaustive}. At $n=3$ all eight graphs tie, since $\Lambda_3=\tr A_G=0$ there;
+at $n=4$ the extremal graph is unique; at $n=5$ there are exactly two
+extremal isomorphism classes; at $n=6$ and $n=7$ the extremal graph is again
+unique.
+
+\begin{table}[htbp]
+\centering
+\singlespacing
+\caption{Exhaustive enumeration over all labelled graphs, $3\le n\le7$.
+``Margin'' is $cn-3-\max\Lambda_3$; the exact value of $\max\Lambda_3$ is
+printed where it is known in radicals. At $n=3$ every graph satisfies
+$\Lambda_3=\tr A_G=0$.}\label{tab-exhaustive}
+\footnotesize
+\begin{tabular}{@{}r r l r r l@{}}
+\toprule
+$n$ & \#\ graphs & $\max\Lambda_3$ & $cn-3$ & margin & extremal graph \\
+\midrule
+3 & 8 & $0$ & 0.854019767 & 0.854019767 & --- \\
+4 & 64 & $2$ & 2.138693023 & 0.138693023 & $C_4$ \\
+5 & 1024 & $1+\sqrt5=3.236067977$ & 3.423366279 & 0.187298301 & $C_5$, $K_1\vee C_4$ \\
+6 & 32768 & $\sqrt5+\sqrt6=4.685557720$ & 4.708039534 & 0.022481814 & $K_1\vee C_5$ \\
+7 & 2097152 & $\tfrac{1+\sqrt{41}}2+\sqrt5=5.937630096$ & 5.992712790 & 0.055082694 & $K_2\vee C_5$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The number of labelled maximisers is $3$ at $n=4$, $27$ at $n=5$, $72$ at
+$n=6$ and $252$ at $n=7$. The value $72=6!/10$ matches
+$|\operatorname{Aut}(K_1\vee C_5)|=10$, and $252=7!/20$ matches
+$|\operatorname{Aut}(K_2\vee C_5)|=2\cdot10=20$; for $n=7$ all $252$
+maximisers were additionally checked to have degree sequence
+$(6,6,4,4,4,4,4)$ and to induce a $5$-cycle on the five vertices of degree
+four. The split $27=12+15$ at $n=5$ matches $5!/10=12$ labelled copies of
+$C_5$ and $15$ labelled copies of $K_1\vee C_4$; the two classes are not
+isomorphic but are exactly tied, which is why uniqueness fails there.
+
+Two features of Table~\ref{tab-exhaustive} deserve comment. First, the order
+$n=3$ is the smallest for which the bound is even meaningful: for $n=1,2$ the
+right-hand side $cn-3$ is negative while $\Lambda_3=\tr A_G=0$ whenever
+$n\le3$, so the hypothesis $n\ge3$ in Theorem~\ref{main} cannot be dropped.
+Second, the margin is smallest at $n=6$, which is exactly the order of the
+template $K_1\vee C_5$ that produces $\cstar$; the bound is therefore closest
+to being tight precisely where the lower-bound construction lives, which is
+the numerical counterpart of the gap $c-\cstar$.
+
+\section{Blow-up families}\label{sec-blowups}
+The template $H=K_1\vee C_5$ generates an explicit infinite family whose
+$\Lambda_3$ can be computed in closed form.
+
+\begin{proposition}[Equal blow-ups of $K_1\vee C_5$]\label{equal-blowup}
+Let $q\ge1$ and let $G=H[q]$ be the graph on $n=6q$ vertices obtained by
+replacing every vertex of $H$ by a clique of size $q$ and every edge of $H$ by
+a complete bipartite graph. Then
+\[
+ \Lambda_3(G)=\frac{\sqrt5+\sqrt6+3}{6}\,n-3,
+ \qquad
+ \frac{\sqrt5+\sqrt6+3}{6}=1.2809262867\ldots .
+\]
+\end{proposition}
+\begin{proof}
+By Lemma~\ref{blowup-spec} the spectrum of $G$ consists of $q\lambda+q-1$ for
+$\lambda\in\operatorname{spec}H$ together with $-1$ repeated $6(q-1)$ times.
+The spectrum of $H$ is
+$1+\sqrt6$, $\tfrac{\sqrt5-1}2$ twice, $1-\sqrt6$ and
+$-\tfrac{1+\sqrt5}2$ twice, so the three largest eigenvalues of $G$ are
+$q(1+\sqrt6)+q-1$ and $q\tfrac{\sqrt5-1}2+q-1$ twice; for $q\ge1$ these
+exceed both $q(1-\sqrt6)+q-1$ and $-1$. Their sum is
+$q(\sqrt6+\sqrt5+3)-3$, which equals the claimed expression at $n=6q$.
+\end{proof}
+
+The coefficient $1.2809262867\ldots$ is strictly below both $\cstar$ and $c$.
+Equal part sizes are therefore suboptimal, and the loss is quantified:
+\[
+ \cstar-\frac{\sqrt5+\sqrt6+3}{6}=0.0006419102\ldots,
+ \qquad
+ c-\frac{\sqrt5+\sqrt6+3}{6}=0.0037469690\ldots .
+\]
+Table~\ref{tab-blowup} confirms the closed form numerically and shows the
+distance to both comparison lines.
+
+\begin{table}[htbp]
+\centering
+\singlespacing
+\caption{Equal blow-ups $G=H[q]$ of $H=K_1\vee C_5$, $n=6q$. All values
+numerical; the column $\Lambda_3$ agrees with the closed form of
+Proposition~\ref{equal-blowup} to the printed precision.}\label{tab-blowup}
+\small
+\begin{tabular}{@{}r r r r r r@{}}
+\toprule
+$q$ & $n$ & $\Lambda_3(G)$ & $\Lambda_3/n$ & $\Lambda_3-(cn-3)$ & $\Lambda_3-(\cstar n-3)$ \\
+\midrule
+1 & 6 & 4.685558 & 0.780926 & $-0.022482$ & $-0.003851$ \\
+2 & 12 & 12.371115 & 1.030926 & $-0.044964$ & $-0.007703$ \\
+3 & 18 & 20.056673 & 1.114260 & $-0.067445$ & $-0.011554$ \\
+5 & 30 & 35.427789 & 1.180926 & $-0.112409$ & $-0.019257$ \\
+10 & 60 & 73.855577 & 1.230926 & $-0.224818$ & $-0.038515$ \\
+20 & 120 & 150.711154 & 1.255926 & $-0.449636$ & $-0.077029$ \\
+50 & 300 & 381.277886 & 1.270926 & $-1.124091$ & $-0.192573$ \\
+100 & 600 & 765.555772 & 1.275926 & $-2.248181$ & $-0.385146$ \\
+250 & 1500 & 1918.389430 & 1.278926 & $-5.620454$ & $-0.962865$ \\
+500 & 3000 & 3839.778860 & 1.279926 & $-11.240907$ & $-1.925730$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The optimal part sizes are given by Lemma~\ref{attainment}: apex mass
+$p^*=(91-25\sqrt7)/126=0.1972715653\ldots$ and rim mass
+$b^*=(7+5\sqrt7)/126=0.1605456869\ldots$ for each of the five rim parts.
+Realising these as integers introduces a rounding error of order one vertex per
+part, so the resulting graphs fall short of $\cstar n-3$ by an amount that
+decreases with $n$. Table~\ref{tab-optblowup} records this convergence, using
+the general quotient form~\eqref{quotient-unequal}.
+
+\begin{table}[htbp]
+\centering
+\singlespacing
+\caption{Optimally weighted blow-ups of $K_1\vee C_5$: one apex clique and
+five rim cliques, sizes rounded from $(p^*,b^*,\ldots,b^*)n$. The last column
+tends to $0$, which is the numerical form of $\Sigma_3(S)=\cstar$ for the
+optimal six-part step graphon $S$.}\label{tab-optblowup}
+\small
+\begin{tabular}{@{}r l r r r r@{}}
+\toprule
+$n$ & part sizes & $\Lambda_3$ & $\Lambda_3/n$ & $\Lambda_3-(cn-3)$ & $\Lambda_3-(\cstar n-3)$ \\
+\midrule
+600 & $(120,96^5)$ & 765.937967 & 1.276563 & $-1.865986$ & $-0.002951$ \\
+1200 & $(235,193^5)$ & 1534.880189 & 1.279067 & $-3.727718$ & $-0.001647$ \\
+3000 & $(590,482^5)$ & 3841.703863 & 1.280568 & $-9.315904$ & $-0.000728$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The two tables together exhibit the structure of the gap. The optimally
+weighted family approaches $\cstar n-3$ from below and is far from $cn-3$,
+while the bound $cn-3$ is not attained by any graph found here. Nothing in
+this chapter decides whether a different family could exceed $\cstar n-3$; by
+Proposition~\ref{no-gain} no family of weighted graphs can exceed
+$\mathcal M n-3$ asymptotically, and $\mathcal M$ itself is only bracketed.
+
+\section{Weighted matrices}\label{sec-num-weighted}
+Proposition~\ref{weighted-form} extends the bound to every symmetric matrix
+with zero diagonal and off-diagonal entries in $[0,1]$. Table~\ref{tab-weighted}
+reports randomised tests of that statement. No violation occurred. A control run of $200$ matrices of order $30$ with entries uniform in
+$[0,2]$ produced $198$ violations of $\Lambda_3\le cn-3$, so the range
+restriction $A_{ij}\le1$ is the operative hypothesis and not an artefact of
+the sampling; this is the numerical counterpart of Remark~\ref{weighted-scope}.
+
+\begin{table}[htbp]
+\centering
+\singlespacing
+\caption{Random $[0,1]$-weighted loopless matrices, $4000$ samples per order,
+fixed seed. ``Max'' is the largest $\Lambda_3$ observed; ``bound'' is $cn-3$.
+No violation occurred at any order.}\label{tab-weighted}
+\small
+\begin{tabular}{@{}r r r r r@{}}
+\toprule
+$n$ & samples & violations & max $\Lambda_3$ & $cn-3$ \\
+\midrule
+4 & 4000 & 0 & 1.663987 & 2.138693 \\
+6 & 4000 & 0 & 3.637893 & 4.708040 \\
+9 & 4000 & 0 & 6.244673 & 8.562059 \\
+15 & 4000 & 0 & 10.708949 & 16.270099 \\
+30 & 4000 & 0 & 20.579009 & 35.540198 \\
+60 & 4000 & 0 & 38.337336 & 74.080395 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The random weighted matrices are far from extremal: at $n=60$ the observed
+maximum is barely half the bound. This is expected, because a random weighted
+matrix has a dense, near-semicircular spectrum whose third eigenvalue is small
+compared with $n$, whereas the extremal constructions are sparse-template
+blow-ups with three large eigenvalues. The experiment is therefore a test of
+the hypothesis range, not a search for extremals.
+
+\section{What the computations do not show}\label{sec-num-limits}
+Three limitations are stated explicitly so that no reader mistakes numerical
+evidence for a theorem.
+
+\begin{itemize}[leftmargin=1.6em,itemsep=4pt]
+\item Exhaustive verification up to $n=7$ says nothing about $n\ge8$; the
+margin at $n=6$ is small enough that no extrapolation from the table is
+possible.
+\item The absence of violations in Table~\ref{tab-weighted} does not prove
+Proposition~\ref{weighted-form}; that proposition is proved in
+Chapter~\ref{ch-bound} by Lemma~\ref{bridge}, and the sampling only checks
+that the proof's hypotheses were not mis-stated.
+\item The blow-up tables identify a candidate extremal family but do not
+establish that $\mathcal M=\cstar$. Proposition~\ref{no-gain} shows that the
+asymptotic constant is the same for weighted and unweighted problems; it does
+not evaluate it.
+\end{itemize}
+
+\section{Reproducibility}\label{sec-repro}
+The scripts that produced Tables~\ref{tab-exhaustive}
+to~\ref{tab-weighted} and the exact-arithmetic checks of
+Section~\ref{sec-protocol} are stored in the accompanying repository under
+\texttt{thesis\_main/scripts/}, with the raw outputs as JSON in the same
+directory. Each script is deterministic: the enumeration is exhaustive, and
+the randomised tests use the fixed seed $20261104$. The exact-arithmetic
+checks use only integer and quadratic-field operations and print their results
+at sixty digits, so they can be reproduced without any numerical library.

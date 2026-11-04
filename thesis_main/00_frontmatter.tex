@@ -1,0 +1,121 @@
+\begin{titlepage}
+\centering
+\vspace*{1.2cm}
+{\Large\bfseries Undergraduate Thesis\par}
+\vspace{0.6cm}
+{\large School of Mathematics\par}
+\vfill
+{\LARGE\bfseries On the Sum of the Three Largest\\[0.35cm] Adjacency Eigenvalues of a Graph\par}
+\vspace{1.0cm}
+{\large A joint moment bound, the structure of extremal graphons,\\ and numerical verification\par}
+\vfill
+{\large Haoyang Ji\par}
+\vspace{0.4cm}
+{\normalsize 4 November 2026\par}
+\vfill
+\rule{0.55\textwidth}{0.4pt}\par
+\vspace{0.3cm}
+{\small This thesis expands the preprint \emph{A joint moment bound for the three
+largest graph eigenvalues} (H.~Ji, 3 November 2026). All constants quoted
+here were recomputed in exact arithmetic; the labels \emph{proved},
+\emph{verified}, \emph{numerical} and \emph{gap} are used throughout to
+separate the four kinds of statement.\par}
+\end{titlepage}
+
+\chapter*{Declaration}
+\addcontentsline{toc}{chapter}{Declaration}
+The work presented in this thesis is my own, carried out between August and
+November 2026. Where a result, an idea, a construction or a constant is due
+to another author, it is cited at the point of use. Two instances deserve to
+be singled out here because they concern priority rather than technique.
+
+\begin{itemize}[leftmargin=1.6em,itemsep=3pt]
+\item The lower-bound constant $\cstar=(9+\sqrt5+2\sqrt{35})/18$ and the
+optimising weight of the $K_1\vee C_5$ construction were announced earlier,
+in conditional form, in the self-archived Zenodo deposits of
+Newton~\cite{Newton1,Newton2}. No priority is claimed for that constant;
+see Remark~\ref{rem-newton}.
+\item The observation that the Ky Fan transfer argument needs only a zero
+diagonal and off-diagonal entries in $[0,1]$ is already implicit in the
+proof of~\cite[Proposition 6.1]{STW} and in the matrix setting
+of~\cite{Mohar}. Proposition~\ref{weighted-form} records the resulting
+weighted form of the main bound but claims no novelty for it.
+\end{itemize}
+
+Every displayed identity, factorisation and positivity assertion reproduced
+from the preprint was re-checked in exact rational arithmetic and in the
+quadratic fields $\mathbb Q(\sqrt3)$ and $\mathbb Q(\sqrt5)$, never in
+floating point. Numerical experiments are reported as numerical evidence
+only and are never used as a step in a proof.
+
+\vspace{0.6cm}
+\noindent Haoyang Ji \hfill 4 November 2026
+
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+Let $\lambda_1(G)\ge\lambda_2(G)\ge\cdots$ be the adjacency eigenvalues of a
+finite simple graph $G$ and write
+$\Lambda_3(G)=\lambda_1(G)+\lambda_2(G)+\lambda_3(G)$. This thesis proves
+\[
+ \Lambda_3(G)\;\le\;c\,n-3\qquad(n\ge3),
+\]
+where
+\[
+ c=\frac{106106902139519}{107310156800000}+\frac{41\sqrt3}{240}
+   -\frac{53}{9000000}=1.284673255723918505\ldots ,
+\]
+which improves the coefficient $(3+\sqrt5)/4=1.309016994\ldots$ obtained by
+Sivashankar, Tang and Wakhare from the rank-three absolute projection
+constant $\gamma(3)=(1+\sqrt5)/2$. The constant term $-3$ is unchanged.
+
+The improvement comes from replacing two separate estimates by one joint
+estimate. Writing $A=\E|X\cdot X'|$ and $B=|\E X|^2$ for an isotropic law
+$\E XX^T=I_3$ on $\R^3$ with independent copy $X'$, the classical bounds
+$A\le(1+\sqrt5)/2$ and $B\le1$ give exactly the coefficient
+$(3+\sqrt5)/4$. We prove instead
+$A+B\le 2c$, by an exact identity that couples $A$ and $B$ to the mean
+deficit, the radial variance, the regression error and the weighted harmonic
+moments of degrees three and four through a signed quartic majorant. All
+error terms are retained in the identity, so the certificate is quantitative
+rather than asymptotic.
+
+Structurally, we prove that the canonical eigenfunction law of every
+maximising graphon for the variational quantity
+$\mathcal M=\sup_W\Sigma_3(W)$ has at most $24$ support points, that the
+maximiser is almost everywhere a binary step kernel determined by the signs
+of the dot products of those points, and that every positive clique in the
+support consists of at most six linearly independent types. The argument
+combines a second-variation inequality on the actual support, propagation of
+moment relations, a dimension descent over sign regions, and a separating
+family of binary observations.
+
+The bound is shown to hold verbatim for $[0,1]$-weighted loopless graphs, and
+weights are proved not to improve the asymptotic constant. Extensive
+numerical verification is reported: all $2\,131\,016$ labelled graphs of orders
+$3\le n\le7$ satisfy the bound, the unique extremal graph at $n=6$ is
+$K_1\vee C_5$, and blow-ups of $K_1\vee C_5$ attain
+$\cstar n-3+o(1)$ with $\cstar=1.281568196872168\ldots$.
+
+Neither the optimal coefficient nor the extremal graphs are determined. The
+residual gap $c-\cstar=0.003105058851750628\ldots$ and the structure of
+maximisers are left open and are discussed in the final chapter.
+
+\vspace{0.4cm}
+\noindent\textbf{Keywords.} Adjacency eigenvalues; spectral sums; Ky Fan
+maximum principle; graphons; absolute projection constants; isotropic
+measures; extremal graph theory.
+
+\chapter*{Acknowledgements}
+\addcontentsline{toc}{chapter}{Acknowledgements}
+I thank my supervisor for the patience and the many sharp questions that
+shaped this work, and the authors of~\cite{STW,KLMPT,KMMP,Paulin,HW} for
+making their preprints available so quickly, which allowed the present
+argument to be positioned honestly against the current state of the
+literature. I am also grateful to the authors of the recent preprints on spectral sums
+for making their work publicly available so promptly, which allowed the
+present argument to be positioned honestly against the current literature.
+
+\clearpage
+\thispagestyle{empty}
+\null
+\vfill

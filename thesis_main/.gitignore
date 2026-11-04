@@ -1,0 +1,6 @@
+# LaTeX build artifacts - not part of the source
+*.aux
+*.log
+*.toc
+*.out
+_c*.log

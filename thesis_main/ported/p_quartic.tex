@@ -1,0 +1,103 @@
+% Ported verbatim from paper/top3_joint_moment_bound.tex lines 854-955.
+% Only cross-reference wording was adapted; no mathematics was altered.
+Define
+\[
+ f(w)=\frac{8352+43806w+54016w^2-12928w^3-10240w^4}{41503},
+ \qquad \sigma(w)=f(w)-|w|-w.
+\]
+The polynomial is the degree-at-most-four Hermite interpolant with double
+contacts to $|w|+w$ at $-3/8$ and $1/2$, and a contact at $1$.
+Uniqueness follows because a difference of two such polynomials would have
+five zeros counted with multiplicity. The following explicit identities prove
+the needed inequalities; interpolation alone is not a majorant proof.
+\begin{lemma}\label{scalar}
+For every $w\in[-1,1]$,
+\begin{equation}\label{sigmapoint}
+ \sigma(w)\ge0,\qquad \sigma(w)\ge\frac{1-9w^2}{25}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Direct expansion gives
+\[
+ 41503\sigma(w)=
+ \begin{cases}
+ (1-w)(2w-1)^2(8352+2560w),&0\le w\le1,\\
+ (8w+3)^2(928-82w-160w^2),&-1\le w\le0.
+ \end{cases}
+\]
+The final factor on the negative interval is concave and at least $850$.
+This proves nonnegativity, including the join at $0$ and both endpoints.
+The second assertion follows immediately when $|w|\ge1/3$.
+For $w=-z$, $0\le z\le1/3$, write
+\[
+ \sigma(-z)=(z-3/8)^2
+          \frac{59392+5248z-10240z^2}{41503}
+       \ge\frac{10}{7}(z-3/8)^2.
+\]
+Indeed $z(5248-10240z)\ge0$ on this interval and
+$59392/41503>10/7$. The remaining comparison is the exact square
+\[
+ \frac{10}{7}(z-3/8)^2-\frac{1-9z^2}{25}
+  =\frac{313}{175}\left(z-\frac{375}{1252}\right)^2
+                         +\frac{109}{250400}>0.
+\]
+For $w=z$, $0\le z\le1/3$, the positive-interval factorization gives
+\[
+ \sigma(z)=(z-1/2)^2\frac{(1-z)(33408+10240z)}{41503}
+              \ge\frac12(z-1/2)^2,
+\]
+because the coefficient is at least $22272/41503>1/2$. Now use
+\[
+ \frac12(z-1/2)^2-\frac{1-9z^2}{25}
+   =\frac{43}{50}\left(z-\frac{25}{86}\right)^2+\frac{53}{4300}>0.
+\]
+These intervals exhaust $[-1,1]$.
+\end{proof}
+
+Put $P=\E[RR'\sigma(U\cdot U')]$ for the same actual law as before, and set
+\[
+ \begin{gathered}
+ a_3=\frac{12928}{41503},\quad a_4=\frac{10240}{41503},\quad
+ b_e=\frac{16386}{18865},\\
+ b_V=\frac{64608}{290521},\quad b_J=\frac{316672}{290521},\quad
+ \delta_{\mathrm q}=\frac{3+\sqrt5}{2}-\frac{544886}{207515}.
+ \end{gathered}
+\]
+Integration of the expanded $f$, using \eqref{harmonics}, gives the single
+exact joint budget
+\begin{equation}\label{budget7}
+ D=\delta_{\mathrm q}+b_e e+b_V V+b_J J+a_3H^2+a_4K^2+P.
+\end{equation}
+For example, writing $f=c_0+c_1w+c_2w^2-a_3w^3-a_4w^4$,
+the coefficients are $b_e=c_1-3a_3/5$, $b_V=c_0+3a_4/35$,
+$b_J=c_2-6a_4/7$, and the integrated constant is
+$3(c_0-a_4/5)+b_e+c_2=544886/207515$.
+All tensors are $R$-weighted and $\sigma$ is bounded, so this equality
+uses no radial moment beyond the second one. Identity~\eqref{budget4} will only justify a small-$D$ branch; it is
+not added as an independent resource to~\eqref{budget7}.
+
+\begin{lemma}\label{radialpayment}
+Suppose $0<r_-\le R\le r_+<\infty$ almost surely and $r_+/r_-\le3$.
+Then
+\begin{equation}\label{payment}
+ P=\frac3{50}(V-9J)+r_{\rm rad},\qquad r_{\rm rad}\ge0.
+\end{equation}
+\end{lemma}
+\begin{proof}
+For $w=U\cdot U'$, the exact pair identities from the full Gram are
+\[
+ V=\frac12\E(R-R')^2,\qquad
+ J=\frac12\E[(R-R')^2w^2].
+\]
+The latter uses $\E[R^2w^2]=\E[(R')^2w^2]=1$ and
+$\E[RR'w^2]=\tr(M^2)$; it assumes no independence of radius and direction.
+The ratio bound gives $(R-R')^2\le(4/3)RR'$. Use the two conclusions
+of Lemma~\ref{scalar} in this order:
+\[
+ P\ge\frac34\E[(R-R')^2\sigma(w)]
+   \ge\frac3{100}\E[(R-R')^2(1-9w^2)]
+    =\frac3{50}(V-9J).
+\]
+The expression $V-9J$ need not be nonnegative. Define $r_{\rm rad}$
+as the actual difference; only this difference is claimed nonnegative.
+\end{proof}

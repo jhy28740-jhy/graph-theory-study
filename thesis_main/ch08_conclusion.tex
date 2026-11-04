@@ -1,0 +1,143 @@
+\chapter{Conclusion and open problems}\label{ch-conclusion}\label{sec-further}
+
+\section{Summary of what is proved}
+The thesis establishes four results, listed here in the order in which they
+are used rather than in order of importance.
+
+\begin{enumerate}[leftmargin=2.2em,itemsep=4pt]
+\item \textbf{Attainment and two-sided bracketing}
+(Lemma~\ref{attainment}). The variational quantity $\mathcal M=\sup_W
+\Sigma_3(W)$ is attained, every maximiser has three positive leading
+eigenvalues, and $\cstar\le\mathcal M\le(1+\sqrt3)/2$ with
+$\cstar=(9+\sqrt5+2\sqrt{35})/18$ produced by an explicit six-part step
+graphon modelled on $K_1\vee C_5$.
+
+\item \textbf{Finite canonical support} (Theorem~\ref{structure-main}). The
+canonical law of \emph{every} maximiser is a convex combination of at most
+$24$ points of the ellipsoid $\{v^TLv=\mathcal M\}$; the maximiser is almost
+everywhere the binary threshold kernel determined by the signs of the pairwise
+dot products; the support points satisfy the exact algebraic system
+$\sum_ip_iv_iv_i^T=I_3$, $v_i^TLv_i=\mathcal M$, $\sum_jp_jB_{ij}v_j=Lv_i$;
+and every positive clique has at most six linearly independent types.
+
+\item \textbf{Joint moment certificate} (Theorem~\ref{main}). Every Borel
+probability law on $\R^3$ with $\E XX^T=I_3$ satisfies
+$\E|X\cdot X'|+|\E X|^2\le2c$ with
+$c=1.284673255723918505\ldots$. The proof is an exact identity in which the
+mean deficit, the radial variance, the regression error, the two harmonic
+moments, the quartic slack and the atomic self-pair term all appear with
+explicit nonnegative coefficients.
+
+\item \textbf{Finite bound and its scope} (Theorem~\ref{main},
+Propositions~\ref{weighted-form} and~\ref{no-gain}). Every graph of order
+$n\ge3$ satisfies $\Lambda_3(G)\le cn-3$; the same inequality holds for every
+symmetric matrix with zero diagonal and off-diagonal entries in $[0,1]$; and
+passing from graphs to such matrices does not change the asymptotic extremal
+constant.
+\end{enumerate}
+
+The improvement over~\cite[Proposition 6.1]{STW} is a coefficient decrease
+of $0.02434374\ldots$ with the constant term $-3$ unchanged; the improvement
+over~\cite[Theorem 3.4.1]{Ebrahimi} is $3/\sqrt5-c=0.05696753\ldots$. Both
+statements are proved, not numerical, and both constants are printed to sixty
+digits in Section~\ref{sec-protocol}.
+
+\section{The residual gap}
+\input{ported/p_further}
+
+\section{Open problems}\label{sec-open}
+The following are stated in decreasing order of how much of the present
+machinery they would reuse. None is proved here.
+
+\begin{enumerate}[leftmargin=2.2em,itemsep=5pt]
+\item \textbf{Close the gap.} Prove or disprove $\mathcal M=\cstar$, i.e.\
+remove the gap $c-\cstar=0.00310506\ldots$. The obstruction is identified
+in Appendix~\ref{sec-appendix}: the certificate loses through the non-sharp
+constant $3/2$ of Lemma~\ref{contact-square} (the true supremum is
+$1.200224\ldots$ on $[0,1]$), through the divisor $125$ in~\eqref{Cstar8},
+and through the endpoint-ratio hypotheses $3$ and $\sqrt8$ that are stronger
+than needed. Replacing $3/2$ by a sharp contact constant is the cheapest
+identified improvement and is a finite exact-arithmetic computation, but it
+was not carried out.
+
+\item \textbf{Determine the joint feasible region.} Let
+$\Gamma=\overline{\{(\E|X\cdot X'|,|\E X|^2)\}}$ over isotropic laws on
+$\R^3$. The two coordinate bounds are known and sharp,
+$\E|X\cdot X'|\le(1+\sqrt5)/2$ and $|\E X|^2\le1$, and Theorem~\ref{main}
+bounds their sum.
+The region $\Gamma$ itself is not known; it is the natural two-dimensional
+formulation of the mixed projection constant raised in~\cite[Section 6.2]{STW}.
+This is the problem for which the present method gives a supporting line
+rather than the whole boundary.
+
+\item \textbf{Classify the extremal templates.} The support theorem bounds the
+number of types but does not classify them. In particular it is not known
+whether $B$ is nonsingular, whether every maximiser has exactly six types, or
+whether the masses are bounded away from zero uniformly over maximisers. The
+numerical evidence of Chapter~\ref{ch-numerical} points to the family
+$K_m\vee C_5[\cdot]$ but proves nothing.
+
+\item \textbf{Exact finite-order extremal graphs.} Determine $M_3(n)$ and the
+graphs attaining it for every $n$. At present this is known only for $n\le7$
+by exhaustive computation (Chapter~\ref{ch-numerical}); the extremal graphs
+there are $K_1\vee C_5$ for $n=6$ and $K_2\vee C_5$ for $n=7$, which suggests
+a blow-up family with a congruence-dependent description as in~\cite{HW}, but
+no conjecture strong enough to state is supported by the data.
+
+\item \textbf{Resolve the status of the announced certificate.} The
+deposits~\cite{Newton1,Newton2} assert $\Lambda_3(G)\le\cstar n-3$
+conditionally. Their author requests an independent audit of the admissibility
+of the archived dual payments, the global sector partition and the exact
+verifier. Completing that audit would either collapse the interval of
+Section~\ref{sec-further} to a point or produce a counterexample to a
+published-style claim.
+
+\item \textbf{Ring length.} The construction uses $C_5$. Whether
+$K_1\vee C_r$ for $r\ne5$, or more general joins, produce larger constants has
+not been investigated here and is recorded as an open computation rather than
+as a conjecture.
+\end{enumerate}
+
+\section{Adjacent problems}\label{sec-adjacent}
+Three neighbouring spectral-sum problems frame the present one and are worth
+stating precisely, because the methods differ.
+
+\emph{The two-term sums.} $\Lambda_2=\lambda_1+\lambda_2$ is settled:
+$\Lambda_2(G)\le8n/7-2$ with equality exactly when $7\mid n$, and the unique
+extremal graph is the three-part join described in~\cite{HW}, building
+on~\cite{KLMPT}. For $\lambda_2+\lambda_3$ the bound $2n/3-2$ follows from the
+explicit description of the rescaled pair region in~\cite{Paulin}. A separate
+line of the present author's work treated $\lambda_2+\lambda_3$ with an
+equality characterisation and a finite-order stability refinement; it was
+completed independently of and concurrently with~\cite{Paulin} and is not
+reproduced here, since its subject is a different functional.
+
+\emph{Weighted two-term sums.} For $\lambda_1+k\lambda_2$ the asymptotic
+coefficient is already determined for every fixed $k\ge0$ by the support
+function of the region in~\cite{Paulin}:
+\[
+ h(k)=\frac{k+3+2\sqrt{2k^2-2k+4}}7\ \ (0\le k\le3),
+ \qquad h(k)=\frac{k+1}2\ \ (k\ge3),
+\]
+so that $\lambda_1+k\lambda_2\le h(k)n-(k+1)$ and the coefficient is
+asymptotically sharp. For $k=2$ this is
+$h(2)=(5+4\sqrt2)/7=1.5224077499\ldots$. What remains open for
+$\lambda_1+2\lambda_2$ is exactly what remains open for $\Lambda_3$: the exact
+finite-order maximum, the full list of extremal graphs, and a stability
+theorem. For trees and large order, the extremal tree is known~\cite{KMMZ}.
+
+\emph{Individual eigenvalues.} $\lambda_3(G)\le n/3-1$ is sharp
+by~\cite{STW}, and $c_3$ is therefore determined; the interesting individual
+problem is now $c_k$ for $k\notin\{2,3,4,8,24\}$, where the upper bound
+$\alpha_k$ of~\cite{STW} and the lower bounds of~\cite{Linz} do not meet.
+
+\section{What would count as a complete solution}
+For the reader who wants a single criterion: the problem posed in
+Section~\ref{sec-problem} is solved when one exhibits an explicit constant
+$c^\dagger$ and an explicit infinite family of graphs with
+$\Lambda_3(G)=c^\dagger|V(G)|-3+o(1)$, together with a proof that
+$\Lambda_3(G)\le c^\dagger|V(G)|-3$ for all $G$. At present $c$ is proved and
+$\cstar$ is attained asymptotically by the weighted blow-ups of $K_1\vee C_5$,
+but $\cstar$ is not proved and $c$ is not known to be attained. Closing either
+half would be a substantial result; closing both at the same value would
+finish the problem.

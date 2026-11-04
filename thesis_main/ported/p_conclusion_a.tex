@@ -1,0 +1,51 @@
+% Ported verbatim from paper/top3_joint_moment_bound.tex lines 1229-1278.
+% Only cross-reference wording was adapted; no mathematics was altered.
+We return to a maximizing graphon. Put
+\[
+ D_*=(3+\sqrt5)/2-2\mathcal M.
+\]
+By the threshold identity in Lemma~\ref{contact-structure}, its canonical
+law $X=F$ satisfies $A+B=2\mathcal M$, so the deficit $D$ of the preceding
+sections equals $D_*$.
+\begin{lemma}\label{spectral-reserve}
+If $W$ is an actual maximizer and $D_*=(3+\sqrt5)/2-2{\cal M}<1/20$,
+then $\lambda_3>44/375$, $\lambda_1<15/16$, and the canonical frame
+has positive bounded radii of endpoint ratio less than $\sqrt8$.
+\end{lemma}
+\begin{proof}
+The small branch and $\sqrt5>682/305>559/250$ give
+\[
+ {\cal M}>\frac{3+\sqrt5}{4}-\frac1{40}>\frac{321}{250}.
+\]
+Lemma~\ref{ranktwo} gives
+$\lambda_3={\cal M}-\Sigma_2(W)>321/250-7/6=44/375$.
+For $a=\lambda_1$, the Hilbert--Schmidt trace and the constant-function trial give
+\[
+ \lambda_1^2+\lambda_2^2+\lambda_3^2\le\iint W^2\le\iint W\le\lambda_1,
+ \qquad {\cal M}\le a+\sqrt{2a(1-a)},\quad 0<a\le1.
+\]
+The function on the right is decreasing on $[15/16,1]$; differentiation
+on the interior reduces this to $(2a-1)^2>2a(1-a)$ there.
+Moreover
+\[
+ \frac{15}{16}+\sqrt{\frac{15}{128}}<\frac{321}{250},\qquad
+ \left(\frac{321}{250}-\frac{15}{16}\right)^2-\frac{15}{128}
+       =\frac{11499}{4000000}>0.
+\]
+Thus $a<15/16$. By the actual ellipsoid identity,
+\[
+ \sqrt{{\cal M}/\lambda_1}\le R\le\sqrt{{\cal M}/\lambda_3},\qquad
+ \frac{\esssup R}{\essinf R}
+ \le\sqrt{\lambda_1/\lambda_3}<\sqrt{5625/704}<\sqrt8,
+\]
+where $8-5625/704=7/704$. No simplicity assumption was made on
+the positive eigenvalues; the argument uses the whole orthonormal frame.
+\end{proof}
+
+\begin{remark}\label{rem-radii}
+Lemma~\ref{radialpayment} is stated with endpoint ratio $3$, whereas the
+present lemma supplies $\sqrt8<3$ for an actual maximizer; the two
+hypotheses are therefore compatible, with slack. Using $\sqrt8$ in
+Lemma~\ref{radialpayment} would replace the factor $4/3$ in \eqref{payment}
+by $32/27$, a $12.5\%$ gain on $P$, which is not needed here.
+\end{remark}

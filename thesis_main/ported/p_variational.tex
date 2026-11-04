@@ -1,0 +1,231 @@
+% Ported verbatim from paper/top3_joint_moment_bound.tex lines 214-442.
+% Only cross-reference wording was adapted; no mathematics was altered.
+We may work on any standard nonatomic probability space. All changes of
+measure below can be realized on such a space.
+\begin{lemma}\label{ranktwo}
+Every $[0,1]$-valued graphon satisfies $\Sigma_2(W)\le7/6$.
+\end{lemma}
+\begin{proof}
+We give the elementary argument for the rank-two absolute-energy
+bound needed below.
+Take any $\R^2$-valued law $\E YY^T=I_2$, write $Y=RU$ with a unit
+choice at zero, $C=\E R$, and $N=\E[R UU^T]$.
+Then $C^2\le2$ and
+$\tr(N^2)\le1$, the latter from
+$\E\|U-NY\|^2=1-\tr(N^2)\ge0$.
+On the circle,
+$g_{4,2}(t)=t^4-t^2+1/8$ is a positive kernel: if
+$U=(\cos a,\sin a)$, it is $\cos(4(a-a'))/8$.
+Hence its $RR'$-weighted integral is nonnegative.
+The exact majorant
+\[
+ \frac29+\frac{11}{9}t^2-\frac49t^4-|t|
+     =\frac{(1-|t|)(2|t|-1)^2(|t|+2)}9\ge0
+\]
+therefore gives
+\[
+ \E|Y\cdot Y'|\le\frac5{18}C^2+\frac79\tr(N^2)\le\frac43.
+\]
+Also $|\E Y|^2\le1$. For any orthonormal two-frame in a graphon,
+$W(Y\cdot Y')\le(Y\cdot Y')_+$ pointwise, so its trace is at most
+$(4/3+1)/2=7/6$. Taking the supremum proves the lemma.
+The absolute-energy estimate is classical; see~\cite[Theorems 2 and 4]{Glazyrin}.
+\end{proof}
+
+
+\begin{lemma}\label{attainment}
+The supremum $\mathcal M$ is attained, and
+\[
+ \cstar:=\frac{9+\sqrt5+2\sqrt{35}}{18}\le\mathcal M
+       \le\frac{1+\sqrt3}{2}.
+\]
+Every maximizing graphon has three positive leading eigenvalues.
+\end{lemma}
+\begin{proof}
+For an orthonormal $k$-frame, $K(x,y)=F(x)\cdot F(y)$ satisfies
+$\int K=|\int F|^2\le1$ and $\int K^2=k$. Hence
+$\int WK\le\int K_+\le(1+\sqrt k)/2$.
+For the lower bound, use a six-part kernel with template $K_1\vee C_5$
+and diagonal blocks equal to one. Give the center mass $a=1-5b$ and each
+rim part mass $b$, where $0<b<1/5$. Put $\phi=(1+\sqrt5)/2$.
+Its quotient spectrum is
+\[
+ \frac{1-2b\pm\sqrt{1+4b-36b^2}}2,
+ \quad\phi b,\ \phi b,\ -b/\phi,\ -b/\phi.
+\]
+Indeed the four nonconstant Fourier modes on the pentagon give the last
+four values; the remaining block is
+$\left(\begin{smallmatrix}a&\sqrt{5ab}\\\sqrt{5ab}&3b\end{smallmatrix}\right)$.
+Its positive eigenvalue exceeds $3b$, and its determinant is $-2ab<0$.
+Consequently the sum of its three positive eigenvalues is
+\[
+ \frac{1+2\sqrt5 b+\sqrt{1+4b-36b^2}}2.
+\]
+Substitution of $b=(7+5\sqrt7)/126$ gives $\cstar$.
+This is the usual quotient calculation for a join construction;
+see~\cite{Hjoin}. In particular $\cstar>32/25>7/6$.
+
+For completeness we record why $\Sigma_3$ of this step kernel is exactly the
+sum of the three positive quotient eigenvalues. If $f$ is supported in one
+part $A_i$ and $\int_{A_i}f=0$, then for $x\in A_i$ one has
+$(T_Wf)(x)=\int_{A_i}f=0$, while for $x$ in any other part $A_j$ one has
+$(T_Wf)(x)=W_{ji}\int_{A_i}f=0$; hence $T_Wf=0$. The whole block-mean-zero
+subspace therefore lies in the zero eigenspace, and $\Sigma_3$ is governed
+by the quotient matrix alone.
+
+For attainment, let $D=W_1-W_2$. If $\lambda\ne0$ is an eigenvalue of
+$T_D$ with unit eigenfunction $f$, then $|D|\le1$ gives
+$\|f\|_\infty\le1/|\lambda|$. The cut-norm dual estimate yields
+\[
+ |\lambda|=|\langle f,T_Df\rangle|
+ \le4\|D\|_\square\|f\|_\infty^2,
+ \qquad \|T_D\|_{2\to2}^3\le4\|D\|_\square.
+\]
+The assertion is trivial when $T_D=0$; otherwise compactness supplies an
+eigenvalue of modulus $\|T_D\|$. By the variational definition,
+$|\Sigma_3(W_1)-\Sigma_3(W_2)|\le3\|T_D\|$. This also holds after
+relabeling. Cut-metric compactness~\cite{LS} therefore gives a maximizer.
+Finally Lemma~\ref{ranktwo} implies
+$\lambda_3\ge\cstar-7/6>0$ at each maximizer.
+\end{proof}
+
+\begin{remark}\label{rem-newton}
+Priority for the constant $\cstar$. The template $K_1\vee C_5$ of
+Lemma~\ref{attainment} is the ``pole--pentagon'' law of the self-archived
+Zenodo deposits~\cite{Newton1,Newton2}, which appeared about two and a half
+months before the first version of the present paper. Writing the apex mass
+as $p^*=(91-25\sqrt7)/126$ and each of the five rim masses as
+$r^*=(7+5\sqrt7)/126$, so that $p^*+5r^*=1$, those deposits obtain the
+identical value
+\[
+ \alpha_3=\frac12+\frac{\sqrt5}{18}+\frac{\sqrt{35}}9
+        =\frac{9+\sqrt5+2\sqrt{35}}{18}=\cstar
+\]
+at the identical optimising weight, and they further assert
+$\Lambda_3(G)\le\alpha_3n-3$ for every $n\ge3$. That assertion is
+conditional. Its theorem is titled a \emph{candidate} universal $S_3$
+theorem, it is stated to hold ``within the exact analytic and
+proof-carrying certificate chain'', and the text declares that acceptance
+``properly remains subject to independent mathematical audit of the
+admissibility of the archived dual payments, the global sector partition and
+the exact verifier implementation''. No refereed version is available. By
+contrast, the computation in Lemma~\ref{attainment} is an ordinary quotient
+calculation for a join and uses none of that machinery, so the lower bound
+$\cstar\le\mathcal M$ stands independently; we cite~\cite{Newton1,Newton2}
+for the constant and for the naming and claim no priority for either.
+Nothing else in this paper depends on the unverified upper bound. Should it
+later be confirmed unconditionally, then $\mathcal M=\cstar$ and the
+interval displayed in Chapter~ef{sec-further} collapses to a point.
+\end{remark}
+
+Fix a maximizing $W$ and a top-three orthonormal eigenframe $F$, taking
+$f_1\ge0$. Write $L=\diag(\lambda_1,\lambda_2,\lambda_3)$.
+Taking the absolute value of a top Rayleigh maximizer supplies the
+nonnegative choice of $f_1$. We do not initially assume any eigenvalue simplicity.
+\begin{lemma}\label{ellipse-structure}
+Almost everywhere, $F^TLF=\mathcal M$. Moreover
+$\lambda_3>\lambda_4$, where the fourth positive eigenvalue is zero if
+absent. The canonical support $S=\supp(F_\#dx)$ is compact, lies on the
+ellipsoid $v^TLv=\mathcal M$, and avoids the origin.
+\end{lemma}
+\begin{proof}
+For a bounded real $g$ of mean zero, change density to $1+tg$ for both
+signs of sufficiently small $t$. Set $Q=\int gFF^T$. The unchanged frame
+has complete Gram matrix $I+tQ$ and numerator matrix
+$L+t(QL+LQ)+O(t^2)$. After a common orthonormalization its trace is
+\[
+ \tr\bigl[(I+tQ)^{-1}\{L+t(QL+LQ)+O(t^2)\}\bigr]
+   =\mathcal M+t\tr(LQ)+O(t^2).
+\]
+Maximality gives $\int gF^TLF=0$. Since every bounded mean-zero $g$ is
+allowed, $F^TLF$ equals its mean $\mathcal M$ almost everywhere.
+This applies to every active eigenframe. If
+$\lambda_3=\lambda_4=\lambda>0$, compare the frames with third entries
+$f_3$, $f_4$ and $(f_3+f_4)/\sqrt2$, keeping $f_1,f_2$ fixed.
+The three identities imply $f_3^2=f_4^2$ and $f_3f_4=0$ almost everywhere,
+a contradiction. Only finitely many null sets are combined.
+Since $L\succ0$, the ellipsoid is compact and excludes zero. It contains
+the full support, not just almost every frame value.
+\end{proof}
+
+\begin{lemma}\label{row-insertion}
+For every measurable $h:[0,1]\to[0,1]$, the vector $r=\int hF$ satisfies
+$r^TL^{-1}r\le\mathcal M$.
+\end{lemma}
+\begin{proof}
+Give the original space $A$ mass $u=1-\epsilon$ and a new independent part
+$B$ mass $\epsilon$; the kernel is $W$ on $A\times A$, equals the prescribed
+cross-row $h$ (a function on $A$) on $A\times B$ and $B\times A$, and is zero
+on $B\times B$. Put $t=L^{-1}r$ and $T=|t|^2$. For the trial frame take $f_i$
+on $A$ and the constant $t_i$ on $B$; then the $A\times B$ and $B\times A$
+contributions to the numerator are $\epsilon u\,r_it_j$ and its transpose.
+Dividing the entire frame by $\sqrt u$ leaves every Rayleigh quotient
+unchanged, and the resulting Gram and numerator matrices are
+\[
+ G=I+(\epsilon/u)tt^T,\qquad
+ N=uL+\epsilon(rt^T+tr^T).
+\]
+The rank-one inverse formula gives the exact trial trace
+\[
+ \tr(G^{-1}N)=u\mathcal M+
+       \frac{\epsilon r^TL^{-1}r}{1+\epsilon T/u}.
+\]
+This cannot exceed $\mathcal M$. Divide by $\epsilon$ and let
+$\epsilon\downarrow0$.
+\end{proof}
+
+\begin{lemma}\label{contact-structure}
+For $\nu=F_\#dx$ and every $v\in S$,
+\begin{equation}\label{all-rows}
+ \nu\{w:v\cdot w=0\}=0,\qquad
+ \int_{v\cdot w>0}w\,d\nu(w)=Lv,\qquad v_1>0.
+\end{equation}
+The original kernel is $\mathbf1_{\{F(x)\cdot F(y)>0\}}$ almost
+everywhere. It is irreducible, and $\lambda_1>\lambda_2$.
+\end{lemma}
+\begin{proof}
+Let $Z=\{\int hF:0\le h\le1\}$ and
+$E=\{r:r^TL^{-1}r\le\mathcal M\}$. The set $Z$ is compact by weak-star
+compactness and is contained in $E$ by Lemma~\ref{row-insertion}.
+Its support function is $H(v)=\int(v\cdot F)_+$.
+For almost every $x$, the original row has integral vector $LF(x)$,
+and $F(x)^TLF(x)=\mathcal M$. Since the support function of $E$ is
+$\sqrt{\mathcal M v^TLv}$, it follows that $H(F(x))=\mathcal M$.
+Continuity then gives $H(v)=\mathcal M$ for every $v\in S$.
+
+For such $v$, the unique support point of the strictly convex ellipsoid
+$E$ in direction $v$ is $Lv$. The row $h_v=\mathbf1_{\{v\cdot F>0\}}$
+attains this support value, so $\int h_vF=Lv$. If
+$A_0=\{v\cdot F=0\}$, then $h_v+\mathbf1_A$ has the same support value
+for every measurable $A\subset A_0$. Uniqueness forces $\int_A F=0$
+for every such $A$, hence $F=0$ almost everywhere on $A_0$.
+The ellipsoid identity implies that $A_0$ is null.
+
+It remains to identify every maximizing row, not merely those obtained by
+perturbing $h_v$ on $A_0$. Let $h\in[0,1]$ satisfy $\int hF=Lv$ for some
+$v\in S$. Pairing with $v$ and using $v^TLv=\mathcal M$ gives
+$v\cdot\int hF=\mathcal M$, while on the other hand
+\[
+ v\cdot\int hF=\int h\,(v\cdot F)\,dx\le\int(v\cdot F)_+\,dx=H(v)=\mathcal M .
+\]
+Hence equality holds throughout. Since $0\le h\le1$, the pointwise bound
+$h\,(v\cdot F)\le(v\cdot F)_+$ is therefore an equality almost everywhere,
+which forces $h=1$ almost everywhere on $\{v\cdot F>0\}$ and $h=0$ almost
+everywhere on $\{v\cdot F<0\}$. As $A_0$ is null, $h=h_v$ almost
+everywhere. Thus the maximizing row is unique modulo null sets, which
+identifies every original row and proves the threshold formula.
+
+If a nontrivial measurable cut had zero cross-kernel, its indicator
+multiplier would commute with $T_W$ and with the isolated top-three
+spectral projection. The kernel $F(x)\cdot F(y)$ of that projection
+would vanish across the cut, contradicting the zero-equator assertion
+and Fubini. Thus $W$ is irreducible. The zero set of the nonnegative
+$f_1$ would also give a zero cut by its eigen-equation, so $f_1>0$ almost
+everywhere. If another top eigenfunction orthogonal to $f_1$ existed,
+it would change sign. Equality in the absolute-value Rayleigh comparison
+would force zero edges between its positive and negative sets; its
+absolute value is a nonnegative top eigenfunction and is positive almost
+everywhere. This contradicts irreducibility, proving simplicity.
+Finally, for every $v\in S$, $\lambda_1v_1=\int h_vf_1>0$:
+otherwise $h_v=0$ almost everywhere and hence $Lv=0$, which is impossible.
+\end{proof}

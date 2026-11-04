@@ -1,0 +1,68 @@
+% Ported verbatim from paper/top3_joint_moment_bound.tex lines 1280-1346.
+% Only cross-reference wording was adapted; no mathematics was altered.
+By Theorem~\ref{structure-main}, write the canonical law as
+$\sum_{i=1}^m p_i\delta_{v_i}$ with $m\le24$ and all $p_i>0$.
+Set $R_i=|v_i|$, $u_i=v_i/R_i$, $w_{ij}=u_i\cdot u_j$, and
+\[
+ \kappa=\frac3{125000},\qquad
+ h(t)=\sigma(t)-\frac{z_*(t)}{125}+\kappa,
+ \qquad \chi=\sum_i p_i^2R_i^2.
+\]
+Equation~\eqref{contact-paid} gives $h\ge0$ and $h(1)=\kappa$.
+The same contact remainder in~\eqref{Cstar8} therefore has the exact split
+\begin{equation}\label{atom-split}
+ r_{\rm ct}=\kappa\chi+r_{\rm off},\qquad
+ r_{\rm off}=\sum_{i\ne j}p_ip_jR_iR_jh(w_{ij})\ge0.
+\end{equation}
+These self-pairs have positive product mass. They are not values assigned
+to the null diagonal $x=y$ of the underlying nonatomic space.
+The estimate $\chi\ge C^2/m$ is the usual Cauchy--Schwarz
+cardinality bound. For related weighted-energy arguments,
+see~\cite[Theorem 2.1 and the subsequent discussion]{Weighted}.
+
+In the branch $D_*<1/20$, let
+\[
+ \widehat Q=Q-\frac{V}{9000000}.
+\]
+It is nonnegative: in~\eqref{Q8} only the last separate $V$ coefficient
+changes, to
+\[
+ \frac{42847433}{5229378000000}-\frac1{9000000}
+       =\frac{14088797}{1743126000000}>0.
+\]
+\begin{proposition}\label{final-certificate}
+For every maximizing graphon with $D_*<1/20$,
+\begin{align}\label{certificate-final}
+ D_*={}&d+\widehat Q+{\cal R}_0+\ell r_{\rm reg}
+       +\frac{K^2}{1125}+r_{\rm tr}\notag\\
+ &+\frac{\kappa}{9}\left(\chi-\frac{C^2}{24}\right)
+       +\frac{r_{\rm off}}9.
+\end{align}
+Every term after $d$ is nonnegative. Consequently $\mathcal M\le c$.
+\end{proposition}
+\begin{proof}
+Lemma~\ref{spectral-reserve} verifies the radial hypothesis of
+Proposition~\ref{conditional8}. Substitute~\eqref{atom-split} once into
+\eqref{certificate8}. Since $C^2=3-V$,
+\[
+ \frac{\kappa\chi}{9}
+ =\frac1{3000000}-\frac{V}{9000000}
+       +\frac{\kappa}{9}\left(\chi-\frac{C^2}{24}\right).
+\]
+This gives~\eqref{certificate-final}. Moreover
+\[
+ \chi-\frac{C^2}{24}
+ =\sum_i\left(p_iR_i-\frac Cm\right)^2
+       +C^2\left(\frac1m-\frac1{24}\right)\ge0.
+\]
+No lower bound on an individual mass is needed. The complementary branch
+also gives $D_*\ge d$, since the rational estimates used above imply
+\[
+ \frac1{20}-d>
+       \frac{1025023913201}{804826176000000}>0.
+\]
+Thus $D_*\ge d$ in both branches, or equivalently $\mathcal M\le c$.
+\end{proof}
+The atomic term changes the coefficient by $1/6000000$ relative to
+$(3+\sqrt5)/4-d_1/2$. Most of the improvement in Theorem~\ref{main}
+comes from the preceding joint moment estimate, not from this last term.

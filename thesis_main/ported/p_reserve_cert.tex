@@ -1,0 +1,37 @@
+% Ported verbatim from paper/top3_joint_moment_bound.tex lines 1192-1227.
+% Only cross-reference wording was adapted; no mathematics was altered.
+For $D<1/20$ define the explicitly nonnegative quadratic expression
+\begin{align}\label{Q8}
+ Q={}&\frac{13}{200}\left(\sqrt V-\frac{937}{273}q\sqrt e\right)^2
+       +\frac{19}{50}\left(\sqrt J-\frac{2811}{2128}q\sqrt e\right)^2\notag\\
+ &+\left(\frac{183}{200}-\frac{725029049}{278853120}q^2\right)e\notag\\
+ &+\frac{148831}{181104000}e
+       +\frac{42847433}{5229378000000}V+\frac{65082103}{20917512000}J.
+\end{align}
+The parenthetical coefficient is positive by \eqref{smallbranch} and the
+same exact lower bound following \eqref{squares}. The last coefficients are
+obtained from those in \eqref{squares}, respectively by adding
+$-1/9600$, $-187/1680000+1/375000$, and $211/504000$.
+Substitution of \eqref{reserve}--\eqref{paid-expansion} into \eqref{certificate-start} yields the exact identity
+\begin{equation}\label{certificate8}
+ D=d_1+Q+{\cal R}_0+\ell r_{\rm reg}
+          +\frac{K^2}{1125}+r_{\rm tr}+\frac{r_{\rm ct}}9.
+\end{equation}
+Every remainder is defined from the same $X$, its independent copy and its
+complete Gram matrix.
+\begin{proposition}\label{conditional8}
+Every isotropic law whose radii lie almost surely in a positive bounded
+interval of endpoint ratio at most $\sqrt8$ satisfies $D\ge d_1$.
+In the branch $D<1/20$, \eqref{certificate8} retains all displayed remainders.
+\end{proposition}
+\begin{proof}
+In the small branch all terms after $d_1$ are nonnegative. In the other
+branch $D\ge1/20>d_1$. To verify the last comparison entirely by rationals,
+use $\sqrt5<161/72$ and $\sqrt3>433/250$ in \eqref{constants}; they give
+\[
+ \frac1{20}-d_1>\frac{1025292188593}{804826176000000}>0.
+\]
+No division by $B=0$ occurs in the small branch, and the other branch
+requires none. The radial hypothesis will be verified for a maximizing law in
+Section~\ref{sec-conclusion}, rather than imposed on every isotropic law.
+\end{proof}

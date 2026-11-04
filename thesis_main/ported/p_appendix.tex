@@ -1,0 +1,39 @@
+% Ported verbatim from paper/top3_joint_moment_bound.tex lines 1417-1454.
+% Only cross-reference wording was adapted; no mathematics was altered.
+
+A reader cannot tell from the statements alone which of the many integer
+coefficients in this paper are forced by an interpolation problem and which
+were chosen and then verified. We record the distinction.
+
+\textbf{Uniquely determined.}
+(i)~The polynomial $f$ of \S6 is the unique polynomial of degree at most
+four with double contact to $|w|+w$ at $w=-3/8$ and at $w=1/2$ and a contact
+at $w=1$; five conditions determine five coefficients, so once the nodes are
+fixed the integers in $f$ (including $41503=7^3\cdot11^2$) are forced.
+(ii)~$z_*$ of \S8 is determined by the same nodes together with the
+requirement that the cubic term vanish, i.e.\ by the factor $(t+9/8)$.
+(iii)~$\cstar$ of Lemma~\ref{attainment} is the value of an explicit
+one-variable function at the critical point $b=(7+5\sqrt7)/126$.
+(iv)~The four rational certificates of \S7 and \S9 are obtained by
+substituting the stated rational bounds for $\sqrt5$ and $\sqrt3$ into
+$d_0,d_1,d$; no search is involved.
+
+\textbf{Chosen, then verified exactly.}
+(i)~The nodes $-3/8,\,1/2,\,1$ themselves, and the majorant $h_0$ taken
+from~\cite[Lemma 4.4]{STW}.
+(ii)~The parameters $\ell=937/1400$, $\eta=1/10$, $\theta=6/25$ of \S7 and
+the square coefficients of \eqref{squares} and \eqref{Q8}; these were
+selected so that all residual coefficients remain positive, and every
+positivity claim is then checked by exact rational arithmetic.
+(iii)~The divisor $125$ and $\kappa=3/125000$ of \eqref{Cstar8}, and the
+constant $3/2$ of Lemma~\ref{contact-square}; the quantified loss is
+discussed in Remark~\ref{rem-theta}.
+
+\textbf{Verification protocol.} Every displayed identity, factorization,
+completion of squares and ``$>0$'' assertion was re-checked in exact
+arithmetic: rationals as exact fractions and $\sqrt3,\sqrt5$ in the
+quadratic fields $\mathbb Q(\sqrt3)$, $\mathbb Q(\sqrt5)$, never in floating
+point. Pointwise inequalities were additionally scanned on a
+$2\times10^6+1$ point grid, and the finite-graph transfer was checked on all
+$33864$ graphs of order $3\le n\le6$. The verification scripts are listed in
+the accompanying audit report of 2 November 2026.

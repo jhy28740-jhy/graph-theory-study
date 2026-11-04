@@ -1,0 +1,32 @@
+% Ported verbatim from paper/top3_joint_moment_bound.tex lines 489-519.
+% Only cross-reference wording was adapted; no mathematics was altered.
+\begin{lemma}\label{propagate}
+If $v_i\in S$ have $v_i\cdot v_j>0$ for all $i,j$, then
+\[
+ \sum_i a_i v_iv_i^T=0
+ \quad\Longrightarrow\quad
+ \sum_i a_i v_i=0\quad\hbox{and}\quad
+ \sum_i a_i A(v_i,w)=0\quad\hbox{for every }w\in S.
+\]
+Consequently the vector space spanned by the functions $A(v,\cdot)$, $v\in S$,
+has dimension $r\le24$ and admits a basis $A(z_j,\cdot)$ with actual $z_j\in S$.
+\end{lemma}
+\begin{proof}
+Write $Q_a=\sum a_i v_iv_i^T$ and $b_a=\sum a_i v_i$.
+The quadratic form in \eqref{nsd} is $|b_a|^2-\tr(LQ_a^2)$ on this positive-dot set.
+For $Q_a=0$ it is nonnegative, hence zero and $b_a=0$.
+A null vector of a negative semidefinite quadratic form has zero cross terms:
+apply \eqref{nsd} also to this list with $w$ appended and coefficient $s\in\R$.
+The resulting polynomial $2s\sum_i a_iK(v_i,w)+s^2K(w,w)$ is nonpositive for all $s$,
+so its linear coefficient vanishes. The $D$ sum vanishes because $Q_a=0$;
+therefore the $A$ sum vanishes for every $w$.
+Partition $S$ by the signs of coordinates 2 and 3, assigning zero to the positive sign.
+Within each of the four disjoint sets, every dot product is strictly positive,
+since coordinate 1 is positive and the other two coordinate products are nonnegative.
+In each nonempty set choose a basis, of size at most 6, of its matrices $vv^T$
+in the six-dimensional space of symmetric $3$ by $3$ matrices.
+The implication just proved expresses every corresponding $A$ row in the span
+of those basis-point rows. Combine the four lists and discard dependent rows.
+This proves $r\le24$. These are spanning witnesses, not a replacement vertex measure.
+This bounds the row space, not yet the cardinality of the support.
+\end{proof}

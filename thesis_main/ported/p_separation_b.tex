@@ -1,0 +1,96 @@
+% Ported verbatim from paper/top3_joint_moment_bound.tex lines 622-716.
+% Only cross-reference wording was adapted; no mathematics was altered.
+Minimal dependencies of rank-one powers have a broader theory; see
+Li and Liu~\cite{LiLiu}. The following lemma uses the additional binary
+separation hypothesis. Its elementary proof is included.
+\begin{lemma}[Moment independence from separating binary observations]\label{binary}
+Let $T=\{v_i:i\in J\}$ be a finite set of distinct points in $\R^3$ with
+$v_{i1}>0$ and $v_i^TLv_i=\mathcal M>0$, where $L$ is positive definite.
+Let $\mathcal B$ be a family of functions $b:J\to\{0,1\}$ containing the
+constant-one function and separating every pair of distinct indices.
+Suppose, for every real $a$ with $\sum_{i\in J}a_iv_iv_i^T=0$, that
+\begin{equation}
+ \sum_{i\in J}a_i b(i)v_i=0\quad\hbox{for every }b\in\mathcal B. \label{obs}
+\end{equation}
+Then the matrices $\{v_iv_i^T:i\in J\}$ are linearly independent.
+\end{lemma}
+\begin{proof}
+Suppose instead that $I\subseteq J$ is a support-minimal dependent family
+of these matrices, with relation $a_i\ne0$ for all $i\in I$.
+Write $s=|I|$. Since $\dim\operatorname{Sym}_3=6$, minimality gives $s\le7$.
+The ellipse equation gives $\sum_{I}a_i=0$, while the constant observation
+in \eqref{obs} gives $\sum_I a_iv_i=0$.
+With $w_i=(1,v_i)^T\in\R^4$, all three identities combine to give
+\[
+ \sum_{a_i>0}a_iw_iw_i^T=\sum_{a_i<0}(-a_i)w_iw_i^T.
+\]
+Both sides are positive semidefinite. The range of a positive weighted sum
+of $w_iw_i^T$ is precisely the span of those $w_i$:
+its kernel consists of vectors perpendicular to every such $w_i$.
+Consequently the two spans coincide, and the affine hull $H$ of all $v_i$
+in the circuit satisfies
+\[
+ 1+\dim H=\dim\operatorname{span}\{w_i:i\in I\}
+ \le\min(|\{a_i>0\}|,|\{a_i<0\}|)\le3.
+\]
+This is an elementary positive-Gram range argument, not a new general circuit bound.
+Distinct points here cannot be proportional: equal ellipse radius forces
+the proportionality factor to be $\pm1$, and the positive first coordinate
+excludes minus one. Also an affine line meets this positive-definite ellipsoid
+in at most two points, by its strictly quadratic restriction to the line.
+If $\dim H\le1$, there are at most two points, whose rank-one matrices
+are independent by nonproportionality, a contradiction.
+It remains that $\dim H=2$.
+
+If $0\in H$, this is a two-dimensional linear plane. Its rank-one matrices
+span a space of dimension at most three, so minimality now gives $s\le4$.
+For any observation $b$ nonconstant on $I$, \eqref{obs} and the total vector
+relation give nonzero-coefficient linear relations on both nonempty sets
+$I_1=\{i:b(i)=1\}$ and $I_0=\{i:b(i)=0\}$.
+Nonproportionality forces each set to contain at least three points.
+This would give $s\ge6$, a contradiction. If instead every observation in
+$\mathcal B$ were constant on $I$, then minimality excludes $s=1$ (a
+one-element circuit is impossible because $v_iv_i^T\ne0$), so we may choose
+distinct $i,j\in I$; since $\mathcal B$ separates every pair of distinct
+indices of $J$, some $b\in\mathcal B$ satisfies $b(i)\ne b(j)$,
+contradicting constancy on $I$.
+
+If $0\notin H$, write $H=\{v:c\cdot v=1\}$.
+Any three distinct points of $H$ on the ellipsoid are linearly independent:
+a linear relation has coefficient sum zero after applying $c$, hence would
+make the three points affinely collinear, which the line-intersection fact forbids.
+A nonconstant observation would therefore require at least four points
+on each of $I_1,I_0$, yielding $s\ge8$, again a contradiction.
+Thus every observation is constant on $I$. A one-element circuit is impossible
+because $v_iv_i^T\ne0$; separation of any two indices in $I$ is contradicted.
+\end{proof}
+
+\begin{theorem}[Every actual positive clique has at most six types]\label{six}
+For every actual maximizer, and every positive
+clique $J$ of its full support, the map
+$a\mapsto\sum_{i\in J}a_iv_iv_i^T$ is injective. In particular $|J|\le6$.
+If $\{v_i:i\in J\}$ lies in a linear plane, then $|J|\le3$.
+If it lies in an affine plane not containing zero, then $|J|\le5$.
+\end{theorem}
+\begin{proof}
+Use the actual observations $b_k(i)=B_{ki}$, for all rows $k$.
+For nonempty $J$, a row $k\in J$ supplies the constant-one observation.
+They separate indices: $B$ is symmetric and has distinct full rows.
+Lemma \ref{binary} now applies by \eqref{rigid}.
+The linear-plane refinement follows from $\dim\operatorname{Sym}_2=3$.
+For an affine plane $c\cdot v=1$, the nonzero symmetric matrix
+$L-\mathcal M cc^T$ is orthogonal to every $v_iv_i^T$. It is nonzero because $L$
+has rank three while $\mathcal M cc^T$ has rank at most one. This leaves dimension at most five.
+Empty cliques require no argument.
+\end{proof}
+
+\begin{corollary}[Proof of Theorem~\ref{structure-main}]\label{twentyfour}
+Every maximizer has at most 24 distinct canonical support points.
+\end{corollary}
+\begin{proof}
+Partition its full support by the signs of coordinates two and three,
+assigning a zero coordinate to the positive sign. There are at most four parts.
+Within each part, the last two coordinate products are nonnegative and the
+first-coordinate product is strictly positive. Each part is a positive clique.
+Theorem \ref{six} gives $m\le4\cdot6=24$ on its original support. This proves Theorem~\ref{structure-main}.
+\end{proof}

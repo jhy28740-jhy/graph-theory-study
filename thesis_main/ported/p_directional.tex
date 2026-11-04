@@ -1,0 +1,129 @@
+% Ported verbatim from paper/top3_joint_moment_bound.tex lines 957-1084.
+% Only cross-reference wording was adapted; no mathematics was altered.
+Throughout this section assume $0<r_-\le R\le r_+<\infty$ almost surely,
+with $r_+/r_-\le3$, and work in the branch $D<1/20$.
+Equation~\eqref{budget4} implies
+\begin{equation}\label{smallbranch}
+ e<1/20,\quad x>9/10,\quad V<21/104<2/9,\quad C>5/3,
+ \qquad q^2=\frac{3-V}{9(1-e)}\le\frac{20}{57}.
+\end{equation}
+In particular $\mathbf m\ne0$. Put $p_i=\langle T_i,\Psi_i(v)\rangle
+=\E[Rg_i(t)]$. The elementary Hermite identities
+\begin{align}\label{Hermite}
+ \left(\frac{53}{28}t^2-\frac94t+\frac{41}{70}\right)-g_4(t)
+       &=(1-t)(t-1/2)^2(t+2)\ge0,\notag\\
+ (2t^2-37t/20+1/4)-g_3(t)
+       &=(1-t)(t-1/2)^2\ge0
+\end{align}
+hold on $[-1,1]$. Define
+\[
+ \gamma_4=9/4-53\sqrt3/42,\quad
+ \ell_4=9/4-511\sqrt3/420,\quad
+ \ell_3=37/20-11\sqrt3/12.
+\]
+Here $0<\gamma_4<1/15$ (square the positive rational comparisons).
+Since $\E Rt=x$, $\E Rt^2=L+2x/\sqrt3-C/3$, the first identity gives
+\[
+ -p_4\ge\gamma_4x+19C/420-53L/28
+       \ge\ell_4-e/15-19V/1400-53L/28.
+\]
+We used $x\ge1-e$ and $C\ge\sqrt3-3V/10$; the latter follows from
+$V=(\sqrt3-C)(\sqrt3+C)$ and $C>5/3$.
+The second identity gives
+\[
+ -p_3\ge(37/20-4/\sqrt3)x+5C/12-2L
+       \ge\ell_3+9e/40-V/8-2L.
+\]
+Here $4/\sqrt3-37/20>9/20$ and $x\le1-e/2$.
+Define the nonnegative differences in these last two inequalities by
+\begin{align*}
+ r_4&=-p_4-\ell_4+e/15+19V/1400+53L/28,\\
+ r_3&=-p_3-\ell_3-9e/40+V/8+2L.
+\end{align*}
+The polynomial identities, rather than a fixed sphere assumption,
+justify these directional estimates for the actual weighted moments.
+
+Set $\eta=1/10$, $\theta=6/25$, and
+$\ell=53\eta/28+2\theta=937/1400$. Define the tensor squares
+\[
+ {\cal R}_4=a_4\left\|T_4+\frac{\eta}{2a_4}\Psi_4(v)\right\|^2,\qquad
+ {\cal R}_3=a_3\left\|T_3+\frac{\theta}{2a_3}\Psi_3(v)\right\|^2.
+\]
+Their exact expansions give
+\[
+ a_4K^2=-\eta p_4-\frac{2\eta^2}{35a_4}+{\cal R}_4,\qquad
+ a_3H^2=-\theta p_3-\frac{\theta^2}{10a_3}+{\cal R}_3.
+\]
+Define
+\[
+ E=\frac{5183683}{5659500},\quad
+ V_c=\frac{145858703}{581042000},\quad
+ J_c=\frac{7989533}{14526050},\quad
+ {\cal R}_0={\cal R}_3+{\cal R}_4+\eta r_4+\theta r_3\ge0.
+\]
+Substituting the directional identities and \eqref{payment} into
+\eqref{budget7}, then writing $L=\overline L-r_{\rm reg}$, gives the exact identity
+\begin{equation}\label{certificate-start}
+ D=d_0+E e+V_c V+J_c J-\ell\overline L
+             +{\cal R}_0+r_{\rm rad}+\ell r_{\rm reg}.
+\end{equation}
+Here
+\[
+ d_0=\delta_{\mathrm q}+\eta\ell_4+\theta\ell_3
+                 -\frac{2\eta^2}{35a_4}-\frac{\theta^2}{10a_3},
+\]
+which simplifies to \eqref{constants}. The coefficient checks are
+\[
+ E=b_e-\eta/15+9\theta/40,\quad
+ V_c=b_V-19\eta/1400-\theta/8+3/50,\quad J_c=b_J-27/50.
+\]
+All the remainders in this identity refer to the same probability law.
+
+Put $B_c=V_c-5\ell/18$ and $C_c=J_c-\ell/4$. The exact rational values are
+\[
+ B_c=\frac{42565069}{653672250},\qquad
+ C_c=\frac{88944217}{232416800}.
+\]
+For $u=\sqrt e$, $z=\sqrt V$, and $j=\sqrt J$, the remaining quadratic has
+the explicit completion
+\begin{align}\label{squares}
+ E e+V_c V+J_c J-\ell\overline L
+ &=\frac{13}{200}\left(z-\frac{937}{273}qu\right)^2
+   +\frac{19}{50}\left(j-\frac{2811}{2128}qu\right)^2\notag\\
+ &\quad+\left(\frac{183}{200}-\frac{725029049}{278853120}q^2\right)e\notag\\
+ &\quad+\frac{10481}{11319000}e
+        +\frac{305491}{2614689000}V+\frac{625833}{232416800}J.
+\end{align}
+Indeed the last three fractions are $E-183/200$, $B_c-13/200$,
+and $C_c-19/50$. Also
+\[
+ \frac{725029049}{278853120}
+  =\frac{7\ell}{4}+\frac{\ell^2}{9(13/200)}
+                          +\frac{9\ell^2}{16(19/50)}.
+\]
+By \eqref{smallbranch}, the coefficient of $e$ in parentheses is at least
+\[
+ \frac{183}{200}-\frac{20}{57}\frac{725029049}{278853120}
+                         =\frac{53754367}{19868284800}>0.
+\]
+Thus every term on the right of \eqref{certificate-start} after $d_0$
+is nonnegative. The displayed squares give an explicit certificate for the remaining
+quadratic form.
+
+\begin{proposition}\label{conditional-law}
+Every isotropic law on $\R^3$ whose radii lie almost surely in a positive
+interval of endpoint ratio at most $3$ satisfies $D\ge d_0$.
+In the branch $D<1/20$, \eqref{certificate-start}--\eqref{squares}
+give the full common-remainder certificate.
+\end{proposition}
+\begin{proof}
+The small branch was proved above. Otherwise $D\ge1/20>d_0$.
+For explicit exact comparisons use
+$682/305<\sqrt5<161/72$ and $433/250<\sqrt3<97/56$,
+each verified by squaring. They yield
+\[
+ d_0-7/144>\frac{940735364069}{29456638041600000}>0,\qquad
+ 1/20-d_0>\frac{620701786231}{482895705600000}>0.
+\]
+No $B=0$ division occurs: it is excluded by $e<1/20$ in the small branch.
+\end{proof}

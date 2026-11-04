@@ -1,0 +1,19 @@
+% Ported verbatim from paper/top3_joint_moment_bound.tex lines 1086-1103.
+% Only cross-reference wording was adapted; no mathematics was altered.
+Throughout this section assume $0<r_-\le R\le r_+<\infty$ almost surely,
+with $r_+/r_-\le\sqrt8$. Write $g(w)=(1-9w^2)/25$. Then
+\[
+ \frac{(R-R')^2}{RR'}\le\sqrt8+\frac1{\sqrt8}-2
+    =\frac{9\sqrt2}{4}-2\le\frac{32}{27}.
+\]
+For the last inequality, $\sqrt2<344/243$ follows by squaring, with
+$(344/243)^2-2=238/59049>0$. Put
+$z_{\rm rad}=3(R-R')^2/(4RR')$, so $0\le z_{\rm rad}\le8/9$.
+The actual remainder in \eqref{payment} now has the exact decomposition
+\begin{equation}\label{reserve}
+ r_{\rm rad}=\frac P9+r_{\rm tr},\qquad
+ r_{\rm tr}=\E\!\left[RR'\left\{(8/9-z_{\rm rad})\sigma(w)
+                    +z_{\rm rad}(\sigma(w)-g(w))\right\}\right]\ge0.
+\end{equation}
+This uses both pointwise inequalities of Lemma~\ref{scalar}, including
+where $g<0$. It is not a second independent budget or a new copy of $P$.

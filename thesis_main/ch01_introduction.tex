@@ -1,0 +1,192 @@
+\chapter{Introduction}\label{ch-intro}
+
+\section{The spectral sum problem}\label{sec-problem}
+Throughout this thesis a \emph{graph} means a finite, simple, undirected graph
+without loops or multiple edges. For a graph $G$ of order $n$ we write
+\[
+ \lambda_1(G)\ge\lambda_2(G)\ge\cdots\ge\lambda_n(G)
+\]
+for the eigenvalues of its adjacency matrix $A_G$, listed in algebraically
+decreasing order and repeated according to multiplicity. For an integer
+$k$ with $1\le k\le n$ put
+\[
+ \Lambda_k(G)=\lambda_1(G)+\cdots+\lambda_k(G),
+ \qquad
+ M_k(n)=\max\{\Lambda_k(G):|V(G)|=n\},
+\]
+and, following Nikiforov~\cite{Nik15},
+\[
+ c_k=\sup\Bigl\{\frac{\lambda_k(G)}{|V(G)|}:|V(G)|\ge k\Bigr\},
+ \qquad
+ \tau_k=\limsup_{n\to\infty}\frac{M_k(n)}n .
+\]
+The signs in $\Lambda_k$ are retained: for $k\ge2$ the summands may be
+negative, and $\Lambda_k$ is therefore not a norm. Two classical facts make
+the extremal problem non-trivial and keep it anchored to $n$. First,
+$\sum_i\lambda_i(G)=\tr A_G=0$ and $\sum_i\lambda_i(G)^2=2|E(G)|$, so
+$\Lambda_k$ is bounded above by $\sqrt{k\cdot 2|E(G)|}\le\sqrt{k}\,n$ through
+Cauchy--Schwarz; second, $\Lambda_n(G)=0$ identically. The interesting range
+is thus $2\le k\ll n$, where the question posed by Hong~\cite{Hong93} asks
+for the best possible order-linear coefficient.
+
+The case $k=1$ is the spectral radius problem and is classical:
+$\lambda_1(G)\le n-1$ with equality only for $K_n$. The case $k=2$ was
+settled only recently~\cite{KLMPT,HW}. The case $k=3$ is the subject of this
+thesis. Sums of this type also control the Ky Fan $k$-norms
+$\sum_{i\le k}\lambda_i^\ast$ of the singular values, and hence generalise
+graph energy~\cite{Nik15}, which explains why the problem has attracted
+attention from both the graph-theoretic and the Banach-space sides.
+
+\section{Earlier bounds and projection constants}\label{sec-history}
+The first order-linear bounds for individual eigenvalues are due to
+Hong~\cite{Hong88}: for $2\le k\le n$,
+\begin{equation}\label{hong-bound}
+ \lambda_k(G)\le\frac{n-k}2,
+\end{equation}
+so that $\lambda_2(G)\le n/2-1$, an estimate that is sharp for even $n$ by
+$K_{n/2}\sqcup K_{n/2}$. Hong then asked~\cite{Hong93} for the best possible
+bounds of this shape. By~\eqref{hong-bound} and the example $K_{n/2}\sqcup K_{n/2}$ one has
+$c_2=1/2$. Nikiforov~\cite{Nik15} proved that $c_k$ and $\tau_k$ are finite
+for every fixed $k$ and obtained bounds for $c_k$ for all $k>2$, based in part
+on Taylor's strongly regular graphs and on Kharaghani's construction of
+Hadamard matrices; he also conjectured~\cite[Conjecture 4.2]{Nik15} that for
+every $k\ge2$ there is an $\varepsilon_k>0$ with
+\begin{equation}\label{nik-conj}
+ \tau_k\le\frac{1+\sqrt k}2-\varepsilon_k .
+\end{equation}
+The reference value $\tfrac12(1+\sqrt k)$ is the one supplied by Mohar's
+general estimate~\cite{Mohar}
+\begin{equation}\label{mohar-bound}
+ M_k(n)\le\frac{1+\sqrt k}{2}\,n ,
+\end{equation}
+which Mohar proved for graphs and for the wider class of symmetric matrices
+with entries in $[0,1]$, and which he asked to be sharpened. For $k=3$ the
+reference coefficient is $(1+\sqrt3)/2=1.3660254037\ldots$. The first explicit
+improvement below it is the estimate $\tau_3\le3/\sqrt5=1.3416407864\ldots$
+proved in Ebrahimi's thesis~\cite[Theorem 3.4.1]{Ebrahimi}. The two-term
+matrix analogue, in which the entries are only required to lie in $[0,1]$, was
+treated by Ebrahimi, Mohar, Nikiforov and Ahmady~\cite{EMNA}.
+
+The route that currently gives the strongest bounds was opened by Sivashankar,
+Tang and Wakhare~\cite{STW}. They reduce the graph-eigenvalue problem to an
+extremal problem for orthogonal projections and then invoke the absolute
+projection constant $\gamma(r)$, normalised here by the requirement that
+\begin{equation}\label{gamma-def}
+ \|Q\|_1\le\gamma(r)\,n
+ \qquad\text{for every orthogonal projection }Q=Q^T=Q^2,\ \tr Q=r,
+\end{equation}
+with $\|Q\|_1=\sum_{ij}|q_{ij}|$ the entrywise $\ell_1$ norm. Their two main
+estimates are
+\begin{equation}\label{stw-individual}
+ \lambda_k(G)\le\frac{\gamma(k-1)}{2(k-1)}\,n-1,
+ \qquad
+ \Lambda_k(G)\le\frac{1+\gamma(k)}2\,n-k .
+\end{equation}
+The second of these is their Proposition~6.1; together with the bound
+$\gamma(r)\le(r+\sqrt{r+2})/(1+\sqrt{r+2})$ of Der\k{e}gowska and
+Lewandowska~\cite{DL}, which implies $\gamma(r)<\sqrt r$ for every $r\ge2$,
+it settles the conjecture~\eqref{nik-conj}. The first estimate in
+\eqref{stw-individual} yields the sharp individual bound
+$\lambda_3(G)\le n/3-1$; further recent work on $\lambda_3$ alone is due to
+Li~\cite{Li3} and to Leonida and Li~\cite{LeonidaLi}, and lower bounds for
+the individual extrema $c_k$ are surveyed in Linz~\cite{Linz}. For $k=3$,
+using the classical value $\gamma(3)=(1+\sqrt5)/2$, the second estimate in
+\eqref{stw-individual} reads
+\begin{equation}\label{stw-hist}
+ \Lambda_3(G)\le\frac{3+\sqrt5}4\,n-3=1.309016994374947\ldots\,n-3 .
+\end{equation}
+For the two-term sum the situation is essentially complete: Kumar, Liu,
+Monterde, Pragada and Tait~\cite{KLMPT} proved $\Lambda_2(G)\le8n/7$, Huang
+and Wei~\cite{HW} determined the exact maximum together with the unique
+extremal graph, whose three part sizes are governed by $n$ modulo $7$, and
+Paulin~\cite{Paulin} determined the closures of the rescaled pairs
+$\bigl((\lambda_1+1)/n,(\lambda_2+1)/n\bigr)$ and
+$\bigl((\lambda_2+1)/n,(\lambda_3+1)/n\bigr)$, from which
+$\lambda_1+\lambda_2\le8n/7-2$, $\lambda_3\le n/3-1$ and
+$\lambda_2+\lambda_3\le2n/3-2$ all follow. None of these settles
+$\Lambda_3$, for the reason explained in the next section.
+
+The graph-limit setting used throughout is standard; we follow
+Lov\'asz~\cite{LovaszBook} and Borgs, Chayes, Lov\'asz, S\'os and
+Szegedy~\cite{BCLSV}.
+
+\section{Main results}\label{sec-main-results}
+\input{ported/p_intro_results}
+
+\section{Method and relation to earlier work}\label{sec-method}
+\input{ported/p_intro_method}
+
+Chapters~\ref{ch-variational} and~\ref{ch-support} prove the structural
+result; Chapters~\ref{ch-moment} and~\ref{ch-bound} give the joint moment
+certificate and transfer it to finite graphs. Chapter~\ref{ch-numerical}
+reports the verification experiments and the exact scope of the bound, and
+Chapter~\ref{sec-further} collects the open problems.
+
+\section{Organization of the thesis}\label{sec-organization}
+Chapter~\ref{ch-prelim} collects the standard material used later: the Ky Fan
+maximum principle, graphons and the cut metric, equitable partitions and
+blow-ups, isotropic laws and absolute projection constants, and the two
+harmonic tensor kernels $g_3$ and $g_4$ on the sphere. Nothing in that
+chapter is new, and every statement is cited.
+
+Chapter~\ref{ch-variational} sets up the variational quantity
+$\mathcal M=\sup_W\Sigma_3(W)$ over graphons, proves that it is attained,
+gives the two-sided estimate
+$\cstar\le\mathcal M\le(1+\sqrt3)/2$, and derives the four structural facts
+that every maximiser satisfies: the ellipsoid identity $F^TLF=\mathcal M$,
+the row-insertion inequality, the threshold form of the kernel, and the
+simplicity relations $\lambda_1>\lambda_2>\lambda_3>\lambda_4$.
+
+Chapter~\ref{ch-support} proves that the canonical law of every maximiser is
+finitely supported, with at most $24$ atoms. The argument runs through a
+second-variation inequality on the actual support, propagation of moment
+relations, a dimension descent over sign regions, and a separating family of
+binary observations that excludes minimal second-moment dependencies on
+positive cliques.
+
+Chapter~\ref{ch-moment} builds the moment machinery for a single isotropic
+law on $\R^3$: the harmonic decompositions, the regression estimate, the
+signed quartic majorant $f$, and the exact joint defect identity that ties the
+mean deficit, the radial variance, the regression error and the two harmonic
+moments together.
+
+Chapter~\ref{ch-bound} converts that identity into a coefficient bound.
+Directional Hermite inequalities and a radial comparison produce an explicit
+sum of nonnegative terms; a second pass extracts a reserve from the quartic
+slack; the support theorem contributes a positive atomic term; and the final
+certificate gives $\mathcal M\le c$. The chapter closes with the transfer to
+all isotropic laws and to finite graphs, the proof of
+Theorem~\ref{main}, and the weighted-graph form of the bound.
+
+Chapter~\ref{ch-numerical} is computational. It records an exact-arithmetic
+verification protocol, an exhaustive check over all graphs of orders
+$3\le n\le7$, an exact spectral formula for the equal blow-ups of
+$K_1\vee C_5$, convergence tables for the optimally weighted blow-ups, and a
+discussion of what these experiments do and do not establish.
+
+Chapter~\ref{sec-further} states the conclusions and lists the open problems,
+including the residual gap $c-\cstar$, the classification of extremal
+templates, and the adjacent two-term problems. Appendix~\ref{sec-appendix}
+records which constants in the argument are forced and which were chosen and
+then verified.
+
+\section{Notation and conventions}\label{sec-notation}
+A complete index is given in the List of Notation after the table of
+contents; the few conventions that matter globally are these. All graphs are
+finite, simple and undirected, and $n$ always denotes $|V(G)|$ with $n\ge3$.
+Eigenvalues are ordered algebraically, not by absolute value, and
+$\Lambda_k$ retains signs. The letter $A$ denotes an adjacency matrix and
+$T_W$ the integral operator of a graphon $W$. For a real symmetric matrix
+$Q$, $\|Q\|_1=\sum_{ij}|Q_{ij}|$ is the entrywise $\ell_1$ norm and
+$\|Q\|_F^2=\tr(Q^2)$ is the squared Frobenius norm; these should not be
+confused with the operator norms $\|\cdot\|_{2\to2}$ and $\|\cdot\|_\square$.
+The symbol $\E$ denotes expectation, and $X'$ is always an independent copy
+of $X$. Rational numbers written with large numerators and denominators are
+exact, not rounded; rounded values are always followed by an ellipsis.
+
+Four labels are used to distinguish the epistemic status of a statement.
+\emph{Proved} means a complete argument appears in this thesis.
+\emph{Verified} means the statement is an explicit identity or inequality
+that was re-checked in exact arithmetic. \emph{Numerical} means floating
+point evidence only. \emph{Gap} means an assertion that is neither proved nor
+verified here, and every gap is repeated in Chapter~\ref{sec-further}.

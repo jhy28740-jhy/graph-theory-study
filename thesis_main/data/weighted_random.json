@@ -1,0 +1,48 @@
+{
+ "seed": 20261104,
+ "rows": [
+  {
+   "n": 4,
+   "trials": 4000,
+   "violations": 0,
+   "max_lambda3": 1.6639866757424335,
+   "bound": 2.1386930228956738
+  },
+  {
+   "n": 6,
+   "trials": 4000,
+   "violations": 0,
+   "max_lambda3": 3.6378928003832014,
+   "bound": 4.708039534343511
+  },
+  {
+   "n": 9,
+   "trials": 4000,
+   "violations": 0,
+   "max_lambda3": 6.244673303937882,
+   "bound": 8.562059301515266
+  },
+  {
+   "n": 15,
+   "trials": 4000,
+   "violations": 0,
+   "max_lambda3": 10.708948558584758,
+   "bound": 16.270098835858775
+  },
+  {
+   "n": 30,
+   "trials": 4000,
+   "violations": 0,
+   "max_lambda3": 20.579008748892477,
+   "bound": 35.54019767171755
+  },
+  {
+   "n": 60,
+   "trials": 4000,
+   "violations": 0,
+   "max_lambda3": 38.33733624288476,
+   "bound": 74.0803953434351
+  }
+ ],
+ "negative_control_violations_of_200": 198
+}

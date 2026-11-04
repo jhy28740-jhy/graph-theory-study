@@ -1,0 +1,71 @@
+\documentclass[11pt,a4paper,oneside]{book}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype}
+\usepackage[top=2.8cm,bottom=2.6cm,left=3.0cm,right=2.6cm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{enumitem,booktabs,setspace,longtable}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={On the sum of the three largest adjacency eigenvalues of a graph},
+            pdfauthor={Haoyang Ji}}
+
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\theoremstyle{definition}\newtheorem{example}[theorem]{Example}
+\newtheorem*{claim}{Claim}
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\cstar}{c_{\mathrm{w}}}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\esssup}{ess\,sup}
+\DeclareMathOperator{\essinf}{ess\,inf}
+\allowdisplaybreaks[1]
+\numberwithin{equation}{chapter}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\thepage}
+\fancyhead[L]{\small\nouppercase{\leftmark}}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancypagestyle{plain}{\fancyhf{}\fancyhead[RO,LE]{\thepage}\renewcommand{\headrulewidth}{0pt}}
+
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{3}
+
+\title{On the Sum of the Three Largest Adjacency Eigenvalues of a Graph}
+\author{Haoyang Ji}
+\date{4 November 2026}
+
+\begin{document}
+\hypersetup{pageanchor=false}
+\frontmatter
+\input{00_frontmatter}
+\setcounter{tocdepth}{2}\tableofcontents
+\input{00b_notation}
+\mainmatter
+\hypersetup{pageanchor=true}
+\onehalfspacing
+\input{ch01_introduction}
+\input{ch02_preliminaries}
+\input{ch03_variational}
+\input{ch04_support}
+\input{ch05_moments}
+\input{ch06_bound}
+\input{ch07_numerical}
+\input{ch08_conclusion}
+\appendix
+\input{apA_constants}
+\backmatter
+\input{99_bibliography}
+\end{document}
+

@@ -1,0 +1,43 @@
+% Ported verbatim from paper/top3_joint_moment_bound.tex lines 579-620.
+% Only cross-reference wording was adapted; no mathematics was altered.
+By the preceding section, write $S=\{v_1,\ldots,v_m\}$ with actual masses
+$p_i>0$. Put $V=(v_i^T)_{i=1}^m$, $P_0=\diag(p_i)$ and
+$B_{ij}=\mathbf1_{\{v_i\cdot v_j>0\}}$. Then
+\begin{equation}\label{finite-rows}
+ BP_0V=VL,\qquad \sum_i p_iv_iv_i^T=I_3,\qquad
+ v_i^TLv_i=\mathcal M.
+\end{equation}
+The full rows of $B$ are distinct: equal rows would imply equal $v_i$
+by invertibility of $L$. A positive clique $J$ means a subset of this actual support with $B_{ij}=1$
+for every $i,j\in J$. Extend vectors indexed by $J$ by zero outside $J$.
+\begin{lemma}[Vector rigidity on a positive clique]
+For every real $a$ supported on a positive clique, if
+$Q_a=\sum_i a_i v_iv_i^T=0$, then
+\begin{equation}
+ \sum_i a_i=0,\quad b_a:=\sum_i a_iv_i=0,\quad
+ \sum_i B_{ki}a_iv_i=0\quad\hbox{for every row }k. \label{rigid}
+\end{equation}
+\end{lemma}
+\begin{proof}
+Taking the trace against $L$ gives $\mathcal M\sum a_i=0$.
+For both signs of sufficiently small nonzero $t$, all $p_i+ta_i$ are positive.
+These are legitimate new fiber measures for the same binary template, realizable
+on an atomless space. They are not independent choices of moment data.
+The original coordinate functions have Gram matrix $I+tQ_a=I$ and compression
+\[
+ N(t)=L+t(Q_aL+LQ_a)+t^2b_ab_a^T=L+t^2b_ab_a^T.
+\]
+The last term uses the clique assumption, and both cross terms use \eqref{finite-rows}.
+Their trace cannot exceed the global maximum $\mathcal M$; hence $b_a=0$ and $N(t)=L$.
+Equality of this trial trace with the maximum forces its three-dimensional
+space to be invariant. Explicitly, rotate one orthonormal coordinate into any
+unit perpendicular function; the first derivative of the trace gives zero
+off-space matrix element. This argument does not differentiate ordered eigenvalues.
+The compression $L$ then gives the eigenfunction equations at the perturbed measure.
+All fibers still have positive mass, so for every $k$,
+$\sum_i(p_i+ta_i)B_{ki}v_i=Lv_k$.
+Subtract \eqref{finite-rows} and divide by $t$ to obtain \eqref{rigid}.
+\end{proof}
+Moment-preserving cloning and the Ky Fan equality argument follow the
+mechanism in~\cite[Claims 2.2--2.5]{KMMP}. The permissible size of $t$
+may depend on the maximizer and the chosen direction.

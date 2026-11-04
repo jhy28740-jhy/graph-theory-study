@@ -1,0 +1,265 @@
+\chapter{Preliminaries}\label{ch-prelim}
+This chapter collects the standard tools used later. Nothing here is new;
+each statement is either proved in a few lines or cited. The purpose is to
+fix notation once and to isolate the two bridges on which the whole argument
+depends: the Ky Fan maximum principle, which turns a spectral sum into a
+trace against a rank-$r$ projection, and the projection--isotropic-law bridge
+of Lemma~\ref{bridge}, which turns such a trace into two moments of a
+probability law on $\R^r$.
+
+\section{The adjacency spectrum and Ky Fan's principle}
+Let $A=A_G$ be the adjacency matrix of a graph $G$ of order $n$. Then $A$ is
+real symmetric with zero diagonal, $\tr A=0$, $\tr A^2=2|E(G)|$, and
+$\lambda_1(G)\le n-1$ with equality only for $K_n$. The spectrum of $K_n$ is
+$(n-1,-1^{(n-1)})$, so
+\begin{equation}\label{kn-lambda3}
+ \Lambda_k(K_n)=n-k\qquad(1\le k\le n),
+\end{equation}
+and in particular $\Lambda_3(K_n)=n-3$; this is the trivial lower reference
+point for the coefficient problem, since any bound of the form
+$\Lambda_3(G)\le cn-3$ is compatible with $K_n$ exactly when $c\ge1$.
+The spectrum of the cycle $C_5$ is
+$\bigl(2,\tfrac{\sqrt5-1}2,\tfrac{\sqrt5-1}2,-\tfrac{1+\sqrt5}2,
+-\tfrac{1+\sqrt5}2\bigr)$, and the join $K_1\vee C_5$ has spectrum
+\[
+ 1+\sqrt6,\quad \tfrac{\sqrt5-1}2,\quad \tfrac{\sqrt5-1}2,\quad
+ 1-\sqrt6,\quad -\tfrac{1+\sqrt5}2,\quad -\tfrac{1+\sqrt5}2,
+\]
+so that
+\begin{equation}\label{k1c5-lambda3}
+ \Lambda_3(K_1\vee C_5)=\sqrt5+\sqrt6=4.6855577204\ldots .
+\end{equation}
+Both facts follow from the equitable-partition calculation of
+Lemma~\ref{blowup-spec} below with $q=1$.
+
+For a real symmetric matrix $M\in\R^{n\times n}$ let
+$\mathcal P_r(n)=\{Q\in\R^{n\times n}:Q=Q^T=Q^2,\ \tr Q=r\}$ be the set of
+orthogonal projections of rank $r$. Ky Fan's maximum principle~\cite{KyFan}
+states that
+\begin{equation}\label{kyfan}
+ \sum_{i=1}^r\lambda_i(M)=\max_{Q\in\mathcal P_r(n)}\tr(MQ),
+\end{equation}
+where the maximum is attained, and $\lambda_1(M)\ge\cdots\ge\lambda_n(M)$.
+Every $Q\in\mathcal P_r(n)$ satisfies $Q_{ii}\ge0$ and $\sum_iQ_{ii}=r$, and
+can be written $Q=YY^T$ with $Y\in\R^{n\times r}$ of orthonormal columns.
+Throughout, $\|\cdot\|_{2\to2}$ denotes the operator norm and
+$\|\cdot\|_F^2=\tr(M^2)$ the squared Frobenius norm.
+
+\section{Graphons, the cut metric and the quantities $\Sigma_k$}\label{sec-graphons}
+A \emph{graphon} is a symmetric measurable function $W:[0,1]^2\to[0,1]$.
+Since $W\in L^2([0,1]^2)$, the rule
+$(T_Wf)(x)=\int_0^1W(x,y)f(y)\,dy$ defines a self-adjoint
+Hilbert--Schmidt operator $T_W$ on $L^2[0,1]$; hence $T_W$ is compact, its
+spectrum is real, and it accumulates only at $0$.
+List the nonzero eigenvalues as
+$\lambda_1(W)\ge\lambda_2(W)\ge\cdots\to0$ together with the negative ones
+$\lambda_{-1}(W)\le\lambda_{-2}(W)\le\cdots\to0$, and define
+\begin{equation}\label{sigmak-def}
+ \Sigma_k(W)=\lambda_1(W)+\cdots+\lambda_k^+(W),
+ \qquad \lambda_i^+(W)=\max(\lambda_i(W),0),
+\end{equation}
+that is, the sum of the first $k$ positive eigenvalues, padded by zero if
+there are fewer than $k$ of them. Equivalently, by~\eqref{kyfan},
+\[
+ \Sigma_k(W)=\sup_{\E FF^T=I_k}\iint W(x,y)\,F(x)\cdot F(y)\,dx\,dy,
+\]
+the supremum ranging over measurable orthonormal $k$-frames
+$F=(f_1,\ldots,f_k)^T$. The quantity of interest is
+\begin{equation}\label{M-def}
+ \mathcal M=\sup_W\Sigma_3(W).
+\end{equation}
+The padding convention applies to $\Sigma_k$ only and never to $\Lambda_k(G)$.
+
+For a graph $G$ of order $n$ the associated step graphon $W_G$ takes the
+value $A_{ij}$ on the square $[\tfrac{i-1}n,\tfrac in)\times
+[\tfrac{j-1}n,\tfrac jn)$. Identifying step functions constant on these
+intervals with vectors of $\R^n$ gives $T_{W_G}=A_G/n$, hence
+\begin{equation}\label{wg-spectrum}
+ \lambda_i(W_G)=\frac{\lambda_i(G)}n,
+ \qquad
+ \Sigma_k(W_G)=\frac1n\sum_{i=1}^k(\lambda_i(G))_+\ge\frac{\Lambda_k(G)}n .
+\end{equation}
+The inequality is strict precisely when $\lambda_k(G)<0$. Consequently
+$\mathcal M\ge\limsup_n M_3(n)/n$, and the finite bound
+$\Lambda_3(G)\le\mathcal M n$ is immediate; the difficulty, and the content of
+Chapter~\ref{ch-bound}, is the exact constant term.
+
+The \emph{cut norm} of a bounded measurable $U:[0,1]^2\to\R$ is
+$\|U\|_\square=\sup_{S,T}\bigl|\int_S\int_TU\bigr|$, the supremum over
+measurable $S,T\subset[0,1]$, and the \emph{cut distance} between graphons is
+$\delta_\square(W_1,W_2)=\inf_\varphi\|W_1-W_2^\varphi\|_\square$, the infimum
+over measure-preserving bijections $\varphi$ of $[0,1]$. Two facts are used
+repeatedly and are standard~\cite{LovaszBook,BCLSV,LS}: the space of graphons
+is compact in $\delta_\square$; and for graphons $W_1,W_2$ with $D=W_1-W_2$,
+\begin{equation}\label{cut-eigen}
+ |\lambda|\le4\|D\|_\square\|f\|_\infty^2
+ \quad\text{and}\quad
+ \|T_D\|_{2\to2}^3\le4\|D\|_\square
+\end{equation}
+for every eigenvalue $\lambda$ of $T_D$ with eigenfunction $f$. Since
+$|\Sigma_3(W_1)-\Sigma_3(W_2)|\le3\|T_D\|_{2\to2}$, the functional $\Sigma_3$
+is continuous in $\delta_\square$; combined with compactness this gives
+attainment of $\mathcal M$, and combined with the density of step graphons of
+graphs it shows that allowing general $[0,1]$-valued kernels creates no
+extremal graph that a genuine graph sequence cannot approach.
+
+\section{Equitable partitions, joins and blow-ups}\label{sec-equitable}
+Let $G$ have a partition $V(G)=A_1\sqcup\cdots\sqcup A_s$ such that every
+vertex of $A_i$ has the same number $q_{ij}$ of neighbours in $A_j$. The
+matrix $Q=(q_{ij})$ is the \emph{quotient matrix} of the partition, the
+partition is \emph{equitable}, and every eigenvalue of $Q$ is an eigenvalue of
+$A_G$; the remaining eigenvalues of $A_G$ come from the subspace of functions
+with zero sum on each part. A join $G_1\vee G_2$ is the graph obtained by
+adding all edges between $G_1$ and $G_2$.
+
+The following explicit case is used in Chapter~\ref{ch-numerical}.
+\begin{lemma}[Spectrum of an equal blow-up]\label{blowup-spec}
+Let $H$ be a graph on $s$ vertices and $q\ge1$. Let $G=H[q]$ be obtained by
+replacing each vertex of $H$ by a clique of size $q$ and each edge of $H$ by a
+complete bipartite graph. Then
+\[
+ \operatorname{spec}G=\{\,q\lambda+q-1:\lambda\in\operatorname{spec}H\,\}
+   \cup\{-1\ \text{with multiplicity}\ s(q-1)\}.
+\]
+\end{lemma}
+\begin{proof}
+Index the vertices by pairs $(i,a)$, $i\in[s]$, $a\in[q]$. Then
+\[
+ A_G=H\otimes J_q+I_s\otimes(J_q-I_q),
+\]
+where $J_q$ is the $q\times q$ all-ones matrix. Decompose
+$\R^{sq}=(\R^s\otimes\mathbf1_q)\oplus(\R^s\otimes\mathbf1_q^\perp)$. Both
+summands are invariant. On the first, $J_q$ acts as $q$ and $J_q-I_q$ as
+$q-1$, so $A_G$ acts as $qH+(q-1)I_s$. On the second, $J_q$ acts as $0$ and
+$J_q-I_q$ as $-I_q$, so $A_G$ acts as $-I$. The two sums of multiplicities are
+$s$ and $s(q-1)$, totalling $sq$.
+\end{proof}
+\begin{remark}\label{unequal-blowup}
+For unequal part sizes $q_1,\ldots,q_s$ the same decomposition applies with
+$D=\diag(q_1,\ldots,q_s)$: the mean-zero-within-parts subspace contributes
+$-1$ with multiplicity $\sum_i(q_i-1)$, and the constant-on-parts subspace
+carries the symmetric quotient matrix
+\begin{equation}\label{quotient-unequal}
+ D^{1/2}(H+I_s)D^{1/2}-I_s .
+\end{equation}
+This is the form used for the weighted blow-ups of $K_1\vee C_5$ in
+Chapter~\ref{ch-numerical}.
+\end{remark}
+
+\section{Isotropic laws and the projection bridge}\label{sec-bridge}
+A Borel probability law $\mu$ on $\R^r$ is \emph{isotropic} if
+$\int xx^T\,d\mu(x)=I_r$; write $X\sim\mu$ and let $X'$ be an independent
+copy. Isotropy forces $\E|X|^2=r$, $\E R^2=r$ for $R=|X|$, and
+$|\E X|^2\le1$, since $(v\cdot\E X)^2\le\E(v\cdot X)^2=1$ for every unit
+vector $v$. Zero vectors, atoms and unbounded radii are permitted.
+
+The absolute projection constant $\gamma(r)$ is defined by~\eqref{gamma-def}.
+The classical values used here are $\gamma(2)=4/3$~\cite{DL} and
+$\gamma(3)=(1+\sqrt5)/2$~\cite{STW,DL}; the general bound of
+Der\k{e}gowska and Lewandowska~\cite{DL} is
+\begin{equation}\label{dl-bound}
+ \gamma(r)\le\frac{r+\sqrt{r+2}}{1+\sqrt{r+2}}<\sqrt r
+ \qquad(r\ge2).
+\end{equation}
+The strict inequality follows by writing $s=\sqrt{r+2}$, which gives
+$\gamma(r)\le s-2/(1+s)$, and comparing $2/(s+\sqrt r)$ with $2/(1+s)$.
+
+\begin{lemma}[Projection--isotropic-law bridge]\label{bridge}
+Let $r\le n$ and let $A\in\R^{n\times n}$ be symmetric with $A_{ii}=0$ and
+$0\le A_{ij}\le1$ for $i\ne j$. Let
+\begin{equation}\label{gammar-def}
+ \Gamma_r=\sup_\mu\frac{\E|X\cdot X'|+|\E X|^2}{2},
+\end{equation}
+the supremum over isotropic laws on $\R^r$. Then
+\begin{equation}\label{bridge-bound}
+ \sum_{i=1}^r\lambda_i(A)\le n\,\Gamma_r-r .
+\end{equation}
+Moreover $\Gamma_r\le\tfrac12(1+\gamma(r))$, so~\eqref{bridge-bound} recovers
+$\Lambda_r(A)\le\tfrac{1+\gamma(r)}2n-r$, and in particular
+$\Lambda_3(A)\le\tfrac{3+\sqrt5}4n-3$ for $r=3$.
+\end{lemma}
+\begin{proof}
+By~\eqref{kyfan} and the hypotheses on $A$,
+\[
+ \sum_{i=1}^r\lambda_i(A)=\max_{Q\in\mathcal P_r(n)}\tr(AQ)
+ \le\max_{Q\in\mathcal P_r(n)}\sum_{i\ne j}(Q_{ij})_+ .
+\]
+Since $Q_{ii}\ge0$ and $\sum_iQ_{ii}=r$, and since
+$x_+=(x+|x|)/2$,
+\[
+ \sum_{i\ne j}(Q_{ij})_+
+   =\frac{\|Q\|_1+\mathbf1^TQ\mathbf1}{2}-r .
+\]
+Write $Q=YY^T$ with orthonormal columns, let $y_i$ be the rows of $Y$, and let
+$X$ be uniformly distributed on $\sqrt n\,y_1,\ldots,\sqrt n\,y_n$. Then
+$\E XX^T=\tfrac1n\sum_i ny_iy_i^T=I_r$, so $X$ is isotropic, and
+\[
+ \E|X\cdot X'|=\frac{\|Q\|_1}{n},
+ \qquad
+ |\E X|^2=\frac{\mathbf1^TQ\mathbf1}{n}.
+\]
+Substitution gives $\sum_{i\le r}\lambda_i(A)\le n\Gamma_r-r$. For the second
+assertion, $\mathbf1^TQ\mathbf1=\|Q\mathbf1\|_2^2\le n$ and
+$\|Q\|_1\le\gamma(r)n$ by~\eqref{gamma-def}, giving
+$\Gamma_r\le\tfrac12(1+\gamma(r))$; for $r=3$ use
+$\gamma(3)=(1+\sqrt5)/2$.
+\end{proof}
+\begin{remark}\label{bridge-scope}
+Lemma~\ref{bridge} uses nothing about $A$ except the zero diagonal and the
+off-diagonal range $[0,1]$. It therefore applies to adjacency matrices of
+simple graphs, to $[0,1]$-weighted loopless graphs, and to any matrix in
+between; this is the mechanism behind~\cite[Proposition 6.1]{STW} and behind
+the matrix setting of~\cite{Mohar}. Allowing weights above $1$, or multiple
+edges, breaks it.
+\end{remark}
+
+\section{Two harmonic Gram kernels on the sphere}\label{sec-harmonics}
+Let $S=S^2\subset\R^3$. Define, for $u\in S$, the tensors
+\[
+ ({\cal L}_3(y))_{ijk}=\frac{y_i\delta_{jk}+y_j\delta_{ik}+y_k\delta_{ij}}5,
+ \qquad
+ \Psi_3(u)=u^{\otimes3}-{\cal L}_3(u),
+\]
+and, with
+$\Omega_{ijkl}=(\delta_{ij}\delta_{kl}+\delta_{ik}\delta_{jl}
++\delta_{il}\delta_{jk})/15$ and, for symmetric traceless $Z$,
+\[
+ \begin{aligned}
+ ({\cal L}_4(Z))_{ijkl}=\tfrac17(&\delta_{ij}Z_{kl}+\delta_{ik}Z_{jl}
+   +\delta_{il}Z_{jk}\\
+  &+\delta_{jk}Z_{il}+\delta_{jl}Z_{ik}+\delta_{kl}Z_{ij}),\\[2pt]
+ \Psi_4(u)=u^{\otimes4}&-\Omega-{\cal L}_4(uu^T-I_3/3),
+ \end{aligned}
+\]
+the two scalar functions
+\begin{equation}\label{g34}
+ g_3(t)=t^3-\frac{3t}5=\frac25P_3(t),
+ \qquad
+ g_4(t)=t^4-\frac{6t^2}7+\frac3{35}=\frac8{35}P_4(t),
+\end{equation}
+where $P_3,P_4$ are the Legendre polynomials. Direct expansion gives
+$\langle\Psi_3(u),\Psi_3(v)\rangle=g_3(u\cdot v)$ and
+$\langle\Psi_4(u),\Psi_4(v)\rangle=g_4(u\cdot v)$, with
+$\|\Psi_3(u)\|^2=2/5$ and $\|\Psi_4(u)\|^2=8/35$. Both $g_3$ and $g_4$ are
+therefore Gram kernels of explicit finite-dimensional maps and are positive
+semidefinite on $S\times S$; this is the concrete form of Schoenberg's
+criterion~\cite{Schoenberg}. Two consequences are used later. For any $\R^3$-valued law,
+\[
+ \E[R\Psi_3(U)]\ \text{and}\ \E[R\Psi_4(U)]
+\]
+are well defined whenever $\E R^2<\infty$, and both $g_3$ and $g_4$ admit
+exact polynomial majorants on $[-1,1]$ that factor as
+$(1-t)(t-\tfrac12)^2$ times a positive factor; these are the identities
+\eqref{Hermite} of Chapter~\ref{ch-bound}. On the circle $S^1$ the analogous
+statement is that $t^4-t^2+\tfrac18$ is positive semidefinite, because for
+$U=(\cos a,\sin a)$ it equals $\cos(4(a-a'))/8$.
+
+\section{Standing hypotheses}\label{sec-standing}
+Unless a statement says otherwise: graphs are finite, simple, undirected and
+loopless, and $n=|V(G)|\ge3$; graphons are symmetric measurable
+$[0,1]$-valued kernels on $[0,1]^2$; all probability laws are Borel on $\R^3$
+and satisfy only $\E XX^T=I_3$ and hence $\E|X|^2=3$; eigenvalues are ordered
+algebraically; $X'$ is an independent copy of $X$; and every displayed
+rational number is exact. Floating point values are reported with at least
+twelve significant digits and are always followed by an ellipsis when they are
+rounded.

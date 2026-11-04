@@ -1,0 +1,87 @@
+% Ported verbatim from paper/top3_joint_moment_bound.tex lines 1105-1190.
+% Only cross-reference wording was adapted; no mathematics was altered.
+Using the same interpolation nodes and tensor weights, set
+\[
+ h_*(t)=(t-1)(t-1/2)(t+3/8),\qquad
+ z_*(t)=(t+9/8)h_*(t)
+       =t^4-\frac{85}{64}t^2+\frac{15}{128}t+\frac{27}{128}.
+\]
+The factor $t+9/8$ cancels the cubic term. We need the following elementary
+bound, for which we give an explicit proof.
+\begin{lemma}\label{contact-square}
+For $-1\le t\le1$, $z_*(t)^2\le3\sigma(t)/2$.
+\end{lemma}
+\begin{proof}
+For $0\le t\le1$, cancel common factors away from their zeros to obtain
+\[
+ \frac{z_*(t)^2}{\sigma(t)}
+  =\frac{41503}{4(8352+2560t)}q_*(t),\qquad
+ q_*(t)=(1-t)(t+3/8)^2(t+9/8)^2.
+\]
+The cancelled expressions extend continuously at the zeros. Its derivative is
+\[
+ q_*'(t)=(t+3/8)(t+9/8)(165/64-t/2-5t^2).
+\]
+The last factor decreases on $[0,1]$, equals $13/576>0$ at $2/3$,
+and equals $-33/256<0$ at $11/16$. Thus the maximum is within
+$[2/3,11/16]$. On that interval $(t+3/8)(t+9/8)<2$ and
+$q_*'(t)\le13/288$. The interval has length $1/48$, so
+\[
+ q_*(t)\le\frac{1155625}{995328}+\frac{13}{13824}<\frac65;
+\]
+the final positive difference is $189163/4976640$.
+Consequently $z_*^2/\sigma\le41503/27840<3/2$ on this half interval.
+For $t=-x$, $0\le x\le1$, the other factorization gives
+\[
+ \frac{z_*(-x)^2}{\sigma(-x)}
+ =\frac{41503\,p_*(x)^2}{64(928+82x-160x^2)},\qquad
+ p_*(x)=(1+x)(x+1/2)(9/8-x)\ge0.
+\]
+The quadratic denominator factor is at least $850$, by concavity and its
+endpoint values. With $y=x-1/2\in[-1/2,1/2]$,
+\[
+ p_*(x)=15/16+y/16-15y^2/8-y^3
+ \le15/16+y/16-11y^2/8
+ =\frac{1321}{1408}-\frac{11}{8}(y-1/44)^2<1.
+\]
+It follows that $z_*^2/\sigma\le41503/54400<3/2$ here.
+At every cancelled zero the claimed inequality follows directly or by
+continuity. These two intervals cover the domain.
+\end{proof}
+
+\begin{remark}\label{rem-theta}
+The constant $3/2$ is not sharp: a dense grid scan gives
+$\sup_{[0,1]}z_*^2/\sigma=1.200224\ldots$ and
+$\sup_{[-1,0]}z_*^2/\sigma=0.615384\ldots$. We keep $3/2$ because it keeps
+every subsequent coefficient rational and hand-verifiable. The loss enters
+the certificate only through $r_{\rm ct}$ and through the divisor $125$ in
+\eqref{Cstar8}; both are quantified in Appendix~\ref{sec-appendix}.
+\end{remark}
+
+In particular the following displayed square proves a useful linear payment:
+\begin{equation}\label{contact-paid}
+ \sigma(t)-\frac{z_*(t)}{125}+\frac3{125000}
+   =\left(\sigma(t)-\frac23z_*(t)^2\right)
+       +\frac23\left(z_*(t)-\frac3{500}\right)^2\ge0.
+\end{equation}
+All these functions are bounded on $[-1,1]$. Integrating against the actual
+nonnegative weight $RR'$ uses only $\E R<\infty$, not a fourth or eighth
+radial moment. The actual contact moment is
+\begin{align}\label{Zstar}
+ Z_*:=\E[RR'z_*(U\cdot U')]
+   &=K^2+\frac7{320}-\frac{15}{128}e
+                    -\frac{561}{4480}V+\frac{211}{448}J.
+\end{align}
+Indeed the $RR'$ moments of $1,w,w^2,w^4$ are respectively
+$3-V,1-e,1-J,K^2+6\|Z\|^2/7+(3-V)/5$, all for this same law.
+Define
+\begin{equation}\label{Cstar8}
+ {\cal C}=Z_*/125-3C^2/125000,\qquad
+ r_{\rm ct}=P-{\cal C}\ge0.
+\end{equation}
+The scalar ${\cal C}$ need not itself be nonnegative. Its exact contribution is
+\begin{equation}\label{paid-expansion}
+ \frac{{\cal C}}{9}=\frac{103}{9000000}+\frac{K^2}{1125}
+ -\frac e{9600}+\left(-\frac{187}{1680000}+\frac1{375000}\right)V
+                       +\frac{211}{504000}J.
+\end{equation}

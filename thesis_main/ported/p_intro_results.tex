@@ -1,0 +1,124 @@
+% Ported verbatim from paper/top3_joint_moment_bound.tex lines 54-175.
+% Only cross-reference wording was adapted; no mathematics was altered.
+For a finite simple undirected graph $G$ of order $n\ge3$, put
+\[
+ \Lambda_3(G)=\lambda_1(G)+\lambda_2(G)+\lambda_3(G),
+\]
+where the adjacency eigenvalues are ordered algebraically. The signs in
+this sum are retained. The extremal problem asks how large $\Lambda_3(G)$
+can be when only $n$ is prescribed. The spectral-sum problem appears in Ebrahimi's thesis~\cite{Ebrahimi},
+whose Theorem~3.4.1 gives the explicit asymptotic coefficient
+$\limsup_n\max_{|G|=n}\Lambda_3(G)/n\le3/\sqrt5<1.3417$;
+general bounds for sums of leading eigenvalues were developed by
+Mohar~\cite{Mohar}. More recently,
+Sivashankar, Tang and Wakhare~\cite[Proposition 6.1]{STW} proved
+\begin{equation}\label{stw-bound}
+ \Lambda_3(G)\le\frac{3+\sqrt5}{4}n-3.
+\end{equation}
+Their argument uses the rank-three absolute projection constant
+$\gamma(3)=(1+\sqrt5)/2$; a proof of the requisite projection bound is
+provided by Der\k{e}gowska and Lewandowska~\cite{DL}.
+
+The two quantities in that reduction are naturally coupled. If
+$X\in\R^3$ satisfies $\E XX^T=I_3$ and $X'$ is an independent copy, they are
+\[
+ A=\E|X\cdot X'|,\qquad B=|\E X|^2.
+\]
+The separate estimates $A\le(1+\sqrt5)/2$ and $B\le1$ give
+\eqref{stw-bound}. A better graph bound therefore requires a quantitative
+restriction on their simultaneous size. The mixed projection constant
+expressing this question was already introduced in~\cite[Section 6.2]{STW}.
+We work directly with its isotropic-law formulation.
+
+Define
+\begin{equation}\label{main-constant}
+ c=\frac{106106902139519}{107310156800000}
+       +\frac{41\sqrt3}{240}-\frac{53}{9000000}
+   =1.284673255723918505\ldots.
+\end{equation}
+\begin{theorem}\label{main}
+Every finite simple unweighted graph $G$ on $n\ge3$ vertices satisfies
+\begin{equation}\label{main-bound}
+ \Lambda_3(G)\le cn-3.
+\end{equation}
+Moreover, every Borel probability law on $\R^3$ satisfying
+$\E XX^T=I_3$ obeys
+\begin{equation}\label{law-bound}
+ \E|X\cdot X'|+|\E X|^2\le2c.
+\end{equation}
+Only a finite second moment is assumed; zero vectors and unbounded radii
+are allowed.
+\end{theorem}
+The coefficient decrease from~\eqref{stw-bound} is
+$0.024343738651028919\ldots$, with the constant term $-3$ unchanged.
+This comparison concerns the stated universal order-only bound. It does
+not compare all estimates involving additional graph parameters, nor
+assert that $c$ is optimal. For completeness we record the full chain of
+explicit coefficients: $3/\sqrt5=1.341640786\ldots$
+from~\cite[Theorem~3.4.1]{Ebrahimi}, then $(3+\sqrt5)/4$
+from~\cite[Proposition~6.1]{STW}, and finally $c$.
+
+Two adjacent results frame the standing of~\eqref{main-bound}. For the
+two-term sum $S_2=\lambda_1+\lambda_2$, Huang and Wei~\cite{HW} determine
+the exact maximum together with its unique extremal graph, whose three part
+sizes are governed by $n$ modulo $7$; Paulin~\cite{Paulin} determines the
+closures of the rescaled pairs
+$\bigl((\lambda_1+1)/n,(\lambda_2+1)/n\bigr)$ and
+$\bigl((\lambda_2+1)/n,(\lambda_3+1)/n\bigr)$, giving
+$\lambda_1+\lambda_2\le8n/7-2$, $\lambda_3\le n/3-1$ and
+$\lambda_2+\lambda_3\le2n/3-2$. Neither settles the three-term sum, because
+the reduction behind~\eqref{stw-bound} couples two quantities, and it is
+their joint control that forces the different geometry analysed here.
+
+One prior announcement bears directly on our lower bound, and we record it
+here rather than in a footnote. The self-archived Zenodo
+deposits~\cite{Newton1,Newton2} of Newton, dated 4~and 24~August 2026 and
+therefore earlier than this work, introduce the same extremal constant
+$\cstar$ under the name of a pole--pentagon law, together with the same
+optimising weight, and assert the matching upper bound
+$\Lambda_3(G)\le\cstar n-3$; the assertion is conditional by its own terms,
+since the final positivity layer is a machine certificate whose
+admissibility the author explicitly leaves to independent audit
+(Remark~\ref{rem-newton}). We claim no priority for the constant.
+Theorem~\ref{main} is unconditional and self-contained, and is weaker in
+the coefficient by $c-\cstar=0.003105058851750628\ldots$.
+
+We use graphons to pass to an attained maximum. For a symmetric measurable
+kernel $W:[0,1]^2\to[0,1]$, let
+\begin{equation}\label{sig-definition}
+ \Sigma_k(W)=\sup_{\E FF^T=I_k}
+       \iint W(x,y)F(x)\cdot F(y)\,dx\,dy,
+ \qquad \mathcal M=\sup_W\Sigma_3(W).
+\end{equation}
+The supremum is over real orthonormal $k$-frames. Since $W\in L^2([0,1]^2)$,
+the operator $T_W$ is Hilbert--Schmidt and therefore compact; it is also
+self-adjoint, so its spectrum is real and accumulates only at zero, and
+$\Sigma_k$ is the sum of the first $k$ positive eigenvalues, padded by zero
+if there are fewer than $k$ of them. This convention applies only to
+graphons, not to $\Lambda_3(G)$.
+The maximum $\mathcal M$ is attained. For a maximizing graphon, choose an
+orthonormal top-three eigenframe $F=(f_1,f_2,f_3)^T$, with $f_1\ge0$,
+and call $F_\#dx$ its canonical law.
+
+\begin{theorem}\label{structure-main}
+Let $W$ attain $\mathcal M$, let $\sum_i p_i\delta_{v_i}$ ($p_i>0$) be its
+canonical law, and let $L$ be the diagonal matrix of the three leading
+eigenvalues of $W$. Then:
+\begin{enumerate}[leftmargin=2.2em,itemsep=2pt]
+\item[(a)] the support has at most $24$ points;
+\item[(b)] $W$ agrees almost everywhere with the binary step kernel
+$\mathbf1_{\{v_i\cdot v_j>0\}}$ on the corresponding positive-measure
+fibers;
+\item[(c)] the support points satisfy
+\begin{gather*}
+ \sum_i p_iv_iv_i^T=I_3,\qquad v_i^TLv_i=\mathcal M,\qquad v_{i1}>0,\\
+ v_i\cdot v_j\ne0,\qquad
+ B_{ij}=\mathbf1_{\{v_i\cdot v_j>0\}},\qquad
+ \sum_jp_jB_{ij}v_j=Lv_i;
+\end{gather*}
+\item[(d)] for every positive-dot clique $J$ in the support, the matrices
+$\{v_iv_i^T:i\in J\}$ are linearly independent; in particular $|J|\le6$.
+\end{enumerate}
+\end{theorem}
+This assertion concerns every original maximizer, not merely the
+existence of a maximizer with small support.

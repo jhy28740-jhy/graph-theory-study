@@ -1,0 +1,58 @@
+% Ported verbatim from paper/top3_joint_moment_bound.tex lines 521-577.
+% Only cross-reference wording was adapted; no mathematics was altered.
+\begin{lemma}[Sign-region dimension descent]\label{descent}
+Let $T\subset S$ have linear span of dimension $d\ge1$.
+Suppose for every $w\in S$ there is a vector $b_w\in\R^3$ such that
+$A(v,w)=v\cdot b_w$ for all $v\in T$. Then $|T|\le2^{d-1}$.
+\end{lemma}
+\begin{proof}
+If $d=1$, the positive first coordinate and $v^TLv=\mathcal M$ make $T$ a singleton.
+For general $d$, if no $w\in S$ has strictly positive dot product with one member
+of $T$ and strictly negative dot product with another, any two members have the
+same threshold row outside the union of their two zero equators.
+Equation \eqref{all-rows} then makes the members equal.
+Otherwise choose such a $w$, with witnesses $v_+,v_-$, and split
+$T_+=\{v\in T:v\cdot w\ge0\}$ and $T_-=\{v\in T:v\cdot w<0\}$.
+On $T_+$, $v\cdot(b_w-w)=0$; on $T_-$, $v\cdot b_w=0$.
+Both are proper hyperplanes of $\operatorname{span}T$: evaluate $b_w-w$ at $v_-$
+and $b_w$ at $v_+$. Thus both children have span dimension at most $d-1$.
+They inherit the linearization for every $w'\in S$.
+Induction gives at most $2^{d-2}$ points in each child, proving the bound.
+Zeros were included in $T_+$, so none are lost in the dimension descent.
+\end{proof}
+
+\begin{theorem}[Finite support of every maximizer]\label{finite}
+For every global maximizer of $\Sigma_3$, its actual canonical support satisfies
+\begin{equation}
+ |S|\le 4\bigl(1+r(r+1)/2\bigr)\le1204=:N_*. \label{bound}
+\end{equation}
+The original graphon agrees almost everywhere with a binary step graphon
+on these actual fibers, with
+positive masses, diagonal blocks 1, and no equal rows. For this particular
+maximizer $\min_{v,w\in S}|v\cdot w|>0$.
+\end{theorem}
+\begin{proof}
+Take the actual anchors $z_1,\ldots,z_r$ from Lemma~\ref{propagate}.
+Symmetry gives, for each $w\in S$, coefficients $c_j(w)$ with
+$A(v,w)=\sum_j c_j(w)A(v,z_j)$ for every $v\in S$.
+The union of the finitely many anchor equators has $\nu$-measure zero by \eqref{all-rows}.
+On any fixed strict sign region of these anchors,
+$A(v,z_j)$ is either $v\cdot z_j$ or zero. Thus $A(v,w)$ is linear in $v$
+there, for every $w$, with coefficients determined by that region.
+Because $v_1>0$, use coordinates $(v_2/v_1,v_3/v_1)$.
+Each anchor equator becomes an affine line, or is empty if its last two coordinates vanish.
+At most $r$ lines have at most $1+r(r+1)/2$ complementary regions: the $j$-th
+line has at most $j-1$ distinct previous intersection points and adds at most $j$ regions.
+Coincident or parallel lines only lower this count. A strict sign pattern is an
+intersection of open half-planes, hence connected whenever nonempty.
+Apply Lemma~\ref{descent} to $T=S$ intersected with each such sign region;
+its span dimension is at most 3, so it contains at most four points.
+We have therefore placed full $\nu$-measure in a finite set of size bounded by \eqref{bound}.
+Its closure is the same finite set, so full support of $\nu$ implies that all of $S$
+is contained in it, including any previously excluded boundary candidates.
+Every support point is now an atom of positive mass. The individual zero-equator
+statements in \eqref{all-rows} imply $v\cdot w\ne0$ for every pair of support atoms.
+Taking a minimum over this finite set proves the asserted margin.
+The actual fibers $F^{-1}(v)$ provide the partition, and \eqref{all-rows} identifies its rows.
+\end{proof}
+The margin asserted here may depend on the maximizer.

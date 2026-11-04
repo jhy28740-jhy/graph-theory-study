@@ -1,0 +1,39 @@
+\chapter{Constants: provenance and machine verification}\label{sec-appendix}
+\input{ported/p_appendix}
+
+\section*{Additions made in this thesis}
+\addcontentsline{toc}{section}{Additions made in this thesis}
+Two constants and one exact spectral identity appear in
+Chapter~\ref{ch-numerical} and Section~\ref{sec-weighted} and do not occur in
+the preprint~\cite{Ji}; their provenance is recorded here for completeness.
+
+\textbf{Uniquely determined.}
+(v)~The equal-blow-up coefficient $(\sqrt5+\sqrt6+3)/6$ of
+Proposition~\ref{equal-blowup} is forced: it is $\Lambda_3(K_1\vee C_5)+3$
+divided by $6$, and both $\Lambda_3(K_1\vee C_5)=\sqrt5+\sqrt6$ and the shift
+$+3$ from the clique parts follow from Lemma~\ref{blowup-spec} without any
+choice.
+(vi)~The optimal rim weight $b^*=(7+5\sqrt7)/126$ is the critical point of
+the one-variable quotient function computed in Lemma~\ref{attainment}, and the
+apex weight $p^*=(91-25\sqrt7)/126$ equals $1-5b^*$; neither is chosen.
+
+\textbf{Chosen, then verified.}
+(iv)~The orders $n\le7$ for the exhaustive search, the blow-up sizes
+$q\in\{1,2,3,5,10,20,50,100,250,500\}$, and the weighted sample sizes
+$4000$ per order in $n\in\{4,6,9,15,30,60\}$. These are sampling decisions;
+they affect the strength of the numerical evidence and nothing else.
+
+\textbf{Verification protocol for the additions.} The exhaustive searches
+enumerated all $2^{n(n-1)/2}$ labelled graphs, computed
+$\lambda_1+\lambda_2+\lambda_3$ with a symmetric eigensolver in double
+precision, and compared against $cn-3$ evaluated from the exact expression
+for $c$; the margins observed are at least $2.2\times10^{-2}$, which is seven
+orders of magnitude above the double-precision error of a $7\times7$ symmetric
+eigenvalue computation. The number of labelled maximisers found at $n=6$ and
+$n=7$ is $72=6!/10$ and $252=7!/20$, matching
+$|\operatorname{Aut}(K_1\vee C_5)|=10$ and
+$|\operatorname{Aut}(K_2\vee C_5)|=2\cdot10=20$, which is the consistency
+check for uniqueness up to isomorphism. The exact identities
+$(\sqrt5+\sqrt6+3)/6\cdot6q-3=\Lambda_3(H[q])$ were re-verified in exact
+arithmetic in $\mathbb Q(\sqrt5,\sqrt6)$ for $q\le10$ and in double precision
+for all $q$ in the table.

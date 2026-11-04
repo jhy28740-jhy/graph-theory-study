@@ -1,0 +1,38 @@
+% Ported verbatim from paper/top3_joint_moment_bound.tex lines 818-852.
+% Only cross-reference wording was adapted; no mathematics was altered.
+Suppose $B>0$. Put
+\[
+ \begin{gathered}
+ x=\sqrt B,\quad v=\mathbf m/x,\quad t=U\cdot v,\quad Y=Rt,\\
+ q_0=1/\sqrt3,\quad q=C/(3x),\quad L=\E[R(t-q_0)^2].
+ \end{gathered}
+\]
+Then $\E Y=x$, $\E Y^2=1$, $\operatorname{Var}Y=e$.
+If $w_0=\E\xi$, \eqref{regression} gives
+$w_0=\E[(1-\mathbf m\cdot X)\xi]$, hence $|w_0|^2\le eJ$.
+For traceless symmetric $3$ by $3$ matrices,
+$|Zv|^2\le(2/3)\|Z\|^2$; the other two eigenvalues accompanying an
+eigenvalue $z$ have squared sum at least $z^2/2$.
+Writing $J_v=\E(v\cdot\xi)^2\le J$, we obtain
+\begin{align*}
+ \E(t-q)^2
+ &=|Mv-q\mathbf m|^2+q^2e+J_v-2qv\cdot w_0\\
+ &\le 2V/9+J/3+q^2e+2q\sqrt{eJ}=:F_0,\\
+ \E(Y-qR)^2&\le V/3+3q^2e+2q\sqrt{eV}=:G_0.
+\end{align*}
+Here $Mv-q\mathbf m=Zv$ and $\E RY\ge Cx-\sqrt{eV}$.
+Cauchy--Schwarz gives $L_q:=\E[R(t-q)^2]\le\sqrt{F_0G_0}$.
+Note that $Rt=R(U\cdot v)=(RU)\cdot v=X\cdot v=Y$, so $\E[Rt]=\E Y=x$;
+this is the only place at which the regression vector enters the exact
+identity below. With $\zeta=C/\sqrt3$,
+\[
+ L_q-L=q_0(\zeta-x)^2(\zeta+2x)/x^2\ge0.
+\]
+Thus, writing $u=\sqrt e$, $z=\sqrt V$, $j=\sqrt J$,
+\begin{equation}\label{Lbar}
+ L\le\overline L:=\frac34F_0+\frac13G_0
+ =\frac{7q^2}{4}u^2+\frac5{18}z^2+\frac14j^2
+                       +\frac{2q}{3}uz+\frac{3q}{2}uj.
+\end{equation}
+Set $r_{\rm reg}=\overline L-L\ge0$. This remainder will be kept
+in the joint identity. No lower radius bound has been used here.

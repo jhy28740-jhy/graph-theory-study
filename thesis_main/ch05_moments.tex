@@ -1,0 +1,57 @@
+\chapter{A joint moment identity for one isotropic law}\label{ch-moment}
+
+Chapters~\ref{ch-variational} and~\ref{ch-support} reduced the structural
+problem to a single probability law. This chapter and the next bound it. From
+here to the end of Proposition~\ref{final-certificate} the object of study is
+an arbitrary Borel probability law on $\R^3$ with $\E XX^T=I_3$; the
+maximising graphon enters only at the very end, in
+Section~\ref{sec-conclusion}, where its canonical law is shown to satisfy the
+extra radial hypothesis that the argument needs.
+
+The two quantities to be controlled are
+\[
+ A=\E|X\cdot X'|,\qquad B=|\E X|^2,
+\]
+and the target is $A+B\le2c$. The classical route bounds them separately:
+$A\le\gamma(3)=(1+\sqrt5)/2$ and $B\le1$, giving $A+B\le(3+\sqrt5)/2$ and
+therefore the coefficient $(3+\sqrt5)/4$. That route is exhausted, because
+both individual bounds are sharp and are attained by different laws. Any
+improvement must exploit the fact that the two quantities cannot be large
+simultaneously.
+
+The device used here is a single exact identity rather than a chain of
+estimates. Section~\ref{sec-moments} fixes the notation and decomposes the
+law into a radial part $R=|X|$, a directional part $U=X/R$, the mean
+$\mathbf m=\E X$, the second-moment tensor $M=\E[RUU^T]=\tfrac C3I_3+Z$, and
+the regression vector $\xi=U-MX$. It records the scalar budget
+$D=e+\alpha V+\beta J+\rho K^2+S$ coming from the classical absolute-value
+majorant $h_0$, and proves a regression estimate that bounds the weighted
+linear moment $L=\E[R(t-q_0)^2]$ in terms of $e,V,J$ with an explicit
+nonnegative remainder $r_{\rm reg}$.
+
+Section~\ref{sec-quartic} replaces $h_0$ by a signed quartic. The polynomial
+$f$ is the degree-four Hermite interpolant with double contact to $|w|+w$ at
+$w=-3/8$ and $w=1/2$ and a contact at $w=1$; its slack $\sigma=f-|w|-w$ is
+nonnegative on $[-1,1]$ and, crucially, dominates the explicit quadratic
+$(1-9w^2)/25$. Integrating the expansion of $f$ against the harmonic
+decompositions produces the single exact identity~\eqref{budget7},
+\[
+ D=\delta_{\mathrm q}+b_ee+b_VV+b_JJ+a_3H^2+a_4K^2+P,
+\]
+in which the mean deficit $e$, the radial variance $V$, the regression error
+$J$, the two harmonic moments $H,K$ and the slack moment $P$ all appear at
+once. Lemma~\ref{radialpayment} then extracts from $P$ the linear payment
+$\tfrac3{50}(V-9J)$ plus a nonnegative remainder $r_{\rm rad}$, under a
+bounded-radius hypothesis with endpoint ratio at most $3$.
+
+Nothing in this chapter is optimised yet; the identity is exact and every
+remainder is retained. The next chapter pays for the coefficient.
+
+\section{Moments and regression}\label{sec-moments}
+\input{ported/p_moments_a}
+
+\subsection{A regression estimate}
+\input{ported/p_moments_reg}
+
+\section{A signed quartic and a joint defect identity}\label{sec-quartic}
+\input{ported/p_quartic}

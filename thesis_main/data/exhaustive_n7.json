@@ -1,0 +1,9 @@
+{
+ "n": 7,
+ "graphs": 2097152,
+ "max_lambda3": 5.937630096216215,
+ "cn_minus_3": 5.992712790067429,
+ "margin": 0.05508269385121434,
+ "labelled_maximisers": 252,
+ "all_isomorphic_to_K2_join_C5": true
+}
