@@ -130,9 +130,9 @@ def base(title, section=None, subtitle=None):
         y += 0.36
     rect(s, 0.58, 7.02, 12.2, 0.012, fill=LINE)
     _, tf = tb(s, 0.58, 7.08, 8.0, 0.3)
-    line(tf, "谱极值图论 · 毕业论文中期汇报 · 2026-11-02", 10, GREY, first=True, space_after=0)
+    line(tf, "谱极值图论 · 硕士学位论文汇报 · 2026-11-09", 10, GREY, first=True, space_after=0)
     _, tf = tb(s, 10.6, 7.08, 2.2, 0.3)
-    line(tf, "%d / 24" % PAGE[0], 10, GREY, first=True, space_after=0, align=PP_ALIGN.RIGHT)
+    line(tf, "%d / 26" % PAGE[0], 10, GREY, first=True, space_after=0, align=PP_ALIGN.RIGHT)
     return s, y + 0.16
 
 def pic(slide, name, x, y, w=None, h=None):
